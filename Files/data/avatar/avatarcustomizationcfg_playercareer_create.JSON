@@ -1,0 +1,676 @@
+{
+	"presetType": "CP_PRESET_11_V_11",
+	"malePresetLayout": "CharacterLayoutId_11_V_11_Male",
+	"attributeCategories": [
+		{
+			"name": "INFO",
+			"filters": {
+				"areFiltersAttributes": false,
+				"data": [
+					{
+						"name": "ABOUT_ME",
+						"filters": {
+							"areFiltersAttributes": true,
+							"data": [
+								{
+									"name": "FIRST_NAME",
+									"componentType": "INPUT_TEXT",
+									"minLength": 1,
+									"maxLength": 999,
+									"isMandatory": true
+								},
+								{
+									"name": "SURNAME",
+									"minLength": 1,
+									"maxLength": 999,
+									"componentType": "INPUT_TEXT"
+								},
+								{
+									"name": "KNOWN_AS",
+									"minLength": 1,
+									"maxLength": 999,
+									"componentType": "INPUT_TEXT"
+								},
+								{
+									"name": "COMMENTARY_NAME",
+									"componentType": "LIST"
+								},
+								{
+									"name": "KIT_NAME",
+									"minLength": 1,
+									"maxLength": 999,
+									"componentType": "INPUT_TEXT"
+								},
+								{
+									"name": "KIT_NUMBER",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "TOGGLE"
+								},
+								{
+									"name": "NATIONALITY",
+									"componentType": "LIST"
+								},
+								{
+									"name": "BIRTH_YEAR",
+									"minValue": 1900,
+									"maxValue": 2020,
+									"componentType": "TOGGLE"
+								},
+								{
+									"name": "BIRTH_MONTH",
+									"minValue": 1,
+									"maxValue": 12,
+									"componentType": "TOGGLE"
+								},
+								{
+									"name": "BIRTH_DAY",
+									"minValue": 1,
+									"maxValue": 31,
+									"componentType": "TOGGLE"
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "ATHLETIC",
+			"filters": {
+				"areFiltersAttributes": false,
+				"data": [
+					{
+						"name": "BODY",
+						"filters": {
+							"areFiltersAttributes": true,
+							"data": [
+								{
+									"name": "HEIGHT",
+									"minValue": 130,
+									"maxValue": 257,
+									"componentType": "SLIDER"
+								},
+								{
+									"name": "WEIGHT",
+									"minValue": 30,
+									"maxValue": 150,
+									"componentType": "SLIDER"
+								},
+								{
+									"name": "BODY_TYPE",
+									"isVisible": false
+								},
+								{
+									"name": "ACCELERATION",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR"
+								},
+								{
+									"name": "AGILITY",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR"
+								},
+								{
+									"name": "BALANCE",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR"
+								},
+								{
+									"name": "JUMPING",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR"
+								},
+								{
+									"name": "REACTIONS",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR"
+								},
+								{
+									"name": "SPRINT_SPEED",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR"
+								},
+								{
+									"name": "STAMINA",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR"
+								},
+								{
+									"name": "STRENGTH",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR"
+								}
+							]
+						}
+					},
+					{
+						"name": "TRAITS",
+						"filters": {
+							"areFiltersAttributes":true,
+							"data": [
+								{
+									"name": "TRAITS"
+								}
+							]
+						}
+					  },
+					{
+						"name": "GAMEPLAY",
+						"filters": {
+							"areFiltersAttributes": true,
+							"data": [
+								{
+									"name": "POSITION",
+									"componentType": "TOGGLE"
+								},
+								{
+									"name": "ROLE",
+									"componentType": "TOGGLE"
+								},
+								{
+									"name": "PREFERRED_POSITION",
+									"isVisible": false
+								},
+								{
+									"name": "PLAYING_STYLE",
+									"componentType": "TOGGLE"
+								},
+								{
+									"name": "PREFERRED_FOOT",
+									"componentType": "TOGGLE"
+								},
+								{
+									"name": "REACTIONS",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR"
+								},
+								{
+									"name": "AGGRESSION",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "POSITIONING",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "COMPOSURE",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "INTERCEPTIONS",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "VISION",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "BALL_CONTROL",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "CROSSING",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "DRIBBLING",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "FINISHING",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "FREE_KICK_ACCURACY",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "HEADING_ACCURACY",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "LONG_PASSING",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "SHORT_PASSING",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "MARKING",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "SHOT_POWER",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "LONG_SHOTS",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "STANDING_TACKLE",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "SLIDING_TACKLE",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "VOLLEYS",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "CURVE",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "PENALTIES",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "GK_DIVING",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "GK_HANDLING",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "GK_KICKING",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "GK_REFLEXES",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								},
+								{
+									"name": "GK_POSITIONING",
+									"minValue": 1,
+									"maxValue": 99,
+									"componentType": "BAR",
+									"isVisible": false
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "HEAD_AND_FACE",
+			"filters": {
+				"areFiltersAttributes": true,
+				"data": [
+					{
+						"name": "HEAD"
+					},
+          {
+            "name": "TONE_AND_COMPLEXION"
+          },
+          {
+						"name": "EYE",
+						"numPresets": 23,
+						"numTweaks": 4,
+						"colourPickerAttribute": "EYE_COLOUR"
+					},
+					{
+						"name": "BROW",
+						"numPresets": 0,
+						"numTweaks": 4,
+						"colourPickerAttribute": "FACIAL_HAIR_COLOUR"
+					},
+          {
+            "name": "NOSE",
+            "numPresets": 28,
+            "numTweaks": 4
+          },
+          {
+						"name": "MOUTH",
+						"numPresets": 22,
+						"numTweaks": 4
+					},
+          {
+            "name": "CHEEK_JAW",
+            "numPresets": 13,
+            "numTweaks": 5
+          },
+          {
+						"name": "CHIN",
+						"numPresets": 9,
+						"numTweaks": 5
+					},
+					{
+						"name": "EAR",
+						"numPresets": 14,
+						"numTweaks": 5
+					},
+					{
+						"name": "HAIR",
+						"colourPickerAttribute": "HAIR_COLOUR"
+					},
+					{
+						"name": "FACIAL_HAIR",
+						"colourPickerAttribute": "FACIAL_HAIR_COLOUR"
+					}
+				]
+			}
+		},
+		{
+			"name": "KIT_FIT",
+			"filters": {
+				"areFiltersAttributes": false,
+				"data": [
+					{
+						"name": "KIT_FIT",
+						"filters": {
+							"areFiltersAttributes": true,
+							"data": [
+								{
+									"name": "WAIST_FIT"
+								},
+								{
+									"name": "KIT_SLEEVES"
+								},
+								{
+									"name": "GK_PANTS"
+								},
+								{
+									"name": "JERSEY_FIT"
+								}
+							]
+						}
+					},
+          {
+						"name": "BOOTS_AND_SOCKS",
+						"filters": {
+							"areFiltersAttributes": true,
+							"data": [
+								{
+									"name": "BOOT"
+								},
+								{
+									"name": "KIT_SOCK"
+								},
+								{
+									"name": "ANKLE_TAPE"
+								}
+							]
+						}
+					},
+					{
+						"name": "GLOVES_AND_WRIST",
+						"filters": {
+							"areFiltersAttributes": true,
+							"data": [
+								{
+									"name": "GLOVES"
+								},
+								{
+									"name": "GK_GLOVES"
+								},
+								{
+									"name": "LEFT_WRIST"
+								},
+								{
+									"name": "RIGHT_WRIST"
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		{
+			"name": "BRAND_ANIMATIONS",
+			"filters": {
+				"areFiltersAttributes": false,
+				"data": [
+					{
+						"name": "CELEBRATIONS",
+						"filters": {
+							"areFiltersAttributes": true,
+							"data": [
+								{
+									"name": "GOALCELEBRATION"
+								}
+							]
+						}
+					},
+          {
+						"name": "STYLE",
+						"filters": {
+							"areFiltersAttributes": true,
+							"data": [
+								{
+									"name": "FREEKICKSTYLE"
+								},
+								{
+									"name": "PENALTYKICKSTYLE"
+								}
+							]
+						}
+					},
+          {
+            "name": "RUNNINGSTYLE",
+            "filters": {
+              "areFiltersAttributes": true,
+              "data": [
+                {
+                  "name": "RUNNINGSTYLE"
+                }
+              ]
+            }
+		      }
+				]
+			}
+		}
+	],
+	"attributeDependencyTree": [
+		{
+		  "parents": [
+			"SURNAME"
+		  ],
+		  "children": [
+			"KIT_NAME"
+		  ]
+		},
+		{
+			"parents": [
+				"ROLE"
+			],
+			"children": [
+				"PLAYING_STYLE",
+				"PREFERRED_POSITION"
+			]
+		},
+		{
+			"parents": [
+				"HEIGHT",
+				"PLAYING_STYLE",
+				"ROLE",
+				"WEIGHT"
+			],
+			"children": [
+				"ACCELERATION",
+				"AGGRESSION",
+				"AGILITY",
+				"BALANCE",
+				"JUMPING",
+				"REACTIONS",
+				"SPRINT_SPEED",
+				"STAMINA",
+				"STRENGTH",
+				"COMPOSURE",
+				"INTERCEPTIONS",
+				"VISION",
+				"BALL_CONTROL",
+				"CROSSING",
+				"DRIBBLING",
+				"FINISHING",
+				"FREE_KICK_ACCURACY",
+				"HEADING_ACCURACY",
+				"LONG_PASSING",
+				"SHORT_PASSING",
+				"MARKING",
+				"SHOT_POWER",
+				"LONG_SHOTS",
+				"STANDING_TACKLE",
+				"SLIDING_TACKLE",
+				"VOLLEYS",
+				"CURVE",
+				"PENALTIES",
+				"POSITIONING",
+				"GK_DIVING",
+				"GK_HANDLING",
+				"GK_KICKING",
+				"GK_REFLEXES",
+				"GK_POSITIONING"
+			]
+		},
+		{
+			"parents": [
+				"GK_PANTS"
+			],
+			"children": [
+				"ANKLE_TAPE"
+			]
+		},
+		{
+			"parents": [
+				"POSITION"
+			],
+			"children": [
+				"ROLE",
+				"GK_PANTS",
+				"GK_GLOVES",
+				"GLOVES"
+			]
+		},
+		{
+			"parents": [
+				"HEIGHT",
+				"WEIGHT"
+			],
+			"children": [
+				"BODY_TYPE"
+			]
+		},
+		{
+			"parents": [
+				"BIRTH_MONTH",
+				"BIRTH_YEAR"
+			],
+			"children": [
+				"BIRTH_DAY"
+			]
+		},
+		{
+			"parents": [
+				"FACE"
+			],
+			"children": [
+				"HEAD"
+			]
+		},
+		{
+			"parents": [
+				"HEAD"
+			],
+			"children": [
+				"CHIN",
+				"EAR",
+				"EYE",
+				"CHEEK_JAW",
+				"MOUTH",
+				"NOSE",
+				"BROW"
+			]
+		}
+	]
+}

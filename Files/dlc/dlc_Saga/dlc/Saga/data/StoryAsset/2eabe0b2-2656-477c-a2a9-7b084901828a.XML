@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="2eabe0b2-2656-477c-a2a9-7b084901828a" name="Player Sales" deleted="False" valid="True">
+  <nodes id="a95d5386-7266-40e6-96aa-5eac2a6701a3">
+    <trigger-news-node id="bcaa1542-5053-4772-ba23-ac64ce029563" X="3240" Y="-3600" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="2" Importance="2" SceneId="31" WipeId="1" WipeArgument="Model:UserTransferPlayerStageFinished.BuyingTeamId" BackupImage="contract">
+      <stringWithArgsTitle id="516d39f7-1bff-47cf-a122-d99ff6d07ef9" StringID="CM_News_Overpriced_BadForm_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="27cbb09d-ad43-49bd-a1c3-b47b8c10d6f3">
+          <stringArgument id="9d4b4f28-5147-4725-8722-e735f2204344" Value="New Player:BasicData.ID" Format="7" />
+        </stringArguments>
+        <stringContent id="31e9028f-006b-4048-8e1d-0466a939b128">
+          <keyValuePair id="b57d84de-743c-4f31-9e73-18148c2a897b" Key="M" Value="Fee Agreed for %1s - Questions Asked" />
+          <keyValuePair id="945d703e-8f8e-4b60-b6ae-ea854fde6bc6" Key="F" Value="" />
+          <keyValuePair id="d9698452-0413-4065-b05e-43a4e3b8e61f" Key="MM" Value="" />
+          <keyValuePair id="ce15002e-2a18-4efa-8eb0-be6061d17ef5" Key="MF" Value="" />
+          <keyValuePair id="68fcb925-0317-4105-bffd-a5762442a4a9" Key="FM" Value="" />
+          <keyValuePair id="6ef0d891-aba4-42eb-a2e9-e66b37b93aee" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="eaa2caf0-3cb1-4cf7-b8e0-22f9be122d0b" StringID="CM_News_Overpriced_BadForm_Body" GenderSupport="1" GenderSupportTeamId1="Model:UserTransferPlayerStageFinished.BuyingTeamId" GenderSupportTeamId2="">
+        <stringArguments id="1aa65e9c-154c-47c4-a6db-519d4b7cb4e9">
+          <stringArgument id="356e72b8-b5a1-45f8-bfff-332836561004" Value="Model:UserTransferPlayerStageFinished.OfferValue" Format="4" />
+          <stringArgument id="57b78a29-d00f-4e7c-bf6b-8273a18f472c" Value="New Player:BasicData.ID" Format="7" />
+          <stringArgument id="a44e1563-dfd5-42e9-83d5-d448e82a96a2" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="8f78b433-a805-40cc-8d7a-65bc9e9c2bfe" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" Format="12" />
+          <stringArgument id="09f7cb10-44f6-4557-8035-ce03bd4a10a8" Value="New Player:BasicData.Age" Format="0" />
+          <stringArgument id="473cc1fc-34fc-4cdc-862e-e12c4dcbd0a1" Value="New Player:DBData.PreferredPosition" Format="10" />
+        </stringArguments>
+        <stringContent id="7a44459a-cac0-411d-8272-977fb0fed2e0">
+          <keyValuePair id="35e8cc6d-ba98-4cb5-bd39-add4a94965ae" Key="M" Value="Questions surrounding the player's poor form have been muttered by many critics surrounding the %1s deal that saw %2s move from %3s to %4s. The %5s year old %6s was considered to be overpriced by many pundits following the player's spell at %3s.  With %4s fans hoping that the manager's choice will pay off the pressure will surely be on %2s to step up his game. &quot;I just hope I can do the fans proud. I'm very excited and honoured to be at this club&quot; added the new %4s player." />
+          <keyValuePair id="8f6780fd-50e9-491f-b652-ed9fc0f71f19" Key="F" Value="Questions surrounding the player's poor form have been muttered by many critics surrounding the %1s deal that saw %2s move from %3s to %4s. The %5s year old %6s was considered to be overpriced by many pundits following the player's spell at %3s.  With %4s fans hoping that the manager's choice will pay off the pressure will surely be on %2s to step up his game. &quot;I just hope I can do the fans proud. I'm very excited and honoured to be at this club&quot; added the new %4s player." />
+          <keyValuePair id="5c933b71-5933-48ef-b10c-9c76dcd3b3f6" Key="MM" Value="" />
+          <keyValuePair id="adc4173e-d24d-4963-85ab-3905b5216b18" Key="MF" Value="" />
+          <keyValuePair id="3dbf116d-09e2-4e67-86d5-6515eac1c95c" Key="FM" Value="" />
+          <keyValuePair id="a06a97d2-2ef2-4d95-9ac7-f568e076cf70" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="bbaa660c-9ef6-49bf-a017-663d725bf325">
+        <sceneParameter id="f85587b1-44b0-4f29-8543-a3f94778b164" Parameter="PlayerId_1" Value="SaveData:PlayerID" />
+        <sceneParameter id="7a5a8547-e5a0-46ae-8e5f-1d054b640536" Parameter="TeamId_1" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="c47c38bd-8c99-463e-8701-65ed42fbb123" X="2400" Y="-3360" NodeType="Condition" NodeName="Bargain">
+      <conditions id="69894885-ae14-456a-80f8-9a5b9c0ad599">
+        <condition id="63a62010-ce84-4f3c-ac40-e7898cb548d7" VariableId="SaveData:CheckPrice" Comparison="LTE" Value="60" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="9d64bd80-ddd5-4282-8297-c91ac0ad10b3" X="2240" Y="-3600" NodeType="Condition" NodeName="Overpriced">
+      <conditions id="301a54aa-b617-40f0-856a-94aa715287f9">
+        <condition id="1a8e39e0-3c5d-44de-94cf-33774c31a2b1" VariableId="SaveData:CheckPrice" Comparison="GTE" Value="150" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-data-node id="75a79d45-6d8c-4f1d-912b-b181e83e4109" X="1760" Y="-3720" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="941d6ab6-d337-4ae3-a8bc-67936162809e">
+        <keyValuePair id="0220926d-3ba7-4a2a-96bd-22e236b9fa97" Key="SaveData:CheckPrice" Value="Model:UserTransferPlayerStageFinished.PlayerValue" Operator="Divide" />
+        <keyValuePair id="d1496f23-a98d-4631-9679-368d174a7f86" Key="SaveData:CheckPrice" Value="100" Operator="Multiply" />
+      </keyValues>
+    </modify-data-node>
+    <save-data-node id="9ef9d949-d3c7-4b88-9cce-11df06163f52" X="1520" Y="-3720" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="9595d8be-581c-4447-9396-734fd98f4c47">
+        <saveItem id="1715b7ab-c056-4b2f-9981-5fed7e1b225e" Key="CheckPrice" Value="Model:UserTransferPlayerStageFinished.OfferValue" ValueType="int" />
+        <saveItem id="234cb669-1168-4780-9b47-df2f46bc332b" Key="PlayerID" Value="New Player:BasicData.ID" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <story-start-node id="cfe2dfb3-2487-43db-ac9c-719856299953" X="1280" Y="-3720" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="MultipleInstance" NodeEvent="UserTransferPlayerStageFinished" StoryKey="Select:BasicData.ID" UseSelectData="True" RunInPlayerCareer="False" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="b3258e67-03db-42f9-9973-a776a753b072">
+        <condition id="bea69d74-74d4-42dc-9a9f-816c7491ed40" VariableId="Model:UserTransferPlayerStageFinished.SellingTeamId" Comparison="EQ" Value="Model:Global.UserTeamID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="4ec1a613-9c99-4efc-8d55-6a533d5d8f3a" VariableId="Model:UserTransferPlayerStageFinished.FinishedByAny" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="b6743369-9d85-4616-82ab-4afc15d01ecb" VariableId="Model:UserTransferPlayerStageFinished.IsWithinTransferWindow" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+      <select-data id="54a129b6-95b5-4b23-a2d5-d083ebca469f" SelectCount="1">
+        <alias-list id="a842b844-993f-4dad-a58f-2651393e3142">
+          <string id="d92eb329-5b48-4473-a3af-538680fdfbc4" Value="New Player" />
+        </alias-list>
+        <order-by id="fed16f68-4a16-4b7f-889f-f2576da3810f" />
+        <alias-data-source id="cfd1cb97-e7dc-4cfe-ad49-6d9086b942ff" DataSource="Model:Global.Players">
+          <conditions id="81abfb07-b42e-401e-bb5f-92f9a7406c7c">
+            <condition id="03d3c4ba-cf14-431c-a952-ce8e1db4a406" VariableId="Select:BasicData.ID" Comparison="EQ" Value="Model:UserTransferPlayerStageFinished.PlayerId" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="7324b7f8-6434-413d-b5f2-6ec148144b23" VariableId="Select:Status.Role" Comparison="LTE" Value="3" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <condition-node id="107013bb-9188-483c-a1dd-6b65455e45a1" X="2040" Y="-3720" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="608246d4-899f-48b9-bc93-4a6da8da8b02">
+        <condition id="7f8b0be4-d3c2-42a8-b407-dea9c71f104b" VariableId="New Player:BasicData.Overall" Comparison="GTE" Value="85" Operator="OR" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="2529899d-a461-46a7-b23b-8422e1888dfc" VariableId="Model:UserTransferPlayerStageFinished.IsDirectPlayerApproach" Comparison="EQ" Value="1" Operator="" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="15f2001f-3c18-4673-86ca-08c9a9b8eaad" VariableId="Model:UserTransferPlayerStageFinished.ExchPlayer.ID" Comparison="GTE" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="118aaf65-40bb-44c7-ac9d-a00f4a907adb" X="2800" Y="-3600" NodeType="Condition" NodeName="Bad Form">
+      <conditions id="dfa55cc4-2e4f-45e8-b54a-23bcc3ddc32e">
+        <condition id="004f434d-918e-4a4d-9952-28e48da5b526" VariableId="New Player:Form.Rating" Comparison="LT" Value="3" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="5482e94a-4e60-4738-bcac-7dd8eda3b991" X="2960" Y="-3520" NodeType="Condition" NodeName="Good Form">
+      <conditions id="3cae6868-49ad-4295-84ed-675a87e27013">
+        <condition id="ae172938-efd7-4988-9979-faeafca2ec9c" VariableId="New Player:Form.Rating" Comparison="GT" Value="3" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <story-end-node id="dff4bcab-23b8-418f-b46a-62935a856f17" X="3680" Y="-3720" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <condition-node id="3e5b209d-2e5c-495a-a9c1-526b6af848aa" X="2960" Y="-3280" NodeType="Condition" NodeName="Good Form">
+      <conditions id="79154c59-9014-47c6-844f-cf86ad2128c2">
+        <condition id="44948065-60bc-442d-8da5-82959cfc8703" VariableId="New Player:Form.Rating" Comparison="GT" Value="3" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="bb8a08b5-3fc5-4000-b4e3-f9a240e243fa" X="2800" Y="-3360" NodeType="Condition" NodeName="Bad Form">
+      <conditions id="a72589a6-af3d-4f6f-8791-5ece060181c3">
+        <condition id="4a660eff-f5aa-4cdc-9878-777f4016bbe6" VariableId="New Player:Form.Rating" Comparison="LT" Value="3" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="99aa1997-e791-4148-b53e-886d646f6747" X="3240" Y="-3520" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="2" Importance="2" SceneId="31" WipeId="1" WipeArgument="Model:UserTransferPlayerStageFinished.BuyingTeamId" BackupImage="money">
+      <stringWithArgsTitle id="93fbd851-9892-4156-b388-eb2bad6e91a1" StringID="CM_News_Overpriced_GoodForm_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="352e1c47-ecd9-4250-9d62-f71fe8a1dc56">
+          <stringArgument id="9f41ec24-0114-490d-9fdb-42193358224a" Value="New Player:BasicData.ID" Format="7" />
+        </stringArguments>
+        <stringContent id="a95210d3-c958-4e23-9a26-8e6788967c8d">
+          <keyValuePair id="a151bad8-821e-47f4-8022-7f8290f75ea4" Key="M" Value="Sizable Price Tag for %1s" />
+          <keyValuePair id="67042114-496b-462a-9045-291ebf297944" Key="F" Value="" />
+          <keyValuePair id="da00626b-1dbb-4374-91b4-ba506c29c590" Key="MM" Value="" />
+          <keyValuePair id="818dbeaa-e4f0-476c-b61e-0339d0ecb456" Key="MF" Value="" />
+          <keyValuePair id="e7eac390-6043-4565-aaf4-898beeeb66df" Key="FM" Value="" />
+          <keyValuePair id="57e0bd26-4663-4c52-b30a-5bcb6f982c33" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="365e9792-2c2f-4a44-aa86-cef7ed337f18" StringID="CM_News_Overpriced_GoodForm_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="07c4c090-585a-4aaf-b878-df8aadedbda9">
+          <stringArgument id="9dec0c09-52c3-46f6-8225-4d85f99a6bc1" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" Format="12" />
+          <stringArgument id="72b7d7d6-9523-4b87-8b50-c6a9437cd648" Value="New Player:BasicData.Age" Format="0" />
+          <stringArgument id="4505df8d-9e41-4abd-b7e5-aebeb0cc4a87" Value="New Player:BasicData.ID" Format="6" />
+          <stringArgument id="3459176d-083f-4c06-993f-9c65351ea515" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="23b5b6ac-8d3d-48f7-89b5-0a8ec8aea54a" Value="Model:UserTransferPlayerStageFinished.OfferValue" Format="4" />
+          <stringArgument id="ced6154e-0e3a-49e4-a5f1-3bcb3d62f98f" Value="New Player:BasicData.ID" Format="7" />
+        </stringArguments>
+        <stringContent id="48a4fb18-4871-4cfb-a129-b730ffc52337">
+          <keyValuePair id="1192cff4-70f0-4da6-af35-b09d3571f50c" Key="M" Value="%1s have secured the services of %2s year old %3s after agreeing on a hefty transfer fee with %4s. The reported sum of %5s is a reflection of the great form that the player has shown in recent weeks. &quot;We are very excited to have finalised this deal and hope that %6s continues his great form at %1s&quot;, said a club spokesman.  &quot;You pay for quality and we believe we have paid for a great player who can help our team reach the top.&quot; " />
+          <keyValuePair id="2948eacd-13e7-4a2d-a7c0-00ad7224eafa" Key="F" Value="" />
+          <keyValuePair id="129384ad-e068-45a6-9a64-8fd71f8a3fc9" Key="MM" Value="" />
+          <keyValuePair id="bd0cb1a7-026e-45e9-9d58-4e4fa802f68c" Key="MF" Value="" />
+          <keyValuePair id="530cbe14-c872-4277-bac6-5bf67d3f26fd" Key="FM" Value="" />
+          <keyValuePair id="023cb71c-42bd-497e-ab60-b9a0ff550a39" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="14d86df6-6386-4351-a2b9-409528958465">
+        <sceneParameter id="47fa7562-df80-4db2-8193-2948f79b6765" Parameter="PlayerId_1" Value="SaveData:PlayerID" />
+        <sceneParameter id="88e85cab-4c80-4935-a99e-9e37cbf15964" Parameter="TeamId_1" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="ac29d3c4-fe0c-4e6f-9cf9-37896b15b0ff" X="3240" Y="-3440" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="2" Importance="2" SceneId="31" WipeId="1" WipeArgument="Model:UserTransferPlayerStageFinished.BuyingTeamId" BackupImage="press">
+      <stringWithArgsTitle id="0f16a5ec-456e-4db1-8723-d30dfd5c8aec" StringID="CM_News_Overpriced_NeutralForm_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="c50dd79e-ce08-4d28-b82b-3f57486fef39">
+          <stringArgument id="544dbe5f-4c82-471e-b0c5-1003b149c83b" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="1bfb4416-293d-4bd9-bf4b-a42586de9817" Value="New Player:BasicData.ID" Format="7" />
+        </stringArguments>
+        <stringContent id="f02ebebb-7196-454b-8d04-ec816c05aaa1">
+          <keyValuePair id="1ed4cd67-f4b7-4767-8aee-b3afeb823094" Key="M" Value="%1s Cash in on %2s" />
+          <keyValuePair id="65f17b43-0e98-4e4c-8253-c8a93ae955bf" Key="F" Value="" />
+          <keyValuePair id="49eac79f-99c5-4918-b31a-a127d38b1bd0" Key="MM" Value="" />
+          <keyValuePair id="9bfd0e94-a9bf-4d09-b968-264cf3c16a1e" Key="MF" Value="" />
+          <keyValuePair id="c50dad71-1e0e-40ed-b655-c9c6e75c3be8" Key="FM" Value="" />
+          <keyValuePair id="64e55096-d02f-436a-afd6-2385f139e65c" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="b46b950b-9ba3-4d30-bcff-598d69fb126e" StringID="CM_News_Overpriced_NeutralForm_Body" GenderSupport="1" GenderSupportTeamId1="Model:UserTransferPlayerStageFinished.BuyingTeamId" GenderSupportTeamId2="">
+        <stringArguments id="5953f2ec-92a4-4adf-89b4-12527490593a">
+          <stringArgument id="9dd0cd66-3ca4-402c-928a-94afa9986596" Value="New Player:BasicData.ID" Format="6" />
+          <stringArgument id="cf166c14-e618-4341-8160-b4cc2704a1c8" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" Format="12" />
+          <stringArgument id="fef9fcd0-dcf4-4cd7-ac96-9ef9775f87be" Value="New Player:BasicData.Age" Format="0" />
+          <stringArgument id="f5d5d6b2-0199-47c1-acf9-6487d82a65e4" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="c50d12f7-8926-467f-9077-e5608f8d8b6a" Value="Model:UserTransferPlayerStageFinished.OfferValue" Format="4" />
+        </stringArguments>
+        <stringContent id="2017f7b1-d807-43e7-847c-639970a3c015">
+          <keyValuePair id="7071126f-5aad-4ae3-947e-5e19e3cf2c71" Key="M" Value="%1s's arrival at %2s would normally have been a somewhat low key affair but this deal stands out for the price %2s were willing to pay for the %3s year old. After having a rather average season at his old team, %4s, %1s now finds himself with a price tag of %5s hanging around his neck. &quot;I feel the price we paid was a fair one&quot; said the %2s boss, &quot;I see him as a crucial piece in our jigsaw.&quot;" />
+          <keyValuePair id="189c301a-ec32-4513-8ac6-4ec62f58751e" Key="F" Value="%1s's arrival at %2s would normally have been a somewhat low key affair but this deal stands out for the price %2s were willing to pay for the %3s year old. After having a rather average season at his old team, %4s, %1s now finds himself with a price tag of %5s hanging around his neck. &quot;I feel the price we paid was a fair one&quot; said the %2s boss, &quot;I see him as a crucial piece in our jigsaw.&quot;" />
+          <keyValuePair id="a6f4a28d-3775-4adc-b1f9-8be1a4e73fc2" Key="MM" Value="" />
+          <keyValuePair id="ad6f655f-113d-4983-9848-26301868dc92" Key="MF" Value="" />
+          <keyValuePair id="8122899c-81f2-4a0e-be02-903c3b152129" Key="FM" Value="" />
+          <keyValuePair id="c24f4db8-ccee-4432-9acc-cae29c76b815" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="6e76442c-10dc-4bd1-b3f8-70543e9e28c0">
+        <sceneParameter id="2eecb07a-f415-4634-93d0-d572c3656a27" Parameter="PlayerId_1" Value="SaveData:PlayerID" />
+        <sceneParameter id="856e3cc1-7de5-4b24-baa3-cde882ffbe6a" Parameter="TeamId_1" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="acbbae14-2c79-409c-8988-8512efd8581c" X="3240" Y="-3080" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="2" Importance="2" SceneId="31" WipeId="1" WipeArgument="Model:UserTransferPlayerStageFinished.BuyingTeamId" BackupImage="door">
+      <stringWithArgsTitle id="57c43649-d7b5-4267-a391-8a19fe8b6c23" StringID="CM_News_TransferAccepted_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="6b05e601-3db2-4ea0-9e13-8f916c0a011e">
+          <stringArgument id="1fbb8f61-fc19-4ea7-ad36-a203d9f793b0" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" Format="12" />
+          <stringArgument id="59a189f8-8e7b-4c0a-a410-2cddb1205c58" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="5f7c54d5-cbf0-4e16-b81b-88b09a2976b3">
+          <keyValuePair id="f9e4fe14-9fd4-401c-8887-734f0a53a6a9" Key="M" Value="%1s Meet %2s's Demands" />
+          <keyValuePair id="b842fd40-328a-4a7a-a45f-10552560e1c7" Key="F" Value="" />
+          <keyValuePair id="5ff44217-8719-4d23-bac9-a4b1e49d9728" Key="MM" Value="" />
+          <keyValuePair id="0cbd35ef-5c6e-427d-a621-ce75d6707d30" Key="MF" Value="" />
+          <keyValuePair id="d5b484da-84b0-4942-b57a-5c78222353e9" Key="FM" Value="" />
+          <keyValuePair id="d483c31b-7a45-49da-8854-e80042a30adf" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="f9202d28-8c51-4571-853e-fa4ddbb18799" StringID="CM_News_TransferAccepted_Body" GenderSupport="1" GenderSupportTeamId1="Model:UserTransferPlayerStageFinished.BuyingTeamId" GenderSupportTeamId2="">
+        <stringArguments id="6f815ea3-d977-480a-99e5-c40d6cea41e2">
+          <stringArgument id="c335adfa-83a8-4bcf-8dbd-d5bc4e33a5cc" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="70658efc-21f0-4c75-a907-0b166107f4a4" Value="New Player:BasicData.Age" Format="0" />
+          <stringArgument id="27205a9e-11f2-4d84-a228-d7b834461db7" Value="New Player:DBData.PreferredPosition" Format="10" />
+          <stringArgument id="287569a0-f84e-48c0-9653-9201526095a2" Value="New Player:BasicData.ID" Format="7" />
+          <stringArgument id="0e16849f-61c1-43dd-a5b3-b1887b4f2297" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" Format="11" />
+          <stringArgument id="3950af71-468e-444f-ace1-894e929756f5" Value="Model:UserTransferPlayerStageFinished.OfferValue" Format="4" />
+          <stringArgument id="6eff3f05-5b4f-4f89-be46-530c227240d9" Value="Model:UserTransferPlayerStageFinished.OfferedWage" Format="4" />
+        </stringArguments>
+        <stringContent id="d050e3fc-aaac-4c11-9784-5cfcd989e894">
+          <keyValuePair id="7f6f6c07-ccc3-42a3-a0e7-92b077199f96" Key="M" Value="%1s announced the departure of the %2s-year old %3s %4s to %5s following a %6s  deal that will see the player earn a %7s a week wage. The %5s manager commented by stating &quot;It's great to see that we could come to an arrangement over the lad's future. Not only are we happy, but so is %4s and that's the main thing.&quot;" />
+          <keyValuePair id="12a9202a-0254-43a5-a053-9acdbdebe65f" Key="F" Value="%1s announced the departure of the %2s-year old %3s %4s to %5s following a %6s  deal that will see the player earn a %7s a week wage. The %5s manager commented by stating &quot;It's great to see that we could come to an arrangement over the lad's future. Not only are we happy, but so is %4s and that's the main thing.&quot;" />
+          <keyValuePair id="2ed8bcb4-3338-484f-bbe4-fa49d3149134" Key="MM" Value="" />
+          <keyValuePair id="3587c8c9-ffce-4c07-8d93-8a8d028643ea" Key="MF" Value="" />
+          <keyValuePair id="f795dc51-af7d-4b33-943b-0fe7f0a859e4" Key="FM" Value="" />
+          <keyValuePair id="89bf0ef2-b1ed-4247-adb2-2681800ed3b8" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="077fff0e-d961-4738-bda4-bb9d40ed08dc">
+        <sceneParameter id="de1d07dc-fc92-4f7f-aa23-b7bfb69283b4" Parameter="PlayerId_1" Value="SaveData:PlayerID" />
+        <sceneParameter id="689e86f3-6cf3-4726-b365-a838d8aeab4b" Parameter="TeamId_1" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="b716ef07-8305-440d-aef6-45662c0ff6d5" X="3240" Y="-3200" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="2" Importance="2" SceneId="31" WipeId="1" WipeArgument="Model:UserTransferPlayerStageFinished.BuyingTeamId" BackupImage="press">
+      <stringWithArgsTitle id="99ec1f68-8c6f-49bc-8aaf-c78710fc40dc" StringID="CM_News_Bargain_NeutralForm_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="301554f7-d425-4d32-bae1-64a1fd4a2476">
+          <stringArgument id="c5ed24ba-7c17-4f64-98ca-2f93a7b0721b" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="547a8e2a-0fd5-40de-99b7-50e42368a88c">
+          <keyValuePair id="21e1e7d6-b0ee-428f-a1cf-fdca574c7fc3" Key="M" Value="%1s Bag a Bargain" />
+          <keyValuePair id="4111f539-2bd0-4d87-9ed9-d7715b8a1856" Key="F" Value="" />
+          <keyValuePair id="5f3a5c7e-e42b-4474-bb76-1fb765f40221" Key="MM" Value="" />
+          <keyValuePair id="dbdd0274-1208-4ecd-a07e-a40be472be6a" Key="MF" Value="" />
+          <keyValuePair id="66e3039b-1afd-4bff-8210-50b498f8fe0c" Key="FM" Value="" />
+          <keyValuePair id="a2ce55f0-c780-4171-8c12-18ed958052bd" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="8d989330-49cc-4c10-bd93-33fc40fb0733" StringID="CM_News_Bargain_NeutralForm_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="431552ba-fc2e-4a9c-94bf-dc459a3484bc">
+          <stringArgument id="11aa0e48-40cd-46e8-9247-021b7309bbc0" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="4e4668d9-5cf4-47f8-8002-faf682e8d9ff" Value="New Player:BasicData.ID" Format="6" />
+          <stringArgument id="1ad8ae11-b7b6-4167-b9cc-9f20905e7193" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" Format="12" />
+          <stringArgument id="70aca447-8a0e-477c-bf50-1c78bd296e8d" Value="Model:UserTransferPlayerStageFinished.OfferValue" Format="4" />
+          <stringArgument id="2d6109cf-69b6-4296-bdb9-c071d278666c" Value="New Player:BasicData.Age" Format="0" />
+        </stringArguments>
+        <stringContent id="4fba919d-721e-4947-bb8a-265e94f78e3a">
+          <keyValuePair id="36a20c7c-8af2-41a0-a58b-f920cb710409" Key="M" Value="The media transfer spotlight has recently been on %1s's sale of %2s to %3s for an estimated fee of %4s. The exit of the %5s year old has caused mixed emotion amongst %1s supporters with many of them believing that they could have got more for the player. One fan voiced his opinions by adding &quot;It's ridiculous. We should have tried to get more for him so that we could invest it into a better player for our own team. How can we afford to replace him now?&quot;." />
+          <keyValuePair id="5de15ae1-6f02-4a22-ad3d-9cdbca7c9064" Key="F" Value="" />
+          <keyValuePair id="90d307c4-e6cc-462e-8342-974ab29f1ac1" Key="MM" Value="" />
+          <keyValuePair id="a28a0fc0-61bd-4b0a-a635-485013724e51" Key="MF" Value="" />
+          <keyValuePair id="e78486ef-16bb-497c-8179-c75636ad13ea" Key="FM" Value="" />
+          <keyValuePair id="8a9cfb89-5dd8-4fca-b59c-418a20b42cd6" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="031bc617-06bb-4470-9f6f-b461450f12e4">
+        <sceneParameter id="bdb9d96f-c3c2-4c53-bb8a-0487fa17a291" Parameter="PlayerId_1" Value="SaveData:PlayerID" />
+        <sceneParameter id="ce1f9ea9-74c2-40d9-a1c9-618d2fa5dbb8" Parameter="TeamId_1" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="040b5cf9-6b94-4b5b-b9a4-22cdddfb3044" X="3240" Y="-3360" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="2" Importance="2" SceneId="31" WipeId="1" WipeArgument="Model:UserTransferPlayerStageFinished.BuyingTeamId" BackupImage="press">
+      <stringWithArgsTitle id="0477e7a7-55f3-4f0e-9fcf-75334cec4c28" StringID="CM_News_Bargain_BadForm_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="900d3a75-0ead-45ca-b501-2b910a6ecb5e">
+          <stringArgument id="86c590eb-b6f0-488b-bf0b-a3f077296211" Value="New Player:BasicData.ID" Format="7" />
+          <stringArgument id="42d2ed1f-e980-43d0-8d17-efae6599f7c6" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="03cae592-20a8-4817-8b91-c6050e05252c">
+          <keyValuePair id="17a7e86d-179f-4f1c-809f-c792c836ed7a" Key="M" Value="%1s Leaves %2s on the Cheap" />
+          <keyValuePair id="82f492c5-7baa-4089-a84d-d13f54711079" Key="F" Value="" />
+          <keyValuePair id="ffa5b28d-e1c0-4a92-8977-32070e6ddc2f" Key="MM" Value="" />
+          <keyValuePair id="fa9adf70-ce56-4a21-b2ef-51b0d04f4c0f" Key="MF" Value="" />
+          <keyValuePair id="bf7ce152-741c-41d2-9cc8-64bb43a90b6f" Key="FM" Value="" />
+          <keyValuePair id="e25415fa-3f32-47ef-ab10-2a52efcc789a" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="887ee2b5-c1fb-4a99-86ba-791a2932673b" StringID="CM_News_Bargain_BadForm_Body" GenderSupport="1" GenderSupportTeamId1="Model:UserTransferPlayerStageFinished.BuyingTeamId" GenderSupportTeamId2="">
+        <stringArguments id="47e1fd0f-3fb2-40da-89ef-21ecc8bd15b3">
+          <stringArgument id="8a510aac-2951-4bd8-a42a-6007dface528" Value="New Player:BasicData.ID" Format="6" />
+          <stringArgument id="bbb07707-a372-4369-a596-5b3f00a8a4d9" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" Format="12" />
+          <stringArgument id="5695c641-c543-47e6-a0a2-20275299d314" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="4d2254f8-9d8f-4915-a531-d60316cedc55" Value="Model:UserTransferPlayerStageFinished.OfferValue" Format="4" />
+          <stringArgument id="65cb5b58-4aae-4182-ae76-e8207233c3fe" Value="New Player:BasicData.ID" Format="7" />
+        </stringArguments>
+        <stringContent id="23628ead-de3a-43ba-8ea1-c789cb0668b2">
+          <keyValuePair id="0d092d2e-4958-4eb3-917e-f060d7f3fc43" Key="M" Value="%1s has signed for %2s after %3s accepted a %4s transfer fee. The %2s manager is hoping to turn around the player's poor run of form in recent weeks. &quot;I think we got a really good deal on %5s and given his recent form this purchase probably comes as a surprise to many of our fans. However I'm confident that the quality is still there and once %5s makes his mark on our team this transfer will be seen as a steal.&quot; said the %2s boss." />
+          <keyValuePair id="0a0f537a-247c-436d-bfa9-ac9b53d36458" Key="F" Value="%1s has signed for %2s after %3s accepted a %4s transfer fee. The %2s manager is hoping to turn around the player's poor run of form in recent weeks. &quot;I think we got a really good deal on %5s and given his recent form this purchase probably comes as a surprise to many of our fans. However I'm confident that the quality is still there and once %5s makes his mark on our team this transfer will be seen as a steal.&quot; said the %2s boss." />
+          <keyValuePair id="49e79bcd-d175-437d-ab0f-5bbea7679564" Key="MM" Value="" />
+          <keyValuePair id="ed8b07e3-ff65-4d45-bc01-4fecfb29d80b" Key="MF" Value="" />
+          <keyValuePair id="1b8b60c7-c5c9-4089-97a9-bf7d2735a7ff" Key="FM" Value="" />
+          <keyValuePair id="c1ca664a-e310-4580-8f5d-47df97d42830" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="096a29b8-d36e-4b2e-940f-2858233af780">
+        <sceneParameter id="5d6f45a8-d702-4d02-bd1e-a3353ea559fe" Parameter="PlayerId_1" Value="SaveData:PlayerID" />
+        <sceneParameter id="276b6d02-b9f5-4e84-8c36-e1db2344b688" Parameter="TeamId_1" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="dd7fe2ce-cf38-4d1b-8b68-f5914c27c89e" X="3240" Y="-3280" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="2" Importance="2" SceneId="31" WipeId="1" WipeArgument="Model:UserTransferPlayerStageFinished.BuyingTeamId" BackupImage="money">
+      <stringWithArgsTitle id="c23c408a-c19b-41ea-a9b5-76891bfe80fa" StringID="CM_News_Bargain_GoodForm_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="7a159a5a-a9e8-4a92-b9ef-1c93de792008">
+          <stringArgument id="d9db7af5-105e-43a8-88c7-6e0ae8b38b25" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="a6076390-9115-4a44-91a2-604e053f53bf" Value="New Player:BasicData.ID" Format="7" />
+        </stringArguments>
+        <stringContent id="4f4526ea-36f9-4260-92f8-c1db6f2168ac">
+          <keyValuePair id="421736fd-a57c-4110-b3ee-f7ba1abaea35" Key="M" Value="%1s Sell %2s at Knockdown Price" />
+          <keyValuePair id="41fe0308-5b36-4136-ac94-44fa9d2b5f8c" Key="F" Value="" />
+          <keyValuePair id="1d8807b8-cee9-472d-983d-b461962eed77" Key="MM" Value="" />
+          <keyValuePair id="e7a27ef9-a2fe-4a5c-a1af-6b01f966e4c7" Key="MF" Value="" />
+          <keyValuePair id="9f336427-a17e-41a9-baf2-461d2674322c" Key="FM" Value="" />
+          <keyValuePair id="e7960d1e-941e-4fc5-a7a4-ccd256872405" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="7e05b233-75c3-485b-8add-761cdde981ba" StringID="CM_News_Bargain_GoodForm_Body" GenderSupport="1" GenderSupportTeamId1="Model:UserTransferPlayerStageFinished.BuyingTeamId" GenderSupportTeamId2="">
+        <stringArguments id="9cd4d8bf-6b30-4998-94d9-1af2faae451e">
+          <stringArgument id="8b415d5f-fd5f-484a-adeb-eba0e367baed" Value="New Player:BasicData.ID" Format="7" />
+          <stringArgument id="3e11df14-ef8d-4c31-a022-83a1c74c2141" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="caf26b4a-7aa9-400f-a8bc-ae2666b4a04c" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" Format="12" />
+          <stringArgument id="d52c851a-a62b-4c6a-805d-f0adbeb64b6b" Value="Model:UserTransferPlayerStageFinished.OfferValue" Format="4" />
+          <stringArgument id="c939a34d-af62-4cf5-92fc-afd63c239c85" Value="New Player:BasicData.ID" Format="6" />
+        </stringArguments>
+        <stringContent id="2575bd3a-cba9-462a-b9f3-a3aedaffb0ed">
+          <keyValuePair id="84f7a795-0786-4d15-ac74-b9fffb7a0809" Key="M" Value="A surprising transfer development has seen an in form %1s move from %2s to %3s in a deal rumoured to be worth around %4s. What many people find surprising though is the low transfer fee paid for a player who has been outstanding so far for his former club. The %3s manager looks to have negotiated one of the bargains of the season if %5s can maintain the same impressive form." />
+          <keyValuePair id="dab9c91b-bdf8-460f-ac7e-cd0a571ce1dd" Key="F" Value="A surprising transfer development has seen an in form %1s move from %2s to %3s in a deal rumoured to be worth around %4s. What many people find surprising though is the low transfer fee paid for a player who has been outstanding so far for his former club. The %3s manager looks to have negotiated one of the bargains of the season if %5s can maintain the same impressive form." />
+          <keyValuePair id="dc5c375c-7aa9-4d60-b582-86aa7aa0c996" Key="MM" Value="" />
+          <keyValuePair id="6258b587-3efe-42a9-b34f-4f84f9df749f" Key="MF" Value="" />
+          <keyValuePair id="d2670fd3-2fff-4d17-bc02-1a6b61b77356" Key="FM" Value="" />
+          <keyValuePair id="9c679465-4cd8-4332-8916-02e99c5e8cfb" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="0985e691-d742-48ae-82e1-35cde0c6c081">
+        <sceneParameter id="54317618-1c1e-41b8-9754-0ef8125991e4" Parameter="PlayerId_1" Value="SaveData:PlayerID" />
+        <sceneParameter id="849fa744-390f-4252-a554-fd62a0c7d9a1" Parameter="TeamId_1" Value="Model:UserTransferPlayerStageFinished.BuyingTeamId" />
+      </sceneParameters>
+    </trigger-news-node>
+  </nodes>
+  <groups id="6f83882d-8b90-47e6-94ea-2a7d9f1ed98d" />
+  <connections id="45f500ac-dec8-4441-955f-b9b596fdf1ae">
+    <connection id="14333f58-1265-4e9e-b7b5-21290bd9501f" SrcNodeID="9d64bd80-ddd5-4282-8297-c91ac0ad10b3" SrcPortName="false" DstNodeID="c47c38bd-8c99-463e-8701-65ed42fbb123" DstPortName="enter" ConnectionOrder="0">
+      <points id="7768bed3-3a8d-414a-b6f6-84656dd2d32a" />
+    </connection>
+    <connection id="b4cb0637-53da-499b-9f66-eee9c9354030" SrcNodeID="75a79d45-6d8c-4f1d-912b-b181e83e4109" SrcPortName="advance" DstNodeID="107013bb-9188-483c-a1dd-6b65455e45a1" DstPortName="enter" ConnectionOrder="0">
+      <points id="81c38d9b-5231-4259-9ad0-8cc4fc14a338" />
+    </connection>
+    <connection id="7cd12062-4734-4f42-987e-1737aa5fa591" SrcNodeID="9ef9d949-d3c7-4b88-9cce-11df06163f52" SrcPortName="advance" DstNodeID="75a79d45-6d8c-4f1d-912b-b181e83e4109" DstPortName="enter" ConnectionOrder="0">
+      <points id="b0c203b7-3667-4913-a76b-cb8a09d00942" />
+    </connection>
+    <connection id="d0847fa4-6486-4ee7-94ec-1d906fd54dfa" SrcNodeID="cfe2dfb3-2487-43db-ac9c-719856299953" SrcPortName="advance" DstNodeID="9ef9d949-d3c7-4b88-9cce-11df06163f52" DstPortName="enter" ConnectionOrder="0">
+      <points id="cb484f72-76cb-4eb3-b83f-b25288e2fc88" />
+    </connection>
+    <connection id="dddf1bc1-2271-408b-9943-b3e559f93110" SrcNodeID="107013bb-9188-483c-a1dd-6b65455e45a1" SrcPortName="false" DstNodeID="9d64bd80-ddd5-4282-8297-c91ac0ad10b3" DstPortName="enter" ConnectionOrder="0">
+      <points id="d21d29b0-6588-4a92-9fa3-e7facc90e7b1" />
+    </connection>
+    <connection id="a96a1368-2a84-4a72-879b-9954494bfb4c" SrcNodeID="118aaf65-40bb-44c7-ac9d-a00f4a907adb" SrcPortName="false" DstNodeID="5482e94a-4e60-4738-bcac-7dd8eda3b991" DstPortName="enter" ConnectionOrder="0">
+      <points id="7cb0d8ad-a840-4f32-baa5-41faa274f4b2" />
+    </connection>
+    <connection id="d70038f7-8652-45c0-ba41-e602fcdfc2af" SrcNodeID="107013bb-9188-483c-a1dd-6b65455e45a1" SrcPortName="true" DstNodeID="dff4bcab-23b8-418f-b46a-62935a856f17" DstPortName="enter" ConnectionOrder="0">
+      <points id="1c48b62b-5709-4256-b40d-0c6642b78084" />
+    </connection>
+    <connection id="9138c5be-e1da-406b-a29f-45c2d0b9d44e" SrcNodeID="9d64bd80-ddd5-4282-8297-c91ac0ad10b3" SrcPortName="true" DstNodeID="118aaf65-40bb-44c7-ac9d-a00f4a907adb" DstPortName="enter" ConnectionOrder="0">
+      <points id="1eeaad06-b61b-48bc-b6f4-19da7a746624" />
+    </connection>
+    <connection id="135fa8fb-3e8f-4a63-b695-3c79fe096ddc" SrcNodeID="118aaf65-40bb-44c7-ac9d-a00f4a907adb" SrcPortName="true" DstNodeID="bcaa1542-5053-4772-ba23-ac64ce029563" DstPortName="enter" ConnectionOrder="0">
+      <points id="e6ecaf7d-1c11-4f12-86b9-8571aa38ec87" />
+    </connection>
+    <connection id="8f21d412-c5bb-456e-afc7-b88976d91e31" SrcNodeID="bcaa1542-5053-4772-ba23-ac64ce029563" SrcPortName="advance" DstNodeID="dff4bcab-23b8-418f-b46a-62935a856f17" DstPortName="enter" ConnectionOrder="0">
+      <points id="8ac9825a-97d7-41da-8e1e-b8b2ea69a905" />
+    </connection>
+    <connection id="750e4ab6-f77f-4294-8c6a-9f05bf8e02e0" SrcNodeID="bb8a08b5-3fc5-4000-b4e3-f9a240e243fa" SrcPortName="false" DstNodeID="3e5b209d-2e5c-495a-a9c1-526b6af848aa" DstPortName="enter" ConnectionOrder="0">
+      <points id="c53e6b6a-be95-4e31-9244-6543c2d6a3b4" />
+    </connection>
+    <connection id="06d4891b-2cf8-471e-9485-678e7344598f" SrcNodeID="c47c38bd-8c99-463e-8701-65ed42fbb123" SrcPortName="true" DstNodeID="bb8a08b5-3fc5-4000-b4e3-f9a240e243fa" DstPortName="enter" ConnectionOrder="0">
+      <points id="bb2874a5-30db-4616-90e0-8f43b03bed85" />
+    </connection>
+    <connection id="f788cf63-d00b-49be-a107-098fafa68dac" SrcNodeID="5482e94a-4e60-4738-bcac-7dd8eda3b991" SrcPortName="true" DstNodeID="99aa1997-e791-4148-b53e-886d646f6747" DstPortName="enter" ConnectionOrder="0">
+      <points id="b7bc13c4-c344-4332-8d00-fe24d5e5a6fe" />
+    </connection>
+    <connection id="4db155a9-bac9-420a-9efe-b6b709e7be2b" SrcNodeID="5482e94a-4e60-4738-bcac-7dd8eda3b991" SrcPortName="false" DstNodeID="ac29d3c4-fe0c-4e6f-9cf9-37896b15b0ff" DstPortName="enter" ConnectionOrder="0">
+      <points id="41dfd9fb-3c08-4a34-b806-922afb1f8c2b" />
+    </connection>
+    <connection id="233a5627-bcb2-4e41-a052-7d31a93ca8c7" SrcNodeID="bb8a08b5-3fc5-4000-b4e3-f9a240e243fa" SrcPortName="true" DstNodeID="040b5cf9-6b94-4b5b-b9a4-22cdddfb3044" DstPortName="enter" ConnectionOrder="0">
+      <points id="74d899b3-efed-4f3f-93d1-c3725124ad59" />
+    </connection>
+    <connection id="0e6774b7-6397-482b-9316-2c8fed4c4876" SrcNodeID="3e5b209d-2e5c-495a-a9c1-526b6af848aa" SrcPortName="true" DstNodeID="dd7fe2ce-cf38-4d1b-8b68-f5914c27c89e" DstPortName="enter" ConnectionOrder="0">
+      <points id="986ef6b7-3936-49af-9bc4-6b58c14fb62a" />
+    </connection>
+    <connection id="0f7c9246-e4a1-4f08-852d-9600f59d6d2a" SrcNodeID="3e5b209d-2e5c-495a-a9c1-526b6af848aa" SrcPortName="false" DstNodeID="b716ef07-8305-440d-aef6-45662c0ff6d5" DstPortName="enter" ConnectionOrder="0">
+      <points id="819486a0-b860-417b-bdc7-c8deb977280b" />
+    </connection>
+    <connection id="d481c040-d14d-4479-9620-2fb64f23c855" SrcNodeID="99aa1997-e791-4148-b53e-886d646f6747" SrcPortName="advance" DstNodeID="dff4bcab-23b8-418f-b46a-62935a856f17" DstPortName="enter" ConnectionOrder="0">
+      <points id="5871b83c-b56a-433b-a808-2fd20ddaf069" />
+    </connection>
+    <connection id="90275653-95ea-4631-beab-21a317d59330" SrcNodeID="ac29d3c4-fe0c-4e6f-9cf9-37896b15b0ff" SrcPortName="advance" DstNodeID="dff4bcab-23b8-418f-b46a-62935a856f17" DstPortName="enter" ConnectionOrder="0">
+      <points id="26068625-db40-4cdd-a036-019319c77808" />
+    </connection>
+    <connection id="9910c7dd-43e7-46eb-89e7-17785a839a09" SrcNodeID="040b5cf9-6b94-4b5b-b9a4-22cdddfb3044" SrcPortName="advance" DstNodeID="dff4bcab-23b8-418f-b46a-62935a856f17" DstPortName="enter" ConnectionOrder="0">
+      <points id="3673c8da-1836-4f57-8504-c7abd065363a" />
+    </connection>
+    <connection id="50d2cdad-862a-40a4-88d1-dcca8f868afe" SrcNodeID="dd7fe2ce-cf38-4d1b-8b68-f5914c27c89e" SrcPortName="advance" DstNodeID="dff4bcab-23b8-418f-b46a-62935a856f17" DstPortName="enter" ConnectionOrder="0">
+      <points id="7fa1c39a-8b03-417a-9de9-942197eea8c5" />
+    </connection>
+    <connection id="99679bd1-ab86-4933-b841-a251014cf3c7" SrcNodeID="b716ef07-8305-440d-aef6-45662c0ff6d5" SrcPortName="advance" DstNodeID="dff4bcab-23b8-418f-b46a-62935a856f17" DstPortName="enter" ConnectionOrder="0">
+      <points id="5f7d5a4b-7747-429d-b4a0-a7be17202e94" />
+    </connection>
+    <connection id="688e3094-b864-4b7c-824e-868eebea3256" SrcNodeID="acbbae14-2c79-409c-8988-8512efd8581c" SrcPortName="advance" DstNodeID="dff4bcab-23b8-418f-b46a-62935a856f17" DstPortName="enter" ConnectionOrder="0">
+      <points id="f1e84089-3a8d-4abf-8e70-ef1e1e02d47e" />
+    </connection>
+    <connection id="c0cbcc72-5d72-4d55-80a8-1669ad364ebf" SrcNodeID="c47c38bd-8c99-463e-8701-65ed42fbb123" SrcPortName="false" DstNodeID="acbbae14-2c79-409c-8988-8512efd8581c" DstPortName="enter" ConnectionOrder="0">
+      <points id="217434f7-ec13-4793-adb4-8c9efd5b575d" />
+    </connection>
+  </connections>
+</StoryAsset>

@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="5d758a4f-32b8-4630-aa90-f9e32e95a5b1" name="NewJobPAP" deleted="False" valid="True">
+  <nodes id="3e816509-5140-4c2b-9b03-0365a9e2d3fa">
+    <story-start-node id="aad3102f-fa21-4981-8d97-2435c48727ef" X="-640" Y="-1720" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="SingleInstance" NodeEvent="SeasonStartPAP" StoryKey="Select:BasicData.ID" UseSelectData="True" RunInPlayerCareer="True" RunInManagerCareer="False" RunInTournamentMode="False">
+      <conditions id="4dcd27d5-a928-4b97-a823-7d1574c83d6f" />
+      <select-data id="f6a2c49e-2569-4192-b1e8-b97df8785c81" SelectCount="0">
+        <alias-list id="5f09971b-3b50-4c2a-b5a3-e6367205e974" />
+        <order-by id="347dda45-f238-432e-91ac-1042547ec775" />
+        <alias-data-source id="ce677879-9eb3-49f2-b0d6-5df716dad1a4" DataSource="Model:Global.Players">
+          <conditions id="2d523ec7-1059-4075-96f7-b6b1de93167d" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <condition-node id="04b3ce00-6491-4567-bdfe-3886f1ec611f" X="240" Y="-1440" NodeType="Condition" NodeName="Loan">
+      <conditions id="ac9005e9-eceb-4ce8-ae5c-4a45edf33947">
+        <condition id="e61d9ef0-9a03-4a1c-b2f3-355d77debda7" VariableId="Model:SeasonStartPAP.IsLoan" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="a4dd196a-cbbf-4621-87f1-f3049c3ae573" X="400" Y="-1120" NodeType="Condition" NodeName="Loan Return">
+      <conditions id="041dd7d1-e064-4a3a-a7d9-8c9926678853">
+        <condition id="556271f2-5e37-40fc-9e73-a47471cfd541" VariableId="Model:SeasonStartPAP.IsReturnFromLoan" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="2e9bbe92-aa86-42fa-ae67-69e400324c4f" X="0" Y="-1720" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="bbdc5414-2a67-4b62-a90c-481e31d8638e">
+        <condition id="2d665a25-e4af-4767-883f-99303ff601f3" VariableId="Model:SeasonStartPAP.IsLoan" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="99482824-8877-4292-a09e-cd47a721bade" VariableId="Model:SeasonStartPAP.IsReturnFromLoan" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <random-node id="019f76f0-e15c-4664-87f1-fbc6e2209e72" X="400" Y="-1880" NodeType="Random" NodeName="Set Name for New Node" Outputs="4" WeightDistribution="25-25-25-25" />
+    <trigger-news-node id="afacabb5-e7af-4b04-89a0-b1a7c9bf1a64" X="600" Y="-1960" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="14" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="press">
+      <stringWithArgsTitle id="6beb9da4-21e0-4347-b41e-6d686986876d" StringID="CM_News_PAPSeason_Arrival_Title_1" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="8e2eb5c2-4b39-419b-b20b-6d36abdf9b04">
+          <stringArgument id="501f1cbe-d394-4e65-8d04-0ffa101f839c" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="9009e386-a011-400a-8b4d-e74c260e0143">
+          <keyValuePair id="870a6ef5-1f3a-4a79-9fda-5d1b4a47551f" Key="M" Value="%1s Secure New Signing" />
+          <keyValuePair id="b2396cd1-dff9-4691-9ca9-68adc143278e" Key="F" Value="" />
+          <keyValuePair id="8f34facf-0d52-4962-889e-1cd4fc2d38b7" Key="MM" Value="" />
+          <keyValuePair id="f0ea154d-ddc0-4885-917d-b3c3de962191" Key="MF" Value="" />
+          <keyValuePair id="33c6c4ac-dfc4-43f2-83a9-7d2104a00fff" Key="FM" Value="" />
+          <keyValuePair id="cecbfada-bd20-489c-81e5-a074679a41e6" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="ba83b7a4-6a9e-46c4-98fc-7688a2c5038a" StringID="CM_News_PAPSeason_Arrival_Body_1" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="6eb34f93-2c33-42a2-9a16-3427b65f6afc">
+          <stringArgument id="1fa5b901-f0ed-4e71-baf9-fee101fc3f69" Value="PAP ID:BasicData.ID" Format="6" />
+          <stringArgument id="ad5f497e-1b0b-48c0-a9a5-0379892542a9" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="ab72f084-9527-4a16-8673-c26c5693e049" Value="PAP ID:BasicData.Age" Format="0" />
+          <stringArgument id="50230c0d-7c9e-4590-9bdb-1e415eaad7c8" Value="PAP ID:DBData.PreferredPosition" Format="10" />
+          <stringArgument id="583892bd-c806-4da3-915c-9cd354747199" Value="PAP ID:BasicData.ID" Format="8" />
+          <stringArgument id="cc8e1ba4-0ec7-4867-9ad7-21ca6b8501de" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="a4410f67-d93d-45c1-a22d-b6285b256879">
+          <keyValuePair id="5e742707-5622-4e41-bcf4-18a0baad78a0" Key="M" Value="%1s is the newest and most promising addition to the %2s line up this year. With all eyes on him it's easy to wonder if the %3s year old %4s can live up to expectations. &quot;I have no doubt %5s has the skills to compete in the team&quot;, began %6s, &quot;It will really be about his ability to get on with the rest of the lads.&quot;" />
+          <keyValuePair id="aafc82aa-eeef-48ab-9dce-ffc6ea4f6e0e" Key="F" Value="%1s is the newest and most promising addition to the %2s line up this year. With all eyes on him it's easy to wonder if the %3s year old %4s can live up to expectations. &quot;I have no doubt %5s has the skills to compete in the team&quot;, began %6s, &quot;It will really be about his ability to get on with the rest of the lads.&quot;" />
+          <keyValuePair id="d8022cdc-3271-4d99-b448-bbd75dcadf03" Key="MM" Value="" />
+          <keyValuePair id="cbdb4486-f930-4dd3-becd-8c508b110c9b" Key="MF" Value="" />
+          <keyValuePair id="772f0af9-eac6-46c1-892d-1934b819d68b" Key="FM" Value="" />
+          <keyValuePair id="bd5d7787-d54e-4552-b49c-1067b495387a" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="9604c41d-6c41-4c80-ad21-458716ecc2d7">
+        <sceneParameter id="cafc9a79-224a-477f-89ac-72e5a538d303" Parameter="PlayerId_1" Value="Model:Global.UserPapID" />
+        <sceneParameter id="a9bb641f-6fa7-4346-a84c-de33977f6dd9" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <join-node id="6ed9f445-4042-42dd-bbf1-bae1bbfb4d8c" X="840" Y="-1840" NodeType="Join" NodeName="Set Name for New Node" />
+    <random-node id="c3c93035-1870-485f-98b3-b089ff866736" X="400" Y="-1560" NodeType="Random" NodeName="Set Name for New Node" Outputs="4" WeightDistribution="25-25-25-25" />
+    <trigger-news-node id="24ca450a-7f88-45ec-b797-e8ecb2ff63b4" X="600" Y="-1480" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="31" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="graph_u">
+      <stringWithArgsTitle id="3c396246-5b79-4693-8463-18322b803ea1" StringID="CM_News_PAPSeason_Loan_Title_3" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="3bf9bd12-8453-41b5-837e-dd043da20a35">
+          <stringArgument id="62654c05-2422-4b2c-8a82-ad56c6f8459a" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="4edd6e63-ebc9-42d7-b4b8-c4c931289407" Value="Model:Global.UserPapID" Format="7" />
+        </stringArguments>
+        <stringContent id="725dc016-9221-4c08-9ffb-3c98a7a104cc">
+          <keyValuePair id="cf5ded3a-8804-437d-a887-2da93b0a167a" Key="M" Value="%1s Completes %2s Loan Deal" />
+          <keyValuePair id="f1ee7a1c-4a0f-4f9a-883f-18eba27866b3" Key="F" Value="" />
+          <keyValuePair id="79f7fd52-9cb4-403e-875b-532d2c003588" Key="MM" Value="" />
+          <keyValuePair id="c57df5d0-76c0-4b66-9425-162cc10610c4" Key="MF" Value="" />
+          <keyValuePair id="82e8cf5f-48f6-4557-bf0b-fa34ac6a0457" Key="FM" Value="" />
+          <keyValuePair id="f494598c-7405-411e-9daf-f8d3e872f656" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="8685d6ac-1b23-4811-ba26-247dfb0f4a69" StringID="CM_News_PAPSeason_Loan_Body_3" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="1bf5e208-4b13-47ad-b545-60e8e0dd2f31">
+          <stringArgument id="c4feaf73-ff30-4f5b-b813-3ea52243bcf4" Value="Model:SeasonStartPAP.FromTeamID" Format="11" />
+          <stringArgument id="94121166-e5dc-4ab4-bf75-ab324c9b8b28" Value="PAP ID:BasicData.ID" Format="6" />
+          <stringArgument id="afe17852-8451-439e-8be9-d1dad9f3d8ca" Value="Model:SeasonStartPAP.ToTeamID" Format="11" />
+          <stringArgument id="b48d58ad-3d01-407f-8ccc-0f222ad1314f" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="c569ceb5-e52d-400a-9e5c-80f0c8ebbaa0">
+          <keyValuePair id="2f7d3a07-8dd9-4ce5-b955-8f13a1c24d92" Key="M" Value="A desire for more first team action may have played a huge part in luring %1s's %2s away to %3s on loan. With many %3s fans looking for a more permanent arrival %4s refused to comment if this would be a loan deal which ended in a full purchase. &quot;He has only just arrived here I can't say if we will continue talks to add him permanently to the team. Lets allow him to fulfil his loan period first see how it goes and then ask me.&quot;" />
+          <keyValuePair id="23a28c6c-596a-4029-bf63-66656d893d39" Key="F" Value="A desire for more first team action may have played a huge part in luring %1s's %2s away to %3s on loan. With many %3s fans looking for a more permanent arrival %4s refused to comment if this would be a loan deal which ended in a full purchase. &quot;He has only just arrived here I can't say if we will continue talks to add him permanently to the team. Lets allow him to fulfil his loan period first see how it goes and then ask me.&quot;" />
+          <keyValuePair id="38a81913-4ab9-4c6d-9de5-3814c129b58e" Key="MM" Value="" />
+          <keyValuePair id="c037d19c-4780-4f8d-9307-eebfa9c7866e" Key="MF" Value="" />
+          <keyValuePair id="fb330cd7-15e0-4be9-ac11-6a25e5f780e5" Key="FM" Value="" />
+          <keyValuePair id="7516ec2f-2a07-42de-8dbd-f84ad0cf3ec2" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="bf39b58b-0571-410b-90bb-3bae715ced0c">
+        <sceneParameter id="c940b8f0-0dcd-40ac-8772-526fb6581591" Parameter="PlayerId_1" Value="Model:Global.UserPapID" />
+        <sceneParameter id="cee3e4de-d7c9-42b4-ba9a-7deef5f7514a" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="a12aafec-ceb7-4c79-a12e-d073438ef5c3" X="600" Y="-1560" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="31" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="press">
+      <stringWithArgsTitle id="b1acdf9c-421c-4c20-bca5-b91f254b1dd8" StringID="CM_News_PAPSeason_Loan_Title_2" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="4d44435d-ea01-4c12-af00-c139333d0b4b">
+          <stringArgument id="5dec9d33-af7d-445c-9e98-c4e8c1cc4b8f" Value="Model:Global.UserPapID" Format="7" />
+          <stringArgument id="44441347-ebc0-44d3-a51c-07d2d8aadd79" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="59bb9a12-177c-4a18-85fa-0dbd09554307">
+          <keyValuePair id="9e8dba0a-1e58-489f-9dae-2bdb58f16eae" Key="M" Value="%1s Loan Set to Bolster %2s Squad" />
+          <keyValuePair id="bac03ae0-947a-4aa7-9fda-7fc6608f94c4" Key="F" Value="" />
+          <keyValuePair id="69b96601-23a1-4107-84d4-4fb97d748275" Key="MM" Value="" />
+          <keyValuePair id="27366966-f132-4daa-afba-e4fc563f8ee1" Key="MF" Value="" />
+          <keyValuePair id="0f1045de-6e18-4693-8a7c-52dbd6341a15" Key="FM" Value="" />
+          <keyValuePair id="72dc5698-8d33-417b-a686-75895f8c1feb" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="f280ef46-4714-432f-9777-92fc659acdb3" StringID="CM_News_PAPSeason_Loan_Body_2" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="8f9dfb2f-9604-427b-8958-257e49f2f467">
+          <stringArgument id="5bec9f8a-5319-4ea2-8db7-2fe78426c61d" Value="PAP ID:BasicData.ID" Format="6" />
+          <stringArgument id="1e08cf4b-4a43-4639-850b-07ac3fece288" Value="Model:SeasonStartPAP.ToTeamID" Format="11" />
+          <stringArgument id="0ff1f3a8-3842-4727-930f-fec298c07551" Value="Model:SeasonStartPAP.FromTeamID" Format="11" />
+          <stringArgument id="ab45f0f7-6460-4ad6-a4d9-efee4f2e4eae" Value="PAP ID:BasicData.ID" Format="7" />
+          <stringArgument id="731a0638-688f-499b-9cac-c04283fbc28b" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="3d14889b-bfa3-41f8-8202-f8f1ed6bb84c">
+          <keyValuePair id="fa5d8b96-e9d5-458c-82f5-03e55cb668ca" Key="M" Value="%1s has been officially sent on loan to %2s from %3s &quot;I'm excited about getting the chance to play more football. Hopefully this will help me establish myself at a club&quot; added %4s. %5s also was keen to comment on the player's arrival &quot;I'm very happy to have him here. He's going to be a big help to us and our plans and I just hope he enjoys his time here.&quot; " />
+          <keyValuePair id="bbe99056-8adb-4cb6-acda-2d164f4158cf" Key="F" Value="%1s has been officially sent on loan to %2s from %3s &quot;I'm excited about getting the chance to play more football. Hopefully this will help me establish myself at a club&quot; added %4s. %5s also was keen to comment on the player's arrival &quot;I'm very happy to have him here. He's going to be a big help to us and our plans and I just hope he enjoys his time here.&quot; " />
+          <keyValuePair id="0d6f46d0-ca72-4855-a9f7-6f0dafb592d3" Key="MM" Value="" />
+          <keyValuePair id="08285e46-6cdc-449f-9d37-45f59b32443c" Key="MF" Value="" />
+          <keyValuePair id="10598610-e5e1-40bf-8f2f-223536cc37ae" Key="FM" Value="" />
+          <keyValuePair id="c8565179-d81d-4216-8959-4f26bcb41c3f" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="ae19cdd0-779f-47ea-bb75-edc7e2af3bac">
+        <sceneParameter id="ca309bb4-e2da-4ee2-81c4-ba9b9663f1f9" Parameter="PlayerId_1" Value="Model:Global.UserPapID" />
+        <sceneParameter id="be7a323a-be17-41ad-bc5e-26727c6a3796" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="ebaaef17-5f4c-4d54-b054-bfd4be9e8071" X="600" Y="-1640" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="31" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="season">
+      <stringWithArgsTitle id="e7a9b257-e201-4f3d-bbfa-a2fe2b3fd4e0" StringID="CM_News_PAPSeason_Loan_Title_1" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="77bf64e2-1802-47ff-804b-83f907db7110">
+          <stringArgument id="024cc83e-ed44-4c87-8913-f3ed038ec02e" Value="Model:Global.UserPapID" Format="7" />
+          <stringArgument id="d5894276-73db-4dfa-ad7e-f047ef372db5" Value="SaveData:FromTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="b55e85a3-b3e5-47f8-b1c2-06611a63addd">
+          <keyValuePair id="c10af226-58c4-4a84-8ebc-1ec05076b0bd" Key="M" Value="%1s Arrives on Loan From %2s" />
+          <keyValuePair id="614ee9ff-2b96-4374-ab2c-def85a1ec189" Key="F" Value="" />
+          <keyValuePair id="13325b4b-c3f3-45ed-bfe0-ec44c3732c04" Key="MM" Value="" />
+          <keyValuePair id="518691ef-8def-4aae-a087-bf9687f17d11" Key="MF" Value="" />
+          <keyValuePair id="58536b00-102f-47a0-a103-be757058f4ec" Key="FM" Value="" />
+          <keyValuePair id="3173bfb5-2248-423d-ba14-0a3e3f0e8a5f" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="bf0870ab-80b6-47a8-86a6-538661114a0e" StringID="CM_News_PAPSeason_Loan_Body_1" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="d095c112-5238-459c-8f47-c810c4200d4a">
+          <stringArgument id="51dd30b3-b087-4c58-82e7-00e97f589c22" Value="PAP ID:BasicData.ID" Format="6" />
+          <stringArgument id="b3180b6e-ad2b-4302-9fd8-9bf6c9fe535a" Value="Model:SeasonStartPAP.ToTeamID" Format="11" />
+          <stringArgument id="4c325c80-9555-482d-b69d-f6725fea5c3c" Value="Model:SeasonStartPAP.FromTeamID" Format="11" />
+          <stringArgument id="dce9f6f8-65cd-4d1a-bec2-0b0655554449" Value="PAP ID:BasicData.ID" Format="7" />
+        </stringArguments>
+        <stringContent id="fa54b481-f19e-4f5d-88f2-91fe91b62ca2">
+          <keyValuePair id="a4028575-4525-42d5-9f3f-8cfd53016c96" Key="M" Value="Exciting news of %1s's arrival at %2s on a loan deal from %3s in a move that could prove to be equally beneficial to both teams. &quot;I'm glad %2s are interested in giving me a chance.&quot;, began an enthusiastic %4s, &quot;I look forward to get some experience under my belt.&quot;" />
+          <keyValuePair id="8dbb3118-c2ac-4802-8f1d-bbf06d6edc23" Key="F" Value="" />
+          <keyValuePair id="191c8307-1c5e-465a-a303-1cdc882f7b04" Key="MM" Value="" />
+          <keyValuePair id="88ea2ea0-1c7b-4ede-862f-dd8af610efa2" Key="MF" Value="" />
+          <keyValuePair id="c5c18f4d-ca9c-4416-a347-611400d1065c" Key="FM" Value="" />
+          <keyValuePair id="7a274b4c-2b34-4748-9dc8-6d42d0613a48" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="f38ccb53-b27b-435c-bf7c-ef50b299fafe">
+        <sceneParameter id="3e818802-e03f-4695-b3c3-9ea55f67659d" Parameter="PlayerId_1" Value="Model:Global.UserPapID" />
+        <sceneParameter id="77ce0aab-e212-469d-b8f3-9a38ff5997dd" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="b3e440e0-7bea-4377-bd21-7babffdde8cc" X="600" Y="-1400" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="31" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="future">
+      <stringWithArgsTitle id="2687c322-d229-4b27-b484-7a780ebe1a96" StringID="CM_News_PAPSeason_Loan_Title_4" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="a94bae33-8979-4ea8-92cb-db267d82c5f7">
+          <stringArgument id="246a62a5-2690-4231-918a-f61ebea83ecb" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="97998508-7196-4217-92af-448a70c78c68" Value="Model:Global.UserPapID" Format="7" />
+        </stringArguments>
+        <stringContent id="4202fa11-2f62-4c95-b8d4-9c583b5b00af">
+          <keyValuePair id="7293e434-b758-476a-a4f9-7b6e74d7d105" Key="M" Value="%1s Agree %2s Loan Deal" />
+          <keyValuePair id="62b17e74-a353-41d4-80e6-edc23784f7d3" Key="F" Value="" />
+          <keyValuePair id="000bd361-c2f3-41af-8910-50aa6c65253c" Key="MM" Value="" />
+          <keyValuePair id="1e4f9f5a-5b3e-4c9b-9aaa-b772af88ee5c" Key="MF" Value="" />
+          <keyValuePair id="794ea183-a314-4315-8390-064946ba2bd6" Key="FM" Value="" />
+          <keyValuePair id="2ecd633f-f52f-429c-b411-f12fae767334" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="24731d31-0979-416a-8132-72df0b5d09c0" StringID="CM_News_PAPSeason_Loan_Body_4" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="b5fad44a-0673-4683-ad8a-092063755d08">
+          <stringArgument id="f8bfbb1b-7a13-4bdc-9e84-b94d627f7259" Value="PAP ID:BasicData.ID" Format="6" />
+          <stringArgument id="73490be9-6053-4e30-bf14-82001011e3b9" Value="Model:SeasonStartPAP.ToTeamID" Format="11" />
+          <stringArgument id="8010cb5e-ae16-4cc3-b260-4e9e51baff81" Value="PAP ID:DBData.PreferredPosition" Format="10" />
+          <stringArgument id="e87ae758-f498-4178-af4d-5deb972367d3" Value="Model:Global.UserTeamID" Format="13" />
+        </stringArguments>
+        <stringContent id="0d4d41d9-baa3-4fe9-af45-c8f57d1ecdf6">
+          <keyValuePair id="01b52345-7e31-4d4e-8e12-7d253f6e6b0f" Key="M" Value="Fans were left perplexed by the recent news of %1s arriving for a loan spell at %2s. When asked what they thought of the players arrival they said &quot;He's a good player but I don't think we should fill the %3s spot with a person who might not be here next season.&quot; The fans have made it clear that %4s may need to find a more permanent solution for the %3s role." />
+          <keyValuePair id="2b93d18d-d04e-42d7-b6f5-e3e99b90d764" Key="F" Value="Fans were left perplexed by the recent news of %1s arriving for a loan spell at %2s. When asked what they thought of the players arrival they said &quot;He's a good player but I don't think we should fill the %3s spot with a person who might not be here next season.&quot; The fans have made it clear that %4s may need to find a more permanent solution for the %3s role." />
+          <keyValuePair id="5265e21c-6af4-4fab-a769-22f404e7bbce" Key="MM" Value="" />
+          <keyValuePair id="5ffd3715-10fb-42ed-90db-ac7e2cd24565" Key="MF" Value="" />
+          <keyValuePair id="9dcede11-f8ed-4cc8-97d6-29772ed45461" Key="FM" Value="" />
+          <keyValuePair id="89bdbcc8-68fb-4da1-bd37-02f6ea23c2ac" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="c4649099-ba83-4c49-96ad-6c7e7cad47e9">
+        <sceneParameter id="aecf3241-926b-44da-8a32-b52f93469bce" Parameter="PlayerId_1" Value="Model:Global.UserPapID" />
+        <sceneParameter id="c41f4bea-07ca-4692-8cf0-6c2d62c60c13" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <join-node id="fd2060ae-add0-4036-9192-2f1c8d08600e" X="840" Y="-1520" NodeType="Join" NodeName="Set Name for New Node" />
+    <random-node id="4949d32b-859e-4aab-ad23-f5cc22328aef" X="600" Y="-1240" NodeType="Random" NodeName="Set Name for New Node" Outputs="4" WeightDistribution="25-25-25-25" />
+    <join-node id="53e567d9-420e-482b-8929-66a7238c0e36" X="1040" Y="-1200" NodeType="Join" NodeName="Set Name for New Node" />
+    <story-end-node id="b1b94ea1-e3d4-40b0-ab04-2145973e776d" X="1680" Y="-1840" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <trigger-news-node id="f58d7aa5-3798-4d4c-93bf-f79d4fa9c776" X="600" Y="-1880" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="14" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="contract">
+      <stringWithArgsTitle id="6302a484-1843-4e88-a1f2-a65ff25d7b06" StringID="CM_News_PAPSeason_Arrival_Title_2" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="29f8f0b8-e0aa-47ea-b212-f09c4c11aa72">
+          <stringArgument id="ca5501dc-0bfb-43cd-818b-bc27a7257187" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="b6a37914-90e4-4482-ba3d-b1c6fd16ca9b">
+          <keyValuePair id="df12d2fc-7b4f-4416-b3b3-08f1a1f4efe2" Key="M" Value="New Man to Bolster %1s" />
+          <keyValuePair id="14b390f4-002c-496e-8167-e5cea8044644" Key="F" Value="" />
+          <keyValuePair id="28e569ed-39e8-455b-b751-2410dc95af32" Key="MM" Value="" />
+          <keyValuePair id="3f0fddb9-b09e-451c-85d5-605c61f861b0" Key="MF" Value="" />
+          <keyValuePair id="9abd07ba-2e73-4e95-97ca-10fdf8e0619f" Key="FM" Value="" />
+          <keyValuePair id="cfe9993d-bd92-470f-922c-bc118f46915d" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="c78cb73a-bbb2-4b0e-97eb-a3d74ce89c96" StringID="CM_News_PAPSeason_Arrival_Body_2" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="6b0b195d-6d55-4bb0-b492-9ea935fdace1">
+          <stringArgument id="fb9b09ca-f681-4af5-beda-321ccc4b24aa" Value="PAP ID:BasicData.Age" Format="0" />
+          <stringArgument id="718aa204-f9a0-468e-8f2a-3562b684f673" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="bf25060e-23d4-4b46-b127-a1fdc0324616" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="801dba29-176f-4b64-ba5f-6371aa530dff" Value="PAP ID:DBData.PreferredPosition" Format="10" />
+          <stringArgument id="e3abf7ee-be43-4389-8907-c51c601d0bfd" Value="PAP ID:BasicData.ID" Format="6" />
+        </stringArguments>
+        <stringContent id="ea0c8ef4-d38b-42c2-8b47-254e028d5215">
+          <keyValuePair id="43afadea-32ce-4e42-8e29-ab35239ce2ac" Key="M" Value="The %1s year old will be looking to impress %2s with his recent transfer to the club. %3s offered the %4s a deal he simply could not refuse. &quot;When %3s approached me with the deal I couldn't say no. It's not every day you get a chance to work with such a good bunch of lads&quot; stated %5s." />
+          <keyValuePair id="47949125-3d40-48ff-a543-5eacfd12dd2a" Key="F" Value="The %1s year old will be looking to impress %2s with his recent transfer to the club. %3s offered the %4s a deal he simply could not refuse. &quot;When %3s approached me with the deal I couldn't say no. It's not every day you get a chance to work with such a good bunch of lads&quot; stated %5s." />
+          <keyValuePair id="17de546b-1b35-4b7a-b614-00490cfc370f" Key="MM" Value="" />
+          <keyValuePair id="fa9e8a1c-a15c-4469-8480-eb6a5fbf98c3" Key="MF" Value="" />
+          <keyValuePair id="5f0772a1-b694-4ce1-98fd-0126dcca0747" Key="FM" Value="" />
+          <keyValuePair id="48c26d3c-7c79-420b-bb33-dc1f4261772d" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="3f67c7d5-5fd2-467c-9e8c-6b368019e4f2">
+        <sceneParameter id="a309d8e9-46b9-464a-9255-06da30495f00" Parameter="PlayerId_1" Value="Model:Global.UserPapID" />
+        <sceneParameter id="db34a273-f171-489f-a9d1-8c44f45fa92f" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="85e616a2-755c-4779-bab5-c83f126a489d" X="600" Y="-1720" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="14" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="news">
+      <stringWithArgsTitle id="3b0e2158-4c36-47ab-8e17-217c28ffadb2" StringID="CM_News_PAPSeason_Arrival_Title_4" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="93a4242d-4bb4-4096-9d28-f1f793e512f4">
+          <stringArgument id="9d5df895-13dd-4f52-b18d-dc76daa6896e" Value="Model:Global.UserPapID" Format="7" />
+          <stringArgument id="c8d2d9fe-c3b1-4693-bbf3-c756a40a61b2" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="7412e83e-8368-4074-b709-256ffdea2950">
+          <keyValuePair id="91691966-ca01-4cc4-8d75-3b2894e9ac7e" Key="M" Value="%1s Begins Journey at %2s" />
+          <keyValuePair id="7baf3070-b291-4bf5-865d-7029ed970cbe" Key="F" Value="" />
+          <keyValuePair id="c422fe58-e4f1-4e0a-80b3-bb21233809c3" Key="MM" Value="" />
+          <keyValuePair id="52e6ffe6-850e-4c25-9ae6-2726f8142a92" Key="MF" Value="" />
+          <keyValuePair id="76d81739-cdb5-48f4-8b5a-ed85bddaa2c1" Key="FM" Value="" />
+          <keyValuePair id="638480fc-a47f-42b9-8d1a-ecde3b70d906" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="57af94aa-b84a-4936-9c13-bd65ad13df69" StringID="CM_News_PAPSeason_Arrival_Body_4" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="a895494b-c60f-4609-b47d-f7048a1a1291">
+          <stringArgument id="c8f57c0a-18b1-440d-83bf-c0e2c3f05215" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="c0ffcda0-481f-458f-9ea2-696a66df860d" Value="PAP ID:BasicData.Age" Format="0" />
+          <stringArgument id="b2d76ae2-fc3c-408e-acac-bb40f45adec6" Value="PAP ID:BasicData.ID" Format="6" />
+          <stringArgument id="ff6586de-e9be-415b-964b-c08ed0f8aac9" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="c17df915-65c7-4c60-9d30-5343016bd564" Value="PAP ID:DBData.PreferredPosition" Format="10" />
+          <stringArgument id="63f594e8-ffcc-4640-a9b8-72ea43b29f72" Value="PAP ID:BasicData.ID" Format="7" />
+        </stringArguments>
+        <stringContent id="6fd1eb7d-572a-49a8-8247-7b55c205fd8d">
+          <keyValuePair id="cf5cb7f6-69ee-4fec-81c5-1e587165d67f" Key="M" Value="Just announced by a press release from %1s is the signing of %2s year old %3s. %4s had this to say about his new addition: &quot;This is what the club needs someone fresh and new in the mix. I'm sure he will be a great addition to an already brilliant squad of players.&quot; Many feel a new %5s is just what %1s needed and no doubt hope that %6s can make a big name for himself." />
+          <keyValuePair id="df970968-b81e-452b-93dc-b0f84db8a338" Key="F" Value="Just announced by a press release from %1s is the signing of %2s year old %3s. %4s had this to say about his new addition: &quot;This is what the club needs someone fresh and new in the mix. I'm sure he will be a great addition to an already brilliant squad of players.&quot; Many feel a new %5s is just what %1s needed and no doubt hope that %6s can make a big name for himself." />
+          <keyValuePair id="233e8bcf-72c6-4f7b-bf01-076610ad44ff" Key="MM" Value="" />
+          <keyValuePair id="d29f7c5c-d04f-4558-8c90-8329480f9237" Key="MF" Value="" />
+          <keyValuePair id="b7db14f5-ebb3-42dd-8269-5a61587825aa" Key="FM" Value="" />
+          <keyValuePair id="88182f1f-115a-4c51-b1d2-a4b3c917c6b3" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="7676d1fa-7c33-4028-ad38-67f9f92fc3a2">
+        <sceneParameter id="b5a18483-ef93-44c4-ab3c-de46433dd07b" Parameter="PlayerId_1" Value="Model:Global.UserPapID" />
+        <sceneParameter id="cd1e51a3-baa3-4a2e-a544-8cacc79cf0e6" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="2c7e16ad-334e-4bdc-b5ad-bbec4b8a6cb4" X="600" Y="-1800" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="14" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="graph_u">
+      <stringWithArgsTitle id="2b7a30ae-65b7-4a57-a6e6-16f7656f5c68" StringID="CM_News_PAPSeason_Arrival_Title_3" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="eb383e6f-469a-46be-992f-10194c0c1165">
+          <stringArgument id="757c9795-d613-499c-85d0-643843ec7d8a" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="3aad79a9-8ddf-46d7-a432-8561a7f2c520" Value="Model:Global.UserPapID" Format="7" />
+        </stringArguments>
+        <stringContent id="3e940927-2659-4179-b6b8-d93e6b353cf8">
+          <keyValuePair id="6abfaa29-286e-45fd-a2a8-19e772037aed" Key="M" Value="%1s Fans Excited by Arrival of %2s" />
+          <keyValuePair id="d60d8bf2-3113-45c0-a25f-ec27a92879af" Key="F" Value="" />
+          <keyValuePair id="682eab0d-617d-4850-8beb-0cfc98161a63" Key="MM" Value="" />
+          <keyValuePair id="b9c35e2f-4911-4172-83c7-7efc1f4260fe" Key="MF" Value="" />
+          <keyValuePair id="07972bc4-93a7-487d-84f9-2ebf4e582ac8" Key="FM" Value="" />
+          <keyValuePair id="c09c3663-c156-45d8-aa6a-9dc86db5869a" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="e267946c-9a55-4d21-97df-43746b9c6fc8" StringID="CM_News_PAPSeason_Arrival_Body_3" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="235375ef-4aff-4dfd-9913-e689fd8e4362">
+          <stringArgument id="686b71b4-9526-48a8-8d51-038276a43388" Value="PAP ID:BasicData.ID" Format="6" />
+          <stringArgument id="99598fde-5b91-4734-b650-52c72a6f7dad" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="9109461c-bf0a-4276-aa26-2016b7eb5e0e" Value="PAP ID:BasicData.Age" Format="0" />
+          <stringArgument id="d588d892-ad9a-4c98-97d8-a0ee74f8fad2" Value="PAP ID:DBData.PreferredPosition" Format="10" />
+          <stringArgument id="3acca4a9-529e-4ac5-bf17-cdd27f098be1" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="32066a11-919e-4c46-9cd0-f924ce152f82" Value="PAP ID:BasicData.ID" Format="7" />
+        </stringArguments>
+        <stringContent id="1a1418fd-c242-45d6-8f02-fcd0f11bc923">
+          <keyValuePair id="9953f1f4-d4b1-4822-a4e7-a66410ddeb49" Key="M" Value="Today marks the arrival of %1s to the %2s training ground after a move that is sure to stir up excitement. The %3s year old is expected to strengthen the %4s spot and was praised by %5s for his ability. &quot;When I saw this lad (%6s) play I knew I wanted him for our team&quot; began an exuberant %2s manager, &quot;Keep an eye on him and you'll see why.&quot;" />
+          <keyValuePair id="8adb3374-befb-4670-8921-4a351b90b5ff" Key="F" Value="Today marks the arrival of %1s to the %2s training ground after a move that is sure to stir up excitement. The %3s year old is expected to strengthen the %4s spot and was praised by %5s for his ability. &quot;When I saw this lad (%6s) play I knew I wanted him for our team&quot; began an exuberant %2s manager, &quot;Keep an eye on him and you'll see why.&quot;" />
+          <keyValuePair id="c4cf88cf-0abf-4eae-87a1-c77cf755b22b" Key="MM" Value="" />
+          <keyValuePair id="8541e738-a84d-4106-bb95-299a70f6a8d1" Key="MF" Value="" />
+          <keyValuePair id="670fec61-52c8-4598-b60a-92a6b24c83b0" Key="FM" Value="" />
+          <keyValuePair id="027abe60-0597-4b6a-82b1-a978ec890b62" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="5d90a78a-7dcd-4335-8896-267645aab017">
+        <sceneParameter id="2ecafef5-c5fa-493f-b875-e7ef5123946b" Parameter="PlayerId_1" Value="Model:Global.UserPapID" />
+        <sceneParameter id="06f6be68-7abf-405f-afa3-2d9e68ffab44" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="bc27d219-eb39-4df8-b63a-41e3c56adefe" X="800" Y="-1080" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="31" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="graph_u">
+      <stringWithArgsTitle id="c8d7c943-7b96-435d-9256-61019e8e81bd" StringID="CM_News_PAPSeason_LoanReturn_Title_4" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="37d0b8ee-a455-4418-b382-c09c046437e0">
+          <stringArgument id="f74aa2d3-0614-4ae3-aadc-1967de3991d2" Value="PAP ID:BasicData.ID" Format="7" />
+        </stringArguments>
+        <stringContent id="032c57f4-ed0b-4a86-81c0-214473c46a5c">
+          <keyValuePair id="7d989918-fb43-4fd1-b83e-631af567bf86" Key="M" Value="Fans Look Forward to %1s Loan Recall" />
+          <keyValuePair id="88666486-fabc-4ef6-9bbe-818ac8b66aed" Key="F" Value="" />
+          <keyValuePair id="d0ab2ab0-669a-4618-a8cf-821c21796bad" Key="MM" Value="" />
+          <keyValuePair id="97874e17-1fd7-4f57-9322-ce3780431e7b" Key="MF" Value="" />
+          <keyValuePair id="bfd4fefd-3442-473f-86e1-4966f0bbb365" Key="FM" Value="" />
+          <keyValuePair id="d8b7e297-9b41-425e-b348-3de9b505c173" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="d573fff7-2e68-42b1-9745-461812e8c4ed" StringID="CM_News_PAPSeason_LoanReturn_Body_4" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="0f782b06-6cb1-48d8-900b-867a55ac2ef6">
+          <stringArgument id="93a2715f-e4ba-4c9e-9065-ac219ee07ece" Value="PAP ID:BasicData.ID" Format="6" />
+          <stringArgument id="03e2188e-eaa3-4116-aee3-9a1b507e777b" Value="Model:SeasonStartPAP.ToTeamID" Format="11" />
+          <stringArgument id="228f94d2-090e-45c4-9659-660f3a79695e" Value="Model:SeasonStartPAP.FromTeamID" Format="0" />
+          <stringArgument id="50f9faba-62ca-4441-898a-d83bec0d4e03" Value="PAP ID:DBData.PreferredPosition" Format="10" />
+          <stringArgument id="0d6d99c5-a2e6-4ac1-8003-c8572e0671e0" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="f939d72e-87d8-4ffa-9520-defb1cb619a2">
+          <keyValuePair id="6c125345-3cae-4816-b562-a997eded8518" Key="M" Value="%1s was seen in high spirits upon his return to %2s after his loan deal expired at %3s. &quot;It's great to be back and I'm looking forward to training with the lads again. I do miss the guys at %3s, they were very accommodating and taught me a lot&quot; added the emotional %4s. %5s was also quick to respond on the players return &quot;It's great to see a player come back happy. He's full of life and ready to commence training.&quot;" />
+          <keyValuePair id="776989b1-b480-49e9-a659-58133885a124" Key="F" Value="%1s was seen in high spirits upon his return to %2s after his loan deal expired at %3s. &quot;It's great to be back and I'm looking forward to training with the lads again. I do miss the guys at %3s, they were very accommodating and taught me a lot&quot; added the emotional %4s. %5s was also quick to respond on the players return &quot;It's great to see a player come back happy. He's full of life and ready to commence training.&quot;" />
+          <keyValuePair id="f25c4a21-bd85-48b4-b58e-349c37b46a13" Key="MM" Value="" />
+          <keyValuePair id="5a7c8778-5518-443c-b333-d6427678761f" Key="MF" Value="" />
+          <keyValuePair id="69fb7bdf-c5c0-452b-b184-2bd28581f839" Key="FM" Value="" />
+          <keyValuePair id="47699c69-8036-4f24-8356-bd46d50f0393" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="e1430e3f-d506-4f03-a63f-1212119eb3a1">
+        <sceneParameter id="f520d226-d7f2-46f4-9d84-46555805c471" Parameter="PlayerId_1" Value="Model:Global.UserPapID" />
+        <sceneParameter id="6a56a591-0346-4016-a5a5-8df5c1d8b31f" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="f7581176-fc73-4e2e-bbf2-e1291a265238" X="800" Y="-1240" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="31" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="door">
+      <stringWithArgsTitle id="153f65b9-bc07-47c3-8736-734ad0191346" StringID="CM_News_PAPSeason_LoanReturn_Title_2" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="d398d932-59cf-4c60-b616-2f1dd185f02c">
+          <stringArgument id="2a5178ed-1efd-4c4c-8ad1-7669069cbb5c" Value="Model:Global.UserPapID" Format="7" />
+          <stringArgument id="916ed892-0379-4373-bf00-0a029b4ece13" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="b357c8e5-976d-44ab-8886-31c7da020320">
+          <keyValuePair id="00697613-8c33-4645-a53f-bcab52a8dd49" Key="M" Value="%1s Looks to Impress %2s After Loan Spell" />
+          <keyValuePair id="1d8c2f40-8377-42db-bb1c-2e06f48e34dd" Key="F" Value="" />
+          <keyValuePair id="66b4bb65-0a28-4508-907e-dcc6b1b56e07" Key="MM" Value="" />
+          <keyValuePair id="70c9f8a4-330a-4236-8949-734daf5df356" Key="MF" Value="" />
+          <keyValuePair id="cb1d5086-b101-47c8-b670-15d4cc905f02" Key="FM" Value="" />
+          <keyValuePair id="d66d2418-cf5e-4c39-a975-14dd01f95261" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="62a46a57-8529-4b9a-a1f4-f84724c5ee08" StringID="CM_News_PAPSeason_LoanReturn_Body_2" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="2464a1e0-4a64-48b6-b6a2-a7e74a690099">
+          <stringArgument id="e17dbf83-5a74-43c6-923c-a0ec7487a3d1" Value="PAP ID:BasicData.Age" Format="0" />
+          <stringArgument id="98bbed41-b7f9-498d-bb42-005f94185eb1" Value="PAP ID:DBData.PreferredPosition" Format="10" />
+          <stringArgument id="27cbac66-4fc3-4e92-b6c4-c4fb252e6c88" Value="PAP ID:BasicData.ID" Format="6" />
+          <stringArgument id="0ea0b019-56fa-4ec0-9762-3c418b0228cd" Value="Model:SeasonStartPAP.ToTeamID" Format="11" />
+          <stringArgument id="65b8bf6e-93c6-4dc6-88e8-554c662c2487" Value="Model:SeasonStartPAP.FromTeamID" Format="11" />
+          <stringArgument id="c9c36ee1-41f2-40d1-8b46-126addce0b7b" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="84b0d51c-1ff5-478d-bea1-22c5f4765e78">
+          <keyValuePair id="1ce93ef4-57c2-4af1-af24-e96a56504869" Key="M" Value="%1s year old %2s %3s finally returned to %4s after his loan deal at %5s came to a close. &quot;I'm eager to impress the team now that I'm back. Hopefully I can secure the %2s position more regularly than before&quot; stated a chirpy player. With the manager happy to see him back in the fold, %6s added &quot;He has done himself and the club proud on his loan period away. I'm sure he will continue to play admirably now that he is back.&quot; " />
+          <keyValuePair id="096ad3c5-a1f9-4d98-bca6-e422a5eae3f9" Key="F" Value="%1s year old %2s %3s finally returned to %4s after his loan deal at %5s came to a close. &quot;I'm eager to impress the team now that I'm back. Hopefully I can secure the %2s position more regularly than before&quot; stated a chirpy player. With the manager happy to see him back in the fold, %6s added &quot;He has done himself and the club proud on his loan period away. I'm sure he will continue to play admirably now that he is back.&quot; " />
+          <keyValuePair id="a8f37b36-7039-43d7-8c57-5fab7b6578ac" Key="MM" Value="" />
+          <keyValuePair id="4e1e584f-b5f5-4897-acba-c44418e55ecf" Key="MF" Value="" />
+          <keyValuePair id="6ed2a9d6-efe2-43e5-aa52-bbdc2cc0c6dd" Key="FM" Value="" />
+          <keyValuePair id="27d77b07-2d35-4ee0-8f54-331237313fe9" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="f21da5a5-d1a0-4758-a281-37da69f2df8a">
+        <sceneParameter id="07506186-85ae-4263-aaac-6cbe6c4d7037" Parameter="PlayerId_1" Value="Model:Global.UserPapID" />
+        <sceneParameter id="c9b8eb19-997b-4935-8a4f-39a8cfd2cb94" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="5ff3850a-9cb0-4a0a-87a9-f9c640589c0a" X="800" Y="-1160" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="31" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="stad_f">
+      <stringWithArgsTitle id="ee68181e-b49b-4a49-a49f-c531ebf384aa" StringID="CM_News_PAPSeason_LoanReturn_Title_3" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="e3eae2ac-699c-46cd-bbb8-12f015ae92cf">
+          <stringArgument id="d73e8616-dffc-4e64-b1ee-98fd742ea6fc" Value="PAP ID:BasicData.ID" Format="7" />
+          <stringArgument id="2a241884-ab65-4f9f-b0e0-622811323a4d" Value="Model:SeasonStartPAP.FromTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="15989f7d-1948-4e22-8ea9-d8fe18b41994">
+          <keyValuePair id="3cbe9167-5d0b-4f76-a35e-8657d7cb1f0d" Key="M" Value="%1s Returns From %2s After Loan Stint" />
+          <keyValuePair id="b514fbe4-3408-4016-b631-b77a597f4713" Key="F" Value="" />
+          <keyValuePair id="7348269b-c8a4-4569-93de-b25eb8dc7025" Key="MM" Value="" />
+          <keyValuePair id="91ef2097-096f-448d-ba52-c1bc24c1109f" Key="MF" Value="" />
+          <keyValuePair id="f87782bb-3877-4afa-abc4-97f80a97c7d7" Key="FM" Value="" />
+          <keyValuePair id="c8b990b0-7333-43da-9c56-8cffd0e55167" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="d863afc5-21d8-4592-9318-6a34d3622e9c" StringID="CM_News_PAPSeason_LoanReturn_Body_3" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="801ce678-10bd-4124-b98f-3974b1cba09e">
+          <stringArgument id="c0f32b07-649c-4ae0-b555-a9c2be9e77e1" Value="Model:SeasonStartPAP.FromTeamID" Format="11" />
+          <stringArgument id="2a33d832-f7b4-4016-8ae4-7639e48813aa" Value="PAP ID:BasicData.ID" Format="6" />
+          <stringArgument id="3559d2a8-9e36-471f-9d06-d632011cbc69" Value="Model:SeasonStartPAP.ToTeamID" Format="11" />
+          <stringArgument id="85119bc3-9c79-4cea-a562-14224c09d2d2" Value="PAP ID:BasicData.Age" Format="0" />
+        </stringArguments>
+        <stringContent id="df56738b-1878-435f-b108-732514a58d10">
+          <keyValuePair id="5cf49c47-28b5-40e5-a09b-fdc70523782b" Key="M" Value="After a loan spell at %1s fans will be eager to see how %2s will fit back into the %3s team. &quot;It's nice to be back. It's a surreal feeling being here again after staying in a different environment for a while. The lads have welcomed me back as have the fans and I would like to thank them all for that&quot; added the %4s year old." />
+          <keyValuePair id="aa9177e4-efd4-48ba-a3a1-20f7bcc3a2b5" Key="F" Value="" />
+          <keyValuePair id="a6a2fbd2-05a2-4c03-b080-847e5cbd184d" Key="MM" Value="" />
+          <keyValuePair id="62e6863f-28a1-4196-8b8c-a389323ab6b5" Key="MF" Value="" />
+          <keyValuePair id="bdf3b5d1-df30-4276-9f00-79a435308c29" Key="FM" Value="" />
+          <keyValuePair id="f7beb865-c145-4686-a579-2c6e0dce652a" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="1f148ee2-36b6-4da9-87ec-545cf236e487">
+        <sceneParameter id="b317982c-6b4d-46df-8ce8-c22b430615dc" Parameter="PlayerId_1" Value="Model:Global.UserPapID" />
+        <sceneParameter id="989e333a-47f1-4123-af6b-11ab03698f42" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="c939ede2-6ace-4692-b48c-7f434adbb45c" X="800" Y="-1320" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="31" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="future">
+      <stringWithArgsTitle id="d4f2264b-217d-473d-a316-d6d09cdb44ea" StringID="CM_News_PAPSeason_LoanReturn_Title_1" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="053a7b33-ced2-4fc1-b3b9-4c101d32b42b">
+          <stringArgument id="2e04cba5-58e6-4980-97c2-6c65fa857e1b" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="a3fc607d-5e34-4df8-9225-380f94f28afb" Value="Model:Global.UserPapID" Format="7" />
+        </stringArguments>
+        <stringContent id="478970f4-101c-49c8-ac73-e3402e3040a8">
+          <keyValuePair id="22ee102c-7d66-4181-995c-e2a69116ad5b" Key="M" Value="%1s Expresses Delight as %2s Returns From Loan" />
+          <keyValuePair id="9a4013ee-7c31-43a0-820b-26058d553414" Key="F" Value="%1s Expresses Delight as %2s Returns From Loan" />
+          <keyValuePair id="d31eb660-3ade-4555-ab0a-3a573342cb43" Key="MM" Value="" />
+          <keyValuePair id="1cdc06a3-eb83-426a-882b-645c73fc251e" Key="MF" Value="" />
+          <keyValuePair id="b11de73c-e652-4351-b083-c0cfb9c21625" Key="FM" Value="" />
+          <keyValuePair id="e3f479fc-60ff-49f5-97c4-72bfa895c830" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="d2ee8629-a7d7-4ab1-b4d2-cff458514690" StringID="CM_News_PAPSeason_LoanReturn_Body_1" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="1a75e16f-138e-4c87-99b8-f1d26c617958">
+          <stringArgument id="49bb7a46-b3a0-4eff-a7f8-7e12b07b38e5" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="281917c7-a4c8-4146-aaf4-eddc3758c895" Value="PAP ID:BasicData.Age" Format="0" />
+          <stringArgument id="19318004-57f9-4f57-b744-0c28780969c9" Value="PAP ID:DBData.PreferredPosition" Format="10" />
+          <stringArgument id="80edb64c-cf98-4d88-bfc3-5b634c8910c6" Value="Model:SeasonStartPAP.FromTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="2fb8a550-a5b8-40e2-9a1b-c2b7c48e741f">
+          <keyValuePair id="a29a3443-9196-43fa-b473-96377fcda330" Key="M" Value="%1s seemed pleased to see the %2s year old %3s return from his loan stint at %4s. &quot;I'm happy to have him back and I'm sure the team will be happy. We need to give him a medical to ensure he's been keeping fit but it will be nice to see how he has changed as a player when we get him on the training field.&quot;" />
+          <keyValuePair id="0a0a6f4a-54dd-4043-815f-84789560ae07" Key="F" Value="%1s seemed pleased to see the %2s year old %3s return from his loan stint at %4s. &quot;I'm happy to have him back and I'm sure the team will be happy. We need to give him a medical to ensure he's been keeping fit but it will be nice to see how he has changed as a player when we get him on the training field.&quot;" />
+          <keyValuePair id="03a369d3-fd7b-4cc1-b1af-a3f9b0cd4854" Key="MM" Value="" />
+          <keyValuePair id="1535bb04-b4b6-4610-80f5-b1e4d5960bf6" Key="MF" Value="" />
+          <keyValuePair id="59cd6e91-322a-4dcf-9f85-e5d963b5f573" Key="FM" Value="" />
+          <keyValuePair id="390b48ed-4541-4273-b7f5-32c28812b7e3" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="ac8e095d-26c9-4557-bcf5-ea47629c73d7">
+        <sceneParameter id="88886384-e586-42e9-b1ef-f91df65c6323" Parameter="PlayerId_1" Value="Model:Global.UserPapID" />
+        <sceneParameter id="a7acece1-79dd-4d67-b207-052d30fb5f0c" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <save-data-node id="ef65b8d8-3c55-4bf0-a462-2c319470a09a" X="-240" Y="-1720" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="7c62d8e9-bdf1-43d7-9669-6905ee04b661">
+        <saveItem id="1a351cc7-4c9f-4bcf-aee7-d5d1e13f45ac" Key="FromTeamID" Value="Model:SeasonStartPAP.FromTeamID" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <select-data-node id="9e868d7e-541f-4fac-839a-bf7068788116" X="-440" Y="-1720" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="9e63cbd3-044c-4a7a-8cec-04c5c794d97c" SelectCount="1">
+        <alias-list id="24c684e2-f87f-48ac-accc-ca32f8f56dd0">
+          <string id="a3010089-4a92-47ba-9aad-e5d819112f81" Value="PAP ID" />
+        </alias-list>
+        <order-by id="218be4a5-a27c-41e5-aafe-32c128b6b971" />
+        <alias-data-source id="32908bdc-ad71-4111-a685-6b6f2650847e" DataSource="Model:Global.Players">
+          <conditions id="5253f63f-de27-425b-b68c-d3df67250d5b">
+            <condition id="19c26e02-bc06-423d-aa6f-31722dedd457" VariableId="Select:BasicData.ID" Comparison="EQ" Value="Model:Global.UserPapID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <condition-node id="8d3c1391-1dc1-4a35-99a1-9a31880cd2c6" X="200" Y="-1880" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="d3e1ccd2-58aa-487e-b54f-f68e85b045d3">
+        <condition id="342d92ea-d4c3-4e5f-9d5f-bedd29995434" VariableId="PAP ID:BasicData.ID" Comparison="EQ" Value="30999" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="e8a7ad74-a09f-4919-abc7-e6a8d21b473e" VariableId="Model:SeasonStartPAP.FromTeamID" Comparison="GT" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+  </nodes>
+  <groups id="b8150283-4191-4a69-9a5c-71c4930d7a78" />
+  <connections id="fd092524-0ca4-4b6a-abe5-bca0cd3b17ec">
+    <connection id="8fb5ecad-da5d-4dbb-bfb5-0a64ee4219f6" SrcNodeID="04b3ce00-6491-4567-bdfe-3886f1ec611f" SrcPortName="false" DstNodeID="a4dd196a-cbbf-4621-87f1-f3049c3ae573" DstPortName="enter" ConnectionOrder="0">
+      <points id="400ece3f-de5e-498e-b11d-899641c18012" />
+    </connection>
+    <connection id="67ee5edc-54f9-41bf-a3c1-a4eaac942186" SrcNodeID="019f76f0-e15c-4664-87f1-fbc6e2209e72" SrcPortName="advance-1" DstNodeID="afacabb5-e7af-4b04-89a0-b1a7c9bf1a64" DstPortName="enter" ConnectionOrder="0">
+      <points id="9ad4784b-0794-4019-9cc2-3b8ac2e3d3b3" />
+    </connection>
+    <connection id="8ffe6b54-26c3-4521-b86e-60fa7265a786" SrcNodeID="afacabb5-e7af-4b04-89a0-b1a7c9bf1a64" SrcPortName="advance" DstNodeID="6ed9f445-4042-42dd-bbf1-bae1bbfb4d8c" DstPortName="enter" ConnectionOrder="0">
+      <points id="4fc98b45-9864-4131-99bf-b66bf11a4b14" />
+    </connection>
+    <connection id="c3dc6fab-d9ac-46dd-a31b-0c8dec763452" SrcNodeID="c3c93035-1870-485f-98b3-b089ff866736" SrcPortName="advance-1" DstNodeID="ebaaef17-5f4c-4d54-b054-bfd4be9e8071" DstPortName="enter" ConnectionOrder="0">
+      <points id="00519a07-2477-4b49-bb47-b842b22aee09" />
+    </connection>
+    <connection id="342b0ba7-582e-4cd9-abd6-616305e6ae6b" SrcNodeID="c3c93035-1870-485f-98b3-b089ff866736" SrcPortName="advance-2" DstNodeID="a12aafec-ceb7-4c79-a12e-d073438ef5c3" DstPortName="enter" ConnectionOrder="0">
+      <points id="6306f9f7-8539-4c3a-a02e-0c73a809cb0f" />
+    </connection>
+    <connection id="21fc931c-43ad-4bdb-a3f7-476c0a0115b7" SrcNodeID="c3c93035-1870-485f-98b3-b089ff866736" SrcPortName="advance-3" DstNodeID="24ca450a-7f88-45ec-b797-e8ecb2ff63b4" DstPortName="enter" ConnectionOrder="0">
+      <points id="7c148a68-43b2-4397-a092-80c21b121a97" />
+    </connection>
+    <connection id="7fce5657-7f1f-40bd-bbbe-93c74d1d188c" SrcNodeID="c3c93035-1870-485f-98b3-b089ff866736" SrcPortName="advance-4" DstNodeID="b3e440e0-7bea-4377-bd21-7babffdde8cc" DstPortName="enter" ConnectionOrder="0">
+      <points id="2d9dd1d7-5878-47e1-9c10-caa33d5377fa" />
+    </connection>
+    <connection id="e6a93be7-5685-4d1f-b6c0-9dddea88ebd5" SrcNodeID="24ca450a-7f88-45ec-b797-e8ecb2ff63b4" SrcPortName="advance" DstNodeID="fd2060ae-add0-4036-9192-2f1c8d08600e" DstPortName="enter" ConnectionOrder="0">
+      <points id="2970e2a7-1b3a-4a40-b079-353882d21461" />
+    </connection>
+    <connection id="4176be81-8c26-4eed-876c-27d692894c0b" SrcNodeID="a12aafec-ceb7-4c79-a12e-d073438ef5c3" SrcPortName="advance" DstNodeID="fd2060ae-add0-4036-9192-2f1c8d08600e" DstPortName="enter" ConnectionOrder="0">
+      <points id="b909fe1a-5a23-4b29-ae11-627cac671bf3" />
+    </connection>
+    <connection id="e4af51f3-e4df-4c09-9129-3fde608c15a1" SrcNodeID="ebaaef17-5f4c-4d54-b054-bfd4be9e8071" SrcPortName="advance" DstNodeID="fd2060ae-add0-4036-9192-2f1c8d08600e" DstPortName="enter" ConnectionOrder="0">
+      <points id="f7f9516c-e052-49de-b3e9-60286ad31944" />
+    </connection>
+    <connection id="13a9236e-6823-477c-bd3c-82c78b5f87e7" SrcNodeID="b3e440e0-7bea-4377-bd21-7babffdde8cc" SrcPortName="advance" DstNodeID="fd2060ae-add0-4036-9192-2f1c8d08600e" DstPortName="enter" ConnectionOrder="0">
+      <points id="bb2ab563-bb82-4f57-a5f0-943c6c238bc6" />
+    </connection>
+    <connection id="d5219854-4a32-44a4-a6dc-aec443c080cd" SrcNodeID="04b3ce00-6491-4567-bdfe-3886f1ec611f" SrcPortName="true" DstNodeID="c3c93035-1870-485f-98b3-b089ff866736" DstPortName="enter" ConnectionOrder="0">
+      <points id="cc97847a-0651-4df7-8363-e30ef31d70a9" />
+    </connection>
+    <connection id="c09cdafa-d60c-4676-bbb0-fd3ffb57358a" SrcNodeID="a4dd196a-cbbf-4621-87f1-f3049c3ae573" SrcPortName="true" DstNodeID="4949d32b-859e-4aab-ad23-f5cc22328aef" DstPortName="enter" ConnectionOrder="0">
+      <points id="c96132fa-579b-472e-bbff-d4d5d0eac268" />
+    </connection>
+    <connection id="6af720c5-8695-4e8c-bd5b-9bd346458008" SrcNodeID="6ed9f445-4042-42dd-bbf1-bae1bbfb4d8c" SrcPortName="advance" DstNodeID="b1b94ea1-e3d4-40b0-ab04-2145973e776d" DstPortName="enter" ConnectionOrder="0">
+      <points id="4ef53dae-1487-4fc7-9a7e-a0fb03a02617" />
+    </connection>
+    <connection id="4f9706a7-f458-41d1-bc3b-ecd5a82aa7b9" SrcNodeID="fd2060ae-add0-4036-9192-2f1c8d08600e" SrcPortName="advance" DstNodeID="b1b94ea1-e3d4-40b0-ab04-2145973e776d" DstPortName="enter" ConnectionOrder="0">
+      <points id="bcd19cb1-4d2f-49b5-adad-2af19915c545" />
+    </connection>
+    <connection id="d3476968-06e9-4742-82b1-46ac05130b4f" SrcNodeID="53e567d9-420e-482b-8929-66a7238c0e36" SrcPortName="advance" DstNodeID="b1b94ea1-e3d4-40b0-ab04-2145973e776d" DstPortName="enter" ConnectionOrder="0">
+      <points id="847a3685-c939-4ddb-9609-27f7d6b8509a" />
+    </connection>
+    <connection id="5daa3ed2-4201-4151-bc94-80d21f02aa88" SrcNodeID="019f76f0-e15c-4664-87f1-fbc6e2209e72" SrcPortName="advance-2" DstNodeID="f58d7aa5-3798-4d4c-93bf-f79d4fa9c776" DstPortName="enter" ConnectionOrder="0">
+      <points id="cc8c2ec9-b7cb-40fd-8cac-31477d7eab28" />
+    </connection>
+    <connection id="ad5328db-9824-444d-9923-76a185133c33" SrcNodeID="019f76f0-e15c-4664-87f1-fbc6e2209e72" SrcPortName="advance-3" DstNodeID="2c7e16ad-334e-4bdc-b5ad-bbec4b8a6cb4" DstPortName="enter" ConnectionOrder="0">
+      <points id="8fe324db-b83e-46d6-8662-f73f064ada99" />
+    </connection>
+    <connection id="1b4d594a-6bda-40b7-a4cf-79fc1b074001" SrcNodeID="019f76f0-e15c-4664-87f1-fbc6e2209e72" SrcPortName="advance-4" DstNodeID="85e616a2-755c-4779-bab5-c83f126a489d" DstPortName="enter" ConnectionOrder="0">
+      <points id="f8d130ea-e490-4aa1-84ea-64206d783704" />
+    </connection>
+    <connection id="069b3a0b-58a2-4338-95e0-8b7adbe052e3" SrcNodeID="f58d7aa5-3798-4d4c-93bf-f79d4fa9c776" SrcPortName="advance" DstNodeID="6ed9f445-4042-42dd-bbf1-bae1bbfb4d8c" DstPortName="enter" ConnectionOrder="0">
+      <points id="beeb3e73-7261-4194-9942-484044ebd735" />
+    </connection>
+    <connection id="78fb8a7d-1a8e-4044-98da-d361c403239d" SrcNodeID="2c7e16ad-334e-4bdc-b5ad-bbec4b8a6cb4" SrcPortName="advance" DstNodeID="6ed9f445-4042-42dd-bbf1-bae1bbfb4d8c" DstPortName="enter" ConnectionOrder="0">
+      <points id="b6c806d6-19c2-45a1-aba9-f47bcac293d0" />
+    </connection>
+    <connection id="3ac1dc41-00f7-4fbe-855d-ca4094733960" SrcNodeID="85e616a2-755c-4779-bab5-c83f126a489d" SrcPortName="advance" DstNodeID="6ed9f445-4042-42dd-bbf1-bae1bbfb4d8c" DstPortName="enter" ConnectionOrder="0">
+      <points id="4b76cb51-7003-48e5-a83b-1e18b11fc693" />
+    </connection>
+    <connection id="d510fb3e-4a6c-4819-aff9-f2ba33998a61" SrcNodeID="4949d32b-859e-4aab-ad23-f5cc22328aef" SrcPortName="advance-1" DstNodeID="c939ede2-6ace-4692-b48c-7f434adbb45c" DstPortName="enter" ConnectionOrder="0">
+      <points id="f86d66bf-1fff-4699-bc00-f2da8c5c3061" />
+    </connection>
+    <connection id="a6e14e36-0ef4-48a2-9d2a-26a9cd9a66df" SrcNodeID="4949d32b-859e-4aab-ad23-f5cc22328aef" SrcPortName="advance-2" DstNodeID="f7581176-fc73-4e2e-bbf2-e1291a265238" DstPortName="enter" ConnectionOrder="0">
+      <points id="50714c5a-0437-4246-acb7-915a8c0b900d" />
+    </connection>
+    <connection id="f37088aa-135a-4abc-aa77-fe13daa0c4e4" SrcNodeID="4949d32b-859e-4aab-ad23-f5cc22328aef" SrcPortName="advance-3" DstNodeID="5ff3850a-9cb0-4a0a-87a9-f9c640589c0a" DstPortName="enter" ConnectionOrder="0">
+      <points id="68ce9460-a9ab-4a34-a2f3-3dfb14d8743d" />
+    </connection>
+    <connection id="e766a9ff-d47a-45e8-9355-21f49b6de28d" SrcNodeID="4949d32b-859e-4aab-ad23-f5cc22328aef" SrcPortName="advance-4" DstNodeID="bc27d219-eb39-4df8-b63a-41e3c56adefe" DstPortName="enter" ConnectionOrder="0">
+      <points id="d194b7b4-a4e0-4447-ae53-dafdb7429759" />
+    </connection>
+    <connection id="2cff3807-d985-4cdc-9209-55e192907ffd" SrcNodeID="c939ede2-6ace-4692-b48c-7f434adbb45c" SrcPortName="advance" DstNodeID="53e567d9-420e-482b-8929-66a7238c0e36" DstPortName="enter" ConnectionOrder="0">
+      <points id="0d67130e-1939-4b17-8469-e0f51958c332" />
+    </connection>
+    <connection id="964854b6-3c16-4138-952c-9896312a65a1" SrcNodeID="f7581176-fc73-4e2e-bbf2-e1291a265238" SrcPortName="advance" DstNodeID="53e567d9-420e-482b-8929-66a7238c0e36" DstPortName="enter" ConnectionOrder="0">
+      <points id="a4c90573-7f6d-41cd-9b03-458622d38ebc" />
+    </connection>
+    <connection id="78baef2d-fcfe-48be-aa07-5dfbf2b6b9ac" SrcNodeID="5ff3850a-9cb0-4a0a-87a9-f9c640589c0a" SrcPortName="advance" DstNodeID="53e567d9-420e-482b-8929-66a7238c0e36" DstPortName="enter" ConnectionOrder="0">
+      <points id="090c93ce-eaa6-495e-b5f2-fb877cc6b3c1" />
+    </connection>
+    <connection id="2a9b564d-4140-401c-8a39-2b05f09047a5" SrcNodeID="bc27d219-eb39-4df8-b63a-41e3c56adefe" SrcPortName="advance" DstNodeID="53e567d9-420e-482b-8929-66a7238c0e36" DstPortName="enter" ConnectionOrder="0">
+      <points id="74d3482d-2241-4675-a419-d5e610843b2d" />
+    </connection>
+    <connection id="a9bca4ab-e6eb-41bb-b315-7203b5319234" SrcNodeID="ef65b8d8-3c55-4bf0-a462-2c319470a09a" SrcPortName="advance" DstNodeID="2e9bbe92-aa86-42fa-ae67-69e400324c4f" DstPortName="enter" ConnectionOrder="0">
+      <points id="11915ee9-ea38-474d-9826-1d46f7467e76" />
+    </connection>
+    <connection id="b806e8d8-2c3d-44ab-b199-56ddfed27081" SrcNodeID="aad3102f-fa21-4981-8d97-2435c48727ef" SrcPortName="advance" DstNodeID="9e868d7e-541f-4fac-839a-bf7068788116" DstPortName="enter" ConnectionOrder="0">
+      <points id="bf79f262-2562-42d1-a713-e70bef801914" />
+    </connection>
+    <connection id="03906c6c-466b-4d3a-99b3-73a7c5328514" SrcNodeID="9e868d7e-541f-4fac-839a-bf7068788116" SrcPortName="true" DstNodeID="ef65b8d8-3c55-4bf0-a462-2c319470a09a" DstPortName="enter" ConnectionOrder="0">
+      <points id="06c9ba1f-5956-4c19-aaec-f96364beb720" />
+    </connection>
+    <connection id="18c59d96-596d-4742-b8d8-553ad32c489b" SrcNodeID="2e9bbe92-aa86-42fa-ae67-69e400324c4f" SrcPortName="false" DstNodeID="04b3ce00-6491-4567-bdfe-3886f1ec611f" DstPortName="enter" ConnectionOrder="0">
+      <points id="19eb9bba-6f7b-4ee5-977a-27f80a29da10" />
+    </connection>
+    <connection id="97dfe2c1-e27c-4199-8709-23ff7fc22af1" SrcNodeID="a4dd196a-cbbf-4621-87f1-f3049c3ae573" SrcPortName="false" DstNodeID="b1b94ea1-e3d4-40b0-ab04-2145973e776d" DstPortName="enter" ConnectionOrder="0">
+      <points id="8e1271a7-9832-46c4-b62d-a669f98bf197">
+        <point id="fd70abcf-798e-4beb-9602-68d32f3e27e1" X="605.588158871567" Y="-916.899320712695" />
+        <point id="ab91a224-5832-4af6-a7b2-216b4f8684eb" X="1440.58815887157" Y="-924.399320712695" />
+      </points>
+    </connection>
+    <connection id="7c2bec9a-e142-43ff-92e5-d03746995660" SrcNodeID="2e9bbe92-aa86-42fa-ae67-69e400324c4f" SrcPortName="true" DstNodeID="8d3c1391-1dc1-4a35-99a1-9a31880cd2c6" DstPortName="enter" ConnectionOrder="0">
+      <points id="53f7766b-4d8d-470a-903b-2b9cb79b6534" />
+    </connection>
+    <connection id="3a09ef10-5fcd-493c-80dc-eff770a9d111" SrcNodeID="8d3c1391-1dc1-4a35-99a1-9a31880cd2c6" SrcPortName="true" DstNodeID="019f76f0-e15c-4664-87f1-fbc6e2209e72" DstPortName="enter" ConnectionOrder="0">
+      <points id="1244b955-7bb6-4cbb-8f53-7d7ae20dc945" />
+    </connection>
+  </connections>
+</StoryAsset>

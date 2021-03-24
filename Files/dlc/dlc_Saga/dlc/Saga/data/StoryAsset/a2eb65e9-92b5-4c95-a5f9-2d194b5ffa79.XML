@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="a2eb65e9-92b5-4c95-a5f9-2d194b5ffa79" name="Foreach" deleted="True" valid="True">
+  <nodes id="465d58d1-e9f5-4571-b010-03dcb4a7004d">
+    <story-start-node id="f960531a-e707-4014-aac6-e72e41a89160" X="0" Y="160" NodeType="StoryStart" NodeName="StartStory" StoryType="SingleInstance" NodeEvent="UserMatchCompleted" StoryKey="" UseSelectData="True" RunInPlayerCareer="False" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="393956ab-ef41-4506-bbb2-c150c15581d2" />
+      <select-data id="d4cfa26a-8a5e-40bf-b983-073045554247" SelectCount="0">
+        <alias-list id="4b53dda7-92dc-4ca8-b1b8-989902bf7237" />
+        <order-by id="fe9c3336-ac23-48e8-a379-c7fbd969acc9" />
+        <alias-data-source id="a624e62d-1a51-42aa-b1f9-0d224106753e" DataSource="Model:Global.Players">
+          <conditions id="0cafc60f-5832-410f-8428-ace03d746cf4" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <story-end-node id="445ef3b3-97e2-40ac-8b8c-ee10a7eee82b" X="1280" Y="160" NodeType="StoryEnd" NodeName="EndStory" NodeEvent="" />
+    <foreach-node id="ab468cbb-b392-4d2c-b319-fb4ce3b98777" X="240" Y="160" NodeType="Foreach" NodeName="ForEachPlayer" ElementAlias="CurrentPlayer">
+      <alias-data-source id="4d45c929-e848-4d7c-a680-03b69958b2b1" DataSource="Model:Global.Players">
+        <conditions id="3403a7bd-f60e-48e5-97f2-e5a8859c115b">
+          <condition id="8a607317-33c5-405b-a4a6-14749a28ed69" VariableId="Select:Status.Role" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        </conditions>
+      </alias-data-source>
+    </foreach-node>
+    <select-data-node id="723adee8-5c08-4eea-ad05-5dd01fa3b3c1" X="480" Y="320" NodeType="SelectData" NodeName="DidPlayLastMatch">
+      <select-data id="2e679f26-8f87-45a1-be9d-4ff7ab17f0b9" SelectCount="1">
+        <alias-list id="7e6d8338-96c4-43a7-b3a6-366c5d9af190">
+          <string id="b2b9258b-d0cb-4d5f-ac68-9bf0966ea229" Value="TierOnePlayerInMatch" />
+        </alias-list>
+        <order-by id="aeccf1fb-59ca-4a3f-af18-38d25649b2d9">
+          <keyValuePair id="12fff305-f225-4243-8e3c-9c380cb42fa4" Key="Select:BasicData.Age" Value="Desc" />
+          <keyValuePair id="c985891f-c991-4e6a-a197-82cf79a8bf7a" Key="Select:BasicData.Potential" Value="Asc" />
+        </order-by>
+        <alias-data-source id="d8317319-0624-460c-8378-44cb28f682ea" DataSource="Model:Global.Players">
+          <conditions id="23bcc8eb-a30d-49a8-95b0-a145fcdee83d">
+            <condition id="29d7b3a6-d808-4672-b370-2f702488adfe" VariableId="" Comparison="" Value="" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <modify-morale-node id="8e6a3715-f163-4334-8106-bb50fa3d2ba4" X="760" Y="400" NodeType="ModifyMorale" NodeName="DrecreaseMorale" PlayerId="CurrentPlayer:BasicData.ID" DecayPeriod="10" MoraleImpactType="Overall" MoraleTemplateType="Custom">
+      <emotion-impact id="518694bb-f2d5-405a-b1d8-2f230b869c4b">
+        <keyValuePair id="85ce7af8-b68f-4f2e-b8bf-e2f7069b1156" Key="VeryCalm" Value="-2" />
+        <keyValuePair id="4b842549-1ae2-4a46-9dd2-920a8adc1e6c" Key="Calm" Value="-2" />
+        <keyValuePair id="243601d4-5032-4e0a-8ac4-08272eeb5aa3" Key="Normal" Value="-2" />
+        <keyValuePair id="4f1a4a41-ca7c-491f-b42f-3be6c8c13427" Key="HotTemper" Value="-2" />
+        <keyValuePair id="13b1c66f-77cd-4b39-a650-24afe9ea7119" Key="Volcano" Value="-2" />
+      </emotion-impact>
+      <personality-impact id="b9009423-5484-472d-b797-e3c3fa3ad001">
+        <keyValuePair id="3b23399b-243a-4d2f-951b-7184707ad68d" Key="Selfish" Value="-2" />
+        <keyValuePair id="19da3f3b-6332-4b75-81eb-9bb962cfba10" Key="Individual" Value="-2" />
+        <keyValuePair id="30cd4429-4a2e-4761-badd-5f132bebc396" Key="Normal" Value="-2" />
+        <keyValuePair id="3e121e5a-9bc3-4413-9f41-6a8a09c72b32" Key="TeamPlayer" Value="-2" />
+        <keyValuePair id="61d35608-970c-4339-b17f-132c33d842dc" Key="UltimateProfessional" Value="-2" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="a67f86ef-b98c-4a5d-b71c-6be5650cabea" X="760" Y="280" NodeType="ModifyMorale" NodeName="IncreaseMorale" PlayerId="CurrentPlayer:BasicData.ID" DecayPeriod="10" MoraleImpactType="Overall" MoraleTemplateType="Custom">
+      <emotion-impact id="78adcede-d2c4-4f32-9bc3-82cb38755cb3">
+        <keyValuePair id="9f6c59f7-6c12-427d-bbef-5db5c866cf8a" Key="VeryCalm" Value="2" />
+        <keyValuePair id="23c356cf-29fa-431e-b801-177b215022f7" Key="Calm" Value="2" />
+        <keyValuePair id="5d7f2688-b824-4219-bd2a-e0843d7536ad" Key="Normal" Value="2" />
+        <keyValuePair id="562261f1-9b07-4c71-bfb7-53707e2e6e67" Key="HotTemper" Value="2" />
+        <keyValuePair id="9182cf79-44d1-482b-b99e-fb8135c0bb1a" Key="Volcano" Value="2" />
+      </emotion-impact>
+      <personality-impact id="2d913869-e556-4212-8ea9-9c20cd1eec65">
+        <keyValuePair id="5e6e49c0-cf6d-44c4-b0a8-35c0d0960b18" Key="Selfish" Value="2" />
+        <keyValuePair id="b672c147-3ed7-430a-a7c9-c8e8ec73d80a" Key="Individual" Value="2" />
+        <keyValuePair id="f90928f3-ee58-409d-b0fe-08b92a13754a" Key="Normal" Value="2" />
+        <keyValuePair id="6d2dc911-aeba-4f57-8f99-9937faadf3ba" Key="TeamPlayer" Value="2" />
+        <keyValuePair id="d50e6b58-cde0-4cf3-b795-536d74c9b22a" Key="UltimateProfessional" Value="2" />
+      </personality-impact>
+    </modify-morale-node>
+  </nodes>
+  <groups id="41c855cb-c9cd-4358-b7d8-e8e96797e730" />
+  <connections id="b76b10fd-db26-4d87-9828-8f1753b21550">
+    <connection id="9de25c8a-ac64-4e89-bfb2-157b28b64b31" SrcNodeID="f960531a-e707-4014-aac6-e72e41a89160" SrcPortName="advance" DstNodeID="ab468cbb-b392-4d2c-b319-fb4ce3b98777" DstPortName="enter" ConnectionOrder="0">
+      <points id="af9208ec-6222-4bf8-b165-5ca582af4b8f" />
+    </connection>
+    <connection id="ed091dd9-3539-42a6-be3e-27b7fa76a659" SrcNodeID="ab468cbb-b392-4d2c-b319-fb4ce3b98777" SrcPortName="body" DstNodeID="723adee8-5c08-4eea-ad05-5dd01fa3b3c1" DstPortName="enter" ConnectionOrder="0">
+      <points id="72bd7128-f7f1-4894-a366-0f0af95f6611" />
+    </connection>
+    <connection id="45ce233b-11a7-4d3f-b6f3-7a737d969fba" SrcNodeID="8e6a3715-f163-4334-8106-bb50fa3d2ba4" SrcPortName="advance" DstNodeID="ab468cbb-b392-4d2c-b319-fb4ce3b98777" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="2f0db7bb-dfde-47dd-9621-9e71ec8a5d9f">
+        <point id="bd49a8cd-e054-4d25-9105-157b53a66e0d" X="921.555814999822" Y="522.875343771241" />
+        <point id="14f29022-6560-4ff0-ac88-9c6bb93d2daf" X="277.79202200951" Y="520.085634895962" />
+      </points>
+    </connection>
+    <connection id="7244ccd5-b6ca-43dd-ada3-8ee0e265263f" SrcNodeID="723adee8-5c08-4eea-ad05-5dd01fa3b3c1" SrcPortName="true" DstNodeID="a67f86ef-b98c-4a5d-b71c-6be5650cabea" DstPortName="enter" ConnectionOrder="0">
+      <points id="a9f8c748-c5ad-4a0e-8a51-34d205e319b8" />
+    </connection>
+    <connection id="5542684f-17eb-454b-929f-24077a0df0ec" SrcNodeID="723adee8-5c08-4eea-ad05-5dd01fa3b3c1" SrcPortName="false" DstNodeID="8e6a3715-f163-4334-8106-bb50fa3d2ba4" DstPortName="enter" ConnectionOrder="0">
+      <points id="9e0b7ceb-a1d8-47b0-b8e3-d64b1ed57148" />
+    </connection>
+    <connection id="c6ceea9e-b3a3-4dd6-912e-be4b29239c26" SrcNodeID="a67f86ef-b98c-4a5d-b71c-6be5650cabea" SrcPortName="advance" DstNodeID="ab468cbb-b392-4d2c-b319-fb4ce3b98777" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="55e1db84-e2cf-466e-a279-6552bba9cb89">
+        <point id="7cf83451-ea7e-4d28-9f51-5d45d7ac8c35" X="926.125031598087" Y="561.470558689561" />
+        <point id="01fdb4dc-b7e7-4c26-a5a9-2b0feead945d" X="259.375746703352" Y="565.374062102976" />
+      </points>
+    </connection>
+    <connection id="ddfef64e-406c-450e-882d-e0d213edae19" SrcNodeID="ab468cbb-b392-4d2c-b319-fb4ce3b98777" SrcPortName="advance" DstNodeID="445ef3b3-97e2-40ac-8b8c-ee10a7eee82b" DstPortName="enter" ConnectionOrder="0">
+      <points id="0b43f4ae-f2e9-4b5e-a0bd-023423ee88b4" />
+    </connection>
+  </connections>
+</StoryAsset>

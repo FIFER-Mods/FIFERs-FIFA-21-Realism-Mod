@@ -1,0 +1,1607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="702c36d5-d532-4aaa-a245-57af02f6c83f" name="5 Games Form w Press Conferences" deleted="False" valid="True">
+  <nodes id="bf46951d-8f49-4683-8aff-1384378fd12b">
+    <condition-node id="df716bd0-6e88-41db-8e51-f31f765737cc" X="-4680" Y="-11920" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="b44ee1a0-4ebb-4bd8-9500-a94aa5ae5a7e">
+        <condition id="1ca7ffab-27ff-4af4-b711-845e02a1718f" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <story-start-node id="6e5188f1-19ae-45fa-839d-8ed64aa169c7" X="-6160" Y="-11760" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="SingleInstance" NodeEvent="SeasonStart" StoryKey="" UseSelectData="True" RunInPlayerCareer="False" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="435b0a66-432d-4902-a974-b14ad136826a" />
+      <select-data id="c10e5f27-0c5d-4fdc-a471-6807f3e0b8f4" SelectCount="0">
+        <alias-list id="a626d258-4e85-46a8-a44d-3e5715085e5c" />
+        <order-by id="d6a0a8fc-7caf-49c3-9643-537624fc9f9f" />
+        <alias-data-source id="5970f2dc-06f5-4c77-89d3-e3e11533e743" DataSource="">
+          <conditions id="68642cbe-81dd-4184-a0b0-e066265561cf" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <save-data-node id="6239bbda-c6f1-4273-a7f2-2b03b317f6e9" X="-5800" Y="-11760" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="bf3db998-3281-4f89-9644-4627ded09c10">
+        <saveItem id="6cda0cb9-8b00-41f2-913d-6394103a07a7" Key="Result 1" Value="0" ValueType="int" />
+        <saveItem id="2635a47d-362a-435e-8740-4a75c0ba5c31" Key="Result 2" Value="0" ValueType="int" />
+        <saveItem id="7bcf70a8-f2f7-4d56-aed7-e1d5da33c85c" Key="Result 3" Value="0" ValueType="int" />
+        <saveItem id="e486f8f2-d5ce-4bf0-bdfd-1fd9e76f5df3" Key="Result 4" Value="0" ValueType="int" />
+        <saveItem id="43376547-2548-4cc1-ace2-ee0d1445dfc6" Key="Result 5" Value="0" ValueType="int" />
+        <saveItem id="1f654e54-653b-40e4-90fe-0a325570c36e" Key="Num Matches" Value="0" ValueType="int" />
+        <saveItem id="bedadc57-4e5d-4d1b-9365-c18218550ae5" Key="5 Game Points" Value="0" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <state-node id="4ce7ed86-c5ed-4da1-b154-47c3c8b6183e" X="-5520" Y="-11760" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="7e211eb0-15f9-4f40-acba-d5531025cb2b">
+        <string id="605ae590-0b0c-4e70-8fc5-5829accad03b" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <condition-node id="b2015010-f999-4c21-b901-74c4d690cd2f" X="-5240" Y="-11760" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="79e6b763-9a1a-49a7-981e-f6c61759f34d">
+        <condition id="ad2d7ace-5c4a-4719-a347-253e431700c0" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.CompType" Comparison="NEQ" Value="10" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="22e92dd0-8d39-4df4-9eed-eb5e1671709d" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.CompType" Comparison="NEQ" Value="5" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="69f388e6-4641-4355-a5f6-0e2f64c2a632" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.CompType" Comparison="NEQ" Value="6" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="f86a8837-313b-448e-9ef0-d5e0fd7090f4" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.CompType" Comparison="NEQ" Value="7" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-data-node id="ca7ef8ea-5134-4919-894b-6508e14ccea8" X="-4160" Y="-11920" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="69a1b536-bd5b-4f04-b75b-2ed0b52da507">
+        <keyValuePair id="89101144-f96c-49a0-a787-5bae15268a6c" Key="SaveData:Num Matches" Value="1" Operator="Add" />
+        <keyValuePair id="a6e81554-926f-4de6-8e45-b83da92b0dfc" Key="SaveData:Result 1" Value="SaveData:Result 2" Operator="Set" />
+        <keyValuePair id="23a4294b-efe5-47dc-b67a-9a339cd315d0" Key="SaveData:Result 2" Value="SaveData:Result 3" Operator="Set" />
+        <keyValuePair id="a3baa185-ea9c-4c4c-a1cb-5cd527940666" Key="SaveData:Result 3" Value="SaveData:Result 4" Operator="Set" />
+        <keyValuePair id="6e9b951e-4918-4416-bba0-b06dd78f1365" Key="SaveData:Result 4" Value="SaveData:Result 5" Operator="Set" />
+        <keyValuePair id="45023fee-edb4-4031-8004-5df5b4ade36e" Key="SaveData:Result 5" Value="3" Operator="Set" />
+      </keyValues>
+    </modify-data-node>
+    <condition-node id="ebeecb36-ad05-4069-a75e-16afb7269aeb" X="-4480" Y="-11760" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="5b742a13-a711-48f2-b916-50899837c68a">
+        <condition id="0c8f7c35-873a-488a-bb58-440fa48d9594" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="2" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="01ac4934-1b0e-4c19-85e9-7385488a7170" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="3" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="e19fede2-87f4-4dba-8187-3b24f5124ba2" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-data-node id="b68e1258-7ce6-453f-beae-a7696793c819" X="-4160" Y="-11760" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="3a3f4c6c-6fcb-4e59-9bdd-dec358678b1a">
+        <keyValuePair id="cbd07147-c220-42b5-beb2-60c7a91b0bb6" Key="SaveData:Num Matches" Value="1" Operator="Add" />
+        <keyValuePair id="092d4359-a4f7-4f97-a8fe-ac6920b74d7c" Key="SaveData:Result 1" Value="SaveData:Result 2" Operator="Set" />
+        <keyValuePair id="333f7757-b5ba-4f45-8464-0b288e124031" Key="SaveData:Result 2" Value="SaveData:Result 3" Operator="Set" />
+        <keyValuePair id="b83eac58-a117-44e9-9500-b071661df238" Key="SaveData:Result 3" Value="SaveData:Result 4" Operator="Set" />
+        <keyValuePair id="0862314f-3bf6-492a-a1a0-2055891634b1" Key="SaveData:Result 4" Value="SaveData:Result 5" Operator="Set" />
+        <keyValuePair id="bfa7f4f8-07e2-4764-9631-d1705bbf9d64" Key="SaveData:Result 5" Value="1" Operator="Set" />
+      </keyValues>
+    </modify-data-node>
+    <modify-data-node id="40413e9d-33d2-4663-ab12-0cfb50382d43" X="-4160" Y="-11640" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="d8b6c39c-eebb-4e0d-ac1f-6c820f544f4f">
+        <keyValuePair id="2d32cd50-eb42-4754-9493-bc16778ef09c" Key="SaveData:Num Matches" Value="1" Operator="Add" />
+        <keyValuePair id="1d29d9da-162f-489a-ab30-8b707c9877cb" Key="SaveData:Result 1" Value="SaveData:Result 2" Operator="Set" />
+        <keyValuePair id="5fd38921-073d-48ce-9f12-1c87a8e974c0" Key="SaveData:Result 2" Value="SaveData:Result 3" Operator="Set" />
+        <keyValuePair id="07c463e2-df35-4683-8592-67428d76404a" Key="SaveData:Result 3" Value="SaveData:Result 4" Operator="Set" />
+        <keyValuePair id="2ba9a2fb-461b-4b7c-9429-e94846a0a1fd" Key="SaveData:Result 4" Value="SaveData:Result 5" Operator="Set" />
+        <keyValuePair id="f69e964d-f712-40d9-ada1-075ecb1cd037" Key="SaveData:Result 5" Value="0" Operator="Set" />
+      </keyValues>
+    </modify-data-node>
+    <join-node id="8f710ddf-9a5c-4725-a36f-ad430686bd9f" X="-3840" Y="-11760" NodeType="Join" NodeName="Set Name for New Node" />
+    <modify-data-node id="aaedc8d3-2baf-4113-a351-f53d777c1256" X="-3240" Y="-11760" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="7e742919-0844-4aee-80a5-3f3f3e6c2403">
+        <keyValuePair id="4b0f4dcd-47fe-4ee9-a6e4-70eb438bd0e6" Key="SaveData:5 Game Points" Value="0" Operator="Set" />
+        <keyValuePair id="7d7cfbd0-ff30-4430-9b21-286ecd3ed35c" Key="SaveData:5 Game Points" Value="SaveData:Result 1" Operator="Add" />
+        <keyValuePair id="3ffd2e00-5ab0-444a-8498-705e4fca0fcd" Key="SaveData:5 Game Points" Value="SaveData:Result 2" Operator="Add" />
+        <keyValuePair id="bfb7878e-683a-4552-abb4-759344ee5e4f" Key="SaveData:5 Game Points" Value="SaveData:Result 3" Operator="Add" />
+        <keyValuePair id="8fdb8421-1ef3-4e59-8179-7421d2202339" Key="SaveData:5 Game Points" Value="SaveData:Result 4" Operator="Add" />
+        <keyValuePair id="c369c081-5949-415a-bbf8-b78e951ade86" Key="SaveData:5 Game Points" Value="SaveData:Result 5" Operator="Add" />
+      </keyValues>
+    </modify-data-node>
+    <condition-node id="a52cfefc-ad32-42fd-b105-a410377baae9" X="-2880" Y="-11760" NodeType="Condition" NodeName="Poor Form">
+      <conditions id="b236a081-ba58-410e-9093-2d68ca132599">
+        <condition id="bc9cdc77-7aba-48b6-926f-29d17f273726" VariableId="SaveData:5 Game Points" Comparison="LTE" Value="6" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="9b749fcb-472f-4f58-888d-38b3c04adb83" VariableId="SaveData:Num Matches" Comparison="GTE" Value="5" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="b3fa6f04-7864-46ed-bd4d-7a599b76906b" VariableId="SaveData:5 Game Points" Comparison="LTE" Value="5" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="963da5fc-3b74-4921-8cbd-5c7f906bffec" VariableId="SaveData:Num Matches" Comparison="EQ" Value="4" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="5fae4d0e-bc96-436b-935d-fb4052a4835e" VariableId="SaveData:5 Game Points" Comparison="LTE" Value="3" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="b9e37545-b91b-4de8-8ce4-0dd5273b598a" VariableId="SaveData:Num Matches" Comparison="EQ" Value="3" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="e1ec3174-06ec-426b-a701-c720d4b28949" VariableId="SaveData:5 Game Points" Comparison="LTE" Value="2" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="ca5b4705-af48-4820-b9bb-044329588634" VariableId="SaveData:Num Matches" Comparison="EQ" Value="2" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="3a93af28-c554-49bb-aa3e-4a4cf1a27e1d" VariableId="SaveData:5 Game Points" Comparison="LTE" Value="0" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="5457565c-5fe3-470d-94a9-2b6e4d7f912f" VariableId="SaveData:Num Matches" Comparison="EQ" Value="1" Operator="AND" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="6e6fad10-d2f7-4e41-a808-7f26c70728c8" X="-2400" Y="-10000" NodeType="Condition" NodeName="Great Form">
+      <conditions id="156aaaa1-76dd-4bf2-85ef-1586c826ed0a">
+        <condition id="dd272452-d601-4250-b5f4-f7852ce5fda9" VariableId="SaveData:5 Game Points" Comparison="LTE" Value="15" Operator="AND" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="1851b636-f44d-41ab-a5dd-be2318a2e71c" VariableId="SaveData:Num Matches" Comparison="GTE" Value="5" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="e40a52a6-c4ec-4cc8-8a21-ed71df01f94f" VariableId="SaveData:5 Game Points" Comparison="LTE" Value="12" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="9c4280f6-f043-4da2-b465-1b00788549fe" VariableId="SaveData:Num Matches" Comparison="EQ" Value="4" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="54ec0563-6e35-4a9c-a049-c04ad66e49c2" VariableId="SaveData:5 Game Points" Comparison="LTE" Value="9" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="c6b45892-bc7a-464d-a85d-1b37d590a483" VariableId="SaveData:Num Matches" Comparison="EQ" Value="3" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="268377a6-5093-450a-a3b2-af679ff6bb8d" VariableId="SaveData:5 Game Points" Comparison="LTE" Value="6" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="b829449c-ace9-483a-8c47-86207d847f3e" VariableId="SaveData:Num Matches" Comparison="EQ" Value="2" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="639aeba3-4005-4b2b-942c-810a9a60773d" VariableId="SaveData:5 Game Points" Comparison="LTE" Value="3" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="5d8715c8-33bd-4bdb-9343-c447909e93cf" VariableId="SaveData:Num Matches" Comparison="EQ" Value="1" Operator="AND" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <join-node id="25a394a1-5cd1-4a4f-8069-c1f5d1455bf8" X="400" Y="-10400" NodeType="Join" NodeName="Set Name for New Node" />
+    <story-end-node id="ef261392-6dc2-4039-a992-c0ab83cced82" X="800" Y="-10400" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <modify-morale-node id="29a5fa2c-82e0-4a4d-900e-b2d01d19a145" X="-1160" Y="-12000" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="CalmLow">
+      <emotion-impact id="cd8ea622-fba7-4093-867b-73c19496d296">
+        <keyValuePair id="99d67858-cb4f-428a-aaf0-014decca3667" Key="VeryCalm" Value="1" />
+        <keyValuePair id="e03a9790-bf3c-4e1f-98df-03728655d4aa" Key="Calm" Value="1" />
+        <keyValuePair id="30d65ff0-f118-4c24-97ad-2ce91873f276" Key="Normal" Value="1" />
+        <keyValuePair id="824d7fba-0a13-413e-a30e-6fbb0d128893" Key="HotTemper" Value="0" />
+        <keyValuePair id="1b6d3c6a-01cf-443a-8281-4d6aba35779b" Key="Volcano" Value="0" />
+      </emotion-impact>
+      <personality-impact id="77eff4aa-1b88-4eee-a3c8-0b40666b44bb">
+        <keyValuePair id="e1544369-9993-4269-a66b-20a67270fb62" Key="Selfish" Value="0" />
+        <keyValuePair id="3cb5e905-fc69-4ffa-b838-718b67e0da74" Key="Individual" Value="1" />
+        <keyValuePair id="50e08d7b-bf77-41e9-bd91-47a89809e1b4" Key="Normal" Value="1" />
+        <keyValuePair id="4db340bb-d8c2-45d4-beb5-34b261e99bf4" Key="TeamPlayer" Value="2" />
+        <keyValuePair id="4fef099c-41ec-4424-9033-5dd4ac86edba" Key="UltimateProfessional" Value="2" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="b51a5178-32ec-4294-aabb-2fe8f5e42970" X="-1160" Y="-11680" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="CriticizeLow">
+      <emotion-impact id="bb195128-5bc7-432a-bb63-90eca6bd40bf">
+        <keyValuePair id="ad819e4e-10c2-4f40-ba02-b2e4337c7a22" Key="VeryCalm" Value="-1" />
+        <keyValuePair id="ef0531c2-7498-4c34-8ede-e20c145852be" Key="Calm" Value="-1" />
+        <keyValuePair id="5f1cf4e0-1bd7-4d83-ae11-d6e95290d1ea" Key="Normal" Value="-1" />
+        <keyValuePair id="7879b7d6-74a5-45fe-a33c-fd8aa10ff6d7" Key="HotTemper" Value="-1" />
+        <keyValuePair id="2ca75b35-f367-4306-88e8-1c033e230e5c" Key="Volcano" Value="-1" />
+      </emotion-impact>
+      <personality-impact id="9e2fe9c8-a0b5-4951-9e10-5fd965df41d4">
+        <keyValuePair id="37222ed3-f34b-4d27-ab69-22b8790260ae" Key="Selfish" Value="-2" />
+        <keyValuePair id="e7943ae3-9033-4a6d-8271-ea5782a4665c" Key="Individual" Value="-1" />
+        <keyValuePair id="5bd0d3e3-cc71-4a12-8dde-ee241cf13e5e" Key="Normal" Value="-1" />
+        <keyValuePair id="852505c6-678a-44f6-b348-39a3d5508638" Key="TeamPlayer" Value="-1" />
+        <keyValuePair id="87d28528-9a06-4161-abaf-98c7de60d47d" Key="UltimateProfessional" Value="-1" />
+      </personality-impact>
+    </modify-morale-node>
+    <random-node id="6a8304ff-6457-47e2-8b8c-1ee98446bb20" X="-2480" Y="-11760" NodeType="Random" NodeName="Set Name for New Node" Outputs="2" WeightDistribution="0-100" />
+    <pressconf-node id="34dfb8a8-8480-42cd-bf32-8bf74b322b4d" X="-2240" Y="-11520" NodeType="PressConference" NodeName="" PressConfType="0" IsPlayerSpecific="false" Player="" QuestionMood="1" Priority="1">
+      <stringWithArgsQuestionShort id="c9e64071-bbb4-4db3-b2ec-1756c81f11c0" StringID="CM_PreMatchPress_5GForm_Poor_Question_Short" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="29171ade-dee3-433b-b52f-dc45756136ae" />
+        <stringContent id="817243d7-3641-42a5-99fd-7f51eb8f5317">
+          <keyValuePair id="bc690e3f-5249-48ee-bec4-3c44f1cfb77b" Key="M" Value="Why has the team been struggling?&#xD;&#xA;" />
+          <keyValuePair id="a623743d-7266-4705-932b-cdf2e1cd281a" Key="F" Value="" />
+          <keyValuePair id="a3025f95-4fa4-4f54-931f-ed81a89b6b69" Key="MM" Value="" />
+          <keyValuePair id="10c196dd-2eb3-4ce5-b5a3-6215ac998f1b" Key="MF" Value="" />
+          <keyValuePair id="2fd791aa-92bf-4665-85bf-d5f89f38debe" Key="FM" Value="" />
+          <keyValuePair id="91cd71b3-3754-45c7-908e-644fb022e7a9" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsQuestionShort>
+      <stringWithArgsQuestionLong id="d476d602-4a8d-46f9-a100-6a66818afbae" StringID="CM_PreMatchPress_5GForm_Poor_Question_Long" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="b2a7a185-eb95-4acc-84e8-d54c5bba3f9d">
+          <stringArgument id="3497cd0f-bea7-4bee-a509-988fbc62c9f3" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="cb25184f-0867-4297-b00a-b2582eb27668">
+          <keyValuePair id="ff98a9a7-4540-40b3-82c9-f656a0fe47dd" Key="M" Value="It's not the kind of bad run we expect from a %1s team. What's behind it? And how can you turn things round?&#xD;&#xA;" />
+          <keyValuePair id="f192290d-4e26-4e45-bb8f-06f3c9c39135" Key="F" Value="" />
+          <keyValuePair id="48d792d9-f968-4e4b-ab37-18016c792103" Key="MM" Value="" />
+          <keyValuePair id="c3c6d75e-7e6b-4a0f-bdb6-fbb9a4785a6d" Key="MF" Value="" />
+          <keyValuePair id="287e6101-d2f4-4fa2-a4ab-ab4e235cf489" Key="FM" Value="" />
+          <keyValuePair id="3b3ec1fa-1bb2-4246-a832-8521689561e5" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsQuestionLong>
+      <managerAnswerList id="c3e75237-1c15-4f01-8bd7-6e8258a713e0">
+        <managerAnswer id="9918593a-bfbc-490c-9e47-637eefff65bf" AnswerType="2" AnswerMood="0" IsKeyAnswer="False" AnswerMurmur="0">
+          <stringWithArgsAnswerShort id="f0e7082d-1e6f-43e9-b69b-6e9cd24452d4" StringID="CM_PreMatchPress_5GForm_Poor_Answer_1_Short" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+            <stringArguments id="5f5ce63a-4f09-4bde-a994-b62ae1775047" />
+            <stringContent id="af673709-e421-4511-9370-31c16ab1c04a">
+              <keyValuePair id="f1b26b08-c3a8-45ba-8d61-40c27fd8527e" Key="M" Value="I have to take some of the blame.&#xD;&#xA;" />
+              <keyValuePair id="03c6d654-6fea-45f0-9ccc-109174b82a15" Key="F" Value="I have to take some of the blame.&#xD;&#xA;" />
+              <keyValuePair id="5f432581-20be-420c-8e70-98fc820dc2ca" Key="MM" Value="" />
+              <keyValuePair id="d5edaf3d-731c-4113-a635-b70fcf4416d5" Key="MF" Value="" />
+              <keyValuePair id="58d8cac1-30a7-4019-bf18-eb6523cf27b2" Key="FM" Value="" />
+              <keyValuePair id="ea661e5f-0110-49df-be6e-e82a82ff8ee1" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="bd55e27f-db46-4b90-8b1a-bd4cfe93d09c" StringID="CM_PreMatchPress_5GForm_Poor_Answer_1_Long" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="c57626f0-87ba-40c7-a8fc-2721d4f4b1e2" />
+            <stringContent id="e9e69f04-74cb-4fe5-8355-0a1d8ea3bbf8">
+              <keyValuePair id="40dc59d6-2181-450e-aea1-3a69bff4ff6a" Key="M" Value="I have to take some responsibility for our poor form. I've tried to experiment with a few things tactically and, clearly, those changes haven't worked. The ideas haven't suited the team.&#xD;&#xA;" />
+              <keyValuePair id="534ec35f-195d-4595-b320-7775f220030b" Key="F" Value="" />
+              <keyValuePair id="13e80926-e22b-4f4e-9b1a-7e891d665c49" Key="MM" Value="" />
+              <keyValuePair id="de175d71-d142-45fe-91c6-ed4b3ad81f20" Key="MF" Value="" />
+              <keyValuePair id="22410107-264d-4688-879f-4ab5e375f530" Key="FM" Value="" />
+              <keyValuePair id="f9e2f33a-2044-407b-8f43-b918efda09f9" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+        <managerAnswer id="34321550-47c2-492d-8a11-509e4a452a3d" AnswerType="4" AnswerMood="0" IsKeyAnswer="False" AnswerMurmur="0">
+          <stringWithArgsAnswerShort id="f1873c8b-4448-4f5b-b6d8-558b659e226c" StringID="CM_PreMatchPress_5GForm_Poor_Answer_2_Short" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="2978d560-1521-4fc8-8dbe-aef743512121" />
+            <stringContent id="84b0af6f-d6e5-4ffe-a692-47258bd293d2">
+              <keyValuePair id="133dc3d5-126e-47d5-abae-64fd0e9eda46" Key="M" Value="It's hard to be sure.&#xD;&#xA;" />
+              <keyValuePair id="49874966-1feb-4719-be98-76c587d0fbaa" Key="F" Value="" />
+              <keyValuePair id="fa3b5797-33c8-4a01-b297-e48760229e29" Key="MM" Value="" />
+              <keyValuePair id="3bf15e8f-aeca-45e6-8d4c-7d6849cbe0bb" Key="MF" Value="" />
+              <keyValuePair id="7dd8186c-6b94-4f65-9865-5b198c26cd91" Key="FM" Value="" />
+              <keyValuePair id="04a207c4-1f04-4a66-a1b8-ae4dba5fab44" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="34b231bd-ed72-4d96-a08b-40613610e0af" StringID="CM_PreMatchPress_5GForm_Poor_Answer_2_Long" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="fb8437eb-a872-49fa-a97e-707f95f6f704" />
+            <stringContent id="faf48a01-eb8d-4435-b04f-bf17db53a747">
+              <keyValuePair id="4f95043f-26b6-4f3a-b843-12d82cd8e746" Key="M" Value="I can't say I'm absolutely sure what's been going wrong. What I do know, though, is that the only way to put things right is to work hard on the training pitch. And we're doing that, I promise.&#xD;&#xA;" />
+              <keyValuePair id="ff8f23b8-57a6-46c3-af47-e76fd3b21a43" Key="F" Value="" />
+              <keyValuePair id="94985161-37f1-4078-ad6b-b246905067ab" Key="MM" Value="" />
+              <keyValuePair id="e4e743ba-af10-4849-87c9-55166dbbc07c" Key="MF" Value="" />
+              <keyValuePair id="eb862f2e-eb5c-4f47-ba37-adbf196a4ef8" Key="FM" Value="" />
+              <keyValuePair id="7bcb3349-cefb-45ee-80e8-03bc470a7970" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+        <managerAnswer id="ec1ae274-0bdd-43bf-a3fb-09097f8ced58" AnswerType="1" AnswerMood="2" IsKeyAnswer="True" AnswerMurmur="2">
+          <stringWithArgsAnswerShort id="a11069b4-9ea2-4a73-b16e-87d907621a77" StringID="CM_PreMatchPress_5GForm_Poor_Answer_3_Short" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="dc3bfac5-ef74-45b4-91ba-644a6b9985c0" />
+            <stringContent id="dda33e9d-4562-4dbb-b091-65837d7475e9">
+              <keyValuePair id="481ea6a1-d229-4cba-91ab-74a5c370e34b" Key="M" Value="We've been off the pace.&#xD;&#xA;" />
+              <keyValuePair id="dec15376-499f-423d-902d-3229614c0b87" Key="F" Value="" />
+              <keyValuePair id="dcd5903f-4c4b-4214-8790-a4a94cf1f17f" Key="MM" Value="" />
+              <keyValuePair id="cdaa6dee-0cec-487e-b560-970eb7d14cc4" Key="MF" Value="" />
+              <keyValuePair id="4c28a81b-9625-44d6-93cf-7e3d0b82c7b1" Key="FM" Value="" />
+              <keyValuePair id="2fdda193-6e5b-4499-b297-0c37557dfafa" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="8286a05e-f747-417f-ab62-c7d9aab19352" StringID="CM_PreMatchPress_5GForm_Poor_Answer_3_Long" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="142ac91f-7560-4c91-8b93-230245192ec6" />
+            <stringContent id="1f3f5351-6178-4535-9515-b9aba1785e55">
+              <keyValuePair id="0e14fd45-4a66-4ef1-a244-598abc26c787" Key="M" Value="It's been a frustrating time. We've just looked off the pace. I'll sit down with the players and help where I can, but it's up to the lads themselves to put things right.&#xD;&#xA;" />
+              <keyValuePair id="55edd848-6c47-4dfd-8422-7ff1104cc3c5" Key="F" Value="It is very frustrating to see us play recently. The last matches were the worst, we have a lot of areas to improve and I will adress that in the dressing room as soon as possible." />
+              <keyValuePair id="58174afa-5a92-4890-9a07-96aace35e235" Key="MM" Value="" />
+              <keyValuePair id="d8d73e5e-9d38-41c5-983b-366e83ebbaba" Key="MF" Value="" />
+              <keyValuePair id="59687428-f104-48ac-acd9-468e7ad132df" Key="FM" Value="" />
+              <keyValuePair id="f28859d1-02a9-4834-af33-aeb0c241d30e" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+      </managerAnswerList>
+      <supported-events id="8d3ed9bf-2b5d-4731-906d-77fad7b8dc9c" />
+    </pressconf-node>
+    <join-node id="d564e323-74bc-40c2-a012-4c010e913d2c" X="-2040" Y="-11720" NodeType="Join" NodeName="" />
+    <join-node id="e358e623-ba95-4bc3-8b99-c03d8946616b" X="-2000" Y="-12040" NodeType="Join" NodeName="" />
+    <join-node id="8f6cc723-8b1c-4dbc-afcb-a6acf1c8f325" X="-2000" Y="-12400" NodeType="Join" NodeName="" />
+    <join-node id="65f9e127-ef89-4b61-8913-e8ccc2fb171e" X="-880" Y="-11760" NodeType="Join" NodeName="" />
+    <modify-morale-node id="4df310a5-7d77-4e8b-9273-b00d4d9675bd" X="-1160" Y="-12360" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="SympathizeHigh">
+      <emotion-impact id="f2557fc4-d08f-45a7-a30b-efa7840ac90b">
+        <keyValuePair id="821396a2-4313-4a2f-97f5-9e08aa8293e7" Key="VeryCalm" Value="2" />
+        <keyValuePair id="8ef8c54b-7a12-49a9-a317-ee11b3dec4ae" Key="Calm" Value="2" />
+        <keyValuePair id="e8646c25-944d-4ffc-90ff-4c1c4518d67f" Key="Normal" Value="2" />
+        <keyValuePair id="e09691ca-7fdf-47a8-8ea3-da1886b89ca8" Key="HotTemper" Value="1" />
+        <keyValuePair id="77bf3d9c-21c6-4da3-b523-bb4df3ffe29c" Key="Volcano" Value="1" />
+      </emotion-impact>
+      <personality-impact id="39da3db7-3e35-457a-b082-c1fdc37d5b8c">
+        <keyValuePair id="e87ffcd6-1209-46f5-ab72-8df7a1677b09" Key="Selfish" Value="8" />
+        <keyValuePair id="0936328f-1c93-48dd-bc4c-4e24ea9eaefb" Key="Individual" Value="8" />
+        <keyValuePair id="1781c8a3-c135-497c-8f2e-dac70c560e8f" Key="Normal" Value="2" />
+        <keyValuePair id="c6991dbc-34f2-4351-94f6-3d398aa23070" Key="TeamPlayer" Value="1" />
+        <keyValuePair id="612f0b88-6ccf-482c-879c-f011e9ae08e1" Key="UltimateProfessional" Value="1" />
+      </personality-impact>
+    </modify-morale-node>
+    <foreach-node id="d3a178f1-88f3-4727-9939-3c8b26fa823d" X="-1840" Y="-11720" NodeType="Foreach" NodeName="" ElementAlias="Current Player">
+      <alias-data-source id="a71f0905-7853-4164-beb2-59ff9c2d31c2" DataSource="Model:Global.Players">
+        <conditions id="403eed4f-a0fb-4353-babb-19cc629a57bc" />
+      </alias-data-source>
+    </foreach-node>
+    <foreach-node id="f88185d5-f1d9-464e-bf44-3b48fb14ccc9" X="-1840" Y="-12040" NodeType="Foreach" NodeName="" ElementAlias="Current Player">
+      <alias-data-source id="60527727-f3ea-4d0e-86b5-c6776ddb6efa" DataSource="Model:Global.Players">
+        <conditions id="5cddc1cc-2d67-4388-9bcd-28925a2baf26" />
+      </alias-data-source>
+    </foreach-node>
+    <foreach-node id="90453e77-1cfe-41ef-bcce-94d49b849065" X="-1840" Y="-12400" NodeType="Foreach" NodeName="" ElementAlias="Current Player">
+      <alias-data-source id="e86ff02a-9b37-4ec6-9891-47f9313ce326" DataSource="Model:Global.Players">
+        <conditions id="3a264420-f9f2-41af-a38f-97bbba477c38">
+          <condition id="fef90e47-62b1-42bc-bbf1-5795435ade4c" VariableId="Select:NextMatchData.IsAbleToPlay" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        </conditions>
+      </alias-data-source>
+    </foreach-node>
+    <modify-morale-node id="af51cf5a-35d2-46a8-9015-e5022efa57a4" X="-800" Y="-9040" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="PraiseHigh">
+      <emotion-impact id="9c05ffbb-5eee-4b84-b09b-863ce1ca83e9">
+        <keyValuePair id="d892fda9-fc8a-4fdf-b3e7-9e76cc1611e9" Key="VeryCalm" Value="1" />
+        <keyValuePair id="f2ca7f7d-8bb8-4cc4-9df4-d19e59619d18" Key="Calm" Value="1" />
+        <keyValuePair id="1a21c310-f3ff-4561-be80-fd0807eec241" Key="Normal" Value="2" />
+        <keyValuePair id="6a0cec66-cdac-4b5f-b3b2-c28e2ab42fde" Key="HotTemper" Value="2" />
+        <keyValuePair id="01d58ca3-78ce-4bd4-b224-f4ef4ce147b5" Key="Volcano" Value="8" />
+      </emotion-impact>
+      <personality-impact id="52e975ba-c7c8-4f02-9f07-c723cba2fec5">
+        <keyValuePair id="59ac81f6-307a-4766-be83-c8417b9e498f" Key="Selfish" Value="8" />
+        <keyValuePair id="0125c8db-7fd0-41a4-88a8-3a6b952efd06" Key="Individual" Value="2" />
+        <keyValuePair id="a3f2aed0-4513-45ac-ab1b-a68a0d496ed6" Key="Normal" Value="2" />
+        <keyValuePair id="84595790-cd64-49df-b868-a7c62af92463" Key="TeamPlayer" Value="1" />
+        <keyValuePair id="ed996865-0cbd-484a-ba75-e5cb872cf308" Key="UltimateProfessional" Value="1" />
+      </personality-impact>
+    </modify-morale-node>
+    <foreach-node id="8103929f-7d03-44ce-953d-6b7d511914cd" X="-1400" Y="-9800" NodeType="Foreach" NodeName="" ElementAlias="Current Player">
+      <alias-data-source id="e38bd174-12f3-4d9e-9269-9ceab87dbd81" DataSource="Model:Global.Players">
+        <conditions id="56d0e174-de96-44e8-b583-f229794efde1" />
+      </alias-data-source>
+    </foreach-node>
+    <foreach-node id="d25d79ae-0077-431b-94f4-96bdfdd05dbb" X="-1400" Y="-9480" NodeType="Foreach" NodeName="" ElementAlias="Current Player">
+      <alias-data-source id="9058d695-d2e2-484c-af68-06bf988aca39" DataSource="Model:Global.Players">
+        <conditions id="c3d14933-e476-41a7-bd8c-f2a84642b9cf" />
+      </alias-data-source>
+    </foreach-node>
+    <foreach-node id="14975899-ec86-409d-b8ff-187351eb981c" X="-1400" Y="-9080" NodeType="Foreach" NodeName="" ElementAlias="Current Player">
+      <alias-data-source id="c045dada-f668-4b9a-9427-eab56060132a" DataSource="Model:Global.Players">
+        <conditions id="f1f48335-253e-4c71-a774-ec38e88db31a" />
+      </alias-data-source>
+    </foreach-node>
+    <join-node id="22df990a-d651-41ad-bea6-41ebf2784ea0" X="-440" Y="-9280" NodeType="Join" NodeName="" />
+    <join-node id="8fc8c34a-efbd-47bc-b9a8-7e5e27c20730" X="-1640" Y="-9480" NodeType="Join" NodeName="" />
+    <join-node id="32d68d9f-91c1-4b0b-971a-36daf83fc116" X="-1640" Y="-9080" NodeType="Join" NodeName="" />
+    <modify-morale-node id="9eaa8d63-2ec2-4ba0-a04f-0fc346e00e4a" X="-800" Y="-9440" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="CalmLow">
+      <emotion-impact id="26f109be-a818-4b14-a0c7-5e65590ed0a0">
+        <keyValuePair id="59e941ab-bc94-4fb9-bb97-837dfa3e2e32" Key="VeryCalm" Value="1" />
+        <keyValuePair id="12a49fb0-1c6c-449a-977e-cd98499ed022" Key="Calm" Value="1" />
+        <keyValuePair id="274938ca-aac4-4f8f-b52a-1b9d8bfbe7cc" Key="Normal" Value="1" />
+        <keyValuePair id="39b0498a-0446-46f7-911d-1c81e8d5e77e" Key="HotTemper" Value="0" />
+        <keyValuePair id="0112b322-fa7f-437c-b8d2-4e388c2d2f97" Key="Volcano" Value="0" />
+      </emotion-impact>
+      <personality-impact id="9ef21396-9897-476a-80dc-7a5b7e72130b">
+        <keyValuePair id="e1582e24-7636-4389-a98c-04df1e57a9b3" Key="Selfish" Value="0" />
+        <keyValuePair id="5b861040-f163-47c1-82af-f6eee12651e9" Key="Individual" Value="1" />
+        <keyValuePair id="6ed80c50-1451-4e48-a22b-e8066f81e394" Key="Normal" Value="1" />
+        <keyValuePair id="dc43f25a-05be-4ee2-a430-0b9d28e2e5bd" Key="TeamPlayer" Value="2" />
+        <keyValuePair id="f3a99f28-9e02-45d6-9974-a3ba05a139cb" Key="UltimateProfessional" Value="2" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="88eac072-6508-42e2-8f5a-ce604486fdf3" X="-800" Y="-9760" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="MotivateLow">
+      <emotion-impact id="ffc026f8-4d0d-4240-bff6-b09a6361f10b">
+        <keyValuePair id="e2182dee-ea49-4aff-81c0-093dfb893ea1" Key="VeryCalm" Value="0" />
+        <keyValuePair id="e21e170f-8c58-4fdd-8570-27f30f06107e" Key="Calm" Value="0" />
+        <keyValuePair id="648bd6e0-6df5-4a4a-9ce9-b790573f2f31" Key="Normal" Value="0" />
+        <keyValuePair id="d436038e-2d9f-4eb3-bd6a-ef91d1b4b608" Key="HotTemper" Value="1" />
+        <keyValuePair id="101e79dc-aaf9-447a-9933-0fe515de7732" Key="Volcano" Value="1" />
+      </emotion-impact>
+      <personality-impact id="b2cfd3c2-a033-4057-8700-ec2ab3fa47eb">
+        <keyValuePair id="c4227ecf-1408-472d-9312-6015cf7a3918" Key="Selfish" Value="0" />
+        <keyValuePair id="a6ad387e-65d3-411d-919a-aa37ec54a98c" Key="Individual" Value="0" />
+        <keyValuePair id="a73c6323-bf6c-4dbe-806d-8c347fae13b6" Key="Normal" Value="1" />
+        <keyValuePair id="f726c51e-9af2-436c-a322-4506c2194ecc" Key="TeamPlayer" Value="1" />
+        <keyValuePair id="5c7f1d42-8ab6-4367-9b92-bf7d915be16d" Key="UltimateProfessional" Value="1" />
+      </personality-impact>
+    </modify-morale-node>
+    <join-node id="6f949ca0-3471-4e5e-a234-eeaa46971346" X="-1600" Y="-9800" NodeType="Join" NodeName="" />
+    <pressconf-node id="4075b44d-4bd6-4c81-87c5-742b62f12281" X="-1840" Y="-9040" NodeType="PressConference" NodeName="" PressConfType="0" IsPlayerSpecific="false" Player="" QuestionMood="2" Priority="1">
+      <stringWithArgsQuestionShort id="0384a74c-0b56-44fc-8d51-f0020843c216" StringID="CM_PreMatchPress_5GForm_Great_Question_Short" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="11e726ea-0859-46d9-bca8-ab96253009db" />
+        <stringContent id="430226ae-ce78-4e38-a756-ab9091aeb98b">
+          <keyValuePair id="823546f7-8ca7-40a6-a3e8-326bb0444a6c" Key="M" Value="Can you keep this great run going?&#xD;&#xA;" />
+          <keyValuePair id="7d7b7b09-6f2d-451d-a5d7-fe7d2c039bcf" Key="F" Value="" />
+          <keyValuePair id="20554bf6-e58d-4538-833e-40e9a5925868" Key="MM" Value="" />
+          <keyValuePair id="c504bdb4-891f-4bb4-a4e2-f10c86978f81" Key="MF" Value="" />
+          <keyValuePair id="3344d368-e96b-42e3-baa3-b72b984431e1" Key="FM" Value="" />
+          <keyValuePair id="b7dbb6a5-2f0b-4975-aad6-08d43106a59c" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsQuestionShort>
+      <stringWithArgsQuestionLong id="70b73664-eab6-4d3b-a1c4-428f93c6621e" StringID="CM_PreMatchPress_5GForm_Great_Question_Long" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="a9d14ea2-47df-4243-953b-bb55505d542a" />
+        <stringContent id="fb25a015-c749-4d3f-9774-2f00d8c30bc4">
+          <keyValuePair id="aa416ef9-a790-403b-adb0-68178924d8b3" Key="M" Value="The team's been absolutely flying lately. How confident are you that your players can continue turning in this level of performance?&#xD;&#xA;" />
+          <keyValuePair id="4c500d11-4c02-4f38-9139-b7f6408bb665" Key="F" Value="" />
+          <keyValuePair id="9be9e211-de04-4173-9f27-f4ea6e25734d" Key="MM" Value="" />
+          <keyValuePair id="4f9550e7-0911-4cc2-ad9e-e2561ddacc2b" Key="MF" Value="" />
+          <keyValuePair id="6e51c90d-9d13-4beb-82a7-421614da0b9c" Key="FM" Value="" />
+          <keyValuePair id="111314a4-f8be-45bd-b3a6-c18a17e5cd07" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsQuestionLong>
+      <managerAnswerList id="7c7901c1-6c19-4c5a-8586-ad6b26058726">
+        <managerAnswer id="9918593a-bfbc-490c-9e47-637eefff65bf" AnswerType="0" AnswerMood="0" IsKeyAnswer="False" AnswerMurmur="0">
+          <stringWithArgsAnswerShort id="ecd739f8-03d1-4792-aa7b-8562f591f846" StringID="CM_PreMatchPress_5GForm_Great_Answer_1_Short" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="2456e18d-af76-4faf-a8a6-e2971d0f4a2e" />
+            <stringContent id="510c064a-e5f7-4977-9ea4-62af9378fd6f">
+              <keyValuePair id="81617a35-678e-4a63-ba2b-6685959479b8" Key="M" Value="I think there's more to come.&#xD;&#xA;" />
+              <keyValuePair id="dc00768b-8c90-43e6-9016-a730e6d1f9aa" Key="F" Value="" />
+              <keyValuePair id="8d43a3fd-4607-46b7-b6fa-611d2290ad0e" Key="MM" Value="" />
+              <keyValuePair id="cdc53500-ef95-43a5-8bdb-1449625b1e71" Key="MF" Value="" />
+              <keyValuePair id="d4a9a883-4d5c-4cea-8bfa-4a48bd25cc5c" Key="FM" Value="" />
+              <keyValuePair id="d243fd24-c4e8-4f02-9557-ebffc4b10bef" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="d10644fd-cd51-44d5-8b6d-dc520ad2a2c8" StringID="CM_PreMatchPress_5GForm_Great_Answer_1_Long" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="fa7aec26-969c-4796-8445-b5bfc71ea84b" />
+            <stringContent id="7b0461b8-75ef-47c3-9f19-09ff9aa31d44">
+              <keyValuePair id="f9f3fa7a-2dd4-469b-8f45-401eb020ca4e" Key="M" Value="Yes, I'm happy with what I'm seeing from the team. But that doesn't mean we're going to slacken off in training. We have to keep working. I'm convinced there's more to come from these boys.&#xD;&#xA;" />
+              <keyValuePair id="016bd35e-26cd-4e0f-a666-f82128caa358" Key="F" Value="" />
+              <keyValuePair id="1ba461d6-fe19-4562-9cb6-dbb7a3b26e5a" Key="MM" Value="" />
+              <keyValuePair id="8b53130b-a27f-46c7-a4ea-14d85e5d8323" Key="MF" Value="" />
+              <keyValuePair id="92efd29d-e38a-46f8-ae10-d4e96850b001" Key="FM" Value="" />
+              <keyValuePair id="d35a713f-fedc-4cb5-b9d5-7405598cfcd7" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+        <managerAnswer id="34321550-47c2-492d-8a11-509e4a452a3d" AnswerType="4" AnswerMood="0" IsKeyAnswer="False" AnswerMurmur="0">
+          <stringWithArgsAnswerShort id="56498921-2e47-44d9-bc2c-0fee8f576804" StringID="CM_PreMatchPress_5GForm_Great_Answer_2_Short" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="248af338-bd9f-4562-b0b9-6f83976082b7" />
+            <stringContent id="2afe4098-4f3a-42a3-a6f4-1fb5dc43ddd5">
+              <keyValuePair id="2fff66d1-955c-410d-955a-da73e60191cf" Key="M" Value="Let's not get distracted.&#xD;&#xA;" />
+              <keyValuePair id="44fec271-0a04-434b-b03b-43c6c0f54cda" Key="F" Value="" />
+              <keyValuePair id="e6d82595-508c-49ae-bf67-f5ebec304ce3" Key="MM" Value="" />
+              <keyValuePair id="03950da2-071d-40d7-a23e-3f751d6347da" Key="MF" Value="" />
+              <keyValuePair id="e8cf5d2a-7dcd-420f-a2be-a50950a0aec0" Key="FM" Value="" />
+              <keyValuePair id="23445b7d-2361-4730-9b19-e64eef179c87" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="1b6e1780-b527-4bae-abd1-037ad836647c" StringID="CM_PreMatchPress_5GForm_Great_Answer_2_Long" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="ada37bfb-e36f-4a27-ad0e-e585c7a537c2" />
+            <stringContent id="c2428b52-02a1-4351-a2bd-0312bdcd5349">
+              <keyValuePair id="30b5e4d2-9aa3-48db-a06c-258c82a4c966" Key="M" Value="I'm glad we're playing well and the boys are getting a bit of praise from fans and in the media. But we can't get distracted by all that. We need to keep this run going. There are tough games coming up.&#xD;&#xA;" />
+              <keyValuePair id="e0b84176-5b8d-476c-a2fe-e2a75faf6b22" Key="F" Value="" />
+              <keyValuePair id="711e408e-cfb0-41d5-b824-c604c5a33c86" Key="MM" Value="" />
+              <keyValuePair id="5e2158f2-150f-4022-8a12-47dddddd83bb" Key="MF" Value="" />
+              <keyValuePair id="8293ed73-a433-454c-bbd7-5cdbd679cc69" Key="FM" Value="" />
+              <keyValuePair id="60f3625c-6d59-47cb-84c1-bee985f48a2f" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+        <managerAnswer id="ec1ae274-0bdd-43bf-a3fb-09097f8ced58" AnswerType="3" AnswerMood="0" IsKeyAnswer="False" AnswerMurmur="0">
+          <stringWithArgsAnswerShort id="8616d4c4-fd35-4a92-b8c5-4830f13dac74" StringID="CM_PreMatchPress_5GForm_Great_Answer_3_Short" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+            <stringArguments id="6b85b05f-d5b1-4359-aa21-92afb8de2b6b" />
+            <stringContent id="034c0a18-be60-4a2d-a6d3-0c4fc23d8b02">
+              <keyValuePair id="1f66a769-f172-43a7-bc4b-a89e4104ad45" Key="M" Value="This is what I expect from us.&#xD;&#xA;" />
+              <keyValuePair id="8f13dcf1-e1ba-4221-bb4b-c54cb99d0fbf" Key="F" Value="This is what I expect from us.&#xD;&#xA;" />
+              <keyValuePair id="fe536db8-dde0-4f6f-9312-88ba7302a0f8" Key="MM" Value="" />
+              <keyValuePair id="8fef3800-9f9c-41bf-9218-17d9ecfb7d48" Key="MF" Value="" />
+              <keyValuePair id="016de357-9565-429d-85d3-0053cb455f3d" Key="FM" Value="" />
+              <keyValuePair id="e789e3e0-6941-4429-97f9-4caf95a0d665" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="4c91ded8-a8b1-4b11-a53d-4425b319cc5f" StringID="CM_PreMatchPress_5GForm_Great_Answer_3_Long" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+            <stringArguments id="a5c8a8c8-150f-4c2d-8109-b7f2f9fa8ebe" />
+            <stringContent id="b480d2b1-8429-4d67-95a5-a5a24fbe83d3">
+              <keyValuePair id="91635168-6467-4fff-a6c6-41b106d7e561" Key="M" Value="I know what this team's capable of. I'm delighted with how we're playing at the moment and I don't see any reason why we can't keep performing to this standard.&#xD;&#xA;" />
+              <keyValuePair id="313303a9-c39a-4d13-b923-c08b26a5da62" Key="F" Value="I know what this team's capable of. I'm delighted with how we're playing at the moment and I don't see any reason why we can't keep performing to this standard.&#xD;&#xA;" />
+              <keyValuePair id="53eab3ed-5ffa-40c4-adfb-006d2870fd4a" Key="MM" Value="" />
+              <keyValuePair id="baaa15f4-da14-41da-b146-af4df9f215a4" Key="MF" Value="" />
+              <keyValuePair id="60ac6a2f-df4f-430a-9b96-d4558903acd3" Key="FM" Value="" />
+              <keyValuePair id="a5593271-bed2-4fa2-9164-b611c4dd97f4" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+      </managerAnswerList>
+      <supported-events id="0efb7bf7-af4c-47ea-866d-91ef805310f9" />
+    </pressconf-node>
+    <random-node id="8fb54c5f-5d6f-4b37-a0e4-cd4aeb711ef1" X="-2080" Y="-9280" NodeType="Random" NodeName="Set Name for New Node" Outputs="2" WeightDistribution="0-100" />
+    <modify-morale-node id="dcb79d45-63f2-4a7b-8f99-afcf1648a488" X="-880" Y="-10400" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="SympathizeLow">
+      <emotion-impact id="dbbc13a9-5750-42b1-8dd4-93854edb1e14">
+        <keyValuePair id="53f45db3-75c8-4251-b913-d2687d9e2e37" Key="VeryCalm" Value="1" />
+        <keyValuePair id="d2be0849-0827-4045-9a1a-e46b55b10058" Key="Calm" Value="1" />
+        <keyValuePair id="f630b307-a7af-4871-9f25-bae57e7a1510" Key="Normal" Value="1" />
+        <keyValuePair id="e56e1c82-6e97-43ea-9d87-7c36aa8fd1ae" Key="HotTemper" Value="1" />
+        <keyValuePair id="3f58cea3-c983-487b-9a1a-432960674992" Key="Volcano" Value="1" />
+      </emotion-impact>
+      <personality-impact id="93d4d5f0-cc7e-4b01-8d0a-57d0b432dcc6">
+        <keyValuePair id="88ca41e7-b0ac-402e-b463-edfc17ae898c" Key="Selfish" Value="2" />
+        <keyValuePair id="e5827fc4-0606-4073-9f05-8592c18ab88f" Key="Individual" Value="2" />
+        <keyValuePair id="07923f46-7d52-4e7f-ad5f-fd2ac899d006" Key="Normal" Value="1" />
+        <keyValuePair id="82f15bf2-34fb-40ff-897d-6fab0fcbb422" Key="TeamPlayer" Value="1" />
+        <keyValuePair id="01e25343-a4a6-4cab-bc73-473b9983429f" Key="UltimateProfessional" Value="1" />
+      </personality-impact>
+    </modify-morale-node>
+    <foreach-node id="41797aa6-5b41-4b0f-b4e3-27542f24773a" X="-1440" Y="-11200" NodeType="Foreach" NodeName="" ElementAlias="Current Player">
+      <alias-data-source id="b3198e48-f1f6-41fb-84e8-fd085464a3df" DataSource="Model:Global.Players">
+        <conditions id="3894e6c7-c406-4b5a-ac50-69e2bb48415d" />
+      </alias-data-source>
+    </foreach-node>
+    <foreach-node id="796c2998-df9e-4816-b4c8-2cebd91d71de" X="-1440" Y="-10800" NodeType="Foreach" NodeName="" ElementAlias="Current Player">
+      <alias-data-source id="51921cde-6f3e-4204-b165-c7e2edec4800" DataSource="Model:Global.Players">
+        <conditions id="99539c7b-1348-48c1-bcd4-db418ec5ae8f" />
+      </alias-data-source>
+    </foreach-node>
+    <foreach-node id="3fb2a12e-8508-4368-a4a5-596e766927fb" X="-1440" Y="-10440" NodeType="Foreach" NodeName="" ElementAlias="Current Player">
+      <alias-data-source id="18d36c37-95cb-4d46-8486-4bae3ec415a4" DataSource="Model:Global.Players">
+        <conditions id="6d869bb2-f21e-4f6c-9a35-7c5b6a81ac9d" />
+      </alias-data-source>
+    </foreach-node>
+    <modify-morale-node id="2d87452d-f771-4461-9eae-a6a8706c617b" X="-840" Y="-11120" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="CriticizeLow">
+      <emotion-impact id="695af640-bc50-4df5-b4a6-56ecd42d450c">
+        <keyValuePair id="a7df615d-4a66-47e7-9d8f-8b12ec074fac" Key="VeryCalm" Value="-1" />
+        <keyValuePair id="636d41ba-ec08-448f-b5b8-7afd88f3b45a" Key="Calm" Value="-1" />
+        <keyValuePair id="ba8ee8fa-7651-4a8b-9eae-47281f94e101" Key="Normal" Value="-1" />
+        <keyValuePair id="3bbde60e-e886-4b03-8527-c3a8b4c0690b" Key="HotTemper" Value="-1" />
+        <keyValuePair id="d6a36259-6f6e-4000-af5e-c87846b259a1" Key="Volcano" Value="-1" />
+      </emotion-impact>
+      <personality-impact id="fe8c2726-c95f-4628-83fa-769079c24fad">
+        <keyValuePair id="44d5e824-2e08-4b88-b13e-4656cdbc1793" Key="Selfish" Value="-2" />
+        <keyValuePair id="0933aebe-1a7e-4a1d-87ca-225e8cf4aa87" Key="Individual" Value="-1" />
+        <keyValuePair id="0242d320-6741-4752-b0dd-184dcde20b9d" Key="Normal" Value="-1" />
+        <keyValuePair id="3301f161-5545-46f8-8c50-3dfbe9b2044a" Key="TeamPlayer" Value="-1" />
+        <keyValuePair id="a5aa6c5c-0db4-4509-8618-667fffeeba3d" Key="UltimateProfessional" Value="-1" />
+      </personality-impact>
+    </modify-morale-node>
+    <join-node id="09690502-09f2-4a95-a5b4-8317ca7a74d3" X="-600" Y="-11120" NodeType="Join" NodeName="" />
+    <join-node id="ef5fd99f-4785-4359-9e88-2aedeb0ca6bd" X="-1680" Y="-11200" NodeType="Join" NodeName="" />
+    <join-node id="41fd2d36-af8d-4d32-b8cc-d175db35c591" X="-1720" Y="-10800" NodeType="Join" NodeName="" />
+    <join-node id="b5d03508-e002-4bb8-9818-0f2a4f150692" X="-1680" Y="-10440" NodeType="Join" NodeName="" />
+    <modify-morale-node id="a4995692-2ae3-43ed-8667-5d117dc51f13" X="-880" Y="-10760" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="MotivateLow">
+      <emotion-impact id="c9348aed-b2f8-4e8c-9524-c4ec19081bbd">
+        <keyValuePair id="d5280396-a77e-4d22-838b-f20ff1b378d6" Key="VeryCalm" Value="0" />
+        <keyValuePair id="b948fa21-2a54-4105-9365-81d2f57f379a" Key="Calm" Value="0" />
+        <keyValuePair id="f8c1be1e-fb98-4397-a359-855b4f8aafeb" Key="Normal" Value="0" />
+        <keyValuePair id="8092f7ba-c0a3-4aad-9e61-a454b16df009" Key="HotTemper" Value="1" />
+        <keyValuePair id="b7081332-fb07-40ae-9503-ef97e296e0d2" Key="Volcano" Value="1" />
+      </emotion-impact>
+      <personality-impact id="8982dc2a-0f06-4ba7-9c9a-12eeb78114d3">
+        <keyValuePair id="bd14817e-bec4-481e-b4fa-86c0cad1c465" Key="Selfish" Value="0" />
+        <keyValuePair id="933d5446-d2c5-423a-a150-8459486a663f" Key="Individual" Value="0" />
+        <keyValuePair id="74431311-380a-4524-8fde-24a67812aced" Key="Normal" Value="1" />
+        <keyValuePair id="67899f25-880a-4700-955a-38d886de30e5" Key="TeamPlayer" Value="1" />
+        <keyValuePair id="0764f6e1-bb8f-496b-be25-8b6b2b2598ac" Key="UltimateProfessional" Value="1" />
+      </personality-impact>
+    </modify-morale-node>
+    <pressconf-node id="976fbea4-86ac-4935-8ff8-ed2566b3f608" X="-1960" Y="-10200" NodeType="PressConference" NodeName="" PressConfType="0" IsPlayerSpecific="false" Player="" QuestionMood="0" Priority="1">
+      <stringWithArgsQuestionShort id="1f0eeced-fa45-41c4-84cc-6336d48ccc94" StringID="CM_PreMatchPress_5GForm_Average_Question_Short" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="b64b8882-8d2d-4be2-9f51-1f2081e401d4" />
+        <stringContent id="2c763ea2-5a7f-4d9c-8c7c-171b72d97e0d">
+          <keyValuePair id="8c8621fd-5579-4f75-9771-5d33c797b6df" Key="M" Value="How can your team find consistency?&#xD;&#xA;" />
+          <keyValuePair id="48beeaac-e79e-4ffb-af87-7bcd1e03a7e7" Key="F" Value="" />
+          <keyValuePair id="522aa668-a25c-48dd-8858-908820e87371" Key="MM" Value="" />
+          <keyValuePair id="de51917f-e292-4600-8165-48e3d1c29947" Key="MF" Value="" />
+          <keyValuePair id="d4cc8a8f-11fd-46ec-a11b-0ace20b8ab40" Key="FM" Value="" />
+          <keyValuePair id="7f065a63-7358-4410-bce7-c112a185f391" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsQuestionShort>
+      <stringWithArgsQuestionLong id="71c335bb-0b1f-460c-ad1b-ef548d501181" StringID="CM_PreMatchPress_5GForm_Average_Question_Long" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="20e3a4a9-388e-4876-93c0-cf92e97b7868">
+          <stringArgument id="6c05ca92-a80b-41ba-bc36-4f54ae8aa2fd" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="808c79c9-5242-449f-8f28-275dd37f5b5e">
+          <keyValuePair id="fae83d00-f793-49fd-b22e-76cb74e5a128" Key="M" Value="The %1s team's been very in and out lately. We don't know what to expect from them from game to game. How can you help your players find a bit of consistency?&#xD;&#xA;" />
+          <keyValuePair id="0dcc579c-b9fa-47c7-aab7-c01ce90ac820" Key="F" Value="" />
+          <keyValuePair id="8c79b3c6-6c22-449a-8c06-188e03ceef39" Key="MM" Value="" />
+          <keyValuePair id="5b34076d-bf0a-4356-9d68-d040421669a7" Key="MF" Value="" />
+          <keyValuePair id="6a06495d-b941-49d9-a317-46e8f51ddcb9" Key="FM" Value="" />
+          <keyValuePair id="d85299bf-4f0d-4f48-8d94-bebbb2c428d3" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsQuestionLong>
+      <managerAnswerList id="415a34c9-1604-4af1-a206-022d39d02ac3">
+        <managerAnswer id="9918593a-bfbc-490c-9e47-637eefff65bf" AnswerType="1" AnswerMood="2" IsKeyAnswer="True" AnswerMurmur="1">
+          <stringWithArgsAnswerShort id="a9e5d773-bc3a-4773-b2e3-191d3dcf5686" StringID="CM_PreMatchPress_5GForm_Average_Answer_1_Short" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+            <stringArguments id="67d6d26c-456d-4004-9202-d57afa711b91" />
+            <stringContent id="5b0e24f6-3187-4f93-a714-3ecda5a390d5">
+              <keyValuePair id="5fd9239f-7a7a-41b9-bbd6-71ac205eb7cd" Key="M" Value="It's up to them, I think.&#xD;&#xA;" />
+              <keyValuePair id="45a9ec6e-9b9a-4940-aaf9-d6526ef43711" Key="F" Value="It's up to them, I think.&#xD;&#xA;" />
+              <keyValuePair id="3ab30dd4-2b39-477d-a02a-7db1c7db1654" Key="MM" Value="" />
+              <keyValuePair id="f2fc6839-a8db-467d-8005-c1d1b4d2d08d" Key="MF" Value="" />
+              <keyValuePair id="8808a869-3f57-423e-803f-852f22a69383" Key="FM" Value="" />
+              <keyValuePair id="88917a62-a914-4696-82d4-c0160d2afaf5" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="cdef15c5-8113-451f-b899-9369bc058e0d" StringID="CM_PreMatchPress_5GForm_Average_Answer_1_Long" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+            <stringArguments id="cbcb38c2-1673-4ae7-93cd-12be0e91d6dc" />
+            <stringContent id="67adbfb1-44eb-4a53-8799-0fa9cd46d5e2">
+              <keyValuePair id="e9c5f147-98bb-46f6-ad00-755a78277d7a" Key="M" Value="This is all to do with attitude and mental toughness. It's frustrating watching the players turning in such erratic performances. I expect better from them. And soon.&#xD;&#xA;" />
+              <keyValuePair id="dbef8c94-f940-4fac-8aa1-c44539bf4d6e" Key="F" Value="This is all to do with attitude and mental toughness. It's frustrating watching the players turning in such erratic performances. I expect better from them. And soon.&#xD;&#xA;" />
+              <keyValuePair id="9820252e-579b-4f2c-a89d-73453df72112" Key="MM" Value="" />
+              <keyValuePair id="eef57600-4e93-48ca-bd01-c2dce02b1fa8" Key="MF" Value="" />
+              <keyValuePair id="ac99a04a-6149-4d5b-97e3-efe4e30a9013" Key="FM" Value="" />
+              <keyValuePair id="261f96e1-16c7-47fa-8ffd-80a71d6abbc5" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+        <managerAnswer id="34321550-47c2-492d-8a11-509e4a452a3d" AnswerType="0" AnswerMood="0" IsKeyAnswer="False" AnswerMurmur="0">
+          <stringWithArgsAnswerShort id="870b3a92-1548-4868-9a82-7e669841247c" StringID="CM_PreMatchPress_5GForm_Average_Answer_2_Short" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="9b892b11-6f9c-49f9-a469-7a9bfa119924" />
+            <stringContent id="54149e56-7d48-4ced-af04-8999a3c5218e">
+              <keyValuePair id="b29860c3-0331-4ed4-a82a-472a378b7dd4" Key="M" Value="It's about confidence.&#xD;&#xA;" />
+              <keyValuePair id="5bee7370-a23e-4289-941e-4c90bf3d5f53" Key="F" Value="" />
+              <keyValuePair id="606bbc76-af3e-4f2d-825f-0ca36a1bc758" Key="MM" Value="" />
+              <keyValuePair id="0a6bec18-5125-492e-aa24-3472c905f1d0" Key="MF" Value="" />
+              <keyValuePair id="e127849f-a53f-4914-8123-757679139566" Key="FM" Value="" />
+              <keyValuePair id="752f7235-0d0c-4925-ba11-94053caae8c6" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="3f3c5f35-686f-4360-ade4-a05bb9472b36" StringID="CM_PreMatchPress_5GForm_Average_Answer_2_Long" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+            <stringArguments id="5e20b76e-4720-4673-8f5c-4d4534b90baf" />
+            <stringContent id="26e66ab9-2f77-45f8-a6a2-349ced0d92db">
+              <keyValuePair id="202985fb-cf0d-4af8-878e-a91303aadac7" Key="M" Value="I think the boys are just little short of self-belief. That's why the performances are so up and down. But we'll steady ourselves, I'm sure, and start performing more consistently.&#xD;&#xA;" />
+              <keyValuePair id="1b814ebe-942c-4234-9b61-e8a52970bd0c" Key="F" Value="I think the boys are just little short of self-belief. That's why the performances are so up and down. But we'll steady ourselves, I'm sure, and start performing more consistently.&#xD;&#xA;" />
+              <keyValuePair id="3c718c5c-3e3c-4eda-a90d-d4ac8d6f527d" Key="MM" Value="" />
+              <keyValuePair id="df76ed56-0326-4923-ba33-a872873256b0" Key="MF" Value="" />
+              <keyValuePair id="8e55bb88-e1c6-4152-9243-d11642fb8b3b" Key="FM" Value="" />
+              <keyValuePair id="27121b54-2f5f-4839-a2e9-9d4e23f994bc" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+        <managerAnswer id="ec1ae274-0bdd-43bf-a3fb-09097f8ced58" AnswerType="2" AnswerMood="0" IsKeyAnswer="False" AnswerMurmur="0">
+          <stringWithArgsAnswerShort id="c018ef14-8eaa-44c2-8d0f-dc360afe7de3" StringID="CM_PreMatchPress_5GForm_Average_Answer_3_Short" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+            <stringArguments id="5384a076-0dac-43a0-bf6e-6aefe5bb266f" />
+            <stringContent id="29c9e050-114a-45e0-8a8f-ad607bb799ad">
+              <keyValuePair id="e20ce5f0-bfca-454f-9ea1-4ad718c89070" Key="M" Value="The boys are working hard at it.&#xD;&#xA;" />
+              <keyValuePair id="d3ffcef2-c6e2-43c3-8f9a-17018dc2ba32" Key="F" Value="The boys are working hard at it.&#xD;&#xA;" />
+              <keyValuePair id="a9fdf327-263b-41fe-bf78-f4bfd9823ed1" Key="MM" Value="" />
+              <keyValuePair id="6f6d80f5-1663-4eca-a842-8f85bddfefb9" Key="MF" Value="" />
+              <keyValuePair id="397a9961-faa7-4c4f-aa29-e443f9af3b66" Key="FM" Value="" />
+              <keyValuePair id="f6153b9f-6af7-4698-b5cf-a6cd488fd05e" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="54f78d17-851a-4956-b2c4-b378e6f032c7" StringID="CM_PreMatchPress_5GForm_Average_Answer_3_Long" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+            <stringArguments id="abec6612-5396-4a26-a06f-06213faa23ed" />
+            <stringContent id="3d22656a-0bb9-4f99-83cc-969386c58cc0">
+              <keyValuePair id="5627fcd1-179c-4258-adb1-2ef5aa90cd3e" Key="M" Value="I trust this group of players and I can tell you we're working very hard to get on a consistent run. I'm not too concerned, to be honest. I know things will improve.&#xD;&#xA;" />
+              <keyValuePair id="cfa41edc-5006-4918-a5bd-d317417bf6b1" Key="F" Value="I trust this group of players and I can tell you we're working very hard to get on a consistent run. I'm not too concerned, to be honest. I know things will improve.&#xD;&#xA;" />
+              <keyValuePair id="1c17a9e0-7fd9-4ab2-8daf-9a1131cd0284" Key="MM" Value="" />
+              <keyValuePair id="6bc69608-a4c3-4f41-b5de-28bf4b88eea3" Key="MF" Value="" />
+              <keyValuePair id="0bd075d0-15c9-4458-be26-9266bc92463b" Key="FM" Value="" />
+              <keyValuePair id="c8d60402-b04e-40aa-ae02-0a5b309d0b77" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+      </managerAnswerList>
+      <supported-events id="b101e607-ad58-4741-88fb-7eeab6c5b004" />
+    </pressconf-node>
+    <random-node id="dfb9fc12-35c0-498a-bac6-41164bd168a6" X="-2200" Y="-11120" NodeType="Random" NodeName="Set Name for New Node" Outputs="2" WeightDistribution="0-100" />
+    <condition-node id="a1fb2247-f903-4d9d-a6ce-88de0057e9b3" X="-2640" Y="-11120" NodeType="Condition" NodeName="Average Form">
+      <conditions id="f811cf44-cdba-44f0-890b-9d18a76b6380">
+        <condition id="d5b02624-4b3d-4192-8a93-5b7f0e9e1c73" VariableId="SaveData:5 Game Points" Comparison="LTE" Value="10" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="33f9cb81-be5e-4b4c-8328-a59f376e4688" VariableId="SaveData:Num Matches" Comparison="GTE" Value="5" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="80da5b37-9b53-461f-bd67-fbf1bece8282" VariableId="SaveData:5 Game Points" Comparison="LTE" Value="8" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="df35424f-6a90-429e-9caf-e9759b62c04c" VariableId="SaveData:Num Matches" Comparison="EQ" Value="4" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="06131f0d-a0b6-4342-b984-87dacd8d7b5f" VariableId="SaveData:5 Game Points" Comparison="LTE" Value="5" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="96297b90-312e-469f-af29-e5d6ec2c5548" VariableId="SaveData:Num Matches" Comparison="EQ" Value="3" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="7fd104ba-d61f-4d00-ba35-71d5d8ae7135" VariableId="SaveData:5 Game Points" Comparison="LTE" Value="4" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="b3fbc6db-fe44-4301-9e92-9f526edc7334" VariableId="SaveData:Num Matches" Comparison="EQ" Value="2" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="c43a4bfc-fd55-4846-b98c-eb5d0f9f8175" VariableId="SaveData:5 Game Points" Comparison="LTE" Value="1" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="7fce5376-3478-4a52-9ecf-2080f5487120" VariableId="SaveData:Num Matches" Comparison="EQ" Value="1" Operator="AND" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <save-data-node id="9f050026-f847-45af-bf1e-9e64e0d770f2" X="-4960" Y="-11920" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="c3790599-74ed-4afb-aee9-fa46fc5ffa70">
+        <saveItem id="be1a3886-0399-44a0-ac2c-9ef1f38f6f7e" Key="CompType" Value="Model:UserMatchCompleted.LastMatchData.Competition.CompType" ValueType="CompetitionType" />
+      </saveItems>
+    </save-data-node>
+    <condition-node id="639b155f-94f3-44a8-83de-35bd2c85d9fe" X="-1640" Y="-12360" NodeType="Condition" NodeName="">
+      <conditions id="3fcc0409-5a81-4626-9c98-43933e392f18">
+        <condition id="fbb6d4d5-693e-4cb8-a4b7-5dca7dab0a15" VariableId="Current Player:Form.Rating" Comparison="GTE" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="eafee328-bbc8-4bbc-a4a2-32f554cc482d" X="-1480" Y="-12280" NodeType="Condition" NodeName="">
+      <conditions id="ec63ce1a-c36d-4897-9f5d-97456c1a5aa0">
+        <condition id="2e662257-7da7-42ad-a3c0-55dadd538520" VariableId="Current Player:Form.Rating" Comparison="EQ" Value="3" Operator="OR" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="393a7a14-4308-4350-8452-49f7cc3cb8b7" VariableId="Current Player:Form.Rating" Comparison="LTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-morale-node id="ef4c287b-16d9-461c-be93-51b0617f9ea1" X="-1160" Y="-12280" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="SympathizeMedium">
+      <emotion-impact id="6ca221cd-e842-4d3d-a1b8-03af77982047">
+        <keyValuePair id="78a913b4-e914-4cfb-91bc-6b87456ef701" Key="VeryCalm" Value="1" />
+        <keyValuePair id="8405d4cb-619f-49bf-9479-fdcdb718e5f2" Key="Calm" Value="1" />
+        <keyValuePair id="933c456b-7254-4d62-b249-804b71ab5c05" Key="Normal" Value="1" />
+        <keyValuePair id="d324ccaf-d36a-48c4-b12e-192605c0f7bd" Key="HotTemper" Value="2" />
+        <keyValuePair id="16ef06ec-3f37-4e73-a9d5-511202ce63e7" Key="Volcano" Value="2" />
+      </emotion-impact>
+      <personality-impact id="889813cf-1cf2-4eb1-81ef-6126275ba7ba">
+        <keyValuePair id="e8778a4c-4582-49f5-a3e4-711c8c88f30e" Key="Selfish" Value="2" />
+        <keyValuePair id="41148919-948e-40d4-826e-153d75342f36" Key="Individual" Value="2" />
+        <keyValuePair id="605b7d04-ebcf-4047-ada0-8069a1c92637" Key="Normal" Value="2" />
+        <keyValuePair id="4056ca8b-6b60-4e66-a2d4-0f6851bf2760" Key="TeamPlayer" Value="1" />
+        <keyValuePair id="bab524b1-28b4-41af-9b93-337d6202efab" Key="UltimateProfessional" Value="1" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="01239ab2-3de9-4b6e-b8aa-1622041152f9" X="-1160" Y="-12200" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="SympathizeLow">
+      <emotion-impact id="d650a458-649f-46d8-a7cc-759be396be54">
+        <keyValuePair id="29910015-96f7-48e3-9a1c-ae88cfadf6c7" Key="VeryCalm" Value="1" />
+        <keyValuePair id="f8af0741-3aa9-4395-ab65-4f8b0c4bfc5e" Key="Calm" Value="1" />
+        <keyValuePair id="3380426d-0de0-4416-a8b2-6c9a2906e0f9" Key="Normal" Value="1" />
+        <keyValuePair id="0e3860ed-9d9c-481b-9b24-777cfb8ea987" Key="HotTemper" Value="1" />
+        <keyValuePair id="f1d9d7d9-2e6a-4fdf-b1fe-518f3e530e17" Key="Volcano" Value="1" />
+      </emotion-impact>
+      <personality-impact id="d8923372-765d-45dc-91ad-339b511e4103">
+        <keyValuePair id="ddb68bf5-bd39-46ee-b241-cc551fa1c12b" Key="Selfish" Value="2" />
+        <keyValuePair id="81137fe0-812e-48e0-be7a-1ed17419bfbe" Key="Individual" Value="2" />
+        <keyValuePair id="1ba0f97d-b0ce-49b0-bd43-8ce2648af5f1" Key="Normal" Value="1" />
+        <keyValuePair id="a48451fb-1761-4d9f-a988-708e95b3ae2f" Key="TeamPlayer" Value="1" />
+        <keyValuePair id="7737da5c-d455-4970-833b-7f2636c8b567" Key="UltimateProfessional" Value="1" />
+      </personality-impact>
+    </modify-morale-node>
+    <condition-node id="d1a5937c-6b50-4235-8ff5-614cf4b3a73d" X="-1640" Y="-12000" NodeType="Condition" NodeName="">
+      <conditions id="2721d71c-4341-4e69-a465-221e24cf3934">
+        <condition id="87c10a08-e9f5-4b74-847c-ba38bf22fd59" VariableId="Current Player:Form.Rating" Comparison="GTE" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="fb0b0ca9-180a-4770-ae33-eb01e8959438" X="-1480" Y="-11920" NodeType="Condition" NodeName="">
+      <conditions id="ddc14f4c-4be1-4eab-9556-52d3986d0a2c">
+        <condition id="95c29cbf-462c-4e5d-9008-7823227427db" VariableId="Current Player:Form.Rating" Comparison="EQ" Value="3" Operator="OR" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="afdce9ec-c12b-4ce0-a903-178d9b06d569" VariableId="Current Player:Form.Rating" Comparison="LTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-morale-node id="da185617-f63a-4dc7-a39b-a56c90943499" X="-1160" Y="-11920" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="CalmMedium">
+      <emotion-impact id="1e22f70d-2797-49ae-82af-195c4287ac88">
+        <keyValuePair id="431c1720-77c2-4309-ab55-9c9a1cf2d263" Key="VeryCalm" Value="2" />
+        <keyValuePair id="f7eab385-96d4-4679-909c-2cab359e3a60" Key="Calm" Value="2" />
+        <keyValuePair id="27e3df41-294a-451b-8dde-bbc7889fec5b" Key="Normal" Value="1" />
+        <keyValuePair id="3456d3e4-6d86-4521-8100-918a208d8d4d" Key="HotTemper" Value="1" />
+        <keyValuePair id="f3ddd404-ff32-4d3f-9bc3-78e36adca6e3" Key="Volcano" Value="1" />
+      </emotion-impact>
+      <personality-impact id="861baa23-c7e8-46b7-81c0-7c22de0a9c12">
+        <keyValuePair id="15b3231e-3bcb-4bf3-b8f6-1d2cfd11cbf5" Key="Selfish" Value="0" />
+        <keyValuePair id="2eec34e7-778e-4cc2-92fe-77f5d13a0d25" Key="Individual" Value="1" />
+        <keyValuePair id="73e7eab0-66b7-411a-b8a0-3adeb83a10fd" Key="Normal" Value="2" />
+        <keyValuePair id="66709492-c3c5-4a04-b60e-f5954774d80e" Key="TeamPlayer" Value="2" />
+        <keyValuePair id="3327a1a4-4b03-4723-a236-52ab2bf8680c" Key="UltimateProfessional" Value="2" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="7678ad31-5508-4107-b192-c98a132b802a" X="-1160" Y="-11840" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="CalmHigh">
+      <emotion-impact id="de430cc3-aedd-4a02-afb5-db798fc439c1">
+        <keyValuePair id="34309a70-b2bc-44e9-b406-34ab9d81d52a" Key="VeryCalm" Value="2" />
+        <keyValuePair id="788c2d56-f985-45b3-93fd-a43b78015fb9" Key="Calm" Value="2" />
+        <keyValuePair id="b4c14f93-0f9a-4475-8051-100ceeec7102" Key="Normal" Value="2" />
+        <keyValuePair id="e6f29869-d9dc-497e-b28f-bba460b42baa" Key="HotTemper" Value="1" />
+        <keyValuePair id="2c2ed947-b7c2-4755-b9cc-4272278c6173" Key="Volcano" Value="1" />
+      </emotion-impact>
+      <personality-impact id="73866e63-30a3-4b2e-9b8d-f28e0cddf0b2">
+        <keyValuePair id="8031551a-c877-4e6f-b9f9-ca77cdd3b513" Key="Selfish" Value="0" />
+        <keyValuePair id="c558fbef-d812-4a1c-989d-82bd9088a3e3" Key="Individual" Value="1" />
+        <keyValuePair id="ec2af8f4-2f3b-49ac-9d24-c2c1735b4cf8" Key="Normal" Value="2" />
+        <keyValuePair id="d176ac92-89cd-4bff-b092-99e960c675d3" Key="TeamPlayer" Value="8" />
+        <keyValuePair id="01c3d52b-4fa5-46fc-8a3c-efa839fafcaf" Key="UltimateProfessional" Value="8" />
+      </personality-impact>
+    </modify-morale-node>
+    <condition-node id="cfb93e53-15a4-47a2-ac60-fcf2e2a2e8e3" X="-1640" Y="-11680" NodeType="Condition" NodeName="">
+      <conditions id="ec8fd40a-5971-4725-bed7-b7bec2d82b5f">
+        <condition id="d7617b32-a90f-460d-a9ba-d2f0c8f82b15" VariableId="Current Player:Form.Rating" Comparison="GTE" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="64abc9cb-32fd-48f8-b6fe-53e5e1bc1c0b" X="-1480" Y="-11600" NodeType="Condition" NodeName="">
+      <conditions id="e07ed02c-869d-45a7-a396-50c573bd1697">
+        <condition id="b9de6088-bc72-457b-9b2b-bc757dcade34" VariableId="Current Player:Form.Rating" Comparison="EQ" Value="3" Operator="OR" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="44570df7-36f6-4394-adf3-53590f631c9c" VariableId="Current Player:Form.Rating" Comparison="LTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-morale-node id="dc6e51fd-2e56-43a2-81c3-e497a32bafa7" X="-1160" Y="-11600" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="CriticizeMedium">
+      <emotion-impact id="64a98d29-8c7e-46b2-aa9e-caf9453df556">
+        <keyValuePair id="7fd877b4-0ec4-48c4-a1b7-481d7201fc36" Key="VeryCalm" Value="-1" />
+        <keyValuePair id="c16ad9b1-3870-4b9a-98f9-22ec36448474" Key="Calm" Value="-1" />
+        <keyValuePair id="12d120c3-c8bf-4ed0-8ce1-edea6ce60fed" Key="Normal" Value="-2" />
+        <keyValuePair id="54b41322-41f3-44b3-8e52-2e3170743ab6" Key="HotTemper" Value="-2" />
+        <keyValuePair id="f7230f0a-0d86-4d73-9575-e9df2a92d3b8" Key="Volcano" Value="-2" />
+      </emotion-impact>
+      <personality-impact id="32c9df8f-3ba9-4d52-8709-8f73d9dff245">
+        <keyValuePair id="79f7b281-8728-4d8f-aa0e-498bb2756dc1" Key="Selfish" Value="-2" />
+        <keyValuePair id="906e64df-1dfb-4648-90ea-47bdc8c7fd1f" Key="Individual" Value="-2" />
+        <keyValuePair id="207221cc-5e7e-4be2-a059-70439de9c2cd" Key="Normal" Value="-2" />
+        <keyValuePair id="e0139d7f-c5f2-49e3-8292-aff4e1ea9db8" Key="TeamPlayer" Value="-1" />
+        <keyValuePair id="e10753e6-355e-4619-ac9d-3635d5c1f376" Key="UltimateProfessional" Value="-1" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="cf99d1ba-5035-4fd5-85f1-cc2fcfd8b21d" X="-1160" Y="-11520" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="CriticizeHigh">
+      <emotion-impact id="468e1c6e-3880-4e2f-b621-0ad0037c4aa8">
+        <keyValuePair id="6ac9d199-319c-4c77-93f5-5fb5aad50840" Key="VeryCalm" Value="-2" />
+        <keyValuePair id="fa57289b-ea00-4624-871b-9a0c4d6f18d7" Key="Calm" Value="-2" />
+        <keyValuePair id="4113a543-e96d-440e-bb0a-8e6e73eb83a9" Key="Normal" Value="-8" />
+        <keyValuePair id="1f38e7fb-d259-428e-bfa3-b0ff18ce3bbc" Key="HotTemper" Value="-9" />
+        <keyValuePair id="664065d5-9b43-4eb2-8756-b4806407e92f" Key="Volcano" Value="-9" />
+      </emotion-impact>
+      <personality-impact id="c92571db-fbb1-42a5-92b6-254f65d2e900">
+        <keyValuePair id="45fec7fb-96c4-4d2e-98c6-a3bffd769e56" Key="Selfish" Value="-2" />
+        <keyValuePair id="ef1c30ee-5ad7-434d-9571-ce922077a625" Key="Individual" Value="-2" />
+        <keyValuePair id="e28bc1ec-bbc2-4f29-a064-214e1198a57f" Key="Normal" Value="-2" />
+        <keyValuePair id="b1902eb8-a958-4ee5-9984-55d8ae9d9ec2" Key="TeamPlayer" Value="-1" />
+        <keyValuePair id="727e1d4b-2c76-40d6-85cf-9f2580a67836" Key="UltimateProfessional" Value="-1" />
+      </personality-impact>
+    </modify-morale-node>
+    <condition-node id="58659de4-0f06-44b6-824a-19cb5c81b0a8" X="-1280" Y="-10400" NodeType="Condition" NodeName="">
+      <conditions id="474cabb0-8bd6-4312-80d1-a19ee8dc05ab">
+        <condition id="1b4890c2-bbdc-45f1-8b00-cecb69309e1f" VariableId="Current Player:Form.Rating" Comparison="GTE" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="addb990b-5450-4a9d-9b8f-76bb7088049a" X="-1080" Y="-10320" NodeType="Condition" NodeName="">
+      <conditions id="86e0183b-18f0-4957-a980-5b41c650bd57">
+        <condition id="a99fc78a-8ef6-4bc6-857b-d3428c995fb1" VariableId="Current Player:Form.Rating" Comparison="EQ" Value="3" Operator="OR" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="a1c3193f-f228-40b4-b40f-f40e79b4d652" VariableId="Current Player:Form.Rating" Comparison="LTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-morale-node id="6c286cc9-bca9-4168-9bdc-231a8f5fda60" X="-880" Y="-10320" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="SympathizeMedium">
+      <emotion-impact id="73996e7d-a825-456c-a708-3fd522b253dd">
+        <keyValuePair id="d762ec1e-a052-48bd-af0d-12c5ab766a2c" Key="VeryCalm" Value="1" />
+        <keyValuePair id="5f628945-ebc6-4012-9feb-862d1a61257f" Key="Calm" Value="1" />
+        <keyValuePair id="2ae9e6a7-0195-46e5-94d0-cb3bde278601" Key="Normal" Value="1" />
+        <keyValuePair id="0a27a1c9-c0c3-4573-b961-8960587b3451" Key="HotTemper" Value="2" />
+        <keyValuePair id="000b313c-b9de-4bf6-a2c8-7660571fcbaa" Key="Volcano" Value="2" />
+      </emotion-impact>
+      <personality-impact id="bd94c5f9-4483-4804-89b4-d42a5081bf27">
+        <keyValuePair id="2dde44d8-31e2-4218-8bf2-b574ad70d8fd" Key="Selfish" Value="2" />
+        <keyValuePair id="73bc3248-91f1-48bf-8389-12012835f142" Key="Individual" Value="2" />
+        <keyValuePair id="9121b15d-096a-436d-ba3b-850526a7556f" Key="Normal" Value="2" />
+        <keyValuePair id="055dfb8b-b262-43f9-86df-02f93d3e37c6" Key="TeamPlayer" Value="1" />
+        <keyValuePair id="b76c548e-4e44-4e32-9abd-e66bfec56c12" Key="UltimateProfessional" Value="1" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="574a9be2-4d73-4212-830b-961e28f4349c" X="-880" Y="-10240" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="SympathizeHigh">
+      <emotion-impact id="6f0d4d51-a29c-403c-99c5-98cde6f1d4da">
+        <keyValuePair id="7f0d2ef2-49a7-4fa2-9251-778158cc677a" Key="VeryCalm" Value="2" />
+        <keyValuePair id="c21eeaa9-a98c-4dd5-b2cd-7ba7672735ac" Key="Calm" Value="2" />
+        <keyValuePair id="f8eb1b01-9672-4949-a356-b42100214532" Key="Normal" Value="2" />
+        <keyValuePair id="bfe96d32-70c8-443d-9f66-0ecdf814bedc" Key="HotTemper" Value="1" />
+        <keyValuePair id="07d455b9-bca0-428c-8f8d-b5347953e389" Key="Volcano" Value="1" />
+      </emotion-impact>
+      <personality-impact id="3acf44fc-cc11-4b65-a9e5-fa67bcc5611a">
+        <keyValuePair id="1ee2319c-1b10-4f6a-8eae-1ac6b92d117b" Key="Selfish" Value="8" />
+        <keyValuePair id="0888e991-3e0f-4d6c-bf8a-f12368cc4021" Key="Individual" Value="8" />
+        <keyValuePair id="9a7e3725-c392-45fe-9017-e08062c5dc7d" Key="Normal" Value="2" />
+        <keyValuePair id="db22048d-7179-4e7b-ba24-732a268f2c12" Key="TeamPlayer" Value="1" />
+        <keyValuePair id="1e1f9a9e-764b-4924-9d08-11afd60c6b85" Key="UltimateProfessional" Value="1" />
+      </personality-impact>
+    </modify-morale-node>
+    <condition-node id="37cee792-31d5-4098-ab5d-86fb0c30606f" X="-1280" Y="-10760" NodeType="Condition" NodeName="">
+      <conditions id="acda65d7-2dd0-436f-afb5-e982b02f41ab">
+        <condition id="cd0d2817-d668-48a2-8351-219e66c5def8" VariableId="Current Player:Form.Rating" Comparison="GTE" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="d0322596-19b8-4c94-b26b-248462b88eaa" X="-1080" Y="-10680" NodeType="Condition" NodeName="">
+      <conditions id="87ad219a-fc33-4697-962a-ef07b2c07d05">
+        <condition id="07e55b05-8166-456b-a74d-94b310685c2b" VariableId="Current Player:Form.Rating" Comparison="EQ" Value="3" Operator="OR" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="a5f7cb61-793f-4d32-8d6a-cc64394ae332" VariableId="Current Player:Form.Rating" Comparison="LTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-morale-node id="cbcf5ba7-440b-41ae-ad6c-7a6d3eaf33db" X="-880" Y="-10680" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="MotivateMedium">
+      <emotion-impact id="0ed0f26a-dc67-458e-9119-a97f28f8c988">
+        <keyValuePair id="439421df-8e66-4e64-b1f7-982b62a8a150" Key="VeryCalm" Value="0" />
+        <keyValuePair id="0df20cc0-f87a-4fb3-883b-e6ca6c4e3cd6" Key="Calm" Value="0" />
+        <keyValuePair id="07342395-6491-42a4-8e51-179df87435ab" Key="Normal" Value="1" />
+        <keyValuePair id="1183f066-e4fd-4a25-ac90-cfb04ae30742" Key="HotTemper" Value="1" />
+        <keyValuePair id="6af767be-5d6c-49f9-8cb4-ca4349c077e1" Key="Volcano" Value="1" />
+      </emotion-impact>
+      <personality-impact id="2fdae95e-ae29-4755-b23c-adaa1b89ef3d">
+        <keyValuePair id="2fbf4c83-9224-4c4e-a470-1c87ce8c87fe" Key="Selfish" Value="0" />
+        <keyValuePair id="1a88224e-424a-4b4e-8c82-0f0a73224c83" Key="Individual" Value="1" />
+        <keyValuePair id="53784855-7603-4c09-901d-623326b1cb36" Key="Normal" Value="1" />
+        <keyValuePair id="a1278065-b645-43ee-9fd5-8013d76be4ca" Key="TeamPlayer" Value="2" />
+        <keyValuePair id="6d18f940-0722-4cbd-ab89-e2b5c0e03e89" Key="UltimateProfessional" Value="2" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="4dfe62e2-4673-4cfb-959d-1dc9991f344f" X="-880" Y="-10600" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="MotivateHigh">
+      <emotion-impact id="fcdd3770-c656-48a0-bb90-d88c2449fda8">
+        <keyValuePair id="c1a6abc7-f357-4131-b500-1d8cff343b53" Key="VeryCalm" Value="1" />
+        <keyValuePair id="45c95553-a052-45de-acf7-f126bca20278" Key="Calm" Value="1" />
+        <keyValuePair id="bef53b55-69b2-4a9d-83fb-17e8077d5a0b" Key="Normal" Value="1" />
+        <keyValuePair id="89ab2ee6-c750-4fc0-81fd-5d6a447c4cf8" Key="HotTemper" Value="2" />
+        <keyValuePair id="97838130-8830-4ad2-9ee4-0a4c53a955cc" Key="Volcano" Value="2" />
+      </emotion-impact>
+      <personality-impact id="84c95590-7400-4c9b-9632-fe3d00271492">
+        <keyValuePair id="e52e048c-2864-4dee-9933-40e97d0a660c" Key="Selfish" Value="0" />
+        <keyValuePair id="da920021-03ec-498b-8d08-4f43e42e065b" Key="Individual" Value="1" />
+        <keyValuePair id="ab299ff8-cce9-4591-8948-e01f2e5b7c19" Key="Normal" Value="2" />
+        <keyValuePair id="6738a744-1663-4042-8f67-70f25ee20369" Key="TeamPlayer" Value="8" />
+        <keyValuePair id="4415c6b5-dfbc-4418-b81b-c7b59f5ca6d0" Key="UltimateProfessional" Value="8" />
+      </personality-impact>
+    </modify-morale-node>
+    <condition-node id="744a63a4-e71d-41ce-af47-60f8392d82f4" X="-1280" Y="-11120" NodeType="Condition" NodeName="">
+      <conditions id="4a10c35f-5072-4fe9-8212-8ba55408f85a">
+        <condition id="3b95971b-2fef-432f-9ce3-6a62f7d6df5d" VariableId="Current Player:Form.Rating" Comparison="GTE" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="f123558f-301e-4847-862e-2dcaa78c3187" X="-1080" Y="-11040" NodeType="Condition" NodeName="">
+      <conditions id="17d1f043-0619-4d5d-b54e-9d6a45fb1b12">
+        <condition id="95c915f4-bbfa-4153-b29b-7fb4a015eb05" VariableId="Current Player:Form.Rating" Comparison="EQ" Value="3" Operator="OR" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="64f0502d-dce2-456c-bdef-f3afa0d4c6e8" VariableId="Current Player:Form.Rating" Comparison="LTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-morale-node id="8ad584a7-0127-41ba-bbb3-9a733f5acff0" X="-840" Y="-11040" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="CriticizeMedium">
+      <emotion-impact id="22226f87-3861-48a0-a75d-132305127bea">
+        <keyValuePair id="c3f958f9-f23a-43e2-8777-8440426ceb93" Key="VeryCalm" Value="-1" />
+        <keyValuePair id="eff2b968-d3b2-4f6d-8a4d-5be0c86cb4c8" Key="Calm" Value="-1" />
+        <keyValuePair id="06c081bd-bcc0-4b98-9ce4-3a3f310d430f" Key="Normal" Value="-2" />
+        <keyValuePair id="9782fb60-1aab-4352-9be6-ce2a2374330d" Key="HotTemper" Value="-2" />
+        <keyValuePair id="d78cd664-1113-480c-b303-fdbe04d68c34" Key="Volcano" Value="-2" />
+      </emotion-impact>
+      <personality-impact id="c108f3cb-c66a-4ecd-bd79-63c3fee8b7c0">
+        <keyValuePair id="85cacf89-bf84-4265-a9b4-64fb413d5c59" Key="Selfish" Value="-2" />
+        <keyValuePair id="62d287cc-ddfe-41a7-9eec-0eddb5f0bb7e" Key="Individual" Value="-2" />
+        <keyValuePair id="ea208e5c-a641-4acb-981a-1c877a527645" Key="Normal" Value="-2" />
+        <keyValuePair id="213b4fbe-6559-4c6b-af0b-65bc8a9e5301" Key="TeamPlayer" Value="-1" />
+        <keyValuePair id="4dbd0121-16d5-4356-8cb4-101350bf8b87" Key="UltimateProfessional" Value="-1" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="f270e3f2-3da5-48ec-8234-0dc2e922f30b" X="-840" Y="-10960" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="CriticizeHigh">
+      <emotion-impact id="cc2683c3-972d-40eb-8e33-696b7ab3691e">
+        <keyValuePair id="1a930112-39f5-4e4c-b2a5-1fdc7c538b3c" Key="VeryCalm" Value="-2" />
+        <keyValuePair id="955bf14d-87a2-4647-8afa-19d2b52f00d9" Key="Calm" Value="-2" />
+        <keyValuePair id="90affa38-a282-4ffa-b636-daa4fe2c8153" Key="Normal" Value="-8" />
+        <keyValuePair id="e884d4bd-6bce-4a03-a6f2-19a0e2d2db4e" Key="HotTemper" Value="-9" />
+        <keyValuePair id="08f472b0-6eda-4e07-b348-84ffbd39f516" Key="Volcano" Value="-9" />
+      </emotion-impact>
+      <personality-impact id="306864fb-4042-45c6-a383-9a250d21746f">
+        <keyValuePair id="f7c68bfd-8ef0-4e08-b38a-97ed035c5d04" Key="Selfish" Value="-2" />
+        <keyValuePair id="cc0e9a9a-16d2-4d03-bd83-386f0d415e40" Key="Individual" Value="-2" />
+        <keyValuePair id="79777eda-c576-4f47-8239-6521043b125d" Key="Normal" Value="-2" />
+        <keyValuePair id="c476c822-ec0a-4c7f-8a0e-4d3d7955ecdf" Key="TeamPlayer" Value="-1" />
+        <keyValuePair id="a91db81c-0933-49a2-99ff-3df2ed7fe0a2" Key="UltimateProfessional" Value="-1" />
+      </personality-impact>
+    </modify-morale-node>
+    <condition-node id="49248abe-c8f3-4b5d-8a0f-81ef514fc3e0" X="-1240" Y="-9760" NodeType="Condition" NodeName="">
+      <conditions id="add12abc-f682-48b6-a577-6fdfc68622b3">
+        <condition id="7edb6521-e8c5-4aec-b02a-4fe67c6650f2" VariableId="Current Player:Form.Rating" Comparison="GTE" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="12a9ee64-9067-47f0-9750-c04d45b94c8d" X="-1040" Y="-9680" NodeType="Condition" NodeName="">
+      <conditions id="1195de89-cfb2-4f48-a8d8-1fe515bd4303">
+        <condition id="936a0413-c5e4-4f2f-a1a6-800776a05b65" VariableId="Current Player:Form.Rating" Comparison="EQ" Value="3" Operator="OR" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="2befa5db-4cca-4da6-9e87-8845ed050cd4" VariableId="Current Player:Form.Rating" Comparison="LTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-morale-node id="3c16bfe5-949d-490a-be74-a72b39e2943d" X="-800" Y="-9680" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="MotivateMedium">
+      <emotion-impact id="6d09104f-b0f3-46ff-b9f6-6f17da0c0f00">
+        <keyValuePair id="bc213146-fabb-4a49-83e2-bfbafa927455" Key="VeryCalm" Value="0" />
+        <keyValuePair id="54bbc8a2-4526-4502-8b1a-6c61bfb5d0c3" Key="Calm" Value="0" />
+        <keyValuePair id="60064c15-eb63-4d08-a45d-459f8b0446dc" Key="Normal" Value="1" />
+        <keyValuePair id="cfd268db-2a9a-4b94-b8e4-d34f54d71fc6" Key="HotTemper" Value="1" />
+        <keyValuePair id="15049fec-fd27-4d90-b44d-3239efade224" Key="Volcano" Value="1" />
+      </emotion-impact>
+      <personality-impact id="69620e54-8b5c-42e4-8e63-283b47f09c07">
+        <keyValuePair id="f82ccc52-38d4-4a64-b54b-3155d19d7053" Key="Selfish" Value="0" />
+        <keyValuePair id="9f41951e-fdb7-4a52-9a1b-27d3fc600c7e" Key="Individual" Value="1" />
+        <keyValuePair id="21e5f022-0bbe-43c3-9cba-926fa9c95b4c" Key="Normal" Value="1" />
+        <keyValuePair id="a54f1786-01dd-4672-a235-462fbdaabd07" Key="TeamPlayer" Value="2" />
+        <keyValuePair id="3eed2df5-bc30-4c1a-b539-de0d2e244696" Key="UltimateProfessional" Value="2" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="e676d2c5-a70e-47d2-aacb-b42c9786ba93" X="-800" Y="-9600" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="MotivateHigh">
+      <emotion-impact id="482edd1b-ddd7-4c6f-ad6f-3aab4f4b5710">
+        <keyValuePair id="12aac858-3b40-45e7-b8e5-cfcaf72a04cf" Key="VeryCalm" Value="1" />
+        <keyValuePair id="afd0ff99-099d-457b-a9fe-3d3385e920ee" Key="Calm" Value="1" />
+        <keyValuePair id="0fcdd2d8-563b-4a4c-a260-bcf9a201419d" Key="Normal" Value="1" />
+        <keyValuePair id="182ee46c-a853-4d68-9460-425a65a5f361" Key="HotTemper" Value="2" />
+        <keyValuePair id="58049435-6c71-4bee-9c12-a7ebb7cfa73e" Key="Volcano" Value="2" />
+      </emotion-impact>
+      <personality-impact id="c3ac7c9d-5024-474b-b776-0e18006145d8">
+        <keyValuePair id="2409f703-18c2-495d-a751-07e59bc85ffc" Key="Selfish" Value="0" />
+        <keyValuePair id="e2433bf3-807e-4aff-9b69-604077bf8a6a" Key="Individual" Value="1" />
+        <keyValuePair id="b1dc8f7a-e327-4288-b28b-e4393a98aa63" Key="Normal" Value="2" />
+        <keyValuePair id="2520935d-9420-44b3-997f-fe4aa73fad0e" Key="TeamPlayer" Value="8" />
+        <keyValuePair id="5c95ebd3-43da-49dc-81da-25dc1bb2d072" Key="UltimateProfessional" Value="8" />
+      </personality-impact>
+    </modify-morale-node>
+    <condition-node id="a3ab9955-44f0-483b-ae9d-a2641d1d548e" X="-1240" Y="-9440" NodeType="Condition" NodeName="">
+      <conditions id="eb8e61b2-b7d5-4654-b05f-a39f2024202a">
+        <condition id="b15e08df-7803-472c-aedb-9cd5120844a2" VariableId="Current Player:Form.Rating" Comparison="GTE" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="8913b180-9dbb-4863-8d9e-368182e2cfed" X="-1040" Y="-9360" NodeType="Condition" NodeName="">
+      <conditions id="4161f8b3-d8a3-4870-be04-ff7d072cc69a">
+        <condition id="511e1cc9-1db0-4f23-be0c-4bb49edb15c7" VariableId="Current Player:Form.Rating" Comparison="EQ" Value="3" Operator="OR" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="9ccf5c24-fa3f-4468-a9d4-4e687d6bf0b1" VariableId="Current Player:Form.Rating" Comparison="LTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-morale-node id="09ee2143-0e49-43b4-ade2-0342d1df5591" X="-800" Y="-9360" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="CalmMedium">
+      <emotion-impact id="91b55a1b-b433-4a87-93af-8d2dfe68cf84">
+        <keyValuePair id="6c779838-c270-48ff-8866-c954c2b096d4" Key="VeryCalm" Value="2" />
+        <keyValuePair id="7a0e3ba9-e465-4bbf-be2c-59680b11e73a" Key="Calm" Value="2" />
+        <keyValuePair id="2ec8dbe2-9ea5-4b01-b1e3-2daa377146e6" Key="Normal" Value="1" />
+        <keyValuePair id="0bad016a-a112-4c09-976d-2e974fd557ff" Key="HotTemper" Value="1" />
+        <keyValuePair id="e840f6bb-9eb0-40b1-83bd-02339f203d3e" Key="Volcano" Value="1" />
+      </emotion-impact>
+      <personality-impact id="fe9475cb-4c28-40ba-9df3-cf7db297ad35">
+        <keyValuePair id="1656278a-4ed2-458e-973c-feefc0f8fba9" Key="Selfish" Value="0" />
+        <keyValuePair id="2d9d85de-17b8-4dc5-ab8f-8081c6a4cf96" Key="Individual" Value="1" />
+        <keyValuePair id="6a5a0c9e-cf67-4f39-abf9-f4d436721f12" Key="Normal" Value="2" />
+        <keyValuePair id="bccca701-9545-4f35-8e8d-d887b35d18ce" Key="TeamPlayer" Value="2" />
+        <keyValuePair id="4f50aaa0-652d-4175-9c1d-0c29845353e9" Key="UltimateProfessional" Value="2" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="707d0809-3f30-4f56-a4f1-2ac072a9b394" X="-800" Y="-9280" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="CalmHigh">
+      <emotion-impact id="c38dfcfe-79f6-4a3c-89ce-f3f69658d5e3">
+        <keyValuePair id="2081459c-af57-413b-9884-a628585c0c32" Key="VeryCalm" Value="2" />
+        <keyValuePair id="7171ef85-ceb6-49c0-9bce-21308025e62c" Key="Calm" Value="2" />
+        <keyValuePair id="26d25f7c-192f-4eb0-9a98-87e895e8c274" Key="Normal" Value="2" />
+        <keyValuePair id="8619617e-2b2e-4176-a4c9-95b6b66c9684" Key="HotTemper" Value="1" />
+        <keyValuePair id="7505770e-42a4-4e56-a9eb-5f57b6a2f8cf" Key="Volcano" Value="1" />
+      </emotion-impact>
+      <personality-impact id="5a7614ea-e29f-4dea-9d17-2ff6ba5c1c89">
+        <keyValuePair id="172ad6cf-846d-4f39-bf99-4fa373e6beb3" Key="Selfish" Value="0" />
+        <keyValuePair id="3e86ad48-c108-469d-9db7-df7074c8e716" Key="Individual" Value="1" />
+        <keyValuePair id="3fffc197-459d-4bc8-b351-3f96442cafe2" Key="Normal" Value="2" />
+        <keyValuePair id="32dad07b-d5ff-4cc8-b262-fb47aa3b29c3" Key="TeamPlayer" Value="8" />
+        <keyValuePair id="17a5a829-9d0d-4963-92fa-1ed85f664a39" Key="UltimateProfessional" Value="8" />
+      </personality-impact>
+    </modify-morale-node>
+    <condition-node id="c992e6db-af72-46a6-a998-3316e4a323b6" X="-1240" Y="-9040" NodeType="Condition" NodeName="">
+      <conditions id="d5279d04-908b-4b3c-af6c-63c422ad78e1">
+        <condition id="a146de73-f6a4-4b10-82a4-9ee41f49ba4f" VariableId="Current Player:Form.Rating" Comparison="GTE" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="1edbc7ad-98f6-4830-8506-c61462ef34eb" X="-1040" Y="-8960" NodeType="Condition" NodeName="">
+      <conditions id="80829d3f-547c-432a-bf79-15cffe4d5934">
+        <condition id="d2b43d96-3834-496f-91af-e6fd12a10ecd" VariableId="Current Player:Form.Rating" Comparison="EQ" Value="3" Operator="OR" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="522e7108-6b0e-4f88-b868-2b2df7bf7589" VariableId="Current Player:Form.Rating" Comparison="LTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-morale-node id="ed8e4b0e-8478-425b-b78e-4236ba9565fb" X="-800" Y="-8960" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="PraiseMedium">
+      <emotion-impact id="796830b0-ef6d-4742-b013-a802d52436f4">
+        <keyValuePair id="c35f3151-6c5e-4173-babd-5aec3cc6e144" Key="VeryCalm" Value="1" />
+        <keyValuePair id="80127685-9f02-40c1-b644-cd441cbee54b" Key="Calm" Value="1" />
+        <keyValuePair id="bca54c98-21e9-45a3-addf-ac40ad300af0" Key="Normal" Value="1" />
+        <keyValuePair id="03958895-15ef-4a1d-b11e-e7214f9524f6" Key="HotTemper" Value="2" />
+        <keyValuePair id="abe528ba-66e7-4ed7-a66c-247567378f49" Key="Volcano" Value="2" />
+      </emotion-impact>
+      <personality-impact id="458140f5-937e-4eb8-9b7a-cecc5b40e0fa">
+        <keyValuePair id="61637af0-f10e-433e-b3af-d228ddc40c92" Key="Selfish" Value="2" />
+        <keyValuePair id="25f512e5-7b5a-4e14-a75f-9f078078cd98" Key="Individual" Value="2" />
+        <keyValuePair id="5ad85f84-010f-4f30-b7d1-65054a695449" Key="Normal" Value="1" />
+        <keyValuePair id="a8a220fc-f76d-4c34-98df-6fdc90d0ad91" Key="TeamPlayer" Value="1" />
+        <keyValuePair id="edbb9f81-3fd8-4fd9-8f58-c05a2037644b" Key="UltimateProfessional" Value="1" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="211c3249-9c9b-40fc-955a-4cef5a1040a5" X="-800" Y="-8880" NodeType="ModifyMorale" NodeName="" PlayerId="Current Player:BasicData.ID" DecayPeriod="1" MoraleImpactType="Overall" MoraleTemplateType="PraiseLow">
+      <emotion-impact id="4b8d0ddf-34e2-43bd-9004-ef54ac98a5f2">
+        <keyValuePair id="38da72f9-6fed-4b31-934c-d1ac06cad622" Key="VeryCalm" Value="0" />
+        <keyValuePair id="25b51405-9fa9-4cfe-a5e2-6c61dff8b9e6" Key="Calm" Value="0" />
+        <keyValuePair id="bb318ea2-12c5-4447-8947-bd1cbe8984e6" Key="Normal" Value="1" />
+        <keyValuePair id="40e2cd1f-b59c-4d72-bbd5-bb7a0d72ff1f" Key="HotTemper" Value="1" />
+        <keyValuePair id="f43329e7-2c7e-467a-8aaf-0faa8796ff20" Key="Volcano" Value="1" />
+      </emotion-impact>
+      <personality-impact id="20826de8-447a-4b63-8fe2-1dd1af0eaf19">
+        <keyValuePair id="ad6be3cd-f6ed-45e5-a441-997ed1c37132" Key="Selfish" Value="2" />
+        <keyValuePair id="3b39457c-1960-439d-8343-f2f0804e4d3a" Key="Individual" Value="2" />
+        <keyValuePair id="19878328-c83a-469c-9694-3c7978570e27" Key="Normal" Value="1" />
+        <keyValuePair id="8bdaa1a4-a4ce-40cb-85d9-672b3bd39cf7" Key="TeamPlayer" Value="0" />
+        <keyValuePair id="3b0a76fb-5e5b-4f2a-94b8-e5a57966b6ed" Key="UltimateProfessional" Value="0" />
+      </personality-impact>
+    </modify-morale-node>
+  </nodes>
+  <groups id="3d0b3a35-9269-4656-ad3a-d3bddfcead57" />
+  <connections id="0019fdcc-b4ad-4202-9938-2c333c6edbb0">
+    <connection id="996d61a6-e031-4c6c-a1fe-43b856f393f7" SrcNodeID="df716bd0-6e88-41db-8e51-f31f765737cc" SrcPortName="false" DstNodeID="ebeecb36-ad05-4069-a75e-16afb7269aeb" DstPortName="enter" ConnectionOrder="0">
+      <points id="3dde4966-40de-4cb1-80ef-a89300f31a3f" />
+    </connection>
+    <connection id="babdecdd-5ebe-400c-9d0c-5b6f58deecba" SrcNodeID="df716bd0-6e88-41db-8e51-f31f765737cc" SrcPortName="true" DstNodeID="ca7ef8ea-5134-4919-894b-6508e14ccea8" DstPortName="enter" ConnectionOrder="0">
+      <points id="9c20c1ec-874f-45bf-92cf-9a7fe38a8517" />
+    </connection>
+    <connection id="e2bdc911-9fd0-4e3e-88f0-4f9e9fd4e622" SrcNodeID="6e5188f1-19ae-45fa-839d-8ed64aa169c7" SrcPortName="advance" DstNodeID="6239bbda-c6f1-4273-a7f2-2b03b317f6e9" DstPortName="enter" ConnectionOrder="0">
+      <points id="9195ab40-921c-4463-9547-3ad4afa7b1c6" />
+    </connection>
+    <connection id="cfaedf65-764c-4f52-8dd0-ac4cd6ebc529" SrcNodeID="6239bbda-c6f1-4273-a7f2-2b03b317f6e9" SrcPortName="advance" DstNodeID="4ce7ed86-c5ed-4da1-b154-47c3c8b6183e" DstPortName="enter" ConnectionOrder="0">
+      <points id="7c3ba56e-7b3d-40e7-86b3-94fde1f843e0" />
+    </connection>
+    <connection id="0c22c813-c8b5-40d6-b43b-cb6f842c0b2a" SrcNodeID="4ce7ed86-c5ed-4da1-b154-47c3c8b6183e" SrcPortName="UserMatchCompleted" DstNodeID="b2015010-f999-4c21-b901-74c4d690cd2f" DstPortName="enter" ConnectionOrder="0">
+      <points id="b4179383-7e88-4813-b812-169b312c57f0" />
+    </connection>
+    <connection id="3eaf4fed-dd30-406f-8c25-91b8c1613bf9" SrcNodeID="b2015010-f999-4c21-b901-74c4d690cd2f" SrcPortName="false" DstNodeID="4ce7ed86-c5ed-4da1-b154-47c3c8b6183e" DstPortName="enter" ConnectionOrder="0">
+      <points id="a6e54a50-425d-497e-b5df-09bd8c7c79e5">
+        <point id="06e1a4f2-7eaa-46ba-a133-8e3acfc2fcc4" X="-5080" Y="-11640" />
+        <point id="3921d78e-096a-49ad-87d8-6b2ce07cc563" X="-5520" Y="-11640" />
+      </points>
+    </connection>
+    <connection id="af73d2f7-709e-4c29-8ea1-b156979f2c8e" SrcNodeID="ca7ef8ea-5134-4919-894b-6508e14ccea8" SrcPortName="advance" DstNodeID="8f710ddf-9a5c-4725-a36f-ad430686bd9f" DstPortName="enter" ConnectionOrder="0">
+      <points id="5c8c9b25-e53b-4e12-adc6-9e0a203d7d89" />
+    </connection>
+    <connection id="5481c98d-6ac0-4eaf-afe3-3aa5c5e0a72b" SrcNodeID="ebeecb36-ad05-4069-a75e-16afb7269aeb" SrcPortName="true" DstNodeID="b68e1258-7ce6-453f-beae-a7696793c819" DstPortName="enter" ConnectionOrder="0">
+      <points id="a41b7c3a-df3d-4ce1-b2d3-d052d4d80b49" />
+    </connection>
+    <connection id="256e3ac8-00f9-4b3c-a319-c766663d53a6" SrcNodeID="ebeecb36-ad05-4069-a75e-16afb7269aeb" SrcPortName="false" DstNodeID="40413e9d-33d2-4663-ab12-0cfb50382d43" DstPortName="enter" ConnectionOrder="0">
+      <points id="e4d83399-3e09-43ae-b83e-e5d3a43debfa" />
+    </connection>
+    <connection id="ce995e18-49e0-40bc-b6ec-4cc3b90da37e" SrcNodeID="b68e1258-7ce6-453f-beae-a7696793c819" SrcPortName="advance" DstNodeID="8f710ddf-9a5c-4725-a36f-ad430686bd9f" DstPortName="enter" ConnectionOrder="0">
+      <points id="4e14eeb1-5e58-4d1e-bada-2288c4d57be9" />
+    </connection>
+    <connection id="9cf9bff8-febc-4ad3-be11-f80744afe3df" SrcNodeID="40413e9d-33d2-4663-ab12-0cfb50382d43" SrcPortName="advance" DstNodeID="8f710ddf-9a5c-4725-a36f-ad430686bd9f" DstPortName="enter" ConnectionOrder="0">
+      <points id="d1b149c1-44c9-4978-8a71-4683d90762f4" />
+    </connection>
+    <connection id="31afa4f9-8923-466c-8f11-9624464a3fbd" SrcNodeID="aaedc8d3-2baf-4113-a351-f53d777c1256" SrcPortName="advance" DstNodeID="a52cfefc-ad32-42fd-b105-a410377baae9" DstPortName="enter" ConnectionOrder="0">
+      <points id="471876a1-41b4-4161-8c76-b72143a7282b" />
+    </connection>
+    <connection id="23a4bcb2-eee2-46ec-9fa4-1f2c6b80a961" SrcNodeID="6e6fad10-d2f7-4e41-a808-7f26c70728c8" SrcPortName="false" DstNodeID="25a394a1-5cd1-4a4f-8069-c1f5d1455bf8" DstPortName="enter" ConnectionOrder="0">
+      <points id="75149dc6-46c4-4206-bc0a-842bcf918328">
+        <point id="edbf1c39-14c1-4792-afd4-ce54bfaf30ea" X="371.666666666667" Y="-9951.66666666667" />
+      </points>
+    </connection>
+    <connection id="f099dc4b-3ca0-48b1-a64b-aef754f29f93" SrcNodeID="25a394a1-5cd1-4a4f-8069-c1f5d1455bf8" SrcPortName="advance" DstNodeID="4ce7ed86-c5ed-4da1-b154-47c3c8b6183e" DstPortName="enter" ConnectionOrder="0">
+      <points id="a9f612f0-cee5-44c7-a2ec-4643c3027dae">
+        <point id="ae49a98b-3e4f-4faa-ada5-1057ea43484f" X="548.95642089844" Y="-8724.89029947917" />
+        <point id="f7a5f28b-503d-4f64-9b43-8474d9bc963f" X="-5551.21012369792" Y="-8774.39095052083" />
+      </points>
+    </connection>
+    <connection id="a204a5b3-76c8-4c6a-9a9d-57f8da75262a" SrcNodeID="25a394a1-5cd1-4a4f-8069-c1f5d1455bf8" SrcPortName="advance" DstNodeID="ef261392-6dc2-4039-a992-c0ab83cced82" DstPortName="enter" ConnectionOrder="1">
+      <points id="23bba694-0597-4fab-8c5c-6014b43553ab" />
+    </connection>
+    <connection id="e9346cc9-c1e3-4969-ab5e-bebea5e9b8b7" SrcNodeID="29a5fa2c-82e0-4a4d-900e-b2d01d19a145" SrcPortName="advance" DstNodeID="f88185d5-f1d9-464e-bf44-3b48fb14ccc9" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="b21f2f55-5dfd-4550-a531-23230a164708">
+        <point id="d3a0b15a-8ed7-4f83-b4d2-ea4a3b71da65" X="-1006" Y="-11916" />
+        <point id="6a1fce6a-abdb-485c-a5d5-354a92346dcc" X="-1846" Y="-11914" />
+      </points>
+    </connection>
+    <connection id="18707136-36d1-4d78-a68d-f23a2021e6e6" SrcNodeID="b51a5178-32ec-4294-aabb-2fe8f5e42970" SrcPortName="advance" DstNodeID="d3a178f1-88f3-4727-9939-3c8b26fa823d" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="90b560f1-4979-45b1-958b-0832b034e00d">
+        <point id="4cf5cd55-27ee-4bbe-8334-6cfd4f02a712" X="-1014" Y="-11592" />
+        <point id="9d26118c-564d-44fd-bae3-2895016a884f" X="-1854" Y="-11596" />
+      </points>
+    </connection>
+    <connection id="25e4f60e-33e0-4035-981a-e5a0f1a37783" SrcNodeID="6a8304ff-6457-47e2-8b8c-1ee98446bb20" SrcPortName="advance-2" DstNodeID="34dfb8a8-8480-42cd-bf32-8bf74b322b4d" DstPortName="enter" ConnectionOrder="0">
+      <points id="c93ea964-7175-444e-9e01-da282068f39e">
+        <point id="4e165301-8840-41ee-8df6-536e8ab22214" X="-2314.10575869977" Y="-11480.9230169175" />
+      </points>
+    </connection>
+    <connection id="0986cda0-f45c-4817-810d-e792c485dc4e" SrcNodeID="6a8304ff-6457-47e2-8b8c-1ee98446bb20" SrcPortName="advance-1" DstNodeID="65f9e127-ef89-4b61-8913-e8ccc2fb171e" DstPortName="enter" ConnectionOrder="0">
+      <points id="36849cc9-df3c-4855-b1fb-9135c49a3e35">
+        <point id="e8594f0e-641a-4900-a213-88d0cd376e76" X="-2315" Y="-12472.5" />
+        <point id="eddc4974-8208-4a4b-857c-af10445abf4f" X="-920" Y="-12465" />
+      </points>
+    </connection>
+    <connection id="a86e61ea-916e-4266-a7a1-b39ed3a62720" SrcNodeID="34dfb8a8-8480-42cd-bf32-8bf74b322b4d" SrcPortName="advance-1" DstNodeID="8f6cc723-8b1c-4dbc-afcb-a6acf1c8f325" DstPortName="enter" ConnectionOrder="0">
+      <points id="7904eee4-28bc-4ae1-9e99-8fd256909ae8">
+        <point id="c30e05c7-bcc3-42f9-b6c7-c4b362f16cb4" X="-2069.4695124894" Y="-12343.9569733219" />
+      </points>
+    </connection>
+    <connection id="5d6accdd-f2d8-4775-9cea-f830d3714cb4" SrcNodeID="34dfb8a8-8480-42cd-bf32-8bf74b322b4d" SrcPortName="advance-2" DstNodeID="e358e623-ba95-4bc3-8b99-c03d8946616b" DstPortName="enter" ConnectionOrder="0">
+      <points id="590fa450-970b-49b4-a298-7bef8372cd75">
+        <point id="864f25dc-5322-446c-b5de-34f3a4c93ecf" X="-2063.80284582273" Y="-11985.2903066552" />
+      </points>
+    </connection>
+    <connection id="31e1223b-3be4-4f5d-b0fb-17f819dc4102" SrcNodeID="34dfb8a8-8480-42cd-bf32-8bf74b322b4d" SrcPortName="advance-3" DstNodeID="d564e323-74bc-40c2-a012-4c010e913d2c" DstPortName="enter" ConnectionOrder="0">
+      <points id="5a137343-71f8-4842-95a9-33c58569f046" />
+    </connection>
+    <connection id="7a36fe98-9143-4704-bc78-d47fc467fbb7" SrcNodeID="34dfb8a8-8480-42cd-bf32-8bf74b322b4d" SrcPortName="skip" DstNodeID="65f9e127-ef89-4b61-8913-e8ccc2fb171e" DstPortName="enter" ConnectionOrder="0">
+      <points id="38718db3-f95c-4995-86c2-8ee88a1d1462">
+        <point id="3d0edf74-0fa6-490c-851a-a2fb91870a51" X="-2042" Y="-11356" />
+        <point id="619b978d-ea53-4ca2-a17d-7559fb6d4026" X="-903" Y="-11358" />
+      </points>
+    </connection>
+    <connection id="08739cf3-458d-47d1-869a-5e50cfe92efa" SrcNodeID="34dfb8a8-8480-42cd-bf32-8bf74b322b4d" SrcPortName="player-removed" DstNodeID="65f9e127-ef89-4b61-8913-e8ccc2fb171e" DstPortName="enter" ConnectionOrder="0">
+      <points id="46a4fd3b-4f93-4789-8995-14ff24c829f3">
+        <point id="25aa8cee-e9ee-4b34-b300-e1f2845294ec" X="-2065" Y="-12455" />
+        <point id="678eb59f-7e11-42eb-bf20-ff98854e557f" X="-930" Y="-12457.5" />
+      </points>
+    </connection>
+    <connection id="5f8b82d2-6c6d-40bd-8789-f693cfc4cd66" SrcNodeID="d564e323-74bc-40c2-a012-4c010e913d2c" SrcPortName="advance" DstNodeID="d3a178f1-88f3-4727-9939-3c8b26fa823d" DstPortName="enter" ConnectionOrder="0">
+      <points id="8e3bb73c-243f-490b-8406-f508f83cdc33" />
+    </connection>
+    <connection id="6e9685d7-83c7-440c-a354-ef753601c3c7" SrcNodeID="e358e623-ba95-4bc3-8b99-c03d8946616b" SrcPortName="advance" DstNodeID="f88185d5-f1d9-464e-bf44-3b48fb14ccc9" DstPortName="enter" ConnectionOrder="0">
+      <points id="85bec844-2141-451b-8738-e456a784cd37" />
+    </connection>
+    <connection id="441a6903-b458-47bf-8fef-f497012fc4c9" SrcNodeID="8f6cc723-8b1c-4dbc-afcb-a6acf1c8f325" SrcPortName="advance" DstNodeID="90453e77-1cfe-41ef-bcce-94d49b849065" DstPortName="enter" ConnectionOrder="0">
+      <points id="61934b32-2a7c-41e8-82f5-32bfb2ba23a8" />
+    </connection>
+    <connection id="c5f97c0f-a052-4cac-9ac2-9dcf1097fc82" SrcNodeID="4df310a5-7d77-4e8b-9273-b00d4d9675bd" SrcPortName="advance" DstNodeID="90453e77-1cfe-41ef-bcce-94d49b849065" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="fdcc6dd6-71cd-4516-bdc2-0bc304cd185f">
+        <point id="01f33bab-2d53-4a09-9b97-6d113a0ef157" X="-1005" Y="-12268.3333333333" />
+        <point id="268dd5fc-0fcc-4740-809e-789db5770d76" X="-1848.33333333333" Y="-12265" />
+      </points>
+    </connection>
+    <connection id="efc15320-36a8-4f53-a8a7-2c17e01ea65a" SrcNodeID="d3a178f1-88f3-4727-9939-3c8b26fa823d" SrcPortName="advance" DstNodeID="65f9e127-ef89-4b61-8913-e8ccc2fb171e" DstPortName="enter" ConnectionOrder="0">
+      <points id="d7b4fa27-a33c-429f-b104-37aa149071e3">
+        <point id="ddbc5ff0-f269-4d17-a448-ca65910afbea" X="-902" Y="-11672" />
+      </points>
+    </connection>
+    <connection id="a0cf698e-0035-4de3-b5d5-a09ac8c00b61" SrcNodeID="f88185d5-f1d9-464e-bf44-3b48fb14ccc9" SrcPortName="advance" DstNodeID="65f9e127-ef89-4b61-8913-e8ccc2fb171e" DstPortName="enter" ConnectionOrder="0">
+      <points id="f07303bf-5707-4476-8ca0-a60e2f91a92b">
+        <point id="f29fcaba-14be-4233-b17b-a2504a5be37f" X="-912" Y="-11998" />
+      </points>
+    </connection>
+    <connection id="783fb7e0-c21b-49b2-851a-c0c545b66b22" SrcNodeID="90453e77-1cfe-41ef-bcce-94d49b849065" SrcPortName="advance" DstNodeID="65f9e127-ef89-4b61-8913-e8ccc2fb171e" DstPortName="enter" ConnectionOrder="0">
+      <points id="1f645088-b2de-4cce-9e30-dc68adcdc9a4">
+        <point id="fadad2f1-e076-4ac1-8c9a-8eb6928337bd" X="-921.269552935951" Y="-12355.5144772133" />
+      </points>
+    </connection>
+    <connection id="740249b5-2906-4284-8319-79e287250c10" SrcNodeID="65f9e127-ef89-4b61-8913-e8ccc2fb171e" SrcPortName="advance" DstNodeID="25a394a1-5cd1-4a4f-8069-c1f5d1455bf8" DstPortName="enter" ConnectionOrder="0">
+      <points id="05c3f4cb-8d08-4a38-af55-6193f2350379">
+        <point id="9dfc19df-fe93-447a-a781-da1db83652c8" X="388.836591627167" Y="-11713.9780983412" />
+      </points>
+    </connection>
+    <connection id="f58bed08-4a05-48ce-af44-7195a94240e6" SrcNodeID="a52cfefc-ad32-42fd-b105-a410377baae9" SrcPortName="true" DstNodeID="6a8304ff-6457-47e2-8b8c-1ee98446bb20" DstPortName="enter" ConnectionOrder="0">
+      <points id="4461b63e-e767-4e06-bb40-d60a4861fcac" />
+    </connection>
+    <connection id="ab939555-3f91-42a7-84da-cfd291e4d093" SrcNodeID="8103929f-7d03-44ce-953d-6b7d511914cd" SrcPortName="advance" DstNodeID="22df990a-d651-41ad-bea6-41ebf2784ea0" DstPortName="enter" ConnectionOrder="0">
+      <points id="7c22e1e8-8f8d-4153-83d3-fd0e7d09b4cb">
+        <point id="f4f7f383-fc08-4cac-95e4-092223c86b47" X="-452" Y="-9762" />
+      </points>
+    </connection>
+    <connection id="3eca6b1a-93d9-425a-b387-1c89d8cb036f" SrcNodeID="d25d79ae-0077-431b-94f4-96bdfdd05dbb" SrcPortName="advance" DstNodeID="22df990a-d651-41ad-bea6-41ebf2784ea0" DstPortName="enter" ConnectionOrder="0">
+      <points id="e1357ed6-0c34-4353-9930-ec4d3943fe5b">
+        <point id="7b4a9235-6602-4cfa-86cb-70592076c286" X="-456" Y="-9438" />
+      </points>
+    </connection>
+    <connection id="f9655227-b9c9-4425-bb89-42f1862186b8" SrcNodeID="14975899-ec86-409d-b8ff-187351eb981c" SrcPortName="advance" DstNodeID="22df990a-d651-41ad-bea6-41ebf2784ea0" DstPortName="enter" ConnectionOrder="0">
+      <points id="351ae968-e889-4550-8acb-fcf8e80bc3ed">
+        <point id="f6bf5a55-e106-48d5-9949-96b6a553ecf8" X="-462.5" Y="-9040" />
+      </points>
+    </connection>
+    <connection id="87bf750d-a11e-4a85-8b65-d93c870a277f" SrcNodeID="8fc8c34a-efbd-47bc-b9a8-7e5e27c20730" SrcPortName="advance" DstNodeID="d25d79ae-0077-431b-94f4-96bdfdd05dbb" DstPortName="enter" ConnectionOrder="0">
+      <points id="5000a33e-6d68-41a3-9c16-0d750b832ed7" />
+    </connection>
+    <connection id="f728b72a-3fc6-4fcb-b5a0-c28b0973bba2" SrcNodeID="32d68d9f-91c1-4b0b-971a-36daf83fc116" SrcPortName="advance" DstNodeID="14975899-ec86-409d-b8ff-187351eb981c" DstPortName="enter" ConnectionOrder="0">
+      <points id="b6edf838-8578-4e2e-bf53-c95a42bc999e" />
+    </connection>
+    <connection id="e940d07f-8d7e-411b-b540-2a46b6bbb58a" SrcNodeID="6f949ca0-3471-4e5e-a234-eeaa46971346" SrcPortName="advance" DstNodeID="8103929f-7d03-44ce-953d-6b7d511914cd" DstPortName="enter" ConnectionOrder="0">
+      <points id="ecdd2ef7-ce6a-4c95-938a-a3007b57e2b7" />
+    </connection>
+    <connection id="e9524da8-6c09-47e2-8de1-8ffb7974f77c" SrcNodeID="4075b44d-4bd6-4c81-87c5-742b62f12281" SrcPortName="advance-1" DstNodeID="6f949ca0-3471-4e5e-a234-eeaa46971346" DstPortName="enter" ConnectionOrder="0">
+      <points id="4c748d47-8170-4b9f-8c7e-81dfecc4f544">
+        <point id="6dd523ee-ef0b-4312-8bcf-6c16555baff8" X="-1671.43909203311" Y="-9739.97437652243" />
+      </points>
+    </connection>
+    <connection id="10aacc8f-b69b-491c-90a8-643cd8b81255" SrcNodeID="4075b44d-4bd6-4c81-87c5-742b62f12281" SrcPortName="advance-2" DstNodeID="8fc8c34a-efbd-47bc-b9a8-7e5e27c20730" DstPortName="enter" ConnectionOrder="0">
+      <points id="1dad13b4-d3fe-4fd3-b26f-218170006e7d" />
+    </connection>
+    <connection id="e381b71e-308e-4c6d-a3d1-8fe1409d10b5" SrcNodeID="4075b44d-4bd6-4c81-87c5-742b62f12281" SrcPortName="advance-3" DstNodeID="32d68d9f-91c1-4b0b-971a-36daf83fc116" DstPortName="enter" ConnectionOrder="0">
+      <points id="eacf618f-fc46-4cbf-98df-44dc39aba236" />
+    </connection>
+    <connection id="bcdcf634-c70a-4285-bc7b-c44d9af8fafd" SrcNodeID="4075b44d-4bd6-4c81-87c5-742b62f12281" SrcPortName="skip" DstNodeID="22df990a-d651-41ad-bea6-41ebf2784ea0" DstPortName="enter" ConnectionOrder="0">
+      <points id="95ecb04b-45dd-4408-83fb-a7ff24c97426">
+        <point id="b13e634f-f72e-4506-bfbb-5b5619290f1a" X="-1642" Y="-8794" />
+        <point id="a65d2512-dff4-457a-9d74-0d739c781a0a" X="-465" Y="-8792" />
+      </points>
+    </connection>
+    <connection id="9d71bcc5-729b-497e-a914-8696df085250" SrcNodeID="4075b44d-4bd6-4c81-87c5-742b62f12281" SrcPortName="player-removed" DstNodeID="22df990a-d651-41ad-bea6-41ebf2784ea0" DstPortName="enter" ConnectionOrder="0">
+      <points id="61cbcf5d-08c2-4e45-a3b6-4d5489a3175f">
+        <point id="49786ddd-5218-4089-b34a-476dd609f4f2" X="-1662" Y="-9918" />
+        <point id="a7b00726-edd3-402a-b182-c08897783682" X="-462" Y="-9922" />
+      </points>
+    </connection>
+    <connection id="e3151b1b-2de5-4b79-a468-65e551d7514a" SrcNodeID="8fb54c5f-5d6f-4b37-a0e4-cd4aeb711ef1" SrcPortName="advance-2" DstNodeID="4075b44d-4bd6-4c81-87c5-742b62f12281" DstPortName="enter" ConnectionOrder="0">
+      <points id="9fb44614-2837-4a9f-9b6c-12f725af8c4e" />
+    </connection>
+    <connection id="c9870dbb-3c91-4f6a-83b3-32a927505a58" SrcNodeID="8fb54c5f-5d6f-4b37-a0e4-cd4aeb711ef1" SrcPortName="advance-1" DstNodeID="22df990a-d651-41ad-bea6-41ebf2784ea0" DstPortName="enter" ConnectionOrder="0">
+      <points id="0b22111d-f889-467b-855c-70b6561f59a9">
+        <point id="f49a82b0-6b51-40be-83e6-7101f999ce94" X="-1912" Y="-9926" />
+        <point id="0794b628-fce9-41cb-a094-fb6e0aede5af" X="-454" Y="-9932" />
+      </points>
+    </connection>
+    <connection id="60fc15cf-ca31-41f5-99ec-5b209f73a596" SrcNodeID="6e6fad10-d2f7-4e41-a808-7f26c70728c8" SrcPortName="true" DstNodeID="8fb54c5f-5d6f-4b37-a0e4-cd4aeb711ef1" DstPortName="enter" ConnectionOrder="0">
+      <points id="5f974a07-2caf-4716-ac84-9dd75caa10ac">
+        <point id="2fbedd92-be0e-4960-89b7-632fbb32e5d3" X="-2264.10575869977" Y="-9240.92301691747" />
+      </points>
+    </connection>
+    <connection id="da7b2e8a-defd-4d09-ae1d-810b53dff4bf" SrcNodeID="22df990a-d651-41ad-bea6-41ebf2784ea0" SrcPortName="advance" DstNodeID="25a394a1-5cd1-4a4f-8069-c1f5d1455bf8" DstPortName="enter" ConnectionOrder="0">
+      <points id="4fed9e4e-1913-4dad-99f9-4297e42e8e6b">
+        <point id="19bf82e7-3403-4b61-9d1f-097e35fc40a3" X="372.560907966894" Y="-9237.97437652243" />
+      </points>
+    </connection>
+    <connection id="37d0bcc7-3de6-4394-a13e-b2ba263a88f9" SrcNodeID="41797aa6-5b41-4b0f-b4e3-27542f24773a" SrcPortName="advance" DstNodeID="09690502-09f2-4a95-a5b4-8317ca7a74d3" DstPortName="enter" ConnectionOrder="0">
+      <points id="d018cd50-1f52-4871-a5d3-a1fd801f563f">
+        <point id="003811d1-a671-40c9-9195-752391c916a7" X="-619.508831292635" Y="-11146.5886190401" />
+      </points>
+    </connection>
+    <connection id="dec04c0c-6dac-4254-855c-44df4ccad032" SrcNodeID="796c2998-df9e-4816-b4c8-2cebd91d71de" SrcPortName="advance" DstNodeID="09690502-09f2-4a95-a5b4-8317ca7a74d3" DstPortName="enter" ConnectionOrder="0">
+      <points id="8ea8c142-1fb0-40e2-90d9-3555d786e537">
+        <point id="53c0528f-088d-42a7-b2e8-689b265eeaef" X="-622" Y="-10754" />
+      </points>
+    </connection>
+    <connection id="565a38c0-7823-4de2-8a2a-07d09af84d6e" SrcNodeID="ef5fd99f-4785-4359-9e88-2aedeb0ca6bd" SrcPortName="advance" DstNodeID="41797aa6-5b41-4b0f-b4e3-27542f24773a" DstPortName="enter" ConnectionOrder="0">
+      <points id="e9f8e1ee-1469-46b3-b126-dd887852105a" />
+    </connection>
+    <connection id="286505a5-6a38-4090-8bc2-6f1b7a348602" SrcNodeID="41fd2d36-af8d-4d32-b8cc-d175db35c591" SrcPortName="advance" DstNodeID="796c2998-df9e-4816-b4c8-2cebd91d71de" DstPortName="enter" ConnectionOrder="0">
+      <points id="c29d7105-dcf3-4ec2-8aa2-88c38999feb2" />
+    </connection>
+    <connection id="31f516d5-9d11-4839-a685-4c0d1578b6bd" SrcNodeID="b5d03508-e002-4bb8-9818-0f2a4f150692" SrcPortName="advance" DstNodeID="3fb2a12e-8508-4368-a4a5-596e766927fb" DstPortName="enter" ConnectionOrder="0">
+      <points id="440b28b2-16e6-4c87-a8a0-b2ab282806b0" />
+    </connection>
+    <connection id="551010e1-2e62-4bca-9ff3-b7be9ff2c57c" SrcNodeID="976fbea4-86ac-4935-8ff8-ed2566b3f608" SrcPortName="advance-1" DstNodeID="ef5fd99f-4785-4359-9e88-2aedeb0ca6bd" DstPortName="enter" ConnectionOrder="0">
+      <points id="e22b026f-fbdb-474b-b14f-3f9469668722">
+        <point id="5c344d43-b936-4e28-85ef-0aa65d35347b" X="-1801.50883129264" Y="-11146.5886190401" />
+      </points>
+    </connection>
+    <connection id="d3efd7f5-1308-4831-8894-7b3b3cbd4e38" SrcNodeID="976fbea4-86ac-4935-8ff8-ed2566b3f608" SrcPortName="advance-2" DstNodeID="41fd2d36-af8d-4d32-b8cc-d175db35c591" DstPortName="enter" ConnectionOrder="0">
+      <points id="af7d9b42-cb9a-4bf7-a666-6c7af8fcc30a">
+        <point id="effc3acb-dd21-47d8-9ca1-1fa22569eb7e" X="-1797.50883129264" Y="-10738.5886190401" />
+      </points>
+    </connection>
+    <connection id="c4c917e9-9d03-4d82-9880-338dce58e97d" SrcNodeID="976fbea4-86ac-4935-8ff8-ed2566b3f608" SrcPortName="advance-3" DstNodeID="b5d03508-e002-4bb8-9818-0f2a4f150692" DstPortName="enter" ConnectionOrder="0">
+      <points id="221cab2c-1a45-40d3-9e29-9a17d268d73d">
+        <point id="70fc7e23-bc41-4220-bc0d-e01312dc6485" X="-1793.50883129264" Y="-10378.5886190401" />
+      </points>
+    </connection>
+    <connection id="c855c1aa-5888-4a68-9068-2f796576a6ed" SrcNodeID="976fbea4-86ac-4935-8ff8-ed2566b3f608" SrcPortName="skip" DstNodeID="09690502-09f2-4a95-a5b4-8317ca7a74d3" DstPortName="enter" ConnectionOrder="0">
+      <points id="6ee14c39-0a07-4ebe-8a77-72d63b259a32">
+        <point id="21b222b3-8694-4755-a077-53edc2ac4a34" X="-1765.50883129264" Y="-10046.5886190401" />
+        <point id="4328cd75-0958-43f6-9cb5-5a4ea81873fd" X="-635.5" Y="-10062" />
+      </points>
+    </connection>
+    <connection id="081a71b8-ea0d-43b0-97fb-adb5c4c85c62" SrcNodeID="976fbea4-86ac-4935-8ff8-ed2566b3f608" SrcPortName="player-removed" DstNodeID="09690502-09f2-4a95-a5b4-8317ca7a74d3" DstPortName="enter" ConnectionOrder="0">
+      <points id="32315ba4-d4a4-4fff-9454-48fe8d59f4e6">
+        <point id="1927a7ee-11af-4b2b-93d3-62e8be36a6d0" X="-1800" Y="-11240" />
+        <point id="68f4e00d-06c9-4d6d-82e3-ac129509f55e" X="-618" Y="-11236" />
+      </points>
+    </connection>
+    <connection id="0c853b76-6156-48c3-82eb-dc6f1b374860" SrcNodeID="dfb9fc12-35c0-498a-bac6-41164bd168a6" SrcPortName="advance-2" DstNodeID="976fbea4-86ac-4935-8ff8-ed2566b3f608" DstPortName="enter" ConnectionOrder="0">
+      <points id="0437f95d-2761-43de-b47b-3820f9e2a469">
+        <point id="d10ed789-a47e-43e6-93ac-24657515f98f" X="-2009.10575869977" Y="-10160.9230169175" />
+      </points>
+    </connection>
+    <connection id="9daff817-fa01-48af-be2a-6949ad593332" SrcNodeID="dfb9fc12-35c0-498a-bac6-41164bd168a6" SrcPortName="advance-1" DstNodeID="09690502-09f2-4a95-a5b4-8317ca7a74d3" DstPortName="enter" ConnectionOrder="0">
+      <points id="ae35fde7-d244-445a-89a7-f9b619b8b7cc">
+        <point id="89620d8d-55d7-4a24-bccb-f9b02c5b07d8" X="-1960" Y="-11320" />
+        <point id="49d50dc5-719a-4648-85d1-94827470581d" X="-618" Y="-11322" />
+      </points>
+    </connection>
+    <connection id="754472b3-283a-4272-a01a-780710114170" SrcNodeID="a1fb2247-f903-4d9d-a6ce-88de0057e9b3" SrcPortName="true" DstNodeID="dfb9fc12-35c0-498a-bac6-41164bd168a6" DstPortName="enter" ConnectionOrder="0">
+      <points id="9b1feb1f-e3d2-4c7e-962b-53a7ca0ba92b" />
+    </connection>
+    <connection id="6f3c2077-6c33-4f56-baad-ab7b6fbcb9bf" SrcNodeID="a52cfefc-ad32-42fd-b105-a410377baae9" SrcPortName="false" DstNodeID="a1fb2247-f903-4d9d-a6ce-88de0057e9b3" DstPortName="enter" ConnectionOrder="0">
+      <points id="7bbed3bc-6eb6-458c-889b-1377f8c4e744" />
+    </connection>
+    <connection id="8836ed08-28c1-4087-af0c-5247cc8f3ac6" SrcNodeID="a1fb2247-f903-4d9d-a6ce-88de0057e9b3" SrcPortName="false" DstNodeID="6e6fad10-d2f7-4e41-a808-7f26c70728c8" DstPortName="enter" ConnectionOrder="0">
+      <points id="16f51e4a-c31b-4e0b-b007-32b750ddabd8" />
+    </connection>
+    <connection id="69ce6978-d443-4e2f-a818-e15e837ad3f1" SrcNodeID="09690502-09f2-4a95-a5b4-8317ca7a74d3" SrcPortName="advance" DstNodeID="25a394a1-5cd1-4a4f-8069-c1f5d1455bf8" DstPortName="enter" ConnectionOrder="0">
+      <points id="cddb8b6d-89bd-4f57-8e65-458cea5bdb91">
+        <point id="c54afeb9-3108-45fa-95ec-6a09d8558677" X="372.1699249605" Y="-11070.6447650079" />
+      </points>
+    </connection>
+    <connection id="883c1983-7f93-4a71-bbad-25e8ca14c5ad" SrcNodeID="b2015010-f999-4c21-b901-74c4d690cd2f" SrcPortName="true" DstNodeID="9f050026-f847-45af-bf1e-9e64e0d770f2" DstPortName="enter" ConnectionOrder="0">
+      <points id="7f99e9e7-41b7-4bf7-8583-f3a57c52400c" />
+    </connection>
+    <connection id="c2450690-7beb-46be-9337-e9d348997ad6" SrcNodeID="9f050026-f847-45af-bf1e-9e64e0d770f2" SrcPortName="advance" DstNodeID="df716bd0-6e88-41db-8e51-f31f765737cc" DstPortName="enter" ConnectionOrder="0">
+      <points id="1f43bdd5-d3db-4791-ba5f-eab7c2bbdaf0" />
+    </connection>
+    <connection id="70b726d7-0fde-40ae-b82b-15cf35fc537d" SrcNodeID="639b155f-94f3-44a8-83de-35bd2c85d9fe" SrcPortName="false" DstNodeID="eafee328-bbc8-4bbc-a4a2-32f554cc482d" DstPortName="enter" ConnectionOrder="0">
+      <points id="0c1a482f-9288-43e1-b7b3-bcf63f251f37" />
+    </connection>
+    <connection id="52f54ceb-e4bc-4c0b-9046-51ef58dc3f82" SrcNodeID="90453e77-1cfe-41ef-bcce-94d49b849065" SrcPortName="body" DstNodeID="639b155f-94f3-44a8-83de-35bd2c85d9fe" DstPortName="enter" ConnectionOrder="0">
+      <points id="40351850-c64f-4ba4-81d7-497a3a0de34d" />
+    </connection>
+    <connection id="e1efba2c-62d0-494b-a75f-bc3df2a8bf04" SrcNodeID="639b155f-94f3-44a8-83de-35bd2c85d9fe" SrcPortName="true" DstNodeID="4df310a5-7d77-4e8b-9273-b00d4d9675bd" DstPortName="enter" ConnectionOrder="0">
+      <points id="e1691976-0fc4-4653-b073-e486322571e4" />
+    </connection>
+    <connection id="c7d0c68b-19a3-40b6-921f-cb435c93801b" SrcNodeID="eafee328-bbc8-4bbc-a4a2-32f554cc482d" SrcPortName="true" DstNodeID="ef4c287b-16d9-461c-be93-51b0617f9ea1" DstPortName="enter" ConnectionOrder="0">
+      <points id="bc71af84-46cc-4db5-b9b0-f0236e207ce0" />
+    </connection>
+    <connection id="8d32aca5-cdd9-4e84-b6af-9bc0a0d6b34a" SrcNodeID="eafee328-bbc8-4bbc-a4a2-32f554cc482d" SrcPortName="false" DstNodeID="01239ab2-3de9-4b6e-b8aa-1622041152f9" DstPortName="enter" ConnectionOrder="0">
+      <points id="aee02373-1132-4fa9-9d02-d7142eae6582" />
+    </connection>
+    <connection id="316c76e1-316b-4744-8436-678dfc5b7167" SrcNodeID="ef4c287b-16d9-461c-be93-51b0617f9ea1" SrcPortName="advance" DstNodeID="90453e77-1cfe-41ef-bcce-94d49b849065" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="18eff1dd-2d35-4342-85ec-a5e2e32d9f78">
+        <point id="723c95c0-7c24-4d6b-87ab-468c93b314ea" X="-1011.26955293595" Y="-12194.18114388" />
+        <point id="98a536b5-c74b-41a5-a4ad-68f72efa7859" X="-1861.26955293595" Y="-12184.18114388" />
+      </points>
+    </connection>
+    <connection id="b41892a3-9199-43ea-bbb2-d6cc7288e5e3" SrcNodeID="01239ab2-3de9-4b6e-b8aa-1622041152f9" SrcPortName="advance" DstNodeID="90453e77-1cfe-41ef-bcce-94d49b849065" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="36d3e8a7-1c92-484d-8f6c-eb8dd4a993b2">
+        <point id="33f29a92-a466-4849-a40a-28fbe3088a4d" X="-1011.26955293595" Y="-12112.18114388" />
+        <point id="c67911aa-b328-41c9-8e78-848869c10439" X="-1859.26955293595" Y="-12108.18114388" />
+      </points>
+    </connection>
+    <connection id="df3fb02f-9628-4834-a4ea-e7b0624041ef" SrcNodeID="d1a5937c-6b50-4235-8ff5-614cf4b3a73d" SrcPortName="false" DstNodeID="fb0b0ca9-180a-4770-ae33-eb01e8959438" DstPortName="enter" ConnectionOrder="0">
+      <points id="55d84ad0-5e9d-4402-b38f-3bfb3133a6e4" />
+    </connection>
+    <connection id="4f57c0a0-4626-4ba9-98d4-64da91d6e761" SrcNodeID="f88185d5-f1d9-464e-bf44-3b48fb14ccc9" SrcPortName="body" DstNodeID="d1a5937c-6b50-4235-8ff5-614cf4b3a73d" DstPortName="enter" ConnectionOrder="0">
+      <points id="e22c0f86-7dab-42b7-ba16-31029bab35d4" />
+    </connection>
+    <connection id="fb0035da-93ef-4dfb-8131-a794e6564928" SrcNodeID="d1a5937c-6b50-4235-8ff5-614cf4b3a73d" SrcPortName="true" DstNodeID="29a5fa2c-82e0-4a4d-900e-b2d01d19a145" DstPortName="enter" ConnectionOrder="0">
+      <points id="e82b912b-5408-4878-9519-896067443783" />
+    </connection>
+    <connection id="322b8fc0-3331-4ad6-8760-07baa5d11c1b" SrcNodeID="fb0b0ca9-180a-4770-ae33-eb01e8959438" SrcPortName="true" DstNodeID="da185617-f63a-4dc7-a39b-a56c90943499" DstPortName="enter" ConnectionOrder="0">
+      <points id="91165365-0640-4a60-b551-e54c09f5293a" />
+    </connection>
+    <connection id="912af5d0-40a3-477d-b6d3-bbf9727f05f8" SrcNodeID="fb0b0ca9-180a-4770-ae33-eb01e8959438" SrcPortName="false" DstNodeID="7678ad31-5508-4107-b192-c98a132b802a" DstPortName="enter" ConnectionOrder="0">
+      <points id="5d057b80-6a55-4f0d-917d-61e2f641cd57" />
+    </connection>
+    <connection id="a3e24aef-53d5-4fd0-ac12-d9c918a2c2e3" SrcNodeID="da185617-f63a-4dc7-a39b-a56c90943499" SrcPortName="advance" DstNodeID="f88185d5-f1d9-464e-bf44-3b48fb14ccc9" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="6119df54-3686-4844-9a95-b00cbc363ebe">
+        <point id="636f478b-3d06-4fd0-9cf1-d79a63ff3f0b" X="-1009.26955293595" Y="-11838.18114388" />
+        <point id="a30332fd-b5b4-4907-966c-31d15d1b2545" X="-1845.26955293595" Y="-11840.18114388" />
+      </points>
+    </connection>
+    <connection id="82289ec4-59f4-442b-ba99-15304734bb3f" SrcNodeID="7678ad31-5508-4107-b192-c98a132b802a" SrcPortName="advance" DstNodeID="f88185d5-f1d9-464e-bf44-3b48fb14ccc9" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="354a2d86-7799-4a40-a367-ef0403962a21">
+        <point id="7cef067a-58b0-4ea0-930d-ccbf1cb2c8b9" X="-1009.26955293595" Y="-11754.18114388" />
+        <point id="e21e9860-51af-4bc2-ad2d-e7729a3fed88" X="-1843.26955293595" Y="-11748.18114388" />
+      </points>
+    </connection>
+    <connection id="373a5e4e-0512-458f-8799-0aaa49e272e1" SrcNodeID="cfb93e53-15a4-47a2-ac60-fcf2e2a2e8e3" SrcPortName="false" DstNodeID="64abc9cb-32fd-48f8-b6fe-53e5e1bc1c0b" DstPortName="enter" ConnectionOrder="0">
+      <points id="b802d21b-2523-4ff7-a52a-ab377a25a117" />
+    </connection>
+    <connection id="66276c4d-2262-446a-8d5e-e761b3d7f4b3" SrcNodeID="d3a178f1-88f3-4727-9939-3c8b26fa823d" SrcPortName="body" DstNodeID="cfb93e53-15a4-47a2-ac60-fcf2e2a2e8e3" DstPortName="enter" ConnectionOrder="0">
+      <points id="cac257be-d0f7-4ca4-bceb-bf590ec96080" />
+    </connection>
+    <connection id="1f00e9bc-47b3-42a8-a243-0ddb6e07890f" SrcNodeID="cfb93e53-15a4-47a2-ac60-fcf2e2a2e8e3" SrcPortName="true" DstNodeID="b51a5178-32ec-4294-aabb-2fe8f5e42970" DstPortName="enter" ConnectionOrder="0">
+      <points id="ad8422fa-5e42-4684-9139-c58c81ebce4a" />
+    </connection>
+    <connection id="e60523f6-aeba-4e27-9c4b-22f82c96fc60" SrcNodeID="64abc9cb-32fd-48f8-b6fe-53e5e1bc1c0b" SrcPortName="true" DstNodeID="dc6e51fd-2e56-43a2-81c3-e497a32bafa7" DstPortName="enter" ConnectionOrder="0">
+      <points id="156a40cc-4ec7-4a44-a0d5-febea75baa75" />
+    </connection>
+    <connection id="971367fa-b6b9-452f-81b9-75651110732c" SrcNodeID="64abc9cb-32fd-48f8-b6fe-53e5e1bc1c0b" SrcPortName="false" DstNodeID="cf99d1ba-5035-4fd5-85f1-cc2fcfd8b21d" DstPortName="enter" ConnectionOrder="0">
+      <points id="2d968f4a-7696-42df-bef6-3d5598e08ff7" />
+    </connection>
+    <connection id="293f8e8b-20e9-496f-b917-000389f8e7b9" SrcNodeID="dc6e51fd-2e56-43a2-81c3-e497a32bafa7" SrcPortName="advance" DstNodeID="d3a178f1-88f3-4727-9939-3c8b26fa823d" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="0160a503-3e61-4e1b-a2cd-1480a6d66a16">
+        <point id="0c4c0838-ebc1-45e7-b58a-88fb1ed1a7ea" X="-1008.86218425947" Y="-11518.6613032379" />
+        <point id="dce8d24a-30df-4526-b6ac-a0508827645d" X="-1854.86218425947" Y="-11522.6613032379" />
+      </points>
+    </connection>
+    <connection id="d604c9e8-f385-46c1-ae3b-68774fd12a8d" SrcNodeID="cf99d1ba-5035-4fd5-85f1-cc2fcfd8b21d" SrcPortName="advance" DstNodeID="d3a178f1-88f3-4727-9939-3c8b26fa823d" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="8eb78715-ce71-473a-88ee-0d6834c28959">
+        <point id="b065df4f-bd3b-4911-89e7-f6ccab17302f" X="-1016.86218425947" Y="-11440.6613032379" />
+        <point id="ca102411-389e-4ea5-8cb7-e00ccce84d89" X="-1856.86218425947" Y="-11444.6613032379" />
+      </points>
+    </connection>
+    <connection id="e77e070d-29bb-4e3d-a98f-3db1a7ad5500" SrcNodeID="58659de4-0f06-44b6-824a-19cb5c81b0a8" SrcPortName="false" DstNodeID="addb990b-5450-4a9d-9b8f-76bb7088049a" DstPortName="enter" ConnectionOrder="0">
+      <points id="b46e1f9f-1c55-4d6a-b3cf-bf00b5b99af7" />
+    </connection>
+    <connection id="4bfe9db6-397a-4206-bbe8-0918cc0caf07" SrcNodeID="3fb2a12e-8508-4368-a4a5-596e766927fb" SrcPortName="body" DstNodeID="58659de4-0f06-44b6-824a-19cb5c81b0a8" DstPortName="enter" ConnectionOrder="0">
+      <points id="1ac8173f-384f-454d-bd44-4bfce709fe8d" />
+    </connection>
+    <connection id="dd526f83-57d5-4054-9a8f-6c628c280f89" SrcNodeID="58659de4-0f06-44b6-824a-19cb5c81b0a8" SrcPortName="true" DstNodeID="dcb79d45-63f2-4a7b-8f99-afcf1648a488" DstPortName="enter" ConnectionOrder="0">
+      <points id="54b21b40-8460-4c4b-9089-60b2dac494b4" />
+    </connection>
+    <connection id="7fd59dbf-625c-4be0-9e51-7068e26085ee" SrcNodeID="addb990b-5450-4a9d-9b8f-76bb7088049a" SrcPortName="true" DstNodeID="6c286cc9-bca9-4168-9bdc-231a8f5fda60" DstPortName="enter" ConnectionOrder="0">
+      <points id="81b899a1-bed4-4965-bb22-d6a416f2d909" />
+    </connection>
+    <connection id="22680b9a-9fb4-4e7e-acf4-797858bdeb12" SrcNodeID="addb990b-5450-4a9d-9b8f-76bb7088049a" SrcPortName="false" DstNodeID="574a9be2-4d73-4212-830b-961e28f4349c" DstPortName="enter" ConnectionOrder="0">
+      <points id="5b3933f7-ac7a-40f7-92f9-42d5795fc83a" />
+    </connection>
+    <connection id="4eb94116-50b2-4544-98b9-20f762841d7f" SrcNodeID="574a9be2-4d73-4212-830b-961e28f4349c" SrcPortName="advance" DstNodeID="3fb2a12e-8508-4368-a4a5-596e766927fb" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="592ba46f-02e2-47ec-afde-6c4070ae646b">
+        <point id="89a1b985-e673-447d-bd0c-f52a80f0ee1c" X="-739.508831292636" Y="-10154.5886190401" />
+        <point id="d9caa923-af58-43e4-a783-2154ee07abe6" X="-1437.50883129264" Y="-10158.5886190401" />
+      </points>
+    </connection>
+    <connection id="986dbf21-70a5-4d21-b22b-1aa47d279b8a" SrcNodeID="6c286cc9-bca9-4168-9bdc-231a8f5fda60" SrcPortName="advance" DstNodeID="3fb2a12e-8508-4368-a4a5-596e766927fb" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="a0ac14ae-3eb1-40bb-a8e9-1bad522baa47">
+        <point id="17685785-8c0e-4154-a8d6-df5a2af01e48" X="-727.508831292636" Y="-10236.5886190401" />
+        <point id="5b320f89-190b-4985-bd19-7d97c639c85c" X="-1445.50883129264" Y="-10226.5886190401" />
+      </points>
+    </connection>
+    <connection id="8c2916db-723b-42c5-90d6-b2ca3ada153e" SrcNodeID="dcb79d45-63f2-4a7b-8f99-afcf1648a488" SrcPortName="advance" DstNodeID="3fb2a12e-8508-4368-a4a5-596e766927fb" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="c112d46b-ed84-4580-9a6d-e0d124caa16c">
+        <point id="745e1b19-8687-48d8-bbb5-8187881bbb22" X="-731.508831292636" Y="-10314.5886190401" />
+        <point id="ea9e524a-cc07-4dd3-abe4-84de9e3ae442" X="-1447.50883129264" Y="-10300.5886190401" />
+      </points>
+    </connection>
+    <connection id="86aea443-612d-412f-8a18-06d8f20fe55f" SrcNodeID="3fb2a12e-8508-4368-a4a5-596e766927fb" SrcPortName="advance" DstNodeID="09690502-09f2-4a95-a5b4-8317ca7a74d3" DstPortName="enter" ConnectionOrder="0">
+      <points id="3916ca03-bf0f-4cf6-9341-b1393c533407">
+        <point id="478c5b28-3811-4a3d-a1be-3658759abf2d" X="-621.508831292636" Y="-10402.5886190401" />
+      </points>
+    </connection>
+    <connection id="1ae460dd-34de-45e4-9221-657badb7e30e" SrcNodeID="37cee792-31d5-4098-ab5d-86fb0c30606f" SrcPortName="false" DstNodeID="d0322596-19b8-4c94-b26b-248462b88eaa" DstPortName="enter" ConnectionOrder="0">
+      <points id="84b3ae25-17a7-489f-85c1-1bd8ebe0b082" />
+    </connection>
+    <connection id="8fb000bd-2e6e-4455-9a3a-f437cffe8a1b" SrcNodeID="796c2998-df9e-4816-b4c8-2cebd91d71de" SrcPortName="body" DstNodeID="37cee792-31d5-4098-ab5d-86fb0c30606f" DstPortName="enter" ConnectionOrder="0">
+      <points id="6895af92-9e33-4553-b40e-ec5f91a1da07" />
+    </connection>
+    <connection id="0bcfd9a2-3f81-4b66-8f06-2c6918567272" SrcNodeID="37cee792-31d5-4098-ab5d-86fb0c30606f" SrcPortName="true" DstNodeID="a4995692-2ae3-43ed-8667-5d117dc51f13" DstPortName="enter" ConnectionOrder="0">
+      <points id="9f32cf21-8cf2-4a18-95d5-37451e3810f4" />
+    </connection>
+    <connection id="ea75e7f4-9df7-43bc-9a4d-cbef0c1144e7" SrcNodeID="d0322596-19b8-4c94-b26b-248462b88eaa" SrcPortName="true" DstNodeID="cbcf5ba7-440b-41ae-ad6c-7a6d3eaf33db" DstPortName="enter" ConnectionOrder="0">
+      <points id="99544de3-15e5-4bcf-b3ea-99f42c7c3297" />
+    </connection>
+    <connection id="64407dd2-dda9-4df3-af1c-f355c6fcb23e" SrcNodeID="d0322596-19b8-4c94-b26b-248462b88eaa" SrcPortName="false" DstNodeID="4dfe62e2-4673-4cfb-959d-1dc9991f344f" DstPortName="enter" ConnectionOrder="0">
+      <points id="0c58bc16-5eea-49e5-9b93-6c04107aeca0" />
+    </connection>
+    <connection id="629b1470-65d5-4b29-b48d-0e51a56cf999" SrcNodeID="a4995692-2ae3-43ed-8667-5d117dc51f13" SrcPortName="advance" DstNodeID="796c2998-df9e-4816-b4c8-2cebd91d71de" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="0a493e7d-e986-47e0-8030-270dfbc7190b">
+        <point id="b8f504d4-c748-4927-805b-ae78ba86be7a" X="-723.508831292636" Y="-10674.5886190401" />
+        <point id="72cc001d-51a0-4fbe-b94d-cfd76cc0ace5" X="-1459.50883129264" Y="-10664.5886190401" />
+      </points>
+    </connection>
+    <connection id="818e4b13-34c1-4b90-854d-e8cf5dbc6d8b" SrcNodeID="cbcf5ba7-440b-41ae-ad6c-7a6d3eaf33db" SrcPortName="advance" DstNodeID="796c2998-df9e-4816-b4c8-2cebd91d71de" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="2499403c-0e11-46ee-abec-39be4774023b">
+        <point id="c24f8d16-dca2-4e31-9ea0-2e8b8ec3cb26" X="-723.508831292636" Y="-10590.5886190401" />
+        <point id="4518fbfd-36d2-42b3-b252-58a1a274dd6b" X="-1457.50883129264" Y="-10594.5886190401" />
+      </points>
+    </connection>
+    <connection id="18ed7145-63b1-462c-976e-44f388fe1128" SrcNodeID="4dfe62e2-4673-4cfb-959d-1dc9991f344f" SrcPortName="advance" DstNodeID="796c2998-df9e-4816-b4c8-2cebd91d71de" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="aa7b765a-c157-40a6-8fe3-3a2394441683">
+        <point id="12730059-197d-4ad3-8786-2782b4da88cc" X="-731.508831292636" Y="-10510.5886190401" />
+        <point id="a033db9c-7c22-4625-a1b8-f4c41eefc123" X="-1457.50883129264" Y="-10506.5886190401" />
+      </points>
+    </connection>
+    <connection id="15a2b1ac-2697-41e4-9d73-7196e2e62e15" SrcNodeID="744a63a4-e71d-41ce-af47-60f8392d82f4" SrcPortName="false" DstNodeID="f123558f-301e-4847-862e-2dcaa78c3187" DstPortName="enter" ConnectionOrder="0">
+      <points id="f7e9cc80-87b0-4e5a-a8aa-e3a381450082" />
+    </connection>
+    <connection id="9e5d94c0-8258-4c9f-9e07-10ac6a915d52" SrcNodeID="41797aa6-5b41-4b0f-b4e3-27542f24773a" SrcPortName="body" DstNodeID="744a63a4-e71d-41ce-af47-60f8392d82f4" DstPortName="enter" ConnectionOrder="0">
+      <points id="98748633-1d0e-41f5-9b68-13f19d251024" />
+    </connection>
+    <connection id="8cd78e9f-6493-4ff6-8217-8f070eab9f75" SrcNodeID="744a63a4-e71d-41ce-af47-60f8392d82f4" SrcPortName="true" DstNodeID="2d87452d-f771-4461-9eae-a6a8706c617b" DstPortName="enter" ConnectionOrder="0">
+      <points id="3586ee33-e4a6-492b-b774-eaaf43473a85" />
+    </connection>
+    <connection id="44509923-ccbe-41df-9db5-00a64b578602" SrcNodeID="f123558f-301e-4847-862e-2dcaa78c3187" SrcPortName="true" DstNodeID="8ad584a7-0127-41ba-bbb3-9a733f5acff0" DstPortName="enter" ConnectionOrder="0">
+      <points id="f525bf52-b676-411b-93a8-3abd008a039d" />
+    </connection>
+    <connection id="bbfa0eea-92bf-4e22-9d34-fa9e033d2259" SrcNodeID="f123558f-301e-4847-862e-2dcaa78c3187" SrcPortName="false" DstNodeID="f270e3f2-3da5-48ec-8234-0dc2e922f30b" DstPortName="enter" ConnectionOrder="0">
+      <points id="caab33da-7925-40a2-98e8-c74859406424" />
+    </connection>
+    <connection id="2b7419ee-6e8b-4e15-bd65-74acaa074d6d" SrcNodeID="2d87452d-f771-4461-9eae-a6a8706c617b" SrcPortName="advance" DstNodeID="41797aa6-5b41-4b0f-b4e3-27542f24773a" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="4323c923-f5be-4236-93b2-ed8d0d906bea">
+        <point id="604a3e17-aeec-4b33-96a2-1df90c82673c" X="-689.508831292635" Y="-11042.5886190401" />
+        <point id="d19fa072-9704-42b4-bce5-97db0fc8638f" X="-1453.50883129264" Y="-11046.5886190401" />
+      </points>
+    </connection>
+    <connection id="915be654-8059-45f5-90ea-1ed303c30e67" SrcNodeID="8ad584a7-0127-41ba-bbb3-9a733f5acff0" SrcPortName="advance" DstNodeID="41797aa6-5b41-4b0f-b4e3-27542f24773a" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="d0d29c7e-70cb-446d-b3f5-a906a8a2eefc">
+        <point id="a41d8174-2f2d-4ae1-abcd-67aa3761932a" X="-691.508831292635" Y="-10958.5886190401" />
+        <point id="f8e17fba-f226-4827-af42-c5385596fbd3" X="-1457.50883129264" Y="-10948.5886190401" />
+      </points>
+    </connection>
+    <connection id="507e22b5-2126-4689-8ecc-dd18baa29792" SrcNodeID="f270e3f2-3da5-48ec-8234-0dc2e922f30b" SrcPortName="advance" DstNodeID="41797aa6-5b41-4b0f-b4e3-27542f24773a" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="e1284168-5af5-4a69-8acb-7308c34fc20c">
+        <point id="118d24a0-6d2b-4d2e-b92c-e080d9374a82" X="-689.508831292635" Y="-10856.5886190401" />
+        <point id="2b5627db-5bd7-479a-8957-4c089a03182f" X="-1451.50883129264" Y="-10854.5886190401" />
+      </points>
+    </connection>
+    <connection id="b57891ac-77c6-46ad-ac12-cf6f357ae52e" SrcNodeID="49248abe-c8f3-4b5d-8a0f-81ef514fc3e0" SrcPortName="false" DstNodeID="12a9ee64-9067-47f0-9750-c04d45b94c8d" DstPortName="enter" ConnectionOrder="0">
+      <points id="f6be454d-d20e-45f3-8b22-f5d8dc1bec6c" />
+    </connection>
+    <connection id="471f02ff-7b37-440c-af56-9c5bec9df084" SrcNodeID="8103929f-7d03-44ce-953d-6b7d511914cd" SrcPortName="body" DstNodeID="49248abe-c8f3-4b5d-8a0f-81ef514fc3e0" DstPortName="enter" ConnectionOrder="0">
+      <points id="50a594b9-4488-4bb8-b2da-bcf2dd34ab3c" />
+    </connection>
+    <connection id="bbada0c9-c648-4fdf-85c2-4131c7e63bff" SrcNodeID="49248abe-c8f3-4b5d-8a0f-81ef514fc3e0" SrcPortName="true" DstNodeID="88eac072-6508-42e2-8f5a-ce604486fdf3" DstPortName="enter" ConnectionOrder="0">
+      <points id="7f16586e-e04d-4f2a-abb8-1914347e3073" />
+    </connection>
+    <connection id="a3b105b0-8b44-49dc-a912-279f90cc68df" SrcNodeID="12a9ee64-9067-47f0-9750-c04d45b94c8d" SrcPortName="true" DstNodeID="3c16bfe5-949d-490a-be74-a72b39e2943d" DstPortName="enter" ConnectionOrder="0">
+      <points id="54ee9b49-e751-439e-b5e9-9dfba9dfeb29" />
+    </connection>
+    <connection id="c10b7c04-c61c-4d99-ba30-2bf0ea811b5c" SrcNodeID="12a9ee64-9067-47f0-9750-c04d45b94c8d" SrcPortName="false" DstNodeID="e676d2c5-a70e-47d2-aacb-b42c9786ba93" DstPortName="enter" ConnectionOrder="0">
+      <points id="a0e4c2f1-10f1-4510-b893-37cf4a31fce5" />
+    </connection>
+    <connection id="4349e3d3-8512-4194-8027-e8aec5e4cb09" SrcNodeID="88eac072-6508-42e2-8f5a-ce604486fdf3" SrcPortName="advance" DstNodeID="8103929f-7d03-44ce-953d-6b7d511914cd" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="8455e970-3a7f-48fb-9693-6286b99132c4">
+        <point id="c851cbb8-35fc-480f-8a1a-bce242a5c810" X="-641.439092033107" Y="-9681.97437652243" />
+        <point id="6370b275-db45-45f6-bd53-8eebfcc816fe" X="-1409.43909203311" Y="-9677.97437652243" />
+      </points>
+    </connection>
+    <connection id="374bc348-bfe1-4756-9913-ba7293bbf48a" SrcNodeID="3c16bfe5-949d-490a-be74-a72b39e2943d" SrcPortName="advance" DstNodeID="8103929f-7d03-44ce-953d-6b7d511914cd" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="c670d162-98f7-4598-8b10-55aa62b36ac5">
+        <point id="46e2e23f-0a32-4897-8e36-b451f8bdc84e" X="-641.439092033107" Y="-9601.97437652243" />
+        <point id="d890a771-f757-4edf-bbc5-066f6e0938c1" X="-1411.43909203311" Y="-9607.97437652243" />
+      </points>
+    </connection>
+    <connection id="a9aad95b-5426-4615-886f-803fe8a733e4" SrcNodeID="e676d2c5-a70e-47d2-aacb-b42c9786ba93" SrcPortName="advance" DstNodeID="8103929f-7d03-44ce-953d-6b7d511914cd" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="a11b9875-0ff9-4003-8847-7d2b5e88603e">
+        <point id="f35fc612-e409-4852-88c6-951490dcfaee" X="-653.439092033107" Y="-9521.97437652243" />
+        <point id="527a6e4a-855f-47ad-8d21-300f32220743" X="-1409.43909203311" Y="-9521.97437652243" />
+      </points>
+    </connection>
+    <connection id="493a1f63-7d15-48e9-85eb-f1777ab639c3" SrcNodeID="a3ab9955-44f0-483b-ae9d-a2641d1d548e" SrcPortName="false" DstNodeID="8913b180-9dbb-4863-8d9e-368182e2cfed" DstPortName="enter" ConnectionOrder="0">
+      <points id="57d72739-3521-415f-aa84-2ef9ab33a780" />
+    </connection>
+    <connection id="1ad5ed48-e36e-4a40-a6c4-c31f3addbadb" SrcNodeID="d25d79ae-0077-431b-94f4-96bdfdd05dbb" SrcPortName="body" DstNodeID="a3ab9955-44f0-483b-ae9d-a2641d1d548e" DstPortName="enter" ConnectionOrder="0">
+      <points id="e3fbebd1-6650-4dd4-9364-a4702040ca90" />
+    </connection>
+    <connection id="2cfe660b-eb63-4ad3-a015-28aa27aae92b" SrcNodeID="a3ab9955-44f0-483b-ae9d-a2641d1d548e" SrcPortName="true" DstNodeID="9eaa8d63-2ec2-4ba0-a04f-0fc346e00e4a" DstPortName="enter" ConnectionOrder="0">
+      <points id="b95d72e7-cf0e-4a1b-85c2-bf301942569e" />
+    </connection>
+    <connection id="4d0afc10-144a-4d0d-a7df-d31862c267d4" SrcNodeID="8913b180-9dbb-4863-8d9e-368182e2cfed" SrcPortName="true" DstNodeID="09ee2143-0e49-43b4-ade2-0342d1df5591" DstPortName="enter" ConnectionOrder="0">
+      <points id="764ef20b-fa14-4b4d-88e6-e059e2e09da3" />
+    </connection>
+    <connection id="5032a4a2-e70b-4787-9097-01cb91b84f9d" SrcNodeID="8913b180-9dbb-4863-8d9e-368182e2cfed" SrcPortName="false" DstNodeID="707d0809-3f30-4f56-a4f1-2ac072a9b394" DstPortName="enter" ConnectionOrder="0">
+      <points id="f8f450b3-c502-409e-b9fc-69ea114d264e" />
+    </connection>
+    <connection id="f2993bf0-ad1a-4e79-86ba-d3dd3879217e" SrcNodeID="9eaa8d63-2ec2-4ba0-a04f-0fc346e00e4a" SrcPortName="advance" DstNodeID="d25d79ae-0077-431b-94f4-96bdfdd05dbb" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="ce5a4bb1-15e9-4727-89ed-cbe58353bccc">
+        <point id="8bc044a4-1dab-47fb-947e-cfdc340d2911" X="-641.439092033107" Y="-9363.97437652243" />
+        <point id="08b18afa-65c3-4088-bb70-a2e960246f9a" X="-1411.43909203311" Y="-9355.97437652243" />
+      </points>
+    </connection>
+    <connection id="ef8944b2-b6d4-4111-8d0f-6d908bf4deae" SrcNodeID="09ee2143-0e49-43b4-ade2-0342d1df5591" SrcPortName="advance" DstNodeID="d25d79ae-0077-431b-94f4-96bdfdd05dbb" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="ff1e2d6c-f628-4941-bf72-9f070bc6c65e">
+        <point id="5032896f-e4f2-420e-b2f1-132c01fc34d9" X="-645.439092033107" Y="-9277.97437652243" />
+        <point id="bed13225-ca90-44f0-b39e-7e5b2fcabd88" X="-1413.43909203311" Y="-9281.97437652243" />
+      </points>
+    </connection>
+    <connection id="47aef3ff-79f6-43bc-9eec-ffb671c5cc08" SrcNodeID="707d0809-3f30-4f56-a4f1-2ac072a9b394" SrcPortName="advance" DstNodeID="d25d79ae-0077-431b-94f4-96bdfdd05dbb" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="bf248cfa-d1be-4da6-81b2-17fe90c270bf">
+        <point id="dc0fded3-4aaa-48c0-a43f-dc3676d5bc1d" X="-655.439092033107" Y="-9203.97437652243" />
+        <point id="76ab665a-3a4b-47ea-a55f-436add350fca" X="-1413.43909203311" Y="-9207.97437652243" />
+      </points>
+    </connection>
+    <connection id="9ba5d0e3-4089-4e6f-9b86-3409f72f20c7" SrcNodeID="c992e6db-af72-46a6-a998-3316e4a323b6" SrcPortName="false" DstNodeID="1edbc7ad-98f6-4830-8506-c61462ef34eb" DstPortName="enter" ConnectionOrder="0">
+      <points id="c44077d3-bd7d-4101-a431-af0eff51ad36" />
+    </connection>
+    <connection id="b0359442-2785-4bba-bb96-5c4917617ca7" SrcNodeID="14975899-ec86-409d-b8ff-187351eb981c" SrcPortName="body" DstNodeID="c992e6db-af72-46a6-a998-3316e4a323b6" DstPortName="enter" ConnectionOrder="0">
+      <points id="a7a4fcd9-38c4-4779-87ae-190416870f9e" />
+    </connection>
+    <connection id="f9191d7a-d738-488f-b585-3b2f74e96a4e" SrcNodeID="c992e6db-af72-46a6-a998-3316e4a323b6" SrcPortName="true" DstNodeID="af51cf5a-35d2-46a8-9015-e5022efa57a4" DstPortName="enter" ConnectionOrder="0">
+      <points id="8b5a67a4-9fb6-45f3-b83e-f7e7c5776ef3" />
+    </connection>
+    <connection id="6de93c55-cde3-439e-a2f8-46a038a03843" SrcNodeID="1edbc7ad-98f6-4830-8506-c61462ef34eb" SrcPortName="true" DstNodeID="ed8e4b0e-8478-425b-b78e-4236ba9565fb" DstPortName="enter" ConnectionOrder="0">
+      <points id="4ad0290f-6b04-435d-9ea8-055681e1d58a" />
+    </connection>
+    <connection id="4954e59d-de01-4168-9740-c2889a8b1250" SrcNodeID="1edbc7ad-98f6-4830-8506-c61462ef34eb" SrcPortName="false" DstNodeID="211c3249-9c9b-40fc-955a-4cef5a1040a5" DstPortName="enter" ConnectionOrder="0">
+      <points id="072ffce9-1409-4584-8844-65eb47670338" />
+    </connection>
+    <connection id="5b433e9c-7bb4-438a-846c-73abea9d3d11" SrcNodeID="211c3249-9c9b-40fc-955a-4cef5a1040a5" SrcPortName="advance" DstNodeID="14975899-ec86-409d-b8ff-187351eb981c" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="e4c306d3-bfcc-4c11-bd27-080ecf666ed1">
+        <point id="b2cefff5-5a12-4787-9c94-1eb9ab273bca" X="-647.977259228013" Y="-8796.56199758669" />
+        <point id="362d0c4c-60a0-43a4-b180-d66bcde9eef3" X="-1419.97725922801" Y="-8798.56199758669" />
+      </points>
+    </connection>
+    <connection id="265703e7-6849-46bc-8bdb-22cc8774e12e" SrcNodeID="ed8e4b0e-8478-425b-b78e-4236ba9565fb" SrcPortName="advance" DstNodeID="14975899-ec86-409d-b8ff-187351eb981c" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="064f5b4c-290d-4a3e-ba2c-c590f2ea1de2">
+        <point id="ae5916f8-ea76-4aa4-84d9-7b374b2669a2" X="-645.977259228013" Y="-8878.56199758669" />
+        <point id="36e51a1e-8b3a-4c22-a4ec-80755d4a0239" X="-1427.97725922801" Y="-8876.56199758669" />
+      </points>
+    </connection>
+    <connection id="34d2411e-1424-4989-ba1c-25bee6b00963" SrcNodeID="af51cf5a-35d2-46a8-9015-e5022efa57a4" SrcPortName="advance" DstNodeID="14975899-ec86-409d-b8ff-187351eb981c" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="1895c2c6-d6ea-4b4e-b898-1ecc06cc8e19">
+        <point id="ca5a093a-a228-4914-b358-3ef79f68e4c4" X="-651.977259228013" Y="-8960.56199758669" />
+        <point id="e65071f5-54b2-4d0e-8170-2106f98ae964" X="-1419.97725922801" Y="-8946.56199758669" />
+      </points>
+    </connection>
+    <connection id="f7b28e78-df6c-4464-919d-6f5d8fcc1b9e" SrcNodeID="8f710ddf-9a5c-4725-a36f-ad430686bd9f" SrcPortName="advance" DstNodeID="aaedc8d3-2baf-4113-a351-f53d777c1256" DstPortName="enter" ConnectionOrder="0">
+      <points id="b47d3415-ead4-4004-a90e-00d195feb285" />
+    </connection>
+  </connections>
+</StoryAsset>

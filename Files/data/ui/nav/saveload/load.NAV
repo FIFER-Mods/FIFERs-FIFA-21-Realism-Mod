@@ -1,0 +1,70 @@
+{
+	"name":"Load"
+	,"states":
+	[
+		{
+			"transitions":
+			[
+				{
+					"event":"evt_sl_operation_load"
+					,"targets":["LoadScreen"]
+				}
+			]
+			,"states":
+			[
+				{
+					"name":"in_LoadDefault"
+				}
+				,{
+					"name":"in_LoadSquads"
+					,"onEnter":
+					[	
+						["sendScreenEvent", ["UXShowLoadSquadScreen",""]]
+					]
+				}
+			]
+		}
+		,{
+			"name":"LoadScreen"
+			,"onEnter":
+			[
+				["if", [["==", ".EA_PLATFORM_WINDOWS", true]
+				,[
+					["loadView", ["screen", "game/screens/saveload_pc/load"]]
+				],
+				[
+					["loadView", ["screen", "game/screens/saveload/load"]]
+				]]]
+			]
+			,"onExit":
+			[
+				["if", [["==", ".EA_PLATFORM_WINDOWS", true]
+				,[
+					["unloadView", ["screen", "game/screens/saveload_pc/load"]]
+				],
+				[
+					["unloadView", ["screen", "game/screens/saveload/load"]]
+				]]]
+			]
+			,"transitions":
+			[
+				{
+					"event":"LoadCareer"
+					,"targets":["out_Success"]
+				}
+				,{
+					"event":"LoadTournament"
+					,"targets":["out_Success"]
+				}
+				,{
+					"event":"LoadSuccess"
+					,"targets":["out_Success"]
+				}
+				,{
+					"event":"back"
+					,"targets":["out_Back"]
+				}
+			]
+		}
+	]
+}

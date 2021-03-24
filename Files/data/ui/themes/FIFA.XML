@@ -1,0 +1,1862 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<root>
+  <properties NAME="FIFA">
+    <property id="HIGHLIGHTED_IMAGES_USE_SECONDARY_ASSETS" value="false" type="bool"/>
+    <property id="UNHIGHLIGHTED_IMAGES_USE_SECONDARY_ASSETS" value="false" type="bool"/>
+    <property id="STANDINGS_HIGHLIGHTED_IMAGES_USE_SECONDARY_ASSETS" value="false" type="bool"/>
+    <property id="STANDINGS_UNHIGHLIGHTED_IMAGES_USE_SECONDARY_ASSETS" value="true" type="bool"/>
+    <property id="PREVIEW_IMAGES_USE_SECONDARY_ASSETS" value="false" type="bool"/>
+    <property id="STORY_HIGHLIGHTED_IMAGES_USE_SECONDARY_ASSETS" value="@HIGHLIGHTED_IMAGES_USE_SECONDARY_ASSETS"/>
+    <property id="STORY_UNHIGHLIGHTED_IMAGES_USE_SECONDARY_ASSETS" value="@UNHIGHLIGHTED_IMAGES_USE_SECONDARY_ASSETS"/>
+    <property id="SELECTED_IMAGES_USE_SECONDARY_ASSETS" value="false" type="bool"/>
+    <property id="REGULAR_IMAGES_USE_SECONDARY_ASSETS" value="false" type="bool"/>
+    <property id="LEGACY_SCREEN_IMAGES_USE_SECONDARY_ASSETS" value="false" type="bool"/>
+    <property id="ALTERNATE_HIGHLIGHTED_IMAGES_USE_SECONDARY_ASSETS" value="@HIGHLIGHTED_IMAGES_USE_SECONDARY_ASSETS"/>
+    <property id="ALTERNATE_UNHIGHLIGHTED_IMAGES_USE_SECONDARY_ASSETS" value="false" type="bool"/>
+    <property id="DROP_SHADOW_ENABLED" value="false" type="bool"/>
+    <property id="STROKE_STYLE" value="1" /> <!-- 0 = disabled, 1 = asset + option color, 2 = old glint animation -->
+    <property id="STROKE_THICKNESS" value="1"/>
+    <property id="Shards.Enabled" value="false" type="bool" />
+    <property id="BasePanel.PanelStyle5" value="PanelStyle5_21" />
+    <property id="BasePanel.PanelStyle10" value="PanelStyle5_21" />
+    <property id="BasePanel.PanelStyle18" value="PanelStyle18" />  <!-- Calendar Cell -->
+    <property id="FluxTitle.HighlightAccent" value="true" type="bool" />
+    <property id="FluxTitle.UnhighlightAccent" value="false" type="bool" />
+    <property id="StandingsHub.ShowFullWidget" value="true" type="bool" />
+    <property id="BG_ICON_USE_IMAGES" value="false" type="bool" />
+	<property id="BG_ANIM_USES_GFX" value="true" type="bool" />		<!-- Background animation uses bgAnims or bgGFX -->
+	<property id="BG_ANIM_GFX_MAX" value="4" />		<!-- How many bgGFX do we have (ids starting from 0) -->
+    <property id="BG_ANIM_GFX_OFFSET_X" value="-776" />	<!-- Offset for bgGFX -->
+    <property id="BG_ANIM_GFX_OFFSET_Y" value="-160" />
+  </properties>
+
+  <static_data>
+
+    <assets>
+      <!-- Controllers -->
+      <asset TYPE="Controllers" PATH="imgAssets/Controllers/" EXT="dds"/>
+      <asset TYPE="controllerImage" PATH="imgAssets/controllerImage/" EXT="dds"/>
+
+      <asset TYPE="fpcc" PATH="artAssets/fpcc/" EXT="swf"/>
+      <asset TYPE="referee" PATH="artAssets/referee/" EXT="swf"/>
+      <asset TYPE="easst" PATH="artAssets/easst/" EXT="swf"/>
+      <asset TYPE="matchday" PATH="artAssets/matchday/" EXT="swf"/>
+      <asset TYPE="tacticAnimations" PATH="artAssets/tacticAnimations/" PATTERN="Tactic*" EXT="swf" />
+      <asset TYPE="tileIcons" PATH="imgAssets/tileIcons/" PATTERN="TI_*" EXT="dds"/>
+      <asset TYPE="tileIcons/worldtour" PATH="imgAssets/tileIcons/worldtour" PATTERN="TI_*" EXT="dds"/>
+      <asset TYPE="kickOffIcon" PATH="imgAssets/kickOffIcon/" PATTERN="kickOffIcon*_Active" PATTERN_SECONDARY="kickOffIcon*_NonActive" EXT="dds"/>
+      <asset TYPE="kickOffIcon/offBoarding" PATH="imgAssets/kickOffIcon/offBoarding/" PATTERN="Icon*" EXT="dds"/>
+      <asset TYPE="careerHubWidget" PATH="imgAssets/careerHubWidget" PATTERN="*" EXT="dds"/>
+      <asset TYPE="tcmObjectives/objectiveGridBg" PATH="imgAssets/tcmObjectives/objectiveGridBg/" PATTERN="objectiveGridBg*_Active" PATTERN_SECONDARY="objectiveGridBg*_NonActive" EXT="dds"/>
+      <asset TYPE="tcmFinance/overviewCellBackground" PATH="imgAssets/tcmFinance/overviewCellBackground/" PATTERN="overviewCellBackground*_Active" PATTERN_SECONDARY="overviewCellBackground*_NonActive" EXT="dds"/>
+      <asset TYPE="tcmFinance/overviewCellIcon" PATH="imgAssets/tcmFinance/overviewCellIcon/" PATTERN="overviewCellIcon*" EXT="dds"/>
+      <asset TYPE="tcmFinance/transactionsCellIcon" PATH="imgAssets/tcmFinance/transactionsCellIcon/" PATTERN="transactionsCellIcon*" EXT="dds"/>
+      <asset TYPE="tcmFinance/transactionsMainAsset" PATH="imgAssets/tcmFinance/transactionsMainAsset/" PATTERN="transactionsMainAsset*" EXT="dds"/>
+      <asset TYPE="tcmFinance/transactionsPanelIcon" PATH="imgAssets/tcmFinance/transactionsPanelIcon/" PATTERN="transactionsPanelIcon*" EXT="dds"/>
+      <asset TYPE="transferHub/negotiationWidget" PATH="imgAssets/transferHub/negotiationWidget/" PATTERN="negotiationWidget*" EXT="dds"/>
+      <asset TYPE="transferHub/negotiationStatus" PATH="imgAssets/transferHub/negotiationStatus/" PATTERN="negotiationStatus*" EXT="dds"/>
+      <asset TYPE="transferHub/listStatus" PATH="imgAssets/transferHub/listStatus/" PATTERN="listStatus*_Active" PATTERN_SECONDARY="listStatus*" EXT="dds"/>
+      <asset TYPE="squadHub/kitNumber" PATH="imgAssets/squadHub/kitNumber/" PATTERN="kitNumber*" EXT="dds"/>
+      <asset TYPE="squadHub/userActionIcons" PATH="imgAssets/squadHub/userActionIcons/" PATTERN="icon_*" EXT="dds"/>
+      <asset TYPE="tileShards" PATH="imgAssets/tileShards/" PATTERN="Tile*" EXT="dds"/>
+      <asset TYPE="todIcons" PATH="imgAssets/todIcons/" PATTERN="tod_*" EXT="dds"/>
+      <asset TYPE="weatherIcons" PATH="imgAssets/weatherIcons/" PATTERN="weather_*" EXT="dds"/>
+      <asset TYPE="kits" PATH="imgAssets/kits/" PATTERN="j*" EXT="dds"/>
+      <asset TYPE="clubInfo/stadium" PATH="imgAssets/clubInfo/stadium/" PATTERN="st_*" EXT="dds"/>
+      <asset TYPE="background" PATH="imgAssets/background/" PATTERN="bg_*" EXT="dds"/>
+      <asset TYPE="backgroundAnimation" PATH="artAssets/backgroundAnimations/" PATTERN="bganim_*" EXT="swf"/>
+      <asset TYPE="backgroundGFX" PATH="imgAssets/backgroundGFX/" PATTERN="bggfx_*" EXT="dds"/>
+      <asset TYPE="backgroundStadiums" PATH="imgAssets/backgroundStadiums/" PATTERN="st_*" EXT="dds"/>
+      <asset TYPE="backgroundOverlay" PATH="imgAssets/background/" PATTERN="bg_overlay_*" EXT="dds"/>
+      <asset TYPE="tutorialImages" PATH="imgAssets/tutorialImages/" PATTERN="tut_*" FALLBACK="tut_notfound" EXT="dds"/>
+      <asset TYPE="tutorialImages/fre" PATH="imgAssets/tutorialImages/fre/" PATTERN="tut_*" FALLBACK="../tut_*" EXT="dds"/>
+      <asset TYPE="freekickInstructions" PATH="imgAssets/freekickInstructions/" PATTERN="fki_*" EXT="dds"/>
+      <asset TYPE="freekickInstructionsVolta" PATH="imgAssets/freekickInstructionsVolta/" PATTERN="fki_*" EXT="dds"/>
+      <asset TYPE="flags512x512" PATH="imgAssets/flags512x512/" PATTERN="f_*" FALLBACK="notfound_active" FALLBACK_SECONDARY="notfound_inactive" EXT="dds"/>
+      <asset TYPE="heads" PATH="imgAssets/heads/" PATTERN="p*" EXT="dds"/>
+      <asset TYPE="heads_vpro" PATH="imgAssets/heads/" PATTERN="p*" EXT="png"/>
+      <asset TYPE="heads_ssf" PATH="imgAssets/heads_ssf/" FALLBACK="notfound_0" PATTERN="p*" EXT="dds"/>
+      <asset TYPE="bootflow" PATH="imgAssets/bootflow/" EXT="dds"/>
+      <asset TYPE="worldtour/crestCategoryIcons" PATH="imgAssets/worldtour/crestCategoryIcons/" PATTERN="category_*" FALLBACK="notfound" EXT="dds"/>
+      <asset TYPE="worldtour/playerItem/common" PATH="imgAssets/worldtour/playerItem/common" EXT="dds"/>
+      <asset TYPE="worldtour/playerItem/foregrounds" PATH="imgAssets/worldtour/playerItem/foregrounds" PATTERN="foreground_*" FALLBACK="foreground_1" EXT="dds"/>
+      <asset TYPE="worldtour/playerItem/legendForegrounds" PATH="imgAssets/worldtour/playerItem/foregrounds" FALLBACK="foreground_legend" EXT="dds"/>
+      <asset TYPE="worldtour/playerItem/foregroundsSmall" PATH="imgAssets/worldtour/playerItem/foregroundsSmall" PATTERN="foreground_small_*" FALLBACK="foreground_1" EXT="dds"/>
+      <asset TYPE="worldtour/playerItem/legendForegroundsSmall" PATH="imgAssets/worldtour/playerItem/foregroundsSmall" FALLBACK="foreground_small_legend" EXT="dds"/>
+      <asset TYPE="worldtour/playerItem/backgrounds" PATH="imgAssets/worldtour/playerItem/backgrounds" PATTERN="background_*" FALLBACK="background_1" EXT="dds"/>
+      <asset TYPE="worldtour/playerItem/legendBackgrounds" PATH="imgAssets/worldtour/playerItem/backgrounds" PATTERN="background_*_legend" FALLBACK="background_0_legend" EXT="dds"/>
+      <asset TYPE="worldtour/playerItem/simpleBackgrounds" PATH="imgAssets/worldtour/playerItem/simpleBackgrounds" PATTERN="simpleBackground_*" FALLBACK="simpleBackground_1" EXT="dds"/>
+      <asset TYPE="worldtour/playerItem/legendSimpleBackgrounds" PATH="imgAssets/worldtour/playerItem/simpleBackgrounds" FALLBACK="simpleBackground_legend" EXT="dds"/>
+      <asset TYPE="worldtour/training/backgrounds" PATH="imgAssets/worldtour/training/backgrounds" PATTERN="background_*" EXT="dds"/>
+      <asset TYPE="worldtour/training/banners" PATH="imgAssets/worldtour/training/banners" PATTERN="banner_*" EXT="dds"/>
+      <asset TYPE="worldtour/training/skills" PATH="imgAssets/worldtour/training/skills" PATTERN="skill_*" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="worldtour/training/icons" PATH="imgAssets/worldtour/training/icons" PATTERN="icon_*" FALLBACK="icon_notFound" EXT="dds"/>
+      <asset TYPE="worldtour/training/drillInfoImages" PATH="imgAssets/worldtour/training/drillInfoImages" FALLBACK="notfound"  EXT="dds"/>
+      <asset TYPE="worldtour/training/legend" PATH="imgAssets/worldtour/training/legend" FALLBACK="notfound"  EXT="dds"/>
+      <asset TYPE="worldtour/locationsLarge" PATH="imgAssets/worldtour/locationsLarge" PATTERN="location_*" FALLBACK="location_Paris"  EXT="dds"/>
+      <asset TYPE="worldtour/locationsSmall" PATH="imgAssets/worldtour/locationsSmall" PATTERN="location_*" FALLBACK="location_Paris"  EXT="dds"/>
+      <asset TYPE="worldtour/userInfoWidget" PATH="imgAssets/worldtour/userInfoWidget/" EXT="dds"/>
+      <asset TYPE="worldtour/icons" PATH="imgAssets/worldtour/icons/" EXT="dds"/>
+      <asset TYPE="worldtour/icons/formation" PATH="imgAssets/worldtour/icons/formation" PATTERN="formation_*" FALLBACK="formation_not_found" EXT="dds"/>
+      <asset TYPE="worldtour/squad" PATH="imgAssets/worldtour/squad/" EXT="dds"/>
+      <asset TYPE="worldtour/showtimeImages" PATH="imgAssets/worldtour/showtimeImages/" PATTERN="location_*" EXT="dds"/>
+      <asset TYPE="worldtour/hypeTotal" PATH="imgAssets/worldtour/hypeTotal" PATTERN="hype_*" EXT="dds"/>
+      <asset TYPE="worldtour/scrims" PATH="imgAssets/worldtour/scrims" EXT="dds"/>
+      <asset TYPE="worldtour/storeItem" PATH="imgAssets/worldtour/storeItem" PATTERN="rarity_*" EXT="dds"/>
+      <asset TYPE="worldtour/coin" PATH="imgAssets/worldtour/coin" PATTERN="Icon_*" EXT="dds"/>
+      <asset TYPE="worldtour/teamSelect" PATH="imgAssets/worldtour/teamSelect" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="worldtour/online" PATH="imgAssets/worldtour/online" EXT="dds"/>
+      <asset TYPE="worldtour/online/homeTurf" PATH="imgAssets/worldtour/online/homeTurf" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="worldtour/onboarding" PATH="imgAssets/worldtour/onboarding" PATTERN="onboarding_*" EXT="dds"/>
+      <asset TYPE="worldtour/hub" PATH="imgAssets/worldtour/hub" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="worldtour/hub/background" PATH="imgAssets/worldtour/hub/background" PATTERN="*_active" PATTERN_SECONDARY="*_inactive" EXT="dds"/>
+      <asset TYPE="worldtour/hub/contextual" PATH="imgAssets/worldtour/hub/contextual" FALLBACK="notfound" EXT="dds"/>
+      <asset TYPE="worldtour/hub/icons" PATH="imgAssets/worldtour/hub/icons" FALLBACK="notfound" EXT="dds"/>
+      <asset TYPE="worldtour/event" PATH="imgAssets/worldtour/event" EXT="dds"/>
+	  <asset TYPE="worldtour/squadbattles" PATH="imgAssets/worldtour/squadbattles" EXT="dds"/>
+      <asset TYPE="worldtour/event/modetype" PATH="imgAssets/worldtour/event/modetype" PATTERN="ModeType_*" FALLBACK="notfound" EXT="dds"/>
+      <asset TYPE="worldtour/worldmap" PATH="imgAssets/worldtour/worldmap" EXT="dds"/>
+      <asset TYPE="worldtour/worldmap/eventLarge" PATH="imgAssets/worldtour/worldmap/eventLarge" PATTERN="event_*" EXT="dds"/>
+      <asset TYPE="worldtour/worldmap/eventSmall" PATH="imgAssets/worldtour/worldmap/eventSmall" PATTERN="event_*" EXT="dds"/>
+      <asset TYPE="worldtour/worldmap/GFX" PATH="imgAssets/worldtour/worldmap/GFX" PATTERN="GFX_*" EXT="dds"/>
+      <asset TYPE="worldtour/worldmap/hubIndicator" PATH="imgAssets/worldtour/worldmap/hubIndicator" PATTERN="hub_*" EXT="dds"/>
+      <asset TYPE="worldtour/worldmap/squadContext" PATH="imgAssets/worldtour/worldmap/squadContext" PATTERN="squad_*" FALLBACK="squad_placeholder" EXT="dds"/>
+      <asset TYPE="worldtour/worldmap/locationsContext" PATH="imgAssets/worldtour/worldmap/locationsContext" PATTERN="location_*" FALLBACK="notfound" EXT="dds"/>
+      <asset TYPE="worldtour/playerGrowth" PATH="imgAssets/worldtour/playerGrowth" EXT="dds"/>
+      <asset TYPE="worldtour/titles" PATH="imgAssets/worldtour/playerGrowth/titleAssets/" PATTERN="supertitle_*" EXT="dds"/>
+      <asset TYPE="worldtour/playerGrowth/tiles" PATH="imgAssets/worldtour/playerGrowth/tileAssets/" EXT="dds"/>
+      <asset TYPE="worldtour/teamInfo/GFX" PATH="imgAssets/worldtour/teamInfo/GFX" PATTERN="GFX_*" EXT="dds"/>
+      <asset TYPE="worldtour/teamInfo/homeTurf" PATH="imgAssets/worldtour/teamInfo/homeTurf" PATTERN="hometurf_*" EXT="dds"/>
+      <asset TYPE="worldtour/teamInfo/icon" PATH="imgAssets/worldtour/teamInfo/icon" EXT="dds"/>
+      <asset TYPE="worldtour/postMatchFlow" PATH="imgAssets/worldtour/postMatchFlow" EXT="dds"/>
+      <asset TYPE="worldtour/storyEnd" PATH="imgAssets/worldtour/storyEnd" PATTERN="background_*" EXT="dds"/>
+      <asset TYPE="worldtour/squadbattles" PATH="imgAssets/worldtour/squadbattles" EXT="dds"/>
+      <asset TYPE="worldtour/squadbattles/featuredstars" PATH="imgAssets/worldtour/squadbattles/featuredstars" PATTERN="p*" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="worldtour/squadbattles/featureditem" PATH="imgAssets/worldtour/squadbattles/featureditem" PATTERN="featureditem_*" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="worldtour/squadbattles/icons" PATH="imgAssets/worldtour/squadbattles/icons" EXT="dds"/>
+      <asset TYPE="worldtour/stadiumsvolta" PATH="imgAssets/worldtour/stadiumsvolta" EXT="dds" FALLBACK="notfound"/>
+      <asset TYPE="worldtour/newUserModeSelect" PATH="imgAssets/worldtour/newUserModeSelect" EXT="dds" FALLBACK="notfound"/>
+
+      <!-- Crest -->
+      <asset TYPE="crest" PATH="imgAssets/crest/" PATTERN="dark/l*" PATTERN_SECONDARY="light/l*" EXT="dds"/>
+      <asset TYPE="crest16x16" PATH="imgAssets/crest16x16/" PATTERN="dark/l*" PATTERN_SECONDARY="light/l*" EXT="dds"/>
+      <asset TYPE="crest32x32" PATH="imgAssets/crest32x32/" PATTERN="dark/l*" PATTERN_SECONDARY="light/l*" EXT="dds"/>
+      <asset TYPE="crest50x50" PATH="imgAssets/crest50x50/" PATTERN="dark/l*" PATTERN_SECONDARY="light/l*" EXT="dds"/>
+      <asset TYPE="crest64x64" PATH="imgAssets/crest64x64/" PATTERN="dark/l*" PATTERN_SECONDARY="light/l*" EXT="dds"/>
+      <asset TYPE="crest/light" PATH="imgAssets/crest/" PATTERN="light/l*" EXT="dds"/>
+      <asset TYPE="crest/dark" PATH="imgAssets/crest/" PATTERN="dark/l*" EXT="dds"/>
+      <asset TYPE="crest16x16/light" PATH="imgAssets/crest16x16/" PATTERN="light/l*" EXT="dds"/>
+      <asset TYPE="crest16x16/dark" PATH="imgAssets/crest16x16/" PATTERN="dark/l*" EXT="dds"/>
+      <asset TYPE="crest32x32/light" PATH="imgAssets/crest32x32/" PATTERN="light/l*" EXT="dds"/>
+      <asset TYPE="crest32x32/dark" PATH="imgAssets/crest32x32/" PATTERN="dark/l*" EXT="dds"/>
+      <asset TYPE="crest50x50/light" PATH="imgAssets/crest50x50/" PATTERN="light/l*" EXT="dds"/>
+      <asset TYPE="crest50x50/dark" PATH="imgAssets/crest50x50/" PATTERN="dark/l*" EXT="dds"/>
+      <asset TYPE="crest64x64/light" PATH="imgAssets/crest64x64/" PATTERN="light/l*" EXT="dds"/>
+      <asset TYPE="crest64x64/dark" PATH="imgAssets/crest64x64/" PATTERN="dark/l*" EXT="dds"/>
+      <asset TYPE="crest512x512/ssf" PATH="imgAssets/crest512x512/" PATTERN="ssf/l*" EXT="dds"/>
+      <asset TYPE="crest/locker" PATH="imgAssets/crest/" PATTERN="dark/l*" EXT="dds"/>
+      <asset TYPE="crestfuttile" PATH="imgAssets/crest/" PATTERN="dark/l*" PATTERN_SECONDARY="light/l*" FALLBACK="dark/l130000" FALLBACK_SECONDARY="light/l130000" EXT="dds"/>
+
+      <asset TYPE="crestMLS" PATH="imgAssets/crestMLS/" EXT="dds"/>
+      <asset TYPE="teamLogoBackground" PATH="artAssets/teamLogoBackground/" PATTERN="tlgb_*" EXT="swf"/>
+      <asset TYPE="MiniFlags" PATH="artAssets/MiniFlags/" PATTERN="Flag_*" EXT="swf"/>
+      <asset TYPE="newspapers" PATH="artAssets/newspapers/" PATTERN="np_*" EXT="swf"/>
+      <asset TYPE="newspaperPrimary" PATH="artAssets/newspaperPrimary/" PATTERN="newsPrimary_*" EXT="swf"/>
+      <asset TYPE="newspaperSecondary" PATH="artAssets/newspaperSecondary/" PATTERN="newsSecondary_*" EXT="swf"/>
+      <asset TYPE="leagueLogos" PATH="imgAssets/league/" EXT="dds"/>
+
+      <!-- League -->
+      <asset TYPE="league" PATH="imgAssets/league/" PATTERN="dark/l*" PATTERN_SECONDARY="light/l*" EXT="dds"/>
+      <asset TYPE="league512x128" PATH="imgAssets/league512x128/" PATTERN="dark/l*" PATTERN_SECONDARY="light/l*" EXT="dds"/>
+      <asset TYPE="league512x512" PATH="imgAssets/league512x512/" PATTERN="dark/l*" PATTERN_SECONDARY="light/l*" EXT="dds"/>
+      <asset TYPE="leagueLogos_tiny" PATH="imgAssets/leagueLogos_tiny/" PATTERN="dark/l*" PATTERN_SECONDARY="light/l*" EXT="dds"/>
+      <asset TYPE="league/light" PATH="imgAssets/league/light/" PATTERN="l*" EXT="dds"/>
+      <asset TYPE="league/dark" PATH="imgAssets/league/dark/" PATTERN="l*" EXT="dds"/>
+      <asset TYPE="league512x128/light" PATH="imgAssets/league512x128/light/" PATTERN="l*" EXT="dds"/>
+      <asset TYPE="league512x128/dark" PATH="imgAssets/league512x128/dark/" PATTERN="l*" EXT="dds"/>
+      
+      <asset TYPE="competition" PATH="imgAssets/competition/" EXT="dds"/>
+
+      <!-- VPro Accomplishments -->
+      <asset TYPE="vproSkillsAndStats" PATH="imgAssets/vproSkillsAndStats/" PATTERN="dark/vproSkillsAndStats*" PATTERN_SECONDARY="light/vproSkillsAndStats*" EXT="dds"/>
+      <asset TYPE="vproSkillsAndStats/light" PATH="imgAssets/vproSkillsAndStats/light/" PATTERN="vproSkillsAndStats*" EXT="dds"/>
+      <asset TYPE="vproSkillsAndStats/dark" PATH="imgAssets/vproSkillsAndStats/dark/" PATTERN="vproSkillsAndStats*" EXT="dds"/>
+
+      <asset TYPE="genericManagerHeads" PATH="imgAssets/genericManagerHeads/" PATTERN="gmh*" EXT="dds"/>
+      <asset TYPE="genericManagerOutfits" PATH="imgAssets/genericManagerOutfits/" PATTERN="gmo_*" EXT="dds"/>
+
+      <asset TYPE="ScoutingMaps" PATH="artAssets/ScoutingMaps/" PATTERN="SM_*" EXT="swf"/>
+      <asset TYPE="createPlayer/cp_roottoggle" PATH="artAssets/createPlayer/cp_roottoggle/" PATTERN="icon_*" EXT="swf"/>
+      <asset TYPE="cupIcons" PATH="artAssets/cupIcons/" PATTERN="c*" EXT="swf"/>
+
+      <!-- Create Player -->
+      <asset TYPE="createPlayer/browColor" PATH="artAssets/createPlayer/browColor/" PATTERN="Brow_*" EXT="swf"/>
+      <asset TYPE="createPlayer/facialHairColor" PATH="artAssets/createPlayer/facialHairColor/" PATTERN="Facial_Hair_*" EXT="swf"/>
+      <asset TYPE="createPlayer/hairColor" PATH="artAssets/createPlayer/hairColor/" PATTERN="Color_Hair_*" EXT="swf"/>
+      <asset TYPE="createPlayer/eyeColor" PATH="artAssets/createPlayer/eyeColor/" PATTERN="Eye_*" EXT="swf"/>
+      <asset TYPE="createPlayer/skinTone" PATH="artAssets/createPlayer/skinTone/" PATTERN="Complexion_*" EXT="swf"/>
+
+      <asset TYPE="transferStatusIcons" PATH="artAssets/transferStatusIcons/" PATTERN="transferStatusIcons_*" EXT="swf"/>
+      <asset TYPE="regionIcon" PATH="artAssets/regionIcon/" PATTERN="regionIcon_*" EXT="swf"/>
+
+      <asset TYPE="trainer" PATH="imgAssets/trainer/" PATTERN="trainer_*" EXT="dds"/>
+      <asset TYPE="trainerVolta" PATH="imgAssets/trainerVolta/" PATTERN="trainer_*" EXT="dds"/>
+      <asset TYPE="trophy" PATH="imgAssets/trophy/" PATTERN="t*" EXT="dds"/>
+      <asset TYPE="trophy256x256" PATH="imgAssets/trophy256x256/" PATTERN="t*" EXT="dds"/>
+      <asset TYPE="trophycabinet" PATH="imgAssets/trophycabinet/" EXT="dds"/>
+
+      <asset TYPE="cmScoutHeads" PATH="artAssets/cmScoutHeads/" PATTERN="sh_*" EXT="swf"/>
+      <asset TYPE="kicktakerIcons_Large" PATH="artAssets/kicktakerIcons_Large/" PATTERN="kicktaker_*" EXT="swf"/>
+      <asset TYPE="laligaAnimatedCrest/128x128" PATH="artAssets/laligaAnimatedCrest/128x128/" PATTERN="sh_*" EXT="swf"/>
+      <asset TYPE="laligaAnimatedCrest/384x384" PATH="artAssets/laligaAnimatedCrest/384x384/" PATTERN="sh_*" EXT="swf"/>
+      <asset TYPE="languageSelectFlags" PATH="imgAssets/languageSelectFlags/" PATTERN="ls*" EXT="dds"/>
+      <asset TYPE="region" PATH="artAssets/region/" PATTERN="region_*" EXT="swf"/>
+      <asset TYPE="avatarIcons" PATH="artAssets/avatarIcons/" PATTERN="icon_*" EXT="swf"/>
+      <asset TYPE="onlineLeagueLogos" PATH="artAssets/onlineLeagueLogos/" PATTERN="l*" EXT="swf"/>
+      <asset TYPE="onlineLeagueLogos_sm" PATH="artAssets/onlineLeagueLogos_sm/" PATTERN="l*" EXT="swf"/>
+      <asset TYPE="onlineLeagueTrophies" PATH="artAssets/onlineLeagueTrophies/" PATTERN="t*" EXT="swf"/>
+      <asset TYPE="onlineLeagueTrophies_sm" PATH="artAssets/onlineLeagueTrophies_sm/" PATTERN="t*" EXT="swf"/>
+      <asset TYPE="podcast" PATH="artAssets/podcast/" PATTERN="podcast_*" EXT="swf"/>
+
+      <asset TYPE="balls" PATH="imgAssets/balls/" EXT="dds"/>
+      <asset TYPE="settingsIcn" PATH="imgAssets/settingsIcn/" EXT="dds"/>
+      <asset TYPE="settingsImg" PATH="imgAssets/settingsImg/" EXT="dds"/>
+      <asset TYPE="stadium" PATH="imgAssets/stadium/" PATTERN="stadium_*" EXT="dds"/>
+      <asset TYPE="stadiumVoltaSmall" PATH="imgAssets/stadiumVoltaSmall/" EXT="dds"/>
+      <asset TYPE="stadiumVoltaBig" PATH="imgAssets/stadiumVoltaBig/" EXT="dds"/>
+
+      <asset TYPE="badges" PATH="artAssets/badges/" PATTERN="badges_*" EXT="swf"/>
+      <asset TYPE="smallBadges" PATH="artAssets/smallBadges/" PATTERN="badges_*" EXT="swf"/>
+      <asset TYPE="personalityBadges" PATH="artAssets/personalityBadges/" PATTERN="badges_*" EXT="swf"/>
+      <asset TYPE="personalityBadgesSmall" PATH="artAssets/personalityBadgesSmall/" PATTERN="badges_*" EXT="swf"/>
+      <asset TYPE="personalityBadgesBig" PATH="artAssets/personalityBadgesBig/" PATTERN="badges_*" EXT="swf"/>
+      <asset TYPE="playerTraitsLarge" PATH="imgAssets/playerTraitsLarge/" PATTERN="traits_lg*" EXT="dds"/>
+      <asset TYPE="playerTraitsSmall" PATH="imgAssets/playerTraitsSmall/" PATTERN="traits_sm*" EXT="dds"/>
+
+      <asset TYPE="silhouettesWithOutLine" PATH="artAssets/silhouettesWithOutLine/" PATTERN="silhouettes_*" EXT="swf"/>
+
+      <asset TYPE="countryMaps" PATH="imgAssets/countryMaps/" PATTERN="c*" EXT="dds"/>
+      <asset TYPE="countryShapes" PATH="imgAssets/countryShapes/" PATTERN="c*" EXT="dds"/>
+      <asset TYPE="countryFlags" PATH="artAssets/countryFlags/" PATTERN="f_*" EXT="swf"/>
+
+      <asset TYPE="webbrowserPrimary" PATH="artAssets/webbrowserPrimary/" PATTERN="webPrimary_*" EXT="swf"/>
+      <asset TYPE="tournamentTypeLogo" PATH="artAssets/tournamentTypeLogo/" PATTERN="tournyTypeIcon_*" EXT="swf"/>
+      <asset TYPE="ColourPicker" PATH="artAssets/ColourPicker/" PATTERN="swatchBack_*" EXT="swf"/>
+      <asset TYPE="demoAssets" PATH="artAssets/demoAssets/" PATTERN="screenshot*" EXT="swf"/>
+      <asset TYPE="storeCategories" PATH="artAssets/storeCategories/" PATTERN="category_*" EXT="swf"/>
+
+      <asset TYPE="storeItems" PATH="imgAssets/storeItems/" PATTERN="item_*" EXT="dds"/>
+
+      <asset TYPE="roomtoggleicons" PATH="external/ion_online/artAssets/roomtoggleicons/" PATTERN="icon_*" EXT="swf"/>
+      <asset TYPE="dynamicMessageIcons" PATH="artAssets/dynamicMessageIcons/" PATTERN="icon_*" EXT="swf"/>
+      <asset TYPE="cmArticleImage" PATH="artAssets/cmArticleImage/" PATTERN="cmArtImg_*" EXT="swf"/>
+      <asset TYPE="cmAwards" PATH="artAssets/cmAwards/" PATTERN="award_*" EXT="swf"/>
+      <asset TYPE="cmSetup" PATH="artAssets/cmSetup/" PATTERN="cmSetup_*" EXT="swf"/>
+      <asset TYPE="cmManagerPreferences" PATH="artAssets/cmManagerPreferences/" PATTERN="cmManagerPreferences_*" EXT="swf"/>
+      <asset TYPE="cmCalendarCompetitions" PATH="artAssets/cmCalendarCompetitions/" PATTERN="cmComp_*" EXT="swf"/>
+      <asset TYPE="cmSignatures" PATH="artAssets/cmSignatures/" PATTERN="sg_*" EXT="swf"/>
+      <asset TYPE="cmSignaturesSmall" PATH="artAssets/cmSignaturesSmall/" PATTERN="sg_*" EXT="swf"/>
+      <asset TYPE="cmPlayerType" PATH="artAssets/cmPlayerType/" PATTERN="pt_*" EXT="swf"/>
+
+      <asset TYPE="cmNews" PATH="imgAssets/cmNews/" PATTERN="nw_*" EXT="dds"/>
+      <asset TYPE="cmNews/Screenshots" PATH="imgAssets/cmNews/screenshots" PATTERN="screenshot_*" EXT="jpg"/>
+      <asset TYPE="cmNews/Wipes" PATH="imgAssets/cmNews/wipes" PATTERN="nw_wipe_*" EXT="dds"/>
+
+      <asset TYPE="specialMenuItems" PATH="artAssets/specialMenuItems/" PATTERN="sp_*" EXT="swf"/>
+      <asset TYPE="easfcLogos" PATH="pow/imgAssets/logos/" EXT="dds"/>
+      <asset TYPE="easfcBackgrounds" PATH="pow/imgAssets/backgrounds/" EXT="dds"/>
+
+      <asset TYPE="kinectHelp" PATH="imgAssets/kinectHelp/" PATTERN="kh*" EXT="dds"/>
+
+      <asset TYPE="seasonsDivisionCrests" PATH="imgAssets/seasonsDivisionCrests/h2h/" PATTERN="DivisionCrest*" EXT="dds"/>
+      <asset TYPE="coopSeasonsDivisionCrests" PATH="imgAssets/seasonsDivisionCrests/coop/" PATTERN="DivisionCrest*" EXT="dds"/>
+
+      <asset TYPE="matchDayLive" PATH="imgAssets/matchDayLive/" EXT="dds"/>
+      <asset TYPE="matchDayLive/logos" PATH="imgAssets/matchDayLive/logos/" EXT="dds"/>
+      <asset TYPE="matchDayLive/newsProviders" PATH="imgAssets/matchDayLive/newsProviders/" EXT="dds"/>
+      <asset TYPE="matchDayLive/news" PATH="imgAssets/matchDayLive/news/" EXT="dds"/>
+
+      <asset TYPE="personality" PATH="imgAssets/personality/" PATTERN="personality*Active" PATTERN_SECONDARY="personality*" FALLBACK="personality*" FALLBACK_SECONDARY="personality*Active" EXT="dds"/>
+
+      <asset TYPE="scoutNetwork" PATH="imgAssets/scoutNetwork/" PATTERN="scoutNetwork*" EXT="dds"/>
+      <asset TYPE="scoutInstructions" PATH="imgAssets/scoutInstructions/" PATTERN="scoutInstructions*" EXT="dds"/>
+      <asset TYPE="upgradeBoost" PATH="imgAssets/upgradeBoost/" PATTERN="upgradeBoost*" EXT="dds"/>
+      <asset TYPE="upgradeUnlock" PATH="imgAssets/upgradeUnlock/" PATTERN="upgradeUnlock*" EXT="dds"/>
+      <asset TYPE="skillGames" PATH="imgAssets/skillGames/" PATTERN="skillGames*" EXT="dds"/>
+      <asset TYPE="skillGamesComponents" PATH="imgAssets/skillGamesComponents/" EXT="dds"/>
+      <asset TYPE="skillGamesWide" PATH="imgAssets/skillGamesWide/" PATTERN="skillGamesWide*" EXT="dds"/>
+      <asset TYPE="skillGamesSmall" PATH="imgAssets/skillGamesSmall/" PATTERN="skillGamesSmall*" EXT="dds"/>
+      <asset TYPE="cmSponsors" PATH="imgAssets/cmSponsors/" PATTERN="cmSponsors*" EXT="dds"/>
+      <asset TYPE="adSponsors512x64" PATH="imgAssets/adSponsors512x64/" PATTERN="adSponsors512x64*" EXT="dds"/>
+      <asset TYPE="adSponsors768x64" PATH="imgAssets/adSponsors768x64/" PATTERN="adSponsors768x64*" EXT="dds"/>
+      <asset TYPE="playerRoleIcon" PATH="imgAssets/playerRoleIcon/" PATTERN="playerRoleIcon*" EXT="dds"/>
+      <asset TYPE="playerRoleIconLarge" PATH="imgAssets/playerRoleIconLarge/" PATTERN="playerRoleIconLarge*" EXT="dds"/>
+      <asset TYPE="tacticsIcon" PATH="imgAssets/tacticsIcon/" PATTERN="tacticsIcon*" EXT="dds"/>
+      <asset TYPE="playerInstructionIcon" PATH="imgAssets/playerInstructionIcon/" PATTERN="playerInstructionIcon*" EXT="dds"/>
+      <asset TYPE="cmPreSeasonTour" PATH="imgAssets/cmPreSeasonTour/" PATTERN="*" EXT="dds"/>
+      <asset TYPE="cmIntroOffer" PATH="imgAssets/cmIntroOffer/" PATTERN="cmIntroOffer*" EXT="dds"/>
+			<asset TYPE="cmSchedulingBg" PATH="imgAssets/cmSchedulingBg/" PATTERN="cmSchedulingBg*" EXT="dds"/>
+      <asset TYPE="eatrax" PATH="imgAssets/eatrax/" PATTERN="eatrax*" EXT="dds"/>
+      <asset TYPE="eatrax_thumbs" PATH="imgAssets/eatrax_thumbs/" PATTERN="eatrax_thumbs*" EXT="dds"/>
+      <asset TYPE="ssftrax" PATH="imgAssets/ssftrax/" PATTERN="ssftrax*" EXT="dds"/>
+      <asset TYPE="ssftrax_thumbs" PATH="imgAssets/ssftrax_thumbs/" PATTERN="ssftrax_thumbs*" EXT="dds"/>
+      <asset TYPE="matchHighlights" PATH="imgAssets/matchHighlights/" PATTERN="matchHighlights*" EXT="dds"/>
+      <asset TYPE="cmCalendar" PATH="imgAssets/cmCalendar/" PATTERN="cmCalendar*" FALLBACK="cmCalendar*_Active" FALLBACK_SECONDARY="cmCalendar*_Inactive" EXT="dds"/>
+      <asset TYPE="cmCalendarMatchday" PATH="imgAssets/cmCalendar/matchday" PATTERN="md*" FALLBACK="default" EXT="dds"/>
+      <asset TYPE="cmTeamSchedule" PATH="imgAssets/cmTeamSchedule" EXT="dds"/>
+      <asset TYPE="silhouettes" PATH="imgAssets/silhouettes/" PATTERN="silhouettes*" EXT="dds"/>
+      <asset TYPE="demoSellSheet" PATH="imgAssets/demoSellSheet/" PATTERN="demoSellSheet*" EXT="dds"/>
+
+      <asset TYPE="story/matchday" PATH="imgAssets/story/matchday/" PATTERN="*_Active" PATTERN_SECONDARY="*_Nonactive" EXT="dds"/>
+      <asset TYPE="smtraining/categories" PATH="imgAssets/smtraining/categories/" PATTERN="*_Active" PATTERN_SECONDARY="*_Nonactive" EXT="dds"/>
+      <asset TYPE="playerGrowth/icons" PATH="imgAssets/playerGrowth/icons/" EXT="dds"/>
+      <asset TYPE="kickOffIcon/matchSelect" PATH="imgAssets/kickOffIcon/matchSelect/" PATTERN="*_tileIcon" EXT="dds"/>
+      <asset TYPE="kickOffIcon/preMatch" PATH="imgAssets/kickOffIcon/preMatch/" EXT="dds"/>
+      <asset TYPE="smtraining/categoriesSlot" PATH="imgAssets/smtraining/categoriesSlot/" EXT="dds"/>
+      <asset TYPE="smtraining/categoryIcons" PATH="imgAssets/smtraining/categoryIcons/" EXT="dds"/>
+      <asset TYPE="training/categories" PATH="imgAssets/training/categories/" EXT="dds"/>
+      <asset TYPE="training/slots" PATH="imgAssets/training/slots/" EXT="dds"/>
+      <asset TYPE="training/presets" PATH="imgAssets/training/presets/" EXT="dds"/>
+      <asset TYPE="training/tileStateIcons" PATH="imgAssets/training/tileStateIcons/" EXT="dds"/>
+      <asset TYPE="transitionGraphic" PATH="imgAssets/transitionGraphic/" PATTERN="gfx_*" EXT="dds"/>
+      <asset TYPE="eventIcon" PATH="imgAssets/eventIcon/" EXT="dds"/>
+      <asset TYPE="eventIcon32x32" PATH="imgAssets/eventIcon/32x32" EXT="dds"/>
+      <asset TYPE="eventIcon64x64" PATH="imgAssets/eventIcon/64x64" EXT="dds"/>
+      <asset TYPE="story" PATH="imgAssets/story/" EXT="dds"/>
+      <asset TYPE="smrewards" PATH="imgAssets/smrewards/" EXT="dds"/>
+      <asset TYPE="socialMedia/icons" PATH="imgAssets/socialMedia/icons/" EXT="dds"/>
+      <asset TYPE="socialMedia/images_lg" PATH="imgAssets/socialMedia/images_lg/" EXT="dds"/>
+      <asset TYPE="socialMedia/images_sm" PATH="imgAssets/socialMedia/images_sm/" EXT="dds"/>
+      <asset TYPE="socialMedia/trending" PATH="imgAssets/socialMedia/trending/" EXT="dds"/>
+      <asset TYPE="socialMedia/trending_sm" PATH="imgAssets/socialMedia/trending_sm/" EXT="dds"/>
+      <asset TYPE="socialMedia/users" PATH="imgAssets/socialMedia/users/" EXT="dds"/>
+      <asset TYPE="socialMedia" PATH="imgAssets/socialMedia/" EXT="dds"/>
+      <asset TYPE="tiles/city" PATH="imgAssets/tiles/city/" PATTERN="*_active" PATTERN_SECONDARY="*_inActive"  EXT="dds"/>
+      <asset TYPE="tiles/story" PATH="imgAssets/tiles/story/" EXT="dds"/>
+      <asset TYPE="tiles/avatar" PATH="imgAssets/tiles/avatar/" EXT="dds"/>
+      <asset TYPE="wardrobe/tops0" PATH="imgAssets/wardrobe/tops0" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="wardrobe/tops1" PATH="imgAssets/wardrobe/tops1" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="wardrobe/headwear" PATH="imgAssets/wardrobe/headwear" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="wardrobe/footwear1" PATH="imgAssets/wardrobe/footwear1" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="wardrobe/footwear0" PATH="imgAssets/wardrobe/footwear0" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="wardrobe/bottoms1" PATH="imgAssets/wardrobe/bottoms1" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="wardrobe/bottoms0" PATH="imgAssets/wardrobe/bottoms0" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="wardrobe/accessories" PATH="imgAssets/wardrobe/accessories" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="accessories" PATH="imgAssets/accessories" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="anatomy" PATH="imgAssets/anatomy" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="boots" PATH="imgAssets/boots" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="clothing" PATH="imgAssets/clothing" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="facialhairstyle" PATH="imgAssets/facialhairstyle" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="hairstyle" PATH="imgAssets/hairstyle" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="tattoo" PATH="imgAssets/tattoo" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="playofmatchanimation" PATH="imgAssets/playOfMatchAnimations" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="shoes" PATH="imgAssets/shoe" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="gkglove" PATH="imgAssets/gkglove" FALLBACK="notFound" EXT="dds"/>
+
+      <asset TYPE="avatar" PATH="imgAssets/avatar" EXT="dds"/>
+      <asset TYPE="avatar/icons" PATH="imgAssets/avatar/icons" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="avatar/animations" PATH="imgAssets/avatar/animations" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="avatar/tattoos" PATH="imgAssets/avatar/tattoos" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="avatar/kit/ankleTape" PATH="imgAssets/avatar/kit/ankleTape" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="avatar/kit/gloves" PATH="imgAssets/avatar/kit/gloves" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="avatar/kit/kitFit" PATH="imgAssets/avatar/kit/kitFit" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="avatar/kit/kitGkPants" PATH="imgAssets/avatar/kit/kitGkPants" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="avatar/kit/kitSleeves" PATH="imgAssets/avatar/kit/kitSleeves" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="avatar/kit/kitStyle" PATH="imgAssets/avatar/kit/kitStyle" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="avatar/kit/kitSock" PATH="imgAssets/avatar/kit/kitSock" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="avatar/kit/leftWrist" PATH="imgAssets/avatar/kit/leftWrist" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="avatar/kit/rightWrist" PATH="imgAssets/avatar/kit/rightWrist" FALLBACK="notFound" EXT="dds"/>
+      <asset TYPE="tiles/pressUpsell" PATH="imgAssets/tiles/pressUpsell/" EXT="dds"/>
+      <asset TYPE="smMatchRewards" PATH="imgAssets/smMatchRewards/" EXT="dds"/>
+      <asset TYPE="contentOnDevice" PATH="imgAssets/contentOnDevice/" EXT="dds"/>
+      <asset TYPE="storyRealPlayerPartnership/partnerHub" PATH="imgAssets/storyRealPlayerPartnership/partnerHub/" EXT="dds"/>
+      <asset TYPE="storyRealPlayerPartnership/heads" PATH="imgAssets/storyRealPlayerPartnership/heads/" EXT="dds"/>
+      <asset TYPE="cmStandingsHub" PATH="imgAssets/cmStandingsHub/" EXT="dds"/>
+      <asset TYPE="cmInteractiveSim" PATH="imgAssets/interactiveSim/" EXT="dds"/>
+	  <asset TYPE="cmTeamSchedule/impact" PATH="imgAssets/cmTeamSchedule/impact/" PATTERN="impact*" EXT="dds"/>
+
+      <asset TYPE="storyHeroSelection" PATH="imgAssets/storyHeroSelection/" PATTERN="hero_*" EXT="dds"/>
+      <asset TYPE="cmPreSeasonTour/trophy" PATH="imgAssets/cmPreSeasonTour/trophy/" PATTERN="trophy*" EXT="dds"/>
+      <asset TYPE="playerGrowth/categories" PATH="imgAssets/playerGrowth/categories/" PATTERN="categories*" EXT="dds"/>
+      <asset TYPE="playerGrowth/traits_sm" PATH="imgAssets/playerGrowth/traits_sm/" PATTERN="traits_sm*" EXT="dds"/>
+      <asset TYPE="playerGrowth/traits_md" PATH="imgAssets/playerGrowth/traits_md/" PATTERN="traits_md*" EXT="dds"/>
+      <asset TYPE="playerGrowth/traits_lg" PATH="imgAssets/playerGrowth/traits_lg/" PATTERN="traits_lg*" EXT="dds"/>
+      <asset TYPE="playerGrowth/points" PATH="imgAssets/playerGrowth/points/" PATTERN="points*" EXT="dds"/>
+      <asset TYPE="positionSelect/categories" PATH="imgAssets/positionSelect/categories/" PATTERN="categories*" EXT="dds"/>
+      <asset TYPE="training/energy" PATH="imgAssets/training/energy/" PATTERN="energy*" EXT="dds"/>
+      <asset TYPE="training/grade" PATH="imgAssets/training/grade/" PATTERN="grade*" EXT="dds"/>
+      <asset TYPE="training/actionIcon" PATH="imgAssets/training/actionIcon/" PATTERN="actionIcon*" EXT="dds"/>
+      <asset TYPE="training/widget" PATH="imgAssets/training/widget/" PATTERN="widget*" EXT="dds"/>
+      <asset TYPE="training/pause" PATH="imgAssets/training/pause/" PATTERN="pause*" EXT="dds"/>
+      <asset TYPE="training/players" PATH="imgAssets/training/players/" PATTERN="players*" EXT="dds"/>
+      <asset TYPE="training/sharpness" PATH="imgAssets/training/sharpness/" PATTERN="sharpness*" EXT="dds"/>
+      <asset TYPE="clubInfo/icon" PATH="imgAssets/clubInfo/icon/" PATTERN="icon*" EXT="dds"/>
+      <asset TYPE="clubInfo/trophy" PATH="imgAssets/clubInfo/trophy/" PATTERN="trophy*" EXT="dds"/>
+
+      <asset TYPE="boot" PATH="imgAssets/boot/" PATTERN="boot_*" EXT="dds"/>
+      <asset TYPE="bootsSponsorship" PATH="imgAssets/bootsSponsorship/" PATTERN="bootsSponsorship_*" EXT="dds"/>
+      <asset TYPE="gridCellDecorator" PATH="imgAssets/gridCellDecorator/" PATTERN="gridCellDecorator_*" EXT="dds"/>
+      <asset TYPE="itemSelect" PATH="imgAssets/itemSelect/" PATTERN="itemSelect_*" EXT="dds"/>
+      <asset TYPE="panelDecorator" PATH="imgAssets/panelDecorator/" PATTERN="panelDecorator_*" EXT="dds"/>
+      <asset TYPE="liveMessage" PATH="imgAssets/liveMessage/" PATTERN="liveMessage_*" EXT="dds"/>
+
+      <asset TYPE="WomenTournamentImportedPlayers" PATH="imgAssets/WomenTournamentImportedPlayers/" PATTERN="icon_*" EXT="dds"/>
+      <asset TYPE="storyRealPlayerPartnership/playerSelect" PATH="imgAssets/storyRealPlayerPartnership/playerSelect/" PATTERN="playerSelect_*_Active" PATTERN_SECONDARY="playerSelect_*_Nonactive" EXT="dds"/>
+      <asset TYPE="story/manager" PATH="imgAssets/story/manager/" PATTERN="manager_*" EXT="dds"/>
+      <asset TYPE="story/background" PATH="imgAssets/story/background/" PATTERN="bg_ch*" EXT="dds"/>
+      <asset TYPE="story/background/city" PATH="imgAssets/story/background/city/" PATTERN="city_*" EXT="dds"/>
+      <asset TYPE="story/reactivity" PATH="imgAssets/story/reactivity/" PATTERN="reactivity_*" EXT="dds"/>
+      <asset TYPE="clubInfo/manager" PATH="imgAssets/clubInfo/manager/" PATTERN="manager_*" EXT="dds"/>
+      <asset TYPE="clubInfo/club" PATH="imgAssets/clubInfo/club/" PATTERN="club_*" EXT="dds"/>
+      <asset TYPE="clubInfo/city" PATH="imgAssets/clubInfo/city/" PATTERN="city_*" EXT="dds"/>
+      <asset TYPE="clubInfo/backing" PATH="imgAssets/clubInfo/backing/" PATTERN="backing_*" EXT="dds"/>
+      <asset TYPE="bootsSponsorship/icon" PATH="imgAssets/bootsSponsorship/icon/" PATTERN="icon_*" EXT="dds"/>
+      <asset TYPE="kickOff/background" PATH="imgAssets/kickOff/background/" PATTERN="background_*" EXT="dds"/>
+      <asset TYPE="kickOff/tutorial" PATH="imgAssets/kickOff/tutorial/" EXT="dds"/>
+      <asset TYPE="kickOff/upsell" PATH="imgAssets/kickOff/upsell/" EXT="dds"/>
+      <asset TYPE="kickOffSideSelect" PATH="imgAssets/kickOff/sideselect/" EXT="dds"/>
+      <asset TYPE="kickOffLeaderboard" PATH="imgAssets/kickOff/leaderboard/" EXT="dds"/>
+      <asset TYPE="packTalent" PATH="imgAssets/packTalent/" PATTERN="talent_*" EXT="dds"/>
+
+      <asset TYPE="bootsSponsorship/preview" PATH="imgAssets/bootsSponsorship/preview/" PATTERN="bootsSponsorship_*" EXT="dds"/>
+
+      <asset TYPE="smobjectives" PATH="imgAssets/smobjectives/" PATTERN="*Active" PATTERN_SECONDARY="*Inactive" EXT="dds"/>
+      <asset TYPE="storyHeroCustomization" PATH="imgAssets/storyHeroCustomization/" PATTERN="*" FALLBACK="Notfound_0" EXT="dds"/>
+      <asset TYPE="storyHeroCustomizationTiles" PATH="imgAssets/tiles/story/" PATTERN="*_active" PATTERN_SECONDARY="*_inActive"  EXT="dds"/>
+
+      <asset TYPE="faceShape" PATH="imgAssets/customization/faceshape/" FALLBACK="notfound" EXT="dds"/>
+      <asset TYPE="skinTone" PATH="imgAssets/customization/skintone/" FALLBACK="notfound" EXT="dds"/>
+
+      <asset TYPE="fluxTab" PATH="imgAssets/fluxTab/" PATTERN="*" EXT="dds"/>
+      <asset TYPE="fluxStroke" PATH="imgAssets/fluxStroke/" PATTERN="*_active" PATTERN_SECONDARY="*_inactive" EXT="dds"/>
+      <asset TYPE="separatorLine" PATH="imgAssets/separatorLine/" PATTERN="SeparatorLine_*" FALLBACK="SeparatorLine_Stretch" EXT="dds"/>
+
+      <!-- COMPONENTS -->
+      <asset TYPE="Arrow" PATH="imgAssets/components/Arrow/" PATTERN="Arrow_*" FALLBACK="Arrow_Medium" EXT="dds"/>
+      <asset TYPE="Bar" PATH="imgAssets/components/Bar/" PATTERN="" EXT="dds"/>
+      <asset TYPE="BulletList" PATH="imgAssets/components/BulletList" PATTERN="*" EXT="dds"/>
+      <asset TYPE="CheckBox" PATH="imgAssets/components/CheckBox/" PATTERN="icon_*" FALLBACK="icon_bg" EXT="dds"/>
+      <asset TYPE="Graphs" PATH="imgAssets/components/Graphs/" PATTERN="" EXT="dds"/>
+      <asset TYPE="fifaScoreClock" PATH="imgAssets/components/fifaScoreClock/" PATTERN="" EXT="dds"/>
+      <asset TYPE="pitch" PATH="imgAssets/components/pitch/" PATTERN="" EXT="dds"/>
+
+      <!-- FLUX BACKGROUND image paths -->
+      <asset TYPE="careerHub" PATH="imgAssets/tiles/careerHub/" PATTERN="*_Active" PATTERN_SECONDARY="*_Inactive" FALLBACK="*" EXT="dds"/>
+      <asset TYPE="careerSettings" PATH="imgAssets/tiles/careerSettings/" PATTERN="*" EXT="dds"/>
+      <asset TYPE="careerType" PATH="imgAssets/tiles/careerType/" PATTERN="*" EXT="dds"/>
+      <asset TYPE="mainHub" PATH="imgAssets/tiles/mainHub/" PATTERN="*_Active" PATTERN_SECONDARY="*_Inactive" FALLBACK="*" EXT="dds"/>
+      <asset TYPE="mainHub/title" PATH="imgAssets/tiles/mainHub/title" EXT="dds"/>
+      <asset TYPE="mainHub/story" PATH="imgAssets/tiles/mainHub/story" PATTERN="*_active" PATTERN_SECONDARY="*_inactive" FALLBACK="hero_new_large_active" FALLBACK_SECONDARY="hero_new_large_inactive" EXT="dds"/>
+      <asset TYPE="seasonsMatchLobby" PATH="imgAssets/tiles/seasonsMatchLobby/" PATTERN="*_Active" PATTERN_SECONDARY="*_Inactive" FALLBACK="*" EXT="dds"/>
+      <asset TYPE="friendliesHub" PATH="imgAssets/tiles/friendliesHub/" PATTERN="*_Active" PATTERN_SECONDARY="*_Inactive" FALLBACK="*" EXT="dds"/>
+      <asset TYPE="clubHub" PATH="imgAssets/tiles/clubHub/" PATTERN="*_Active" PATTERN_SECONDARY="*_Inactive" FALLBACK="*" EXT="dds"/>
+      <asset TYPE="clubSearch" PATH="imgAssets/tiles/clubSearch/" PATTERN="*_Active" PATTERN_SECONDARY="*_Inactive" FALLBACK="*" EXT="dds"/>
+      <asset TYPE="clubTransfers" PATH="imgAssets/tiles/clubTransfers/" PATTERN="*_Active" PATTERN_SECONDARY="*_Inactive" FALLBACK="*" EXT="dds"/>
+      <asset TYPE="seasonsHub" PATH="imgAssets/tiles/seasonsHub/" PATTERN="*_Active" PATTERN_SECONDARY="*_Inactive" FALLBACK="*" EXT="dds"/>
+      <asset TYPE="spEventHub" PATH="imgAssets/tiles/spEventHub/" PATTERN="*_Active" PATTERN_SECONDARY="*_Inactive" FALLBACK="*" EXT="dds"/>
+      <asset TYPE="pauseHub" PATH="imgAssets/tiles/pauseHub/" PATTERN="*_Active" PATTERN_SECONDARY="*_Inactive" FALLBACK="*" EXT="dds"/>
+      <asset TYPE="sgt" PATH="imgAssets/tiles/sgt/" PATTERN="*_Active" PATTERN_SECONDARY="*_Inactive" FALLBACK="*" EXT="dds"/>
+      <asset TYPE="storyHub" PATH="imgAssets/tiles/story/" PATTERN="*_Active" PATTERN_SECONDARY="*_Inactive" FALLBACK="*" EXT="dds"/>
+      <asset TYPE="tournamentTypeHub" PATH="imgAssets/tiles/tournamentTypeHub/" PATTERN="*_Active" PATTERN_SECONDARY="*_Inactive" FALLBACK="*" EXT="dds"/>
+      <asset TYPE="womenHub" PATH="imgAssets/tiles/womenHub/" PATTERN="*_Active" PATTERN_SECONDARY="*_Inactive" FALLBACK="*" EXT="dds"/>
+      <asset TYPE="papSelection" PATH="imgAssets/tiles/careerPlayerSelection/" PATTERN="*_Active" PATTERN_SECONDARY="*_Inactive" FALLBACK="*" EXT="dds"/>
+      <asset TYPE="playTime" PATH="imgAssets/playTime/" PATTERN="*" EXT="dds"/>
+    </assets>
+
+    <color_set>
+
+      <!-- Current year major colors - Style Guide -->
+      <color NAME="COLOR_ULTRA_VIOLET" VALUE="0x7E42F5"/>
+      <color NAME="COLOR_NEOMINT" VALUE="0x29FFC9"/>
+      <color NAME="COLOR_BURNT_ORANGE" VALUE="0xFF5114"/>
+      <color NAME="COLOR_OBSIDIAN" VALUE="0x201E20"/>
+
+      <!-- Mod Major Colors -->
+      <color NAME="COLOR_MOD_BLUE" VALUE="0x2C9ECF"/>
+
+      <!-- Swatch Colors - Style Guide -->
+      <color NAME="COLOR_SWATCH_RED" VALUE="0xF02848"/>
+      <color NAME="COLOR_SWATCH_ORANGE" VALUE="0xFB7E19"/>
+      <color NAME="COLOR_SWATCH_YELLOW" VALUE="0xE5AC00"/>
+      <color NAME="COLOR_SWATCH_GREEN" VALUE="0x10AB11"/>
+      <color NAME="COLOR_SWATCH_LIGHT_GREEN" VALUE="0x30CD30"/>
+      <color NAME="COLOR_SWATCH_BLUE" VALUE="0x0030FF"/>
+      <color NAME="COLOR_SWATCH_CYAN" VALUE="0x32B6BF"/>
+      <color NAME="COLOR_SWATCH_PINK" VALUE="0xFD04F5"/>
+      <color NAME="COLOR_SWATCH_PURPLE" VALUE="0x4A05A7"/>
+      <color NAME="COLOR_SWATCH_MAGENTA" VALUE="0xFD04F5"/>
+      <color NAME="COLOR_SWATCH_GREY" VALUE="0x86919D"/>
+
+      <!-- Metallic Colors - Style Guide -->
+      <color NAME="COLOR_SWATCH_BRONZE" VALUE="0xC17B57"/>
+      <color NAME="COLOR_SWATCH_SILVER" VALUE="0xA4A9B4"/>
+      <color NAME="COLOR_SWATCH_GOLD" VALUE="0xF0BC1C"/>
+      <color NAME="COLOR_SWATCH_PLATINUM" VALUE="0x92BDD4"/>
+
+      <!--Grays-->
+      <color NAME="COLOR_OSLO_GRAY" VALUE="0x808486"/>
+      <color NAME="COLOR_FIORD_GRAY" VALUE="0x505a63"/>
+      <color NAME="COLOR_SHUTTLE_GRAY" VALUE="0x59646D"/>
+      <color NAME="COLOR_RIVER_BED_GRAY" VALUE="0x475460"/>
+      <color NAME="COLOR_OUTER_SPACE_GRAY" VALUE="0x353A3E"/>
+      <color NAME="COLOR_WOODSMOKE_GRAY" VALUE="0x171A21"/>
+      <color NAME="COLOR_MIRAGE_GRAY" VALUE="0x121E26"/>
+      <color NAME="COLOR_RAVEN_GRAY" VALUE="0x747E88"/>
+      <color NAME="COLOR_IRON_GRAY" VALUE="0xC9CED3"/>
+      <color NAME="COLOR_TROUT_GRAY" VALUE="0x505a63"/>
+      <color NAME="COLOR_LIGHT_SLATE_GRAY" VALUE="0x86919D"/>
+
+      <!-- B&W -->
+      <color NAME="COLOR_PURE_BLACK" VALUE="0x000000"/>
+      <color NAME="COLOR_PURE_WHITE" VALUE="0xFFFFFF"/>
+
+      <!-- General Colors -->
+      <color NAME="COLOR_DARK_GREY" VALUE="0x252b37"/> <!-- Used for training player free slot -->
+      <color NAME="COLOR_LAVENDER_GREY" VALUE="0xCACAD7"/>
+      <color NAME="COLOR_CELESTIAL_BLUE" VALUE="0x2FAEC0"/>
+      <color NAME="COLOR_ROW_COMPONENT_BLUE" VALUE="0x61a1c2"/>
+      <color NAME="COLOR_ACID_GREEN" VALUE="0xD2F311"/>
+      <color NAME="COLOR_ENTICEMENT_GREEN" VALUE="0xCFEC2B"/>
+      <color NAME="COLOR_SCOOTER_BLUE" VALUE="0x3EC8D2"/>
+      <color NAME="COLOR_YELLOW" VALUE="0xDEB361"/>
+      <color NAME="COLOR_MILAN_YELLOW" VALUE="0xfff8a8"/>
+      <color NAME="COLOR_DARK_ORANGE" VALUE="0xA43623"/>
+      <color NAME="COLOR_LIGHT_GREY" VALUE="0x44565B"/>
+      <color NAME="COLOR_GREEN" VALUE="0xD2F311"/>
+      <color NAME="COLOR_BEAN_GREEN" VALUE="0x4ecf3a"/>
+      <color NAME="COLOR_BLUE" VALUE="0x387184"/>
+      <color NAME="COLOR_LIGHT_BLUE" VALUE="0x0996D8"/>
+      <color NAME="COLOR_RED" VALUE="0x8C0000"/>
+      <color NAME="COLOR_DORIAN_GREY" VALUE="0xA6ADBA"/>
+      <color NAME="COLOR_BRIGHT_GREY_NAVY" VALUE="0x4F545F"/>
+      <color NAME="COLOR_ASH_GREY" VALUE="0xABACAE"/>
+      <color NAME="COLOR_SUBTLE_BLUE" VALUE="0x76E4FF"/>
+      <color NAME="COLOR_CURIOUS_BLUE" VALUE="0x248cc1"/>
+      <color NAME="COLOR_NEUTRAL_GREY" VALUE="0x252626"/>
+      <color NAME="COLOR_FOREST_GREEN" VALUE="0x30CD30"/>
+      <color NAME="COLOR_CONCRETE_GREY" VALUE="0xBEBEBE"/>
+      <color NAME="COLOR_GRANITE_GREY" VALUE="0x868686"/>
+      <color NAME="COLOR_REGENT_GREY" VALUE="0x83929e"/>
+      <color NAME="COLOR_JOHN_GREEN" VALUE="0x05a92e"/>
+      <color NAME="COLOR_FIERY_RED" VALUE="0xD51E0B"/>
+      <color NAME="COLOR_ICEY_BLUE" VALUE="0x58A4FF"/>
+      <color NAME="COLOR_PURPLE_GRAY" VALUE="0x5A5971"/>
+      <color NAME="COLOR_DARK_VIOLET" VALUE="0x33314E"/>
+      <color NAME="COLOR_DEEP_PURPLE" VALUE="0x14113A"/>
+      <color NAME="COLOR_TEXT_MESSAGE_BLUE" VALUE="0x1793EA"/>
+      <color NAME="COLOR_SILVER_FOX" VALUE="0x7e7f82"/>
+      <color NAME="COLOR_DARK_BLUE" VALUE="0x102961"/>
+      <color NAME="COLOR_DEEP_BLUE" VALUE="0x0443cd"/>
+      <color NAME="COLOR_MANATEE" VALUE="0x555f69"/>
+      <color NAME="COLOR_DESK_PLANT_GREEN" VALUE="0x339933"/>
+      <color NAME="COLOR_TERRACOTTA_DINOSAUR" VALUE="0xd97810"/>
+      <color NAME="COLOR_SANGRIA_RED" VALUE="0xae0e16"/>
+      <color NAME="COLOR_STILETTO_RED" VALUE="0xa83942"/>
+      <color NAME="COLOR_MOONLIGHT" VALUE="0xefefef"/>
+      <color NAME="COLOR_ARCTIC_FOX" VALUE="0xbfbfbf"/>
+      <color NAME="COLOR_SOFT_GREY" VALUE="0xa6a6a6"/>
+      <color NAME="COLOR_SMOKEY_GREY" VALUE="0x999999"/>
+      <color NAME="COLOR_HOT_STONE" VALUE="0x303847"/>
+      <color NAME="COLOR_MUTED_BLUE" VALUE="0x0E215E"/>
+      <color NAME="COLOR_DUSKY_BLUE" VALUE="0x0B1B4F"/>
+      <color NAME="COLOR_MODERATE_BLUE" VALUE="0x3E58B5"/>
+      <color NAME="COLOR_SOFT_BLUE" VALUE="0x5074EE"/>
+      <color NAME="COLOR_BLACK_ROCK_BLUE" VALUE="0x040426"/>
+      <color NAME="COLOR_GOLDEN_YELLOW" VALUE="0xFFE400"/>
+
+      <!-- UEFA -->
+      <color NAME="COLOR_STRATOS" VALUE="0x00004B"/>
+
+    </color_set>
+
+  </static_data>
+
+  <style>
+
+    <color_set>
+
+      <!-- General-purpose colors used throughout the code base. Don't move this back to <static_data>, because we reference this color directly from code -->
+      <color NAME="COLOR_SAFE_BLACK" VALUE="0x201E20"/>
+      <color NAME="COLOR_SAFE_WHITE" VALUE="0xFAFAFA"/>
+
+      <!-- TEXT colors -->
+      <!-- TEXT colors - FLUX -->
+      <color NAME="COLOR_TEXT_GENERAL" VALUE="@COLOR_SAFE_WHITE"/> <!-- Used on components that are not regular tiles (for example, an image) -->
+      <color NAME="COLOR_TEXT_HIGHLIGHT_FLUX" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_TEXT_HIGHLIGHT_FLUX_TITLE" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_TEXT_HIGHLIGHT_FLUX_ALTERNATE" VALUE="@COLOR_OBSIDIAN"/>
+      <color NAME="COLOR_TEXT_UNHIGHLIGHT_FLUX" VALUE="0xD8D5DD"/>
+      <color NAME="COLOR_TEXT_UNHIGHLIGHT_FLUX_TITLE" VALUE="0x63D3F9"/>
+      <color NAME="COLOR_TEXT_INNER" VALUE="0xD8D5DD"/>
+      <color NAME="COLOR_TEXT_INNER_SELECTED" VALUE="@COLOR_OBSIDIAN"/>
+
+	  <!-- Text Colors  - No Tile Backing -->
+	  <color NAME="COLOR_TEXT_BACKGROUND_ALTERNATE" VALUE="0x63D3F9"/>
+	  <color NAME="COLOR_TEXT_BACKGROUND_UNHIGHLIGHT_TITLE" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX_TITLE"/>
+	  <color NAME="COLOR_TEXT_BACKGROUND_UNHIGHLIGHT" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX"/>
+
+      <!-- TEXT colors - FLUX Tabs (ToggleMenu) -->
+      <color NAME="COLOR_TEXT_HIGHLIGHT_ACTIVE_FLUX_TAB" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_TEXT_UNHIGHLIGHT_ACTIVE_FLUX_TAB" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_TEXT_INACTIVE_FLUX_TAB" VALUE="0xD8D4DE"/>
+      <color NAME="COLOR_TEXT_DISABLED_FLUX_TAB" VALUE="0xD8D4DE"/>
+
+      <color NAME="COLOR_TEXT_PREVIEW" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_TITLE_PREVIEW" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_TEXT_ALT_PREVIEW" VALUE="@COLOR_TEXT_DIM"/>
+
+      <color NAME="COLOR_TEXT_REGULAR" VALUE="0xD8D5DD"/>
+      <color NAME="COLOR_TEXT_SELECTED" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_TEXT_LABEL" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_TEXT_DESCRIPTION" VALUE="0xD8D5DD"/>
+      <color NAME="COLOR_TEXT_HEADER" VALUE="@COLOR_SAFE_WHITE"/>
+
+      <color NAME="COLOR_TEXT_CONTRAST" VALUE="@COLOR_OBSIDIAN"/>
+      <color NAME="COLOR_TEXT_LABEL_CONTRAST" VALUE="@COLOR_TEXT_PREVIEW"/>
+      <color NAME="COLOR_TEXT_SECONDARY_LABEL" VALUE="@COLOR_ELECTRIC_BLUE"/>
+      <color NAME="COLOR_TEXT_SECONDARY_LABEL_CONTRAST" VALUE="@COLOR_RADIANT_YELLOW"/>
+
+      <color NAME="COLOR_TEXT_HIGHLIGHT" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_TEXT_HIGHLIGHT_ALTERNATE" VALUE="@COLOR_OBSIDIAN"/>
+      <color NAME="COLOR_TEXT_HIGHLIGHT_CONTRAST" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_TEXT_UNHIGHLIGHT" VALUE="0xD8D5DD"/>
+
+      <color NAME="COLOR_TEXT_UNHIGHLIGHT_TITLE" VALUE="0xD8D5DD"/>
+      <color NAME="COLOR_TEXT_UNHIGHLIGHT_ALTERNATE" VALUE="0xD8D5DD"/>
+
+      <color NAME="COLOR_TEXT_HIGHLIGHT_KEYBOARD" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_TEXT_UNHIGHLIGHT_KEYBOARD" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_TEXT_KEYBOARD_INPUT" VALUE="@COLOR_TEXT_UNHIGHLIGHT"/>
+      <color NAME="COLOR_TEXT_HELP_ITEMS" VALUE="@COLOR_SAFE_WHITE"/> <!-- Text color button hints -->
+      <color NAME="COLOR_TEXT_HELP_ITEMS_CONTRAST" VALUE="0xD8D5DD"/>
+
+      <color NAME="COLOR_TEXT_DISABLED" VALUE="@COLOR_TEXT_DIM"/>
+      <color NAME="COLOR_TEXT_DISABLED_HIGHLIGHTED" VALUE="@COLOR_TEXT_HIGHLIGHT"/>
+      <color NAME="COLOR_TEXT_DISABLED_UNHIGHLIGHTED" VALUE="@COLOR_TEXT_UNHIGHLIGHT"/>
+      <color NAME="COLOR_TEXT_CURRENT_USER" VALUE="0x0067DA"/>
+      <color NAME="COLOR_TEXT_ALERT" VALUE="@COLOR_SWATCH_ORANGE"/>
+      <color NAME="COLOR_TEXT_NEW" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_TEXT_SUCCESS" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_TEXT_FAILURE" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="COLOR_TEXT_COOL" VALUE="@COLOR_ICEY_BLUE"/>
+      <color NAME="COLOR_TEXT_FIERY" VALUE="@COLOR_FIERY_RED"/>
+      <color NAME="COLOR_TEXT_EARNINGS" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_TEXT_EXPENSES" VALUE="@COLOR_SWATCH_RED"/>
+
+      <color NAME="COLOR_PRESS_START_TITLE" VALUE="@COLOR_MOD_BLUE"/>
+
+      <color NAME="COLOR_TEXT_STORY_TITLE" VALUE="@COLOR_NEOMINT"/>
+
+      <color NAME="COLOR_TEXT_DIM" VALUE="0x7D7D85"/>
+      <color NAME="COLOR_TEXT_SKILL_GAMES_OVERLAY" VALUE="0x2DABEB"/>
+      <color NAME="COLOR_TEXT_LIVE_FORM" VALUE="@COLOR_SAFE_WHITE"/>
+
+      <color NAME="COLOR_TEXT_PUSHBUTTON_HIGHLIGHTED" VALUE="@COLOR_TEXT_SELECTED"/>
+      <color NAME="COLOR_TEXT_PUSHBUTTON_UNHIGHLIGHTED" VALUE="@COLOR_TEXT_REGULAR"/>
+
+      <color NAME="COLOR_TEXT_HEADER_COLUMN" VALUE="@COLOR_TEXT_UNHIGHLIGHT"/>
+
+      <!-- Competitions table colors -->
+      <color NAME="COLOR_TEXT_COMPETITIONS" VALUE="@COLOR_TEXT_PREVIEW"/>
+      <color NAME="COLOR_TEXT_STATS" VALUE="@COLOR_TEXT_PREVIEW"/>
+      <color NAME="COLOR_TEXT_TOTAL" VALUE="@COLOR_TEXT_PREVIEW"/>
+
+      <!-- Toggle filter -->
+      <color NAME="COLOR_TEXT_LIST_TOGGLE_ACTIVE" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_TEXT_LIST_TOGGLE_INACTIVE" VALUE="0xD8D5DD"/>
+      <color NAME="COLOR_FILL_LIST_TOGGLE_BACKING" VALUE="@COLOR_FILL_PANEL_TITLEBAR"/>
+
+      <!-- Tag colors -->
+      <color NAME="COLOR_TEXT_TAG_HIGHLIGHT" VALUE="@COLOR_OBSIDIAN" />
+      <color NAME="COLOR_TEXT_TAG_UNHIGHLIGHT" VALUE="@COLOR_NEOMINT" />
+      <color NAME="COLOR_FILL_TAG_HIGHLIGHT" VALUE="@COLOR_NEOMINT" />
+      <color NAME="COLOR_FILL_TAG_UNHIGHLIGHT" VALUE="0x3B167F"/>
+
+	  <!-- Nameplate colors-->
+      <color NAME="COLOR_NAMEPLATE_PRIMARY_TEXT_SELECTED" VALUE="@COLOR_TEXT_HIGHLIGHT_ALTERNATE"/>
+      <color NAME="COLOR_NAMEPLATE_PRIMARY_STROKE_SELECTED" VALUE="0x2ADCF3"/>
+      <color NAME="COLOR_NAMEPLATE_PRIMARY_BACKING_SELECTED" VALUE="@COLOR_FILL_HIGHLIGHT_ALTERNATE"/>
+      <color NAME="COLOR_NAMEPLATE_SECONDARY_TEXT_SELECTED" VALUE="@COLOR_OBSIDIAN"/>
+      <color NAME="COLOR_NAMEPLATE_SECONDARY_STROKE_SELECTED" VALUE="0x40A7E8"/>
+      <color NAME="COLOR_NAMEPLATE_SECONDARY_BACKING_SELECTED" VALUE="@COLOR_FILL_HIGHLIGHT_ALTERNATE"/>
+      <color NAME="COLOR_NAMEPLATE_TEXT_ACTIVE" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_NAMEPLATE_STROKE_ACTIVE" VALUE="@COLOR_FILL_HIGHLIGHT_HIGH_CONTRAST"/>
+      <color NAME="COLOR_NAMEPLATE_BACKING_ACTIVE" VALUE="@COLOR_FILL_HIGHLIGHT"/>
+
+      <!-- FILL Colors -->
+      <!-- FILL Colors - Panels -->
+      <color NAME="COLOR_FILL_PANEL_HIGHLIGHT_FLUX" VALUE="@COLOR_ULTRA_VIOLET"/>
+      <color NAME="COLOR_FILL_PANEL_HIGHLIGHT_FLUX_ALTERNATE" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_FILL_PANEL_UNHIGHLIGHT_FLUX" VALUE="0x141246"/>
+      <color NAME="COLOR_FILL_PANEL_HIGHLIGHT_FLUX_DISABLED" VALUE="@COLOR_FILL_PANEL_HIGHLIGHT_FLUX"/>
+      <color NAME="COLOR_FILL_PANEL_UNHIGHLIGHT_FLUX_DISABLED" VALUE="@COLOR_FILL_PANEL_UNHIGHLIGHT_FLUX"/>
+      <color NAME="COLOR_FILL_PANEL_PREVIEW" VALUE="0x282834"/>
+      <color NAME="COLOR_FILL_PANEL_HEADER_PREVIEW" VALUE="0x323244"/>
+      <color NAME="COLOR_FILL_PANEL_POPUP" VALUE="0x282834"/>
+      <color NAME="COLOR_FILL_PANEL_MAINFRAME" VALUE="0x141248"/>
+      <color NAME="COLOR_FILL_PANEL_HEADER" VALUE="0x222040"/>
+      <color NAME="COLOR_FILL_PANEL_TITLEBAR" VALUE="@COLOR_FILL_PANEL_HEADER"/>
+      <color NAME="COLOR_FILL_PANEL_DIMMER" VALUE="0xD2D5DE"/>
+      <color NAME="COLOR_FILL_PANEL_LEGACY_1" VALUE="0xD2D5DE"/>
+      <color NAME="COLOR_FILL_PANEL_LEGACY_2" VALUE="@COLOR_FILL_PANEL_UNHIGHLIGHT_FLUX"/>
+      <color NAME="COLOR_FILL_PANEL_LEGACY_3" VALUE="0xD2D5DE"/>
+      <color NAME="COLOR_FILL_PANEL_LEGACY_4" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_FILL_PANEL_CRUMBS" VALUE="0x2E2F41"/>
+      <color NAME="COLOR_FILL_PANEL_FLUX_TRANSPARENT" VALUE="@COLOR_FILL_PANEL_UNHIGHLIGHT_FLUX"/> <!-- Standings Panel-->
+      <color NAME="COLOR_FILL_PANEL_HIGHLIGHT_CALENDAR_TILE" VALUE="@COLOR_FILL_PANEL_HIGHLIGHT_FLUX"/>
+      <color NAME="COLOR_FILL_PANEL_UNHIGHLIGHT_CALENDAR_TILE" VALUE="0x141246"/>
+      <color NAME="COLOR_FILL_PANEL_HIGHLIGHT_BUTTON" VALUE="@COLOR_FILL_PANEL_HIGHLIGHT_FLUX"/>
+      <color NAME="COLOR_FILL_PANEL_UNHIGHLIGHT_BUTTON" VALUE="@COLOR_FILL_PANEL_UNHIGHLIGHT_FLUX"/>
+      <color NAME="COLOR_FILL_PANEL_INNER_HIGHLIGHT_FLUX" VALUE="@COLOR_FILL_HIGHLIGHT"/>
+      <color NAME="COLOR_FILL_PANEL_INNER_HIGHLIGHT_FLUX_ALTERNATE" VALUE="@COLOR_FILL_HIGHLIGHT_ALTERNATE"/>
+      <color NAME="COLOR_FILL_PANEL_INNER_UNHIGHLIGHT_FLUX" VALUE="@COLOR_FILL_UNHIGHLIGHT_ALTERNATE"/>
+	  <color NAME="COLOR_FILL_PANEL_EXPANDED" VALUE="@COLOR_SWATCH_PURPLE"/> <!-- Expanded squad hub tile -->
+	  <color NAME="COLOR_FILL_ICON_PREVIEW" VALUE="@COLOR_SAFE_WHITE"/>
+
+	  <!-- Tone Separators / Rowbands -->>
+      <color NAME="COLOR_FILL_PANEL_HIGHLIGHT_ROWBAND" VALUE="0x101920"/>
+      <color NAME="COLOR_FILL_PANEL_UNHIGHLIGHT_ROWBAND" VALUE="0x7F7F87"/>
+      <color NAME="COLOR_FILL_PANEL_PREVIEW_ROWBAND" VALUE="0x7F7F87"/>
+
+      <!-- Legacy -->
+      <color NAME="COLOR_TEXT_HEADER_LEGACY" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_TEXT_SUBHEADER_LEGACY" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_TEXT_DESCRIPTION" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_TEXT_TOGGLE_LEGACY" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_TEXT_UNHIGHLIGHT_TITLE_LEGACY" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX_TITLE"/>
+      <color NAME="COLOR_FILL_ICON_LEGACY" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_FILL_HIGHLIGHT_LEGACY" VALUE="@COLOR_ULTRA_VIOLET"/>
+	  <color NAME="COLOR_FILL_NESTED_DOT_LEGACY" VALUE="0x4B4089"/>
+      <color NAME="COLOR_FILL_NESTED_DOT_HIGHLIGHT_LEGACY" VALUE="@COLOR_BURNT_ORANGE"/>
+
+      <!-- Keyboard fill colors; -->
+      <color NAME="COLOR_FILL_HIGHLIGHT_KEYBOARD" VALUE="@COLOR_ULTRA_VIOLET"/>
+      <color NAME="COLOR_FILL_UNHIGHLIGHT_KEYBOARD" VALUE="0x2A2851"/>
+      <color NAME="COLOR_KEYBOARD_TEXTBOX" VALUE="0x201F50"/>
+
+      <!-- Squad Hub/Transfer Hub expanded user options -->
+      <color NAME="COLOR_FILL_PANEL_HIGHLIGHT_LIST_OPTIONS" VALUE="@COLOR_FILL_HIGHLIGHT_ALTERNATE_CONTRAST"/>
+      <color NAME="COLOR_FILL_PANEL_LIST_OPTIONS" VALUE="0x3E1D80"/>
+
+      <!-- FILL Colors - FLUX Tabs (ToggleMenu); NOTE: If valid values are set, the fluxTab assets will not be loaded.-->
+      <color NAME="COLOR_FILL_HIGHLIGHT_ACTIVE_FLUX_TAB" VALUE="@COLOR_ULTRA_VIOLET"/>
+      <color NAME="COLOR_FILL_HIGHLIGHT_ACTIVE_FLUX_TAB_SECONDARY" VALUE="@COLOR_ULTRA_VIOLET"/>
+      <color NAME="COLOR_FILL_UNHIGHLIGHT_ACTIVE_FLUX_TAB" VALUE="0x190C3D"/>
+      <color NAME="COLOR_FILL_UNHIGHLIGHT_ACTIVE_FLUX_TAB_SECONDARY" VALUE="@COLOR_BURNT_ORANGE"/>
+      <color NAME="COLOR_FILL_INACTIVE_FLUX_TAB" VALUE="0x232141"/>
+
+      <color NAME="COLOR_FILL_HIGHLIGHT" VALUE="@COLOR_ULTRA_VIOLET"/>
+      <color NAME="COLOR_FILL_HIGHLIGHT_ACCENT" VALUE="@COLOR_BURNT_ORANGE"/>
+      <color NAME="COLOR_FILL_HIGHLIGHT_LEGACY" VALUE="@COLOR_ULTRA_VIOLET"/>
+      <color NAME="COLOR_FILL_HIGHLIGHT_CONTRAST" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_FILL_HIGHLIGHT_HIGH_CONTRAST" VALUE="@COLOR_NEOMINT"/> <!-- Tile Icons HL -->
+      <color NAME="COLOR_FILL_HIGHLIGHT_ALTERNATE" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_FILL_HIGHLIGHT_ALTERNATE_CONTRAST" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_FILL_UNHIGHLIGHT" VALUE="@COLOR_FILL_PANEL_UNHIGHLIGHT_FLUX"/>
+      <color NAME="COLOR_FILL_UNHIGHLIGHT_CONTRAST" VALUE="0x9A56F7"/>
+      <color NAME="COLOR_FILL_UNHIGHLIGHT_HIGH_CONTRAST" VALUE="@COLOR_ULTRA_VIOLET"/> <!-- Tile Icons UHL -->
+      <color NAME="COLOR_FILL_UNHIGHLIGHT_ALTERNATE" VALUE="@COLOR_FILL_PANEL_UNHIGHLIGHT_ROWBAND"/>
+      <color NAME="COLOR_FILL_UNHIGHLIGHT_ALTERNATE_CONTRAST" VALUE="@COLOR_ULTRA_VIOLET"/>
+
+      <color NAME="COLOR_FILL_ALERT" VALUE="@COLOR_SWATCH_ORANGE"/>
+      <color NAME="COLOR_FILL_WARNING" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="COLOR_FILL_AVAILABLE" VALUE="@COLOR_METER_BAR_BLUE"/>
+      <color NAME="COLOR_FILL_EMPTY" VALUE="@COLOR_RIVER_BED_GRAY"/>
+      <color NAME="COLOR_FILL_NEUTRAL" VALUE="@COLOR_NEUTRAL_GREY"/>
+      <color NAME="COLOR_FILL_VALUE" VALUE="@COLOR_CURIOUS_BLUE"/>
+      <color NAME="COLOR_FILL_VALUE_SECONDARY" VALUE="@COLOR_BEAN_GREEN"/>
+
+      <color NAME="COLOR_FILL_TRANSFER_BADGE_BG" VALUE="@COLOR_MANATEE"/>
+
+      <color NAME="COLOR_FILL_ICON_HIGHLIGHT" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_FILL_ICON_HIGHLIGHT_ALTERNATE" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_FILL_ICON_UNHIGHLIGHT" VALUE="0x9A56F7"/>
+      <color NAME="COLOR_FILL_ICON_CONTEXTUAL_HIGHLIGHT" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_FILL_ICON_CONTEXTUAL_UNHIGHLIGHT" VALUE="0xD8D5DD"/>
+
+      <color NAME="COLOR_FILL_BACKGROUND" VALUE="@COLOR_DARK_VIOLET"/>
+      <color NAME="COLOR_FILL_BACKGROUND_SECONDARY" VALUE="@COLOR_SAFE_BLACK"/>
+      <color NAME="COLOR_FILL_BACKGROUND_INACTIVE" VALUE="@COLOR_CONCRETE_GREY"/>
+      <color NAME="COLOR_FILL_BACKGROUND_INACTIVE_SECONDARY" VALUE="@COLOR_GRANITE_GREY"/>
+      <color NAME="COLOR_FILL_BACKGROUND_HDR_CALIBRATION" VALUE="@COLOR_PURE_BLACK"/>
+	  <color NAME="COLOR_FILL_BACKGROUND_SEPARATOR" VALUE="0x3e469c"/>
+
+      <color NAME="COLOR_FILL_LABEL" VALUE="0x9A92A9"/>
+      <color NAME="COLOR_FILL_LABEL_CONTRAST" VALUE="0x746D82"/>
+
+      <color NAME="COLOR_FILL_GRID_CONTRAST" VALUE="@COLOR_OBSIDIAN"/>
+
+      <color NAME="COLOR_FILL_MESSAGE_SENT" VALUE="@COLOR_TEXT_MESSAGE_BLUE"/>
+      <color NAME="COLOR_FILL_MESSAGE_RECIEVED" VALUE="@COLOR_SAFE_WHITE"/>
+
+      <color NAME="COLOR_FILL_SEPARATOR" VALUE="@COLOR_ULTRA_VIOLET"/>
+      <color NAME="COLOR_FILL_SEPARATOR_PREVIEW" VALUE="0x7F7F87"/>
+      <color NAME="COLOR_FILL_SEPARATOR_HIGHLIGHT" VALUE="0x9a69f8"/>
+      <color NAME="COLOR_FILL_SEPARATOR_UNHIGHLIGHT" VALUE="0x454567"/>
+      <color NAME="COLOR_FILL_SEPARATOR_SORT" VALUE="@COLOR_FILL_HIGHLIGHT"/>
+      <color NAME="COLOR_FILL_SEPARATOR_KO_TOP" VALUE="0x3E469C"/>
+      <color NAME="COLOR_FILL_FLUX_INDICATOR" VALUE="@COLOR_DARK_BLUE"/>
+      <color NAME="COLOR_FILL_PANEL_OVERLAY" VALUE="@COLOR_FILL_PANEL_PREVIEW"/>
+
+      <color NAME="COLOR_FILL_SELECTION_STATUS_STARTER" VALUE="@COLOR_DESK_PLANT_GREEN"/>
+      <color NAME="COLOR_FILL_SELECTION_STATUS_SUB" VALUE="@COLOR_TERRACOTTA_DINOSAUR"/>
+      <color NAME="COLOR_FILL_SELECTION_STATUS_RESERVE" VALUE="@COLOR_SANGRIA_RED"/>
+
+      <color NAME="COLOR_FILL_DEFAULT_FIXTURE_DIVIDER" VALUE="@COLOR_SMOKEY_GREY"/>
+      <color NAME="COLOR_FILL_DEFAULT_FIXTURE_CREST_BACKING" VALUE="@COLOR_SOFT_GREY"/>
+      <color NAME="COLOR_FILL_DEFAULT_FIXTURE_SCORE_BACKING" VALUE="@COLOR_SOFT_GREY"/>
+      <color NAME="COLOR_FILL_DEFAULT_FIXTURE_TEAM_BACKING" VALUE="@COLOR_ARCTIC_FOX"/>
+      <color NAME="COLOR_FILL_DEFAULT_FIXTURE_COLOR_TEXT" VALUE="@COLOR_HOT_STONE"/>
+      <color NAME="COLOR_FILL_DEFAULT_FIXTURE_USER_CREST_BACKING" VALUE="@COLOR_MOONLIGHT"/>
+      <color NAME="COLOR_FILL_DEFAULT_FIXTURE_USER_TEAM_BACKING" VALUE="@COLOR_HOT_STONE"/>
+      <color NAME="COLOR_FILL_DEFAULT_FIXTURE_USER_COLOR_TEXT" VALUE="@COLOR_MOONLIGHT"/>
+
+      <color NAME="COLOR_FILL_UCL_FIXTURE_DIVIDER" VALUE="@COLOR_ELECTRIC_BLUE"/>
+      <color NAME="COLOR_FILL_UCL_FIXTURE_CREST_BACKING" VALUE="@COLOR_DUSKY_BLUE"/>
+      <color NAME="COLOR_FILL_UCL_FIXTURE_SCORE_BACKING" VALUE="@COLOR_DUSKY_BLUE"/>
+      <color NAME="COLOR_FILL_UCL_FIXTURE_TEAM_BACKING" VALUE="@COLOR_MUTED_BLUE"/>
+      <color NAME="COLOR_FILL_UCL_FIXTURE_COLOR_TEXT" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_FILL_UCL_FIXTURE_USER_CREST_BACKING" VALUE="@COLOR_DUSKY_BLUE"/>
+      <color NAME="COLOR_FILL_UCL_FIXTURE_USER_TEAM_BACKING" VALUE="@COLOR_MUTED_BLUE"/>
+      <color NAME="COLOR_FILL_UCL_FIXTURE_USER_COLOR_TEXT" VALUE="@COLOR_ELECTRIC_BLUE"/>
+
+      <!-- GENERAL colors -->
+      <!-- Controller -->
+      <color NAME="COLOR_CONTROLLER_RED" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="COLOR_CONTROLLER_BLUE" VALUE="@COLOR_SWATCH_BLUE"/>
+      <color NAME="COLOR_CONTROLLER_GREEN" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_CONTROLLER_YELLOW" VALUE="@COLOR_SWATCH_YELLOW"/>
+      <color NAME="COLOR_CONTROLLER_CYAN" VALUE="@COLOR_SWATCH_CYAN"/>
+      <color NAME="COLOR_CONTROLLER_PURPLE" VALUE="@COLOR_SWATCH_PURPLE"/>
+      <color NAME="COLOR_CONTROLLER_BROWN" VALUE="@COLOR_SWATCH_BRONZE"/>
+      <color NAME="COLOR_CONTROLLER_ORANGE" VALUE="@COLOR_SWATCH_ORANGE"/>
+      <color NAME="COLOR_CONTROLLER_DARK_BLUE" VALUE="0x001D4C"/>
+      <color NAME="COLOR_CONTROLLER_BROWNISH" VALUE="0x663300"/>
+      <color NAME="COLOR_CONTROLLER_GREY" VALUE="@COLOR_SWATCH_GREY"/>
+      <color_list NAME="COLORS_OFFLINE_CONTROLLER">
+        <color VALUE="@COLOR_CONTROLLER_RED"/>
+        <color VALUE="@COLOR_CONTROLLER_BLUE"/>
+        <color VALUE="@COLOR_CONTROLLER_YELLOW"/>
+        <color VALUE="@COLOR_CONTROLLER_PURPLE"/>
+        <color VALUE="@COLOR_CONTROLLER_CYAN"/>
+        <color VALUE="@COLOR_CONTROLLER_BROWN"/>
+        <color VALUE="@COLOR_CONTROLLER_GREEN"/>
+      </color_list>
+      <color_list NAME="COLORS_ONLINE_TEAM_PLAY_CONTROLLER">
+        <color VALUE="@COLOR_CONTROLLER_RED"/>
+        <color VALUE="@COLOR_CONTROLLER_BLUE"/>
+        <color VALUE="@COLOR_CONTROLLER_YELLOW"/>
+        <color VALUE="@COLOR_CONTROLLER_PURPLE"/>
+        <color VALUE="@COLOR_CONTROLLER_CYAN"/>
+        <color VALUE="@COLOR_CONTROLLER_BROWN"/>
+        <color VALUE="@COLOR_CONTROLLER_GREEN"/>
+        <color VALUE="@COLOR_CONTROLLER_ORANGE"/>
+        <color VALUE="@COLOR_CONTROLLER_DARK_BLUE"/>
+        <color VALUE="@COLOR_CONTROLLER_BROWNISH"/>
+        <color VALUE="@COLOR_CONTROLLER_GREY"/>
+      </color_list>
+      <!-- ScreenDimmer -->
+      <color NAME="COLOR_SCREEN_DIMMER" VALUE="0x03041C"/>
+
+      <!-- Bullet list (NestedIndicator)-->
+      <color NAME="COLOR_BULLET_LIST_BG_HL" VALUE=""/>
+      <color NAME="COLOR_BULLET_LIST_BG_UHL" VALUE=""/>
+      <alpha NAME="ALPHA_BULLET_LIST_HL" VALUE="100"/>
+      <alpha NAME="ALPHA_BULLET_LIST_UHL" VALUE="70"/>
+      <color NAME="COLOR_BULLET_LIST_BULLET_HL_SELECTED" VALUE="@COLOR_BURNT_ORANGE"/>
+      <color NAME="COLOR_BULLET_LIST_BULLET_HL" VALUE="0x746D82"/>
+      <color NAME="COLOR_BULLET_LIST_BULLET_UHL_SELECTED" VALUE="0x9A92A9"/>
+      <color NAME="COLOR_BULLET_LIST_BULLET_UHL" VALUE="0x565260"/>
+
+      <!-- Slider -->
+      <color NAME="COLOR_SLIDER_PRIMARY" VALUE="0x63D3F9"/>
+      <color NAME="COLOR_SLIDER_SECONDARY" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_SLIDER_TRACK" VALUE="0x86919D"/>
+      <color NAME="COLOR_SLIDER_ALTERNATE" VALUE="@COLOR_BURNT_ORANGE"/>
+      <color NAME="COLOR_SLIDER_NIB" VALUE=""/>
+	  
+	  <!-- Slider -->
+      <color NAME="COLOR_PROGRESSBAR_BKG" VALUE="0x343447"/>
+      <color NAME="COLOR_PROGRESSBAR_BKG_ALTERNATE" VALUE="0x343447"/>
+      <color NAME="COLOR_PROGRESSBAR_FILL" VALUE="@COLOR_ELECTRIC_BLUE"/>
+      <color NAME="COLOR_PROGRESSBAR_BIGGER_VALUE" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_PROGRESSBAR_SMALLER_VALUE" VALUE="@COLOR_RAVEN_GRAY"/>
+      <color NAME="COLOR_PROGRESSBAR_EQUAL_VALUE" VALUE="@COLOR_SWATCH_SILVER"/>
+
+	  <!-- Scrollbar -->
+      <color NAME="COLOR_SCROLLBAR_TRACK" VALUE="0x3E3E55"/>
+      <color NAME="COLOR_SCROLLBAR_THUMB" VALUE="0x86919D"/>
+      <color NAME="COLOR_SCROLLBAR_LINES" VALUE="0x86919D"/>
+
+	  <!-- Progress Circle -->
+      <color NAME="COLOR_PROGRESS_CIRCLE_PRIMARY_HIGHLIGHT" VALUE="@COLOR_SWATCH_CYAN"/>
+      <color NAME="COLOR_PROGRESS_CIRCLE_PRIMARY_UNHIGHLIGHT" VALUE="@COLOR_SWATCH_CYAN"/>
+      <color NAME="COLOR_PROGRESS_CIRCLE_TRACK_HIGHLIGHT" VALUE="@COLOR_SHUTTLE_GRAY"/>
+      <color NAME="COLOR_PROGRESS_CIRCLE_TRACK_UNHIGHLIGHT" VALUE="@COLOR_SHUTTLE_GRAY"/>
+            
+      <!-- Versus Circle -->
+      <color NAME="COLOR_VERSUS_CIRCLE" VALUE="@COLOR_FILL_ICON_HIGHLIGHT"/>
+
+	  <!-- Actionable Callout (TileActionableIndicator) -->
+	  <color NAME="COLOR_FILL_NESTED_BACKGROUND" VALUE="0x3C286A"/> <!-- Tag color. Should be replaced with something intuitive -->
+      <color NAME="COLOR_FILL_ACTIONABLE_BACKING" VALUE="@COLOR_FILL_NESTED_BACKGROUND"/> <!-- Should be merged -->
+      <color NAME="COLOR_TEXT_ACTIONABLE" VALUE="@COLOR_SAFE_WHITE"/>
+
+      <!-- Conversation wheel -->
+      <color NAME="COLOR_ALIAS_RING" VALUE="0xD8D5DD"/>
+
+      <!-- Stroke -->
+      <color NAME="COLOR_STROKE" VALUE=""/>
+      <color NAME="COLOR_STROKE_SECONDARY" VALUE=""/> <!-- used only for second glint color glint -->
+
+      <!-- Arrow -->
+      <color NAME="COLOR_ARROW_PRIMARY" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_ARROW_SECONDARY" VALUE="@COLOR_OBSIDIAN"/>
+      <color NAME="COLOR_ARROW_PREVIEW" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_ARROW_INNER_SELECTED" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_ARROW_INACTIVE" VALUE="@COLOR_FILL_ICON_UNHIGHLIGHT"/>
+      <color NAME="COLOR_ARROW_ACTIVE" VALUE="@COLOR_NEOMINT"/>
+
+      <color NAME="COLOR_FRIENDLIES_SLIDER_PRIMARY" VALUE="@COLOR_BEAN_GREEN"/>
+      <color NAME="COLOR_FRIENDLIES_SLIDER_SECONDARY" VALUE="@COLOR_BLUE"/>
+      <!-- Slider -->
+      <color NAME="COLOR_PROGRESSBAR_BKG" VALUE="0x343447"/>
+      <color NAME="COLOR_PROGRESSBAR_BKG_ALTERNATE" VALUE="0x343447"/>
+      <color NAME="COLOR_PROGRESSBAR_FILL" VALUE="@COLOR_ELECTRIC_BLUE"/>
+      <color NAME="COLOR_PROGRESSBAR_BIGGER_VALUE" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_PROGRESSBAR_SMALLER_VALUE" VALUE="@COLOR_RAVEN_GRAY"/>
+      <color NAME="COLOR_PROGRESSBAR_EQUAL_VALUE" VALUE="@COLOR_SWATCH_SILVER"/>
+      <!-- Bar Graph -->
+      <color NAME="SKILL_PLAYER_PERFORMANCE_GOOD" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="SKILL_PLAYER_PERFORMANCE_NORMAL" VALUE="@COLOR_SWATCH_ORANGE"/>
+      <color NAME="SKILL_PLAYER_PERFORMANCE_POOR" VALUE="@COLOR_SWATCH_RED"/>
+      <!-- Comparison Diagram -->
+      <color NAME="COLOR_GRAPH_LINE" VALUE="@COLOR_FILL_HIGHLIGHT"/>
+      <!-- Sortable List -->
+      <color NAME="COLOR_HEADER_LIST" VALUE="@COLOR_FILL_PANEL_MAINFRAME"/>
+      <!-- Sort Column Highlight -->
+      <color NAME="COLOR_ROWBAND_SORT" VALUE="@COLOR_SAFE_WHITE"/>
+      <!-- Sort Arrow -->
+      <color NAME="COLOR_ARROW_SORT" VALUE="@COLOR_FILL_HIGHLIGHT"/>
+      <!-- Positions -->
+      <color NAME="COLOR_GK" VALUE="@COLOR_SWATCH_ORANGE"/>
+      <color NAME="COLOR_DEF" VALUE="@COLOR_SWATCH_YELLOW"/>
+      <color NAME="COLOR_MID" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_FWD" VALUE="@COLOR_SWATCH_BLUE"/>
+      <!-- Pitch / Team Management / Starting XI -->
+      <color NAME="COLOR_PITCH_PRIMARY_PLAYER" VALUE="@COLOR_ULTRA_VIOLET"/>
+      <color NAME="COLOR_PITCH_SECONDARY_PLAYER" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_PITCH_PLAYER_NAME_HIGHLIGHTED" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_PITCH_PLAYER_NAME_UNHIGHLIGHTED" VALUE="0xD8D5DD"/>
+      <color NAME="COLOR_PITCH_HIGHLIGHTED" VALUE="0xAE91E3"/>
+      <color NAME="COLOR_PITCH_UNHIGHLIGHTED" VALUE="0x43437E"/>
+      <color NAME="COLOR_PITCH_PREVIEW" VALUE="0x5A646E"/>
+	  <color NAME="COLOR_PITCH_PREVIEW_CM_PREMATCH" VALUE="0x3E469C"/>
+      <color NAME="COLOR_PITCH_PREVIEW_PLAYER_NAME_HIGHLIGHTED" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_PITCH_PREVIEW_PLAYER_NAME_UNHIGHLIGHTED" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_PITCH_SWATCH_HOME" VALUE="@COLOR_SWATCH_BLUE"/>
+      <color NAME="COLOR_PITCH_SWATCH_AWAY" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_FILL_SPIDERGRAPH" VALUE="0x465058"/>
+      <color NAME="COLOR_TACTICS_PLAYER_ICON" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_TACTICS_OPPONENT_ICON" VALUE="@COLOR_BURNT_ORANGE"/>
+      <color NAME="COLOR_FILL_CIRCLE_PRIMARY" VALUE="@COLOR_ULTRA_VIOLET"/>
+      <color NAME="COLOR_FILL_CIRCLE_SECONDARY" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_FILL_CIRCLE_POS" VALUE="@COLOR_FILL_CIRCLE_PRIMARY"/>
+      <color NAME="COLOR_FILL_CIRCLE_POS_ERROR" VALUE="@COLOR_SWATCH_RED"/>
+      <!-- Settings Pitch Colors -->
+      <color_list NAME="COLOR_PITCH_SETTINGS_ARRAY">
+        <color VALUE="0x8B932F"/>
+        <color VALUE="0x7F8D2D"/>
+        <color VALUE="0x6F8426"/>
+        <color VALUE="0x5C8622"/>
+        <color VALUE="0x4C741D"/>
+        <color VALUE="0x3A6917"/>
+        <color VALUE="0x2E6211"/>
+      </color_list>
+      <!-- Performance -->
+      <color NAME="COLOR_PLAYER_PERFORMANCE_EXCELLENT" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_PLAYER_PERFORMANCE_GOOD" VALUE="@COLOR_SWATCH_LIGHT_GREEN"/>
+      <color NAME="COLOR_PLAYER_PERFORMANCE_NORMAL" VALUE="@COLOR_SWATCH_YELLOW"/>
+      <color NAME="COLOR_PLAYER_PERFORMANCE_POOR" VALUE="@COLOR_SWATCH_ORANGE"/>
+      <color NAME="COLOR_PLAYER_PERFORMANCE_BAD" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="COLOR_PLAYER_PERFORMANCE_NEUTRAL" VALUE="@COLOR_SWATCH_GREY"/>
+      <color NAME="COLOR_GROWTH_NEGATIVE" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="COLOR_GROWTH_POSITIVE" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="PLAYSTYLE_COLOR_NEUTRAL" VALUE="@COLOR_SWATCH_GREY"/>
+      <color NAME="PLAYSTYLE_COLOR_BALL_TOUCH" VALUE="@COLOR_SWATCH_BLUE"/>
+      <color NAME="PLAYSTYLE_COLOR_SHOT_ON_TARGET" VALUE="@COLOR_SWATCH_BLUE"/>
+      <color NAME="PLAYSTYLE_COLOR_SHOT_OFF_TARGET" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="PLAYSTYLE_COLOR_SHOT_SCORED" VALUE="@COLOR_SWATCH_GREEN"/>
+      <!-- Rating widget -->
+      <color NAME="COLOR_RATING_WIDGET_WHITE" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_RATING_WIDGET_BLACK" VALUE="@COLOR_SAFE_BLACK"/>
+      <color NAME="COLOR_RATING_WIDGET_GREY" VALUE="@COLOR_SWATCH_GREY"/>
+      <color NAME="COLOR_RATING_WIDGET_POSITIVE" VALUE="0x4be81b"/>
+      <color NAME="COLOR_RATING_WIDGET_NEGATIVE" VALUE="0xe81b1b"/>
+      <color NAME="COLOR_RATING_WIDGET_NEUTRAL" VALUE="@COLOR_SWATCH_YELLOW"/>
+
+
+      <!-- CM GM Widgets -->
+      <color NAME="COLOR_WIDGET_BACKING" VALUE="0x222040"/>
+      <color NAME="COLOR_WIDGET_BACKING_BOTTOM" VALUE="@COLOR_FILL_PANEL_UNHIGHLIGHT_FLUX"/> <!-- Lower third of in-game training widget -->
+      <color NAME="COLOR_WIDGET_CYCLE_ARROW" VALUE="0xD8D4DE"/>
+      <color NAME="COLOR_WIDGET_TEXT" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX"/>
+      <color NAME="COLOR_WIDGET_DOT_UNHIGHLIGHT" VALUE="0xD8D4DE"/> <!-- Training hub widget phase dots-->
+      <color NAME="COLOR_WIDGET_DOT_HIGHLIGHT" VALUE="@COLOR_ULTRA_VIOLET"/> <!-- Training hub widget phase dots-->
+      <color NAME="COLOR_WIDGET_DOT_TEXT_UNHIGHLIGHT" VALUE="0x222040"/>
+      <color NAME="COLOR_WIDGET_DOT_TEXT_HIGHLIGHT" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_WIDGET_TRAINING_ICON" VALUE="@COLOR_NEOMINT"/>
+
+
+      <color NAME="COLOR_SUBSTITUTION_IN_ICON" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_SUBSTITUTION_OUT_ICON" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="COLOR_WIDGET_TRAINING_ICON" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_CAREER_HUB_WIDGET_FILL_MANAGER_PLAYER_NAME" VALUE=""/>
+      <color NAME="COLOR_CAREER_HUB_WIDGET_EDGE_MANAGER_PLAYER_RATING" VALUE=""/>
+
+      <!-- Rating energy -->
+      <color NAME="COLOR_RATING_ENERGY_POSITIVE_VALUE" VALUE="@COLOR_LIGHT_BLUE"/>
+      <color NAME="COLOR_RATING_ENERGY_NEGATIVE_VALUE" VALUE="@COLOR_SWATCH_GREY"/>
+      <color NAME="COLOR_RATING_ENERGY_POSITIVE_DIRECTION" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_RATING_ENERGY_NEGATIVE_DIRECTION" VALUE="@COLOR_SWATCH_RED"/>
+      <!-- Rating box -->
+      <color NAME="COLOR_RATING_BOX_EXCELLENT" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_RATING_BOX_GOOD" VALUE="@COLOR_SWATCH_LIGHT_GREEN"/>
+      <color NAME="COLOR_RATING_BOX_NORMAL" VALUE="@COLOR_SWATCH_YELLOW"/>
+      <color NAME="COLOR_RATING_BOX_POOR" VALUE="@COLOR_SWATCH_ORANGE"/>
+      <color NAME="COLOR_RATING_BOX_BAD" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="COLOR_RATING_BOX_NEUTRAL" VALUE="@COLOR_SWATCH_GREY"/>
+      <color_list NAME="COLOR_RATING_BOX_ARRAY">
+        <color VALUE="@COLOR_RATING_BOX_NEUTRAL"/>
+        <color VALUE="@COLOR_RATING_BOX_BAD"/>
+        <color VALUE="@COLOR_RATING_BOX_POOR"/>
+        <color VALUE="@COLOR_RATING_BOX_NORMAL"/>
+        <color VALUE="@COLOR_RATING_BOX_GOOD"/>
+        <color VALUE="@COLOR_RATING_BOX_EXCELLENT"/>
+      </color_list>
+      <!-- Interactive Sim-->
+      <color NAME="COLOR_SIM_POPUP_BACKING" VALUE="0x1a1932"/>
+      <color NAME="COLOR_SIM_POPUP_GRADIENT" VALUE="@COLOR_ULTRA_VIOLET"/>
+
+	  <!-- Messaging Hub  - Inbox - Player Conversations -->
+	  <color NAME="COLOR_FILL_SPEECHBALLOON_MANAGER" VALUE="@COLOR_FILL_HIGHLIGHT_ALTERNATE"/>
+
+      <!-- Standings -->
+      <color NAME="COLOR_STANDING_CHAMPION" VALUE="0x33efd2"/>            <!-- GREEN -->
+      <color NAME="COLOR_STANDING_PROMOTION" VALUE="@COLOR_STANDING_CHAMPION"/>
+      <color NAME="COLOR_STANDING_ADVANCEGROUP" VALUE="@COLOR_STANDING_CHAMPION"/>
+      <color NAME="COLOR_STANDING_RELEGATION" VALUE="0xde8a98"/>        <!-- DARK RED -->
+      <color NAME="COLOR_STANDING_CHAMPIONS_CUP" VALUE="0x65dbf0"/>        <!-- DARK BLUE -->
+      <color NAME="COLOR_STANDING_EURO_LEAGUE" VALUE="0x9cc0e2"/>        <!-- LIGHT BLUE -->
+      <color NAME="COLOR_STANDING_PROMOTION_POSSIBLE" VALUE="0x21c2aa"/>    <!-- LIGHT GREEN -->
+      <color NAME="COLOR_STANDING_RELEGATION_POSSIBLE" VALUE="0x7d1c2d"/>    <!-- LIGHT RED -->
+      <color_list NAME="COLOR_STANDING_ARRAY">
+        <color VALUE="@COLOR_STANDING_CHAMPION"/>
+        <color VALUE="@COLOR_STANDING_PROMOTION"/>
+        <color VALUE="@COLOR_STANDING_ADVANCEGROUP"/>
+        <color VALUE="@COLOR_STANDING_RELEGATION"/>
+        <color VALUE="@COLOR_STANDING_CHAMPIONS_CUP"/>
+        <color VALUE="@COLOR_STANDING_EURO_LEAGUE"/>
+        <color VALUE="@COLOR_STANDING_PROMOTION_POSSIBLE"/>
+        <color VALUE="@COLOR_STANDING_RELEGATION_POSSIBLE"/>
+      </color_list>
+      <color NAME="COLOR_TEXT_STANDINGS_USER_TEAM" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX_TITLE"/>
+	  <color NAME="COLOR_TEXT_STANDINGS_SCORE" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX_TITLE"/>
+	  <color NAME="COLOR_TEXT_STANDINGS_POINTS" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX_TITLE"/>
+	  <color NAME="COLOR_TEXT_STANDINGS_PREVIEW_TITLE" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX_TITLE"/>
+	  <color NAME="COLOR_TEXT_STANDINGS_PREVIEW_MONTH" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX"/>
+	  <color NAME="COLOR_TEXT_STANDINGS_LEAGUE_TEAM_STATS" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX"/>
+	  <color NAME="COLOR_TEXT_STANDINGS_FIXTURES" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX"/>
+      <!-- Stars -->
+      <color NAME="COLOR_STARS_FILL" VALUE="@COLOR_GOLDEN_YELLOW"/>
+      <color NAME="COLOR_STARS_BACKGROUND" VALUE="@COLOR_LIGHT_SLATE_GRAY"/>
+
+      <color NAME="COLOR_OPERATION_NEGATIVE" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="COLOR_OPERATION_POSITIVE" VALUE="0x24AE24"/>
+
+      <color NAME="COLOR_FE_DEFAULT" VALUE="0x0053a0"/>
+
+      <!-- MENTALITIES colors -->
+      <color_list NAME="COLOR_MENTALITY_BACK_ARRAY">
+        <color VALUE="0x0040c9"/> <!-- ULTRA DEFENSIVE -->
+        <color VALUE="0x0b94dc"/> <!-- DEFENSIVE -->
+        <color VALUE="@COLOR_FILL_PANEL_PREVIEW"/> <!-- BALANCED -->
+        <color VALUE="0xea7a30"/> <!-- ATTACKING -->
+        <color VALUE="0xd32828"/> <!-- ULTRA ATTACKING -->
+      </color_list>
+
+      <color_list NAME="COLOR_MENTALITY_FRONT_ARRAY">
+        <color VALUE="0x0F3CA0 "/>
+        <color VALUE="0x3BAFEC"/>
+        <color VALUE="0x6e7c9c"/>
+        <color VALUE="0xF6904C"/>
+        <color VALUE="0xFF2828"/>
+      </color_list>
+
+      <color NAME="COLOR_TEXT_MENTALITY_LABEL" VALUE="@COLOR_MANATEE"/>
+	  <color NAME="COLOR_FILL_MENTALITY_INACTIVE" VALUE="0x86919D"/>
+
+      <!-- SKILL GAMES colors -->
+      <color NAME="COLOR_SKILL_GAME_BRONZE" VALUE="@COLOR_SWATCH_BRONZE"/>
+      <color NAME="COLOR_SKILL_GAME_SILVER" VALUE="@COLOR_SWATCH_SILVER"/>
+      <color NAME="COLOR_SKILL_GAME_GOLD" VALUE="@COLOR_SWATCH_GOLD"/>
+      <color NAME="COLOR_SKILL_GAME_PLATINUM" VALUE="@COLOR_SWATCH_PLATINUM"/>
+      <color NAME="COLOR_SKILL_GAME_BASICS" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_SKILL_GAME_VERSUS" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="COLOR_SKILL_GAME_COOP" VALUE="@COLOR_SWATCH_PURPLE"/>
+      <color_list NAME="COLOR_SKILL_GAME_ARRAY">
+        <color VALUE="@COLOR_SKILL_GAME_BRONZE"/>
+        <color VALUE="@COLOR_SKILL_GAME_SILVER"/>
+        <color VALUE="@COLOR_SKILL_GAME_GOLD"/>
+        <color VALUE="@COLOR_SKILL_GAME_PLATINUM"/>
+        <color VALUE="@COLOR_SKILL_GAME_BASICS"/>
+        <color VALUE="@COLOR_SKILL_GAME_VERSUS"/>
+        <color VALUE="@COLOR_SKILL_GAME_COOP"/>
+      </color_list>
+      <color NAME="COLOR_SKILL_GAME_WINNER" VALUE="@COLOR_SWATCH_GOLD"/>
+      <color NAME="COLOR_SKILL_GAME_RUNNERUP" VALUE="0xB3B2CD"/>
+
+      <!-- CAREER colors -->
+      <color NAME="COLOR_TICKER_DEFAULT_TITLE_TEXT" VALUE="@COLOR_SAFE_BLACK"/>
+      <color NAME="COLOR_TICKER_DEFAULT_HEADLINE_TEXT" VALUE="@COLOR_NEOMINT"/>
+      <color NAME="COLOR_TICKER_DEFAULT_BAR_PRIMARY" VALUE="@COLOR_ULTRA_VIOLET"/>
+      <color NAME="COLOR_TICKER_DEFAULT_BAR_SECONDARY" VALUE="@COLOR_BURNT_ORANGE"/>
+      <color NAME="COLOR_TICKER_UEFA_CH_TITLE_TEXT" VALUE="@COLOR_TEXT_WHITE"/>
+      <color NAME="COLOR_TICKER_UEFA_CH_HEADLINE_TEXT" VALUE="@COLOR_TEXT_WHITE"/>
+      <color NAME="COLOR_TICKER_UEFA_CH_BAR_PRIMARY" VALUE="0x1B42F7"/>
+      <color NAME="COLOR_TICKER_UEFA_CH_BAR_SECONDARY" VALUE="0xFF16FF"/>
+      <color NAME="COLOR_TICKER_UEFA_EU_TITLE_TEXT" VALUE="0x0F0F0F"/>
+      <color NAME="COLOR_TICKER_UEFA_EU_HEADLINE_TEXT" VALUE="@COLOR_TEXT_WHITE"/>
+      <color NAME="COLOR_TICKER_UEFA_EU_BAR_PRIMARY" VALUE="0xF35A0B"/>
+      <color NAME="COLOR_TICKER_UEFA_EU_BAR_SECONDARY" VALUE="0xFFD400"/>
+
+      <color NAME="COLOR_TRAINING_CRUMBS_DOT_HIGHLIGHT" VALUE="@COLOR_CORAL_RED"/>
+      <color NAME="COLOR_TRAINING_CRUMBS_DOT_UNHIGHLIGHT" VALUE="@COLOR_OUTER_SPACE_GRAY"/>
+
+      <color NAME="COLOR_NEWS_NEW_FLAG_UNHIGHLIGHT" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX_TITLE"/>
+
+	  <!-- Press Conference -->
+	  <color NAME="COLOR_PRESSCONF_SUMMARY_BACKGROUND" VALUE="@COLOR_FILL_PANEL_PREVIEW"/>
+      <color NAME="COLOR_PRESSCONF_SUMMARY_ROWBAND" VALUE="0x252627"/>
+      <color NAME="COLOR_PRESSCONF_SUMMARY_BACKGROUND_HIGHLIGHT" VALUE="0x1ebd95"/>
+      <color NAME="COLOR_PRESSCONF_SUMMARY_ROWBAND_HIGHLIGHT" VALUE="0x2f1c5c"/>
+      <color NAME="COLOR_PRESSCONF_SUMMARY_MARK_HIGHLIGHT" VALUE="@COLOR_FILL_HIGHLIGHT"/>
+      <color NAME="COLOR_PRESSCONF_SUBTITLE_ACTOR" VALUE="@COLOR_FILL_HIGHLIGHT"/>
+	  <color NAME="COLOR_PRESSCONF_SUBTITLE_LINE" VALUE="@COLOR_TEXT_PREVIEW"/>
+
+	  <!--Draw Scene-->
+	  <color NAME="COLOR_CONMEBOL_GOLD" VALUE="@COLOR_GOLDEN_YELLOW"/>
+	  
+	  <!-- Player Search -->
+	  <color NAME="COLOR_PLAYERSEARCH_IMAGE_HIGHLIGHT" VALUE="@COLOR_NEOMINT"/>
+	  <color NAME="COLOR_PLAYERSEARCH_IMAGE_UNHIGHLIGHT" VALUE="0x6e33e3"/>
+
+      <!-- Calendar -->
+      <color NAME="CALENDAR_FRIENDLY_HIGHLIGHT" VALUE="@COLOR_TEXT_HIGHLIGHT_FLUX"/>
+      <color NAME="CALENDAR_FRIENDLY_UNHIGHLIGHT" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX"/>
+      <color NAME="CALENDAR_LEAGUE_HIGHLIGHT" VALUE="@COLOR_TEXT_HIGHLIGHT_FLUX"/>
+      <color NAME="CALENDAR_LEAGUE_UNHIGHLIGHT" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX"/>
+      <color NAME="CALENDAR_CUP_HIGHLIGHT" VALUE="@COLOR_TEXT_HIGHLIGHT_FLUX"/>
+      <color NAME="CALENDAR_CUP_UNHIGHLIGHT" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX"/>
+      <color NAME="CALENDAR_INTERNATIONAL_HIGHLIGHT" VALUE="@COLOR_TEXT_HIGHLIGHT_FLUX"/>
+      <color NAME="CALENDAR_INTERNATIONAL_UNHIGHLIGHT" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX"/>
+      <color NAME="CALENDAR_INTERNATIONAL_FRIENDLY_HIGHLIGHT" VALUE="@COLOR_TEXT_HIGHLIGHT_FLUX"/>
+      <color NAME="CALENDAR_INTERNATIONAL_FRIENDLY_UNHIGHLIGHT" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX"/>
+      <color NAME="CALENDAR_CHAMPIONSLEAGUE_HIGHLIGHT" VALUE="0x5AF7DC"/>
+      <color NAME="CALENDAR_CHAMPIONSLEAGUE_UNHIGHLIGHT" VALUE="0x5AF7DC"/>
+      <color NAME="CALENDAR_EUROPALEAGUE_HIGHLIGHT" VALUE="0xF39200"/>
+      <color NAME="CALENDAR_EUROPALEAGUE_UNHIGHLIGHT" VALUE="0xF39200"/>
+      <color NAME="CALENDAR_SUPERCUP_HIGHLIGHT" VALUE="0x00BCE4"/>
+      <color NAME="CALENDAR_SUPERCUP_UNHIGHLIGHT" VALUE="0x00BCE4"/>
+      <color NAME="CALENDAR_PRESS_HIGHLIGHT" VALUE="@COLOR_TEXT_HIGHLIGHT_FLUX"/>
+      <color NAME="CALENDAR_PRESS_UNHIGHLIGHT" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX"/>
+      <color NAME="CALENDAR_DEADLINE_HIGHLIGHT" VALUE="@COLOR_TEXT_HIGHLIGHT_FLUX"/>
+      <color NAME="CALENDAR_DEADLINE_UNHIGHLIGHT" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX"/>
+      <color NAME="CALENDAR_TRANSFER_HIGHLIGHT" VALUE="@COLOR_TEXT_HIGHLIGHT_FLUX"/>
+      <color NAME="CALENDAR_TRANSFER_UNHIGHLIGHT" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX"/>
+      <color NAME="COLOR_TEXT_UNHIGHLIGHT_DAY_CURRENT" VALUE="@COLOR_TEXT_UNHIGHLIGHT_FLUX_TITLE"/>
+
+      <color NAME="COLOR_CALENDAR_BUNDESLIGA" VALUE="@COLOR_WHITE"/>
+      <color NAME="COLOR_CALENDAR_EPL" VALUE="@COLOR_WHITE"/>
+      <color NAME="COLOR_CALENDAR_LALIGA" VALUE="0xF4FCC8"/>
+      <color NAME="COLOR_CALENDAR_LEAGUE_ONE" VALUE="@COLOR_WHITE"/>
+      <color NAME="COLOR_CALENDAR_MLS" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_CALENDAR_CHAMPIONSLEAGUE" VALUE="@COLOR_WHITE"/>
+      <color NAME="COLOR_CALENDAR_EUROPALEAGUE" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_CALENDAR_LIBERTADORES" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_CALENDAR_SUDAMERICANA" VALUE="@COLOR_SAFE_WHITE"/>
+
+      <!--GTN and Transfers -->
+      <color NAME="COLOR_TRANSFER_NORMAL" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_TRANSFER_ACTIVE" VALUE="@COLOR_ELECTRIC_BLUE"/>
+      <color NAME="COLOR_TRANSFER_ALERT" VALUE="@COLOR_SWATCH_ORANGE"/>
+      <color NAME="COLOR_TRANSFER_REJECTED" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="COLOR_FILL_GTN_ICON_NEW" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_FILL_GTN_ICON_UPDATE" VALUE="@COLOR_SWATCH_ORANGE"/>
+      <color NAME="COLOR_FILL_GTN_MAP" VALUE="0x3D2D67"/>
+      <color NAME="COLOR_FILL_REGION_UNHIGHLIGHT" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_FILL_REGION_HIGHLIGHT" VALUE="@COLOR_FILL_PANEL_HIGHLIGHT_FLUX"/>
+      <color NAME="COLOR_FILL_REGION_LABEL" VALUE="@COLOR_FILL_PANEL_HIGHLIGHT_FLUX"/>
+      <color NAME="COLOR_SCOUT_STATUS_AVAILABLE" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_SCOUT_STATUS_SCOUTING" VALUE="@COLOR_SWATCH_ORANGE"/>
+      <color NAME="COLOR_SCOUT_STATUS_REPORTING" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="COLOR_SCOUT_STATUS_TRANSIT" VALUE="@COLOR_SWATCH_YELLOW"/>
+      <color_list NAME="COLOR_SCOUT_STATUS_ARRAY">
+        <color VALUE="@COLOR_SCOUT_STATUS_AVAILABLE"/>
+        <color VALUE="@COLOR_SCOUT_STATUS_SCOUTING"/>
+        <color VALUE="@COLOR_SCOUT_STATUS_REPORTING"/>
+        <color VALUE="@COLOR_SCOUT_STATUS_TRANSIT"/>
+      </color_list>
+      <color NAME="COLOR_KICKOFF_TEAM_0" VALUE="0x7f43f6"/>
+      <color NAME="COLOR_KICKOFF_TEAM_1" VALUE="0x63d3f9"/>
+      <color NAME="COLOR_KICKOFF_DRAW" VALUE="@COLOR_SLIDER_TRACK"/>
+
+      <!-- Kickoff PieChart colors -->
+      <color NAME="COLOR_PIECHART_DEFAULT_FILL" VALUE="@COLOR_KICKOFF_DRAW"/>
+      <color NAME="COLOR_PIECHART_HOME_SHORT_RANGE_GOAL" VALUE="0x9869F5"/>
+      <color NAME="COLOR_PIECHART_HOME_LONG_RANGE_GOAL" VALUE="0x7E42F5"/>
+      <color NAME="COLOR_PIECHART_HOME_FREE_KICK_GOAL" VALUE="0x7b3ff2"/>
+      <color NAME="COLOR_PIECHART_HOME_PENALTY_GOAL" VALUE="0xAF8BF5"/>
+      <color NAME="COLOR_PIECHART_AWAY_SHORT_RANGE_GOAL" VALUE="0x24a0c9"/>
+      <color NAME="COLOR_PIECHART_AWAY_LONG_RANGE_GOAL" VALUE="0x15A7E4"/>
+      <color NAME="COLOR_PIECHART_AWAY_FREE_KICK_GOAL" VALUE="0x63d3f9"/>
+      <color NAME="COLOR_PIECHART_AWAY_PENALTY_GOAL" VALUE="0x9ADBF0"/>
+
+      <!-- Objectives -->
+      <color NAME="COLOR_MANAGER_SUCCESS_SCORE_ABOVE" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_MANAGER_SUCCESS_SCORE_TARGET" VALUE="@COLOR_SWATCH_GREY"/>
+      <color NAME="COLOR_MANAGER_SUCCESS_SCORE_BELOW" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="COLOR_PRIORITIES_CRITICAL" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="COLOR_PRIORITIES_HIGH" VALUE="@COLOR_SWATCH_ORANGE"/>
+      <color NAME="COLOR_PRIORITIES_MEDIUM" VALUE="@COLOR_SWATCH_YELLOW"/>
+      <color NAME="COLOR_PRIORITIES_LOW" VALUE="@COLOR_SWATCH_BLUE"/>
+      <color NAME="COLOR_PRIORITIES_VERY_LOW" VALUE="@COLOR_SWATCH_GREY"/>
+      <color_list NAME="PRIORITY_COLORS">
+        <color VALUE="@COLOR_PRIORITIES_CRITICAL"/>
+        <color VALUE="@COLOR_PRIORITIES_HIGH"/>
+        <color VALUE="@COLOR_PRIORITIES_MEDIUM"/>
+        <color VALUE="@COLOR_PRIORITIES_LOW"/>
+        <color VALUE="@COLOR_PRIORITIES_VERY_LOW"/>
+      </color_list>
+      <color_list NAME="COLOR_MANAGER_RATING_ARRAY">
+        <color VALUE="0xA31D1D"/>
+        <color VALUE="0xFF5A5A"/>
+        <color VALUE="0xE1830A"/>
+        <color VALUE="0xFFC77E"/>
+        <color VALUE="0xBF9D00"/>
+        <color VALUE="0xFFE985"/>
+        <color VALUE="0x3F802E"/>
+        <color VALUE="0x9EFF85"/>
+      </color_list>
+
+      <!-- WORLD TOUR colors -->
+      <color NAME="COLOR_VOLTA_LEGEND" VALUE="0x373026"/>
+
+      <color NAME="COLOR_VOLTA_WORLD_TOUR" VALUE="0x3FE3EF"/>
+      <color NAME="COLOR_VOLTA_TWIST" VALUE="0x81FF01"/>
+      <color NAME="COLOR_VOLTA_SEASONS" VALUE="0xFF5E00"/>
+      <color NAME="COLOR_VOLTA_TEAM_PLAY" VALUE="0xEDED00"/>
+      <color NAME="COLOR_VOLTA_WAREHOUSE" VALUE="0xAF27F2"/>
+	  
+	  <!-- VOLTA LED PITCH colors used in overlay_15049 -->
+      <color NAME="COLOR_VOLTA_LED_PITCH_COLOR" VALUE="0x1a1aff"/>
+      <color NAME="COLOR_VOLTA_LED_PITCH_LINE_COLOR" VALUE="0x1af7ff"/>
+      <alpha NAME="COLOR_VOLTA_LED_PITCH_LINE_ALPHA" VALUE="70"/>
+	
+      <color NAME="COLOR_SPIRIT_STYLE_0" VALUE="0xfafa20"/>
+      <color NAME="COLOR_SPIRIT_STYLE_1" VALUE="0x86f2d4"/>
+      <color NAME="COLOR_SPIRIT_STYLE_2" VALUE="0xb069ff"/>
+      <color NAME="COLOR_SPIRIT_STYLE_3" VALUE="0x31ff01"/>
+      <color NAME="COLOR_SPIRIT_STYLE_4" VALUE="0xff207c"/>
+      <color NAME="COLOR_SPIRIT_STYLE_5" VALUE="0xff8143"/>
+      <color NAME="COLOR_SPIRIT_STYLE_6" VALUE="0xf5f5f5"/>
+
+      <color NAME="COLOR_TURF_1" VALUE="0x0c0c12"/>
+      <color NAME="COLOR_TURF_2" VALUE="0x0a1238"/>
+      <color NAME="COLOR_TURF_3" VALUE="0x19042c"/>
+      <color NAME="COLOR_TURF_4" VALUE="0x090a0f"/>
+      <color NAME="COLOR_TURF_5" VALUE="0x1e2646"/>
+      <color NAME="COLOR_TURF_6" VALUE="0x0a1238"/>
+      <color NAME="COLOR_TURF_7" VALUE="0x0c2844"/>
+      <color NAME="COLOR_TURF_8" VALUE="0x320440"/>
+      <color NAME="COLOR_TURF_9" VALUE="0x0c042c"/>
+      <color NAME="COLOR_TURF_10" VALUE="0x042620"/>
+      <color NAME="COLOR_TURF_11" VALUE="0x0e102d"/>
+      <color NAME="COLOR_TURF_12" VALUE="0x151859"/>
+      <color NAME="COLOR_TURF_13" VALUE="0x0a1238"/>
+      <color NAME="COLOR_TURF_14" VALUE="0x000000"/>
+      <color NAME="COLOR_TURF_15" VALUE="0x182734"/>
+      <color NAME="COLOR_TURF_16" VALUE="0x072a2c"/>
+      <color NAME="COLOR_TURF_17" VALUE="0x0d1212"/>
+      <color NAME="COLOR_TURF_LEGEND" VALUE="0x373026"/>
+
+      <color NAME="COLOR_ITEM_RARITY_0" VALUE="0x4d4c4d"/>  <!--BASIC - WHITE-->
+      <color NAME="COLOR_ITEM_RARITY_1" VALUE="0x016151"/>  <!--NOBLE - GREEN-->
+      <color NAME="COLOR_ITEM_RARITY_2" VALUE="0x024387"/>  <!--RARE - BLUE-->
+      <color NAME="COLOR_ITEM_RARITY_3" VALUE="0x460673"/>  <!--EPIC - PURPLE-->
+      <color NAME="COLOR_ITEM_RARITY_4" VALUE="0x886701"/>  <!--LEGENDARY - GOLD-->
+
+      <color NAME="COLOR_ITEM_RARITY_0_LIGHT" VALUE="0xFFFFFF"/>  <!--BASIC - WHITE-->
+      <color NAME="COLOR_ITEM_RARITY_1_LIGHT" VALUE="0x00DFBA"/>  <!--NOBLE - GREEN-->
+      <color NAME="COLOR_ITEM_RARITY_2_LIGHT" VALUE="0x00C0FF"/>  <!--RARE - BLUE-->
+      <color NAME="COLOR_ITEM_RARITY_3_LIGHT" VALUE="0xC600FF"/>  <!--EPIC - PURPLE-->
+      <color NAME="COLOR_ITEM_RARITY_4_LIGHT" VALUE="0xFFC200"/>  <!--LEGENDARY - GOLD-->
+
+      <color NAME="COLOR_ITEM_RARITY_0_DARK" VALUE="0x2e2e30"/>  <!--BASIC - WHITE-->
+      <color NAME="COLOR_ITEM_RARITY_1_DARK" VALUE="0x023333"/>  <!--NOBLE - GREEN-->
+      <color NAME="COLOR_ITEM_RARITY_2_DARK" VALUE="0x011634"/>  <!--RARE - BLUE-->
+      <color NAME="COLOR_ITEM_RARITY_3_DARK" VALUE="0x150131"/>  <!--EPIC - PURPLE-->
+      <color NAME="COLOR_ITEM_RARITY_4_DARK" VALUE="0x4C3401"/>  <!--LEGENDARY - GOLD-->
+
+      <color NAME="COLOR_CHALLENGE_ACTIVE" VALUE="0x06e006"/>
+      <color NAME="COLOR_CHALLENGE_INACTIVE" VALUE="0x333641"/>
+      <color NAME="COLOR_CHALLENGE_CLAIMABLE" VALUE="0xF02848"/>
+      <color NAME="COLOR_CHALLENGE_IN_PROGRESS" VALUE="0x15a415"/>
+
+      <color NAME="COLOR_FILL_PANEL_BENCH_ACTIVE" VALUE="@COLOR_DARK_GREY"/>
+      <color NAME="COLOR_FILL_PANEL_BENCH_INACTIVE" VALUE="@COLOR_WOODSMOKE_GRAY"/>
+      <color NAME="COLOR_FILL_PANEL_VOLTA_MAP" VALUE="@COLOR_BLACK_ROCK_BLUE"/>
+
+      <!-- WT Supporting Text Widget -->
+      <color NAME="COLOR_WIDGET_CYAN" VALUE="@COLOR_SWATCH_CYAN"/>
+      <color NAME="COLOR_WIDGET_PINK" VALUE="@COLOR_SWATCH_PINK"/>
+
+      <!-- WT UserInfo Widget -->
+      <color NAME="COLOR_WIDGET_DEFAULT" VALUE="0x535169"/>
+      <color NAME="COLOR_WIDGET_BRONZE" VALUE="0x836B5D"/>
+      <color NAME="COLOR_WIDGET_SILVER" VALUE="0x999CA1"/>
+      <color NAME="COLOR_WIDGET_GOLD" VALUE="0x9D9271"/>
+      <color NAME="COLOR_WIDGET_LIMITED" VALUE="0x57544A"/>
+
+      <!-- POW colors -->
+      <color NAME="COLOR_HEX_FUT" VALUE="0xe0c325"/>
+      <color NAME="COLOR_HEX_GAMEPLAY" VALUE="0x921f3c"/>
+      <color NAME="COLOR_HEX_ONLINE" VALUE="0x1d70aa"/>
+      <color NAME="COLOR_HEX_CAREER" VALUE="0xd8843a"/>
+      <color NAME="COLOR_HEX_OWNED" VALUE="0x8bb123"/>
+      <color NAME="COLOR_HEX_NOTIFICATION" VALUE="@COLOR_SWATCH_RED"/>
+
+      <!-- KICKOFF colors -->
+      <color NAME="COLOR_TEXT_FILLBAR" VALUE="@COLOR_TEXT_UNHIGHLIGHT"/>
+      <color NAME="SHOOTING_POSTS" VALUE="@COLOR_SAFE_WHITE"/>
+      <!-- COLOR_TEXT_TEAM_0 and COLOR_TEXT_TEAM_1 are designed to be readable on top of COLOR_KICKOFF_TEAM_0 and COLOR_KICKOFF_TEAM_1. -->
+      <color NAME="COLOR_TEXT_TEAM_0" VALUE="@COLOR_TEXT_UNHIGHLIGHT"/>
+      <color NAME="COLOR_TEXT_TEAM_1" VALUE="@COLOR_TEXT_UNHIGHLIGHT"/>
+
+      <!-- ONLINE colors -->
+      <color NAME="COLOR_SCORE_RED" VALUE="0xab3724"/>
+      <color NAME="COLOR_SCORE_GREEN" VALUE="0x5d9012"/>
+      <color NAME="COLOR_SCORE_YELLOW" VALUE="0xc98018"/>
+      <color NAME="COLOR_FRIENDLIES_GREEN" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="COLOR_FRIENDLIES_RED" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="COLOR_FRIENDLIES_BLUE" VALUE="0x2DABEB"/>
+      <color NAME="COLOR_SEASON_STATUS_FORM_GREEN" VALUE="@COLOR_FRIENDLIES_GREEN"/>
+      <color NAME="COLOR_SEASON_STATUS_FORM_RED" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="COLOR_SEASON_STATUS_FORM_GREY" VALUE="@COLOR_SWATCH_GREY"/>
+      <color NAME="COLOR_ONLINE_PRIMARY_FILL" VALUE="@COLOR_ELECTRIC_BLUE"/>
+      <color NAME="COLOR_ONLINE_SECONDARY_FILL" VALUE="0x00aa00"/>
+      <color NAME="COLOR_TEXT_ONLINE_DIVISION" VALUE="@COLOR_MILAN_YELLOW"/>
+
+	  <!-- SYMBOL colors -->
+      <color NAME="COLOR_SYMBOL_ADD_HL_UHL" VALUE="@COLOR_SWATCH_GREEN"/>
+		
+      <!-- OVERLAY colors -->
+      <color NAME="COLOR_TEXT_WHITE" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_TEXT_BLACK" VALUE="@COLOR_SAFE_BLACK"/>
+      <color NAME="COLOR_TEXT_EPL_GRAY" VALUE="0x857E84"/>
+      <color NAME="COLOR_EPL_PANEL_HIGHLIGHT_BAR" VALUE="0x963CFE"/>
+      <color NAME="COLOR_EPL_PANEL_HIGHLIGHT_TEXT" VALUE="@COLOR_SAFE_WHITE"/>
+      <color NAME="COLOR_EPL_DROPDOWN_HIGHLIGHT_BAR" VALUE="@COLOR_TEXT_EPL_CYAN"/>
+      <color NAME="COLOR_EPL_DROPDOWN_HIGHLIGHT_TEXT" VALUE="@COLOR_TEXT_EPL_PURPLE"/>
+      <color NAME="COLOR_TEXT_EPL_BLUE" VALUE="0x1F213C"/> <!-- to be removed after old epl set is cleaned up -->
+      <color NAME="COLOR_TEXT_EPL_PURPLE" VALUE="0x37003C"/> <!-- EPL 2017 color -->
+      <color NAME="COLOR_TEXT_EPL_CYAN" VALUE="0x00FF86"/> <!-- EPL 2017 color -->
+
+      <color NAME="COLOR_TEXT_FA_CUP_BLUE" VALUE="0x000032"/>
+      <color NAME="COLOR_TEXT_HIGHLIGHT_OVERLAY" VALUE="@COLOR_SWATCH_YELLOW"/>
+
+      <color NAME="COLOR_TEXT_LA_LIGA_GOLD" VALUE="0xF4FCC8"/> <!-- La Liga 2018 Text Color -->
+      <color NAME="COLOR_TEXT_LA_LIGA_BLUE" VALUE="0x92DAEC"/> <!-- La Liga 2018 Text Color -->
+      <color NAME="COLOR_LA_LIGA_NAVY" VALUE="0x081318"/> <!-- La Liga 2018 Background Color -->
+      <color NAME="COLOR_LA_LIGA_DARK_NAVY" VALUE="0x080D0F"/> <!-- La Liga 2018 Background Color -->
+      <color NAME="COLOR_LA_LIGA_STEEL_BLUE" VALUE="0x254151"/> <!-- La Liga 2018 Wipe Color -->
+      <color NAME="COLOR_LA_LIGA_DARK_STEEL_BLUE" VALUE="0x102029"/> <!-- La Liga 2018 Wipe Color -->
+      <color NAME="COLOR_LA_LIGA_FRAME_BLUE" VALUE="0x293d44"/> <!-- La Liga 2018 Frame Color -->
+      <color NAME="COLOR_LA_LIGA_PANEL" VALUE="0x2E2E2E"/> <!-- La Liga BackPanel Color -->
+
+      <color NAME="COLOR_MLS_WHITE" VALUE="@COLOR_SAFE_WHITE"/> <!-- MLS 2018 color -->
+      <color NAME="COLOR_MLS_LIGHT_GRAY" VALUE="0xDDDDDD"/> <!-- MLS 2018 color -->
+      <color NAME="COLOR_MLS_MEDIUM_GRAY" VALUE="0xB4B4B4"/> <!-- MLS 2018 color -->
+      <color NAME="COLOR_MLS_DARK_GRAY" VALUE="0x5B5B5B"/> <!-- MLS 2018 color -->
+
+      <color NAME="COLOR_UCL_DARK_BLUE" VALUE="@COLOR_STRATOS"/> <!-- UEFA 2018 color -->
+
+      <color NAME="COLOR_OVERLAY_FUT_GOLD" VALUE="0xE6C148"/> <!-- FUT 2018 color -->
+      <color NAME="COLOR_OVERLAY_FUT_BACKGROUND" VALUE="0x161512"/> <!-- FUT 2018 color -->
+
+      <color NAME="COLOR_OVERLAY_BUNDESLIGA_RED" VALUE="0xD20515"/> <!-- BundesLiga 2018 color -->
+      <color NAME="COLOR_OVERLAY_BUNDESLIGA_OFF_WHITE" VALUE="0xDEDEDE"/> <!-- BundesLiga 2018 color -->
+      <color NAME="COLOR_OVERLAY_BUNDESLIGA_LIGHT_GREY" VALUE="0xA8A8A8"/> <!-- BundesLiga 2018 color -->
+      <color NAME="COLOR_OVERLAY_BUNDESLIGA_MEDIUM_GREY" VALUE="0x7E7E7E"/> <!-- BundesLiga 2018 color -->
+      <color NAME="COLOR_OVERLAY_BUNDESLIGA_DARK_GREY" VALUE="0x3C3C3C"/> <!-- BundesLiga 2018 color -->
+      <color NAME="COLOR_OVERLAY_BUNDESLIGA_BLACK" VALUE="@COLOR_SAFE_BLACK"/> <!-- BundesLiga 2018 color -->
+      <color NAME="COLOR_OVERLAY_BUNDESLIGA_WHITE" VALUE="@COLOR_SAFE_WHITE"/> <!-- BundesLiga 2018 color -->
+
+      <color NAME="COLOR_OVERLAY_LIGUE_1_GREY" VALUE="0xBCC4CB"/> <!-- Ligue 1 2018 color -->
+      <color NAME="COLOR_OVERLAY_LIGUE_1_YELLOW" VALUE="0xDBE120"/> <!-- Ligue 1 2018 color -->
+      <color NAME="COLOR_OVERLAY_LIGUE_1_NAVY" VALUE="0x12233F"/> <!-- Ligue 1 2018 color -->
+      <color NAME="COLOR_OVERLAY_LIGUE_1_BLUE" VALUE="0x283E5F"/> <!-- Ligue 1 2018 color -->
+
+      <!-- TEXT colors - DEPRECATED - DO NOT USE! -->
+      <color NAME="COLOR_TEXT_YELLOW" VALUE="@COLOR_YELLOW"/>
+      <color NAME="COLOR_TEXT_DARK_ORANGE" VALUE="@COLOR_DARK_ORANGE"/>
+      <color NAME="COLOR_TEXT_DARK_GREY" VALUE="@COLOR_DARK_GREY"/>
+      <color NAME="COLOR_TEXT_LIGHT_GREY" VALUE="@COLOR_LIGHT_GREY"/>
+      <color NAME="COLOR_TEXT_GREEN" VALUE="@COLOR_GREEN"/>
+      <color NAME="COLOR_TEXT_RED" VALUE="@COLOR_RED"/>
+      <color NAME="COLOR_TEXT_DORIAN_GREY" VALUE="@COLOR_DORIAN_GREY"/>
+      <color NAME="COLOR_TEXT_CELESTIAL_BLUE" VALUE="@COLOR_FILL_HIGHLIGHT_ALTERNATE"/> <!-- Player Convo Chat Color -->
+      <color NAME="COLOR_TEXT_ACID_GREEN" VALUE="@COLOR_ACID_GREEN"/>
+      <color NAME="COLOR_TEXT_BLUE" VALUE="@COLOR_BLUE"/>
+      <color NAME="COLOR_TEXT_DARK_NAVY" VALUE="@COLOR_DARK_VIOLET"/>
+      <color NAME="COLOR_TEXT_BRIGHT_GREY_NAVY" VALUE="@COLOR_BRIGHT_GREY_NAVY"/>
+      <color NAME="COLOR_TEXT_ASH_GREY" VALUE="@COLOR_ASH_GREY"/>
+      <color NAME="COLOR_TEXT_SUN_YELLOW" VALUE="@COLOR_SWATCH_YELLOW"/>
+      <color NAME="COLOR_TEXT_ROW_COMPONENT_BLUE" VALUE="@COLOR_ROW_COMPONENT_BLUE"/>
+      <color NAME="COLOR_TEXT_METER_BAR_BLUE" VALUE="@COLOR_CURIOUS_BLUE"/>
+      <color NAME="COLOR_TEXT_FLUX_REGULAR" VALUE="@COLOR_TEXT_DESCRIPTION"/>
+      <color NAME="COLOR_TEXT_PREVIEW_FLUX" VALUE="@COLOR_TEXT_PREVIEW"/>
+
+      <!-- FILL colors - DEPRECATED - DO NOT USE! -->
+      <color NAME="COLOR_FILL_ASH_GREY" VALUE="@COLOR_ASH_GREY"/>
+
+      <!-- GENERAL colors - DEPRECATED - DO NOT USE! -->
+      <color NAME="COLOR_TRAINING_BLUE" VALUE="0x61a1c2"/>
+      <color NAME="COLOR_SCORE_TRAINING_BLUE" VALUE="@COLOR_SUBTLE_BLUE"/>
+
+      <!-- SWATCH colors - DEBUG - DO NOT USE! -->
+      <color NAME="DEBUG_COLOR_SWATCH_RED" VALUE="@COLOR_SWATCH_RED"/>
+      <color NAME="DEBUG_COLOR_SWATCH_ORANGE" VALUE="@COLOR_SWATCH_ORANGE"/>
+      <color NAME="DEBUG_COLOR_SWATCH_YELLOW" VALUE="@COLOR_SWATCH_YELLOW"/>
+      <color NAME="DEBUG_COLOR_SWATCH_GREEN" VALUE="@COLOR_SWATCH_GREEN"/>
+      <color NAME="DEBUG_COLOR_SWATCH_BLUE" VALUE="@COLOR_SWATCH_BLUE"/>
+      <color NAME="DEBUG_COLOR_SWATCH_CYAN" VALUE="@COLOR_SWATCH_CYAN"/>
+      <color NAME="DEBUG_COLOR_SWATCH_PURPLE" VALUE="@COLOR_SWATCH_PURPLE"/>
+      <color NAME="DEBUG_COLOR_SWATCH_MAGENTA" VALUE="@COLOR_SWATCH_MAGENTA"/>
+      <color NAME="DEBUG_COLOR_SWATCH_GREY" VALUE="@COLOR_SWATCH_GREY"/>
+	  
+	  <!-- TutorialScreen cfg speciffic - used to block the theme support inside carreer. Don't bring this into themes. -->
+  	  <color NAME="COLOR_TUTORIAL_BG" VALUE="@COLOR_BLACK_ROCK_BLUE"/>
+	  <color NAME="COLOR_TUTORIAL_HEADER" VALUE="@COLOR_TEXT_HIGHLIGHT_FLUX_TITLE"/>
+	  <color NAME="COLOR_TUTORIAL_DESC" VALUE="@COLOR_TEXT_HIGHLIGHT_FLUX"/>
+	  <color NAME="COLOR_TUTORIAL_ELEMENTS_HL" VALUE="@COLOR_FILL_HIGHLIGHT_ALTERNATE"/> 
+	  <color NAME="COLOR_TUTORIAL_ELEMENTS_UHL" VALUE="@COLOR_FILL_UNHIGHLIGHT_ALTERNATE"/> 
+
+    </color_set>
+
+    <alpha_set>
+      <!-- GENERAL alpha -->
+      <alpha NAME="ALPHA_NONE" VALUE="0"/>
+      <alpha NAME="ALPHA_ROW_BAND" VALUE="5"/>
+      <alpha NAME="ALPHA_GRID_PANELS" VALUE="6"/>
+      <alpha NAME="ALPHA_GLASS" VALUE="8"/>
+      <alpha NAME="ALPHA_TRANSPARENT" VALUE="30"/>
+      <alpha NAME="ALPHA_DISABLED" VALUE="40"/>
+      <alpha NAME="ALPHA_HALF" VALUE="50"/>
+      <alpha NAME="ALPHA_DIMMER" VALUE="70"/>
+      <alpha NAME="ALPHA_INACTIVE" VALUE="80"/>
+      <alpha NAME="ALPHA_FLUX_TILE_DISABLED_HL" VALUE="40"/>
+      <alpha NAME="ALPHA_FLUX_TILE_DISABLED" VALUE="40"/>
+      <alpha NAME="ALPHA_FLUX_IMAGE" VALUE="@ALPHA_INACTIVE"/>
+      <alpha NAME="ALPHA_FLUX_TILE_INACTIVE" VALUE="100"/>
+      <alpha NAME="ALPHA_FULL" VALUE="100"/>
+
+      <!-- PANEL alpha -->
+      <alpha NAME="ALPHA_PANEL_HIGHLIGHT_FLUX" VALUE="100"/>
+      <alpha NAME="ALPHA_PANEL_UNHIGHLIGHT_FLUX" VALUE="96"/>
+      <alpha NAME="ALPHA_PANEL_HIGHLIGHT_FLUX_DISABLED" VALUE="100"/>
+      <alpha NAME="ALPHA_PANEL_UNHIGHLIGHT_FLUX_DISABLED" VALUE="40"/>
+      <alpha NAME="ALPHA_PANEL_HIGHLIGHT_ROWBAND" VALUE="10"/>
+      <alpha NAME="ALPHA_PANEL_UNHIGHLIGHT_ROWBAND" VALUE="10"/>
+      <alpha NAME="ALPHA_PANEL_PREVIEW_ROWBAND" VALUE="4"/>
+      <alpha NAME="ALPHA_PANEL_HIGHLIGHTPANEL_ROWBAND" VALUE="39"/>
+      <alpha NAME="ALPHA_PANEL_PREVIEW" VALUE="94"/>
+      <alpha NAME="ALPHA_PANEL_POPUP" VALUE="100"/>
+      <alpha NAME="ALPHA_PANEL_MAINFRAME" VALUE="96"/>
+      <alpha NAME="ALPHA_PANEL_HEADER" VALUE="100"/>
+      <alpha NAME="ALPHA_PANEL_TITLEBAR" VALUE="100"/>
+      <alpha NAME="ALPHA_PANEL_DIMMER" VALUE="22"/>
+      <alpha NAME="ALPHA_PANEL_LEGACY_1" VALUE="100"/>
+      <alpha NAME="ALPHA_PANEL_LEGACY_2" VALUE="100"/>
+      <alpha NAME="ALPHA_PANEL_LEGACY_3" VALUE="100"/>
+      <alpha NAME="ALPHA_PANEL_LEGACY_4" VALUE="100"/>
+      <alpha NAME="ALPHA_PANEL_CRUMBS" VALUE="99"/>
+      <alpha NAME="ALPHA_PANEL_FLUX_TRANSPARENT" VALUE="80"/>
+      <alpha NAME="ALPHA_PANEL_HIGHLIGHT_CALENDAR_TILE" VALUE="100"/>
+      <alpha NAME="ALPHA_PANEL_UNHIGHLIGHT_CALENDAR_TILE" VALUE="100"/>
+      <alpha NAME="ALPHA_PANEL_INNER_HIGHLIGHT_FLUX" VALUE="100"/>
+      <alpha NAME="ALPHA_PANEL_INNER_UNHIGHLIGHT_FLUX" VALUE="100"/>
+
+      <!-- Background -->
+      <alpha NAME="ALPHA_BACKGROUND" VALUE="@ALPHA_NONE"/>
+
+      <!-- ScreenDimmer -->
+      <alpha NAME="ALPHA_SCREEN_DIMMER" VALUE="60"/>
+
+      <!-- OVERLAY alpha -->
+      <alpha NAME="ALPHA_LA_LIGA_PANEL" VALUE="82"/> <!-- La Liga BackPanel Alpha -->
+
+      <!-- Scrollbar -->
+      <alpha NAME="ALPHA_SCROLLBAR_TRACK" VALUE="100"/>
+
+      <!-- Standings -->
+      <alpha NAME="ALPHA_STANDINGS_HIGHLIGHT_ROW" VALUE="100"/>
+      <alpha NAME="ALPHA_STANDINGS_UNHIGHLIGHT_ROW" VALUE="100"/>
+
+	  <!-- Calendar -->
+      <alpha NAME="ALPHA_CALENDAR_DIMMED_CELL" VALUE="@ALPHA_NONE"/>
+    </alpha_set>
+
+    <font_family_set>
+      <!-- GENERAL fonts -->
+      <font_family NAME="FONT_NAME_MEDIUM" VALUE="EAMedium" CACHE="TRUE"/>
+	  <font_family NAME="FONT_NAME_BOLD_ITALIC" VALUE="EABoldItalic" IS_ITALIC="TRUE"/>
+      <font_family NAME="FONT_NAME_REGULAR" VALUE="EACondMedium" CACHE="TRUE"/>
+      <font_family NAME="FONT_NAME_BOLD" VALUE="EACondBold" CACHE="TRUE"/>
+      <font_family NAME="FONT_NAME_HEAVY" VALUE="EABold" CACHE="TRUE"/>
+	  <font_family NAME="FONT_NAME_BLACK_ITALIC" VALUE="EABlackItalic" IS_ITALIC="TRUE"/>
+      <!-- G4 does not use FONT_NAME_COND_BOLD_ITALIC and FONT_NAME_COND_BLACK_ITALIC, these are replaced with other fonts that are have similar boldness in order to keep parity as much as possible between G4 and G5 -->
+      <font_family NAME="FONT_NAME_COND_BOLD_ITALIC" VALUE="EACondMedium"/>
+      <font_family NAME="FONT_NAME_COND_BLACK_ITALIC" VALUE="EACondBold"/>
+      <!-- OVERLAY fonts -->
+      <font_family NAME="FONT_NAME_EPL" VALUE="PremierLeague-Bold"/>
+      <font_family NAME="FONT_NAME_EPL_REGULAR" VALUE="PremierLeague-Regular"/>
+      <font_family NAME="FONT_NAME_BUNDESLIGA_REGULAR" VALUE="ApexDFLBookTabular"/>
+      <font_family NAME="FONT_NAME_BUNDESLIGA_BOLD" VALUE="ApexDFLBoldTabular"/>
+      <font_family NAME="FONT_NAME_FACUP_REGULAR" VALUE="TheFACupHeadline-Rg"/>
+      <font_family NAME="FONT_NAME_LA_LIGA_REGULAR" VALUE="LaLiga-Medium"/>
+      <font_family NAME="FONT_NAME_LA_LIGA_LIGHT" VALUE="LaLiga-Light"/>
+      <font_family NAME="FONT_NAME_MLS_REGULAR" VALUE="MLS-Regular"/>
+      <font_family NAME="FONT_NAME_MLS_BOLD" VALUE="MLS-Bold"/>
+      <font_family NAME="FONT_NAME_LIGUE1_LIGHT" VALUE="Ligue1-Light"/>
+      <font_family NAME="FONT_NAME_LIGUE1_MEDIUM" VALUE="Ligue1-Medium"/>
+      <font_family NAME="FONT_NAME_LIGUE1_BOLD" VALUE="Ligue1-Bold"/>
+      <font_family NAME="FONT_NAME_CHAMPIONS_LIGHT" VALUE="Champions-Light"/>
+      <font_family NAME="FONT_NAME_CHAMPIONS_REGULAR" VALUE="Champions-Regular"/>
+      <font_family NAME="FONT_NAME_EUROPA_REGULAR" VALUE="Europa-Regular"/>
+      <font_family NAME="FONT_NAME_EUROPA_BOLD" VALUE="Europa-Bold"/>
+      <font_family NAME="FONT_NAME_UEFA_SUPERCUP_REGULAR" VALUE="UEFASupercup-Regular"/>
+      <font_family NAME="FONT_NAME_UEFA_SUPERCUP_BOLD" VALUE="UEFASupercup-Bold"/>
+      <font_family NAME="FONT_NAME_CONMEBOL_MEDIUM" VALUE="Latinotype-Branding-Medium"/>
+      <font_family NAME="FONT_NAME_CONMEBOL_BOLD" VALUE="Latinotype-Branding-Bold"/>
+      <!-- OVERLAY fonts - limited characters -->
+      <font_family NAME="FONT_NAME_LIGUE1_DIGITS" VALUE="Ligue1-Digits"/>
+      <font_family NAME="FONT_NAME_LA_LIGA_LIGHT_DIGITS" VALUE="LaLiga-ExtraLight-Digits"/>
+      <font_family NAME="FONT_NAME_MLS_BOLD_CAPS" VALUE="MLS-ExtraBold-Caps"/>
+      <font_family NAME="FONT_NAME_MLS_HEAVY_DIGITS" VALUE="MLS-Heavy-Digits"/>
+      <font_family NAME="FONT_NAME_EPL_LIGHT_DIGITS" VALUE="PremierLeague-Light-Digits"/>
+      <font_family NAME="FONT_NAME_EUROPA_BOLD_DIGITS" VALUE="Europa-Bold-Digits"/>
+    </font_family_set>
+
+    <font_size_set>
+      <!-- FLUX sizes -->
+      <font_size NAME="FONT_SIZE_GIGANTIC" VALUE="270"/>
+      <font_size NAME="FONT_SIZE_MASSIVE" VALUE="200"/>
+      <font_size NAME="FONT_SIZE_HXXXL" VALUE="180"/>
+      <font_size NAME="FONT_SIZE_HXXL" VALUE="120"/>
+      <font_size NAME="FONT_SIZE_HXL" VALUE="90"/>
+      <font_size NAME="FONT_SIZE_HL" VALUE="70"/>
+      <font_size NAME="FONT_SIZE_HM" VALUE="60"/>
+      <font_size NAME="FONT_SIZE_HS" VALUE="50"/>
+      <font_size NAME="FONT_SIZE_HXS" VALUE="42"/>
+      <font_size NAME="FONT_SIZE_SXL" VALUE="38"/>
+      <font_size NAME="FONT_SIZE_SL" VALUE="36"/>
+      <font_size NAME="FONT_SIZE_SM" VALUE="24"/>
+      <font_size NAME="FONT_SIZE_SS" VALUE="24"/>
+      <font_size NAME="FONT_SIZE_IXXL" VALUE="80"/>
+      <font_size NAME="FONT_SIZE_IM" VALUE="30"/>
+      <font_size NAME="FONT_SIZE_I" VALUE="22"/>
+      <font_size NAME="FONT_SIZE_IS" VALUE="22"/>
+      <font_size NAME="FONT_SIZE_IXS" VALUE="18"/>
+      <!-- GENERAL sizes -->
+      <font_size NAME="FONT_SIZE_EXTREMELY_SMALL" VALUE="16"/>
+      <font_size NAME="FONT_SIZE_SMALL" VALUE="18"/>
+      <font_size NAME="FONT_SIZE_REGULAR" VALUE="20"/>
+      <font_size NAME="FONT_SIZE_REGULAR_FHD" VALUE="30"/>
+      <font_size NAME="FONT_SIZE_REGULAR_LARGE" VALUE="40"/>
+      <font_size NAME="FONT_SIZE_TITLE" VALUE="24"/>
+      <font_size NAME="FONT_SIZE_TITLE_FHD" VALUE="34"/>
+      <font_size NAME="FONT_SIZE_TAB" VALUE="34"/>
+      <font_size NAME="FONT_SIZE_TAB_SMALL" VALUE="@FONT_SIZE_TAB"/>
+      <font_size NAME="FONT_SIZE_TITLEBAR_FHD" VALUE="50"/>
+      <font_size NAME="FONT_SIZE_SMALL_LABEL" VALUE="24"/>
+      <font_size NAME="FONT_SIZE_INACTIVE_LABEL" VALUE="26"/>
+      <font_size NAME="FONT_SIZE_ACTIVE_LABEL" VALUE="28"/>
+      <font_size NAME="FONT_SIZE_LARGE_LABEL" VALUE="32"/>
+    </font_size_set>
+
+    <font_set>
+      <!-- FLUX fonts -->
+      <font NAME="FONT_TILE_MASSIVE" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_MASSIVE"/>
+      <font NAME="FONT_TILE_HHXXXL" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_HXXXL"/>
+      <font NAME="FONT_TILE_HXXXL" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HXXXL"/>
+      <font NAME="FONT_TILE_HHXXL" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_HXXL"/>
+      <font NAME="FONT_TILE_HXXL" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HXXL"/>
+      <font NAME="FONT_TILE_HXXL_I" FAMILY="@FONT_NAME_COND_BLACK_ITALIC" SIZE="@FONT_SIZE_HXXL"/>
+      <font NAME="FONT_TILE_HHXL" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_HXL"/>
+      <font NAME="FONT_TILE_HXL" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HXL"/>
+	  <font NAME="FONT_TILE_HXL_I" FAMILY="@FONT_NAME_COND_BLACK_ITALIC" SIZE="@FONT_SIZE_HXL"/>
+      <font NAME="FONT_TILE_HXLU" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_HXL"/>
+	  <font NAME="FONT_TILE_HXLU_I" FAMILY="@FONT_NAME_COND_BOLD_ITALIC" SIZE="@FONT_SIZE_HXL"/>
+      <font NAME="FONT_TILE_HL" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HL"/>
+	  <font NAME="FONT_TILE_HL_I" FAMILY="@FONT_NAME_COND_BLACK_ITALIC" SIZE="@FONT_SIZE_HL"/>
+      <font NAME="FONT_TILE_HLU" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_HL"/>
+	  <font NAME="FONT_TILE_HLU_I" FAMILY="@FONT_NAME_COND_BOLD_ITALIC" SIZE="@FONT_SIZE_HL"/>
+      <font NAME="FONT_TILE_HM" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HM"/>
+	  <font NAME="FONT_TILE_HM_I" FAMILY="@FONT_NAME_COND_BLACK_ITALIC" SIZE="@FONT_SIZE_HM"/>
+      <font NAME="FONT_TILE_HMU" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_HM"/>
+      <font NAME="FONT_TILE_HS" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HS"/>
+	  <font NAME="FONT_TILE_HS_I" FAMILY="@FONT_NAME_COND_BLACK_ITALIC" SIZE="@FONT_SIZE_HS"/>
+      <font NAME="FONT_TILE_HSU" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_HS"/>
+      <font NAME="FONT_TILE_HHXS" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_HXS"/>
+      <font NAME="FONT_TILE_HXS" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HXS"/>
+	  <font NAME="FONT_TILE_HXS_I" FAMILY="@FONT_NAME_COND_BLACK_ITALIC" SIZE="@FONT_SIZE_HXS"/>
+      <font NAME="FONT_TILE_XHS" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HXS"/> <!-- VALUE="@FONT_TILE_HXS" -->
+      <font NAME="FONT_TILE_UXHS" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_HXS"/>
+	  <font NAME="FONT_TILE_UXHS_I" FAMILY="@FONT_NAME_COND_BOLD_ITALIC" SIZE="@FONT_SIZE_HXS"/>
+      <font NAME="FONT_TILE_SXL" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_SXL"/>
+      <font NAME="FONT_TILE_SXLU" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_SXL"/>
+      <font NAME="FONT_TILE_SL" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_SL"/>
+      <font NAME="FONT_TILE_SM" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_SM"/>
+      <font NAME="FONT_TILE_SS" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_SS"/>
+      <font NAME="FONT_TILE_IXXL" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_IXXL"/>
+      <font NAME="FONT_TILE_IXXLU" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_IXXL"/>
+      <font NAME="FONT_TILE_IM" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_IM"/>
+      <font NAME="FONT_TILE_IMU" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_IM"/>
+      <font NAME="FONT_TILE_I" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_SS"/> <!-- VALUE="@FONT_TILE_SS" -->
+      <font NAME="FONT_TILE_IS" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_IS"/>
+      <font NAME="FONT_TILE_IXS" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_IXS"/>
+      <font NAME="FONT_TILE_IXSM" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_IXS"/>
+      <font NAME="FONT_TILE_IXS_I" FAMILY="@FONT_NAME_COND_BOLD_ITALIC" SIZE="@FONT_SIZE_IXS"/>
+      <font NAME="FONT_TILE_THS" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HS"/>
+      <font NAME="FONT_TILE_THSU" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_HS"/>
+      <font NAME="FONT_TILE_TSL" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_SL"/>
+      <font NAME="FONT_TILE_TSL_I" FAMILY="@FONT_NAME_COND_BOLD_ITALIC" SIZE="@FONT_SIZE_SL"/>
+      <font NAME="FONT_TILE_TSLU" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_SL"/>
+      <font NAME="FONT_TILE_TSM" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_SM"/>
+      <font NAME="FONT_TILE_TSMU" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_SM"/>
+      <font NAME="FONT_TILE_TSMM" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_SM"/>
+      <font NAME="FONT_TILE_TSM_I" FAMILY="@FONT_NAME_COND_BLACK_ITALIC" SIZE="@FONT_SIZE_SM"/>
+      <font NAME="FONT_TILE_THI" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_I"/>
+      <font NAME="FONT_TILE_TMI" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_I"/>
+      <font NAME="FONT_TILE_TI" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_I"/>
+      <font NAME="FONT_TILE_TIU" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_I"/>
+
+      <font NAME="FONT_TILE_SM_ITALIC" FAMILY="@FONT_NAME_BOLD_ITALIC" SIZE="@FONT_SIZE_SM"/>
+      <font NAME="FONT_TILE_REGULAR_LARGE_ITALIC" FAMILY="@FONT_NAME_BOLD_ITALIC" SIZE="@FONT_SIZE_REGULAR_LARGE"/>
+      <font NAME="FONT_TILE_INACTIVE_LABEL_ITALIC" FAMILY="@FONT_NAME_COND_BOLD_ITALIC" SIZE="@FONT_SIZE_INACTIVE_LABEL"/>
+
+      <!-- GENERAL fonts -->
+      <font NAME="FONT_SUBTITLE_INTRO" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_HXS" COLOR="@COLOR_TEXT_DESCRIPTION"/>
+
+      <font NAME="FONT_KEYBOARD_UNHIGHLIGHT" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_ACTIVE_LABEL"/>
+      <font NAME="FONT_KEYBOARD_HIGHLIGHT" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_ACTIVE_LABEL"/>
+
+      <font NAME="FONT_FLUX_TITLE_HIGHLIGHT_HS" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HS" COLOR="@COLOR_TEXT_HIGHLIGHT_FLUX_TITLE"/>
+      <font NAME="FONT_FLUX_TITLE_HIGHLIGHT_HS_I" FAMILY="@FONT_NAME_COND_BLACK_ITALIC" SIZE="@FONT_SIZE_HS" COLOR="@COLOR_TEXT_HIGHLIGHT_FLUX_TITLE"/>
+      <font NAME="FONT_FLUX_TITLE_UNHIGHLIGHT_HS" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_HS" COLOR="@COLOR_TEXT_UNHIGHLIGHT_FLUX_TITLE"/>
+      <font NAME="FONT_FLUX_TITLE_UNHIGHLIGHT_HS_I" FAMILY="@FONT_NAME_COND_BOLD_ITALIC" SIZE="@FONT_SIZE_HS" COLOR="@COLOR_TEXT_UNHIGHLIGHT_FLUX_TITLE"/>
+
+      <font NAME="FONT_FLUX_TITLE_HIGHLIGHT_HM" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HM" COLOR="@COLOR_TEXT_HIGHLIGHT_FLUX_TITLE"/>
+      <font NAME="FONT_FLUX_TITLE_UNHIGHLIGHT_HM" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_HM" COLOR="@COLOR_TEXT_UNHIGHLIGHT_FLUX_TITLE"/>
+
+      <font NAME="FONT_FLUX_TITLE_HIGHLIGHT_HL" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HL" COLOR="@COLOR_TEXT_HIGHLIGHT_FLUX_TITLE"/>
+      <font NAME="FONT_FLUX_TITLE_HIGHLIGHT_HL_I" FAMILY="@FONT_NAME_COND_BLACK_ITALIC" SIZE="@FONT_SIZE_HL" COLOR="@COLOR_TEXT_HIGHLIGHT_FLUX_TITLE"/>
+      <font NAME="FONT_FLUX_TITLE_UNHIGHLIGHT_HL" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_HL" COLOR="@COLOR_TEXT_UNHIGHLIGHT_FLUX_TITLE"/>
+      <font NAME="FONT_FLUX_TITLE_UNHIGHLIGHT_HL_I" FAMILY="@FONT_NAME_COND_BOLD_ITALIC" SIZE="@FONT_SIZE_HL" COLOR="@COLOR_TEXT_UNHIGHLIGHT_FLUX_TITLE"/>
+
+      <font NAME="FONT_FLUX_MAIN_HEADER_I" FAMILY="@FONT_NAME_COND_BLACK_ITALIC" SIZE="@FONT_SIZE_HXXL" COLOR="@COLOR_TEXT_HIGHLIGHT_FLUX"/>
+
+      <font NAME="FONT_TAB_ACTIVE" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_TAB"/>
+      <font NAME="FONT_TAB_INACTIVE" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_TAB"/>
+      <font NAME="FONT_TAB_ACTIVE_SMALL" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_TAB_SMALL"/>
+      <font NAME="FONT_TAB_INACTIVE_SMALL" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_TAB_SMALL"/>
+
+      <font NAME="FONT_NOTIFICATION_ICON" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_TITLE" COLOR="@COLOR_TEXT_LABEL"/>
+
+      <font NAME="FONT_XSMALL_MEDIUM" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_EXTREMELY_SMALL" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_XSMALL_HEAVY" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_EXTREMELY_SMALL"/>
+
+      <font NAME="FONT_SMALL" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_SMALL" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_SMALL_SELECTED" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_SMALL" COLOR="@COLOR_TEXT_SELECTED"/>
+      <font NAME="FONT_SMALL_MEDIUM" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_SMALL" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_SMALL_HEAVY" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_SMALL" COLOR="@COLOR_TEXT_REGULAR"/>
+
+      <font NAME="FONT_REGULAR" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_REGULAR_SELECTED" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_TEXT_SELECTED"/>
+      <font NAME="FONT_REGULAR_TITLE" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_TITLE" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_BOLD_TITLE" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_TITLE" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_REGULAR_LABEL" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_TITLE" COLOR="@COLOR_TEXT_LABEL"/>
+      <font NAME="FONT_REGULAR_LARGE" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_REGULAR_LARGE" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_LARGE_LABEL" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_LARGE_LABEL" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_ITALIC_LARGE_LABEL" FAMILY="@FONT_NAME_COND_BLACK_ITALIC" SIZE="@FONT_SIZE_REGULAR_LARGE" COLOR="@COLOR_TEXT_REGULAR"/>
+
+      <font NAME="FONT_MEDIUM" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_REGULAR"/>
+      <font NAME="FONT_MEDIUM_DESCRIPTION" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_TEXT_DESCRIPTION"/>
+      <font NAME="FONT_HEAVY" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_REGULAR"/>
+
+      <font NAME="FONT_SMALL_BOLD" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_SMALL" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_BOLD" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_BOLD_GREY" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_DARK_GREY"/>
+      <font NAME="FONT_LARGE_BOLD" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_TITLE" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_LARGE_BOLD_SELECTED" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_TITLE" COLOR="@COLOR_TEXT_SELECTED"/>
+      <font NAME="FONT_SMALL_BOLD_SELECTED" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_SMALL" COLOR="@COLOR_TEXT_SELECTED"/>
+      <font NAME="FONT_BOLD_SELECTED" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_TEXT_SELECTED"/>
+      <font NAME="FONT_BOLD_LARGE_PREVIEW" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HXS" COLOR="@COLOR_TEXT_PREVIEW"/>
+
+      <font NAME="FONT_TITLE" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_TITLE" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_TITLE_SELECTED" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_TITLE" COLOR="@COLOR_TEXT_SELECTED"/>
+
+      <font NAME="FONT_SUB_TITLE" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_SUB_TITLE_SELECTED" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_TEXT_SELECTED"/>
+
+      <font NAME="FONT_SUB_TITLE_CONTRAST" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_TEXT_LABEL"/>
+
+      <font NAME="FONT_REGULAR_FHD" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_REGULAR_FHD" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_REGULAR_SELECTED_FHD" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_REGULAR_FHD" COLOR="@COLOR_TEXT_SELECTED"/>
+
+      <font NAME="FONT_DESCRIPTION" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_TEXT_DESCRIPTION"/>
+      <font NAME="FONT_DESCRIPTION_FHD" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_REGULAR_FHD" COLOR="@COLOR_TEXT_DESCRIPTION"/>
+      <font NAME="FONT_DESCRIPTION_BOLD" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_I" COLOR="@COLOR_TEXT_DESCRIPTION"/>
+
+      <font NAME="FONT_DESCRIPTION_PREVIEW" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_DESCRIPTION_PREVIEW_FHD" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_TITLE_FHD" COLOR="@COLOR_TEXT_PREVIEW"/>
+	  <font NAME="FONT_DESCRIPTION_PREVIEW_FHD_I" FAMILY="@FONT_NAME_COND_BOLD_ITALIC" SIZE="@FONT_SIZE_TITLE_FHD" COLOR="@COLOR_TEXT_PREVIEW"/>
+
+      <font NAME="FONT_BOLD_FHD" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_REGULAR_FHD" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_BOLD_SELECTED_FHD" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_REGULAR_FHD" COLOR="@COLOR_TEXT_SELECTED"/>
+      <font NAME="FONT_BOLD_ACTIVE_LABEL" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_ACTIVE_LABEL" COLOR="@COLOR_TEXT_LABEL"/>
+      <font NAME="FONT_BOLD_ACTIVE_LABEL_DESCRIPTION" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_ACTIVE_LABEL" COLOR="@COLOR_TEXT_DESCRIPTION"/>
+
+      <font NAME="FONT_MEDIUM_ACTIVE_LABEL_SELECTED" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_ACTIVE_LABEL" COLOR="@COLOR_TEXT_SELECTED"/>
+      <font NAME="FONT_MEDIUM_ACTIVE_LABEL_PREVIEW" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_ACTIVE_LABEL" COLOR="@COLOR_TEXT_PREVIEW"/>
+
+      <font NAME="FONT_HEAVY_SMALL_LABEL" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_SMALL_LABEL" COLOR="@COLOR_TEXT_LABEL"/>
+      <font NAME="FONT_MEDIUM_SMALL_LABEL_PREVIEW" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_SMALL_LABEL" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_BOLD_XHHL_PREVIEW" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HXXL" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_MEDIUM_SMALL_LABEL_DESCRIPTION" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_SMALL_LABEL" COLOR="@COLOR_TEXT_DESCRIPTION"/>
+      <font NAME="FONT_MEDIUM_INACTIVE_LABEL_PREVIEW" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_INACTIVE_LABEL" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_HEAVY_INACTIVE_LABEL_PREVIEW" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_INACTIVE_LABEL" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_MEDIUM_INACTIVE_LABEL_DESCRIPTION" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_INACTIVE_LABEL" COLOR="@COLOR_TEXT_DESCRIPTION"/>
+      <font NAME="FONT_BOLD_INACTIVE_LABEL_DESCRIPTION" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_INACTIVE_LABEL" COLOR="@COLOR_TEXT_LABEL"/>
+      <font NAME="FONT_MEDIUM_LARGE_LABEL_PREVIEW" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_LARGE_LABEL" COLOR="@COLOR_TEXT_PREVIEW"/>
+
+      <font NAME="FONT_BOLD_INACTIVE_LABEL" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_LARGE_LABEL" COLOR="@COLOR_SAFE_WHITE"/>
+      <font NAME="FONT_BOLD_SMALL_LABEL_ALT_PREVIEW" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_SMALL_LABEL" COLOR="@COLOR_TEXT_ALT_PREVIEW"/>
+
+      <font NAME="FONT_REGULAR_SMALL_LABEL" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_SMALL_LABEL" COLOR="@COLOR_TEXT_LABEL"/>
+      <font NAME="FONT_REGULAR_SMALL_LABEL_SELECTED" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_SMALL_LABEL" COLOR="@COLOR_TEXT_SELECTED"/>
+      <font NAME="FONT_REGULAR_SMALL_LABEL_PREVIEW" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_SMALL_LABEL" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_REGULAR_SMALL_LABEL_DESCRIPTION" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_SMALL_LABEL" COLOR="@COLOR_TEXT_DESCRIPTION"/>
+      <font NAME="FONT_REGULAR_INACTIVE_LABEL_DESCRIPTION" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_INACTIVE_LABEL" COLOR="@COLOR_TEXT_DESCRIPTION"/>
+      <font NAME="FONT_REGULAR_ACTIVE_LABEL_DESCRIPTION" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_ACTIVE_LABEL" COLOR="@COLOR_TEXT_DESCRIPTION"/>
+      <font NAME="FONT_HEAVY_GIGANTIC_LABEL" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_GIGANTIC" COLOR="@COLOR_TEXT_LABEL"/>
+
+      <font NAME="FONT_TITLE_FHD" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_TITLE_FHD" COLOR="@COLOR_TEXT_DARK_NAVY"/>
+      <font NAME="FONT_TITLE_SELECTED_FHD" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_TITLE_FHD" COLOR="@COLOR_TEXT_SELECTED"/>
+      <font NAME="FONT_CATEGORY_TITLE_FHD" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_TITLE_FHD" COLOR="@COLOR_TEXT_DESCRIPTION"/>
+      <font NAME="FONT_TITLEBAR_FHD" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_TITLEBAR_FHD" COLOR="@COLOR_SAFE_WHITE"/>
+      <font NAME="FONT_TITLEBAR_REGULAR_FHD" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_REGULAR_LARGE" COLOR="@COLOR_SAFE_WHITE"/>
+      <font NAME="FONT_TITLEBAR_HEAVY_FHD" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_REGULAR_LARGE" COLOR="@COLOR_SAFE_WHITE"/>
+
+      <font NAME="FONT_SUB_TITLE_FHD" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_REGULAR_FHD" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_SUB_TITLE_SELECTED_FHD" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_REGULAR_FHD" COLOR="@COLOR_TEXT_SELECTED"/>
+      <font NAME="FONT_SUB_TITLE_HIGHLIGHTED_FHD" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_REGULAR_FHD" COLOR="@COLOR_TEXT_HIGHLIGHT"/>
+      <font NAME="FONT_SUB_TITLE_LIGHT_FHD" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_REGULAR_FHD" COLOR="@COLOR_TEXT_LABEL"/>
+
+      <font NAME="FONT_TITLE_PREVIEW" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_TITLE" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_HEAVY_PREVIEW" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_ACTIVE_LABEL" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_MEDIUM_PREVIEW" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_SXL" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_BOLD_PREVIEW" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_REGULAR_LARGE" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_LARGE_REGULAR_PREVIEW" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_HS" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_LARGE_BOLD_PREVIEW" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HS" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_HUGE_MEDIUM_PREVIEW" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_HL" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_HUGE_REGULAR_PREVIEW" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_HL" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_HUGE_BOLD_PREVIEW" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HL" COLOR="@COLOR_TEXT_PREVIEW"/>
+
+      <font NAME="FONT_HELP_ITEMS" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_REGULAR_FHD" COLOR="@COLOR_TEXT_HELP_ITEMS"/>
+      <font NAME="FONT_BOLD_CRUMBS_PATH" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_TITLE" COLOR="0x97939D"/>
+      <font NAME="FONT_BOLD_CRUMBS_DESTINATION" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_TITLE" COLOR="0xD8D5DD"/>
+
+      <font NAME="FONT_CRUMBS_WIDGET" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_I" COLOR="@COLOR_RIVER_BED_GRAY"/>
+
+      <font NAME="FONT_WIDGET_HEADER" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_REGULAR_FHD" COLOR="@COLOR_RIVER_BED_GRAY"/>
+      <font NAME="FONT_WIDGET_SUBHEADER" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_TITLE" COLOR="@COLOR_RIVER_BED_GRAY"/>
+      <font NAME="FONT_SQUADHUB_WIDGET_LABEL" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_SMALL_LABEL" COLOR="@COLOR_RIVER_BED_GRAY"/>
+      <font NAME="FONT_SQUADHUB_WIDGET_HEAVY_LABEL" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_SMALL_LABEL" COLOR="@COLOR_RIVER_BED_GRAY"/>
+      <font NAME="FONT_SQUADHUB_WIDGET_HEAVY_LARGE_LABEL" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_LARGE_LABEL" COLOR="@COLOR_RIVER_BED_GRAY"/>
+
+      <font NAME="FONT_BOOTFLOW_SCREENS" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_ACTIVE_LABEL" COLOR="@COLOR_SAFE_WHITE"/>
+      <font NAME="FONT_LANGUAGE_SELECT" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_REGULAR_FHD" COLOR="@COLOR_SAFE_WHITE"/>
+      <font NAME="FONT_PRESS_START_SCREEN" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_SMALL_LABEL" COLOR="@COLOR_SAFE_WHITE"/>
+      <font NAME="FONT_DISCLAIMER_PRESS_START_SCREEN" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_ACTIVE_LABEL" COLOR="@COLOR_SAFE_WHITE"/>
+      <font NAME="FONT_DEMO_PRESS_START_SCREEN" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HXL" COLOR="@COLOR_SAFE_WHITE"/>
+
+      <font NAME="FONT_TEAM_STAT_LABEL" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_EXTREMELY_SMALL" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_TEAM_STAT_VALUE" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_SL" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_TEAM_STAT_LABEL_FHD" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_SMALL_LABEL" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_TEAM_STAT_VALUE_FHD" FAMILY="@FONT_NAME_MEDIUM" SIZE="56" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_CM_LIST_OPTION_HIGHLIGHTED" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_TEXT_HIGHLIGHT_ALTERNATE"/>
+      <font NAME="FONT_CM_LIST_OPTION_UNHIGHLIGHTED" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_TEXT_UNHIGHLIGHT"/>
+      <font NAME="FONT_CM_SUBHEADER_TOGGLE_TITLE" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_TEXT_LIST_TOGGLE_INACTIVE"/> <!-- Subheader Toggle -->
+      <font NAME="FONT_CM_SUBHEADER_TOGGLE_TITLE_SELECTED" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_TEXT_LIST_TOGGLE_ACTIVE"/>  <!-- Subheader Toggle -->
+
+      <font NAME="FONT_PIECHART_LEGEND_LABEL" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_SM" COLOR="@COLOR_SAFE_WHITE"/>
+      <font NAME="FONT_PIECHART_VALUE_LABEL" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_SL" COLOR="@COLOR_CONCRETE_GREY"/>
+
+      <!-- DEMO sell sheet fonts -->
+      <font NAME="DEMO_SELL_SHEET_TITLE_FONT" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HXL" COLOR="@COLOR_BLACK_ONYX"/>
+      <font NAME="DEMO_SELL_SHEET_SUB_FONT" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HS" COLOR="@COLOR_SAFE_WHITE"/>
+      <font NAME="DEMO_SELL_SHEET_DESC_FONT" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_SM" COLOR="@COLOR_SAFE_WHITE"/>
+
+      <font NAME="DEMO_SELL_SHEET_TITLE_FONT_1" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HXL" COLOR="@COLOR_BLACK_ONYX"/>
+      <font NAME="DEMO_SELL_SHEET_SUB_FONT_1" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HS" COLOR="@COLOR_BLACK_ONYX"/>
+      <font NAME="DEMO_SELL_SHEET_DESC_FONT_1" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_SM" COLOR="@COLOR_BLACK_ONYX"/>
+
+      <font NAME="DEMO_SELL_SHEET_TITLE_FONT_2" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HXL" COLOR="@COLOR_SAFE_WHITE"/>
+      <font NAME="DEMO_SELL_SHEET_SUB_FONT_2" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HS" COLOR="@COLOR_SAFE_WHITE"/>
+      <font NAME="DEMO_SELL_SHEET_DESC_FONT_2" FAMILY="@FONT_NAME_MEDIUM" SIZE="@FONT_SIZE_SM" COLOR="@COLOR_SAFE_WHITE"/>
+
+      <font NAME="DEMO_SELL_SHEET_CELL_FONT_ACTIVE" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_HXS" COLOR="@COLOR_TEXT_HIGHLIGHT_FLUX_TITLE"/>
+      <font NAME="DEMO_SELL_SHEET_CELL_FONT_INACTIVE" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_HXS" COLOR="@COLOR_TEXT_UNHIGHLIGHT_FLUX_TITLE"/>
+
+      <!-- GTN fonts -->
+      <font NAME="FONT_REGULAR_SMALL_UNHIGHLIGHTED" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_REGULAR_LARGE" COLOR="@COLOR_TEXT_REGULAR"/>
+      <font NAME="FONT_BOLD_SMALL_HIGHLIGHTED" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_REGULAR_LARGE" COLOR="@COLOR_TEXT_HIGHLIGHT"/>
+      <font NAME="FONT_BOLD_BIG_HIGHLIGHTED" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_SXL" COLOR="@COLOR_TEXT_PREVIEW"/>
+	  <font NAME="FONT_BIG_HIGHLIGHTED_I" FAMILY="@FONT_NAME_COND_BLACK_ITALIC" SIZE="@FONT_SIZE_SXL" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_BOLD_BIG_STONE_GRAY" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_SXL" COLOR="@COLOR_TEXT_DESCRIPTION"/>
+      <font NAME="FONT_REGULAR_BIG_ASH_GRAY" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_REGULAR_FHD" COLOR="@COLOR_TEXT_ASH_GREY"/>
+      <font NAME="FONT_BOLD_SMOKE_BLACK" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_REGULAR_FHD" COLOR="@COLOR_SAFE_BLACK"/>
+      <font NAME="FONT_REGULAR_STATUS_PREVIEW" FAMILY="@FONT_NAME_REGULAR" SIZE="26" COLOR="@COLOR_TEXT_PREVIEW"/>
+      <font NAME="FONT_BOLD_STATUS_PREVIEW" FAMILY="@FONT_NAME_BOLD" SIZE="26" COLOR="@COLOR_TEXT_PREVIEW"/>
+
+      <font NAME="FONT_REGULAR_STATUS_UNHIGHLIGHTED" FAMILY="@FONT_NAME_REGULAR" SIZE="@FONT_SIZE_ACTIVE_LABEL" COLOR="@COLOR_TEXT_DESCRIPTION"/>
+      <font NAME="FONT_BOLD_STATUS_HIGHLIGHTED" FAMILY="@FONT_NAME_BOLD" SIZE="@FONT_SIZE_ACTIVE_LABEL" COLOR="@COLOR_SAFE_BLACK"/>
+      <font NAME="FONT_CM_PLAYERINFO_NAME" FAMILY="@FONT_NAME_HEAVY" SIZE="@FONT_SIZE_TITLE" COLOR="@COLOR_TEXT_ASH_GREY"/>
+
+      <!-- OVERLAY fonts -->
+      <font NAME="FONT_FA_CUP_NIB" FAMILY="@FONT_NAME_FACUP_REGULAR" SIZE="@FONT_SIZE_REGULAR" COLOR="@COLOR_TEXT_FA_CUP_BLUE"/>
+      <font NAME="FONT_FA_CUP_SS" FAMILY="@FONT_NAME_FACUP_REGULAR" SIZE="28" COLOR="@COLOR_TEXT_FA_CUP_BLUE"/>
+      <font NAME="FONT_FA_CUP_SM" FAMILY="@FONT_NAME_FACUP_REGULAR" SIZE="30" COLOR="@COLOR_TEXT_FA_CUP_BLUE"/>
+      <font NAME="FONT_FA_CUP_REGULAR" FAMILY="@FONT_NAME_FACUP_REGULAR" SIZE="35" COLOR="@COLOR_TEXT_FA_CUP_BLUE"/>
+      <font NAME="FONT_FA_CUP_SH" FAMILY="@FONT_NAME_FACUP_REGULAR" SIZE="38" COLOR="@COLOR_TEXT_FA_CUP_BLUE"/> <!-- Subheader -->
+      <font NAME="FONT_FA_CUP_HS" FAMILY="@FONT_NAME_FACUP_REGULAR" SIZE="40" COLOR="@COLOR_TEXT_FA_CUP_BLUE"/>
+      <font NAME="FONT_FA_CUP_NUMS" FAMILY="@FONT_NAME_FACUP_REGULAR" SIZE="41" COLOR="@COLOR_TEXT_WHITE"/>
+      <font NAME="FONT_FA_CUP_HM" FAMILY="@FONT_NAME_FACUP_REGULAR" SIZE="43" COLOR="@COLOR_TEXT_FA_CUP_BLUE"/>
+      <font NAME="FONT_FA_CUP_HL" FAMILY="@FONT_NAME_FACUP_REGULAR" SIZE="55" COLOR="@COLOR_TEXT_FA_CUP_BLUE"/>
+
+    </font_set>
+
+  </style>
+</root>

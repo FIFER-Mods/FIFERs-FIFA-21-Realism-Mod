@@ -1,0 +1,1567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="0c042e3a-d71c-4da2-bd7c-077210e5a0e5" name="League Reverse Fixture" deleted="False" valid="True">
+  <nodes id="b95beeed-818f-4138-846b-070965295025">
+    <story-start-node id="7b526f3d-9a79-4dd7-b3a0-c08aaa9c2d65" X="-6320" Y="-9480" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="MultipleInstance" NodeEvent="UserMatchCompleted" StoryKey="Select:PlayerId" UseSelectData="True" RunInPlayerCareer="True" RunInManagerCareer="True" RunInTournamentMode="True">
+      <conditions id="368fbd17-36f3-4017-979d-6fa4d06099ab">
+        <condition id="7dcb255f-8fdb-4985-bd34-435d4574ffb3" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.CompType" Comparison="EQ" Value="1" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+      <select-data id="ee3ea125-8b20-4271-9919-71b1f62c025f" SelectCount="1">
+        <alias-list id="0639112e-8451-489f-ad15-54c02236aef3">
+          <string id="11d2da0a-dd08-45dc-b636-eb622f7198b2" Value="Unique Identifier" />
+        </alias-list>
+        <order-by id="0baaf6f1-ea78-41e2-87bf-c26b84d79f78">
+          <keyValuePair id="1dddf83b-b54f-4baa-8c7a-1b38e1978be9" Key="Select:Stats.Overall" Value="Desc" />
+        </order-by>
+        <alias-data-source id="5c7f47f3-c01b-48c9-aca9-3344ef5021b5" DataSource="Model:UserMatchCompleted.OpponentPlayers">
+          <conditions id="77e8554c-5405-4a91-b8c3-e817bdd2d6e9" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <save-data-node id="072017a1-ba2d-4ea1-9764-bc23f1ad1b48" X="-6040" Y="-9480" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="5e89bbcd-9a56-4b67-916a-b1b84c45d355">
+        <saveItem id="c6a8058c-9dce-41f4-837e-8c216b933ad1" Key="FirstMatchup" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" ValueType="int" />
+        <saveItem id="9bec11d4-7c7b-408f-b60e-b66940f0d40a" Key="UserGoals" Value="Model:UserMatchCompleted.Results.UserGoals" ValueType="int" />
+        <saveItem id="8b3c9765-afa5-48f1-8dd7-898cdd8648f5" Key="OpponentGoals" Value="Model:UserMatchCompleted.Results.OponentGoals" ValueType="int" />
+        <saveItem id="13567cbb-d6de-4438-9219-23e3a27aacfe" Key="Result" Value="Model:UserMatchCompleted.Results.ResultStatus" ValueType="UserResult" />
+        <saveItem id="9eb555b1-4816-453f-a590-98ad7b2eeea4" Key="GoalDiff" Value="Model:UserMatchCompleted.Results.GoalMargin" ValueType="int" />
+        <saveItem id="811bb7ea-f650-48b7-9c63-18c431fc786b" Key="Competition" Value="Model:UserMatchCompleted.LastMatchData.Competition.AssetID" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <state-node id="c8fbdb92-ad18-4fcc-9ce1-9a94507caa44" X="-5760" Y="-9480" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="59f7bc06-404a-4e3b-9d92-c23fac31392b">
+        <string id="4a811d06-50c4-4ac5-90c6-944fe6a3a42f" Value="UpcomingUserMatch" />
+      </supported-events>
+    </state-node>
+    <condition-node id="4e1dbebd-f945-4d97-835b-36ccee75fd38" X="-5480" Y="-9480" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="4c496bc6-7f46-4515-b997-7d3b5123cdaf">
+        <condition id="53ecdb19-552f-46b1-8bef-f31b1aa7611e" VariableId="SaveData:FirstMatchup" Comparison="EQ" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="64fdeb93-e380-4f87-8a71-d2ee6edd8e73" VariableId="SaveData:Competition" Comparison="EQ" Value="Model:UpcomingUserMatch.NextMatchData.Competition.AssetID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="bac138bd-8ff6-48a3-b2bb-1a486d2ca2c9" X="-5240" Y="-9480" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="edd98e07-ebdd-40f8-896a-1c56fedd8546">
+        <condition id="e92e0315-e397-48cf-a845-e3a38b206c67" VariableId="SaveData:Result" Comparison="EQ" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="00aa30bf-fe86-4385-9aa4-e67e9e04ec23" X="-4640" Y="-11880" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="1b70b53a-e09c-4131-9017-f7548cc65139">
+        <condition id="dafc1386-4f3a-48b6-a96e-965fc351f105" VariableId="SaveData:UserGoals" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="b78aa141-8965-4b5e-9f6f-781b6bb73f07" X="-3840" Y="-11880" NodeType="Condition" NodeName="UserAway">
+      <conditions id="fc89765a-2b4f-4be4-b869-9204b8a108b2">
+        <condition id="b7e436f2-cb11-4d62-9641-ae150bbefc15" VariableId="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Comparison="EQ" Value="SaveData:FirstMatchup" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="9be4c81a-317e-436d-af44-54c8e2bc2da2" X="-3840" Y="-11480" NodeType="Condition" NodeName="UserAway">
+      <conditions id="6940267e-b1ad-41e2-a749-9aeb3f74b958">
+        <condition id="3bbfa000-ef5e-4b57-89e5-5cb7b8db2c64" VariableId="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Comparison="EQ" Value="SaveData:FirstMatchup" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="cddecb1e-e1d3-4b0b-9838-67d47e335cf0" X="-5040" Y="-9400" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="e8b88fc0-26d7-4385-aa81-e832eee85a66">
+        <condition id="ed27c1b3-060e-4080-95c7-f98ac1ed7e34" VariableId="SaveData:Result" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="4bc16e63-8117-4b72-8f1b-6084f6b96a9b" X="-4480" Y="-11480" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="9913a926-450a-4853-93d1-043637893aec">
+        <condition id="983cb2eb-f389-480b-b618-445b82d75634" VariableId="SaveData:UserGoals" Comparison="GTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="efd396be-fc22-44a6-8dda-38f7808fdcda" X="-4640" Y="-10640" NodeType="Condition" NodeName="Thrashing">
+      <conditions id="63a8d263-ac2e-4415-9bd4-78c4482378de">
+        <condition id="8aa76447-ca72-49ce-84ea-eafcc2280736" VariableId="SaveData:GoalDiff" Comparison="GTE" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="91d51d74-fead-4129-a562-1158afaf13ba" X="-4800" Y="-8920" NodeType="Condition" NodeName="Thrashing">
+      <conditions id="f95fa8c6-886e-452c-ab5b-04d38136d940">
+        <condition id="24b0228c-4a65-400f-b258-1d75a5093f19" VariableId="SaveData:GoalDiff" Comparison="GTE" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="fa3b1de5-5202-4b91-ba02-7c708d3d80b8" X="-4480" Y="-10240" NodeType="Condition" NodeName="Thrilling">
+      <conditions id="67ca5b62-23ac-499d-8415-49321f113c3b">
+        <condition id="eee5b2dd-97d3-494e-93aa-d8e214b10512" VariableId="SaveData:GoalDiff" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="8a9b299e-d5b1-4d0c-bd33-0533f42eb504" VariableId="SaveData:OpponentGoals" Comparison="GTE" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="78f9ff4e-f909-46e9-89eb-ee55236e265c" X="-4280" Y="-9840" NodeType="Condition" NodeName="Easy">
+      <conditions id="81bbfd7e-2670-48a9-95f6-258a880903de">
+        <condition id="1aef8d24-781b-4d3b-adcc-9c1f5fa61d94" VariableId="SaveData:GoalDiff" Comparison="GTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="38830995-dce7-4a87-bd1b-86f9197c95e1" X="-4480" Y="-8280" NodeType="Condition" NodeName="Easy">
+      <conditions id="e912cbb3-6cbd-4a39-a340-fd82635ef928">
+        <condition id="2a018ed8-7d6c-4e3f-93de-b290bcb567ac" VariableId="SaveData:GoalDiff" Comparison="GTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="54ecf8ca-8a34-4d20-87e2-e3f814cc2170" X="-4640" Y="-8600" NodeType="Condition" NodeName="Thrilling">
+      <conditions id="4bf1d467-ff2d-4524-9095-799adfcd339b">
+        <condition id="e6e21972-7701-4c3e-b0e5-4c640bed85cf" VariableId="SaveData:GoalDiff" Comparison="LTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="e2b2b418-66a8-43c0-9333-4beb90ba9a61" VariableId="SaveData:UserGoals" Comparison="GTE" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="673f917f-1783-4e29-b539-2a5ac2e8d203" X="-3880" Y="-10640" NodeType="Condition" NodeName="UserAway">
+      <conditions id="1037167f-f2cb-4e6d-88ab-5092fad84ced">
+        <condition id="4fd0423c-5f03-469d-af22-1644ac737cb2" VariableId="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Comparison="EQ" Value="SaveData:FirstMatchup" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="6d151ba0-289f-40d3-ba2d-3c773cbeb91f" X="-3880" Y="-10240" NodeType="Condition" NodeName="UserAway">
+      <conditions id="ac897091-a021-4f7f-8c05-9a75fcfa7ebb">
+        <condition id="b1d481bd-4ac7-46c0-8f9a-a9e9e4c04d65" VariableId="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Comparison="EQ" Value="SaveData:FirstMatchup" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="4900ec8b-5730-42d9-a2da-9c24bc2590eb" X="-3880" Y="-9840" NodeType="Condition" NodeName="UserAway">
+      <conditions id="16a09521-1244-4ac5-ad8c-220ccf236d54">
+        <condition id="58564f1f-e4ea-4993-9132-3038b0af7577" VariableId="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Comparison="EQ" Value="SaveData:FirstMatchup" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <story-end-node id="b34926b4-3768-4189-8413-5db42e596f60" X="400" Y="-9120" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <condition-node id="aa79e97d-9892-45f6-8c09-0d2ff1527166" X="-3920" Y="-8280" NodeType="Condition" NodeName="UserAway">
+      <conditions id="c10de47a-ba1f-4740-9a71-07ec007e4528">
+        <condition id="03e94c13-47fb-4d5a-8fdf-9f811a4086ac" VariableId="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Comparison="EQ" Value="SaveData:FirstMatchup" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="c0ec2f3c-027f-444b-ab19-26ecc7408f0a" X="-3880" Y="-8600" NodeType="Condition" NodeName="UserAway">
+      <conditions id="065d58de-5799-4dd8-9bc8-f3c2147c7450">
+        <condition id="27b7ad86-90e6-4500-bcc4-fdf97366ef63" VariableId="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Comparison="EQ" Value="SaveData:FirstMatchup" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="6e5df846-800a-4669-9709-d16f21548313" X="-3920" Y="-8920" NodeType="Condition" NodeName="UserAway">
+      <conditions id="eec4cd11-dd61-4850-9672-4ed4809a1a43">
+        <condition id="4eb4aca3-24f1-47ca-a1de-98041d5381ca" VariableId="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Comparison="EQ" Value="SaveData:FirstMatchup" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <state-node id="a08c1a38-afa6-4032-b883-a23dbdad802b" X="-2960" Y="-8280" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="1dabb532-f7d4-431d-af57-f4c322387c83">
+        <string id="05d6b801-426e-49a7-a7c2-ea4a27f96a6f" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <condition-node id="0db360af-b07a-44df-a689-52148ec4abf1" X="-2640" Y="-8280" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="19721695-90db-4884-b662-da59aecb8c44">
+        <condition id="1a6d227c-9547-41ab-aaee-943b0f527993" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="668e2737-2565-4509-8a33-72d264fff839" X="-2440" Y="-8120" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="3b385b19-c784-4151-8855-79a490464826">
+        <condition id="7862557a-ded5-4d83-ab03-1b734aa7c6e3" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <join-node id="30e4e148-47e2-4edb-a9f9-48d7868345f2" X="-1760" Y="-8120" NodeType="Join" NodeName="Set Name for New Node" />
+    <condition-node id="644672b0-17f4-4cad-896f-69e0bc280a14" X="-2360" Y="-11240" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="aee1cd5e-4d91-41ff-b0f3-cc8bbe1ea37f">
+        <condition id="c9fb7645-f916-454b-b00e-036379b37f0d" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <join-node id="4cd2aba6-e275-453f-83e4-6b4a2e22508f" X="-1680" Y="-11160" NodeType="Join" NodeName="Set Name for New Node" />
+    <condition-node id="0f28c4c3-7889-4e96-b5bf-8b07d332a590" X="-2560" Y="-11400" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="026848e6-7f03-49a9-9709-2f32c3b8ca04">
+        <condition id="558efc90-9847-4ea2-8161-aded436d0736" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <state-node id="37122fa7-e8d1-4c7b-a8a0-0a58b0ce2899" X="-2920" Y="-11400" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="a18efa96-cf50-4725-9d51-42e3eefd5849">
+        <string id="1fc7ffc1-44d5-4845-ada4-a2a9879ecc57" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <trigger-news-node id="ac7e4c0b-e617-4440-9921-4f132b9473f5" X="-3440" Y="-11880" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="cal">
+      <stringWithArgsTitle id="8515719e-5bb0-4377-9488-0792d6c23fd8" StringID="CM_News_ReverseFixture_UserAway_Nil_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="c5d4ccc5-001c-42ed-9a70-667e8e135ca4">
+          <stringArgument id="c258f073-31da-40b8-8eaf-33fe7e29e9b0" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="5b89ae78-cd36-44a3-bb44-1c418d8f9b24" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="a8c376b6-2566-4395-a40d-ce43d91bc26b">
+          <keyValuePair id="58e077bc-e5d2-4fb5-9dc5-926225e6f82b" Key="M" Value="%1s v %2s: Both Teams Looking For Some Goals Today" />
+          <keyValuePair id="67b5ab37-e3db-4376-8bf4-3bcc1301e583" Key="F" Value="" />
+          <keyValuePair id="f2a63829-43ad-4ca1-be3b-a6721ffd8244" Key="MM" Value="" />
+          <keyValuePair id="738612fd-0f75-4673-ada8-cf9aa14a0a5c" Key="MF" Value="" />
+          <keyValuePair id="aa182302-b16c-4fec-91a9-bcca05f69e84" Key="FM" Value="" />
+          <keyValuePair id="67bae4b0-9f33-4bc1-9e68-9fd8dbaeafbc" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="dae04f72-f509-4e95-888f-ea418378a03a" StringID="CM_News_ReverseFixture_UserAway_Nil_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="78ee861e-2f40-4f9e-a781-f9e41e676b9e">
+          <stringArgument id="080f0166-503f-4d82-8103-28cb538f2935" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="8d1234b9-c83d-4adc-9546-9581bddad89d" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="de184f3b-d3a2-4482-98bd-43d2a9deb456">
+          <keyValuePair id="57c50264-73e6-4de6-bf84-07c205eaf877" Key="M" Value="The last league encounter saw both teams nullify each other in a nil nil draw that fans of both teams could agree was less than impressive. Both %1s and %2s will be hoping to provide a more entertaining score line for today's match." />
+          <keyValuePair id="e638cdad-d1ce-44c3-8147-a9b6a202daed" Key="F" Value="" />
+          <keyValuePair id="76f9accb-70a0-4ca0-8319-14f9b4d69813" Key="MM" Value="" />
+          <keyValuePair id="9b30e260-8ca0-4d10-98a5-69100459d913" Key="MF" Value="" />
+          <keyValuePair id="bd514adf-4d89-49ab-8f40-0eb06b7bf367" Key="FM" Value="" />
+          <keyValuePair id="90c54705-1866-414b-b698-33eb1c9525e9" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="98866bda-e345-4259-a52c-09d0b20e4e91">
+        <sceneParameter id="4df31a0e-ae54-453a-bd45-f0094281242f" Parameter="TeamId_1" Value="SaveData:FirstMatchup" />
+        <sceneParameter id="7ae5a4d4-63d2-4b3a-86f8-86bd9eed0ecb" Parameter="TeamId_2" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <state-node id="ae4d12f7-16eb-4e3b-9426-8481a903032b" X="-2920" Y="-9920" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="6913fec8-0b3e-4371-a252-6106e659d671">
+        <string id="d867addf-df95-4ad0-8086-31f31ee76291" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <condition-node id="35b2fea5-6dff-4e0f-9634-3d90fca63f3b" X="-2560" Y="-9920" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="a968920b-d4b1-4174-b1d0-bf8d4aabe393">
+        <condition id="58cda203-6cea-420e-b322-19a5aaf22153" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="29c3d2b9-6f75-4ca2-8beb-0196660de989" X="-2360" Y="-9760" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="ea2ba459-f270-4de5-81ca-c3687bc628a7">
+        <condition id="68e6f9c3-f78f-4281-9e44-cc838c612bda" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <join-node id="df31a131-6048-405c-8dc0-8663b2b73ec6" X="-1680" Y="-9760" NodeType="Join" NodeName="Set Name for New Node" />
+    <trigger-news-node id="52946f06-a994-479b-9718-1c5922bd27d2" X="-3440" Y="-11480" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="football">
+      <stringWithArgsTitle id="27dec9d4-c062-4b0b-aaea-071e730d33d2" StringID="CM_News_ReverseFixture_UserAway_ExcitingDraw_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="cda34589-f8bc-40de-8b15-9a891e098091">
+          <stringArgument id="64a380cd-bb67-4bab-bc02-f6874b4a31d3" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="09b60a64-8096-4528-9d15-cae74f59f6dc" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="0b5a115f-be82-4caa-aa9c-1d8b1265fc41">
+          <keyValuePair id="2c811129-7c5e-4d28-8f14-d2b01ee6b46c" Key="M" Value="%1s v %2s: Both Teams Looking For More Than A Point" />
+          <keyValuePair id="84ea8735-919b-40a1-92be-a49383ddf4de" Key="F" Value="" />
+          <keyValuePair id="ef5ba088-dcb5-474e-8949-d31c557da0bf" Key="MM" Value="" />
+          <keyValuePair id="bf18bf04-fa7b-4c31-b7c7-def0b67239a8" Key="MF" Value="" />
+          <keyValuePair id="4adddb6c-00a5-4048-89d7-673c68bb1f8d" Key="FM" Value="" />
+          <keyValuePair id="375c7603-0fe2-4c09-a482-bcca6b75df4c" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="dc196850-9d4e-449d-af90-1ca7bb193565" StringID="CM_News_ReverseFixture_UserAway_ExcitingDraw_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="45e568e7-4a2e-40b4-b191-15b93e3f34e9">
+          <stringArgument id="5e56b0f5-1460-4dba-89ea-e3ecd10a349d" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="a4d56fc3-7399-470e-9ce2-11005fe85a38" Value="SaveData:OpponentGoals" Format="0" />
+        </stringArguments>
+        <stringContent id="585228bf-d79c-4013-9dd0-ecc5c9a1cf73">
+          <keyValuePair id="202e4be8-59a3-4072-a41a-f28ca8cbe829" Key="M" Value="Despite a high goal tally in the reverse fixture neither team were able to claim victory managing to only cancel out each other's efforts, ending it in a %1s - %2s draw." />
+          <keyValuePair id="a9438720-78a8-44a8-9e15-0056304183b3" Key="F" Value="" />
+          <keyValuePair id="c4f6a536-8883-4649-88b5-7c23c0c40b6c" Key="MM" Value="" />
+          <keyValuePair id="cfddf002-e637-488c-88ef-eeefbb3c8398" Key="MF" Value="" />
+          <keyValuePair id="d858ed74-253c-4355-bac6-bdfddd06df17" Key="FM" Value="" />
+          <keyValuePair id="35d422f9-bfaa-40b6-805e-3179a5cdb507" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="11ed25eb-7f76-4bdf-9b45-996ae4ded9ae">
+        <sceneParameter id="7548f774-3619-46d1-bc69-65a33e2e0386" Parameter="TeamId_1" Value="SaveData:FirstMatchup" />
+        <sceneParameter id="992eb85c-b12e-45e3-a25d-a6c75b6365e3" Parameter="TeamId_2" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="3b8b7077-43be-42f3-bccf-4208774a8ef3" X="-2080" Y="-11000" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="news">
+      <stringWithArgsTitle id="83f1f464-4866-43a4-ab59-ede406deb4c3" StringID="CM_News_ReverseFixture_DrawLast_Lost_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="aa2f31c0-c313-4b96-a783-4cdc75e001df">
+          <stringArgument id="6ec89f55-9f88-4710-b313-e11920f80b4c" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="ed071f18-5e4c-415e-89a8-4b02dec2894c" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="269969b1-0863-4d61-95b2-64f0e1c059a1">
+          <keyValuePair id="27047db3-f1c5-4989-b280-dbb54132b84f" Key="M" Value="%1s Loss To %2s a Hard Pill to Swallow" />
+          <keyValuePair id="cbcd0aa2-72c2-4705-b837-72840ee262a9" Key="F" Value="" />
+          <keyValuePair id="91b57c27-e1ad-488c-b3a9-e26f6cc0008f" Key="MM" Value="" />
+          <keyValuePair id="febb2026-3a10-4e40-8b25-990ced97d4a4" Key="MF" Value="" />
+          <keyValuePair id="86967a54-6ada-43e7-aae1-902a9beff891" Key="FM" Value="" />
+          <keyValuePair id="55708c29-be1f-43ef-b55c-8a2dc3d2bd2e" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="152f7169-af41-405a-b54a-7f47bd6b96c3" StringID="CM_News_ReverseFixture_DrawLast_Lost_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="92e28e1d-9699-4105-90b0-2030a0031da8">
+          <stringArgument id="043d3d0e-2d0f-40ab-add5-74944f2cf6f1" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="fb8b8a52-64a1-48a0-a7f8-1645aa0439e9" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="76ed57a6-37d4-498d-bf6d-9eef1d513768" Value="Model:Global.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="1a748b0f-281f-418a-b5ac-fcbc0519f2b9">
+          <keyValuePair id="e403f229-c4f3-4f92-8b97-c7c68ff8770f" Key="M" Value="Having drawn earlier in the year %1s was in a reflective mood following his team's defeat in yesterday's match against %2s which some %3s fans argued should have gone their way instead." />
+          <keyValuePair id="96aebbe1-1e19-45d2-aa92-6bf2175747a1" Key="F" Value="Having drawn earlier in the year %1s was in a reflective mood following her team's defeat in yesterday's match against %2s which some %3s fans argued should have gone their way instead." />
+          <keyValuePair id="cc50d9a0-1eb4-4966-a777-775be2f9ed12" Key="MM" Value="" />
+          <keyValuePair id="9c8f0d71-dc28-4a32-96f1-1511fc6cbb1b" Key="MF" Value="" />
+          <keyValuePair id="d1aa7568-29f0-4731-bce7-01e04f03a341" Key="FM" Value="" />
+          <keyValuePair id="b42f404b-4288-4f3b-9187-371a504cfa75" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="e5dc8159-60a4-4daa-a675-51c846f17b7e">
+        <sceneParameter id="9b10a1b4-9e88-4d4e-a85e-48f852463b39" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="46b6d171-d42d-409d-ad29-50f74ebb4f48" X="-2080" Y="-11400" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="8" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="stad_f">
+      <stringWithArgsTitle id="9baa99fc-ee1e-42f6-bdf4-6cff4dfde364" StringID="CM_News_ReverseFixture_DrawLast_Won_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="9525ee33-3bad-433f-83cf-6af84e144350">
+          <stringArgument id="5c0bdc71-0608-4df9-a300-21ca6d61d696" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="60f49cfa-4ebe-477c-bdc3-8f08cea6db88" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="952ff251-6fdd-4477-8cd2-3c8765d12d89">
+          <keyValuePair id="9e28c3d9-4057-44f6-a8b2-f45384799b3f" Key="M" Value="%1s Come Away With a Win Against %2s" />
+          <keyValuePair id="dea3c026-b8a4-4b6d-b6a3-5cd11c4ad0b3" Key="F" Value="" />
+          <keyValuePair id="707bdd11-679b-4255-86ee-0dd5af23aa31" Key="MM" Value="" />
+          <keyValuePair id="792c9875-3856-4f42-97f6-fc06b34a2c5e" Key="MF" Value="" />
+          <keyValuePair id="6eeb5fb1-15cd-4f19-8bb7-7e8ce2bf0b68" Key="FM" Value="" />
+          <keyValuePair id="32819f29-2d61-442e-9507-954cdb3720f3" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="41b79f32-6af2-43e4-a71a-014aa6f5f4ca" StringID="CM_News_ReverseFixture_DrawLast_Won_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="50a3b006-7045-4e47-8d03-e8c14616adc9">
+          <stringArgument id="c6c4d700-2e62-48ad-a9e3-6fdeb47c3513" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="fa963694-de45-4571-84f0-4db7623078b7" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="769fa00b-2f4f-45cd-b874-025e641bd19a" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="8c36d3cb-858d-4bfe-9c0f-97436ee9452d">
+          <keyValuePair id="3212af6f-452d-4bc6-a991-bda1f2bdb7da" Key="M" Value="%1s supporters were a positive bunch after coming away with a win from their last match against %2s. %3s no doubt stressed to the lads that it wouldn't take much to turn their draw in the reverse fixture against %2s into a win." />
+          <keyValuePair id="e2c7d8e9-89f2-4b89-b74e-733d465c240c" Key="F" Value="" />
+          <keyValuePair id="fd38d26b-d26d-447f-939f-9aabea182511" Key="MM" Value="" />
+          <keyValuePair id="31691377-1305-4e55-b3ab-b7b5bc28e966" Key="MF" Value="" />
+          <keyValuePair id="9c1eece7-dfcd-4fe9-9c8c-e5a5407b1a7f" Key="FM" Value="" />
+          <keyValuePair id="2496c0a1-c000-43c8-a17b-bbca565ce4f8" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="e32f7f00-a6b6-419f-a8ea-330b705d4dc3">
+        <sceneParameter id="b45442e0-b1e0-4245-b504-77042e1f2a7f" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="a2c97869-52d6-4ff2-bdfa-67d843d495f6" X="-2080" Y="-11240" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="suit">
+      <stringWithArgsTitle id="588cd22e-d53c-4597-aa72-010fe2905ff9" StringID="CM_News_ReverseFixture_DrawLast_Draw_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="758efa75-3b1b-4d30-a82b-2fbdde826db4">
+          <stringArgument id="35c73790-1bfb-401c-a842-df2866922c98" Value="Model:UserMatchCompleted.LastMatchData.HomeTeamId" Format="11" />
+          <stringArgument id="1f49a8c6-257d-4a6a-8c49-79618aa70da4" Value="Model:UserMatchCompleted.LastMatchData.AwayTeamId" Format="11" />
+        </stringArguments>
+        <stringContent id="f0712754-d3e1-4b21-bcfb-26bdf4c0c48e">
+          <keyValuePair id="f42fa7ec-5ec7-4d55-8ef8-08ba2f7b40ab" Key="M" Value="%1s &amp; %2s Came Out Level Again" />
+          <keyValuePair id="4312ff36-2402-4079-a4b2-3d8e08d2b0ef" Key="F" Value="" />
+          <keyValuePair id="0e973f8b-593a-4383-8c99-dc98e3660d78" Key="MM" Value="" />
+          <keyValuePair id="f5cb1a08-5fce-47a0-a61a-831eb3e7c1b7" Key="MF" Value="" />
+          <keyValuePair id="d3bbf5ba-924d-46b1-9cc7-057fdf84a532" Key="FM" Value="" />
+          <keyValuePair id="fbce41d6-d54f-4460-9217-5eb8e8a162b0" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="121cec10-a154-467e-848a-78d9183698b7" StringID="CM_News_ReverseFixture_DrawLast_Draw_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="56bf87f5-9bf0-47dd-a4e8-21189bd9a1ae">
+          <stringArgument id="13566010-dae5-43e6-81c1-3bec43b26ccd" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="e68be526-498b-4ad5-9fb7-923da3048d2e" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="7664b4be-ff38-49c4-b635-ba31b50e57cf">
+          <keyValuePair id="f157b605-2d35-47ec-bc22-93a8596731f5" Key="M" Value="%1s manager %2s was eager to prove his club was the stronger side but ended up with a game very similar to an earlier match between the two teams this season that also ended in a draw." />
+          <keyValuePair id="e8c0a061-083c-48a7-a1a4-b981e680d873" Key="F" Value="" />
+          <keyValuePair id="3b169b45-a7ce-455f-9689-75e9b5e9d61a" Key="MM" Value="" />
+          <keyValuePair id="b1153e61-d6c3-4b41-8595-0c9afa6d416a" Key="MF" Value="" />
+          <keyValuePair id="3af5c853-b1c4-48bb-a07d-188c8c5d238c" Key="FM" Value="" />
+          <keyValuePair id="4ccfa912-5c08-4274-aa97-2287296a8d11" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="3a387e4b-20b9-49ec-8451-aeccfe0b8f03">
+        <sceneParameter id="e17735a9-6540-418e-9436-53ac3cc1a5a1" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="2271b1e6-044f-4300-be3a-739cdc0ac795" X="-3840" Y="-11120" NodeType="Condition" NodeName="UserAway">
+      <conditions id="b91e10e3-3b02-4a75-902a-b4c8a5f0651c">
+        <condition id="d8c74e03-fba9-4c61-b5cf-097b2bbdb189" VariableId="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Comparison="EQ" Value="SaveData:FirstMatchup" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="bb883d7d-2673-423f-a818-6e8f4ea247df" X="-3440" Y="-10880" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="suit">
+      <stringWithArgsTitle id="a0b538c9-b0df-4e3e-ad1f-322af51f0fcb" StringID="CM_News_ReverseFixture_UserHome_Draw_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="807b1910-f88d-4465-b886-3522174d387f">
+          <stringArgument id="d4e4d5ef-07be-45eb-bb24-d753285811cc" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="6a8913b5-45d4-44a4-9acc-cb7e4ff9f427" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="8afd0101-03fd-4627-bc8e-ae8491320798">
+          <keyValuePair id="1c0402b3-f375-4648-9ba6-7c72d9c0ba1a" Key="M" Value="%1s v %2s: Both Teams Looking For More Than A Point" />
+          <keyValuePair id="ee362bde-cf87-4f43-9182-04d1e6525e57" Key="F" Value="" />
+          <keyValuePair id="a10dfa10-0ce6-487e-a88f-4d66349e1b27" Key="MM" Value="" />
+          <keyValuePair id="32539ff4-424d-40dc-b51e-d08c2d8db2ee" Key="MF" Value="" />
+          <keyValuePair id="26c96c84-21c9-496e-9346-e52e7cc69b3d" Key="FM" Value="" />
+          <keyValuePair id="4129abfe-21b3-4e16-aff2-0c35ee0bb001" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="ddb98eac-266b-466c-a60b-40a598e4e18b" StringID="CM_News_ReverseFixture_UserHome_Draw_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="420d18f3-3e5c-4cc1-9cd7-19bf41c52ed9">
+          <stringArgument id="d7774772-153c-4867-bd69-193713f01b2f" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="c1a14777-acea-42e2-9eaf-b86247d3e80e" Value="Model:Global.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="d8ee0afe-0694-42a3-8046-0d45395cef2e">
+          <keyValuePair id="65d0b35a-7ca7-4fde-a21f-e2efb5d69790" Key="M" Value="%2s played host to %1s in the last encounter that ended undecidedly in a draw, both teams will be hoping to avoid a stalemate today and get a win." />
+          <keyValuePair id="f3f9d088-a7e2-4692-bf30-a88cc92b1b2b" Key="F" Value="" />
+          <keyValuePair id="2273705b-0c02-479c-b2a1-acb017f1e293" Key="MM" Value="" />
+          <keyValuePair id="3d1fa450-b571-4b36-9775-2651795386ee" Key="MF" Value="" />
+          <keyValuePair id="816005ac-560a-40b7-b191-0688a2b18ef3" Key="FM" Value="" />
+          <keyValuePair id="4f57ebf0-bf10-4bf6-b73a-4a9e0d1f8429" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="c46be52d-7f14-477b-bfb8-99b936ef35d6">
+        <sceneParameter id="6734fbd7-e10a-4fc5-b7ac-fcd7212bf2a8" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+        <sceneParameter id="8c10cb80-a3ee-4a53-9fd0-b9eb42dc9e90" Parameter="TeamId_2" Value="SaveData:FirstMatchup" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="7056420c-a0d7-46f5-8fdd-6723dc8d622e" X="-3440" Y="-11680" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="fans">
+      <stringWithArgsTitle id="569a880c-4b85-4da8-a5ac-9f3d50d0ea81" StringID="CM_News_ReverseFixture_UserHome_Nil_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="dc71b956-cd64-4675-a3c1-b8e947ae63fb">
+          <stringArgument id="318ebf6c-fc5e-4792-a33f-95955c24c554" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="d541b762-ed32-45be-adde-7cfd50c8d714" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="0f494895-9200-47af-b9e0-585c3df002b4">
+          <keyValuePair id="8c0be029-8647-4f36-928c-1ba852e70903" Key="M" Value="%1s v %2s: Both Teams Looking For Some Goals Today" />
+          <keyValuePair id="600134af-411e-4a98-87cc-083b33e7d93a" Key="F" Value="" />
+          <keyValuePair id="41c31cd7-88cd-43a9-9079-9a159712b796" Key="MM" Value="" />
+          <keyValuePair id="d9478632-b161-4798-90c2-d5ec864dba3b" Key="MF" Value="" />
+          <keyValuePair id="727cf11a-7ed0-4954-a805-cb4ff92ae97e" Key="FM" Value="" />
+          <keyValuePair id="1fd17140-0c6a-4661-b378-9cc131a6c4c6" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="697ea545-c872-44b6-88e2-6d5e58b132f8" StringID="CM_News_ReverseFixture_UserHome_Nil_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="bad55946-a21e-497e-b1e3-e16b3e3262f5">
+          <stringArgument id="27786148-eae8-4165-a321-238b1e04633a" Value="Model:Global.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="e79a7e3c-4485-4750-b673-672b33843614">
+          <keyValuePair id="e24bd450-513c-47f9-ad42-246e255d389f" Key="M" Value="The last league match between these two opponents ended goalless and %1s will be hoping to give their home fans a more entertaining ninety minutes today." />
+          <keyValuePair id="85c1904e-c62f-4d3c-b27a-857a6205fd9c" Key="F" Value="" />
+          <keyValuePair id="88796dec-12d2-47de-90e3-0b7caed1b901" Key="MM" Value="" />
+          <keyValuePair id="81081e26-9165-4f03-bba9-b3e0f96de7b6" Key="MF" Value="" />
+          <keyValuePair id="cdc97089-e64e-4d69-84ae-2a4e2aefa6fd" Key="FM" Value="" />
+          <keyValuePair id="246eb262-29f3-4e30-a3a3-dc0ac70f26d6" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="956c2149-df8c-434d-a7c5-02969874bb3a">
+        <sceneParameter id="cfdfd684-a82a-4588-be49-23069b90ec63" Parameter="TeamId_1" Value="SaveData:FirstMatchup" />
+        <sceneParameter id="8bd9003f-b89e-4b56-b610-a3d11372689c" Parameter="TeamId_2" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="fa559e2f-9773-4df4-bd16-e896ae1d7220" X="-3440" Y="-11320" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="stad_f">
+      <stringWithArgsTitle id="9685ed4d-691f-4cd2-8971-5170db775eb3" StringID="CM_News_ReverseFixture_UserHome_ExcitingDraw_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="5253d01c-2f92-4cc0-89a6-c37e5bb51cbe">
+          <stringArgument id="0ecfea75-30ed-4f5f-aa90-e6b14c7151e7" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="6372babb-f554-4831-9160-f9d28c99adee" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="d7e5e4f4-5b73-41f7-9c9e-7ef9b715dd1c">
+          <keyValuePair id="48112b7c-8ae7-4179-8974-83859788aab2" Key="M" Value="%1s v %2s: Both Teams Looking For More Than A Point" />
+          <keyValuePair id="a651bb13-65ce-4bed-8ff0-063588880082" Key="F" Value="" />
+          <keyValuePair id="510b619f-6379-4353-b394-a4105c8c6616" Key="MM" Value="" />
+          <keyValuePair id="ff171d4c-cdab-466b-a8bc-230397547804" Key="MF" Value="" />
+          <keyValuePair id="cd540c3c-2d46-493c-85b5-2155993e4ef7" Key="FM" Value="" />
+          <keyValuePair id="48d61133-3876-4a4d-800d-0992aa78f35e" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="1ec81984-1721-46b8-9443-c01302b9e15a" StringID="CM_News_ReverseFixture_UserHome_ExcitingDraw_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="2a8b435f-3f88-4c22-b3fb-2f04ea436b9b">
+          <stringArgument id="4d4b2017-5af8-48fe-a627-5caa2ebd92b0" Value="Model:UpcomingUserMatch.NextMatchData.UserTeamID" Format="11" />
+          <stringArgument id="91b629cc-e471-45d0-99ad-6a5cc5bbf60c" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="fcc5af01-02dd-4060-a115-4908ef978548" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="70822059-0898-4f39-96ff-922f32c80e7f" Value="SaveData:OpponentGoals" Format="0" />
+        </stringArguments>
+        <stringContent id="3d1a7249-fa28-4bc0-a3e9-3ee9a446a2de">
+          <keyValuePair id="54c2d66e-620f-41e6-9d96-3f2dfc74fdd8" Key="M" Value="%2s fans will still remember the excitement of the two team's %3s - %4s draw at home during their last encounter and will be hoping to prove the better team during today's reverse fixture at %1s." />
+          <keyValuePair id="58d7f979-97e4-449e-8acc-9ade88e7040d" Key="F" Value="" />
+          <keyValuePair id="14a463ac-061d-4a36-a8e2-6c02e716659d" Key="MM" Value="" />
+          <keyValuePair id="11118f52-69ac-4f27-bed3-9601e6233a56" Key="MF" Value="" />
+          <keyValuePair id="db347bc1-1310-4edc-b3ad-8fd05ef99f2a" Key="FM" Value="" />
+          <keyValuePair id="c73a63e4-6b10-4c33-84d2-fea1ac715e85" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="fe991ad0-0c4c-492e-81d8-0784b8e4b8da">
+        <sceneParameter id="6816d278-261e-40a5-9519-7287ec783965" Parameter="TeamId_1" Value="SaveData:FirstMatchup" />
+        <sceneParameter id="bb3fa213-7eac-438d-ac17-fa5d19505913" Parameter="TeamId_2" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="71bd05c7-2aaf-4471-8ca6-513b2e5f8997" X="-3440" Y="-11120" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="pitch">
+      <stringWithArgsTitle id="e3e45a33-8a35-400d-aa78-5bfc8ca0ab47" StringID="CM_News_ReverseFixture_UserAway_Draw_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="affd80b2-12d7-4f52-8b2e-29d00c1789a2">
+          <stringArgument id="a0340a0a-9345-4d79-977b-893d532ce242" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="a79dc085-351d-4cad-9b4c-204f311d9e62" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="7879e282-a15a-4dbc-a797-0551aa378250">
+          <keyValuePair id="48fd5eea-5202-46ec-8afc-784764480465" Key="M" Value="%1s v %2s: Both Teams Looking For More Than A Point" />
+          <keyValuePair id="086cc65a-087f-4786-8e8d-7a34388fd432" Key="F" Value="" />
+          <keyValuePair id="73a85b04-9e96-4f23-a8af-c948074806b3" Key="MM" Value="" />
+          <keyValuePair id="c57a443d-c2bb-43d1-b250-01121ee33edb" Key="MF" Value="" />
+          <keyValuePair id="75dda22d-4b54-4575-87a6-57c2ac34aff2" Key="FM" Value="" />
+          <keyValuePair id="ebf7a149-5615-41bd-9fd2-3a92d80500e3" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="d926fbe7-82f6-4cca-8638-b570b3390e2b" StringID="CM_News_ReverseFixture_UserAway_Draw_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="b77ea497-e87b-4fcc-81f2-7c59c4e5a65a">
+          <stringArgument id="a62993f4-93e6-4028-9c00-9ed14dc75f8b" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="0ae50d2e-9cae-48d8-a296-cba6af16015b" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="df374956-3b7b-4c06-ab51-dcd6c4c510f8" Value="SaveData:OpponentGoals" Format="0" />
+        </stringArguments>
+        <stringContent id="3b72e659-c967-4555-a44f-9808ffc56c88">
+          <keyValuePair id="4233ee5d-11dd-4410-880a-951b1e1a8f99" Key="M" Value="Both teams appeared to be evenly matched which was reflected in the %2s - %3s score line, %1s fans will be hoping to see their team the winners in today's match at home." />
+          <keyValuePair id="1ebd7934-9e55-4fac-b640-7ba34e543575" Key="F" Value="" />
+          <keyValuePair id="8ac5d966-292b-4089-a2cc-971ea907c3cc" Key="MM" Value="" />
+          <keyValuePair id="93906607-c9c2-4269-9134-d42a79930d07" Key="MF" Value="" />
+          <keyValuePair id="4c8fb716-1e35-48ac-8580-9461224ec447" Key="FM" Value="" />
+          <keyValuePair id="c480f3cb-b785-49fc-a72c-421e4a8d7d58" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="12e3956a-e318-493c-859f-665ed8e9b6fa">
+        <sceneParameter id="d484a7d6-29d2-477d-90ff-e96c034a7bbb" Parameter="TeamId_1" Value="SaveData:FirstMatchup" />
+        <sceneParameter id="0371dea8-d4c2-4dbf-86f9-cb56beca2c53" Parameter="TeamId_2" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="b60d2d7c-b885-4523-bf09-897a91622a37" X="-3440" Y="-10640" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="fans">
+      <stringWithArgsTitle id="acf3131a-501a-49c7-8066-00b03d0657e7" StringID="CM_News_ReverseFixture_UserAway_ThrashingWin_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="d0e1263b-3efb-43a9-bf3a-f8cc312cb992">
+          <stringArgument id="9a7b1066-247a-4b46-8bb7-4d1d239a9d67" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="b5f8c99a-2940-4c8b-85cc-1014f27bf849" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="255aa803-2263-4293-99c4-1195e66de30d">
+          <keyValuePair id="5247726f-843c-4a51-ab82-19fb5078ba9f" Key="M" Value="%1s Looking For Redemption After %2s Defeat" />
+          <keyValuePair id="6282f835-72f2-4962-858b-8c2f1dfd2114" Key="F" Value="" />
+          <keyValuePair id="43c85af4-0792-4234-a36a-0eab0f4af617" Key="MM" Value="" />
+          <keyValuePair id="0c288544-24e2-43e8-b783-f5da67fee0f3" Key="MF" Value="" />
+          <keyValuePair id="220cade9-8542-488e-a02c-16d719b04871" Key="FM" Value="" />
+          <keyValuePair id="c803d492-78af-4459-a8f2-aeab668d9389" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="773bc8c2-af11-4110-b49e-c966ee36cf1a" StringID="CM_News_ReverseFixture_UserAway_ThrashingWin_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="b67ff3a6-3d7d-424b-9711-312b13bee628">
+          <stringArgument id="551c10de-212a-4bed-99e8-59d550c4a5a9" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="ab562879-71f6-41bc-b50d-2abe41f43c19" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="f869132c-7f64-4e16-bdf1-e7b0b4a70af7" Value="SaveData:OpponentGoals" Format="0" />
+          <stringArgument id="434e98ca-723c-40dd-b715-1836bba21095" Value="Model:Global.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="fdf36b0d-6b94-4149-bd78-f6a344ffe7bd">
+          <keyValuePair id="97e23dcb-2bdc-452d-9c66-dc6d44beb812" Key="M" Value="%1s fans will be eager to see their team redeemed today after having lost %3s - %2s to %4s in their last encounter." />
+          <keyValuePair id="7fa2b0f4-c427-4147-9600-ca011231b8a6" Key="F" Value="" />
+          <keyValuePair id="9dbe853f-d07a-4dcd-97a9-d39eba309db8" Key="MM" Value="" />
+          <keyValuePair id="e65d45c7-3d8a-4684-ad33-42b818cc2824" Key="MF" Value="" />
+          <keyValuePair id="4d02f4cf-7a07-4c6f-9291-1191275a8f19" Key="FM" Value="" />
+          <keyValuePair id="764b6ef2-a613-45a0-a794-a30964e3915c" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="0f5a6434-5686-4451-b060-8cc5f1ce00bf">
+        <sceneParameter id="cf6fc949-631c-4d56-a689-16abdd5fb133" Parameter="TeamId_1" Value="SaveData:FirstMatchup" />
+        <sceneParameter id="0b51ce1d-cb21-472f-a705-dc90fb2be6fe" Parameter="TeamId_2" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="cb60038b-a23d-4cca-994d-31a253b4460c" X="-3440" Y="-10480" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="train">
+      <stringWithArgsTitle id="690c8a8f-f98a-43e8-8888-81fdf7feb8b7" StringID="CM_News_ReverseFixture_UserHome_ThrashingWin_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="44ee57aa-df22-4eea-b138-f10a55728530">
+          <stringArgument id="1558569a-7153-4f3f-8045-f66ee4772fa2" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="c3120261-c133-47f0-9687-3597f0ac93b6" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="0f90cdfe-e0a1-43eb-b013-300a16aa2b9d">
+          <keyValuePair id="33cb6643-3602-4752-bf82-fbedfd15189a" Key="M" Value="%2s Look To Avoid Another Defeat Against %1s" />
+          <keyValuePair id="0515cf9f-92ad-4435-9f20-1b1d09e1f899" Key="F" Value="" />
+          <keyValuePair id="6c31d8d4-197b-420f-a567-869ac3e61fff" Key="MM" Value="" />
+          <keyValuePair id="d30ef94f-743a-4e44-baa8-a8a7aecdc01d" Key="MF" Value="" />
+          <keyValuePair id="6d1a37f4-72e0-49a8-a82d-5728b5a4a5a5" Key="FM" Value="" />
+          <keyValuePair id="e63d1ded-9a07-44f8-8d82-9076c838789b" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="4c1814bf-f3a6-4531-a4ea-921760b84592" StringID="CM_News_ReverseFixture_UserHome_ThrashingWin_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="9cde6535-f411-495a-8649-77eaee49acfa">
+          <stringArgument id="39fa1ff5-2e8d-447f-8d30-971882c03f0a" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="af9d0f91-8eb5-4638-bb2a-e9c1362a30a8" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="e3bd12e4-1542-4072-8b25-8e8eefb5c4a8" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="fb736cee-4f6f-43c7-b8a7-de658150519e" Value="SaveData:OpponentGoals" Format="0" />
+        </stringArguments>
+        <stringContent id="cac9c455-d2f2-436f-bd77-235ab8fbd6b6">
+          <keyValuePair id="33ef11b3-87ef-43ba-8e5e-0237b991bb03" Key="M" Value="%1s will be looking to avoid a repeat performance having lost %3s - %4s to %2s earlier in the season." />
+          <keyValuePair id="970eb2a0-5ed5-4028-a158-c39b7fe459de" Key="F" Value="" />
+          <keyValuePair id="3bcc2260-73d8-48d1-95ee-dcfa01c4810f" Key="MM" Value="" />
+          <keyValuePair id="5c00a90c-704d-49ed-88cd-44b7b19e8c3b" Key="MF" Value="" />
+          <keyValuePair id="c4048f89-d4a8-4ee9-825d-3d708676989c" Key="FM" Value="" />
+          <keyValuePair id="852de060-6cd4-4b84-a3c0-7a997989864e" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="4726fce5-b921-4227-a819-b6822cbe9d29">
+        <sceneParameter id="e591418c-0839-48b0-b89a-21155862beab" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+        <sceneParameter id="2c028c7f-ec36-4841-9e0e-7fcdf9856d7f" Parameter="TeamId_2" Value="SaveData:FirstMatchup" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="c7ddbd08-ec24-4249-b82e-656455110630" X="-3440" Y="-10040" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="suit">
+      <stringWithArgsTitle id="9f0a9977-9057-42f2-a32b-b9150197bd33" StringID="CM_News_ReverseFixture_UserHome_ThrillingWin_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="05c5b3f6-d738-4af1-b0d9-b68cf803bfc2">
+          <stringArgument id="b7f8bfc3-3348-47e5-8538-ab7012d99aba" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="499c7d42-44b7-4513-bb72-0f89d8d2be3c" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="e08fb198-1643-4165-96a7-e9c595043613">
+          <keyValuePair id="7a06476b-1594-43c8-8860-82f22fd04794" Key="M" Value="Hoping For Another Heated Encounter Between %1s and %2s" />
+          <keyValuePair id="55d602c8-eba5-4463-9964-19ee2c7ffcb0" Key="F" Value="" />
+          <keyValuePair id="dd2bb326-3696-4a19-87f5-1d7bff1fc14a" Key="MM" Value="" />
+          <keyValuePair id="49a322e8-f2e4-4d3e-bebf-c3f4b3e9465c" Key="MF" Value="" />
+          <keyValuePair id="cd88ff36-a754-4f34-9d4a-d18ce16909bd" Key="FM" Value="" />
+          <keyValuePair id="bc5bc508-9072-4f26-a51b-45e1c28a284b" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="47cb69bd-31e0-4a52-9d53-4622971b40ca" StringID="CM_News_ReverseFixture_UserHome_ThrillingWin_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="b8626331-5303-4aca-a0f7-551c38050159">
+          <stringArgument id="c34b98e2-40a5-4faf-b4ce-d67a285b6ee8" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="9ee27a51-233d-4b16-9f03-b877383817a3" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="4fbcbb00-7573-4ec4-b6e5-91aaba8abdd0" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="76e197ea-82f9-4140-94b5-2e7a5506bc51" Value="SaveData:OpponentGoals" Format="0" />
+        </stringArguments>
+        <stringContent id="e49255d8-2f1c-46ff-9e83-667187d9ea69">
+          <keyValuePair id="039ac4a0-ae6e-4951-bc28-686a6ff3ff1f" Key="M" Value="%2s will have to ensure his team does not let up on %1s after a heated encounter between the teams in the last match that ended in a close %3s - %4s victory for his side." />
+          <keyValuePair id="be2e4ebd-a38b-4b91-ab70-9a913a9bc5d8" Key="F" Value="" />
+          <keyValuePair id="ed875f70-a01c-4fa2-88d3-0a7e1e67d7a8" Key="MM" Value="" />
+          <keyValuePair id="de3b646d-40f0-4f6d-baaf-82c9d9a221cc" Key="MF" Value="" />
+          <keyValuePair id="aaf89ff1-ad8a-42c9-bd45-f112964050b2" Key="FM" Value="" />
+          <keyValuePair id="abf5a28f-e539-41f7-aeea-22b2a722617c" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="05d7e2c6-570e-42f2-84d7-466fde8aa409">
+        <sceneParameter id="5a154995-959e-4b52-86a3-8c3adbee66f3" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+        <sceneParameter id="df311ba7-4d64-4bd7-937d-42a53e2239a0" Parameter="TeamId_2" Value="SaveData:FirstMatchup" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="b36ba999-32bb-42b6-bc8d-c9834423c55b" X="-3440" Y="-10240" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="pitch">
+      <stringWithArgsTitle id="913ae0fc-8b0f-43b6-9959-e29f23164faa" StringID="CM_News_ReverseFixture_UserAway_ThrillingWin_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="dc5e741e-1b8e-4af5-8e09-b6ed246993d1">
+          <stringArgument id="2627144a-da9f-4b34-80fb-884cdc7de98e" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="88654cfa-daf6-4a4e-addf-7117babb5275" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="f652e0f8-2965-46b7-a204-beb3f13e5561">
+          <keyValuePair id="334f2abe-4bad-46b4-a224-401d14224776" Key="M" Value="Hoping For Another Exciting Game Between %1s and %2s" />
+          <keyValuePair id="b03ea6c0-57f2-4c58-a132-aad2601eae76" Key="F" Value="" />
+          <keyValuePair id="4200e77d-9759-43b0-9813-a4aceb912586" Key="MM" Value="" />
+          <keyValuePair id="bceddd75-7903-4b2c-a4f5-895e79a626bf" Key="MF" Value="" />
+          <keyValuePair id="f2da5e28-290b-4427-859e-bcc72877b3e9" Key="FM" Value="" />
+          <keyValuePair id="3b3c13be-6bf8-4e00-a17b-3339d703a917" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="3aef6d2d-dfe6-4bf1-85ed-8bcd76f97faa" StringID="CM_News_ReverseFixture_UserAway_ThrillingWin_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="32c81879-5125-47c4-83fc-a661c92e6ba9">
+          <stringArgument id="41145171-d771-431a-845e-e914879a4a04" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="1a025df9-6e8b-442a-8fc7-1bb974c78a2f" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="68dd9d50-f619-4302-a082-78bd3f7a611b" Value="SaveData:OpponentGoals" Format="0" />
+          <stringArgument id="8e3df1a9-a440-4e10-828c-949e29e59474" Value="Model:Global.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="ac5fa7ee-e837-4509-9ab0-367b7a1baf8d">
+          <keyValuePair id="6f0d4990-bdf8-4da2-b1bd-3cd3f02a4df8" Key="M" Value="We are all hoping for another game as exciting as the last time these two teams met in the league with %4s seeing off %1s %2s-%3s in an enthralling encounter." />
+          <keyValuePair id="10e8e24e-4792-43c1-8569-b3be0bc61800" Key="F" Value="" />
+          <keyValuePair id="07649112-13b0-4d66-968a-0131f6f163d9" Key="MM" Value="" />
+          <keyValuePair id="21bd388e-c451-41d6-8e0a-6ead3e081f84" Key="MF" Value="" />
+          <keyValuePair id="81a69042-ce69-4234-9a8c-b409179ce411" Key="FM" Value="" />
+          <keyValuePair id="f4331c47-cbc5-4e89-9598-45916125ce78" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="f0bb116c-fe10-4079-b8e8-e33c4f3c0b2e">
+        <sceneParameter id="ac5443c9-09da-4d90-a7b3-77f23cd54630" Parameter="TeamId_1" Value="SaveData:FirstMatchup" />
+        <sceneParameter id="b789e570-5687-417a-8c0a-36c4fb3a75b3" Parameter="TeamId_2" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="25abef09-f8c6-485a-a20c-1933b2edf3d2" X="-3440" Y="-9680" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="future">
+      <stringWithArgsTitle id="5243ba86-9d87-4a7b-af4d-9058e7fca201" StringID="CM_News_ReverseFixture_UserHome_EasyWin_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="1aa0935d-7da6-4e25-b574-c57845443d7d">
+          <stringArgument id="ecdf1dd7-ddb8-4798-ba2d-6d6bff3a3dcb" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="a686036c-67b7-44d8-b57d-6f349310d425" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="c8c01a24-fe7e-4495-96b7-570a7d05ab40">
+          <keyValuePair id="627924b0-01ff-48ca-b416-ef5ccb1c75d3" Key="M" Value="%1s Looking Forward For A Win Against %2s" />
+          <keyValuePair id="27e88146-908d-453f-a03b-cb8268c38a9a" Key="F" Value="" />
+          <keyValuePair id="acc32020-1061-42c4-933d-c38edaa35724" Key="MM" Value="" />
+          <keyValuePair id="ad47da84-9245-436f-9083-948313214cdb" Key="MF" Value="" />
+          <keyValuePair id="ad366199-3f98-45f4-910e-743a90ceac2e" Key="FM" Value="" />
+          <keyValuePair id="cf5ff930-ebaf-4a2d-94e1-fb9196b22cf2" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="a2ff85af-3384-451e-b427-450a8fedd8a6" StringID="CM_News_ReverseFixture_UserHome_EasyWin_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="03f8211c-f59a-4d33-87cb-90fa09f47656">
+          <stringArgument id="1a76c291-c766-4aa4-9d25-203c99194d54" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="02217287-50e6-4828-b305-126f4c2da94a" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="265d6f25-8fb3-486e-9e46-eb527fea499c" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="d8d48e46-eb58-4832-bfab-43dfa6d12aaf" Value="SaveData:OpponentGoals" Format="0" />
+        </stringArguments>
+        <stringContent id="c6963682-e148-44c4-b623-3be18f52d4b7">
+          <keyValuePair id="edeeae16-ba5e-40a0-bc9f-e42823727ad9" Key="M" Value="%2s will be looking forward to a win if the %3s-%4s win in their last encounter with %1s was any indication of how todays result will go." />
+          <keyValuePair id="926c0c09-8a70-4cc0-8906-464cea7b0b86" Key="F" Value="" />
+          <keyValuePair id="872ad7ca-9746-440b-a90d-f03f4493390c" Key="MM" Value="" />
+          <keyValuePair id="18af144e-00b7-4d4e-aad6-df03a8db22c9" Key="MF" Value="" />
+          <keyValuePair id="b959bd1b-fd5e-4f48-a524-a983541e0eb1" Key="FM" Value="" />
+          <keyValuePair id="91775106-dfc2-4323-b1e0-53b721e74ec9" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="2154eb67-3597-4619-a493-e6b8cd631ca4">
+        <sceneParameter id="eddecfa1-c4bd-4e90-bbf1-bd90d0d584df" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+        <sceneParameter id="fc3160ce-76fd-4be4-b397-3ac462ae803e" Parameter="TeamId_2" Value="SaveData:FirstMatchup" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="e5e2d79c-8e00-4f57-81b7-6a4a560b9998" X="-3440" Y="-9840" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="cal">
+      <stringWithArgsTitle id="b3f0382f-4aff-4b3d-99d8-cc8f5b7457f9" StringID="CM_News_ReverseFixture_UserAway_EasyWin_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="33b91a3d-5856-40d4-8515-25b432bdec9b">
+          <stringArgument id="15439405-ddab-4693-af41-432eecce48a1" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="f32d65ab-f11d-4d71-bba5-b19e34835501" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="27eb223b-aa00-4e1e-95fb-c2eead445342">
+          <keyValuePair id="01cda988-661e-43fe-b320-6424894d0507" Key="M" Value="%1s Looking Forward A Better Performance Against %2s" />
+          <keyValuePair id="e63f3ecb-4603-49e6-af55-1551b1fc65ab" Key="F" Value="" />
+          <keyValuePair id="8e312c5c-846c-45b3-9142-503cf78ba7d3" Key="MM" Value="" />
+          <keyValuePair id="747a5995-8c26-41cb-88a6-1a953ebc44a7" Key="MF" Value="" />
+          <keyValuePair id="9cd17b2d-6d35-4cca-8ac0-2e12c06475a3" Key="FM" Value="" />
+          <keyValuePair id="a85771bc-e30c-441d-a528-903da963eee4" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="b46f8f5b-b6bc-4e04-8276-c814985eb46f" StringID="CM_News_ReverseFixture_UserAway_EasyWin_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="354e99b1-1011-42f9-9476-3e31fca822f5">
+          <stringArgument id="376ac065-0bb0-430e-ad78-fc24ca4a3002" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="72f2db0a-d393-42c2-bc80-97d0590515d1" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="d15ec358-c849-4ea6-bf14-c5aa2c56e6b2" Value="SaveData:OpponentGoals" Format="0" />
+          <stringArgument id="94a9f5ba-aa75-4a5a-97a6-dac9ab3046ee" Value="Model:Global.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="80398508-4f67-4730-b47f-d32b17edd993">
+          <keyValuePair id="7457bd41-50eb-4d2a-8145-c22bb990390c" Key="M" Value="It could almost be described as a walk in the park for %4s as last time out they strolled to a %2s-%3s victory against %1s who will be looking for a better performance. " />
+          <keyValuePair id="2e04ab60-af8a-437a-8687-d57ab3e9f34b" Key="F" Value="" />
+          <keyValuePair id="61f06e34-7268-4ce5-9b08-c07737b797ed" Key="MM" Value="" />
+          <keyValuePair id="6226d3e2-bd3e-458d-b02a-d4093604d4bd" Key="MF" Value="" />
+          <keyValuePair id="859cfe8d-deaf-4d04-af16-6b5c69e00a48" Key="FM" Value="" />
+          <keyValuePair id="17b1ed41-1f50-4399-83cf-af56571776c1" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="1338c6ac-aa1b-4c9d-9c52-2d40a1313f07">
+        <sceneParameter id="4ab8728f-49de-4429-8559-bae6f33bb9a0" Parameter="TeamId_1" Value="SaveData:FirstMatchup" />
+        <sceneParameter id="64b393cc-51fe-4d6e-975d-fe08f61bd270" Parameter="TeamId_2" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="ec471d12-b492-4444-a69b-ece2673ed7c8" X="-3440" Y="-8120" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="pitch">
+      <stringWithArgsTitle id="f40a0219-1d6a-4b8f-a039-6951ffab5213" StringID="CM_News_ReverseFixture_UserHome_EasyLoss_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="8eb09d3c-af60-48da-bcb5-3dc64c3fcaea">
+          <stringArgument id="08ba8148-18e5-4a78-aee2-92ac4e393254" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="5541ba45-21c2-4649-8481-d3a2f715cfd8" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="4d32ec3d-d923-4611-baed-c6873bb0220f">
+          <keyValuePair id="ec4443c2-db92-4d83-97fd-77016ac95879" Key="M" Value="%1s Need To But A Bigger Fight Against %2s" />
+          <keyValuePair id="3f90db9c-fe13-4021-b940-67f09ceeab12" Key="F" Value="" />
+          <keyValuePair id="be09451b-a515-4e7f-92e8-ef5a56b9ba85" Key="MM" Value="" />
+          <keyValuePair id="6adb9122-f31d-40d0-bcc8-49da0bbd0799" Key="MF" Value="" />
+          <keyValuePair id="2606160b-55af-46f9-a915-1d88832359f6" Key="FM" Value="" />
+          <keyValuePair id="ab8ec1bc-c3fe-43a3-a43e-57c091ae8336" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="eb33ca7a-51a8-4b2c-ae99-446bac8c8753" StringID="CM_News_ReverseFixture_UserHome_EasyLoss_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="452b5346-e1ce-487c-9747-4831af0d7a0f">
+          <stringArgument id="cbf50dcc-7c68-459b-80f0-ecc1d617a83a" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="d3f4ba7a-1b9f-491f-b085-f5fafaf9cdf0" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="1e81ee6e-4c46-47dc-8760-f6ce3034342f" Value="SaveData:OpponentGoals" Format="0" />
+          <stringArgument id="063d12c8-e493-4085-a791-2d2af076e9cc" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="d95d63cb-c452-4a5f-84f6-5c6e7fe65d4d" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="e5e76fee-a87d-4c06-bc62-51131466e7c1">
+          <keyValuePair id="8293b281-3ac5-401d-89f1-01fd92c037ad" Key="M" Value="%1s will be expecting another easy victory after the %3s-%4s win over %2s in their last encounter while %5s will be looking for his lads to put up a bigger fight than then." />
+          <keyValuePair id="b3bb03e1-0747-4875-95d2-7cf856a35616" Key="F" Value="" />
+          <keyValuePair id="2ae9049f-bb4e-4c0f-a510-d534c52cc673" Key="MM" Value="" />
+          <keyValuePair id="a683475b-5c6f-44be-a872-f687252bedfe" Key="MF" Value="" />
+          <keyValuePair id="8c92600b-e117-4686-bd7c-7c940564f7e3" Key="FM" Value="" />
+          <keyValuePair id="97845cc4-5840-4aeb-b1aa-ef9865eb492d" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="182c8b75-2bf1-4551-bd3a-14c588ac7c35">
+        <sceneParameter id="d49fdb3a-aa8e-45c9-8fe1-262d78bbc865" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+        <sceneParameter id="6dbbe92a-e172-4b70-8395-71c2d5782eef" Parameter="TeamId_2" Value="SaveData:FirstMatchup" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="2d4f748b-b200-4085-ba18-1735842e8a58" X="-3440" Y="-8600" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="fans">
+      <stringWithArgsTitle id="5352673e-5507-40fa-9714-d8d9ed10486c" StringID="CM_News_ReverseFixture_UserAway_ThrillingLoss_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="71e700e3-a85d-4d36-8056-96205a6df6f8">
+          <stringArgument id="b453ba09-d0a0-4e2b-9fea-2e8c9eea9884" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="3c6d9a92-1494-4497-8572-ed1138598f44" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="64aa90c8-40bf-4118-b096-60b4b2ef4c9e">
+          <keyValuePair id="d6309467-89c7-4d6e-a911-fb5f09498982" Key="M" Value="Exciting Matchup Between %1s &amp; %2s" />
+          <keyValuePair id="7435f677-be78-4e42-823c-2d692d1d529c" Key="F" Value="" />
+          <keyValuePair id="56d922fc-b7e2-4478-b877-f4af7c5940cc" Key="MM" Value="" />
+          <keyValuePair id="3fb7a66d-3dc4-4dc1-90af-09cf8b53b65f" Key="MF" Value="" />
+          <keyValuePair id="9126c61d-3c10-4741-8c6c-c0cd4769e52d" Key="FM" Value="" />
+          <keyValuePair id="28d6ebcb-ea8c-465b-b081-160a3f7c2c75" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="9c7d2a96-129d-4b53-a4f0-a9354fae2765" StringID="CM_News_ReverseFixture_UserAway_ThrillingLoss_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="e862350f-a021-4947-a990-057554316495">
+          <stringArgument id="c58392dc-66fc-4d14-bce2-984bf189a1c4" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="d5bfdf42-9dab-4754-8078-4f9ba497ebb1" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="46bf5f9c-bb83-4c42-8ec9-b878aa035f19" Value="SaveData:OpponentGoals" Format="0" />
+          <stringArgument id="77596e15-8ebd-46ed-be03-fe03527d547f" Value="Model:Global.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="429f4517-f96b-41c7-9850-09eb7d8ae875">
+          <keyValuePair id="c32f61f4-2499-4e34-8bab-a8ae64fc2002" Key="M" Value="Fans of both teams should be excited to see today's matchup after the cracking match that saw %1s come away with a narrow %3s - %2s victory over %4s." />
+          <keyValuePair id="dbfebdbe-0975-4e84-99f6-2404788442e9" Key="F" Value="" />
+          <keyValuePair id="94f4b98d-68f6-418a-b2a2-733b09ba9946" Key="MM" Value="" />
+          <keyValuePair id="bb7fb8a0-2226-484e-bdd9-b5f7b50eef57" Key="MF" Value="" />
+          <keyValuePair id="296307a8-1aa9-4539-8e0a-024ba307424b" Key="FM" Value="" />
+          <keyValuePair id="b5cfc1d4-3fdf-40ac-8c05-f5036117d810" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="4e830e0d-b6b4-48a8-9532-9d2077899650">
+        <sceneParameter id="78dbdeb6-c58a-4b8c-9654-9118111b939e" Parameter="TeamId_1" Value="SaveData:FirstMatchup" />
+        <sceneParameter id="f1bebce9-b703-44b5-a1c6-feb8eceea9e5" Parameter="TeamId_2" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="6b68f4ca-38c4-47e3-b5b0-4373baba7645" X="-3440" Y="-8440" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="suit">
+      <stringWithArgsTitle id="cf0940b6-f2c5-4803-8627-1031d6db57fe" StringID="CM_News_ReverseFixture_UserHome_ThrillingLoss_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="a98b0121-1046-4d77-b9cb-35c0c4aca014">
+          <stringArgument id="ab2d078d-fcce-4ed5-b26c-9e5fa6adb7b3" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="805d1547-3267-427f-b004-118e3c2ce507" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="7f4bbbfe-7a59-4c95-98d0-815b95f5ad99">
+          <keyValuePair id="f0838fa2-7bfb-41d9-86c0-cb1e38b7f131" Key="M" Value="%1s Hoping To Outplay %2s" />
+          <keyValuePair id="0dc06f71-1021-4eff-940e-211dcd135d07" Key="F" Value="" />
+          <keyValuePair id="64752580-b1f5-4db6-87ee-832308acb369" Key="MM" Value="" />
+          <keyValuePair id="9f10b29b-4252-4452-9762-36a6815eb82b" Key="MF" Value="" />
+          <keyValuePair id="ba750c96-041b-4912-9f83-c6c6318c9900" Key="FM" Value="" />
+          <keyValuePair id="9e17577d-0551-4868-9b10-d9b152913256" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="a94b17d9-c10a-41b6-bebc-7edf44fd8225" StringID="CM_News_ReverseFixture_UserHome_ThrillingLoss_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="1a0056e8-17ad-444e-811f-dcb7e520e9d3">
+          <stringArgument id="db98cec4-7d29-43f2-b09b-305d4b9be368" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="b6df4cea-68da-48fd-9e3b-0853ac0574ab" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="e4907af4-a130-4e7d-9cac-3ebe198e40a5" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="a411f2ea-7fa8-4b7e-86c3-7786390a51b5">
+          <keyValuePair id="9ccc12d4-d9da-4945-bc85-4e3ee338543f" Key="M" Value="%2s manager %3s will be hoping to outplay %1s in today's encounter after a narrow loss the last time the teams met." />
+          <keyValuePair id="cf4c43fb-01ca-4fee-b678-9080bda3b7a3" Key="F" Value="" />
+          <keyValuePair id="156fdfad-8ad6-408c-8a7d-1ec58aefd9f4" Key="MM" Value="" />
+          <keyValuePair id="01f17e82-49a5-4ae7-8efc-4c61576cdd04" Key="MF" Value="" />
+          <keyValuePair id="4a54e32d-f6c0-4e2d-8e73-ba93498372f3" Key="FM" Value="" />
+          <keyValuePair id="c6c2844a-84f6-4890-950a-9a9993de39df" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="32f96bf1-cc5c-491e-a740-cffd663d879a">
+        <sceneParameter id="a1783536-c5e7-4e2d-837c-1ae9ba091a28" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+        <sceneParameter id="ce6d3677-84e3-4ed7-b0d4-ad20ed9cf198" Parameter="TeamId_2" Value="SaveData:FirstMatchup" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="f83228aa-415c-40f1-b48a-93f24a4ad8f0" X="-3440" Y="-8280" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="stad_f">
+      <stringWithArgsTitle id="2b3aacac-204b-46fe-b6eb-222224a72e3e" StringID="CM_News_ReverseFixture_UserAway_EasyLoss_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="312e8aee-1391-4626-b90a-d5f7d0aedb73">
+          <stringArgument id="020deb4e-b17b-4d76-8b49-ac79e78d597d" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="1afc1d36-5c09-4a21-92f2-2a9620200021" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="a7d80c4f-423d-4f84-8d32-837f99611750">
+          <keyValuePair id="657651b4-7827-412e-8785-eaae1967e644" Key="M" Value="%2s Looking To Provide More Of A Challenge For %1s" />
+          <keyValuePair id="a9c3de2f-dc31-4055-a5da-7beaf24141a7" Key="F" Value="" />
+          <keyValuePair id="ca2b6f77-5f3f-4bbf-82e5-d55edcbecd18" Key="MM" Value="" />
+          <keyValuePair id="6e355b0d-8e49-4423-86b6-23f955094313" Key="MF" Value="" />
+          <keyValuePair id="f55400c5-85ce-4e37-a0f1-167a2f3081d2" Key="FM" Value="" />
+          <keyValuePair id="ffe4dd3a-8b01-4818-a052-422d2a48cf9a" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="fed2066a-9f77-45af-a17f-1325862fd292" StringID="CM_News_ReverseFixture_UserAway_EasyLoss_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="33989e8c-e926-49ea-ac54-c865497e211b">
+          <stringArgument id="5eb41744-2a1a-4638-9e43-0e569654f351" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="505b1ef5-f1bc-460f-9129-2e121075c8d2" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="6eca68ec-d672-4d34-a3f7-11abb6ec6b57" Value="SaveData:OpponentGoals" Format="0" />
+          <stringArgument id="691b1bf0-8d2f-4a0b-8dd6-f8ab52751d06" Value="Model:Global.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="d8890120-d737-48bb-bbb5-704b99c49e62">
+          <keyValuePair id="f8102f42-92c8-4324-8e18-f2254eb697db" Key="M" Value="%4s fans will be hoping their team can provide more of a challenge for their opposition today after giving up an easy %3s-%2s victory to %1s earlier in the year." />
+          <keyValuePair id="ca64b6b7-9fe5-4008-a718-b8b6a45070ce" Key="F" Value="" />
+          <keyValuePair id="18f9cc03-2146-4f34-b944-0f5572870c45" Key="MM" Value="" />
+          <keyValuePair id="b67d7a5b-87a9-4c25-ad44-d4d8dfd0250d" Key="MF" Value="" />
+          <keyValuePair id="af0fa073-85b7-482a-aa6b-035536e17cfd" Key="FM" Value="" />
+          <keyValuePair id="628b837c-0ebd-4fcd-9126-b74749e4360a" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="8cab014e-bc36-415f-8fbc-8a831433c96f">
+        <sceneParameter id="72e6504b-55e2-41f8-9269-ae6a3178cb10" Parameter="TeamId_1" Value="SaveData:FirstMatchup" />
+        <sceneParameter id="5fa85e49-a364-4b2f-9a96-f0cc010b7328" Parameter="TeamId_2" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="b70fc354-f665-4a2b-af45-8d7c9593f947" X="-3440" Y="-8760" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="stad_e">
+      <stringWithArgsTitle id="f1072f22-8d20-4f24-96dd-a872b58045ec" StringID="CM_News_ReverseFixture_UserHome_ThrashingLoss_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="3ec71612-0865-4814-819f-57fe7b44df5c">
+          <stringArgument id="236fc238-1c0b-4e32-b5f7-a8548c6281ea" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="e6d808c1-9fa5-47b4-b53e-086cdf167921" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="870790ff-aa49-4176-b8d7-9b0f3fbb437b">
+          <keyValuePair id="4ebd7f72-1227-4522-9d69-77743bf6d0a2" Key="M" Value="%1s Aims To Taste Victory Against %2s" />
+          <keyValuePair id="1ad63b28-7c18-4b14-9058-c42e41ef8a20" Key="F" Value="" />
+          <keyValuePair id="3ae27078-e671-4341-a599-95ee535638a2" Key="MM" Value="" />
+          <keyValuePair id="56c2ab94-5896-4453-93d9-a6946f911f89" Key="MF" Value="" />
+          <keyValuePair id="f816a872-7906-42dd-8a89-b67e03735b63" Key="FM" Value="" />
+          <keyValuePair id="ee9fc3b2-f5a9-425d-bb4b-e9996bf8a4a1" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="2b2a49ec-94cf-4ab5-9ad3-47ea7bca58f9" StringID="CM_News_ReverseFixture_UserHome_ThrashingLoss_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="2b5772a0-d2a0-4a9f-8be1-d26f7e2ff59b">
+          <stringArgument id="85c81759-9dcd-434a-a50d-7a11e98da176" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="240ddac0-4ed4-4c4f-8b97-2fd8010cf317" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="9b3a7037-5c89-427c-b8bc-9cc79f162189" Value="SaveData:OpponentGoals" Format="0" />
+          <stringArgument id="1491814b-3b92-43ac-b6e4-4c67a63a5ece" Value="SaveData:UserGoals" Format="0" />
+        </stringArguments>
+        <stringContent id="a3beccfe-fac1-4535-b223-fd01ca64e649">
+          <keyValuePair id="0a99ba7e-050c-4453-9f22-3a4976066dec" Key="M" Value="%2s fans no doubt still have the taste of defeat in their mouths from the %3s - %4s loss to %1s and will be hoping to replace it with that of victory in todays match." />
+          <keyValuePair id="997d68cd-3d1b-40c5-b663-7a0abb9d29cd" Key="F" Value="" />
+          <keyValuePair id="31d690d5-a62f-4644-92c6-0ea943e7a860" Key="MM" Value="" />
+          <keyValuePair id="d316033a-8fb0-47ae-91bf-672319c48505" Key="MF" Value="" />
+          <keyValuePair id="50a39ea6-ae06-4f8d-bac4-ce41a3aab975" Key="FM" Value="" />
+          <keyValuePair id="33f43665-835a-4788-95e0-acfa5e96a4e2" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="66851ec4-80bc-49b3-baaf-b39296141cb5">
+        <sceneParameter id="6cc92c69-b0dd-4b1e-890e-d1819855c4c1" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+        <sceneParameter id="cca9e978-a992-4f62-b7d8-3741c499c5f0" Parameter="TeamId_2" Value="SaveData:FirstMatchup" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="c23e8c7d-3d68-4a9a-a922-959a1d1a123d" X="-3440" Y="-8920" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="suit">
+      <stringWithArgsTitle id="97be47a2-f05b-4730-915a-9f91151ce5fb" StringID="CM_News_ReverseFixture_UserAway_ThrashingLoss_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="19d06cf9-7370-4af4-8b83-ef9284a59543">
+          <stringArgument id="c33c4714-3cc1-4809-ab0b-a2b4fe0acb1b" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="e7999a99-4873-4325-b66b-1e635a78256a" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="92386fa8-d755-4fbd-a820-03935639c37d">
+          <keyValuePair id="6bd68502-2791-43d7-9489-55f58da1d150" Key="M" Value="%2s Eager to Wash Away the Memory of Defeat Against %1s" />
+          <keyValuePair id="cab5517f-c5ed-4c2f-be27-e56c29d95eb8" Key="F" Value="" />
+          <keyValuePair id="24a39578-08e8-4d43-8a05-f4461c32affc" Key="MM" Value="" />
+          <keyValuePair id="e7667356-3d36-4cdb-9771-c76872d9dfc6" Key="MF" Value="" />
+          <keyValuePair id="553a5d02-8c05-46c8-9ff3-0ae41dc49d3c" Key="FM" Value="" />
+          <keyValuePair id="f3559657-05fc-4cef-9b15-55c834c16cd0" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="a256e64d-7d28-457e-b15f-810daf179e21" StringID="CM_News_ReverseFixture_UserAway_ThrashingLoss_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="2e1309b5-9bb4-4701-9c6b-181ed7ac0bbe">
+          <stringArgument id="bb651bf8-526c-4d09-9256-9ba7d6ca94b8" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="1287a732-47ee-4f7b-9b04-1516067f5a56" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="ea7f4ebf-5277-4a75-8b61-a938eba21d5a" Value="SaveData:OpponentGoals" Format="0" />
+          <stringArgument id="af3ca608-1a62-49ed-9fa8-a42e3526ec80" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="502ec5ed-100b-40b8-8b65-ebccc6ffbed5" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="ca20c299-add7-4c75-bad2-562869497537">
+          <keyValuePair id="b6e1de0e-86c5-4edc-aa1b-7a26ba5a776b" Key="M" Value="%5s will be eager to wash away the memory of defeat from the minds of %4s fans after their %3s - %2s defeat at the hands of %1s in their last encounter." />
+          <keyValuePair id="7adb657c-af04-4ab3-82d7-ab6a6a6157bb" Key="F" Value="" />
+          <keyValuePair id="c9292e9d-7214-4d3f-b4a1-21e76f7a2245" Key="MM" Value="" />
+          <keyValuePair id="fa4cbd55-acaa-414d-8b3e-aacbde510c3a" Key="MF" Value="" />
+          <keyValuePair id="3a83eeb3-38c3-4b5a-a9ea-7cd852adf0bc" Key="FM" Value="" />
+          <keyValuePair id="07e66d50-ab95-4d3c-a50e-3b928a4d542b" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="af849f73-e0b5-4d5a-b010-9ea376d1e103">
+        <sceneParameter id="61d7e4b5-63e4-43d8-b9c6-95295f2f1d50" Parameter="TeamId_1" Value="SaveData:FirstMatchup" />
+        <sceneParameter id="d6e3f2a4-dcea-49a7-80e6-59be66c35318" Parameter="TeamId_2" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="71870ed0-92d7-4ffe-8c0b-8a2e46877003" X="-3880" Y="-9440" NodeType="Condition" NodeName="UserAway">
+      <conditions id="1e5de62e-f077-417a-a26f-68505cf165f8">
+        <condition id="a94f513c-a2e0-4184-b3be-00375c40a9e7" VariableId="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Comparison="EQ" Value="SaveData:FirstMatchup" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="6454102b-60bb-4bb2-aad5-b883312a1e72" X="-3440" Y="-9440" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="pitch">
+      <stringWithArgsTitle id="09e15a52-002d-4f6c-9caa-b40200dbefcf" StringID="CM_News_ReverseFixture_UserAway_Win_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="3bab4fef-c92b-4a8c-b224-846685de5299">
+          <stringArgument id="a1197dd0-30d5-40e2-97ce-c9984c06fae5" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="84422d33-879d-4147-a5cb-6a219c7c4127" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="63f18698-e7ef-429d-8c2f-34e7e6d0da0e">
+          <keyValuePair id="8d9c2c6b-11bc-4042-b21a-520995ba8f13" Key="M" Value="%2s Hope to See a Repeat Victory Against %1s" />
+          <keyValuePair id="68772767-4bac-4963-99e7-064d4ad76216" Key="F" Value="" />
+          <keyValuePair id="f8cfa1bb-ffff-4ce3-9917-2dd05cf50aa3" Key="MM" Value="" />
+          <keyValuePair id="d84e2713-e283-4b8d-a25b-9dd2f71b06a0" Key="MF" Value="" />
+          <keyValuePair id="3d876d1f-e285-4494-8ee8-2a782683fc74" Key="FM" Value="" />
+          <keyValuePair id="5ce24388-bdf4-467d-90cb-61eae02d6a56" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="0f97b5a1-ea3e-4363-895b-0aee3686aa58" StringID="CM_News_ReverseFixture_UserAway_Win_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="e7e35f87-800b-447f-b6ab-ec9776115488">
+          <stringArgument id="0e6a428d-e3b0-4315-bb54-463f9a4178dd" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="39a0f250-4ea7-4cc8-82e3-600392236006" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="503bbe91-4d73-4f0d-aae0-81d1540a1928" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="1db0e486-6012-4271-a91f-76f9a8abb831">
+          <keyValuePair id="82a572e5-a806-4052-addc-83620f4de15e" Key="M" Value="%3s will be hoping to see a repeat of %2s's last encounter with %1s that ended in victory for his side." />
+          <keyValuePair id="3e2e1197-bdac-4cf2-ba97-09b64f9041e1" Key="F" Value="" />
+          <keyValuePair id="5aebbb2f-1a8b-4b97-8bf3-7a9cf0e99f0a" Key="MM" Value="" />
+          <keyValuePair id="7a380011-f6c0-4ae7-95e1-fab27690c329" Key="MF" Value="" />
+          <keyValuePair id="f1f38963-e435-479c-89a2-1a1f722c5844" Key="FM" Value="" />
+          <keyValuePair id="c416a42a-5c50-47ba-b1b3-d0a046276ea8" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="109af2f6-dcc7-4fd5-aeec-dbfe86f02563">
+        <sceneParameter id="1534e176-0038-420d-a107-0345ae6df1b7" Parameter="TeamId_1" Value="SaveData:FirstMatchup" />
+        <sceneParameter id="83414bba-5fd4-4479-b62b-ef55f73a1f8b" Parameter="TeamId_2" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="0c451c22-921e-447e-a5d5-6b8b2363f005" X="-3440" Y="-9200" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="boot">
+      <stringWithArgsTitle id="a9ee6846-fd8b-4f54-9e4b-2c127eed87a5" StringID="CM_News_ReverseFixture_UserHome_Win_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="83b8254d-f150-4537-8fd9-884ac014dfab">
+          <stringArgument id="c7f4c7c3-6955-4ad8-b563-be760851de96" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="04903bf0-01cd-42a8-9878-bdea88c43758">
+          <keyValuePair id="b54e3452-f6d6-4b87-bfee-e4e0f702e5c9" Key="M" Value="%1s Hope to Claim the Victory this Time" />
+          <keyValuePair id="4dccd224-bf6d-4b4f-a748-b173ea305bc8" Key="F" Value="" />
+          <keyValuePair id="b6517738-017c-43ea-bef0-b1cfd0d500ff" Key="MM" Value="" />
+          <keyValuePair id="962519a3-c160-4eaf-8efd-2e127c21ec72" Key="MF" Value="" />
+          <keyValuePair id="e2a1535e-8cba-4e52-a743-7ce253dc2c3c" Key="FM" Value="" />
+          <keyValuePair id="fdcca72d-2ef5-4529-81f2-734926dc80d1" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="33f79c8a-022a-4db1-b8fa-1b951c6261bd" StringID="CM_News_ReverseFixture_UserHome_Win_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="bb35581d-f422-4d76-a2b3-e18db6e6e0f5">
+          <stringArgument id="2f6d82f3-a92d-4787-aa24-f5f729ae6fef" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="459d8466-93e3-4cb3-8553-901222a84672" Value="Model:Global.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="b10afa01-2de9-4df3-90dd-3698dab4f596">
+          <keyValuePair id="71f4f960-31bf-425b-b526-cbc356bcf49f" Key="M" Value="The reverse fixture went the way of %2s and %1s will be hoping to claim the victory this time." />
+          <keyValuePair id="9dc6ec1a-9858-40c7-a5c0-9926e27204ee" Key="F" Value="" />
+          <keyValuePair id="0547f1a9-cd27-403a-8f99-00f4e73b168c" Key="MM" Value="" />
+          <keyValuePair id="91d04115-8cac-48a8-acb1-f6fa99fbda6a" Key="MF" Value="" />
+          <keyValuePair id="14ea910a-6fbb-4c5a-90bb-f85d9e3cc81a" Key="FM" Value="" />
+          <keyValuePair id="fcb4cd9b-4353-402d-8481-5efd70761336" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="2cd349dc-35b6-4cc2-a0aa-dc0a03744c51">
+        <sceneParameter id="30e69ea6-d1ac-44fa-b146-ec08a0fa58eb" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+        <sceneParameter id="cfc1cd01-b42c-4c5e-bfc7-08132af5f703" Parameter="TeamId_2" Value="SaveData:FirstMatchup" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="750446da-f6f2-411c-91c2-7803a87fa449" X="-3440" Y="-7800" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="news">
+      <stringWithArgsTitle id="d120e76c-39b1-4ad4-9c3c-5db9b989a26f" StringID="CM_News_ReverseFixture_UserHome_Loss_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="911513e7-7493-4802-843a-0c9a672b4a6f">
+          <stringArgument id="fafc0ea5-b281-46bc-9dcb-4a926ebe6b36" Value="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Format="12" />
+          <stringArgument id="ffdda883-2916-47b1-a2e6-9a978ad33bd8" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="e80f4864-a891-4cee-b4a6-46a5279921b3">
+          <keyValuePair id="7c8a3c0e-2134-48b7-ae28-8f83f27e98b7" Key="M" Value="%1s Hoping for a Reversal of Fortune Against %2s" />
+          <keyValuePair id="044fa3f0-8264-4a62-a3b8-f5e75d7d3a03" Key="F" Value="" />
+          <keyValuePair id="fea64fd3-2d93-4a85-ad1f-82c2d545003e" Key="MM" Value="" />
+          <keyValuePair id="fdb25e43-1694-4531-a71d-c23195e716de" Key="MF" Value="" />
+          <keyValuePair id="2d12b5a4-374d-47ca-9308-f8fcfd23cf9f" Key="FM" Value="" />
+          <keyValuePair id="0a03efac-be20-4eb6-8409-3647f9e05ecd" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="4497af65-1369-4a62-9387-747d8aa51af6" StringID="CM_News_ReverseFixture_UserHome_Loss_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="a68c190e-45d3-4083-b883-4b6cb84a321a">
+          <stringArgument id="4153873e-cc3d-4b3b-97fd-86be36c0f157" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="de6b3c8e-eb8f-4455-bc45-e8afd3934380" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="b951127f-e8fb-43b9-9134-ade713a15363" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="cfe237a6-018a-4112-bd61-6949131b3f0b">
+          <keyValuePair id="aa69d1d4-cd27-4672-b62f-8e547e7cedea" Key="M" Value="It was %1s that came away with the win in the last encounter between the two teams leaving %3s and fans of %2s hoping for a reversal of fortune." />
+          <keyValuePair id="625b3de5-d6eb-4015-b197-1911973afa23" Key="F" Value="" />
+          <keyValuePair id="2e572a5e-a3ce-484e-82bb-08e8acda0739" Key="MM" Value="" />
+          <keyValuePair id="028d3665-7c91-45b0-ba42-03c8d1f94204" Key="MF" Value="" />
+          <keyValuePair id="310b5af1-debe-464f-b741-3cf34570121b" Key="FM" Value="" />
+          <keyValuePair id="9166f36f-155d-405d-ac9b-270eb6bde89f" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="64f3d4a4-ff4d-40b9-8d83-d3aedabbeb70">
+        <sceneParameter id="4993fd40-d10e-4213-a3d7-886da67a9369" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+        <sceneParameter id="9fac8ca3-2ac9-4331-b227-2904a131821a" Parameter="TeamId_2" Value="SaveData:FirstMatchup" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="954633ce-56dc-440b-b24e-9667a813631f" X="-3880" Y="-7960" NodeType="Condition" NodeName="UserAway">
+      <conditions id="86ccfc07-2fe4-4162-8027-84de95db60c4">
+        <condition id="a2f09906-5b4c-453f-b69c-fbc3dff1a5fd" VariableId="Model:UpcomingUserMatch.NextMatchData.HomeTeamId" Comparison="EQ" Value="SaveData:FirstMatchup" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="e5ce050b-893c-42bb-8598-eab3b994bfdd" X="-3440" Y="-7960" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="12" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="fans">
+      <stringWithArgsTitle id="beb2e089-bb53-4c5a-aed2-2b50ce408f93" StringID="CM_News_ReverseFixture_UserAway_Loss_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="1e593102-3393-4375-b78c-44baf2d1ab63">
+          <stringArgument id="9adf4f68-c4d1-4f98-bfd8-f8b0b2aefcff" Value="Model:UpcomingUserMatch.NextMatchData.AwayTeamId" Format="12" />
+        </stringArguments>
+        <stringContent id="550d98d0-db52-4a96-96b4-971df35fc7b5">
+          <keyValuePair id="dfe17d7e-61bf-441c-94a6-59577f22c581" Key="M" Value="%1s Fans Hope Result Will Go In Their Favor" />
+          <keyValuePair id="273e2e60-35ab-4997-8979-84518361f72d" Key="F" Value="" />
+          <keyValuePair id="48a2a467-2da9-4a56-8ed4-eb434fff3902" Key="MM" Value="" />
+          <keyValuePair id="ab9ab303-56d9-41fe-b23e-df167d62a550" Key="MF" Value="" />
+          <keyValuePair id="619f1770-f376-4248-91e7-87970732905f" Key="FM" Value="" />
+          <keyValuePair id="519fbb53-3dbd-4d9f-81a8-63e61af5d572" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="c3f805e4-31f4-4d0d-b0bd-2f087ec94f42" StringID="CM_News_ReverseFixture_UserAway_Loss_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="330d178a-3a53-4a1c-b22e-7f6dbd00cadd">
+          <stringArgument id="698b64d4-dbe8-4f53-a223-3720870678f7" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="598e1083-0bd9-485a-8c64-89dbd93c2bd3" Value="Model:Global.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="b79ac710-1f11-495a-abd5-dd5d3d4ad60b">
+          <keyValuePair id="3084a3ea-42b5-4432-bd35-0a0ba53524d8" Key="M" Value="Fans of %2s will be hoping the result will go in their favour after the loss to %1s earlier in the season." />
+          <keyValuePair id="65e9df81-c590-4172-abdc-d72510969f2e" Key="F" Value="" />
+          <keyValuePair id="ae499502-2ff3-4263-88ba-f8d33e04a64e" Key="MM" Value="" />
+          <keyValuePair id="9db2fd05-2688-4e50-bdaa-df7c93f41415" Key="MF" Value="" />
+          <keyValuePair id="7423dba9-a951-4929-ae03-7ad54ca21126" Key="FM" Value="" />
+          <keyValuePair id="25542a58-4623-4fa0-afb7-231b18dfcb16" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="bee2b668-9088-4a3a-bb51-e3166eaa056f">
+        <sceneParameter id="8fcbdf74-4f52-4a58-9de8-72a48b6adf22" Parameter="TeamId_1" Value="SaveData:FirstMatchup" />
+        <sceneParameter id="358e32df-a11a-4883-8c04-bbdc41df12a4" Parameter="TeamId_2" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="0497ec7d-b528-413d-9320-cb547458bdf6" X="-2040" Y="-9600" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="graph_d">
+      <stringWithArgsTitle id="d31afc84-0fb3-454e-9592-196f72f1bad6" StringID="CM_News_ReverseFixture_WonLast_Lost_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="e491a392-169e-4127-893c-571a869ed06f">
+          <stringArgument id="1e120eeb-30ff-4b53-9e30-25c0f3ecff0b" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="daf92350-80cf-4767-afca-4fabca7cac15" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="fc29d657-94e0-4f5b-8568-142e2a0b11b2">
+          <keyValuePair id="0dc447c4-6e36-4e0f-9792-2f2894615610" Key="M" Value="%1s Loss To %2s a Hard Pill to Swallow" />
+          <keyValuePair id="7c114d47-b68b-4df7-b06d-f4dcb89b62b3" Key="F" Value="" />
+          <keyValuePair id="778fd2fa-6524-4ee4-bb83-8e045d477473" Key="MM" Value="" />
+          <keyValuePair id="bac63770-7609-4dc4-a4c7-c06d904b5617" Key="MF" Value="" />
+          <keyValuePair id="56d68f89-f996-4dc4-8ae0-8058e5ef8ae0" Key="FM" Value="" />
+          <keyValuePair id="a018eb8e-677f-4479-b21d-a443de831d9d" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="ab4fee1c-275c-4ef4-85a4-bbd0db5524ed" StringID="CM_News_ReverseFixture_WonLast_Lost_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="dacc4c0c-981b-48eb-8067-0d05054db605">
+          <stringArgument id="5073febd-e638-4b7f-8ba2-3abf259c229f" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="0d503ddb-c854-498c-b8f7-b99c6d3b12b9" Value="Model:Global.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="49d7d5b2-8d94-4857-9c4f-f6f798cf6271">
+          <keyValuePair id="f426b9e5-9715-4748-bb39-6f9bd42477f2" Key="M" Value="Having won the first encounter in the league earlier this season, %2s will feel a bit disappointed the couldn't repeat that performance again today and chalk up another win over %1s." />
+          <keyValuePair id="5341d293-f7e7-4b28-97ec-b941550d4122" Key="F" Value="Having drawn earlier in the year %1s was in a reflective mood following her team's defeat in yesterday's match against %2s which some %3s fans argued should have gone their way instead." />
+          <keyValuePair id="ad2e52cd-5897-421d-9c04-73a999113a71" Key="MM" Value="" />
+          <keyValuePair id="a95574fc-1876-4687-aed0-814f2232c3fe" Key="MF" Value="" />
+          <keyValuePair id="aeb465a9-ae2b-4882-aa78-082b4a56acfe" Key="FM" Value="" />
+          <keyValuePair id="ac14a4ca-7d17-402f-926c-634bac54cb47" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="41fa051a-901e-4cd4-b59d-d35f3691942c">
+        <sceneParameter id="d89b3e6a-4681-45f6-ac8f-8b458870bb8e" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="ec44d3fa-65f6-4097-a347-4bff75f7ae9b" X="-2040" Y="-9760" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="stad_e">
+      <stringWithArgsTitle id="90495a8f-223f-4d08-9316-3ca1db2989a0" StringID="CM_News_ReverseFixture_WonLast_Draw_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="6fa2a6ad-3a09-4410-9d8d-0962097c5fe9">
+          <stringArgument id="ea145517-03e8-4d77-9738-22aa27d358ff" Value="Model:UserMatchCompleted.LastMatchData.HomeTeamId" Format="11" />
+          <stringArgument id="069825f8-c376-4ebe-8ae4-16c3c022a27c" Value="Model:UserMatchCompleted.LastMatchData.AwayTeamId" Format="11" />
+        </stringArguments>
+        <stringContent id="06b64fa7-1125-4cdc-b9bf-2861df23c5f6">
+          <keyValuePair id="0b387311-8836-4831-a079-1cc63a57fdd6" Key="M" Value="%1s Share Points With %2s" />
+          <keyValuePair id="ac7cb9a5-1154-49af-998d-78a54670637d" Key="F" Value="" />
+          <keyValuePair id="eee15ff3-cd4e-46c7-94f9-6219f9defcab" Key="MM" Value="" />
+          <keyValuePair id="06c4c11f-7dc4-470a-b1b7-c18076632ca9" Key="MF" Value="" />
+          <keyValuePair id="3e1c7b91-d26f-4804-92b0-dee7942ddaca" Key="FM" Value="" />
+          <keyValuePair id="dacfd8cd-4151-4cb6-9a75-3f6006e7c3b2" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="4feddb27-e8a2-44c8-b868-3b601a8c0764" StringID="CM_News_ReverseFixture_WonLast_Draw_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="dba73587-5dfe-48e1-a1b3-70ebbb23867a">
+          <stringArgument id="d148ce4e-af70-4bdd-ba02-003a589f83c7" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="807fa715-e8e3-4fa1-b6c1-e2c6072d2977" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="bc632407-5d3d-49aa-9b9a-03208f976340">
+          <keyValuePair id="84c0b95e-66fd-4065-96bf-5e89a9a2f233" Key="M" Value="%1s fans will be disappointed to see their team share points on this second encounter with %2s, a team they had managed to beat during their first encounter earlier in the year." />
+          <keyValuePair id="6bfc27a9-65c5-45ee-83cf-94571c7bbd2b" Key="F" Value="" />
+          <keyValuePair id="310af19e-6757-4318-9b75-556b654980d2" Key="MM" Value="" />
+          <keyValuePair id="35aa88d4-1fd3-4336-89e4-5f7df3b36210" Key="MF" Value="" />
+          <keyValuePair id="00a74e27-c2b5-42b7-88c2-d6fb30a1ffb8" Key="FM" Value="" />
+          <keyValuePair id="83e3c14c-9028-4886-ac1e-7f3621977785" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="f78c4ef2-cf86-4876-819f-b88ef027f516">
+        <sceneParameter id="f6f349b2-6115-4150-acd1-ce3196382ba8" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="00bdd7ac-8d50-4805-931d-9c4f9afa02a6" X="-2040" Y="-9920" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="8" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="fans">
+      <stringWithArgsTitle id="244d3055-e071-4322-a027-5508aa0e8798" StringID="CM_News_ReverseFixture_WonLast_Won_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="2b5650ba-b469-46be-9aec-0f33663eaf01">
+          <stringArgument id="68670e02-a70e-4b57-a16b-bf0fbf71bb06" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="2cff14e1-4796-46cf-a2ac-8cec253356c8" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="5739c086-0d6b-4b01-b071-b049b7c43495">
+          <keyValuePair id="3abdfc26-f073-4756-b000-bb497931e26e" Key="M" Value="%1s Triump Over %2s Yet Again" />
+          <keyValuePair id="21145746-e15d-4e9f-b0bd-5d98c0a1f1fa" Key="F" Value="" />
+          <keyValuePair id="550c1be5-e73c-492e-8090-a8cf7ecd255b" Key="MM" Value="" />
+          <keyValuePair id="af63ed2b-5b20-441e-8193-c448e63cea70" Key="MF" Value="" />
+          <keyValuePair id="a9bb4a36-60db-40cb-966a-996338823ee6" Key="FM" Value="" />
+          <keyValuePair id="9602f571-11bf-434c-9aeb-fa5786e07c36" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="b2c7baae-3a8b-4ea5-828a-8f57d6fa9ff5" StringID="CM_News_ReverseFixture_WonLast_Won_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="f146eb82-2c59-496e-9b7c-6de8d93931fe">
+          <stringArgument id="0a01ab43-9e8c-461b-b2d7-607d5961e1e0" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="44431ef0-6b6f-40cd-ac14-838d64e7dfb1" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="146d9743-b988-4f37-bf9a-04c63b4abea4">
+          <keyValuePair id="2d7286ba-7a91-4988-be45-a781a6b549cf" Key="M" Value="This victory sees that %1s has completed the league double over %2s this season with this result and the victory earlier in the season." />
+          <keyValuePair id="f86f2493-3ddf-4835-a015-d8ce626efaba" Key="F" Value="" />
+          <keyValuePair id="0696f0c8-b23e-4087-a8ab-036748cc9026" Key="MM" Value="" />
+          <keyValuePair id="c1a28ba7-7943-4fcd-9f4e-37febcf15651" Key="MF" Value="" />
+          <keyValuePair id="bb20d9fc-7733-470b-9174-ca1e7796f209" Key="FM" Value="" />
+          <keyValuePair id="3aac1c1d-087f-433a-8eda-f4570093c05c" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="886fe5cd-b1c4-4073-ba93-bb8787c157b2">
+        <sceneParameter id="3c0d7a68-a140-457f-bbbd-2cd012a34ed5" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="2b0a35f5-91a4-4d62-848b-2a7efbc6e1ac" X="-2120" Y="-7960" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="press">
+      <stringWithArgsTitle id="92685e2c-a7e4-472d-86b9-e34c4dedecdc" StringID="CM_News_ReverseFixture_LostLast_Lost_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="f529a51f-6955-4cb7-bd4d-bc0d0c828532">
+          <stringArgument id="7061c4ef-db96-44d6-b917-6b53ccdd1e08" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="6beb458e-af9f-45bc-b932-8475e5649ed9" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="c3937ade-415d-4481-adba-266d59b24f7d">
+          <keyValuePair id="62697a32-6660-47b8-b839-35d6a82e2caf" Key="M" Value="%1s See Their Second Loss To %2s This Year" />
+          <keyValuePair id="1b1dbbbd-303f-496c-b150-a524df711a2f" Key="F" Value="" />
+          <keyValuePair id="47f17011-761c-4ad6-8166-fcb69e32e9a5" Key="MM" Value="" />
+          <keyValuePair id="e624a51a-da70-45d6-aaf2-02f369e051d5" Key="MF" Value="" />
+          <keyValuePair id="c965de8d-7d6d-4dec-8cfa-fc2ed1db4fbc" Key="FM" Value="" />
+          <keyValuePair id="0134fe0c-1d37-4f2a-aede-9aa1b3bec93e" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="99a39daf-5424-438d-b021-8223652491db" StringID="CM_News_ReverseFixture_LostLast_Lost_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="254efee6-ea2b-469b-8a29-29d7806589e0">
+          <stringArgument id="3a631e7b-fae0-4914-8944-50bf5571f63f" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="fffbf4e3-be43-4a19-abea-fad4c251e089" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="96fcbccd-16ff-4606-8dbe-d23359d5ed64" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="36a1e937-b6ac-480c-8f79-b476378b3b77">
+          <keyValuePair id="99399673-110a-458e-b76b-10f402d44cd4" Key="M" Value="With this win %2s see their second league loss to %1s this year. %3s was confident after the match: &quot;They're a good side, you know, but we beat them twice in the league this year and I just don't see them as a threat.&quot;" />
+          <keyValuePair id="ba46a4b8-6e65-4f45-b10f-a9a370dc3c29" Key="F" Value="Having drawn earlier in the year %1s was in a reflective mood following her team's defeat in yesterday's match against %2s which some %3s fans argued should have gone their way instead." />
+          <keyValuePair id="0112d968-454c-49b2-9f1a-2a72e484d056" Key="MM" Value="" />
+          <keyValuePair id="56bbd0b6-7f86-4a14-96fa-0860ff5e5e66" Key="MF" Value="" />
+          <keyValuePair id="e8d72d8f-c9d1-45a3-8e7b-e8118e22f6c7" Key="FM" Value="" />
+          <keyValuePair id="19825e1c-fb4e-43ff-911b-18f1037bcb91" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="4f520be0-4d36-4e49-9b03-529bb4959bff">
+        <sceneParameter id="1350f42d-7727-4e4c-990e-86eae47e5157" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="d0368f60-adaa-4f24-849b-75dbcb2ed77e" X="-2120" Y="-8120" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="cal">
+      <stringWithArgsTitle id="b8e74286-bdea-4ce6-a335-958d2c54ee66" StringID="CM_News_ReverseFixture_LostLast_Draw_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="e1201f6f-22f5-4eaf-ac48-c347bf42e702">
+          <stringArgument id="e572673c-f231-4a50-9e6a-2f78aeb18260" Value="Model:UserMatchCompleted.LastMatchData.HomeTeamId" Format="11" />
+          <stringArgument id="51c1b1aa-efde-480d-b251-727f9eb87c69" Value="Model:UserMatchCompleted.LastMatchData.AwayTeamId" Format="11" />
+        </stringArguments>
+        <stringContent id="9146c81b-05cb-4d48-8f73-08caa2683fcd">
+          <keyValuePair id="eac5a489-6ab2-4a7e-af93-a31c9c40eb5b" Key="M" Value="%1s Share Points With %2s" />
+          <keyValuePair id="06daf425-0bc1-4e56-844b-06728d8b39cd" Key="F" Value="" />
+          <keyValuePair id="0d8ca420-3fa6-4001-ab20-2e227959a6b5" Key="MM" Value="" />
+          <keyValuePair id="8e6f8363-2729-44cb-873d-9bd6bbc99024" Key="MF" Value="" />
+          <keyValuePair id="5840a524-a73d-42ee-9af8-41df06749e36" Key="FM" Value="" />
+          <keyValuePair id="7042ccc0-301a-455d-9fa2-d0a26f7275c5" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="38f96676-59d5-44d5-b635-b97f9dde9991" StringID="CM_News_ReverseFixture_LostLast_Draw_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="490e14e5-bf44-40c9-a5f7-5f1b2b11975d">
+          <stringArgument id="5c3ae9e8-5a41-412c-9d2d-5ebb869d84d9" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="66629c2d-efa3-4df3-9d04-b50e65d478e7" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="ac385bdc-5c7f-47ae-b542-b1f8601b29bc">
+          <keyValuePair id="7f51856c-1b17-47bd-a690-6f3fd949fd2f" Key="M" Value="Despite victory in the first encounter in the league this season, %2s will have to settle with sharing the spoils this time out with %1s." />
+          <keyValuePair id="710021b3-a9ff-49fe-8da1-4d28cc672055" Key="F" Value="" />
+          <keyValuePair id="6db7d251-8567-4068-a281-58d2aa103a1a" Key="MM" Value="" />
+          <keyValuePair id="2233ef91-a73f-41bf-8918-390cf078c357" Key="MF" Value="" />
+          <keyValuePair id="430ca36d-b852-44bf-bf43-c830187cc44e" Key="FM" Value="" />
+          <keyValuePair id="1eb0bc5d-65db-4c90-a7e4-3fff931bf1b5" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="f53d4042-8e72-4f72-becc-235b559fb980">
+        <sceneParameter id="362cbb61-da58-4b85-b0b6-210d3fd266a9" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="c410d9f7-14d7-41a2-be29-a186196c2fdf" X="-2120" Y="-8280" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="2" SceneId="8" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="stad_f">
+      <stringWithArgsTitle id="fefdb428-5c6b-4997-b5b8-3786f641e219" StringID="CM_News_ReverseFixture_LostLast_Won_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="2416d52f-2183-45b5-9bcf-aaab0d8cdf1c">
+          <stringArgument id="1e21dff7-60e9-4b08-938a-279b7c2b9deb" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="a351e9b4-a798-4a99-8c40-1d53632adf23" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="6df83fc1-8fca-4bba-93f5-e7655b71c992">
+          <keyValuePair id="5ac7381f-3027-400f-85e6-984420e3e884" Key="M" Value="%1s Triump Over %2s " />
+          <keyValuePair id="cf9578f0-29b4-4d03-b18e-67a99d223d44" Key="F" Value="" />
+          <keyValuePair id="9bb6e4b7-ab45-4a2a-88f3-4dc52b8c971d" Key="MM" Value="" />
+          <keyValuePair id="c30ad35f-d5f2-4948-a94e-3b4d1029fad4" Key="MF" Value="" />
+          <keyValuePair id="f4e694e6-fabb-4333-9a74-45d3f1a12527" Key="FM" Value="" />
+          <keyValuePair id="cddc36e4-a2a9-4411-8dcb-ada6235f8a8e" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="93ea16e9-793a-46d6-a5d3-4469dd905b14" StringID="CM_News_ReverseFixture_LostLast_Won_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="2beca641-cd45-4a84-8459-591b0c818538">
+          <stringArgument id="773cebfa-f0a5-46c8-980e-3445349f08fb" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="a56df83d-c6ae-4fff-94b3-ffb48eebeafd" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="e8581bd1-54a7-4188-b6fb-8f415b1f8c60">
+          <keyValuePair id="1f56895e-bd08-4342-866b-8503dda949ea" Key="M" Value="Fans of %1s will be excited by their team's victory over %2s, a team that had beaten them in their first league matchup earlier in the season." />
+          <keyValuePair id="2a4557e2-21a0-4bd7-a4df-c3c762043aee" Key="F" Value="" />
+          <keyValuePair id="07f18405-2f59-45db-b78b-e54ea1406b7f" Key="MM" Value="" />
+          <keyValuePair id="30cd4144-dce0-4936-a358-39a9bb72973f" Key="MF" Value="" />
+          <keyValuePair id="be215ef6-549a-4a0b-9463-47587f053e57" Key="FM" Value="" />
+          <keyValuePair id="a6256763-7716-4848-9eb7-ac015b9897a2" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="fdfa89b1-d3f8-4823-a449-9fc7161e478b">
+        <sceneParameter id="6a146116-3122-4dd1-b1ea-ee95f67508c0" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+  </nodes>
+  <groups id="424c42b1-f3eb-4ea7-9027-0254f6a29fe3" />
+  <connections id="afea46b3-32b3-4b97-9fad-8264bf2a9496">
+    <connection id="740999f4-8ab9-42c0-9c50-3cd8bd86bb3f" SrcNodeID="072017a1-ba2d-4ea1-9764-bc23f1ad1b48" SrcPortName="advance" DstNodeID="c8fbdb92-ad18-4fcc-9ce1-9a94507caa44" DstPortName="enter" ConnectionOrder="0">
+      <points id="4ea0653a-acb8-45b3-a71c-a8e7b5536024" />
+    </connection>
+    <connection id="ab42b16c-6f99-4af1-9ec0-736a0092563a" SrcNodeID="c8fbdb92-ad18-4fcc-9ce1-9a94507caa44" SrcPortName="UpcomingUserMatch" DstNodeID="4e1dbebd-f945-4d97-835b-36ccee75fd38" DstPortName="enter" ConnectionOrder="0">
+      <points id="0f1e0af6-f107-46eb-aca0-987ea109a107" />
+    </connection>
+    <connection id="bdd67a31-f814-408b-8f44-3268e5c9626f" SrcNodeID="4e1dbebd-f945-4d97-835b-36ccee75fd38" SrcPortName="true" DstNodeID="bac138bd-8ff6-48a3-b2bb-1a486d2ca2c9" DstPortName="enter" ConnectionOrder="0">
+      <points id="762e4761-c35f-4eb6-ab3c-c396eab9f1c2" />
+    </connection>
+    <connection id="ec1132d6-57e6-4b2e-b49d-a3a56c04ac5b" SrcNodeID="bac138bd-8ff6-48a3-b2bb-1a486d2ca2c9" SrcPortName="true" DstNodeID="00aa30bf-fe86-4385-9aa4-e67e9e04ec23" DstPortName="enter" ConnectionOrder="0">
+      <points id="692742da-62f3-4840-beac-f5324e80b13c" />
+    </connection>
+    <connection id="99248bab-f43d-4ba8-8121-323b7e3f29e4" SrcNodeID="7b526f3d-9a79-4dd7-b3a0-c08aaa9c2d65" SrcPortName="advance" DstNodeID="072017a1-ba2d-4ea1-9764-bc23f1ad1b48" DstPortName="enter" ConnectionOrder="0">
+      <points id="25df15a9-17ee-4a70-aa1a-3c3255bab427" />
+    </connection>
+    <connection id="b15c848d-8b35-454c-aa07-8c4973ed2a6b" SrcNodeID="00aa30bf-fe86-4385-9aa4-e67e9e04ec23" SrcPortName="true" DstNodeID="b78aa141-8965-4b5e-9f6f-781b6bb73f07" DstPortName="enter" ConnectionOrder="0">
+      <points id="e20222ca-fc38-47e1-8703-11bae23111c0" />
+    </connection>
+    <connection id="78dde996-0e91-46d9-bde2-ff19d3fc4c97" SrcNodeID="bac138bd-8ff6-48a3-b2bb-1a486d2ca2c9" SrcPortName="false" DstNodeID="cddecb1e-e1d3-4b0b-9838-67d47e335cf0" DstPortName="enter" ConnectionOrder="0">
+      <points id="7d76a68a-2a1a-467f-a124-d3890c47eab9" />
+    </connection>
+    <connection id="893cdd09-28e0-43f3-bb35-afd991f91859" SrcNodeID="00aa30bf-fe86-4385-9aa4-e67e9e04ec23" SrcPortName="false" DstNodeID="4bc16e63-8117-4b72-8f1b-6084f6b96a9b" DstPortName="enter" ConnectionOrder="0">
+      <points id="4452409c-ca7e-4234-89d5-6c5d4584343d" />
+    </connection>
+    <connection id="282e7860-6293-453a-84ea-15b8ffb59274" SrcNodeID="4bc16e63-8117-4b72-8f1b-6084f6b96a9b" SrcPortName="true" DstNodeID="9be4c81a-317e-436d-af44-54c8e2bc2da2" DstPortName="enter" ConnectionOrder="0">
+      <points id="0051ca8a-8c29-4eba-a42b-ec63258c527b" />
+    </connection>
+    <connection id="664fc6de-5689-4943-a58c-a09f1d45e307" SrcNodeID="cddecb1e-e1d3-4b0b-9838-67d47e335cf0" SrcPortName="true" DstNodeID="efd396be-fc22-44a6-8dda-38f7808fdcda" DstPortName="enter" ConnectionOrder="0">
+      <points id="b3208c2e-7dc8-42eb-8eee-8978a7330f0d" />
+    </connection>
+    <connection id="83e0e6dd-b3e9-4b92-9166-c6c0da8eeeb8" SrcNodeID="cddecb1e-e1d3-4b0b-9838-67d47e335cf0" SrcPortName="false" DstNodeID="91d51d74-fead-4129-a562-1158afaf13ba" DstPortName="enter" ConnectionOrder="0">
+      <points id="bb92bff4-5b39-459a-8bed-318e0be22c02" />
+    </connection>
+    <connection id="4a228203-f8f7-45ff-9cc9-22b901c41103" SrcNodeID="efd396be-fc22-44a6-8dda-38f7808fdcda" SrcPortName="false" DstNodeID="fa3b1de5-5202-4b91-ba02-7c708d3d80b8" DstPortName="enter" ConnectionOrder="0">
+      <points id="64469864-60d8-4e8b-b00d-d52a79756402" />
+    </connection>
+    <connection id="2ad587cc-eae9-4bae-bdf8-2686bb6f4e0c" SrcNodeID="fa3b1de5-5202-4b91-ba02-7c708d3d80b8" SrcPortName="false" DstNodeID="78f9ff4e-f909-46e9-89eb-ee55236e265c" DstPortName="enter" ConnectionOrder="0">
+      <points id="09c30431-9134-468d-ad34-48046426a199" />
+    </connection>
+    <connection id="0e6643d3-ba4b-4e79-9270-db0e839c71fb" SrcNodeID="54ecf8ca-8a34-4d20-87e2-e3f814cc2170" SrcPortName="false" DstNodeID="38830995-dce7-4a87-bd1b-86f9197c95e1" DstPortName="enter" ConnectionOrder="0">
+      <points id="f343e21e-2552-4f34-b10f-9fbcc25c468c" />
+    </connection>
+    <connection id="13a1cddb-0e2e-4a17-a444-0e4a34864f48" SrcNodeID="91d51d74-fead-4129-a562-1158afaf13ba" SrcPortName="false" DstNodeID="54ecf8ca-8a34-4d20-87e2-e3f814cc2170" DstPortName="enter" ConnectionOrder="0">
+      <points id="cae1764e-9239-48b0-aaf6-862fea043a8e" />
+    </connection>
+    <connection id="eec51366-657e-4c4d-acdd-8a2ce856d09d" SrcNodeID="efd396be-fc22-44a6-8dda-38f7808fdcda" SrcPortName="true" DstNodeID="673f917f-1783-4e29-b539-2a5ac2e8d203" DstPortName="enter" ConnectionOrder="0">
+      <points id="c3033dcf-4558-41f1-9ed7-7b091dcb624c" />
+    </connection>
+    <connection id="745d46df-31c9-4a95-8da4-48fab44d2003" SrcNodeID="fa3b1de5-5202-4b91-ba02-7c708d3d80b8" SrcPortName="true" DstNodeID="6d151ba0-289f-40d3-ba2d-3c773cbeb91f" DstPortName="enter" ConnectionOrder="0">
+      <points id="7d66f1ff-f45a-452f-9da9-69d08ea0ce8a" />
+    </connection>
+    <connection id="3b5232c6-18fe-48e3-ae0b-0a94f593d9f6" SrcNodeID="78f9ff4e-f909-46e9-89eb-ee55236e265c" SrcPortName="true" DstNodeID="4900ec8b-5730-42d9-a2da-9c24bc2590eb" DstPortName="enter" ConnectionOrder="0">
+      <points id="5456e344-b6cb-4aeb-b7ca-7e74ff0273ab" />
+    </connection>
+    <connection id="3913a037-99fe-4b0e-a37d-9250a967370e" SrcNodeID="91d51d74-fead-4129-a562-1158afaf13ba" SrcPortName="true" DstNodeID="6e5df846-800a-4669-9709-d16f21548313" DstPortName="enter" ConnectionOrder="0">
+      <points id="fee56095-aa71-42b2-aa9c-fbb4c945ec45" />
+    </connection>
+    <connection id="2e6e64ce-4165-4445-9b31-51240d9ce71e" SrcNodeID="54ecf8ca-8a34-4d20-87e2-e3f814cc2170" SrcPortName="true" DstNodeID="c0ec2f3c-027f-444b-ab19-26ecc7408f0a" DstPortName="enter" ConnectionOrder="0">
+      <points id="b6bc0b4c-4a94-4172-9272-692dd84e095d" />
+    </connection>
+    <connection id="eb64f0a2-fbc8-46bd-87f5-59d5654ae5eb" SrcNodeID="38830995-dce7-4a87-bd1b-86f9197c95e1" SrcPortName="true" DstNodeID="aa79e97d-9892-45f6-8c09-0d2ff1527166" DstPortName="enter" ConnectionOrder="0">
+      <points id="0997d8f8-9b97-4d62-a18a-fe0f2b4bb095" />
+    </connection>
+    <connection id="ce943928-8272-4c80-9ebd-a6c2937248a6" SrcNodeID="a08c1a38-afa6-4032-b883-a23dbdad802b" SrcPortName="UserMatchCompleted" DstNodeID="0db360af-b07a-44df-a689-52148ec4abf1" DstPortName="enter" ConnectionOrder="0">
+      <points id="3a120e61-09f5-4ce7-82d4-c53a2bfc94fb" />
+    </connection>
+    <connection id="61e729cb-dcca-4db8-892e-df7c79d79a04" SrcNodeID="0db360af-b07a-44df-a689-52148ec4abf1" SrcPortName="false" DstNodeID="668e2737-2565-4509-8a33-72d264fff839" DstPortName="enter" ConnectionOrder="0">
+      <points id="9f7c34fc-e217-49e9-aadc-a983c7663e90" />
+    </connection>
+    <connection id="8281dae1-4853-4030-822e-347124ecc982" SrcNodeID="0f28c4c3-7889-4e96-b5bf-8b07d332a590" SrcPortName="false" DstNodeID="644672b0-17f4-4cad-896f-69e0bc280a14" DstPortName="enter" ConnectionOrder="0">
+      <points id="a49df14b-f79e-4282-bf4e-5c00b30dd946" />
+    </connection>
+    <connection id="c76ff559-ac68-46c5-a684-58d618d0e123" SrcNodeID="37122fa7-e8d1-4c7b-a8a0-0a58b0ce2899" SrcPortName="UserMatchCompleted" DstNodeID="0f28c4c3-7889-4e96-b5bf-8b07d332a590" DstPortName="enter" ConnectionOrder="0">
+      <points id="3387495d-8f0e-4e16-806b-3ea12eee58b4" />
+    </connection>
+    <connection id="58611840-881f-4fb2-81d3-6dfd606fba4e" SrcNodeID="b78aa141-8965-4b5e-9f6f-781b6bb73f07" SrcPortName="true" DstNodeID="ac7e4c0b-e617-4440-9921-4f132b9473f5" DstPortName="enter" ConnectionOrder="0">
+      <points id="18375d91-0a45-488c-bf96-81c4127169ac" />
+    </connection>
+    <connection id="6002e21a-e8c0-41c9-8152-e5e9d38a52b5" SrcNodeID="ae4d12f7-16eb-4e3b-9426-8481a903032b" SrcPortName="UserMatchCompleted" DstNodeID="35b2fea5-6dff-4e0f-9634-3d90fca63f3b" DstPortName="enter" ConnectionOrder="0">
+      <points id="2b9075d3-16fb-4fad-94d5-bf24f0d91639" />
+    </connection>
+    <connection id="6ce0cba9-d4ab-438c-a09d-bb79a52b9635" SrcNodeID="35b2fea5-6dff-4e0f-9634-3d90fca63f3b" SrcPortName="false" DstNodeID="29c3d2b9-6f75-4ca2-8beb-0196660de989" DstPortName="enter" ConnectionOrder="0">
+      <points id="ccaf33ca-74e3-4677-be83-ec45319ff614" />
+    </connection>
+    <connection id="d0774735-c106-41d7-bcd7-c72d1910325c" SrcNodeID="4e1dbebd-f945-4d97-835b-36ccee75fd38" SrcPortName="false" DstNodeID="c8fbdb92-ad18-4fcc-9ce1-9a94507caa44" DstPortName="enter" ConnectionOrder="0">
+      <points id="bd92bb33-87cd-4fc3-ac15-e244c4d48b91">
+        <point id="1694c988-c3db-43d6-abb1-f1278afe6af2" X="-5315.10471822978" Y="-9362.64821888465" />
+        <point id="91e1e88f-dcd3-4eef-804a-5605ac85330a" X="-5762.60471822978" Y="-9362.64821888465" />
+      </points>
+    </connection>
+    <connection id="19412bff-ec75-4596-96cf-a143eab89c6f" SrcNodeID="4cd2aba6-e275-453f-83e4-6b4a2e22508f" SrcPortName="advance" DstNodeID="b34926b4-3768-4189-8413-5db42e596f60" DstPortName="enter" ConnectionOrder="0">
+      <points id="05dd87eb-34e7-4cd2-be6d-854d9fef9278" />
+    </connection>
+    <connection id="7c8ae04e-d26c-4011-bc42-f11f227760de" SrcNodeID="df31a131-6048-405c-8dc0-8663b2b73ec6" SrcPortName="advance" DstNodeID="b34926b4-3768-4189-8413-5db42e596f60" DstPortName="enter" ConnectionOrder="0">
+      <points id="1021c990-c494-4a31-a6cd-2c62184adc32" />
+    </connection>
+    <connection id="945c3b55-52ac-4e39-acd5-f2ed29d3d5c9" SrcNodeID="30e4e148-47e2-4edb-a9f9-48d7868345f2" SrcPortName="advance" DstNodeID="b34926b4-3768-4189-8413-5db42e596f60" DstPortName="enter" ConnectionOrder="0">
+      <points id="cb667e97-6c9d-441c-8dc1-7ac2d6b8a113" />
+    </connection>
+    <connection id="8da458b1-fd87-4f16-b23d-50919bb5feb4" SrcNodeID="9be4c81a-317e-436d-af44-54c8e2bc2da2" SrcPortName="true" DstNodeID="52946f06-a994-479b-9718-1c5922bd27d2" DstPortName="enter" ConnectionOrder="0">
+      <points id="b5e7551f-562e-473b-9cfc-dcc57dcae7a1" />
+    </connection>
+    <connection id="a7139f8e-cb4b-46ac-a91d-4ff21d0f1ab2" SrcNodeID="52946f06-a994-479b-9718-1c5922bd27d2" SrcPortName="advance" DstNodeID="37122fa7-e8d1-4c7b-a8a0-0a58b0ce2899" DstPortName="enter" ConnectionOrder="0">
+      <points id="b1fe9c82-4454-4691-a6f5-a66218f6bbf7" />
+    </connection>
+    <connection id="bce25a95-1194-422d-8b8d-f97dd0263660" SrcNodeID="0f28c4c3-7889-4e96-b5bf-8b07d332a590" SrcPortName="true" DstNodeID="46b6d171-d42d-409d-ad29-50f74ebb4f48" DstPortName="enter" ConnectionOrder="0">
+      <points id="1d155686-9f13-4d76-b58c-613dbea88b10" />
+    </connection>
+    <connection id="18230614-a980-4e11-b6fd-00ce4e5f2c68" SrcNodeID="644672b0-17f4-4cad-896f-69e0bc280a14" SrcPortName="true" DstNodeID="a2c97869-52d6-4ff2-bdfa-67d843d495f6" DstPortName="enter" ConnectionOrder="0">
+      <points id="3d9fdc4b-52ac-4ad4-9040-9f1c42ba6cbb" />
+    </connection>
+    <connection id="20c49abc-a50e-415c-a5d9-7de0022cd625" SrcNodeID="3b8b7077-43be-42f3-bccf-4208774a8ef3" SrcPortName="advance" DstNodeID="4cd2aba6-e275-453f-83e4-6b4a2e22508f" DstPortName="enter" ConnectionOrder="0">
+      <points id="0e0cabce-be9e-456c-a90e-c8c2d7a2addb" />
+    </connection>
+    <connection id="6c6ba190-ea73-47ec-a12e-3d00cfd111bf" SrcNodeID="a2c97869-52d6-4ff2-bdfa-67d843d495f6" SrcPortName="advance" DstNodeID="4cd2aba6-e275-453f-83e4-6b4a2e22508f" DstPortName="enter" ConnectionOrder="0">
+      <points id="abfb844c-26e2-4899-8920-605965b1775c" />
+    </connection>
+    <connection id="c6241b12-4e01-4b5f-af6d-4b1bda89b371" SrcNodeID="46b6d171-d42d-409d-ad29-50f74ebb4f48" SrcPortName="advance" DstNodeID="4cd2aba6-e275-453f-83e4-6b4a2e22508f" DstPortName="enter" ConnectionOrder="0">
+      <points id="e7bbfb8a-1f3f-46b5-bbdc-6c6224354d8b" />
+    </connection>
+    <connection id="b967ade5-0b2d-4504-8674-156bcfb9147f" SrcNodeID="644672b0-17f4-4cad-896f-69e0bc280a14" SrcPortName="false" DstNodeID="3b8b7077-43be-42f3-bccf-4208774a8ef3" DstPortName="enter" ConnectionOrder="0">
+      <points id="c2e69ced-c521-46cc-8e67-48681c1f300b" />
+    </connection>
+    <connection id="3ca8fe77-8775-446b-bd2c-0410dfe8c249" SrcNodeID="2271b1e6-044f-4300-be3a-739cdc0ac795" SrcPortName="false" DstNodeID="bb883d7d-2673-423f-a818-6e8f4ea247df" DstPortName="enter" ConnectionOrder="0">
+      <points id="f58c2d39-4184-4291-b225-28ff273929da" />
+    </connection>
+    <connection id="9553e4a5-5e7b-494a-85e9-21fe9155e8a3" SrcNodeID="4bc16e63-8117-4b72-8f1b-6084f6b96a9b" SrcPortName="false" DstNodeID="2271b1e6-044f-4300-be3a-739cdc0ac795" DstPortName="enter" ConnectionOrder="0">
+      <points id="8f6c94f5-457a-4297-b97a-d5c51da1d097" />
+    </connection>
+    <connection id="381d5e3d-7285-450b-891a-ee17bb525386" SrcNodeID="b78aa141-8965-4b5e-9f6f-781b6bb73f07" SrcPortName="false" DstNodeID="7056420c-a0d7-46f5-8fdd-6723dc8d622e" DstPortName="enter" ConnectionOrder="0">
+      <points id="04e1a4e6-b1b2-47c1-bade-a4df1e8d45cb" />
+    </connection>
+    <connection id="9d02578b-a1af-43e4-9a5b-c904ad15e15c" SrcNodeID="9be4c81a-317e-436d-af44-54c8e2bc2da2" SrcPortName="false" DstNodeID="fa559e2f-9773-4df4-bd16-e896ae1d7220" DstPortName="enter" ConnectionOrder="0">
+      <points id="f348a8dc-eaf5-4a6c-91ea-c80e2d774e3d" />
+    </connection>
+    <connection id="6a21976b-5765-4191-8d31-07bbebfef3fb" SrcNodeID="fa559e2f-9773-4df4-bd16-e896ae1d7220" SrcPortName="advance" DstNodeID="37122fa7-e8d1-4c7b-a8a0-0a58b0ce2899" DstPortName="enter" ConnectionOrder="0">
+      <points id="b1b6e2f9-7d84-4ad7-a9c0-bfec5b5f70db" />
+    </connection>
+    <connection id="bd139250-711c-4b69-b840-7467ab6e2ebf" SrcNodeID="2271b1e6-044f-4300-be3a-739cdc0ac795" SrcPortName="true" DstNodeID="71bd05c7-2aaf-4471-8ca6-513b2e5f8997" DstPortName="enter" ConnectionOrder="0">
+      <points id="21080557-fec3-4a0f-92ae-a3b022ec91c6" />
+    </connection>
+    <connection id="e7d96c1b-731b-40c5-9496-4c1eec4f06ff" SrcNodeID="673f917f-1783-4e29-b539-2a5ac2e8d203" SrcPortName="true" DstNodeID="b60d2d7c-b885-4523-bf09-897a91622a37" DstPortName="enter" ConnectionOrder="0">
+      <points id="cbf8e3c9-529d-4db3-a842-e708ae185b85" />
+    </connection>
+    <connection id="714733e5-260c-499f-a399-2591a6d364ce" SrcNodeID="673f917f-1783-4e29-b539-2a5ac2e8d203" SrcPortName="false" DstNodeID="cb60038b-a23d-4cca-994d-31a253b4460c" DstPortName="enter" ConnectionOrder="0">
+      <points id="f99d4956-8a82-49a4-b8ef-f0aa9ae63087" />
+    </connection>
+    <connection id="90f9a9c0-ea24-4708-a092-d8d36a600b49" SrcNodeID="6d151ba0-289f-40d3-ba2d-3c773cbeb91f" SrcPortName="true" DstNodeID="b36ba999-32bb-42b6-bc8d-c9834423c55b" DstPortName="enter" ConnectionOrder="0">
+      <points id="4dc8de58-eb8a-440f-9d77-1f83d90121b7" />
+    </connection>
+    <connection id="0fd4da99-250d-49df-8339-18e50d333316" SrcNodeID="6d151ba0-289f-40d3-ba2d-3c773cbeb91f" SrcPortName="false" DstNodeID="c7ddbd08-ec24-4249-b82e-656455110630" DstPortName="enter" ConnectionOrder="0">
+      <points id="d5b7909e-f219-4d02-9f3b-3df11a59421b" />
+    </connection>
+    <connection id="8a7849bc-d586-43c5-9fc0-b7debd855b48" SrcNodeID="b36ba999-32bb-42b6-bc8d-c9834423c55b" SrcPortName="advance" DstNodeID="ae4d12f7-16eb-4e3b-9426-8481a903032b" DstPortName="enter" ConnectionOrder="0">
+      <points id="c406b6b6-7660-4426-8180-f006cf8a2cd2" />
+    </connection>
+    <connection id="2755f4a6-6058-4f6d-8778-7df5d7c31484" SrcNodeID="c7ddbd08-ec24-4249-b82e-656455110630" SrcPortName="advance" DstNodeID="ae4d12f7-16eb-4e3b-9426-8481a903032b" DstPortName="enter" ConnectionOrder="0">
+      <points id="fb5190d5-4fe7-4084-8c2d-83caa1b98e7e" />
+    </connection>
+    <connection id="ad69c51f-8b21-4907-8ff8-0ccf455dcc63" SrcNodeID="4900ec8b-5730-42d9-a2da-9c24bc2590eb" SrcPortName="true" DstNodeID="e5e2d79c-8e00-4f57-81b7-6a4a560b9998" DstPortName="enter" ConnectionOrder="0">
+      <points id="24b6c893-eda3-4fd4-a2db-3347b9deb672" />
+    </connection>
+    <connection id="525ca9a3-cc63-48d8-bb55-af38e3a65763" SrcNodeID="4900ec8b-5730-42d9-a2da-9c24bc2590eb" SrcPortName="false" DstNodeID="25abef09-f8c6-485a-a20c-1933b2edf3d2" DstPortName="enter" ConnectionOrder="0">
+      <points id="08f45f0d-4126-40f1-9fc8-d973538ed728" />
+    </connection>
+    <connection id="0d18b4e2-2cb4-4aff-abc8-d75b913c68fa" SrcNodeID="6e5df846-800a-4669-9709-d16f21548313" SrcPortName="true" DstNodeID="c23e8c7d-3d68-4a9a-a922-959a1d1a123d" DstPortName="enter" ConnectionOrder="0">
+      <points id="44bed1b0-089c-4016-8766-e970d5d1366e" />
+    </connection>
+    <connection id="d2838ea5-f0ea-4f0a-8b2b-35db87162f34" SrcNodeID="6e5df846-800a-4669-9709-d16f21548313" SrcPortName="false" DstNodeID="b70fc354-f665-4a2b-af45-8d7c9593f947" DstPortName="enter" ConnectionOrder="0">
+      <points id="3de2897b-96dc-479f-a815-06fc94a1ea9f" />
+    </connection>
+    <connection id="abd1b7c2-8e70-47b4-97dc-bc1ada7c4f9e" SrcNodeID="c0ec2f3c-027f-444b-ab19-26ecc7408f0a" SrcPortName="true" DstNodeID="2d4f748b-b200-4085-ba18-1735842e8a58" DstPortName="enter" ConnectionOrder="0">
+      <points id="d889ea4c-23f2-4a4d-9618-5f4fbd5afb36" />
+    </connection>
+    <connection id="b91328d1-bb7d-4d79-847c-5ac8b0aea990" SrcNodeID="c0ec2f3c-027f-444b-ab19-26ecc7408f0a" SrcPortName="false" DstNodeID="6b68f4ca-38c4-47e3-b5b0-4373baba7645" DstPortName="enter" ConnectionOrder="0">
+      <points id="5a1dace0-9e76-40aa-a8ad-ba5161d9b672" />
+    </connection>
+    <connection id="fbae0dc3-3f5c-4bed-b64c-d5b8a45f4a75" SrcNodeID="6b68f4ca-38c4-47e3-b5b0-4373baba7645" SrcPortName="advance" DstNodeID="a08c1a38-afa6-4032-b883-a23dbdad802b" DstPortName="enter" ConnectionOrder="0">
+      <points id="0c17185f-7107-467b-868f-d8619ef1a834" />
+    </connection>
+    <connection id="b3e46f77-ccfa-46f6-9178-b5a0ad53d24e" SrcNodeID="2d4f748b-b200-4085-ba18-1735842e8a58" SrcPortName="advance" DstNodeID="a08c1a38-afa6-4032-b883-a23dbdad802b" DstPortName="enter" ConnectionOrder="0">
+      <points id="41c83586-8547-42bd-b402-353b2d7c7135" />
+    </connection>
+    <connection id="cfa69c2d-9113-487d-90e7-4b16778f65d0" SrcNodeID="aa79e97d-9892-45f6-8c09-0d2ff1527166" SrcPortName="true" DstNodeID="f83228aa-415c-40f1-b48a-93f24a4ad8f0" DstPortName="enter" ConnectionOrder="0">
+      <points id="5805a7c8-740b-4d6f-90a5-ad4c3fb19ede" />
+    </connection>
+    <connection id="2b82ab80-b0cb-4891-a0b3-f3519b2c7174" SrcNodeID="aa79e97d-9892-45f6-8c09-0d2ff1527166" SrcPortName="false" DstNodeID="ec471d12-b492-4444-a69b-ece2673ed7c8" DstPortName="enter" ConnectionOrder="0">
+      <points id="4792a1fa-945c-4c58-8135-98d210702d4e" />
+    </connection>
+    <connection id="729ef481-bd4e-400e-aa71-f7fae2994f66" SrcNodeID="71870ed0-92d7-4ffe-8c0b-8a2e46877003" SrcPortName="true" DstNodeID="6454102b-60bb-4bb2-aad5-b883312a1e72" DstPortName="enter" ConnectionOrder="0">
+      <points id="00ec4de5-e700-41d6-83b2-3419f6111036" />
+    </connection>
+    <connection id="3b32300d-3296-469f-89c9-4a4c0804be2c" SrcNodeID="71870ed0-92d7-4ffe-8c0b-8a2e46877003" SrcPortName="false" DstNodeID="0c451c22-921e-447e-a5d5-6b8b2363f005" DstPortName="enter" ConnectionOrder="0">
+      <points id="340057ba-9215-4aa9-be19-07edff873dcd" />
+    </connection>
+    <connection id="738fe26b-6402-489d-89ce-c44cfcb0bb84" SrcNodeID="78f9ff4e-f909-46e9-89eb-ee55236e265c" SrcPortName="false" DstNodeID="71870ed0-92d7-4ffe-8c0b-8a2e46877003" DstPortName="enter" ConnectionOrder="0">
+      <points id="899ef91b-3498-4c7e-aa02-83ceb0f98c66" />
+    </connection>
+    <connection id="bf85e2fc-d88c-418e-b354-02621880ade5" SrcNodeID="6454102b-60bb-4bb2-aad5-b883312a1e72" SrcPortName="advance" DstNodeID="ae4d12f7-16eb-4e3b-9426-8481a903032b" DstPortName="enter" ConnectionOrder="0">
+      <points id="9cbee412-9f45-4a4e-8397-331da2dd85d1" />
+    </connection>
+    <connection id="136373aa-1d01-482e-999e-95b8db16af97" SrcNodeID="0c451c22-921e-447e-a5d5-6b8b2363f005" SrcPortName="advance" DstNodeID="ae4d12f7-16eb-4e3b-9426-8481a903032b" DstPortName="enter" ConnectionOrder="0">
+      <points id="5dd92f34-bc43-469d-906b-1efe999777df" />
+    </connection>
+    <connection id="a2bc49bb-7917-4ba2-af91-b284e39fcc3e" SrcNodeID="e5e2d79c-8e00-4f57-81b7-6a4a560b9998" SrcPortName="advance" DstNodeID="ae4d12f7-16eb-4e3b-9426-8481a903032b" DstPortName="enter" ConnectionOrder="0">
+      <points id="dc21f930-db7e-4333-b05b-c3fc2c5490a3" />
+    </connection>
+    <connection id="87a2a31e-562f-429b-a234-cfa676652654" SrcNodeID="25abef09-f8c6-485a-a20c-1933b2edf3d2" SrcPortName="advance" DstNodeID="ae4d12f7-16eb-4e3b-9426-8481a903032b" DstPortName="enter" ConnectionOrder="0">
+      <points id="6a77d9d5-d857-41fd-9c8c-0ca845f51397" />
+    </connection>
+    <connection id="a4b1959a-ffac-48e8-bf7d-156276dde241" SrcNodeID="cb60038b-a23d-4cca-994d-31a253b4460c" SrcPortName="advance" DstNodeID="ae4d12f7-16eb-4e3b-9426-8481a903032b" DstPortName="enter" ConnectionOrder="0">
+      <points id="c253095b-540d-47e0-a46e-8f81f984f84e" />
+    </connection>
+    <connection id="1463ccd5-7f1b-4552-a74d-1f8b4d6ee778" SrcNodeID="b60d2d7c-b885-4523-bf09-897a91622a37" SrcPortName="advance" DstNodeID="ae4d12f7-16eb-4e3b-9426-8481a903032b" DstPortName="enter" ConnectionOrder="0">
+      <points id="e40539ab-e3b4-428f-9c3b-635f905cb3c6" />
+    </connection>
+    <connection id="0188a332-26b5-4d5b-812a-0b35bbc53584" SrcNodeID="954633ce-56dc-440b-b24e-9667a813631f" SrcPortName="true" DstNodeID="e5ce050b-893c-42bb-8598-eab3b994bfdd" DstPortName="enter" ConnectionOrder="0">
+      <points id="685ee8de-2e7a-41a9-8d8e-cce03b760129" />
+    </connection>
+    <connection id="a7668604-bdf9-432d-a2af-9dcf4c4fcaa9" SrcNodeID="954633ce-56dc-440b-b24e-9667a813631f" SrcPortName="false" DstNodeID="750446da-f6f2-411c-91c2-7803a87fa449" DstPortName="enter" ConnectionOrder="0">
+      <points id="33100f43-1fda-4dfb-a27c-cf8bc8d1a140" />
+    </connection>
+    <connection id="26bd6769-c0a2-4670-9d4b-f86ff1886e87" SrcNodeID="38830995-dce7-4a87-bd1b-86f9197c95e1" SrcPortName="false" DstNodeID="954633ce-56dc-440b-b24e-9667a813631f" DstPortName="enter" ConnectionOrder="0">
+      <points id="8746bb4c-328f-40a9-b4e4-37f014c9971c" />
+    </connection>
+    <connection id="0e431816-5062-4790-8190-9ee918c588b5" SrcNodeID="e5ce050b-893c-42bb-8598-eab3b994bfdd" SrcPortName="advance" DstNodeID="a08c1a38-afa6-4032-b883-a23dbdad802b" DstPortName="enter" ConnectionOrder="0">
+      <points id="73e712c3-e5b0-46b5-aebe-2bfae6df6742" />
+    </connection>
+    <connection id="005d1087-5c55-438e-b772-e70e7e75b231" SrcNodeID="750446da-f6f2-411c-91c2-7803a87fa449" SrcPortName="advance" DstNodeID="a08c1a38-afa6-4032-b883-a23dbdad802b" DstPortName="enter" ConnectionOrder="0">
+      <points id="712609b7-df7c-4b66-a9cd-cca02e4f41fa" />
+    </connection>
+    <connection id="55ce7014-6f16-42ca-9941-5bba595e59d8" SrcNodeID="f83228aa-415c-40f1-b48a-93f24a4ad8f0" SrcPortName="advance" DstNodeID="a08c1a38-afa6-4032-b883-a23dbdad802b" DstPortName="enter" ConnectionOrder="0">
+      <points id="3597403f-8298-4acd-a6d1-1a11984cebc9" />
+    </connection>
+    <connection id="4e3f1082-b387-41ee-897c-8c3a4717b2d8" SrcNodeID="ec471d12-b492-4444-a69b-ece2673ed7c8" SrcPortName="advance" DstNodeID="a08c1a38-afa6-4032-b883-a23dbdad802b" DstPortName="enter" ConnectionOrder="0">
+      <points id="02e30211-e60f-495a-9fcf-91067fe55b67" />
+    </connection>
+    <connection id="ba06e69f-a6c6-4704-b230-41cd39f61753" SrcNodeID="b70fc354-f665-4a2b-af45-8d7c9593f947" SrcPortName="advance" DstNodeID="a08c1a38-afa6-4032-b883-a23dbdad802b" DstPortName="enter" ConnectionOrder="0">
+      <points id="556fa6cf-b6f6-407f-88bc-ae76e613003b" />
+    </connection>
+    <connection id="46538519-2f8e-4474-be29-6c614bca10a8" SrcNodeID="c23e8c7d-3d68-4a9a-a922-959a1d1a123d" SrcPortName="advance" DstNodeID="a08c1a38-afa6-4032-b883-a23dbdad802b" DstPortName="enter" ConnectionOrder="0">
+      <points id="662be46a-82c7-474d-bdf7-d58b907d8124" />
+    </connection>
+    <connection id="3585dbe6-bdb7-4ae1-a3d9-66480d11caa9" SrcNodeID="7056420c-a0d7-46f5-8fdd-6723dc8d622e" SrcPortName="advance" DstNodeID="37122fa7-e8d1-4c7b-a8a0-0a58b0ce2899" DstPortName="enter" ConnectionOrder="0">
+      <points id="81e8c541-85c1-4a28-9c1f-2131c8983883" />
+    </connection>
+    <connection id="3b38b107-e2b1-40a2-947b-e1e144b5534b" SrcNodeID="ac7e4c0b-e617-4440-9921-4f132b9473f5" SrcPortName="advance" DstNodeID="37122fa7-e8d1-4c7b-a8a0-0a58b0ce2899" DstPortName="enter" ConnectionOrder="0">
+      <points id="4e8e5b75-7dc1-41ae-b547-a324ce66cb88" />
+    </connection>
+    <connection id="3795d60d-6cbc-41d3-983a-0fbadc4e6d97" SrcNodeID="71bd05c7-2aaf-4471-8ca6-513b2e5f8997" SrcPortName="advance" DstNodeID="37122fa7-e8d1-4c7b-a8a0-0a58b0ce2899" DstPortName="enter" ConnectionOrder="0">
+      <points id="08e0b0ac-88d1-4f9a-883d-ee66188c6557" />
+    </connection>
+    <connection id="398cacf3-8a6f-4c2a-a5bd-1f3312103f65" SrcNodeID="bb883d7d-2673-423f-a818-6e8f4ea247df" SrcPortName="advance" DstNodeID="37122fa7-e8d1-4c7b-a8a0-0a58b0ce2899" DstPortName="enter" ConnectionOrder="0">
+      <points id="3050cd02-7f2c-4784-bc40-b7ba2c1892ef" />
+    </connection>
+    <connection id="1729900d-04db-46b0-8b48-d323abc5c904" SrcNodeID="35b2fea5-6dff-4e0f-9634-3d90fca63f3b" SrcPortName="true" DstNodeID="00bdd7ac-8d50-4805-931d-9c4f9afa02a6" DstPortName="enter" ConnectionOrder="0">
+      <points id="28f2e1e3-64ba-426c-9c68-c9d542d079f8" />
+    </connection>
+    <connection id="4b334e93-63be-4849-89f4-eaaf255a25fe" SrcNodeID="00bdd7ac-8d50-4805-931d-9c4f9afa02a6" SrcPortName="advance" DstNodeID="df31a131-6048-405c-8dc0-8663b2b73ec6" DstPortName="enter" ConnectionOrder="0">
+      <points id="d5389afa-1210-42ad-b2cb-961cae2e316b" />
+    </connection>
+    <connection id="831d131b-8f98-400e-b215-5b50e6036eca" SrcNodeID="ec44d3fa-65f6-4097-a347-4bff75f7ae9b" SrcPortName="advance" DstNodeID="df31a131-6048-405c-8dc0-8663b2b73ec6" DstPortName="enter" ConnectionOrder="0">
+      <points id="da5e0bf1-4aa1-476c-82d7-2744542cfc2a" />
+    </connection>
+    <connection id="c0b7561b-5f6c-44e6-bd63-f1cce071862f" SrcNodeID="0497ec7d-b528-413d-9320-cb547458bdf6" SrcPortName="advance" DstNodeID="df31a131-6048-405c-8dc0-8663b2b73ec6" DstPortName="enter" ConnectionOrder="0">
+      <points id="84c50875-98fd-43d2-98e2-8b4f58f94102" />
+    </connection>
+    <connection id="ba086027-d8fb-438e-b32e-0efb71ea42f1" SrcNodeID="29c3d2b9-6f75-4ca2-8beb-0196660de989" SrcPortName="true" DstNodeID="ec44d3fa-65f6-4097-a347-4bff75f7ae9b" DstPortName="enter" ConnectionOrder="0">
+      <points id="fdfe48e2-e107-4ff5-a5f6-af63d70ba5ba" />
+    </connection>
+    <connection id="90649e63-736e-4a04-a2b0-f71ab21d88cc" SrcNodeID="29c3d2b9-6f75-4ca2-8beb-0196660de989" SrcPortName="false" DstNodeID="0497ec7d-b528-413d-9320-cb547458bdf6" DstPortName="enter" ConnectionOrder="0">
+      <points id="d7d0715d-4d22-4690-861f-d14df692ce5b" />
+    </connection>
+    <connection id="0d39d8b3-fb7b-452b-9886-9a663182a09f" SrcNodeID="0db360af-b07a-44df-a689-52148ec4abf1" SrcPortName="true" DstNodeID="c410d9f7-14d7-41a2-be29-a186196c2fdf" DstPortName="enter" ConnectionOrder="0">
+      <points id="dc4ba183-bde8-4d08-9a3e-925dee8ceac4" />
+    </connection>
+    <connection id="3555f064-4145-45a2-9a03-47c56be7321d" SrcNodeID="668e2737-2565-4509-8a33-72d264fff839" SrcPortName="false" DstNodeID="2b0a35f5-91a4-4d62-848b-2a7efbc6e1ac" DstPortName="enter" ConnectionOrder="0">
+      <points id="df2fa723-c5b5-4236-b33b-b90ac5f83582" />
+    </connection>
+    <connection id="d56b59a1-f6e6-42d2-b0af-641343071216" SrcNodeID="668e2737-2565-4509-8a33-72d264fff839" SrcPortName="true" DstNodeID="d0368f60-adaa-4f24-849b-75dbcb2ed77e" DstPortName="enter" ConnectionOrder="0">
+      <points id="d5f864e4-d7e4-46f9-94ab-56af859f45dc" />
+    </connection>
+    <connection id="afa5de67-08b1-4feb-955a-88924e64893d" SrcNodeID="2b0a35f5-91a4-4d62-848b-2a7efbc6e1ac" SrcPortName="advance" DstNodeID="30e4e148-47e2-4edb-a9f9-48d7868345f2" DstPortName="enter" ConnectionOrder="0">
+      <points id="4c4f3606-584c-4c85-92af-c39ad6781f1c" />
+    </connection>
+    <connection id="076cd0ce-6fb5-416e-8b07-10e29b18d5cf" SrcNodeID="d0368f60-adaa-4f24-849b-75dbcb2ed77e" SrcPortName="advance" DstNodeID="30e4e148-47e2-4edb-a9f9-48d7868345f2" DstPortName="enter" ConnectionOrder="0">
+      <points id="1424d787-4d1b-4bc2-ae5b-ccc7b674f996" />
+    </connection>
+    <connection id="42c89be1-cfef-498e-9188-91b3f5a04075" SrcNodeID="c410d9f7-14d7-41a2-be29-a186196c2fdf" SrcPortName="advance" DstNodeID="30e4e148-47e2-4edb-a9f9-48d7868345f2" DstPortName="enter" ConnectionOrder="0">
+      <points id="56c4285e-0e93-40f5-a7cd-e11c5ae1c03d" />
+    </connection>
+  </connections>
+</StoryAsset>

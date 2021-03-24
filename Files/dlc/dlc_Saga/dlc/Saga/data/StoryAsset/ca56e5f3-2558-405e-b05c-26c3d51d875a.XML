@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="ca56e5f3-2558-405e-b05c-26c3d51d875a" name="Retired Injury" deleted="False" valid="True">
+  <nodes id="eacb9f23-9623-4aae-ad81-985f43a0dfc8">
+    <story-end-node id="bd0186fc-c867-436c-8010-19e6a57bb9a6" X="280" Y="-80" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <trigger-news-node id="a6300a30-b3c8-4dd0-b0d3-1f9512d59413" X="80" Y="-200" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="29" WipeId="0" WipeArgument="0" BackupImage="press">
+      <stringWithArgsTitle id="0e66688c-d2cb-4ca5-94de-66ddbb20e0f4" StringID="CM_News_RetiredPlayer_Injury_Title_2" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="1ee47067-6c89-4719-a373-d4cd18f31f59">
+          <stringArgument id="cebf17c5-9b7f-4ccd-aa6b-2884bd7b91c1" Value="SaveData:Player ID" Format="7" />
+        </stringArguments>
+        <stringContent id="2da140e8-c232-4129-b109-a6a09cb3571a">
+          <keyValuePair id="97b739e9-c4fb-461d-948d-4bf80b999c97" Key="M" Value="%1s Beaten By Injury" />
+          <keyValuePair id="1ca3fb72-8cc3-4daf-9498-6541467354e4" Key="F" Value="" />
+          <keyValuePair id="6ebdd10e-c8d6-4987-8857-d4f01d5502b9" Key="MM" Value="" />
+          <keyValuePair id="1cedbee8-5212-4d22-b5d3-a1076dc442c0" Key="MF" Value="" />
+          <keyValuePair id="19329ce8-65a1-47c4-9db3-7c381f925684" Key="FM" Value="" />
+          <keyValuePair id="b8256200-ec5f-4a4d-a605-8a1d01427082" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="21922a72-84dc-4435-8904-09cfd439f5b0" StringID="CM_News_RetiredPlayer_Injury_Body_2" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="c3a291b3-f328-4c8e-80c6-63c4efcc5f87">
+          <stringArgument id="62c923e9-fdfe-4fdc-962f-0b0495b8982e" Value="SaveData:Player ID" Format="6" />
+          <stringArgument id="91aeb4bf-a46c-43ab-8098-f98ea602e24d" Value="SaveData:Player Position" Format="10" />
+          <stringArgument id="faac722f-8df4-4e50-9b11-129b960c091c" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="be098785-465e-41fd-86f2-fb7364ded7af">
+          <keyValuePair id="51eb3b09-134c-4cc9-971c-0c7a7ff655e7" Key="M" Value="%1s has reluctantly confirmed that his recent injury has convinced him to call it a day. Fighting back tears in an emotional interview, he explained: &quot;At this age you just don't recover as quickly and it gets harder each time. So with a heavy heart I've made the difficult decision to retire from professional football today.&quot; The %2s will sorely be missed by %3s fans." />
+          <keyValuePair id="6cdd8baf-7ca9-4447-9605-2359a55598c0" Key="F" Value="" />
+          <keyValuePair id="53f2c830-7bd6-483c-be23-27186a97b3f9" Key="MM" Value="" />
+          <keyValuePair id="b7dd3e65-b857-4c71-bf8d-c7153d9f68e7" Key="MF" Value="" />
+          <keyValuePair id="81ac1014-da71-4ea7-a10d-d7760fcd574d" Key="FM" Value="" />
+          <keyValuePair id="6a4fa5ef-5bb3-49cf-9a9b-1b1865dab1e2" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="88b90cfc-7f27-42e7-b4cf-efb12d569cbe">
+        <sceneParameter id="c667d0c0-d55a-497a-a3bf-296b65200e32" Parameter="CompetitionId" Value="SaveData:Competition ID" />
+        <sceneParameter id="6f1b71a8-bc32-48b5-8c76-88a78fffdd83" Parameter="PlayerId_1" Value="SaveData:Player ID" />
+        <sceneParameter id="1d15b1dc-cc4e-4884-b587-ea9d597569d4" Parameter="TeamId_1" Value="SaveData:Home Team ID" />
+        <sceneParameter id="61b4fbbd-41b0-4281-8667-de86e650c710" Parameter="UserTeamId" Value="Model:Global.UserTeamID" />
+        <sceneParameter id="15727530-44dd-4dd1-9c1c-54de43df4997" Parameter="StadiumType" Value="SaveData:Stadium" />
+      </sceneParameters>
+    </trigger-news-node>
+    <random-node id="d4636551-cc5d-40d0-bbe9-c7045d83c057" X="-120" Y="-240" NodeType="Random" NodeName="Set Name for New Node" Outputs="2" WeightDistribution="50-50" />
+    <trigger-news-node id="51248555-7c0c-477a-8ec8-8b48fafe0ee4" X="80" Y="-320" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="7" WipeId="0" WipeArgument="0" BackupImage="hospital">
+      <stringWithArgsTitle id="3dac8805-4846-4ea3-9432-aa23eb6e84c4" StringID="CM_News_RetiredPlayer_Injury_Title_1" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="80eec33c-d1f7-478e-a66b-68545947182f">
+          <stringArgument id="c8d77a7f-5cf1-4c86-9421-7c08307a40d5" Value="SaveData:Player ID" Format="5" />
+        </stringArguments>
+        <stringContent id="afef2c0d-f2ce-416b-a50a-b1fd4167d9dd">
+          <keyValuePair id="29727069-19c3-4e50-89bb-8a2a2d1f4d12" Key="M" Value="End Of Career For %1s" />
+          <keyValuePair id="bd26b412-a48f-4192-94b3-741409aef10a" Key="F" Value="" />
+          <keyValuePair id="eba7a6a5-968d-4fe9-88e3-4da26a5f18f9" Key="MM" Value="" />
+          <keyValuePair id="3eb6830a-5b1e-4341-86ef-553d96613517" Key="MF" Value="" />
+          <keyValuePair id="6e3709cd-db60-45b2-a1ec-ca6c59e55305" Key="FM" Value="" />
+          <keyValuePair id="a773f0e7-b57f-45a2-9f24-7bb16cbe00f1" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="ef7c6454-ca31-420a-b6ae-d399edcb54b1" StringID="CM_News_RetiredPlayer_Injury_Body_1" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="79e91e04-c355-4e6f-8fca-10133d4307a0">
+          <stringArgument id="0ef9a3ff-badb-431c-a56b-a055defcc783" Value="SaveData:Player ID" Format="6" />
+          <stringArgument id="c7972a95-1042-4be0-a9b5-2627a252f2f0" Value="SaveData:Player Position" Format="10" />
+        </stringArguments>
+        <stringContent id="36076faf-14c4-4ef8-aa1b-560aea3da746">
+          <keyValuePair id="cac219d1-dbc0-467b-b4d4-be79255dbaaa" Key="M" Value="In sad news today, %1s has reluctantly announced that he will be retiring from the game with immediate effect due to his current injury. The %2s feels that he is unable to come back from his injury and play at the peak of his game, and given that he was contemplating retirement, he's decided to call it a day." />
+          <keyValuePair id="1e559302-50d9-4ac9-b987-4a7821ce9563" Key="F" Value="" />
+          <keyValuePair id="acc8d07f-4a35-4c91-8c16-71db18ba5b38" Key="MM" Value="" />
+          <keyValuePair id="55471add-416e-4951-8b5f-a31da8756346" Key="MF" Value="" />
+          <keyValuePair id="b7881855-c813-4a1d-b650-c2ed6e32137b" Key="FM" Value="" />
+          <keyValuePair id="13ffd496-0d18-4969-a26f-64337b6c23a9" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="618f802d-6979-431c-8c79-054871c5f85e">
+        <sceneParameter id="4867d549-c88f-454c-87c5-1410f066876c" Parameter="PlayerId_1" Value="SaveData:Player ID" />
+        <sceneParameter id="8f091b98-23db-44ef-908e-938431203973" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <select-data-node id="83281d94-3b98-4c60-bcb7-7d4cdab47179" X="-800" Y="-120" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="72cf76ac-f91c-4528-8f6a-28b994983547" SelectCount="1">
+        <alias-list id="7e9c9aa1-3e41-4e33-a1dc-2cfce0dc0a5b">
+          <string id="7fdfa01f-946e-432e-a3dd-d497fe173912" Value="Retiring Player" />
+        </alias-list>
+        <order-by id="19fb116f-8d21-4f99-b981-9fddaa5a222e" />
+        <alias-data-source id="a871aeea-4b1e-437b-aa52-279d2715dbcb" DataSource="Model:Global.Players">
+          <conditions id="e05d6994-40b3-45e7-a739-ade3097c5c7c">
+            <condition id="26b164f0-6824-4030-b20a-605622ebca96" VariableId="Select:BasicData.ID" Comparison="EQ" Value="Injured Player:PlayerId" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="33efe1b6-0500-421a-9c8b-7e0cc4427968" VariableId="Select:Status.IsRetiring" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="bdcbe9a6-27b1-443e-adff-b03cd87df4b3" VariableId="Select:Injury.InjuryType" Comparison="GTE" Value="2" Operator="OR" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <story-start-node id="c772bc25-7a98-4ade-b9c8-32333aa7a1ee" X="-1280" Y="-120" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="MultipleInstance" NodeEvent="UserMatchCompleted" StoryKey="Select:PlayerId" UseSelectData="True" RunInPlayerCareer="False" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="8982ac2d-e625-4c44-b003-f772db59ea84" />
+      <select-data id="cace0292-d494-4452-9c83-c9cd47632d0a" SelectCount="1">
+        <alias-list id="f6017654-aebd-4e72-a573-4b38bd9a0154">
+          <string id="3c5f67f0-aa67-4e2b-82db-e29b5060fa2a" Value="Injured Player" />
+        </alias-list>
+        <order-by id="97e51186-bea8-45e4-9a10-6d29fc3617c1" />
+        <alias-data-source id="49b6c420-ffc4-4ab2-aec2-248d8437a1d1" DataSource="Model:UserMatchCompleted.UserPlayers">
+          <conditions id="4365d635-35bf-498c-9f58-3951821d66e9">
+            <condition id="dc643d50-48db-41fd-b7c9-d6258c917434" VariableId="Select:Status.IsInjured" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <save-data-node id="d3209b97-b52c-435c-a905-224c62556330" X="-1000" Y="-120" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="b2e04ef1-b87f-4f02-9731-ef3882a0e3d5">
+        <saveItem id="7da2b10e-c46e-4ad2-a516-e4e478b80777" Key="Competition ID" Value="Model:UserMatchCompleted.LastMatchData.Competition.AssetID" ValueType="int" />
+        <saveItem id="04d72a2e-1d1f-4246-8dae-d1a3e7fcb596" Key="Home Team ID" Value="Model:UserMatchCompleted.LastMatchData.HomeTeamId" ValueType="int" />
+        <saveItem id="9863166b-1408-4155-8ac1-3b9c336dab2d" Key="Stadium" Value="Model:UserMatchCompleted.LastMatchData.Stadium" ValueType="MatchVenue" />
+      </saveItems>
+    </save-data-node>
+    <save-data-node id="c000f48d-4e62-463c-a79b-adf88b3e1569" X="-560" Y="-240" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="2ae28e16-9cac-42b6-97c4-6dc376acaee3">
+        <saveItem id="78b5d025-5de6-41ca-8e48-d2478e289bbf" Key="Player ID" Value="Retiring Player:BasicData.ID" ValueType="int" />
+        <saveItem id="83f4caba-f4c5-4aca-a89c-bafe2448affb" Key="Player Position" Value="Retiring Player:DBData.PreferredPosition" ValueType="PlayerPosition" />
+      </saveItems>
+    </save-data-node>
+    <state-node id="e9c9b104-1971-4dd4-a94f-195197e78753" X="-320" Y="-240" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="367bb33e-e675-421b-aaa0-923408411bff">
+        <string id="8db4ece6-f179-47b6-b9e8-e670807229fd" Value="DayPassed" />
+      </supported-events>
+    </state-node>
+  </nodes>
+  <groups id="bc7baecf-153d-4ae9-8739-a3f8355d9621" />
+  <connections id="ebe52835-884e-47e9-a1dc-9cc8f88c16f8">
+    <connection id="8b98c047-1c50-4856-aa53-42784a76c03e" SrcNodeID="a6300a30-b3c8-4dd0-b0d3-1f9512d59413" SrcPortName="advance" DstNodeID="bd0186fc-c867-436c-8010-19e6a57bb9a6" DstPortName="enter" ConnectionOrder="0">
+      <points id="5bd4939b-8ff2-464a-96c3-200f73d319ec" />
+    </connection>
+    <connection id="d795748c-86c0-411a-bd77-17188082d658" SrcNodeID="d4636551-cc5d-40d0-bbe9-c7045d83c057" SrcPortName="advance-1" DstNodeID="51248555-7c0c-477a-8ec8-8b48fafe0ee4" DstPortName="enter" ConnectionOrder="0">
+      <points id="9042d254-cf60-49ea-8d93-95dbff62e9ec" />
+    </connection>
+    <connection id="fb07ead4-9973-43dd-bdaf-88d63fd66d26" SrcNodeID="d4636551-cc5d-40d0-bbe9-c7045d83c057" SrcPortName="advance-2" DstNodeID="a6300a30-b3c8-4dd0-b0d3-1f9512d59413" DstPortName="enter" ConnectionOrder="0">
+      <points id="3d570f66-f14b-48bb-bd45-b39e32f15fec" />
+    </connection>
+    <connection id="5b31f971-4f5c-49d4-a6d6-bc0e7d63dcfa" SrcNodeID="51248555-7c0c-477a-8ec8-8b48fafe0ee4" SrcPortName="advance" DstNodeID="bd0186fc-c867-436c-8010-19e6a57bb9a6" DstPortName="enter" ConnectionOrder="0">
+      <points id="20f57d44-bc91-4bae-bbf9-ae50f1107b31" />
+    </connection>
+    <connection id="303760f5-aedb-48d3-b941-b34e1856ffe6" SrcNodeID="83281d94-3b98-4c60-bcb7-7d4cdab47179" SrcPortName="false" DstNodeID="bd0186fc-c867-436c-8010-19e6a57bb9a6" DstPortName="enter" ConnectionOrder="0">
+      <points id="5f3161dd-5f34-4208-8cf0-991a91f54918">
+        <point id="5a8395a1-5821-45e9-98a1-5b9835a23104" X="-559.867112100966" Y="-37.5627579806974" />
+      </points>
+    </connection>
+    <connection id="09ce24eb-c751-4aa7-a734-35cf6497a46c" SrcNodeID="d3209b97-b52c-435c-a905-224c62556330" SrcPortName="advance" DstNodeID="83281d94-3b98-4c60-bcb7-7d4cdab47179" DstPortName="enter" ConnectionOrder="0">
+      <points id="a16f9fad-132d-4760-bc4c-1c64f8df3ffd" />
+    </connection>
+    <connection id="9cb2c090-09bf-46a8-b0e4-d9d0ed8aedff" SrcNodeID="c772bc25-7a98-4ade-b9c8-32333aa7a1ee" SrcPortName="advance" DstNodeID="d3209b97-b52c-435c-a905-224c62556330" DstPortName="enter" ConnectionOrder="0">
+      <points id="18980d36-e1c2-4ea2-a42d-e80dfbb1c08e" />
+    </connection>
+    <connection id="33e8dae9-1d64-402e-a925-553aab84ac6b" SrcNodeID="83281d94-3b98-4c60-bcb7-7d4cdab47179" SrcPortName="true" DstNodeID="c000f48d-4e62-463c-a79b-adf88b3e1569" DstPortName="enter" ConnectionOrder="0">
+      <points id="29f30629-fdfd-45fc-8efb-541803c4ca8a" />
+    </connection>
+    <connection id="78aa0d33-f8be-4d68-9cb2-12a4d0107cbe" SrcNodeID="c000f48d-4e62-463c-a79b-adf88b3e1569" SrcPortName="advance" DstNodeID="e9c9b104-1971-4dd4-a94f-195197e78753" DstPortName="enter" ConnectionOrder="0">
+      <points id="b64d20ef-d53b-4b30-9a8f-dec85f1ff50c" />
+    </connection>
+    <connection id="3d3c995a-14d9-4dfe-a2dd-51580848d969" SrcNodeID="e9c9b104-1971-4dd4-a94f-195197e78753" SrcPortName="DayPassed" DstNodeID="d4636551-cc5d-40d0-bbe9-c7045d83c057" DstPortName="enter" ConnectionOrder="0">
+      <points id="045d4454-0c28-4a82-8af9-fcdc4702032e" />
+    </connection>
+  </connections>
+</StoryAsset>

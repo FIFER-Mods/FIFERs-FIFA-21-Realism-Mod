@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="02cbea49-b243-46ad-8b26-2115ceec79be" name="Press Conference Dummy 7" deleted="True" valid="True">
+  <nodes id="4cefbeed-ea08-4e0b-ae1e-0225f47fc614">
+    <story-start-node id="20754d91-fc16-4b73-b9f6-e9c5a0d76cb6" X="480" Y="480" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="SingleInstance" NodeEvent="UserMatchCompleted" StoryKey="" UseSelectData="True" RunInPlayerCareer="False" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="1e5947c8-6ce4-4206-9d91-f6e4be328dd0">
+        <condition id="d41df328-fd47-49ed-8b28-712699dfb25c" VariableId="Model:UserMatchCompleted.CanHavePostMatchPressConference" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+      <select-data id="8813f751-41d0-4e42-8b20-c485caf37023" SelectCount="0">
+        <alias-list id="ec94faa0-b0ec-499f-a931-b855466aeff7" />
+        <order-by id="fc981385-95a5-4c94-859e-e4f0bcbcf234" />
+        <alias-data-source id="505147c7-357b-48c8-8bb2-1fa991008998" DataSource="">
+          <conditions id="5c95cfda-f7b9-4cb5-82d6-931e81be4aa9" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <pressconf-node id="fd962ccb-de5b-44eb-adc8-b1d9053272d0" X="640" Y="520" NodeType="PressConference" NodeName="Set Name for New Node" PressConfType="1" IsPlayerSpecific="false" Player="" QuestionMood="0" Priority="1">
+      <stringWithArgsQuestionShort id="6c64ccdf-f672-408f-9428-67c2e568b4c7" StringID="dummy_question_2" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="d3ab4c06-23ad-4d65-9cf6-cc6c234bb89d">
+          <stringArgument id="09b70732-039b-4c21-930d-65de1e95e9d9" Value="0" Format="0" />
+          <stringArgument id="5f5faea7-8150-4cfa-b2bd-4ff383e95cf9" Value="1" Format="2" />
+        </stringArguments>
+        <stringContent id="5e2c65fa-be30-4d89-9420-47d8711fbadc">
+          <keyValuePair id="166a2d2e-f172-45ea-a58e-65cfe0f04e79" Key="M" Value="Dummy string content for question 2" />
+          <keyValuePair id="77f752c4-fe13-49ff-976a-eac2e8e18b22" Key="F" Value="" />
+          <keyValuePair id="f113a885-f36f-47ef-a156-cd03a0dd720d" Key="MM" Value="" />
+          <keyValuePair id="3ded4969-9afb-4a3c-8c51-3f2283d05752" Key="MF" Value="" />
+          <keyValuePair id="8b76b50a-ee24-45cd-aecc-6d40adbc8c21" Key="FM" Value="" />
+          <keyValuePair id="9e0023c7-e5d3-4c60-8171-2f31da41747e" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsQuestionShort>
+      <stringWithArgsQuestionLong id="56e80dd9-01cb-4f4c-8889-806d4a3693d0" StringID="dummy_question_2_long" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="f5a6333e-2450-4c28-91a0-64813791cc1f" />
+        <stringContent id="bddd38fd-5abd-4554-88ce-5eb571ab4b96">
+          <keyValuePair id="f6c1b106-0201-4204-bcfa-f5526d10e60c" Key="M" Value="" />
+          <keyValuePair id="80560701-bf9b-4538-b7b3-250b931ffb48" Key="F" Value="" />
+          <keyValuePair id="897c5a38-e0db-43f5-9b74-72b950e93a8a" Key="MM" Value="" />
+          <keyValuePair id="8d20dd62-855e-4023-a49a-cda87166e7ba" Key="MF" Value="" />
+          <keyValuePair id="5aea076f-6700-44c3-95b5-15b98b06a60b" Key="FM" Value="" />
+          <keyValuePair id="ce91c2d3-030e-4347-9622-5fa556791e73" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsQuestionLong>
+      <managerAnswerList id="3a3c432a-0ebd-4dc4-bd50-e1a507ee8b7a">
+        <managerAnswer id="c5247dfa-9a23-4508-8df9-f666c650870d" AnswerType="0" AnswerMood="0" IsKeyAnswer="True" AnswerMurmur="1">
+          <stringWithArgsAnswerShort id="21057300-7a95-4cfb-9eb3-c7197eb93780" StringID="dummy_answer_21" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="fa25dc77-6c05-49f3-ac19-c97603f08094">
+              <stringArgument id="26cf0e9b-02a0-4d47-80cc-e55c8bb84c69" Value="0" Format="0" />
+            </stringArguments>
+            <stringContent id="a30ae41b-64c4-46d0-9e1a-8dcb3eabf013">
+              <keyValuePair id="1ebdad48-090b-4134-96a1-d4c318d8f9df" Key="M" Value="Dummy answer content for answer 21" />
+              <keyValuePair id="12db7dce-c9ac-4226-9485-acbcc52c2255" Key="F" Value="" />
+              <keyValuePair id="d3a19218-e401-4e49-9378-09a45f167174" Key="MM" Value="" />
+              <keyValuePair id="f313c2e8-2681-4cf6-b219-074a01d413e4" Key="MF" Value="" />
+              <keyValuePair id="c8374b09-f020-4d69-aa67-227d31dc53fd" Key="FM" Value="" />
+              <keyValuePair id="52182571-cc09-4508-83a6-80c3309c8f8b" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="f4359a20-bb68-4059-9ab1-2643b49539b6" StringID="dummy_answer_21_long" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="0a3c4879-40f8-40d6-a42c-05a8335da17d" />
+            <stringContent id="5f155a29-faf7-473c-8870-1fd948b46709">
+              <keyValuePair id="8b8ed003-3547-4887-9c2f-ae4cfbddeb2e" Key="M" Value="" />
+              <keyValuePair id="5eb00f16-956b-40b3-852e-f52e6f31b6a0" Key="F" Value="" />
+              <keyValuePair id="2a245199-057b-41c6-8c41-d04c91fb70c6" Key="MM" Value="" />
+              <keyValuePair id="7058d786-c1e0-497e-8531-8bbc3ad9b4ca" Key="MF" Value="" />
+              <keyValuePair id="0438790b-9264-4e04-b032-8b7d6fdf133e" Key="FM" Value="" />
+              <keyValuePair id="746d1b26-fc5d-494f-bace-244ff2b22bd2" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+        <managerAnswer id="0e578239-9fba-478c-84c7-6d4e0a728195" AnswerType="3" AnswerMood="1" IsKeyAnswer="" AnswerMurmur="0">
+          <stringWithArgsAnswerShort id="e7274ea9-2725-4bd1-8125-ace42ff637ad" StringID="dummy_answer_22" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="e51698b9-f433-4b72-aa2e-134a050c4ca6" />
+            <stringContent id="ccf79a3d-bfb8-479d-957a-768e7b31b52c">
+              <keyValuePair id="090fd0c7-de7f-4f2b-9643-9df90e84ce0a" Key="M" Value="" />
+              <keyValuePair id="255d20dd-7721-44bb-8bea-ea4367bf6c42" Key="F" Value="" />
+              <keyValuePair id="28a02d38-f04b-493c-922e-448b631290b9" Key="MM" Value="" />
+              <keyValuePair id="c63fee61-3dbb-4e00-8564-5819b9d58958" Key="MF" Value="" />
+              <keyValuePair id="01f7ef69-08f5-4de2-bd83-4fd8bbb66df6" Key="FM" Value="" />
+              <keyValuePair id="9bc0665a-2e62-48f6-899e-5ebe99427608" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="ca97a0d2-33a7-487c-8418-2718ba6d0abf" StringID="dummy_answer_22_long" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="166c884d-f9f2-4c23-9771-293ff228abed" />
+            <stringContent id="26672864-53ad-481e-89d0-12f923cff502">
+              <keyValuePair id="b1153fb3-429f-4199-82f9-f6dadb9332f4" Key="M" Value="" />
+              <keyValuePair id="56946993-0b83-4b7b-80c0-0ccd297eced7" Key="F" Value="" />
+              <keyValuePair id="779c6f32-af3b-4199-ad4a-297b0c3e5a9d" Key="MM" Value="" />
+              <keyValuePair id="9a3490b0-8334-47af-b6bb-ea69d9f2b7b8" Key="MF" Value="" />
+              <keyValuePair id="77eaf292-16be-45d8-ab26-a4f574e86fd1" Key="FM" Value="" />
+              <keyValuePair id="ed3618b3-5cd9-4668-9749-39351db90553" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+      </managerAnswerList>
+      <supported-events id="5d5a14f1-a261-4555-894b-fcceb89f6e88" />
+    </pressconf-node>
+    <story-end-node id="e88b2d9a-5279-4c77-a45e-4f64ee5fc8a7" X="1120" Y="520" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <foreach-node id="d38a7d24-f56f-447e-8639-dca7eb2748b7" X="840" Y="680" NodeType="Foreach" NodeName="Set Name for New Node" ElementAlias="Playa">
+      <alias-data-source id="88e1c8b4-cd2e-440d-be3e-683106db6bc1" DataSource="Model:Global.Players">
+        <conditions id="cc63cdcc-0348-4846-906a-43abf10e731d" />
+      </alias-data-source>
+    </foreach-node>
+    <modify-morale-node id="25427374-cec7-4593-bc57-5131ef1692b8" X="1040" Y="720" NodeType="ModifyMorale" NodeName="Set Name for New Node" PlayerId="Playa:BasicData.ID" DecayPeriod="10" MoraleImpactType="Overall" MoraleTemplateType="Custom">
+      <emotion-impact id="c31f51ff-cdb6-4215-8e02-cc502e86af3a">
+        <keyValuePair id="2f5992cf-e0c0-4719-a5bc-11a3e861ea1e" Key="VeryCalm" Value="-40" />
+        <keyValuePair id="4658c765-420c-4b6f-b562-f23beb68d62b" Key="Calm" Value="-40" />
+        <keyValuePair id="50561e49-b3fd-4251-b0e1-2d645027320a" Key="Normal" Value="-40" />
+        <keyValuePair id="85c56cc1-5406-44ad-bd04-66ada0308bf1" Key="HotTemper" Value="-40" />
+        <keyValuePair id="133e1529-a1ff-4ba4-81be-4e0ebc792668" Key="Volcano" Value="-40" />
+      </emotion-impact>
+      <personality-impact id="902781ee-c6b6-4c6c-b01a-f4267c910245">
+        <keyValuePair id="960e50da-3ad3-4b16-8587-b157c7c273f7" Key="Selfish" Value="-40" />
+        <keyValuePair id="82e13e3f-edd7-4322-8747-2f7eb394aa48" Key="Individual" Value="-40" />
+        <keyValuePair id="56634326-b814-4a11-b25e-a3d5138d1b89" Key="Normal" Value="-40" />
+        <keyValuePair id="40882c38-af2c-424c-af3d-1bd3dc0193c5" Key="TeamPlayer" Value="-40" />
+        <keyValuePair id="af530dab-b2ee-47f8-968e-579fb99cd197" Key="UltimateProfessional" Value="-40" />
+      </personality-impact>
+    </modify-morale-node>
+    <foreach-node id="579b2336-ba02-4e17-bb80-5ebdbe058741" X="840" Y="600" NodeType="Foreach" NodeName="Set Name for New Node" ElementAlias="Playa">
+      <alias-data-source id="b1c01f65-8d71-4731-9bf3-d8a6ae26315d" DataSource="Model:Global.Players">
+        <conditions id="2ad69e38-0940-45b9-918d-80a379bc2279" />
+      </alias-data-source>
+    </foreach-node>
+    <modify-morale-node id="855cd69a-1298-43f5-b41a-54042d5da5df" X="1080" Y="600" NodeType="ModifyMorale" NodeName="Set Name for New Node" PlayerId="Playa:BasicData.ID" DecayPeriod="10" MoraleImpactType="Overall" MoraleTemplateType="Custom">
+      <emotion-impact id="8831d3af-0e72-449d-81e3-e480c5f8aaf2">
+        <keyValuePair id="a42e60b9-5535-4d78-8e10-a31f601e98fd" Key="VeryCalm" Value="40" />
+        <keyValuePair id="9572da19-be87-421f-9921-2176aea5c4ec" Key="Calm" Value="40" />
+        <keyValuePair id="4790c90d-3bf6-4fcc-bb8c-0ceb53af40f5" Key="Normal" Value="40" />
+        <keyValuePair id="388312db-cf45-46ba-a8ca-597994a7b7dc" Key="HotTemper" Value="40" />
+        <keyValuePair id="6dd55079-036e-49ff-b199-a8b1f6d8065c" Key="Volcano" Value="40" />
+      </emotion-impact>
+      <personality-impact id="19a1cdc4-0919-4a25-b77d-70e7f496d351">
+        <keyValuePair id="380d6808-b8eb-4924-ae0b-0e8fce957c9d" Key="Selfish" Value="40" />
+        <keyValuePair id="51e3b181-c14a-43da-9e1b-64ca180758da" Key="Individual" Value="40" />
+        <keyValuePair id="46628771-f5ff-4999-b591-cb9831a6891d" Key="Normal" Value="40" />
+        <keyValuePair id="e458ab9d-cb47-462b-be51-f48ba4f743f2" Key="TeamPlayer" Value="40" />
+        <keyValuePair id="3d1b1a7b-ab26-40ff-b896-daae125f5c70" Key="UltimateProfessional" Value="40" />
+      </personality-impact>
+    </modify-morale-node>
+  </nodes>
+  <groups id="2647ddc2-4668-45ad-96f1-ccb0d49b8570" />
+  <connections id="07b3251c-45db-4209-9179-1aff8b9719e0">
+    <connection id="81eec665-2b14-4e0c-8010-aa20e1062bce" SrcNodeID="20754d91-fc16-4b73-b9f6-e9c5a0d76cb6" SrcPortName="advance" DstNodeID="fd962ccb-de5b-44eb-adc8-b1d9053272d0" DstPortName="enter" ConnectionOrder="0">
+      <points id="19671728-069d-49ff-894c-f9e62e867b87" />
+    </connection>
+    <connection id="19108fab-c8cf-4278-af52-00f46a20a0fe" SrcNodeID="fd962ccb-de5b-44eb-adc8-b1d9053272d0" SrcPortName="skip" DstNodeID="e88b2d9a-5279-4c77-a45e-4f64ee5fc8a7" DstPortName="enter" ConnectionOrder="0">
+      <points id="b5122c2d-5753-4900-8278-b83e79b15647" />
+    </connection>
+    <connection id="e9873758-185d-4b29-9822-a5df977c1347" SrcNodeID="d38a7d24-f56f-447e-8639-dca7eb2748b7" SrcPortName="body" DstNodeID="25427374-cec7-4593-bc57-5131ef1692b8" DstPortName="enter" ConnectionOrder="0">
+      <points id="34363d74-ae21-42c3-b469-4c142b1f723e" />
+    </connection>
+    <connection id="5cbd9d09-19d8-4723-9aa7-ced566732a21" SrcNodeID="25427374-cec7-4593-bc57-5131ef1692b8" SrcPortName="advance" DstNodeID="d38a7d24-f56f-447e-8639-dca7eb2748b7" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="c51fd2f1-d3a4-47b0-83c8-4144824d6442">
+        <point id="6e7d1489-e232-4fae-aa89-80286d0d1eb4" X="1211.19738436489" Y="815.385888431722" />
+        <point id="068a3215-2e14-4651-a439-b7a66082f099" X="839.284491818661" Y="805.848954549788" />
+      </points>
+    </connection>
+    <connection id="daaa2a19-8517-4f1d-898c-ffe8847f754e" SrcNodeID="579b2336-ba02-4e17-bb80-5ebdbe058741" SrcPortName="body" DstNodeID="855cd69a-1298-43f5-b41a-54042d5da5df" DstPortName="enter" ConnectionOrder="0">
+      <points id="0512b86f-f260-49cb-96c9-a23777660f5e" />
+    </connection>
+    <connection id="b9118f4e-4c10-48d2-aa44-678f51211345" SrcNodeID="855cd69a-1298-43f5-b41a-54042d5da5df" SrcPortName="advance" DstNodeID="579b2336-ba02-4e17-bb80-5ebdbe058741" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="f8a1c553-66db-4d38-9287-5bbbac6a7781">
+        <point id="2984c333-cdf9-4d6b-a171-0fbc0cdd054e" X="1269.17752483003" Y="705.137805760305" />
+        <point id="8683cadc-6d6d-406c-8d14-63308a20e680" X="869.660450482953" Y="703.214983446649" />
+      </points>
+    </connection>
+    <connection id="64557317-7e7e-4429-9241-186c3c750c2c" SrcNodeID="579b2336-ba02-4e17-bb80-5ebdbe058741" SrcPortName="advance" DstNodeID="e88b2d9a-5279-4c77-a45e-4f64ee5fc8a7" DstPortName="enter" ConnectionOrder="0">
+      <points id="b9fb4e02-a283-43b7-b4c2-d54a55de7410" />
+    </connection>
+    <connection id="afe8c58f-3ff9-4e3b-b84b-7e99eed968fd" SrcNodeID="d38a7d24-f56f-447e-8639-dca7eb2748b7" SrcPortName="advance" DstNodeID="e88b2d9a-5279-4c77-a45e-4f64ee5fc8a7" DstPortName="enter" ConnectionOrder="0">
+      <points id="5478dd41-ddbf-4350-a8ba-1bbb70e02508" />
+    </connection>
+    <connection id="d0b1f8fc-ea46-4db6-8143-305150e910f0" SrcNodeID="fd962ccb-de5b-44eb-adc8-b1d9053272d0" SrcPortName="advance-1" DstNodeID="579b2336-ba02-4e17-bb80-5ebdbe058741" DstPortName="enter" ConnectionOrder="0">
+      <points id="94f8fe95-cda4-45ea-b7e1-f9ffcb7cdfda" />
+    </connection>
+    <connection id="6e0bc876-8e4c-4e5d-a447-e7b99799932b" SrcNodeID="fd962ccb-de5b-44eb-adc8-b1d9053272d0" SrcPortName="advance-2" DstNodeID="d38a7d24-f56f-447e-8639-dca7eb2748b7" DstPortName="enter" ConnectionOrder="0">
+      <points id="9b5552ea-5cc5-4811-b374-6511cb0c1f37" />
+    </connection>
+  </connections>
+</StoryAsset>

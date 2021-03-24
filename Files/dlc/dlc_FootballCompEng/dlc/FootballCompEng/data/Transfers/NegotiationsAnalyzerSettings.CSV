@@ -1,0 +1,91 @@
+Description,Value,,,,,
+,,,,,,
+// Role constants,,,,,,
+"// The lower the tier value is, the better it is",,,,,,
+ROLE ACCEPTED MIN,-3,,,,,
+ROLE ACCEPTED MAX,0,,,,,
+,,,,,,
+ROLE TOO HIGH THRESHOLD,-4,,,,,
+,,,,,,
+ROLE REJECTED MIN,1,,,,,
+ROLE REJECTED MAX,2,,,,,
+,,,,,,
+ROLE INSULTED THRESHOLD,3,,,,,
+,,,,,,
+DYNAMIC COUNTER MODIFIER FOR PLAYER,0.3,//goes to AIScenePlayerSeller,,,,
+DYNAMIC COUNTER MODIFIER FOR CLUB,0.4,//goes to TransferManager CreateClubUserSeller/Buyer,,,,
+DYNAMIC COUNTER EXTRA INCREMENT FOR UNAFFORDABLE SWAP,25,//goes to ClubSceneCpuSeller,,,,
+DYNAMIC COUNTER EXTRA INCREMENT FOR UNFIT SWAP,15,//goes to CreateClubUserSeller,,,,
+,,,,,,
+// Contract constants,,,,,,
+NUMBER OF MONTHS IN YEAR,12,,,,,
+NUMBER OF WEEKS IN YEAR,52,,,,,
+,,,,,,
+// Sign on fee constants,//Percent is multiplied by number of contract years offered,,,,,
+SIGN ON FEE PERCENT,5,,,,,
+SIGN ON FEE MOD,2,,,,,
+,,,,,,
+RELEASE CLAUSE MAX ACCEPT PERCENTAGE,10,,,,,
+,,,,,,
+// Performance bonuses constants,,,,"// When adding new elements(to the right), remember to also add elements to",,
+Number of Matches,,,,// BONUS ROLE ACCEPTANCE PERCENT(below the last row) and BONUS MATCHES DEMANDED PERCENT(to the right),,
+Appearance,25,20,15,10,5,
+Clean Sheet,25,20,15,10,5,
+Goals Scored,25,20,15,10,5,
+,,,,,,
+// Performance bonuses constants,// Appearances,// Clean Sheets,// Goals,,,
+Performance Bonus Mod,0.4,0.25,0.25,,,
+,,,,,,
+BONUS_POSITION_ACCEPTANCE_PERC,GK,FB,CB,MD,WN,AT
+Appearance,50,80,80,80,80,80
+Clean Sheet,50,40,40,0,0,0
+Goals Scored,0,0,0,25,50,60
+,,,,,,
+Bonus Position Demanded Mod,GK,FB,CB,MD,WN,AT
+Appearance,1,1,1,1,1,1
+Clean Sheet,1.1,1.1,1.1,1,0,0
+Goals Scored,0,0,0,1,1.1,1.2
+,,,,,,
+BONUS ROLE ACCEPTANCE PERCENT,,,,,,
+Number of matches by appearance,Tier None,Tier 1,Tier 2,Tier 3,Tier 4,Tier 5
+NUM_MATCHES[APPEARANCE][0],0,30,0,0,0,0
+NUM_MATCHES[APPEARANCE][1],0,50,30,0,0,0
+NUM_MATCHES[APPEARANCE][2],0,70,50,30,0,0
+NUM_MATCHES[APPEARANCE][3],0,85,70,50,30,0
+NUM_MATCHES[APPEARANCE][4],0,100,85,70,50,0
+,,,,,,
+Number of matches by Clean Sheet,Tier None,Tier 1,Tier 2,Tier 3,Tier 4,Tier 5
+NUM_MATCHES[Clean Sheet][0],0,15,0,0,0,0
+NUM_MATCHES[Clean Sheet][1],0,25,15,0,0,0
+NUM_MATCHES[Clean Sheet][2],0,35,25,0,0,0
+NUM_MATCHES[Clean Sheet][3],0,50,35,15,0,0
+NUM_MATCHES[Clean Sheet][4],0,60,50,25,0,0
+,,,,,,
+Number of Matches by Goals Scored,Tier None,Tier 1,Tier 2,Tier 3,Tier 4,Tier 5
+NUM_MATCHES[Goals Scored][0],0,15,0,0,0,0
+NUM_MATCHES[Goals Scored][1],0,25,15,0,0,0
+NUM_MATCHES[Goals Scored][2],0,35,25,0,0,0
+NUM_MATCHES[Goals Scored][3],0,50,35,15,0,0
+NUM_MATCHES[Goals Scored][4],0,60,50,25,0,0
+,,,,,,
+BONUS MATCHES DEMANDED PERCENT,Match 1,Match 2,Match 3,Match 4,Match 5,
+NUM_MATCHES[APPEARANCE][0…N],40,32,24,16,8,
+NUM_MATCHES[CLEAN_SHEET][0…N],65,50,35,20,10,
+NUM_MATCHES[GOALS_SCORED][0…N],65,50,35,20,10,
+,,,,,,
+THRESHOLDS,,,,,,
+FeesAnalyzer for SELLER THRESHOLDS,,,,,,
+FutureFeeFlags ,0.1,,,,,
+FeeFlags,0.1,,,,,
+OverallFlags,0.1,,,,,
+FeesAnalyzer for BUYER THRESHOLDS,,,,,,
+FutureFeeFlags ,0.1,,,,,
+FeeFlags,0.1,,,,,
+OverallFlags,0.1,,,,,
+PlayerNegotiationAnalyzer THRESHOLDS,,,,,,
+RoleAnalyzer::SetFlags,2,,,,,
+ContractAnalyzer::SetFlags,24,,,,,
+ReleaseClause::SetFlags,0.1,,,,,
+WageAndBonusAnalyzer::SetBonusFlags,0.1,,,,,
+WageAndBonusAnalyzer::SetWageFlags,0.1,,,,,
+WageAndBonusAnalyzer::SetOverallFlags,0.1,,,,,

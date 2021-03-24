@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="b1360631-58c0-41ca-9d16-76edade7e5c6" name="Youth Academy Intro" deleted="False" valid="True">
+  <nodes id="982e7ba3-d56d-4223-b9a9-83dba36091d1">
+    <story-start-node id="bce72bcb-d5cc-4bcf-b6c2-ca74bef86189" X="-1040" Y="-280" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="SingleInstance" NodeEvent="SeasonStart" StoryKey="Model:Global.Team.CaptainID" UseSelectData="False" RunInPlayerCareer="False" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="592fe924-3c8d-4b19-8010-d985cc2a8e6d">
+        <condition id="983ec23d-c9a1-4d53-9d81-19ab6476002c" VariableId="Model:Global.SeasonCount" Comparison="EQ" Value="1" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="122d1475-a16f-4da7-bf35-46f543d18c59" VariableId="Model:SeasonStart.IsNewFootballYear" Comparison="EQ" Value="1" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="25ab0b6b-c2bb-4a83-ba4d-337cc6068d55" VariableId="Model:SeasonStart.DidChangeJob" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+      <select-data id="1569bcda-e140-4d10-98c5-4754cd6ec411" SelectCount="0">
+        <alias-list id="71804cae-f540-4ef8-9d1d-2e7863eea1b7" />
+        <order-by id="e33893f3-1fc8-4b2f-a0a7-55863d6920a0" />
+        <alias-data-source id="027338aa-6c1a-46b3-89aa-ad42eb99f525" DataSource="">
+          <conditions id="8668cf3b-44a1-456b-874c-5bf489e7b548" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <story-end-node id="bbc1f609-3a8f-4ca5-a537-3a32dcba1568" X="760" Y="200" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <trigger-email-node id="3823f29e-7a6e-41f8-bc36-158fb6bc027a" X="440" Y="200" NodeType="TriggerEmail" NodeName="Set Name for New Node" From="0" FromArg="0" To="1" CC="5" Subject="" SubjectSource="" Body="" BodySource="" Transition="3" PlayerId="TopYouthPlayer:BasicData.ID" TeamId="Model:Global.UserTeamID">
+      <stringWithArgsSubject id="b503e71c-fb5f-491d-900d-99defd0f7ede" StringID="CM_Mail_YouthAcademy_Subject" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="4289a527-dd56-4b2a-8672-9a54a27b42b1" />
+        <stringContent id="8a9103f4-0c43-449f-b2fd-4f13a753b5c1">
+          <keyValuePair id="4a790ad3-303f-45b9-96e6-5ce9e2351564" Key="M" Value="Youth Academy Report" />
+          <keyValuePair id="65ee68b2-9a95-46ee-9496-b0f9f21946de" Key="F" Value="" />
+          <keyValuePair id="ef338ede-f899-464d-8081-89bf41dc0e17" Key="MM" Value="" />
+          <keyValuePair id="719efc14-3d6a-4a31-8cc8-fb03352b4342" Key="MF" Value="" />
+          <keyValuePair id="a22d5f87-8f89-4252-9238-4a177c6d462d" Key="FM" Value="" />
+          <keyValuePair id="64bf335b-150c-4774-91fa-7ad008e74748" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsSubject>
+      <stringWithArgsBody id="d67f2a2a-871d-4b66-97e1-83b0159bb6ac" StringID="CM_Mail_YouthAcademy_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="e56167ba-3ec8-4da8-a1dd-96e9c602390c">
+          <stringArgument id="adb42a2d-4d0c-4d98-ab31-988f6883fe1e" Value="TopYouthPlayer:BasicData.ID" Format="6" />
+        </stringArguments>
+        <stringContent id="faa2502d-f660-429b-b365-644805a30256">
+          <keyValuePair id="32302205-070f-49cf-a519-8d4b9f66b98c" Key="M" Value="Good morning, Boss,\nEverything in our club has to be based on solid foundations. This is why we are investing in young players and our academy. We believe we can find and develop our own talent. Please look carefully at the young players we currently have on our books. It's now your responsibility to make sure we get the very best out of as many of those players as we can.\nBased on our own initial analysis, we feel that %1s in particular has outstanding ability and the potential to become a world class footballer. He's a good example of a young man we believe has a very bright future at this club. " />
+          <keyValuePair id="595dea87-8890-40ef-894e-0e9a8d89b6a8" Key="F" Value="Good morning, Boss,\nEverything in our club has to be based on solid foundations. This is why we are investing in young players and our academy. We believe we can find and develop our own talent. Please look carefully at the young players we currently have on our books. It's now your responsibility to make sure we get the very best out of as many of those players as we can.\nBased on our own initial analysis, we feel that %1s in particular has outstanding ability and the potential to become a world class footballer. He's a good example of a young man we believe has a very bright future at this club. " />
+          <keyValuePair id="11e691e6-2183-4918-a5e2-346374bee909" Key="MM" Value="" />
+          <keyValuePair id="532d98df-9089-489e-a68f-5ccb30c7c0cd" Key="MF" Value="" />
+          <keyValuePair id="1087ed1a-b93c-4784-9857-917a90198453" Key="FM" Value="" />
+          <keyValuePair id="1f5575a6-02cf-4591-989e-6d5345a625b6" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+    </trigger-email-node>
+    <condition-node id="68c9be22-e04b-4262-8044-89a4a01c7d1d" X="-480" Y="-280" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="db3e6aa1-2041-4d2f-a5e7-536184d64e83">
+        <condition id="5b6a4694-d225-45e4-8f3a-fa5c85064807" VariableId="TopYouthPlayer:Status.IsLocalPlayer" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="a30f96b5-6a6e-4d62-8bb6-8cda935fcc42" X="-240" Y="-120" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="6edd615a-5d0f-412f-8284-4b4d51c572fd">
+        <condition id="38257e7a-91a2-4c10-922f-0f983c1455f6" VariableId="TopYouthPlayer:BasicData.Potential" Comparison="GTE" Value="85" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="6a3a15d5-5fba-47c9-b620-e2f39ab73536" X="0" Y="40" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="745b0a64-b93b-4032-b770-ae7d137bdbc4">
+        <condition id="67f28706-7435-45a6-b2b6-fad98e3e6b00" VariableId="TopYouthPlayer:BasicData.Potential" Comparison="GTE" Value="75" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-email-node id="4b52d8b3-12fb-4356-b8eb-15c2f331c192" X="440" Y="-280" NodeType="TriggerEmail" NodeName="Set Name for New Node" From="0" FromArg="0" To="1" CC="5" Subject="" SubjectSource="" Body="" BodySource="" Transition="3" PlayerId="TopYouthPlayer:BasicData.ID" TeamId="Model:Global.UserTeamID">
+      <stringWithArgsSubject id="30ed82b0-7677-40ab-a4da-13202bc9e74c" StringID="CM_Mail_YouthAcademy_Subject" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="89f876a7-6d7d-49d6-8922-8d14edf997ed" />
+        <stringContent id="03ab7392-6fbd-42af-8678-224e33228325">
+          <keyValuePair id="6e17712f-7141-41dc-969c-fd07f32a1e0c" Key="M" Value="Youth Academy Report" />
+          <keyValuePair id="a3417856-c21f-45c6-b482-7764302b4ff0" Key="F" Value="" />
+          <keyValuePair id="aced266d-5b46-42b9-9b12-75f6668644c6" Key="MM" Value="" />
+          <keyValuePair id="030b7104-4169-49c3-afb7-8a938d92544e" Key="MF" Value="" />
+          <keyValuePair id="249efc9a-8f50-4f40-bc50-a84da9bd4200" Key="FM" Value="" />
+          <keyValuePair id="47c200cd-ec0f-4e06-8403-8b00e18ccaf2" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsSubject>
+      <stringWithArgsBody id="d431d0ad-96fa-4c69-a4e8-a5a261c6e20b" StringID="CM_Mail_YouthAcademy_LocalPlayer_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="d8e8959e-5190-450c-9aa4-cfc7cc68b663">
+          <stringArgument id="ad4be8d6-9b0c-4243-ac16-8074dee175ca" Value="TopYouthPlayer:BasicData.ID" Format="6" />
+        </stringArguments>
+        <stringContent id="1eb6233c-1e6c-4a24-a04e-789aa5f9df94">
+          <keyValuePair id="6c5e2365-b88e-40d5-a62b-32d7d8a4b4d1" Key="M" Value="Good morning, Boss,\nEverything in our club has to be based on solid foundations. This is why we are investing in young players and our academy. We believe we can find and develop our own talent. Please look carefully at the young players we currently have on our books. It's now your responsibility to make sure we get the very best out of as many of those players as we can.\nBased on our own initial analysis, we feel that %1s in particular has outstanding ability and the potential to become a world class footballer. He's a young man we believe has a very bright future at this club.\n%1s, as you probably know, is a local boy and grew up supporting the club. This makes him particularly valuable to us. He understands our culture and our values and can be a role model for other players and a hero for our fans. " />
+          <keyValuePair id="f164be0a-030c-43bf-b2f7-f5649895aec2" Key="F" Value="Good morning, Boss,\nEverything in our club has to be based on solid foundations. This is why we are investing in young players and our academy. We believe we can find and develop our own talent. Please look carefully at the young players we currently have on our books. It's now your responsibility to make sure we get the very best out of as many of those players as we can.\nBased on our own initial analysis, we feel that %1s in particular has outstanding ability and the potential to become a world class footballer. He's a young man we believe has a very bright future at this club.\n%1s, as you probably know, is a local boy and grew up supporting the club. This makes him particularly valuable to us. He understands our culture and our values and can be a role model for other players and a hero for our fans. " />
+          <keyValuePair id="7da831ed-8ceb-40f4-b53a-d7df650cd215" Key="MM" Value="" />
+          <keyValuePair id="c812115d-4975-44e4-8c76-d3327bd00baf" Key="MF" Value="" />
+          <keyValuePair id="129d2d56-7f47-4f7b-a2eb-f94d7ba235ec" Key="FM" Value="" />
+          <keyValuePair id="881e9d18-e151-4974-9eb5-d45ffd8c1996" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+    </trigger-email-node>
+    <trigger-email-node id="dbe83617-a189-471a-9d07-37d9a83e463c" X="440" Y="-120" NodeType="TriggerEmail" NodeName="Set Name for New Node" From="0" FromArg="0" To="1" CC="5" Subject="" SubjectSource="" Body="" BodySource="" Transition="3" PlayerId="TopYouthPlayer:BasicData.ID" TeamId="Model:Global.UserTeamID">
+      <stringWithArgsSubject id="c7b062c0-6f92-4e6a-99fc-1015e37899bb" StringID="CM_Mail_YouthAcademy_Subject" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="582d449d-3f11-47ae-b0e8-b65602568aa4" />
+        <stringContent id="f9f0053c-4682-4dd4-85d1-008d8dfdda33">
+          <keyValuePair id="dd67e07e-4664-4bfd-816e-615a2507d9ed" Key="M" Value="Youth Academy Report" />
+          <keyValuePair id="74e99964-03c7-495c-906a-2a25f0bc55f8" Key="F" Value="" />
+          <keyValuePair id="5acec55a-ff8f-4524-ac96-1542fefd14a5" Key="MM" Value="" />
+          <keyValuePair id="52f0ce57-2499-4a0e-a7a2-aff83a14a662" Key="MF" Value="" />
+          <keyValuePair id="8b43ed0e-3d64-44cb-8bb3-8a3222dd634e" Key="FM" Value="" />
+          <keyValuePair id="cae08988-ece8-4758-8afb-1817d8b510dd" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsSubject>
+      <stringWithArgsBody id="36cdf372-099f-4fb1-809a-0da31ee9419c" StringID="CM_Mail_YouthAcademy_PlatinumTier_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="146f983f-eae3-4b8c-a832-0a26a84091b2">
+          <stringArgument id="fefadc59-5b75-4451-84df-81fc11431644" Value="TopYouthPlayer:BasicData.ID" Format="6" />
+        </stringArguments>
+        <stringContent id="c1d85803-0c47-481f-833b-1ffc72eb6226">
+          <keyValuePair id="44423afa-b941-4ce6-929c-41abe5b93ddb" Key="M" Value="Good morning, Boss,\nEverything in our club has to be based on solid foundations. This is why we are investing in young players and our academy. We believe we can find and develop our own talent. Please look carefully at the young players we currently have on our books. It's now your responsibility to make sure we get the very best out of as many of those players as we can.\nBased on our own initial analysis, we feel that %1s in particular has outstanding ability and the potential to become a world class footballer. He's a young man we believe has a very bright future at this club.\nIf he continues to be guided in the right way and works hard at his game, we believe %1s can become a true great and make a huge difference to the future of this football club." />
+          <keyValuePair id="3019ec1c-0fee-4650-9036-3800e2953e73" Key="F" Value="Good morning, Boss,\nEverything in our club has to be based on solid foundations. This is why we are investing in young players and our academy. We believe we can find and develop our own talent. Please look carefully at the young players we currently have on our books. It's now your responsibility to make sure we get the very best out of as many of those players as we can.\nBased on our own initial analysis, we feel that %1s in particular has outstanding ability and the potential to become a world class footballer. He's a young man we believe has a very bright future at this club.\nIf he continues to be guided in the right way and works hard at his game, we believe %1s can become a true great and make a huge difference to the future of this football club." />
+          <keyValuePair id="f6f37ea2-ed45-4e7b-93c6-89e251c3c62d" Key="MM" Value="" />
+          <keyValuePair id="702eba36-c602-4510-8366-fac93e828f36" Key="MF" Value="" />
+          <keyValuePair id="66b87331-f279-450a-b07b-18fcf685ab89" Key="FM" Value="" />
+          <keyValuePair id="c9f5dad4-ebf4-4491-b249-8022b46bf5a5" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+    </trigger-email-node>
+    <trigger-email-node id="397d1856-e612-47a0-81bc-b1e7972a8988" X="440" Y="40" NodeType="TriggerEmail" NodeName="Set Name for New Node" From="0" FromArg="0" To="1" CC="5" Subject="" SubjectSource="" Body="" BodySource="" Transition="3" PlayerId="TopYouthPlayer:BasicData.ID" TeamId="Model:Global.UserTeamID">
+      <stringWithArgsSubject id="4583514a-8019-4e18-80a2-bf7b8abfb57e" StringID="CM_Mail_YouthAcademy_Subject" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="c3792f44-d5a4-45cc-b3d8-05857ed69b44" />
+        <stringContent id="ae5ae365-3b2f-42dd-bfd8-185eddc032fc">
+          <keyValuePair id="c239daa2-7e9d-4163-8c8c-25c1b3af6cbd" Key="M" Value="Youth Academy Report" />
+          <keyValuePair id="acdab1e4-4a7d-4e46-b0ff-abb193c91a52" Key="F" Value="" />
+          <keyValuePair id="05eefecd-8aaf-46e7-b756-1186de6d4573" Key="MM" Value="" />
+          <keyValuePair id="bcff3ae3-776d-4cc4-8d8f-c88d7d0e7cc2" Key="MF" Value="" />
+          <keyValuePair id="9103ff7e-4fda-4c53-84f2-8d300e03efcc" Key="FM" Value="" />
+          <keyValuePair id="ae014242-12c7-46e2-b244-0a2ab780674e" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsSubject>
+      <stringWithArgsBody id="f9bd1bcf-e7c5-4de6-acd2-a98bad0709e8" StringID="CM_Mail_YouthAcademy_GoldTier_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="beb9b022-1b30-4d2f-9665-61fc8660b92a">
+          <stringArgument id="5449a733-a24d-4570-801d-bf5816968d6f" Value="TopYouthPlayer:BasicData.ID" Format="6" />
+        </stringArguments>
+        <stringContent id="5df308c5-4588-43d6-b401-9362dafeb34c">
+          <keyValuePair id="0508823e-7487-404c-9bed-8d21bd04b5da" Key="M" Value="Good morning, Boss,\nEverything in our club has to be based on solid foundations. This is why we are investing in young players and our academy. We believe we can find and develop our own talent. Please look carefully at the young players we currently have on our books. It's now your responsibility to make sure we get the very best out of as many of those players as we can.\nBased on our own initial analysis, we feel that %1s in particular has outstanding ability and the potential to become a world class footballer. He's a young man we believe has a very bright future at this club.\nIf %1s is handled in the right way and continues to work hard at his game, we believe he can become one of the best players in the league in his position and can help the team achieve success in years to come. " />
+          <keyValuePair id="c90773dc-d461-4f92-9d55-e77c03dd91b0" Key="F" Value="Good morning, Boss,\nEverything in our club has to be based on solid foundations. This is why we are investing in young players and our academy. We believe we can find and develop our own talent. Please look carefully at the young players we currently have on our books. It's now your responsibility to make sure we get the very best out of as many of those players as we can.\nBased on our own initial analysis, we feel that %1s in particular has outstanding ability and the potential to become a world class footballer. He's a young man we believe has a very bright future at this club.\nIf %1s is handled in the right way and continues to work hard at his game, we believe he can become one of the best players in the league in his position and can help the team achieve success in years to come. " />
+          <keyValuePair id="d0951024-b15e-4e01-8b4c-1a3bb969814a" Key="MM" Value="" />
+          <keyValuePair id="0c5e0eef-a234-4aea-9c36-adbcee855437" Key="MF" Value="" />
+          <keyValuePair id="d7c9839f-af4e-4d76-ae54-d82b1c260e31" Key="FM" Value="" />
+          <keyValuePair id="040d659c-ed71-46dd-8b26-c1246ae6f57c" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+    </trigger-email-node>
+    <select-data-node id="ba0503cf-8e33-496d-8e1c-ee047dfa90af" X="-760" Y="-280" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="5fc9e500-384c-41ec-9ff0-4f6990540f9e" SelectCount="1">
+        <alias-list id="7a94d67d-9277-4a43-8de7-1d7879e78dad">
+          <string id="83f7e9c1-8d5a-4028-8253-44629dc59f19" Value="TopYouthPlayer" />
+        </alias-list>
+        <order-by id="ecb60436-028c-4f8f-8a1f-bede1eb9e566">
+          <keyValuePair id="06fe4767-5a22-4e18-8aed-6a6efd21dd80" Key="Select:BasicData.Potential" Value="Desc" />
+        </order-by>
+        <alias-data-source id="e7f991df-125c-4bda-8fda-b73574471575" DataSource="Model:Global.YouthPlayers">
+          <conditions id="baba8ef6-5cc4-41a8-bcfe-e8d57e912c1b" />
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+  </nodes>
+  <groups id="393a9bc0-f3d1-432e-9f5a-53bb157e558d" />
+  <connections id="01552252-c8f6-4afe-98b9-6a79dff6962b">
+    <connection id="57e77b6a-059c-449c-9842-ed9b234eb0e0" SrcNodeID="3823f29e-7a6e-41f8-bc36-158fb6bc027a" SrcPortName="advance" DstNodeID="bbc1f609-3a8f-4ca5-a537-3a32dcba1568" DstPortName="enter" ConnectionOrder="0">
+      <points id="baaf888f-85de-4467-bb3e-6149405761cd" />
+    </connection>
+    <connection id="b441a325-10c6-4011-a752-f2846e5cf58e" SrcNodeID="68c9be22-e04b-4262-8044-89a4a01c7d1d" SrcPortName="false" DstNodeID="a30f96b5-6a6e-4d62-8bb6-8cda935fcc42" DstPortName="enter" ConnectionOrder="0">
+      <points id="329e96a6-7b12-4b96-a62d-5ef1741b6f17" />
+    </connection>
+    <connection id="66ded417-34f7-4481-b3e3-1a6323e721b7" SrcNodeID="a30f96b5-6a6e-4d62-8bb6-8cda935fcc42" SrcPortName="false" DstNodeID="6a3a15d5-5fba-47c9-b620-e2f39ab73536" DstPortName="enter" ConnectionOrder="0">
+      <points id="effb033b-a698-4be1-bf2d-23b7b229ed91" />
+    </connection>
+    <connection id="c23b080f-ee5f-42b0-9b81-c91f639fbdea" SrcNodeID="6a3a15d5-5fba-47c9-b620-e2f39ab73536" SrcPortName="false" DstNodeID="3823f29e-7a6e-41f8-bc36-158fb6bc027a" DstPortName="enter" ConnectionOrder="0">
+      <points id="9270e420-988a-4086-96b9-7484afaf1de3" />
+    </connection>
+    <connection id="51809710-fbe4-4436-ac37-49bb64f91fd4" SrcNodeID="68c9be22-e04b-4262-8044-89a4a01c7d1d" SrcPortName="true" DstNodeID="4b52d8b3-12fb-4356-b8eb-15c2f331c192" DstPortName="enter" ConnectionOrder="0">
+      <points id="8d1f8774-0f07-4f67-a9af-b0d56e775588" />
+    </connection>
+    <connection id="fda1b323-f5b0-460d-9175-1ba4c875d8c2" SrcNodeID="4b52d8b3-12fb-4356-b8eb-15c2f331c192" SrcPortName="advance" DstNodeID="bbc1f609-3a8f-4ca5-a537-3a32dcba1568" DstPortName="enter" ConnectionOrder="0">
+      <points id="76c7b652-ea17-44f0-917c-9b33581b39b2" />
+    </connection>
+    <connection id="64954cfe-b550-4fd6-a22c-19315df9a3b0" SrcNodeID="a30f96b5-6a6e-4d62-8bb6-8cda935fcc42" SrcPortName="true" DstNodeID="dbe83617-a189-471a-9d07-37d9a83e463c" DstPortName="enter" ConnectionOrder="0">
+      <points id="6b986de0-d949-4dbf-bddb-d7892692e4f0" />
+    </connection>
+    <connection id="262ff56c-a47d-4810-aae4-a4d9aae7225e" SrcNodeID="dbe83617-a189-471a-9d07-37d9a83e463c" SrcPortName="advance" DstNodeID="bbc1f609-3a8f-4ca5-a537-3a32dcba1568" DstPortName="enter" ConnectionOrder="0">
+      <points id="38ed0f9c-6bff-4661-acff-82ba4339a2a0" />
+    </connection>
+    <connection id="746dbe7c-380d-4058-b27e-8797c140f183" SrcNodeID="6a3a15d5-5fba-47c9-b620-e2f39ab73536" SrcPortName="true" DstNodeID="397d1856-e612-47a0-81bc-b1e7972a8988" DstPortName="enter" ConnectionOrder="0">
+      <points id="32532a12-12fb-4345-b080-b2c2f674f522" />
+    </connection>
+    <connection id="ec4591e4-bad7-4860-8524-4073ad62a0a2" SrcNodeID="397d1856-e612-47a0-81bc-b1e7972a8988" SrcPortName="advance" DstNodeID="bbc1f609-3a8f-4ca5-a537-3a32dcba1568" DstPortName="enter" ConnectionOrder="0">
+      <points id="fb85b0d7-8b68-4a12-ad4d-9de3b4ec83e8" />
+    </connection>
+    <connection id="705794e0-90bb-4619-86e7-272a86ea079b" SrcNodeID="ba0503cf-8e33-496d-8e1c-ee047dfa90af" SrcPortName="true" DstNodeID="68c9be22-e04b-4262-8044-89a4a01c7d1d" DstPortName="enter" ConnectionOrder="0">
+      <points id="d9812ace-db2f-47ea-8bd8-d86e83660b31" />
+    </connection>
+    <connection id="501505b7-fa37-4763-a9da-033309d686a6" SrcNodeID="bce72bcb-d5cc-4bcf-b6c2-ca74bef86189" SrcPortName="advance" DstNodeID="ba0503cf-8e33-496d-8e1c-ee047dfa90af" DstPortName="enter" ConnectionOrder="0">
+      <points id="81562f77-0fa7-464e-8176-4beaad340bef" />
+    </connection>
+  </connections>
+</StoryAsset>

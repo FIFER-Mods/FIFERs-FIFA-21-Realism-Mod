@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="2a4998dd-911c-4909-a2ef-15bef9f5d55e" name="No Goals Player Debut" deleted="False" valid="True">
+  <nodes id="e7199b81-44e8-44b3-a10a-792aecf2acae">
+    <story-start-node id="29c473f0-28ce-4325-8625-6cb98f98831e" X="-80" Y="-4400" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="SingleInstance" NodeEvent="HighlightsReady" StoryKey="" UseSelectData="True" RunInPlayerCareer="True" RunInManagerCareer="True" RunInTournamentMode="True">
+      <conditions id="21043c68-81bc-4048-b3d1-24081e0d27df">
+        <condition id="1262adb3-aa4e-4667-a069-2ed357f60eda" VariableId="Model:HighlightsReady.GameplayData.Results.ResultStatus" Comparison="EQ" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="07e9a580-dfbf-4765-8457-27cf4c24f9c4" VariableId="Model:HighlightsReady.GameplayData.Results.UserGoals" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+      <select-data id="4ed39441-f362-4be1-8240-45f37674f007" SelectCount="0">
+        <alias-list id="98aba802-7b63-4e44-8133-a7527fceb8ac" />
+        <order-by id="ac260d75-d33e-4580-961f-948a44d44270" />
+        <alias-data-source id="ea4cc662-1fd1-4d79-ac28-4d74ed6f2115" DataSource="">
+          <conditions id="efaa9af2-c8f2-46cf-9305-b3b2a7e56627" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <save-data-node id="5ae649f3-8aa4-4eb6-a484-fc82beb8b19c" X="120" Y="-4400" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="310e908d-4380-47c7-b474-a38a31a51985">
+        <saveItem id="e33a2365-333d-4517-851b-6cedeba36180" Key="Opponent Team ID" Value="Model:HighlightsReady.GameplayData.MatchData.OpponentTeamID" ValueType="int" />
+        <saveItem id="0a7412b7-dd27-438d-9af0-73f161dbbd5a" Key="CompetitionID" Value="Model:HighlightsReady.GameplayData.MatchData.Competition.AssetID" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <select-data-node id="c6796d83-5c2f-4f22-956f-f837a7e6b374" X="1520" Y="-4080" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="30fd8430-5b51-448f-a056-f3551d4bf185" SelectCount="1">
+        <alias-list id="ffc5a4e4-1d07-49d5-a07a-5b2aa3a7dd7b">
+          <string id="c79a5976-b628-4fca-ab5a-00c00cea1f7c" Value="Debut Highlight" />
+        </alias-list>
+        <order-by id="38957ee2-f6e5-41de-9c3d-e822dc493585" />
+        <alias-data-source id="79c33d74-516e-4591-bec7-733791baf5b3" DataSource="Model:HighlightsReady.Highlights">
+          <conditions id="c6e95860-6cda-4fb3-a76c-caf9045c846c">
+            <condition id="8487554f-1310-4d6f-9b7c-3e4e5e9f5160" VariableId="Select:PlayerID" Comparison="EQ" Value="Debut:PlayerId" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <take-screenshot-node id="cb1d6aa2-8d59-4cfc-ad69-b928ca74f195" X="2120" Y="-4080" NodeType="TakeScreenshot" NodeName="Set Name for New Node" HighlightIndex="Debut Highlight:Index" HighlightPlayerID="Debut Highlight:PlayerID" HighlightPriority="7" />
+    <select-data-node id="197ec2ce-205f-4ee8-8f93-cbf6faacc2c7" X="1680" Y="-4240" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="1b1b8989-1b1e-4470-931d-9f1f6a57f33d" SelectCount="1">
+        <alias-list id="273a6a83-2b47-4ad3-9c96-053e8e2b18cc">
+          <string id="ceeda954-efc1-4547-9a7a-c6ecbd830c9b" Value="Debut Highlight" />
+        </alias-list>
+        <order-by id="4b69ae4a-98a2-4914-b720-716add14dae7" />
+        <alias-data-source id="5eaa17e9-a8af-41fa-9c0f-a32fc8e9f268" DataSource="Model:HighlightsReady.Highlights">
+          <conditions id="e404c498-0bbe-4b59-bfef-808dee43b5a0">
+            <condition id="237dcb16-83c0-4c29-8275-05ca47fa5c50" VariableId="Select:PlayerID" Comparison="EQ" Value="Debut:PlayerId" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <take-screenshot-node id="b7667ac2-cdf4-4fa4-bff0-bb65a2f52e71" X="2120" Y="-4240" NodeType="TakeScreenshot" NodeName="Set Name for New Node" HighlightIndex="Debut Highlight:Index" HighlightPlayerID="Debut Highlight:PlayerID" HighlightPriority="7" />
+    <state-node id="c913bf5b-5d01-437a-ab23-c1f6f9fb4c31" X="2480" Y="-4240" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="7b0f823d-7c51-43bb-9fa3-02a9922a726c">
+        <string id="ede4da9a-694d-401e-8df3-eb62decf4e4d" Value="MatchRestarted" />
+        <string id="2cf68ea4-a6cc-4009-bc8b-3db6c5b15457" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <trigger-news-node id="31c87429-dba2-45ab-bbae-0f4d5ec45ed6" X="2840" Y="-4240" NodeType="TriggerNews" NodeName="Rival Stalemate Home" Category="0" Importance="0" SceneId="-1" WipeId="2" WipeArgument="SaveData:CompetitionID" BackupImage="default">
+      <stringWithArgsTitle id="8bb3c903-72ab-46ec-9029-0f1980cb5e56" StringID="CM_News_SS_DrawNil_PlayerDebut_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="8aa53b8a-72e4-4f3f-b63b-0fb03c635be4">
+          <stringArgument id="22b8cd8d-d6cc-41d1-baf2-eba03cd061f9" Value="SaveData:New Player" Format="7" />
+          <stringArgument id="81d1d918-1783-453d-bb11-80cb87a919c5" Value="SaveData:Opponent Team ID" Format="12" />
+        </stringArguments>
+        <stringContent id="4c118c2a-0f6d-453e-9e76-2bd17503aa58">
+          <keyValuePair id="78e3af97-bf45-4b2a-a567-1dca96f056c2" Key="M" Value="%1s Debuts in Nil-Nil Stalemate Against %2s." />
+          <keyValuePair id="329648c3-d2aa-43c0-839f-3537fff869f6" Key="F" Value="" />
+          <keyValuePair id="7031da74-4497-44d2-a0c3-5dec9c09695b" Key="MM" Value="" />
+          <keyValuePair id="612f9f1d-4e64-41fa-977a-f47376fdcf93" Key="MF" Value="" />
+          <keyValuePair id="492b7343-1251-4420-be35-a77720c472f4" Key="FM" Value="" />
+          <keyValuePair id="7a18adad-7fa4-4f33-bf87-5da49449e0a8" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="7cf2682e-e6cb-4503-859b-0b2bccf26d84" StringID="CM_News_SS_DrawNil_PlayerDebut_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="13afcbfe-4fee-4993-9d45-ff2da345c67b">
+          <stringArgument id="9759270d-15cf-461f-80ec-a0c884c4fa9a" Value="SaveData:New Player" Format="7" />
+          <stringArgument id="6addf637-794e-4f1d-890e-e78c177d22d7" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="4a5c6659-93fa-41dd-8376-fff957539ff6" Value="SaveData:Opponent Team ID" Format="11" />
+        </stringArguments>
+        <stringContent id="4d477273-0602-46d6-bea9-157bdfe251a1">
+          <keyValuePair id="3b3d2ac5-59d7-4eb2-b3d3-24cbed1674a1" Key="M" Value="%1s made his first appearance for %2s in the goalless draw against %3s. " />
+          <keyValuePair id="681219a6-f183-4ddd-8d75-44fa11dddcfb" Key="F" Value="" />
+          <keyValuePair id="e1038071-0ad0-42a1-b4fd-aada12117653" Key="MM" Value="" />
+          <keyValuePair id="eaa71685-7199-4380-8fe6-9f89a948288b" Key="MF" Value="" />
+          <keyValuePair id="69d66b17-6bb6-4907-913c-6b4b3185fbb8" Key="FM" Value="" />
+          <keyValuePair id="45cfee3a-95c5-40f2-ad9a-92525b2debd5" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="ee882288-1213-4cf1-8e27-364fb2d737b7" />
+    </trigger-news-node>
+    <select-data-node id="603ad22c-cf8d-43d4-b993-d1394eeaeca9" X="840" Y="-4400" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="9afbda94-c79d-4dcc-8ea0-280b5c366f51" SelectCount="1">
+        <alias-list id="f1990bee-4b4f-46bf-8dea-7301f594ea54">
+          <string id="0b201cef-fa20-48a6-8b48-d533c33b6b06" Value="Debut Highlight" />
+        </alias-list>
+        <order-by id="2036e1f6-314f-409d-a8fa-0933da4a2f3c" />
+        <alias-data-source id="9555ecb6-3b2c-4763-9e33-6994cdbf0389" DataSource="Model:HighlightsReady.Highlights">
+          <conditions id="e5436d38-dd6b-40e7-b0d4-eb1026f0edfc">
+            <condition id="8b5e463f-fe37-47c4-af04-39156d0ef99b" VariableId="Select:PlayerID" Comparison="EQ" Value="New Player:BasicData.ID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <select-data-node id="abdf8221-e0ab-493d-8d4b-321ac111df29" X="1080" Y="-4400" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="846c6e91-4046-426b-923e-7e4659b8df57" SelectCount="1">
+        <alias-list id="b00f6c0a-a86e-4529-bf7d-cf96b8d2a4e5">
+          <string id="3fd72633-625c-4314-b760-5adc5444aaad" Value="Debut" />
+        </alias-list>
+        <order-by id="4bb906d4-5b28-4182-b33c-afd5ba0aae9e" />
+        <alias-data-source id="4d0ded91-64b6-434d-9c76-9a3970d47084" DataSource="Model:HighlightsReady.GameplayData.UserPlayers">
+          <conditions id="5baff238-4ace-487c-870d-a07995a28eb9">
+            <condition id="9947da56-740c-444f-91a9-5bb36a447a8b" VariableId="Select:PlayerId" Comparison="EQ" Value="Debut Highlight:PlayerID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="4cfa36f3-1b7a-49c5-8da1-dbb8dc8c1ba3" VariableId="Select:TimeStats.MinutesPlayed" Comparison="GT" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <select-data-node id="2e65444b-3546-4a74-b2f1-ff186d8f6a0b" X="1520" Y="-4400" NodeType="SelectData" NodeName="Sub">
+      <select-data id="7a7f573d-883d-4fc4-887e-c1ad9628c346" SelectCount="1">
+        <alias-list id="ef21dcaf-e3ca-4d87-9913-822fa7951faa">
+          <string id="82091529-31f9-4ab4-a709-27656bb3b414" Value="Sub Highlight" />
+        </alias-list>
+        <order-by id="787d8a84-470a-49a0-9f84-12dc7bfb1dfc" />
+        <alias-data-source id="efad76ff-2400-4176-9f43-40798fa2d686" DataSource="Model:HighlightsReady.Highlights">
+          <conditions id="7b078c01-c7e7-43e3-9fc5-b21a09a6cc7c">
+            <condition id="f59d18cc-2536-45e3-a642-589f47070d62" VariableId="Select:PlayerID" Comparison="EQ" Value="Debut:PlayerId" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="9977471b-7e29-4fbd-a49c-fe6677fc655a" VariableId="Select:Type" Comparison="EQ" Value="15" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <condition-node id="ed2e37fc-05eb-4ed5-b98b-b456baaa13ff" X="1280" Y="-4400" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="ef44a57a-5dda-4cd3-8b87-4c22601c166a">
+        <condition id="76b9d184-579e-4a25-bc7f-9a53fd542a02" VariableId="Debut:Status.IsSubbedOff" Comparison="EQ" Value="1" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="4ea419fb-05f9-44e0-beb3-dad2bbaab3e0" VariableId="Debut:Status.IsSubbedOn" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <take-screenshot-node id="43214546-8fee-406e-9d01-a93c7a3bea2e" X="2120" Y="-4400" NodeType="TakeScreenshot" NodeName="Set Name for New Node" HighlightIndex="Sub Highlight:Index" HighlightPlayerID="Sub Highlight:PlayerID" HighlightPriority="7" />
+    <save-data-node id="7af6a058-fca7-4b58-a770-410da31475a4" X="640" Y="-4400" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="55055fcb-ecc9-46dc-824c-9e0fb800197a">
+        <saveItem id="50cbbe86-a44a-441f-b18d-b4bb1f5e7558" Key="New Player" Value="New Player:BasicData.ID" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <select-data-node id="b6427e76-2a9f-4435-afba-c2494dc8b088" X="440" Y="-4400" NodeType="SelectData" NodeName="New Player">
+      <select-data id="19385cde-36f7-4416-8136-342c0bdba64d" SelectCount="1">
+        <alias-list id="5f6ae37c-966f-45b2-8219-5297d7ef7c6d">
+          <string id="8d9cac47-d01e-407d-8c86-574746686b67" Value="New Player" />
+        </alias-list>
+        <order-by id="48bf694c-efa6-4f80-bc8a-276d22266df2" />
+        <alias-data-source id="fc6f96b7-2c2a-49e0-84e6-c75abc11d601" DataSource="Model:Global.Players">
+          <conditions id="6b18d67e-1311-4939-9747-3b5ee2cee711">
+            <condition id="f34a8b53-d9a8-40f6-94a1-c5c3d79ee3c0" VariableId="Select:Status.Role" Comparison="LTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="1f187757-fcaf-4396-8d2e-063f12bd346a" VariableId="Select:OverallStatistics.Appearances" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="319399ae-adb7-42ac-a6af-68e18be83e9d" VariableId="Select:Status.TimeAtClub" Comparison="LTE" Value="6" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <story-end-node id="c55fcb49-a48e-4293-9410-6b08f8ac4957" X="3160" Y="-4240" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+  </nodes>
+  <groups id="af95dcd2-4b40-4754-b96a-80e10d48dd36" />
+  <connections id="0518ec6d-6a60-405c-bfbb-d2aa7e991b05">
+    <connection id="4fbb7cea-efd0-49e2-a79f-6fae3652b006" SrcNodeID="29c473f0-28ce-4325-8625-6cb98f98831e" SrcPortName="advance" DstNodeID="5ae649f3-8aa4-4eb6-a484-fc82beb8b19c" DstPortName="enter" ConnectionOrder="0">
+      <points id="96da8e39-2a72-4193-bbeb-7f09239578bf" />
+    </connection>
+    <connection id="dde19dda-a526-4642-8419-7b2a11b68d2e" SrcNodeID="c6796d83-5c2f-4f22-956f-f837a7e6b374" SrcPortName="true" DstNodeID="cb1d6aa2-8d59-4cfc-ad69-b928ca74f195" DstPortName="enter" ConnectionOrder="0">
+      <points id="262c86d6-0a08-4a25-8fc9-77f7ca8ed089" />
+    </connection>
+    <connection id="1b6ab1a5-7b03-495e-8782-b5439d6c4fbf" SrcNodeID="cb1d6aa2-8d59-4cfc-ad69-b928ca74f195" SrcPortName="advance" DstNodeID="c913bf5b-5d01-437a-ab23-c1f6f9fb4c31" DstPortName="enter" ConnectionOrder="0">
+      <points id="7e25ac7e-7228-4ede-9f70-3077701bdfdb" />
+    </connection>
+    <connection id="700f47a7-bb06-48e8-b4a2-90d875496ff4" SrcNodeID="197ec2ce-205f-4ee8-8f93-cbf6faacc2c7" SrcPortName="true" DstNodeID="b7667ac2-cdf4-4fa4-bff0-bb65a2f52e71" DstPortName="enter" ConnectionOrder="0">
+      <points id="fb318590-c036-444e-ae65-5812e554dc0a" />
+    </connection>
+    <connection id="f873f7f2-5f2e-4454-8554-f16666c2431a" SrcNodeID="b7667ac2-cdf4-4fa4-bff0-bb65a2f52e71" SrcPortName="advance" DstNodeID="c913bf5b-5d01-437a-ab23-c1f6f9fb4c31" DstPortName="enter" ConnectionOrder="0">
+      <points id="7c55e96d-15c5-4c4b-ad01-a7f9ea66021a" />
+    </connection>
+    <connection id="63cc587e-2db7-4ae9-8068-89dd7ba0ad37" SrcNodeID="c913bf5b-5d01-437a-ab23-c1f6f9fb4c31" SrcPortName="UserMatchCompleted" DstNodeID="31c87429-dba2-45ab-bbae-0f4d5ec45ed6" DstPortName="enter" ConnectionOrder="0">
+      <points id="09a0531d-7c42-4530-8ba2-f9ef00edb132" />
+    </connection>
+    <connection id="3bfcc408-bc7f-4130-b820-4c86db735b8f" SrcNodeID="603ad22c-cf8d-43d4-b993-d1394eeaeca9" SrcPortName="true" DstNodeID="abdf8221-e0ab-493d-8d4b-321ac111df29" DstPortName="enter" ConnectionOrder="0">
+      <points id="31e12ac1-112e-43b0-a046-be991e9090c3" />
+    </connection>
+    <connection id="db647ebb-465b-4cce-9a3a-c630b1bebee4" SrcNodeID="abdf8221-e0ab-493d-8d4b-321ac111df29" SrcPortName="true" DstNodeID="ed2e37fc-05eb-4ed5-b98b-b456baaa13ff" DstPortName="enter" ConnectionOrder="0">
+      <points id="2e3159df-a4ce-4fa4-9f87-f5eb32c1d98f" />
+    </connection>
+    <connection id="bacaf2fe-8d2c-4763-aa1e-7c91a39b0475" SrcNodeID="2e65444b-3546-4a74-b2f1-ff186d8f6a0b" SrcPortName="true" DstNodeID="43214546-8fee-406e-9d01-a93c7a3bea2e" DstPortName="enter" ConnectionOrder="0">
+      <points id="c2881c7a-9313-4a0e-a981-8f2ce6d82b32" />
+    </connection>
+    <connection id="44180f75-61dc-48d3-95fc-2fa8a481d49f" SrcNodeID="2e65444b-3546-4a74-b2f1-ff186d8f6a0b" SrcPortName="false" DstNodeID="197ec2ce-205f-4ee8-8f93-cbf6faacc2c7" DstPortName="enter" ConnectionOrder="0">
+      <points id="9530ea12-fb67-4774-b99c-01cb6e3e3ff3" />
+    </connection>
+    <connection id="ef5e1e53-473f-4242-85d3-08cc08708fb4" SrcNodeID="ed2e37fc-05eb-4ed5-b98b-b456baaa13ff" SrcPortName="true" DstNodeID="2e65444b-3546-4a74-b2f1-ff186d8f6a0b" DstPortName="enter" ConnectionOrder="0">
+      <points id="80621e50-7887-4bed-ac75-10a0bcbe292c" />
+    </connection>
+    <connection id="fc7889aa-68b5-4e71-ad43-766b74b1b097" SrcNodeID="ed2e37fc-05eb-4ed5-b98b-b456baaa13ff" SrcPortName="false" DstNodeID="c6796d83-5c2f-4f22-956f-f837a7e6b374" DstPortName="enter" ConnectionOrder="0">
+      <points id="cc604e74-0b4d-41a3-8445-cfeb76005085" />
+    </connection>
+    <connection id="cf7d59ac-adf7-40b0-a1b0-7f1cbe8459f5" SrcNodeID="43214546-8fee-406e-9d01-a93c7a3bea2e" SrcPortName="advance" DstNodeID="c913bf5b-5d01-437a-ab23-c1f6f9fb4c31" DstPortName="enter" ConnectionOrder="0">
+      <points id="8a050fa9-eb06-4474-a663-95e583448bdd" />
+    </connection>
+    <connection id="3202b3bf-cfa7-4fad-8956-3a8f5fd2dbd3" SrcNodeID="7af6a058-fca7-4b58-a770-410da31475a4" SrcPortName="advance" DstNodeID="603ad22c-cf8d-43d4-b993-d1394eeaeca9" DstPortName="enter" ConnectionOrder="0">
+      <points id="52c2abb3-fe7d-4c6f-98e3-0b8cc1e21cf2" />
+    </connection>
+    <connection id="05283a4d-32d8-4a98-8f08-ef8226c644a2" SrcNodeID="b6427e76-2a9f-4435-afba-c2494dc8b088" SrcPortName="true" DstNodeID="7af6a058-fca7-4b58-a770-410da31475a4" DstPortName="enter" ConnectionOrder="0">
+      <points id="9c3b9266-9356-4f39-9abc-b8687e4f9957" />
+    </connection>
+    <connection id="6ae7c1cb-a107-4d26-8dce-6df81954f1f9" SrcNodeID="5ae649f3-8aa4-4eb6-a484-fc82beb8b19c" SrcPortName="advance" DstNodeID="b6427e76-2a9f-4435-afba-c2494dc8b088" DstPortName="enter" ConnectionOrder="0">
+      <points id="a52fb644-1a81-4eee-accf-569cd4966770" />
+    </connection>
+    <connection id="32321f17-6b90-4842-9ce4-05336058ffac" SrcNodeID="31c87429-dba2-45ab-bbae-0f4d5ec45ed6" SrcPortName="advance" DstNodeID="c55fcb49-a48e-4293-9410-6b08f8ac4957" DstPortName="enter" ConnectionOrder="0">
+      <points id="82248f43-6e54-43c0-9649-aa20600cf9d4" />
+    </connection>
+    <connection id="255fd8d4-0277-457c-8f5e-268ad86f5ee9" SrcNodeID="c913bf5b-5d01-437a-ab23-c1f6f9fb4c31" SrcPortName="MatchRestarted" DstNodeID="c55fcb49-a48e-4293-9410-6b08f8ac4957" DstPortName="enter" ConnectionOrder="0">
+      <points id="f07fdf35-34cf-4e08-a628-db1b03082a20" />
+    </connection>
+  </connections>
+</StoryAsset>

@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="3aa8b109-643e-4675-8248-dff3edf8b0a4" name="Leadership Trait Tips" deleted="False" valid="True">
+  <nodes id="1aef490d-2b42-4fc8-8217-5d4049028711">
+    <story-start-node id="86bf6795-166b-46d9-bd8e-9ab0f02e93c7" X="-400" Y="160" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="SingleInstance" NodeEvent="UpcomingUserMatch" StoryKey="Select:BasicData.ID" UseSelectData="True" RunInPlayerCareer="False" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="af6dc828-74b5-42b1-8316-40bc0617a83b" />
+      <select-data id="6a908cd4-b934-4391-a36e-d5cf209e2821" SelectCount="1">
+        <alias-list id="beb30983-6b2d-4cb2-be7f-d85360b8d82e">
+          <string id="b508da2d-3a62-4487-b69d-507a5330a0b3" Value="Leader" />
+        </alias-list>
+        <order-by id="e1010871-1b7e-47db-a21b-edefa903616c" />
+        <alias-data-source id="5cbdc9bf-4646-4612-8ffb-02adc0061f52" DataSource="Model:Global.Players">
+          <conditions id="d2396e60-9389-4a9a-985c-bff234cc0368">
+            <condition id="ac4962d8-9335-4833-8065-6b57a73c4338" VariableId="Select:DBData.Traits.HasLeadershipTrait" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="cef9eea0-1cce-43f1-9318-23443cbdc97f" VariableId="Select:Status.Role" Comparison="LTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="34693559-890e-4201-a604-e23589df328a" VariableId="Select:NextMatchData.IsAbleToPlay" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="f503ac1c-4ca4-4818-b4b6-2f79708464e5" VariableId="Select:BasicData.ID" Comparison="NEQ" Value="Model:Global.Team.CaptainID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <condition-node id="59f7e168-5663-4bbb-bec0-1958620127dd" X="320" Y="160" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="82a17280-12f4-4786-80e1-e20f92694039">
+        <condition id="72bd6591-a3c6-4161-a4f2-4ca2d449c137" VariableId="Leader:BasicData.ID" Comparison="NEQ" Value="Captain:BasicData.ID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <story-end-node id="bb123e06-a4bb-4ca1-91ba-c03359f960c3" X="3120" Y="160" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <select-data-node id="9a0af942-6931-4702-aa71-85ca1cd87a63" X="520" Y="-120" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="1b3896cf-6973-4f09-bd76-b59e86a869d2" SelectCount="1">
+        <alias-list id="1a647c32-9a7e-4371-99fa-ad44d0a74f76">
+          <string id="b158ac8e-2f55-4063-95c4-3aaaf6371a59" Value="Captain" />
+        </alias-list>
+        <order-by id="19c0b3e0-375d-46e6-8b83-3b637ed089dc" />
+        <alias-data-source id="572fd0bc-adc9-4f30-acdf-8e72a90cb468" DataSource="Model:Global.Players">
+          <conditions id="62e38620-36c2-4fb9-ab37-d86ab944a2f5">
+            <condition id="a2a6235a-593c-4248-b7d4-e487b6adea85" VariableId="Select:BasicData.ID" Comparison="EQ" Value="Model:Global.Team.CaptainID" Operator="" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="9bcde209-ff96-4965-bb9c-f0610dda8491" VariableId="Select:DBData.Traits.HasLeadershipTrait" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <trigger-email-node id="12cd79b6-0322-46a4-a97e-f0d256e81cee" X="840" Y="-120" NodeType="TriggerEmail" NodeName="Set Name for New Node" From="0" FromArg="0" To="1" CC="5" Subject="" SubjectSource="" Body="" BodySource="" Transition="1" PlayerId="Leader:BasicData.ID" TeamId="Model:Global.UserTeamID">
+      <stringWithArgsSubject id="3784167a-d78b-471a-98ee-1f99442c4f2e" StringID="CM_Email_AssistantCaptainLeadership_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="43f93ef6-a025-401e-9c14-d4b40d89616b">
+          <stringArgument id="d93fe4b8-41cc-4d32-9462-7075088f4da5" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="d6b60964-aaa1-479d-9ad3-d67da91e9963">
+          <keyValuePair id="b8159c9d-33f2-4006-9190-74ed9a24a7db" Key="M" Value="Captaincy suggestions for the match against %1s" />
+          <keyValuePair id="c6cd4976-cf3f-4bb2-b5ae-b9c5e6eaca71" Key="F" Value="" />
+          <keyValuePair id="82c5c751-d0d2-45cb-a50e-ab8aeba83c3a" Key="MM" Value="" />
+          <keyValuePair id="fcf73169-1f9a-4bd2-8894-180791650170" Key="MF" Value="" />
+          <keyValuePair id="cd973a78-39ae-484d-a502-9d5c80547752" Key="FM" Value="" />
+          <keyValuePair id="92a68ccb-0d59-4792-ab87-71c23d6d8833" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsSubject>
+      <stringWithArgsBody id="59e214e8-0d20-4160-bec6-cfee893cef4d" StringID="CM_Email_AssistantCaptainLeadership_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="85d86f86-ba9b-41b8-a64c-9c53be19f8ed">
+          <stringArgument id="9f97e9d8-aec9-4f85-b23b-eb414b35e2b0" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="12bbc3c6-f5be-47dd-9ac2-600e7b5970dc" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="afb879e7-4269-4ae9-a923-44ea09f4a1d6" Value="Leader:BasicData.ID" Format="6" />
+        </stringArguments>
+        <stringContent id="c3f3e0ce-5c4d-4f1b-a694-324dec6ce2aa">
+          <keyValuePair id="69b3f68b-1521-4e32-b35a-7d27d9bd793a" Key="M" Value="Good morning, Mr %1s,\n\nI'm writing in regard to our upcoming match against %2s. I have concerns that our current captain may be struggling in the role. I want to propose appointing %3s as captain. He commands respect from his team-mates both on the pitch and in the dressing room. He has the Leadership trait we need in a captain and giving him the armband will be a positive for the team as a whole. I thought it right to offer an opinion on this but, of course, any final decision rest with you.\n\nRegards,\nAssistant Manager" />
+          <keyValuePair id="dbe1d425-5a64-496d-a047-ced0ee6f63d4" Key="F" Value="Good morning, Ms %1s,\n\nI'm writing in regard to our upcoming match against %2s. I have concerns that our current captain may be struggling in the role. I want to propose appointing %3s as captain. He commands respect from his team-mates both on the pitch and in the dressing room. He has the Leadership trait we need in a captain and giving him the armband will be a positive for the team as a whole. I thought it right to offer an opinion on this but, of course, any final decision rest with you.\n\nRegards,\nAssistant Manager" />
+          <keyValuePair id="a92e2792-6223-42f2-8329-22b7466d2b40" Key="MM" Value="" />
+          <keyValuePair id="f8c82478-0378-4af2-a106-95579a272c02" Key="MF" Value="" />
+          <keyValuePair id="d9f50409-5e3d-4687-b43a-019f814c1754" Key="FM" Value="" />
+          <keyValuePair id="4be84c6f-47de-452b-b649-dff844416985" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+    </trigger-email-node>
+    <trigger-email-node id="6f71b9c9-0b09-4dab-b492-f089193c89fa" X="840" Y="280" NodeType="TriggerEmail" NodeName="Set Name for New Node" From="0" FromArg="0" To="1" CC="5" Subject="" SubjectSource="" Body="" BodySource="" Transition="1" PlayerId="Leader:BasicData.ID" TeamId="Model:Global.UserTeamID">
+      <stringWithArgsSubject id="1caadbbd-66be-4589-b4dd-c17a43967841" StringID="CM_Email_AssistantCaptainUnavailable_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="27b0c050-2580-4cbb-a180-4990064f2606">
+          <stringArgument id="5014575b-d208-45de-bb88-055b5b0ff894" Value="Unavailable Captain:BasicData.ID" Format="7" />
+        </stringArguments>
+        <stringContent id="9d920665-61dc-4cbf-99fc-76fb1fd5c498">
+          <keyValuePair id="6b3db472-79a7-4b05-9cae-f8c6b7e4e1ce" Key="M" Value="Replacing %1s's Captaincy" />
+          <keyValuePair id="dc4ad843-2aff-4050-82a4-8cf76ae7c76b" Key="F" Value="" />
+          <keyValuePair id="5284820b-96b0-42ec-ad5f-b83d52ac04a5" Key="MM" Value="" />
+          <keyValuePair id="4c8d2267-9fd6-4fc1-a157-456e3d393df9" Key="MF" Value="" />
+          <keyValuePair id="de01a84c-35be-4580-b525-1ba7815aa641" Key="FM" Value="" />
+          <keyValuePair id="1ea282e1-1980-4604-9032-4cf3da5c5402" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsSubject>
+      <stringWithArgsBody id="6e36215e-cf9e-4e96-a112-b5a1aac8dcd3" StringID="CM_Email_AssistantCaptainUnavailable_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="6806e964-54d7-4ddf-bc34-7a446d7e9940">
+          <stringArgument id="5a507d27-c1e4-4a04-8bd3-0911e243da29" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="397db154-b388-44bf-a57c-175e8ee556d1" Value="Unavailable Captain:BasicData.ID" Format="6" />
+          <stringArgument id="f54e2796-fb68-4a5a-b5d3-f9b35a906650" Value="Model:UpcomingUserMatch.NextMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="f0a95b35-8132-4d42-853b-6c087a8805ea" Value="Leader:BasicData.ID" Format="6" />
+        </stringArguments>
+        <stringContent id="6da1b879-7897-41b1-acf4-3055b1570698">
+          <keyValuePair id="cff9f5a5-c42a-4b11-98e0-5900a90b13ac" Key="M" Value="Good morning, Mr %1s,\n\nAs we know, %2s will be unavailable for selection against %3s. I wanted to propose appointing %4s as captain for this fixture. He has the necessary Leadership trait. Giving him the armband will have a positive impact on our collective performance. This is, of course, just a suggestion. Any final decision rests with yourself.\n\nRegards,\nAssistant Manager" />
+          <keyValuePair id="64cc4f8c-6ced-4d9c-9fa1-354b4b5fea32" Key="F" Value="Good morning, Ms %1s,\n\nAs we know, %2s will be unavailable for selection against %3s. I wanted to propose appointing %4s as captain for this fixture. He has the necessary Leadership trait. Giving him the armband will have a positive impact on our collective performance. This is, of course, just a suggestion. Any final decision rests with yourself.\n\nRegards,\nAssistant Manager" />
+          <keyValuePair id="995f3dc4-7c31-4303-a98e-bfcf9db22ea9" Key="MM" Value="" />
+          <keyValuePair id="c6cfde23-d41b-41ab-85fe-212da8d852ff" Key="MF" Value="" />
+          <keyValuePair id="8c0c68ca-5fb3-4e82-b36b-02da08071673" Key="FM" Value="" />
+          <keyValuePair id="7c613186-bf23-45c0-be7a-05c801d7f883" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+    </trigger-email-node>
+    <select-data-node id="29e6285c-91bf-4c63-b4a6-6a3d387a806c" X="80" Y="160" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="fa3b9ab3-6319-4395-b182-2eedb1e7a1c9" SelectCount="1">
+        <alias-list id="9ed17c8c-359e-40e3-8850-e219faf8e5a7">
+          <string id="05c81018-b8cd-4d00-84d1-29133efa5b4f" Value="Captain" />
+        </alias-list>
+        <order-by id="86551cb8-6947-45af-b283-7fd99f2b91e4" />
+        <alias-data-source id="ecf4de51-d019-4e47-a0ae-f165a03c1760" DataSource="Model:Global.Players">
+          <conditions id="9310e968-6da9-429d-90b5-32709df152f3">
+            <condition id="38b676da-3ca2-4212-8554-7e97420e5549" VariableId="Select:BasicData.ID" Comparison="EQ" Value="Model:Global.Team.CaptainID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="37bb71f2-c00a-4307-829c-0846622170f2" VariableId="Select:DBData.Traits.HasLeadershipTrait" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <join-node id="3d64b2d7-49dc-4097-b01b-a7a902bdcb11" X="1280" Y="160" NodeType="Join" NodeName="Set Name for New Node" />
+    <save-data-node id="47e5f58c-e000-405a-9b0c-a6e4b973b576" X="1680" Y="160" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="60fa31c4-2721-405e-8590-24f7db164c84">
+        <saveItem id="10f2744e-f252-4ba2-a6f0-641bd19c68cb" Key="Matches Passed" Value="0" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <state-node id="0b3ea38c-d750-4ddd-bad8-720760f94636" X="2080" Y="160" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="3775759a-a847-4902-b4ec-766fa40e60c3">
+        <string id="ae6d3848-b92b-4570-9a68-b4373103c0db" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <condition-node id="e77acfa1-f8c5-41c4-948e-66c7ad4e5eb1" X="2320" Y="160" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="88a98e5d-fb7c-4901-bf52-eb3dba283937">
+        <condition id="a0d47d81-ef35-46f6-b42b-96c63cceed07" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.CompType" Comparison="LTE" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-data-node id="7eedbc6d-daf8-469d-bbb8-9f7b2373ac11" X="2560" Y="160" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="2ea27a04-78a9-4713-a5c7-5dc0c33e0537">
+        <keyValuePair id="180eefa7-9f37-48e9-8340-d9dcd9b802cd" Key="SaveData:Matches Passed" Value="1" Operator="Add" />
+      </keyValues>
+    </modify-data-node>
+    <condition-node id="56371d5d-0505-4e0e-bf62-dd99c79baa7f" X="2800" Y="160" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="7bb3ee36-1922-4316-8248-e0963d4ba788">
+        <condition id="4227a907-5636-47fd-94ba-588d2dac0f1d" VariableId="SaveData:Matches Passed" Comparison="GTE" Value="15" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <select-data-node id="ccfc7b38-0ab8-45e7-b6c1-2492c78e6e67" X="320" Y="280" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="fdd2998c-d741-4a0e-82b7-ed516149d2c7" SelectCount="1">
+        <alias-list id="876f9dcb-b935-41bb-aa00-bc77a37336e8">
+          <string id="0ee3de44-08e8-4b4d-9637-cb795ec9d953" Value="Unavailable Captain" />
+        </alias-list>
+        <order-by id="802c80b1-1df9-40da-b8a0-c17ace7ec997" />
+        <alias-data-source id="59bd3aab-b551-4d2a-bdff-4996a29d253c" DataSource="Model:Global.Players">
+          <conditions id="d27f3fff-c305-41cb-88e1-0b363c0a3b36">
+            <condition id="f8ae94a8-2928-4377-9e8f-26fea01cab2c" VariableId="Select:BasicData.ID" Comparison="EQ" Value="Model:Global.Team.CaptainID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="66357d11-6059-4041-836e-7df215de53fe" VariableId="Select:DBData.Traits.HasLeadershipTrait" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="80b3d9c3-5a4f-4721-bf7e-5069fe2b289f" VariableId="Select:NextMatchData.IsAbleToPlay" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <select-data-node id="01feb142-47e3-4b45-a11a-b3545384c37c" X="-160" Y="160" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="49eca090-9b13-4502-83bf-8fc7fe3fecdb" SelectCount="1">
+        <alias-list id="a0a64fbb-cfee-4eb3-91f1-ed33333a73c5">
+          <string id="dce8a47d-59dd-4bbe-8d7e-4b1d822c2c6d" Value="Leader" />
+        </alias-list>
+        <order-by id="96f991fa-ca11-4716-b7ff-9c6074594fbe">
+          <keyValuePair id="59a8d67e-06eb-414f-9325-6ee9c7bee906" Key="Select:BasicData.Overall" Value="Desc" />
+        </order-by>
+        <alias-data-source id="b06f4013-7dc7-4326-9251-065082c8d1af" DataSource="Model:Global.Players">
+          <conditions id="5b3a3cca-a111-4cb4-80fc-425ae3411143">
+            <condition id="5d284a33-5a47-421b-8de5-d0197f6e50df" VariableId="Select:DBData.Traits.HasLeadershipTrait" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="a5d2789d-9499-45e8-9819-2ac7f22ee772" VariableId="Select:Status.Role" Comparison="LTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="363a64b1-37b9-41b8-95af-a208b71c879d" VariableId="Select:NextMatchData.IsAbleToPlay" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="e88dbc1f-04ad-4797-a2d7-df9da4ad336d" VariableId="Select:BasicData.ID" Comparison="NEQ" Value="Model:Global.Team.CaptainID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+  </nodes>
+  <groups id="c46cc822-8425-4c60-938f-5b700028e2b0" />
+  <connections id="45af72ed-cf01-40b5-8909-afc12ce3ae8a">
+    <connection id="f0e3ea6b-17b7-4f51-87c0-08a9be30654f" SrcNodeID="59f7e168-5663-4bbb-bec0-1958620127dd" SrcPortName="true" DstNodeID="9a0af942-6931-4702-aa71-85ca1cd87a63" DstPortName="enter" ConnectionOrder="0">
+      <points id="e77729e1-9775-4400-9ec5-6f3abe2af7d5" />
+    </connection>
+    <connection id="0557297a-6163-4bb8-858f-c65ecc479c12" SrcNodeID="9a0af942-6931-4702-aa71-85ca1cd87a63" SrcPortName="true" DstNodeID="12cd79b6-0322-46a4-a97e-f0d256e81cee" DstPortName="enter" ConnectionOrder="0">
+      <points id="c25920c4-28c1-498b-9850-0db99dbfe8d6" />
+    </connection>
+    <connection id="35d3499d-19e3-4529-a9a3-ec2e5bfec20d" SrcNodeID="29e6285c-91bf-4c63-b4a6-6a3d387a806c" SrcPortName="true" DstNodeID="59f7e168-5663-4bbb-bec0-1958620127dd" DstPortName="enter" ConnectionOrder="0">
+      <points id="2d52b6a4-2054-45a6-a719-94c60767be05" />
+    </connection>
+    <connection id="f3a970b0-9efc-4ab2-974d-49f80a190c07" SrcNodeID="6f71b9c9-0b09-4dab-b492-f089193c89fa" SrcPortName="advance" DstNodeID="3d64b2d7-49dc-4097-b01b-a7a902bdcb11" DstPortName="enter" ConnectionOrder="0">
+      <points id="f4572910-d1ff-48ef-9b11-42283516243d">
+        <point id="a961a094-3a3b-4899-83b9-5db204a5ad17" X="1245.78076543874" Y="318.510524334499" />
+      </points>
+    </connection>
+    <connection id="987b06d0-a194-48f7-af7a-00f16c38789d" SrcNodeID="12cd79b6-0322-46a4-a97e-f0d256e81cee" SrcPortName="advance" DstNodeID="3d64b2d7-49dc-4097-b01b-a7a902bdcb11" DstPortName="enter" ConnectionOrder="0">
+      <points id="7826f423-72f7-4798-a7c2-acf1324d9d7b">
+        <point id="883c3bf1-b91e-4a58-aea0-f8f06d34137a" X="1235" Y="-80" />
+      </points>
+    </connection>
+    <connection id="6409e061-1fec-420d-9ba9-1b2c9f4c4326" SrcNodeID="59f7e168-5663-4bbb-bec0-1958620127dd" SrcPortName="false" DstNodeID="3d64b2d7-49dc-4097-b01b-a7a902bdcb11" DstPortName="enter" ConnectionOrder="0">
+      <points id="e771fa59-446a-4972-a4a4-0498ac695703" />
+    </connection>
+    <connection id="87218fec-2343-468e-9c56-e8957c06f841" SrcNodeID="47e5f58c-e000-405a-9b0c-a6e4b973b576" SrcPortName="advance" DstNodeID="0b3ea38c-d750-4ddd-bad8-720760f94636" DstPortName="enter" ConnectionOrder="0">
+      <points id="811c9e3d-e0c0-4fc9-a64c-6c35e40b2157" />
+    </connection>
+    <connection id="52dd9615-123a-43a5-80ec-ef632cd85f58" SrcNodeID="0b3ea38c-d750-4ddd-bad8-720760f94636" SrcPortName="UserMatchCompleted" DstNodeID="e77acfa1-f8c5-41c4-948e-66c7ad4e5eb1" DstPortName="enter" ConnectionOrder="0">
+      <points id="93bb7c98-92d9-4b77-930e-71493ed1c123" />
+    </connection>
+    <connection id="d6ea85d7-fa1c-4951-a18b-6b520f23bf70" SrcNodeID="e77acfa1-f8c5-41c4-948e-66c7ad4e5eb1" SrcPortName="false" DstNodeID="0b3ea38c-d750-4ddd-bad8-720760f94636" DstPortName="enter" ConnectionOrder="0">
+      <points id="2e081c46-0d7c-4405-aa02-9c7068063d97">
+        <point id="7ac07dbf-b323-4cc5-a1c7-10e7ffff4e78" X="2480" Y="280" />
+        <point id="43374549-1554-4e7b-bdc3-f0e06ea8ccc0" X="2080" Y="280" />
+      </points>
+    </connection>
+    <connection id="8770122f-22eb-48df-bc05-20cfa01965bb" SrcNodeID="e77acfa1-f8c5-41c4-948e-66c7ad4e5eb1" SrcPortName="true" DstNodeID="7eedbc6d-daf8-469d-bbb8-9f7b2373ac11" DstPortName="enter" ConnectionOrder="0">
+      <points id="b4d65ace-20fc-4c19-b667-d78536c71427" />
+    </connection>
+    <connection id="06a9f23f-7747-4b72-af00-917062d3c75a" SrcNodeID="7eedbc6d-daf8-469d-bbb8-9f7b2373ac11" SrcPortName="advance" DstNodeID="56371d5d-0505-4e0e-bf62-dd99c79baa7f" DstPortName="enter" ConnectionOrder="0">
+      <points id="4255ca21-5eb8-47d5-b5aa-9124add78fa8" />
+    </connection>
+    <connection id="8faffbd3-df5e-498c-a264-c8ccd67ae7e4" SrcNodeID="56371d5d-0505-4e0e-bf62-dd99c79baa7f" SrcPortName="false" DstNodeID="0b3ea38c-d750-4ddd-bad8-720760f94636" DstPortName="enter" ConnectionOrder="0">
+      <points id="4a359f26-d510-417d-8402-652305868809">
+        <point id="3f2a805f-da57-45c1-a462-2609d174e4be" X="2960" Y="480" />
+        <point id="f6ae7934-299a-414f-82ef-15fe3fde567c" X="2080" Y="480" />
+      </points>
+    </connection>
+    <connection id="c8d2c9c3-fc7d-40f6-bf3d-acc454ca1e3c" SrcNodeID="3d64b2d7-49dc-4097-b01b-a7a902bdcb11" SrcPortName="advance" DstNodeID="47e5f58c-e000-405a-9b0c-a6e4b973b576" DstPortName="enter" ConnectionOrder="0">
+      <points id="72c5cfe5-1d87-4d65-843c-70040c552f5c" />
+    </connection>
+    <connection id="fe665dec-c1ac-4b99-b773-dd8a7ce49394" SrcNodeID="56371d5d-0505-4e0e-bf62-dd99c79baa7f" SrcPortName="true" DstNodeID="bb123e06-a4bb-4ca1-91ba-c03359f960c3" DstPortName="enter" ConnectionOrder="0">
+      <points id="e5503ef4-4ad3-4861-abb4-6636708bfbee" />
+    </connection>
+    <connection id="7eee8a15-3d5d-4148-a42e-23e220ce415a" SrcNodeID="29e6285c-91bf-4c63-b4a6-6a3d387a806c" SrcPortName="false" DstNodeID="ccfc7b38-0ab8-45e7-b6c1-2492c78e6e67" DstPortName="enter" ConnectionOrder="0">
+      <points id="8440d96d-6154-4c28-a57a-20805268cf84" />
+    </connection>
+    <connection id="4b01ec80-556d-4598-964b-3a2822ddb9e2" SrcNodeID="ccfc7b38-0ab8-45e7-b6c1-2492c78e6e67" SrcPortName="true" DstNodeID="6f71b9c9-0b09-4dab-b492-f089193c89fa" DstPortName="enter" ConnectionOrder="0">
+      <points id="67e766ba-bffa-49fb-a8f7-8d8b3773259e" />
+    </connection>
+    <connection id="6b023a83-2966-4970-90a8-9a314234c817" SrcNodeID="86bf6795-166b-46d9-bd8e-9ab0f02e93c7" SrcPortName="advance" DstNodeID="01feb142-47e3-4b45-a11a-b3545384c37c" DstPortName="enter" ConnectionOrder="0">
+      <points id="32e850eb-9f63-4a6d-a327-33222c0aea9f" />
+    </connection>
+    <connection id="87cfa44c-761c-4c4f-82af-ee5e6d470388" SrcNodeID="01feb142-47e3-4b45-a11a-b3545384c37c" SrcPortName="true" DstNodeID="29e6285c-91bf-4c63-b4a6-6a3d387a806c" DstPortName="enter" ConnectionOrder="0">
+      <points id="76d2148c-7df1-4dec-a5b1-0f27f52c4e08" />
+    </connection>
+  </connections>
+</StoryAsset>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="b1742463-cff9-4617-b49d-d681aba16fc2" name="Rest Day" deleted="False" valid="True">
+  <nodes id="bfd9be4b-3003-46a3-a3e2-18b74dd618a6">
+    <story-end-node id="b99dc995-a257-4b0f-a03d-085a1c2339cb" X="-4120" Y="-12560" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <story-start-node id="e02685fb-632f-4335-800e-d33f0df897a6" X="-5120" Y="-12560" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="SingleInstance" NodeEvent="DayPassed" StoryKey="" UseSelectData="True" RunInPlayerCareer="False" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="9ce144b5-cdfc-4713-bc54-d5f950605450">
+        <condition id="a8bdeff5-58a0-4093-bf37-6723465b5e76" VariableId="Model:DayPassed.PrevDayType" Comparison="EQ" Value="1" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+      <select-data id="d6204a48-8676-41f0-9101-a783c3a4695e" SelectCount="1">
+        <alias-list id="43b8b91c-6c4e-4901-a559-1c1549ad0ce1" />
+        <order-by id="ff0ab963-ad8c-403c-9406-f41ed4c3c857" />
+        <alias-data-source id="d67716be-a01c-4394-9ea6-90c1a29bb96c" DataSource="">
+          <conditions id="a582d6d7-ba2a-4501-af24-3883387de2ef" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <foreach-node id="4a1fa3dc-a818-4743-9395-fdf5c5b063d8" X="-4720" Y="-12560" NodeType="Foreach" NodeName="Set Name for New Node" ElementAlias="Current Player">
+      <alias-data-source id="56bedbb1-3fef-4015-84dd-f9fdaa3fd878" DataSource="Model:Global.Players">
+        <conditions id="fb8e1738-013a-4ada-9e24-679df9167e53" />
+      </alias-data-source>
+    </foreach-node>
+    <modify-morale-node id="854b13ae-e1d6-4b4a-b0d9-7480968683fe" X="-4720" Y="-12440" NodeType="ModifyMorale" NodeName="Set Name for New Node" PlayerId="Current Player:BasicData.ID" DecayPeriod="10" MoraleImpactType="Overall" MoraleTemplateType="Custom">
+      <emotion-impact id="c706329d-953b-46a1-bcea-f6a0d22dc7d2">
+        <keyValuePair id="21866ff6-043a-4477-a90e-43b4d730ba81" Key="VeryCalm" Value="1" />
+        <keyValuePair id="209814c1-fb79-4f97-b852-a53d31b130af" Key="Calm" Value="1" />
+        <keyValuePair id="085f782e-1ec1-4447-b551-df03c4fdcfab" Key="Normal" Value="1" />
+        <keyValuePair id="04f41bba-60a0-48e7-afbc-8e510a6605ac" Key="HotTemper" Value="1" />
+        <keyValuePair id="7297a4e0-df1e-461d-b557-e9f43c8a70c9" Key="Volcano" Value="1" />
+      </emotion-impact>
+      <personality-impact id="421d046d-e840-434f-b7ad-728afb8abe57">
+        <keyValuePair id="493558c9-9a28-4af7-8c12-8d5c9e67a232" Key="Selfish" Value="1" />
+        <keyValuePair id="986a568d-af2f-450f-b556-99b679b35b5c" Key="Individual" Value="1" />
+        <keyValuePair id="1da6129b-4b70-47fa-844b-91aec6bbfc7b" Key="Normal" Value="1" />
+        <keyValuePair id="b75495d5-d09a-4bc9-9682-217399742e43" Key="TeamPlayer" Value="1" />
+        <keyValuePair id="00d18af9-7320-4881-95d8-6e1ba4c1a47b" Key="UltimateProfessional" Value="1" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-sharpness-node id="93fe5f87-a33d-4470-8b85-edb259288b7b" X="-4520" Y="-12440" NodeType="ModifySharpness" NodeName="Set Name for New Node" PlayerId="Current Player Sharpness:BasicData.ID" ValueType="Absolute" Value="-2" />
+    <foreach-node id="5091ad0e-71a2-4b77-936a-60b6efeacc8f" X="-4520" Y="-12560" NodeType="Foreach" NodeName="Set Name for New Node" ElementAlias="Current Player Sharpness">
+      <alias-data-source id="38f26f84-22e2-4f40-bb96-d9c9ccaf2006" DataSource="Model:Global.Players">
+        <conditions id="7fc8795d-2f4c-4e50-96cf-34b5f567d92e">
+          <condition id="0bafbeb3-8c75-4c26-8d06-da7c3c06b92d" VariableId="Select:Status.IsOnInternationalDuty" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        </conditions>
+      </alias-data-source>
+    </foreach-node>
+    <modify-energy-node id="e5ad76f5-fb16-4f19-b4c5-d6d65e4df818" X="-4920" Y="-12440" NodeType="ModifyEnergy" NodeName="Set Name for New Node" PlayerId="Current Player Energy:BasicData.ID" ValueType="Absolute" Value="15" />
+    <foreach-node id="4d852e93-f552-4321-8785-4f6644257b5e" X="-4320" Y="-12560" NodeType="Foreach" NodeName="Set Name for New Node" ElementAlias="On International Duty">
+      <alias-data-source id="9c641dab-c855-49d9-8443-3d55382419b5" DataSource="Model:Global.Players">
+        <conditions id="4f1ab7b1-8867-4ca7-976c-c9266e821c9c">
+          <condition id="37b6b476-26d7-489b-a576-3b323e50eade" VariableId="Select:Status.IsOnInternationalDuty" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        </conditions>
+      </alias-data-source>
+    </foreach-node>
+    <modify-sharpness-node id="5f2d001c-4cee-4a29-9813-3527f68e0827" X="-4320" Y="-12440" NodeType="ModifySharpness" NodeName="Set Name for New Node" PlayerId="On International Duty:BasicData.ID" ValueType="Absolute" Value="7" />
+    <foreach-node id="cad0d259-8e53-4299-8683-d1eca99d1546" X="-4920" Y="-12560" NodeType="Foreach" NodeName="Set Name for New Node" ElementAlias="Current Player Energy">
+      <alias-data-source id="fe1adcbf-ff8b-43f7-b21a-904f4ca0ebb5" DataSource="Model:Global.Players">
+        <conditions id="8ef07095-2ad0-45db-80ef-2edb50ec9c38" />
+      </alias-data-source>
+    </foreach-node>
+  </nodes>
+  <groups id="f3b5c52c-c2d4-4a39-a191-c980262f0b6c" />
+  <connections id="e2f9d0cc-c010-49e8-9baa-3a30832fe70b">
+    <connection id="8d54811c-636b-4828-a442-22c42b5a1954" SrcNodeID="4a1fa3dc-a818-4743-9395-fdf5c5b063d8" SrcPortName="body" DstNodeID="854b13ae-e1d6-4b4a-b0d9-7480968683fe" DstPortName="enter" ConnectionOrder="0">
+      <points id="87b78da6-5208-4285-b47d-9432977d6625" />
+    </connection>
+    <connection id="0615299d-7bd0-410c-b386-6d0c66d2344d" SrcNodeID="854b13ae-e1d6-4b4a-b0d9-7480968683fe" SrcPortName="advance" DstNodeID="4a1fa3dc-a818-4743-9395-fdf5c5b063d8" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="38c7dbb7-2274-40be-ac53-6c0e78203361" />
+    </connection>
+    <connection id="065e161a-de1b-4e05-9420-485ff4b7c44e" SrcNodeID="4a1fa3dc-a818-4743-9395-fdf5c5b063d8" SrcPortName="advance" DstNodeID="5091ad0e-71a2-4b77-936a-60b6efeacc8f" DstPortName="enter" ConnectionOrder="0">
+      <points id="ae6fb0f6-2e9f-4145-aaa8-5a2074e8f828" />
+    </connection>
+    <connection id="5fe49d08-7b41-4298-999c-d3dbad489828" SrcNodeID="5091ad0e-71a2-4b77-936a-60b6efeacc8f" SrcPortName="body" DstNodeID="93fe5f87-a33d-4470-8b85-edb259288b7b" DstPortName="enter" ConnectionOrder="0">
+      <points id="c359e8ae-c2a7-4180-a273-988cebd6984d" />
+    </connection>
+    <connection id="cd7b0bfc-1c6b-4f7e-86bb-ecddd289c9e3" SrcNodeID="93fe5f87-a33d-4470-8b85-edb259288b7b" SrcPortName="advance" DstNodeID="5091ad0e-71a2-4b77-936a-60b6efeacc8f" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="e6e58898-5b38-4db2-bac0-12a416f98b1e" />
+    </connection>
+    <connection id="7456d512-e97f-4208-b8c6-d17a81ebb79a" SrcNodeID="4d852e93-f552-4321-8785-4f6644257b5e" SrcPortName="body" DstNodeID="5f2d001c-4cee-4a29-9813-3527f68e0827" DstPortName="enter" ConnectionOrder="0">
+      <points id="1561dc4a-cd61-4fcc-bcb8-71ca9e9d94db" />
+    </connection>
+    <connection id="ea237c45-7695-4e35-92d8-f95a11e69f69" SrcNodeID="5f2d001c-4cee-4a29-9813-3527f68e0827" SrcPortName="advance" DstNodeID="4d852e93-f552-4321-8785-4f6644257b5e" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="6d3fd5fc-7a7d-47a0-9f7b-2f111d7377e3" />
+    </connection>
+    <connection id="a85256ba-b30f-4223-8f10-cdb52bb47f3c" SrcNodeID="5091ad0e-71a2-4b77-936a-60b6efeacc8f" SrcPortName="advance" DstNodeID="4d852e93-f552-4321-8785-4f6644257b5e" DstPortName="enter" ConnectionOrder="0">
+      <points id="2ed94c5f-0d62-449c-85d0-4d7e8cddc541" />
+    </connection>
+    <connection id="f4d33cf9-fefa-4b93-89f4-97d4e3d15e22" SrcNodeID="4d852e93-f552-4321-8785-4f6644257b5e" SrcPortName="advance" DstNodeID="b99dc995-a257-4b0f-a03d-085a1c2339cb" DstPortName="enter" ConnectionOrder="0">
+      <points id="a1c109b2-1db3-4155-8552-1a24cdd3923c" />
+    </connection>
+    <connection id="70ab0eb3-7c27-478c-8742-cbe809b7bff6" SrcNodeID="e02685fb-632f-4335-800e-d33f0df897a6" SrcPortName="advance" DstNodeID="cad0d259-8e53-4299-8683-d1eca99d1546" DstPortName="enter" ConnectionOrder="0">
+      <points id="03d422ef-895b-4e76-b738-d14bbe8f707e" />
+    </connection>
+    <connection id="13e7f61c-2f70-4263-bfb2-2771ec305a0d" SrcNodeID="cad0d259-8e53-4299-8683-d1eca99d1546" SrcPortName="body" DstNodeID="e5ad76f5-fb16-4f19-b4c5-d6d65e4df818" DstPortName="enter" ConnectionOrder="0">
+      <points id="2517555d-ac2a-4bdf-92ba-f0c7c605272f" />
+    </connection>
+    <connection id="e43e9619-48d9-49fc-9530-dd8a07c109fa" SrcNodeID="e5ad76f5-fb16-4f19-b4c5-d6d65e4df818" SrcPortName="advance" DstNodeID="cad0d259-8e53-4299-8683-d1eca99d1546" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="54dd2549-8570-44d1-8be1-2deea251791f" />
+    </connection>
+    <connection id="47e34861-6999-40f7-960d-8dc128fe94b2" SrcNodeID="cad0d259-8e53-4299-8683-d1eca99d1546" SrcPortName="advance" DstNodeID="4a1fa3dc-a818-4743-9395-fdf5c5b063d8" DstPortName="enter" ConnectionOrder="0">
+      <points id="c2415a34-892b-44b2-896e-ea20b07f0252" />
+    </connection>
+  </connections>
+</StoryAsset>

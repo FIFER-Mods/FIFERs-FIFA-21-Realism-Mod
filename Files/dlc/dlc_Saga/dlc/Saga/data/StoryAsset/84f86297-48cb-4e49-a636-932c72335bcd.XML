@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="84f86297-48cb-4e49-a636-932c72335bcd" name="ModifyMorale" deleted="True" valid="False">
+  <nodes id="dd2fccc9-a05d-4cf8-8195-6fb88fbe7610">
+    <story-start-node id="1d80ceb8-6793-4177-8108-418dc2321be4" X="-240" Y="280" NodeType="StoryStart" NodeName="StartMoraleStory" StoryType="MultipleInstance" NodeEvent="UserMatchCompleted" StoryKey="Select:PlayerId" UseSelectData="True" RunInPlayerCareer="False" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="e615e3d2-a73d-42e6-ad97-bed373a3b7c8" />
+      <select-data id="90d20da6-8870-451a-bab2-bbc41e467870" SelectCount="1">
+        <alias-list id="dba187e5-ac4d-498e-8a76-1df8db6cbcce">
+          <string id="f919abb8-56f4-4f53-a6de-4b3043cca501" Value="HighestOverallPlayer" />
+        </alias-list>
+        <order-by id="cf2ce7d8-1b84-4ab8-a446-a3ea705fa206">
+          <keyValuePair id="19708035-dd87-4bde-9c32-35b6338b3c8a" Key="Select:Stats.Overall" Value="Desc" />
+        </order-by>
+        <alias-data-source id="01cb9345-2c43-4800-a3d7-c4bc4a3e0cd0" DataSource="Model:UserMatchCompleted.UserPlayers">
+          <conditions id="fef6ee06-b7c8-400b-9aa3-40873923eed8" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <story-end-node id="5a24fd68-236e-46f3-8092-fb35f62136f1" X="1040" Y="280" NodeType="StoryEnd" NodeName="EndTheStory" NodeEvent="" />
+    <modify-morale-node id="a40716ca-f541-498b-b559-a74d7ffbc090" X="280" Y="320" NodeType="ModifyMorale" NodeName="ModifyMorale" PlayerId="SaveData:HighestOverallPlayerID" DecayPeriod="10" MoraleImpactType="Overall" MoraleTemplateType="Custom">
+      <emotion-impact id="9ad58578-cd15-4234-b008-00d97be08618">
+        <keyValuePair id="3d7802f1-b1cf-4e4b-8167-1d059d2a2b74" Key="VeryCalm" Value="10" />
+        <keyValuePair id="1a38beba-3e5c-4eaa-bdbf-e6d9d81User_OVR_Higher_8c2" Key="Calm" Value="2" />
+        <keyValuePair id="3f8f2b2c-cedf-42bb-a9ee-5730bbde6282" Key="Normal" Value="0" />
+        <keyValuePair id="d832b1ab-e87b-42a0-920b-7e3adb13cd8c" Key="HotTemper" Value="-2" />
+        <keyValuePair id="0849c2e7-7712-4895-bd4e-b657629fa2a2" Key="Volcano" Value="-10" />
+      </emotion-impact>
+      <personality-impact id="26744f6c-9588-4e1b-b3f0-29d0f733ad19">
+        <keyValuePair id="b9e4a332-29e8-46ae-94cc-1561eab6ff55" Key="Selfish" Value="-10" />
+        <keyValuePair id="e720e985-52f4-4fb7-89a8-6bf5797c2aa1" Key="Individual" Value="-2" />
+        <keyValuePair id="4e3e81c2-236b-4f17-a4b5-5a39c559d1c6" Key="Normal" Value="0" />
+        <keyValuePair id="e1bd8565-7209-4a1e-8a60-acc16e3d7438" Key="TeamPlayer" Value="2" />
+        <keyValuePair id="4348614d-17b2-4345-b9f1-15b7fc14420d" Key="UltimateProfessional" Value="10" />
+      </personality-impact>
+    </modify-morale-node>
+    <state-node id="f71f4722-fc12-4e34-bd3e-4a80a47586e4" X="560" Y="280" NodeType="State" NodeName="WaitForContractRenewal">
+      <supported-events id="2d5b5e5e-66e6-4fdf-a53f-6d9133e78ecb">
+        <string id="a27c5a90-a043-4609-9cff-5fe05a888758" Value="UserContractRenewal" />
+      </supported-events>
+    </state-node>
+    <condition-node id="63a5c063-3b6d-401f-9617-bb15c08cda30" X="800" Y="280" NodeType="Condition" NodeName="CheckForPlayer">
+      <conditions id="9ca7315c-bd82-4ec9-bd44-49f607bb142b">
+        <condition id="134acdf8-993d-4f2c-a26c-7b2bd1c766ac" VariableId="Model:UserContractRenewal.PlayerId" Comparison="EQ" Value="SaveData:HighestOverallPlayerID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <save-data-node id="8d396ca0-f385-49a9-9d34-904115f80298" X="0" Y="320" NodeType="SaveData" NodeName="SavePlayerID">
+      <saveItems id="af0d8899-7bf7-4e05-aca5-822a2c54f1d5">
+        <saveItem id="fb896c12-97ed-4260-ab1b-b3a7195ea1b5" Key="HighestOverallPlayerID" Value="HighestOverallPlayer:PlayerId" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+  </nodes>
+  <groups id="b0f9ad10-3fdf-45b9-8108-c75c4aba253a" />
+  <connections id="dc878554-5fa1-433c-9368-4a554ec52d3d">
+    <connection id="53669161-992d-4680-b4d0-7904de2bfcc7" SrcNodeID="a40716ca-f541-498b-b559-a74d7ffbc090" SrcPortName="advance" DstNodeID="f71f4722-fc12-4e34-bd3e-4a80a47586e4" DstPortName="enter" ConnectionOrder="0">
+      <points id="fe26855c-60dc-4f4f-a570-71df1775d65a" />
+    </connection>
+    <connection id="3f7996b9-0e4d-4a35-89ce-ea88052f86d0" SrcNodeID="f71f4722-fc12-4e34-bd3e-4a80a47586e4" SrcPortName="UserContractRenewal" DstNodeID="63a5c063-3b6d-401f-9617-bb15c08cda30" DstPortName="enter" ConnectionOrder="0">
+      <points id="2c39c710-6228-4e6c-8ac5-469c79a533a5" />
+    </connection>
+    <connection id="329265b6-299c-464a-b5c3-aa905c290002" SrcNodeID="1d80ceb8-6793-4177-8108-418dc2321be4" SrcPortName="advance" DstNodeID="8d396ca0-f385-49a9-9d34-904115f80298" DstPortName="enter" ConnectionOrder="0">
+      <points id="7a8de88f-743b-400e-8cbb-3b60c7acc7c4" />
+    </connection>
+    <connection id="2fcb4cba-d48c-47a4-88c0-6d85dc0f50b8" SrcNodeID="8d396ca0-f385-49a9-9d34-904115f80298" SrcPortName="advance" DstNodeID="a40716ca-f541-498b-b559-a74d7ffbc090" DstPortName="enter" ConnectionOrder="0">
+      <points id="97065919-e626-4c4d-afdc-8c7ed3f0d6a8" />
+    </connection>
+    <connection id="b8de0978-9d19-4c4c-9261-3b8a33c27f63" SrcNodeID="63a5c063-3b6d-401f-9617-bb15c08cda30" SrcPortName="true" DstNodeID="5a24fd68-236e-46f3-8092-fb35f62136f1" DstPortName="enter" ConnectionOrder="0">
+      <points id="ea8365b6-46be-4a36-9ddb-85c5b338a940" />
+    </connection>
+    <connection id="a77d4d6a-02d9-4842-a5fe-9c0c0a866634" SrcNodeID="63a5c063-3b6d-401f-9617-bb15c08cda30" SrcPortName="false" DstNodeID="f71f4722-fc12-4e34-bd3e-4a80a47586e4" DstPortName="enter" ConnectionOrder="0">
+      <points id="a73c3d76-765a-4e0b-ae2a-21ac9d6cff6a">
+        <point id="5697e00a-87da-401a-9187-ae2e85a47fc5" X="958.821411327587" Y="450.894738358418" />
+        <point id="80dc2c3a-1f94-4912-8495-4ba46d9a8b06" X="547.463675675363" Y="446.372920033619" />
+      </points>
+    </connection>
+  </connections>
+</StoryAsset>

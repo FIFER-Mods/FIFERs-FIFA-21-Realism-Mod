@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="693660e6-5920-487d-811e-c9b5a56f20e3" name="Match Day" deleted="False" valid="True">
+  <nodes id="7407fc26-73ec-43dc-ad24-195996dd9c60">
+    <story-end-node id="70281f71-1faa-4c9c-9244-2a389e61efa3" X="-2696.7" Y="-12800" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <modify-sharpness-node id="d1c54ccf-4629-4568-8473-a9c6cf38022e" X="-4560" Y="-12640" NodeType="ModifySharpness" NodeName="Set Name for New Node" PlayerId="Player:PlayerId" ValueType="Absolute" Value="12" />
+    <modify-sharpness-node id="472ff815-6a38-4dcf-860e-ef94316e22f2" X="-4360" Y="-12520" NodeType="ModifySharpness" NodeName="Set Name for New Node" PlayerId="Player:PlayerId" ValueType="Absolute" Value="10" />
+    <condition-node id="df914181-3c27-47ba-b362-a9d53d129c71" X="-4560" Y="-12520" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="2ae8a18c-e4e6-4d61-b21c-5e0680806330">
+        <condition id="d97f61b0-22f7-41c6-8a3a-b1cb4377b7e1" VariableId="Player:TimeStats.MinutesPlayed" Comparison="GTE" Value="60" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="59364b30-1810-4ccb-ba04-54b3a1a36946" X="-4360" Y="-12360" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="1b7a84a7-4961-4029-9d90-cc6be1f0fd74">
+        <condition id="4b1d8a51-6502-40fa-a91b-1bc191094c64" VariableId="Player:TimeStats.MinutesPlayed" Comparison="GTE" Value="30" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-sharpness-node id="6eb8fc58-d3e8-43b0-9ccc-503460d9f779" X="-4160" Y="-12360" NodeType="ModifySharpness" NodeName="Set Name for New Node" PlayerId="Player:PlayerId" ValueType="Absolute" Value="7" />
+    <modify-sharpness-node id="8d2a8716-43b4-4f9f-9b4d-3454a75a871e" X="-3960" Y="-12160" NodeType="ModifySharpness" NodeName="Set Name for New Node" PlayerId="Player:PlayerId" ValueType="Absolute" Value="5" />
+    <condition-node id="46dadf4a-3771-44e7-b520-9c79b0341a90" X="-4760" Y="-12720" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="14c9f51b-1276-41a0-8a37-94217fe735a2">
+        <condition id="00ccc8b7-543a-4553-a369-c9e6197c9b9c" VariableId="Player:TimeStats.MinutesPlayed" Comparison="GTE" Value="90" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <story-start-node id="4b2275f6-7f48-4ac0-9ec5-411901fca832" X="-5200" Y="-12800" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="SingleInstance" NodeEvent="UserMatchCompleted" StoryKey="" UseSelectData="True" RunInPlayerCareer="False" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="24559b42-b36b-4612-ade2-3414c59768bf" />
+      <select-data id="6df1b5a5-c454-4df3-8cd3-ae5092535403" SelectCount="1">
+        <alias-list id="02dda8da-656f-45e4-8a67-a505dbaacb3a" />
+        <order-by id="de78c668-1e20-4e2f-a9de-12be18ca03b3" />
+        <alias-data-source id="f01ad1ac-0ba1-4705-9b2c-cf972d0a11aa" DataSource="">
+          <conditions id="553ff53e-20c6-4438-b5b8-a712fc961517" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <foreach-node id="5c380ecf-409a-4ca4-abf4-ca204711f20c" X="-4960" Y="-12800" NodeType="Foreach" NodeName="Set Name for New Node" ElementAlias="Player">
+      <alias-data-source id="980cbd56-077b-4ea8-bf9c-856d0866cea5" DataSource="Model:UserMatchCompleted.UserPlayers">
+        <conditions id="f92e137a-2a18-407c-8df5-465ff60ec3ad" />
+      </alias-data-source>
+    </foreach-node>
+    <foreach-node id="3da3e274-e0fa-4788-a217-cc8a422c0412" X="-4040" Y="-12800" NodeType="Foreach" NodeName="Set Name for New Node" ElementAlias="UnusedPlayer">
+      <alias-data-source id="a4e2e037-7bd9-4e8b-b1bd-7980307a39eb" DataSource="Model:Global.Players">
+        <conditions id="d9b2672f-116c-4a3a-8dfa-9a6604cb3ac8">
+          <condition id="145a842f-73c2-49be-b5e7-3247f96ecf6e" VariableId="Select:PreviousMatchData.MinutesPlayed" Comparison="LT" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        </conditions>
+      </alias-data-source>
+    </foreach-node>
+    <modify-energy-node id="f39e3bf4-98cf-4cae-a054-3ac6773d6f2f" X="-3840" Y="-12680" NodeType="ModifyEnergy" NodeName="Set Name for New Node" PlayerId="UnusedPlayer:BasicData.ID" ValueType="Absolute" Value="15" />
+    <modify-sharpness-node id="e61ea7ad-edfd-4359-9494-c9240d29ae6e" X="-2880" Y="-12680" NodeType="ModifySharpness" NodeName="Set Name for New Node" PlayerId="On International Duty:BasicData.ID" ValueType="Absolute" Value="7" />
+    <modify-sharpness-node id="86809b34-40dc-4c8f-b9d3-227b93e32dbc" X="-3400" Y="-12680" NodeType="ModifySharpness" NodeName="Set Name for New Node" PlayerId="Current Player:BasicData.ID" ValueType="Absolute" Value="-2" />
+    <foreach-node id="c6bb7b75-1c1e-41f6-8bd8-e02ed5069cde" X="-3080" Y="-12800" NodeType="Foreach" NodeName="Set Name for New Node" ElementAlias="On International Duty">
+      <alias-data-source id="db22aeca-334d-4969-a7b8-d24598e399e0" DataSource="Model:Global.Players">
+        <conditions id="8edbc97e-853c-43e8-951b-cae300093eca">
+          <condition id="3aceb11b-64b5-4e42-96a7-0e2ca7268988" VariableId="Select:Status.IsOnInternationalDuty" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          <condition id="6513a5cf-5eea-497e-a060-188734992a09" VariableId="Select:PreviousMatchData.MinutesPlayed" Comparison="LT" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        </conditions>
+      </alias-data-source>
+    </foreach-node>
+    <foreach-node id="e58f996e-2ec0-4ba0-badd-2fe88747fa1e" X="-3600" Y="-12800" NodeType="Foreach" NodeName="Set Name for New Node" ElementAlias="Current Player">
+      <alias-data-source id="19ddbf6c-58eb-490d-8397-35b9a85b80ac" DataSource="Model:Global.Players">
+        <conditions id="f750e2fb-e5cb-41e4-918c-88d6bc47ec84">
+          <condition id="cb99145c-a6c0-4dbd-acb7-2e3a42f89fdb" VariableId="Select:Status.IsOnInternationalDuty" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          <condition id="a8186436-87e1-4672-b940-aa9372d21ffa" VariableId="Select:PreviousMatchData.MinutesPlayed" Comparison="LT" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        </conditions>
+      </alias-data-source>
+    </foreach-node>
+  </nodes>
+  <groups id="d298b5ff-f79a-458c-ad2c-d5e5184bfeea" />
+  <connections id="419b7ddc-058d-449b-886e-0a2314095f76">
+    <connection id="6f95e30b-72fa-4db8-b711-c141d0d56623" SrcNodeID="df914181-3c27-47ba-b362-a9d53d129c71" SrcPortName="false" DstNodeID="59364b30-1810-4ccb-ba04-54b3a1a36946" DstPortName="enter" ConnectionOrder="0">
+      <points id="bd00b6b4-e908-4a3b-a9e7-16baed0b8183" />
+    </connection>
+    <connection id="5598cdaf-6271-47fe-8312-8a69fb92e7cd" SrcNodeID="46dadf4a-3771-44e7-b520-9c79b0341a90" SrcPortName="false" DstNodeID="df914181-3c27-47ba-b362-a9d53d129c71" DstPortName="enter" ConnectionOrder="0">
+      <points id="b871214c-6045-4a0a-a194-e0758a62ea68" />
+    </connection>
+    <connection id="b577946a-6fa2-44dc-8575-1b2324bb2064" SrcNodeID="4b2275f6-7f48-4ac0-9ec5-411901fca832" SrcPortName="advance" DstNodeID="5c380ecf-409a-4ca4-abf4-ca204711f20c" DstPortName="enter" ConnectionOrder="0">
+      <points id="0dfe6cd7-8b9b-4163-a899-da88623c8d68" />
+    </connection>
+    <connection id="64394d54-ee00-4d4b-9808-89f81e60e216" SrcNodeID="5c380ecf-409a-4ca4-abf4-ca204711f20c" SrcPortName="body" DstNodeID="46dadf4a-3771-44e7-b520-9c79b0341a90" DstPortName="enter" ConnectionOrder="0">
+      <points id="49a8dc14-f0fd-4a48-9384-aeda0eca3914" />
+    </connection>
+    <connection id="b2cb6888-6adb-46bb-8b7b-950811f2088b" SrcNodeID="46dadf4a-3771-44e7-b520-9c79b0341a90" SrcPortName="true" DstNodeID="d1c54ccf-4629-4568-8473-a9c6cf38022e" DstPortName="enter" ConnectionOrder="0">
+      <points id="c9df9042-0b0c-4e8b-bc35-6e4b9dc77c30" />
+    </connection>
+    <connection id="507535d0-6213-4e0c-9fde-c26bfcefa2e7" SrcNodeID="d1c54ccf-4629-4568-8473-a9c6cf38022e" SrcPortName="advance" DstNodeID="5c380ecf-409a-4ca4-abf4-ca204711f20c" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="78c0d4a7-09af-40d2-a2a5-74fa8c18a86b">
+        <point id="7927e13b-81f9-4f4a-94c1-6abc04ba0fa1" X="-4397.49603905103" Y="-12558.1815705214" />
+        <point id="b5dd2ff2-169c-4782-b02b-4b5ee9845489" X="-4965.49603905103" Y="-12558.1815705214" />
+      </points>
+    </connection>
+    <connection id="d67411a3-2be6-46ab-8082-adb5768f9441" SrcNodeID="df914181-3c27-47ba-b362-a9d53d129c71" SrcPortName="true" DstNodeID="472ff815-6a38-4dcf-860e-ef94316e22f2" DstPortName="enter" ConnectionOrder="0">
+      <points id="3bd37bdf-187a-49a3-9099-c70291a67c62" />
+    </connection>
+    <connection id="c2ee4a8d-0630-4bfe-a5cf-dd50092aa4a6" SrcNodeID="472ff815-6a38-4dcf-860e-ef94316e22f2" SrcPortName="advance" DstNodeID="5c380ecf-409a-4ca4-abf4-ca204711f20c" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="b184eee4-2b77-4dd2-b66f-ff61305d8cb9">
+        <point id="c6a6c44a-3c3f-44ae-bc92-986cf2b2c765" X="-4204.49603905103" Y="-12400.1815705214" />
+        <point id="231f2895-63e9-4bd2-9e1a-58b35212050c" X="-4975.49603905103" Y="-12397.1815705214" />
+      </points>
+    </connection>
+    <connection id="673aee59-de25-4938-a9a6-1d4e68ddc805" SrcNodeID="59364b30-1810-4ccb-ba04-54b3a1a36946" SrcPortName="true" DstNodeID="6eb8fc58-d3e8-43b0-9ccc-503460d9f779" DstPortName="enter" ConnectionOrder="0">
+      <points id="f9ac246c-a51c-4cd8-86a0-feb239dfa486" />
+    </connection>
+    <connection id="9b75e363-a203-410f-951a-004261221048" SrcNodeID="59364b30-1810-4ccb-ba04-54b3a1a36946" SrcPortName="false" DstNodeID="8d2a8716-43b4-4f9f-9b4d-3454a75a871e" DstPortName="enter" ConnectionOrder="0">
+      <points id="92d85a11-c8b1-4332-8503-141cdfb049a0" />
+    </connection>
+    <connection id="7d6785ee-fe46-453c-8580-4cd1aedf1b3c" SrcNodeID="6eb8fc58-d3e8-43b0-9ccc-503460d9f779" SrcPortName="advance" DstNodeID="5c380ecf-409a-4ca4-abf4-ca204711f20c" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="e900da79-d6af-43ef-8e9a-cf728cc25f4f">
+        <point id="7ec06e17-455d-4303-98ff-524f5e1e31e3" X="-3998.49603905103" Y="-12241.1815705214" />
+        <point id="03e97f6c-26ef-4d90-ae23-c0072f9be208" X="-4963.49603905103" Y="-12238.1815705214" />
+      </points>
+    </connection>
+    <connection id="4d5fd3b9-ecdb-43ec-a7ec-32b9b087414d" SrcNodeID="8d2a8716-43b4-4f9f-9b4d-3454a75a871e" SrcPortName="advance" DstNodeID="5c380ecf-409a-4ca4-abf4-ca204711f20c" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="ee3a3792-3a8a-4b92-823d-df61a9118be6">
+        <point id="16174ac6-b385-4919-9110-6aeaf2840983" X="-3801.9768082818" Y="-12040.3322115471" />
+        <point id="ae9a0965-fc89-4b7c-bfa1-41dc2255c063" X="-4962.9768082818" Y="-12044.0533653932" />
+      </points>
+    </connection>
+    <connection id="9acdf86c-f562-49d7-b930-b54ca6744a23" SrcNodeID="5c380ecf-409a-4ca4-abf4-ca204711f20c" SrcPortName="advance" DstNodeID="3da3e274-e0fa-4788-a217-cc8a422c0412" DstPortName="enter" ConnectionOrder="0">
+      <points id="5e188842-4f03-4bde-96ef-4509e19b7e32" />
+    </connection>
+    <connection id="d1c65788-7b14-42a1-ab1f-cd1504112202" SrcNodeID="3da3e274-e0fa-4788-a217-cc8a422c0412" SrcPortName="body" DstNodeID="f39e3bf4-98cf-4cae-a054-3ac6773d6f2f" DstPortName="enter" ConnectionOrder="0">
+      <points id="4c58f1b9-75bc-4ddf-97bf-3c202a26232f" />
+    </connection>
+    <connection id="da44a947-ff8d-4345-a4fa-395ca4facc17" SrcNodeID="e61ea7ad-edfd-4359-9494-c9240d29ae6e" SrcPortName="advance" DstNodeID="c6bb7b75-1c1e-41f6-8bd8-e02ed5069cde" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="2fef4b0d-a0e4-4623-b89c-6b14a79d4ec3">
+        <point id="87483ab5-5846-41b7-8240-7818a246d24d" X="-2721.41534979764" Y="-12556.8883251632" />
+        <point id="9d38aba6-438e-400f-8018-ac84ffcde10e" X="-3083.91534979764" Y="-12563.7633251632" />
+      </points>
+    </connection>
+    <connection id="5c7cb926-4e19-4955-830a-98ea1473cf55" SrcNodeID="86809b34-40dc-4c8f-b9d3-227b93e32dbc" SrcPortName="advance" DstNodeID="e58f996e-2ec0-4ba0-badd-2fe88747fa1e" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="b1ccd8d6-c4bb-4168-8ef6-1ab5add7f30c">
+        <point id="fb5131fd-41d1-4a25-96a6-da1aba9fa136" X="-3238.29034979764" Y="-12560.0133251632" />
+        <point id="d5f54804-b08a-40e3-aeb8-c1e2943e8ffb" X="-3603.29034979764" Y="-12559.3883251632" />
+      </points>
+    </connection>
+    <connection id="e98424e9-a9f1-4e65-ae78-3b006e4e708c" SrcNodeID="c6bb7b75-1c1e-41f6-8bd8-e02ed5069cde" SrcPortName="body" DstNodeID="e61ea7ad-edfd-4359-9494-c9240d29ae6e" DstPortName="enter" ConnectionOrder="0">
+      <points id="c84d1a04-ecab-495e-9806-d984c940281b" />
+    </connection>
+    <connection id="ffeb52ce-6577-4b64-9cb4-e3ea04fe3b8b" SrcNodeID="e58f996e-2ec0-4ba0-badd-2fe88747fa1e" SrcPortName="body" DstNodeID="86809b34-40dc-4c8f-b9d3-227b93e32dbc" DstPortName="enter" ConnectionOrder="0">
+      <points id="5c3d9123-fa09-43f4-b93f-0b0760c36def" />
+    </connection>
+    <connection id="900a56ae-bd08-402a-9d74-0757f2aba8d0" SrcNodeID="e58f996e-2ec0-4ba0-badd-2fe88747fa1e" SrcPortName="advance" DstNodeID="c6bb7b75-1c1e-41f6-8bd8-e02ed5069cde" DstPortName="enter" ConnectionOrder="0">
+      <points id="641c372b-b9cd-4ac2-b4fe-f411674b2e50" />
+    </connection>
+    <connection id="2908b8eb-d189-4fe6-99f9-9b6f114ce8ef" SrcNodeID="3da3e274-e0fa-4788-a217-cc8a422c0412" SrcPortName="advance" DstNodeID="e58f996e-2ec0-4ba0-badd-2fe88747fa1e" DstPortName="enter" ConnectionOrder="0">
+      <points id="11390543-2d35-4de0-951d-b024b70cc925" />
+    </connection>
+    <connection id="46cda757-822c-4cb0-8eb9-ebb45f0e1b08" SrcNodeID="f39e3bf4-98cf-4cae-a054-3ac6773d6f2f" SrcPortName="advance" DstNodeID="3da3e274-e0fa-4788-a217-cc8a422c0412" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="3d0d3a58-73a6-4007-8c2d-dbf64649c77a">
+        <point id="c59e10d8-f3c2-4e6f-ba5c-dfc9dbc8191d" X="-3679.4788473604" Y="-12563.2244904544" />
+        <point id="7b3c5e75-9919-485d-93f8-2496679ced05" X="-4041.66572555347" Y="-12559.2983454334" />
+      </points>
+    </connection>
+    <connection id="10d8e377-6071-4d28-b599-ffe1c680fb34" SrcNodeID="c6bb7b75-1c1e-41f6-8bd8-e02ed5069cde" SrcPortName="advance" DstNodeID="70281f71-1faa-4c9c-9244-2a389e61efa3" DstPortName="enter" ConnectionOrder="0">
+      <points id="a4070dfc-f3f4-4fff-a778-50435ebe32bd" />
+    </connection>
+  </connections>
+</StoryAsset>

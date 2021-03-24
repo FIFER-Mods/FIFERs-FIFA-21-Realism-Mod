@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="f2fa5a85-2ae2-4425-80fa-0f5590c23d6c" name="Loan Recall" deleted="False" valid="True">
+  <nodes id="ae1024b6-f21c-4370-bc19-29da39eca6e9">
+    <story-start-node id="d71b00cd-3aa1-4fcf-bb7e-98929b7b50fa" X="-120" Y="320" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="MultipleInstance" NodeEvent="DayPassed" StoryKey="Select:BasicData.ID" UseSelectData="True" RunInPlayerCareer="False" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="6b658337-3e73-4aa7-9609-87ed3e5a1959">
+        <condition id="a12a6698-c7e6-49f7-9e3b-900043f6cd58" VariableId="Model:Global.TimeOfSeason" Comparison="GTE" Value="2" Operator="OR" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+      <select-data id="714e0b6c-9645-4a57-87a7-0c876784253d" SelectCount="1">
+        <alias-list id="92e1024a-3dd3-41d0-8617-3766587172d4">
+          <string id="f7e8b4ad-cd36-44c1-b4e5-4621e4a19db8" Value="PlayerID" />
+        </alias-list>
+        <order-by id="3a3dd884-95b3-4102-937d-0275d33c3202" />
+        <alias-data-source id="131090d6-73ef-4fd1-9599-387b8a357843" DataSource="Model:Global.Players">
+          <conditions id="74675e60-cd57-415c-b19f-caee1f1f7c94">
+            <condition id="facf5c0d-0a5b-4582-9eea-237bec21439a" VariableId="Select:Status.IsLoanedIn" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="a9a03000-d1c6-4de6-871b-55232c2bf823" VariableId="Select:Morale.SquadRoleMorale" Comparison="LTE" Value="1" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <story-end-node id="598610c9-1e82-4efd-bc9a-84aec42e86de" X="2840" Y="320" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <trigger-email-node id="15b6ae79-f2c6-4b9b-b2a3-2b4a97098468" X="760" Y="320" NodeType="TriggerEmail" NodeName="Set Name for New Node" From="6" FromArg="0" To="1" CC="0" Subject="" SubjectSource="" Body="" BodySource="" Transition="1" PlayerId="PlayerID:BasicData.ID" TeamId="Model:Global.UserTeamID">
+      <stringWithArgsSubject id="1ed89cc5-f8c5-4690-9cb2-f552907abc01" StringID="CM_Mail_LoanPlayerRecall_NoPlaytime_Subject" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="b641c161-d73e-4af7-834a-31e3cbb1a3a3">
+          <stringArgument id="bc5b7094-d20f-412b-8f9a-8f38eee1a525" Value="PlayerID:BasicData.ID" Format="7" />
+        </stringArguments>
+        <stringContent id="33fe8d3e-435e-4ce9-b759-b80499721409">
+          <keyValuePair id="d08589e7-6f89-4ada-a1a7-bb8f5b3ff123" Key="M" Value="%1s Appearances" />
+          <keyValuePair id="07eabd04-d9a6-454e-af01-4c382e6fe257" Key="F" Value="" />
+          <keyValuePair id="f3ae8fcf-b407-491d-ba08-25f234260ea6" Key="MM" Value="" />
+          <keyValuePair id="34a28acb-b092-4ab1-a58c-dc8bced62dd8" Key="MF" Value="" />
+          <keyValuePair id="9c11b5b6-057b-49ff-90ad-bd626806da07" Key="FM" Value="" />
+          <keyValuePair id="4cabe9c8-d1c3-4c91-bc39-b3d3ed9be5b7" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsSubject>
+      <stringWithArgsBody id="00df25e8-6b17-4742-bc6a-533632c316b0" StringID="CM_Mail_LoanPlayerRecall_NoPlaytime_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="f0d988a8-bbc8-4da8-8594-1a61eb6da1ad">
+          <stringArgument id="b7534a08-1311-4f9c-9b9a-1d7f73fdaff6" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="0c5dde31-2f01-4387-be8a-c935623535ba" Value="SaveData:ParentClubID" Format="11" />
+          <stringArgument id="cc676da9-d1d1-4216-9b28-f714cb5c3da8" Value="SaveData:PlayerID" Format="6" />
+        </stringArguments>
+        <stringContent id="308c334d-c336-4a8e-85ee-ac491027989d">
+          <keyValuePair id="1aa24374-6ff4-4745-aedf-7d69885a276f" Key="M" Value="Good morning %1s,\n\nI wanted to let you know %2s have been in touch. They are apparently unhappy with how little playing time %3s has had with us while on loan. They are concerned that this is hampering their player's development. They have suggested that they will look at recalling %3s from his loan if the situation isn't resolved. They want to know if we plan to offer their player more games in the near future.\n\nBest regards,\nChief Executive" />
+          <keyValuePair id="b8ce2728-8722-4ced-ac06-e3b80708cbd1" Key="F" Value="Good morning %1s,\n\nI wanted to let you know %2s have been in touch. They are apparently unhappy with how little playing time %3s has had with us while on loan. They are concerned that this is hampering their player's development. They have suggested that they will look at recalling %3s from his loan if the situation isn't resolved. They want to know if we plan to offer their player more games in the near future.\n\nBest regards,\nChief Executive" />
+          <keyValuePair id="66a39985-d2b0-421b-aeaf-631d641415a2" Key="MM" Value="" />
+          <keyValuePair id="170293e9-f800-494c-b2c2-e47f441cc65b" Key="MF" Value="" />
+          <keyValuePair id="a4da4d30-02f9-41fa-8d32-2e50f8aff7d2" Key="FM" Value="" />
+          <keyValuePair id="f51e579a-65c3-4a41-ba15-48e68c6d79db" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+    </trigger-email-node>
+    <select-data-node id="4bbc0233-17e0-4077-b97d-81bcdf8038a5" X="240" Y="320" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="39d3dee9-3b63-4c40-ab15-19202626fc5e" SelectCount="1">
+        <alias-list id="b42318f7-e94c-42ad-abbc-e97ecf503d96">
+          <string id="5c50470e-fb45-4753-875b-090491f158ea" Value="LoanedPlayer" />
+        </alias-list>
+        <order-by id="2b8dae93-c7c7-478d-b666-1a5123d1900e" />
+        <alias-data-source id="7b4e189e-f22e-4ec9-9336-3edde979c1b2" DataSource="Model:Global.LoanedPlayers">
+          <conditions id="ded29d3f-caac-48ed-81e6-bd708bc7f443">
+            <condition id="2d0246f1-ca26-4b67-8fde-1557151d1467" VariableId="Select:PlayerID" Comparison="EQ" Value="PlayerID:BasicData.ID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <save-data-node id="00995a8a-fb2a-4abc-9adf-cc5bc9d9d2e7" X="480" Y="320" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="dbc4098d-9377-4482-8fcb-2ef259258cb6">
+        <saveItem id="304592a1-6f51-4e05-a68e-cd783ac1dceb" Key="ParentClubID" Value="LoanedPlayer:FromTeamID" ValueType="int" />
+        <saveItem id="18459233-7237-4e49-85bc-9120f6f964b2" Key="PlayerID" Value="PlayerID:BasicData.ID" ValueType="int" />
+        <saveItem id="8ff2df19-05d7-4936-b974-17b9bc3b4e06" Key="DaysPassed" Value="0" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <state-node id="e10bc37c-3a5b-4f14-b1c4-bbcc0609fff7" X="1160" Y="320" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="f9239b9e-e592-4b44-b2a8-fbae5ec04c40">
+        <string id="074f880e-58c4-4ab0-bb24-2c62151dec6e" Value="DayPassed" />
+      </supported-events>
+    </state-node>
+    <select-data-node id="c0212d44-2380-44b0-8297-93ea9ef35ba5" X="1760" Y="320" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="3f7339e7-a4e1-46b6-94bc-a31718ee7df6" SelectCount="1">
+        <alias-list id="e415c2fd-adc0-4bdd-aa8a-168461bf6103">
+          <string id="775df55d-a769-4b4f-a842-8b33ae974314" Value="PlayerLater" />
+        </alias-list>
+        <order-by id="555834e0-18f4-4302-9421-56c9cfe19941" />
+        <alias-data-source id="8a818c12-1970-4cfc-81ad-0c612831c15f" DataSource="Model:Global.Players">
+          <conditions id="b1e41fcc-0fca-4305-ad96-7ed7837ee2ba">
+            <condition id="7ccaa8df-af12-4166-9bf3-586b32296b45" VariableId="Select:BasicData.ID" Comparison="EQ" Value="SaveData:PlayerID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <condition-node id="fa3b8c45-ed80-4ffc-b9f5-0e1032bb58f7" X="2040" Y="320" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="38a99de7-4717-43c9-8007-19495acf0280">
+        <condition id="61fcced6-1944-4504-bb47-5740a7980019" VariableId="PlayerLater:Morale.SquadRoleMorale" Comparison="LTE" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <recall-loan-node id="1b08d98b-f991-4b67-8a37-679a1e5a537f" X="2320" Y="320" NodeType="RecallLoan" NodeName="Set Name for New Node" PlayerId="SaveData:PlayerID" />
+    <trigger-email-node id="c6727c4b-6f20-4910-887f-8d46328e3f6f" X="2560" Y="320" NodeType="TriggerEmail" NodeName="Set Name for New Node" From="6" FromArg="0" To="1" CC="0" Subject="" SubjectSource="" Body="" BodySource="" Transition="0" PlayerId="-1" TeamId="-1">
+      <stringWithArgsSubject id="a2f460e2-ae71-45e7-8deb-d5dc4eefcfcc" StringID="CM_Mail_LoanPlayerRecall_NoPlaytime_Recalled_Subject" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="a1d2db27-a2d5-44b6-8976-a325680d57f4">
+          <stringArgument id="9cfc2759-7e8f-4853-9f62-04812df08781" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="c79ea18f-ee9d-4dc8-bc36-590d37ad0479" Value="SaveData:ParentClubID" Format="12" />
+        </stringArguments>
+        <stringContent id="875e1c17-2324-4452-9d05-aaa3b43866ae">
+          <keyValuePair id="c7807e19-1452-4e54-89fe-8b045f4e207e" Key="M" Value="%1s Recalled by %2s" />
+          <keyValuePair id="51693ce1-1618-42c3-a667-570cfd5a0dc6" Key="F" Value="" />
+          <keyValuePair id="10f49ff4-b46e-4494-9bf2-23ac2678eb69" Key="MM" Value="" />
+          <keyValuePair id="9e6b1620-d3cf-4ec1-ae8c-56c76471ab81" Key="MF" Value="" />
+          <keyValuePair id="ad1e4cff-be80-45bc-8221-f1f5c637ce4a" Key="FM" Value="" />
+          <keyValuePair id="de8fd026-19d8-4488-a509-70caf9e11de0" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsSubject>
+      <stringWithArgsBody id="2aa4932c-eb1c-42ff-98c1-3c500e524491" StringID="CM_Mail_LoanPlayerRecall_NoPlaytime_Recalled_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="1566fb21-b37e-4469-8893-a356d420f203">
+          <stringArgument id="74dcfb9a-e348-4d5a-80fa-acb93eb1604d" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="74cd273a-444e-4a22-b6df-a50283e06ba5" Value="SaveData:ParentClubID" Format="11" />
+          <stringArgument id="c4c9970c-25d8-46fc-8f46-673edf563c29" Value="SaveData:PlayerID" Format="6" />
+        </stringArguments>
+        <stringContent id="1f672fbd-7889-4916-8620-96b99b891157">
+          <keyValuePair id="2ff1ca4b-0397-44ef-8ebb-1c7520cc12b8" Key="M" Value="Good afternoon %1s,\n\nUnfortunately, I've heard again from %2s regarding the lack of playing time for %3s while on loan with us. Given that the player's situation hasn't improved, they have advised that they wish to recall him. To avoid this kind of problem arising again in the future, could I strongly recommend that you look at your current loan policy. Perhaps our focus should be on bringing in only players you believe will be of immediate and essential use to us as a club. Thanks.\n\nRegards,\nChief Executive" />
+          <keyValuePair id="e52f3757-b0de-4096-8701-48f3b4e27092" Key="F" Value="Good afternoon %1s,\n\nUnfortunately, I've heard again from %2s regarding the lack of playing time for %3s while on loan with us. Given that the player's situation hasn't improved, they have advised that they wish to recall him. To avoid this kind of problem arising again in the future, could I strongly recommend that you look at your current loan policy. Perhaps our focus should be on bringing in only players you believe will be of immediate and essential use to us as a club. Thanks.\n\nRegards,\nChief Executive" />
+          <keyValuePair id="26b3af94-10f1-495e-a65f-35efd9a21e79" Key="MM" Value="" />
+          <keyValuePair id="71f2c4e0-e52c-43bb-bece-11c6108d5100" Key="MF" Value="" />
+          <keyValuePair id="0ba51489-338d-424e-82cb-00db32154606" Key="FM" Value="" />
+          <keyValuePair id="72fed6cd-58c3-47b2-af86-a72c0c2f5d26" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+    </trigger-email-node>
+    <condition-node id="3c822014-f1e5-4cbd-aca8-923a8f59fb6f" X="1440" Y="320" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="4ba77e08-3bc3-4c96-b38b-6b9dcfe20175">
+        <condition id="13a37026-999f-4df2-881b-4b4457c7297b" VariableId="Model:DayPassed.Month" Comparison="EQ" Value="1" Operator="OR" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="65fbae3a-7118-4939-99d2-73af30f9d70d" VariableId="Model:DayPassed.Month" Comparison="EQ" Value="7" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="61f69c87-1b89-4176-94d6-fd079aba388e" VariableId="Model:DayPassed.Month" Comparison="EQ" Value="8" Operator="" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+  </nodes>
+  <groups id="53b7e52a-2e90-4d28-b182-9774d774d3d3" />
+  <connections id="028fbbfa-fbfc-4331-a9f9-59fe0f14ca7d">
+    <connection id="a9fd736b-6d3f-4bf7-a938-dc3b3303f5a2" SrcNodeID="d71b00cd-3aa1-4fcf-bb7e-98929b7b50fa" SrcPortName="advance" DstNodeID="4bbc0233-17e0-4077-b97d-81bcdf8038a5" DstPortName="enter" ConnectionOrder="0">
+      <points id="6656efe4-21b6-422d-b907-6db18ad813e2" />
+    </connection>
+    <connection id="f28974a1-e6ec-42a2-9c65-7b00c9a9d243" SrcNodeID="4bbc0233-17e0-4077-b97d-81bcdf8038a5" SrcPortName="true" DstNodeID="00995a8a-fb2a-4abc-9adf-cc5bc9d9d2e7" DstPortName="enter" ConnectionOrder="0">
+      <points id="29bd226d-dfad-4715-a1e2-7d6b3658781b" />
+    </connection>
+    <connection id="1c76c9a0-2727-4eca-88b4-8044ec514a46" SrcNodeID="15b6ae79-f2c6-4b9b-b2a3-2b4a97098468" SrcPortName="advance" DstNodeID="e10bc37c-3a5b-4f14-b1c4-bbcc0609fff7" DstPortName="enter" ConnectionOrder="0">
+      <points id="7471821e-c75c-41a3-bb75-6cdfd99c530c" />
+    </connection>
+    <connection id="03efec9e-8c1d-4608-a06e-08bbe6b638fd" SrcNodeID="c0212d44-2380-44b0-8297-93ea9ef35ba5" SrcPortName="true" DstNodeID="fa3b8c45-ed80-4ffc-b9f5-0e1032bb58f7" DstPortName="enter" ConnectionOrder="0">
+      <points id="4113e3e3-754c-4013-b5e9-3fb37d2a2f6f" />
+    </connection>
+    <connection id="464f15bc-52ba-43e8-bf53-1efd06dad6f2" SrcNodeID="fa3b8c45-ed80-4ffc-b9f5-0e1032bb58f7" SrcPortName="true" DstNodeID="1b08d98b-f991-4b67-8a37-679a1e5a537f" DstPortName="enter" ConnectionOrder="0">
+      <points id="d03bc888-346e-49db-b181-18ee3d9d4bc4" />
+    </connection>
+    <connection id="3db60d17-898f-4777-8056-698e6f65ba48" SrcNodeID="1b08d98b-f991-4b67-8a37-679a1e5a537f" SrcPortName="advance" DstNodeID="c6727c4b-6f20-4910-887f-8d46328e3f6f" DstPortName="enter" ConnectionOrder="0">
+      <points id="2d794e6e-6ba8-4d7c-b3cb-adbe4df3a008" />
+    </connection>
+    <connection id="a8121e76-3422-428e-a89b-6cb377ba5c15" SrcNodeID="c6727c4b-6f20-4910-887f-8d46328e3f6f" SrcPortName="advance" DstNodeID="598610c9-1e82-4efd-bc9a-84aec42e86de" DstPortName="enter" ConnectionOrder="0">
+      <points id="13cd0c76-19bc-41d1-ac92-f7b2a208427f" />
+    </connection>
+    <connection id="c9588a86-4c58-4ecf-9606-4127efd8c688" SrcNodeID="e10bc37c-3a5b-4f14-b1c4-bbcc0609fff7" SrcPortName="DayPassed" DstNodeID="3c822014-f1e5-4cbd-aca8-923a8f59fb6f" DstPortName="enter" ConnectionOrder="0">
+      <points id="19add6a5-c444-4f4d-a275-05d9af922c57" />
+    </connection>
+    <connection id="f572b508-5248-4fcf-91bf-274918605372" SrcNodeID="00995a8a-fb2a-4abc-9adf-cc5bc9d9d2e7" SrcPortName="advance" DstNodeID="15b6ae79-f2c6-4b9b-b2a3-2b4a97098468" DstPortName="enter" ConnectionOrder="0">
+      <points id="a58860cb-0ba7-47a1-923a-291c178a74d8" />
+    </connection>
+    <connection id="3ed59440-0a1a-4c29-8b69-3b533ffffc7d" SrcNodeID="3c822014-f1e5-4cbd-aca8-923a8f59fb6f" SrcPortName="false" DstNodeID="e10bc37c-3a5b-4f14-b1c4-bbcc0609fff7" DstPortName="enter" ConnectionOrder="0">
+      <points id="51ec50cf-921e-4641-99c1-a68446922fb7">
+        <point id="05aa24d1-5069-4311-a146-ef36be238793" X="1600" Y="440" />
+        <point id="f66c703e-2ae9-4351-b636-f0ccfa350987" X="1160" Y="440" />
+      </points>
+    </connection>
+    <connection id="8fd730d0-1e03-4abf-bcda-49bdc35f3d2a" SrcNodeID="3c822014-f1e5-4cbd-aca8-923a8f59fb6f" SrcPortName="true" DstNodeID="c0212d44-2380-44b0-8297-93ea9ef35ba5" DstPortName="enter" ConnectionOrder="0">
+      <points id="425bbe9a-6e28-4ee9-88c0-4efea9a229dd" />
+    </connection>
+    <connection id="5159c2c5-016e-4b47-a791-3a74db092a60" SrcNodeID="fa3b8c45-ed80-4ffc-b9f5-0e1032bb58f7" SrcPortName="false" DstNodeID="e10bc37c-3a5b-4f14-b1c4-bbcc0609fff7" DstPortName="enter" ConnectionOrder="0">
+      <points id="925336b0-e8b5-4111-a0b8-5595ff7c7881">
+        <point id="b1f2f59b-fedc-4625-98d6-ceff485b4168" X="2200" Y="480" />
+        <point id="138b84c1-5d7c-4561-9563-9d3a76061725" X="1160" Y="480" />
+      </points>
+    </connection>
+  </connections>
+</StoryAsset>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="b5eb30d3-2cd3-4505-84a5-42e8f826b934" name="Training Day Participated" deleted="False" valid="True">
+  <nodes id="a48ec889-8fb6-4a59-a1c3-ffc26473c1d5">
+    <story-start-node id="c480af6e-649f-4021-b29f-0f794e162bbd" X="-4720" Y="-12320" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="SingleInstance" NodeEvent="UserTrainingCompleted" StoryKey="" UseSelectData="True" RunInPlayerCareer="False" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="f9b0b62c-46a6-4b34-8b92-9b42cc5cb182" />
+      <select-data id="430338d3-03ee-47c6-a2d4-3bb880d2bca8" SelectCount="1">
+        <alias-list id="637a0d6a-08e2-41e8-ba4d-14bb82effad9" />
+        <order-by id="e09ea2f8-8512-45aa-a8af-5744cca0934f" />
+        <alias-data-source id="62cb6680-2a03-49f2-a781-32b82418e961" DataSource="">
+          <conditions id="9c26ba87-f125-45df-b374-de5649e0c760" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <set-training-session-result-node id="06483e97-e586-4036-b05b-a3932ad120d7" X="-4360" Y="-12240" NodeType="SetTrainingSessionResult" NodeName="Set Name for New Node" PlayerId="EachPlayer:PlayerId" ResultNumPlayers="SaveData:ResultNumPlayers" ResultDifficulty="SaveData:ResultDifficulty" ResultGrade="SaveData:ResultGrade">
+      <trainingSessionResults id="770eae37-3f3e-451f-ac42-556c668d1705">
+        <trainingSessionResult id="5c9f596b-9246-4a3c-82d8-73341bb6dc0d" EnergyValue="-5" SharpnessValue="5" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="One" Difficulty="Easy" Grade="A" />
+        <trainingSessionResult id="a4e35bc4-f5de-4c4a-b133-7bde1298176d" EnergyValue="-5" SharpnessValue="4" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="One" Difficulty="Easy" Grade="B" />
+        <trainingSessionResult id="0e6edfa1-2341-45e9-bca8-caca0187bba3" EnergyValue="-5" SharpnessValue="3" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="One" Difficulty="Easy" Grade="C" />
+        <trainingSessionResult id="6c9c1fe3-3a1e-4afe-ba03-e29cb60df498" EnergyValue="-5" SharpnessValue="2" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="One" Difficulty="Easy" Grade="D" />
+        <trainingSessionResult id="70275bc3-fdeb-4e4d-affc-89cda3384405" EnergyValue="-5" SharpnessValue="1" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="One" Difficulty="Easy" Grade="F" />
+        <trainingSessionResult id="7ab59e5e-d2b5-4a89-bf7e-2c07dcec463c" EnergyValue="-10" SharpnessValue="12" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="One" Difficulty="Medium" Grade="A" />
+        <trainingSessionResult id="348e0af2-3393-4432-a306-806f39a6d9cc" EnergyValue="-10" SharpnessValue="9" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="One" Difficulty="Medium" Grade="B" />
+        <trainingSessionResult id="c030c4bd-d84e-493a-b6e9-9f2bbbbda368" EnergyValue="-10" SharpnessValue="6" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="One" Difficulty="Medium" Grade="C" />
+        <trainingSessionResult id="faa10c30-3df8-47ee-a038-ac1639c324cf" EnergyValue="-10" SharpnessValue="3" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="One" Difficulty="Medium" Grade="D" />
+        <trainingSessionResult id="2daa2588-b8a6-4dd0-a78d-f7b747923f3d" EnergyValue="-10" SharpnessValue="2" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="One" Difficulty="Medium" Grade="F" />
+        <trainingSessionResult id="4a997aaf-35b5-4441-8fb1-10c93e3c5133" EnergyValue="-15" SharpnessValue="20" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="One" Difficulty="Hard" Grade="A" />
+        <trainingSessionResult id="c0ea736c-24c1-4be3-a1f3-4f45f6675477" EnergyValue="-15" SharpnessValue="15" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="One" Difficulty="Hard" Grade="B" />
+        <trainingSessionResult id="4df89198-4947-4530-a743-273c334af4e4" EnergyValue="-15" SharpnessValue="10" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="One" Difficulty="Hard" Grade="C" />
+        <trainingSessionResult id="8686962b-d608-405a-8f32-a281e3cf90e9" EnergyValue="-15" SharpnessValue="5" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="One" Difficulty="Hard" Grade="D" />
+        <trainingSessionResult id="eaf12f97-c23f-48e0-bb69-6f7b951d2151" EnergyValue="-15" SharpnessValue="3" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="One" Difficulty="Hard" Grade="F" />
+        <trainingSessionResult id="f835252b-93d7-4d80-bd2b-b43a874d4cb1" EnergyValue="-6" SharpnessValue="7" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Two" Difficulty="Easy" Grade="A" />
+        <trainingSessionResult id="73bd77f3-5699-4d4e-a100-df31a7757f7f" EnergyValue="-6" SharpnessValue="5" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Two" Difficulty="Easy" Grade="B" />
+        <trainingSessionResult id="f755f789-d756-4e6c-a7cd-cacc469180d2" EnergyValue="-6" SharpnessValue="4" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Two" Difficulty="Easy" Grade="C" />
+        <trainingSessionResult id="af794e1c-5128-4c2a-9f1a-cce5ce5c3234" EnergyValue="-6" SharpnessValue="2" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Two" Difficulty="Easy" Grade="D" />
+        <trainingSessionResult id="68bfbdcb-6ef4-4644-9840-69e4e4e89373" EnergyValue="-6" SharpnessValue="0" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Two" Difficulty="Easy" Grade="F" />
+        <trainingSessionResult id="be4e150a-e6cc-46f3-88db-0e4cb520ac5f" EnergyValue="-8" SharpnessValue="10" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Two" Difficulty="Medium" Grade="A" />
+        <trainingSessionResult id="7d411f6c-8658-4d24-b8e4-cdad900c6473" EnergyValue="-8" SharpnessValue="7" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Two" Difficulty="Medium" Grade="B" />
+        <trainingSessionResult id="30f1b046-0344-4baf-9f01-880156533d20" EnergyValue="-8" SharpnessValue="5" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Two" Difficulty="Medium" Grade="C" />
+        <trainingSessionResult id="cf772d6f-837d-48f4-a299-ab3db848007b" EnergyValue="-8" SharpnessValue="2" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Two" Difficulty="Medium" Grade="D" />
+        <trainingSessionResult id="fa66e6c4-4e6b-490f-bf7f-26451b8643c7" EnergyValue="-8" SharpnessValue="0" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Two" Difficulty="Medium" Grade="F" />
+        <trainingSessionResult id="aae5a281-328b-48dc-829b-613373ea19a1" EnergyValue="-10" SharpnessValue="12" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Two" Difficulty="Hard" Grade="A" />
+        <trainingSessionResult id="e7ed0d2a-aff2-41aa-8bf7-6cae9ff7437a" EnergyValue="-10" SharpnessValue="9" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Two" Difficulty="Hard" Grade="B" />
+        <trainingSessionResult id="0c642884-0aad-4658-9a70-9165ab956b22" EnergyValue="-10" SharpnessValue="6" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Two" Difficulty="Hard" Grade="C" />
+        <trainingSessionResult id="4b835ee6-c42d-4ca1-bef9-faa233b8c680" EnergyValue="-10" SharpnessValue="2" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Two" Difficulty="Hard" Grade="D" />
+        <trainingSessionResult id="1315b4aa-96aa-4f30-9723-5879bdadbe29" EnergyValue="-10" SharpnessValue="0" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Two" Difficulty="Hard" Grade="F" />
+        <trainingSessionResult id="f5d19f34-03fb-4088-a2ac-f81767975898" EnergyValue="-6" SharpnessValue="6" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Three" Difficulty="Easy" Grade="A" />
+        <trainingSessionResult id="f41d4b82-4a2e-496e-830b-c2b00a62123c" EnergyValue="-6" SharpnessValue="4" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Three" Difficulty="Easy" Grade="B" />
+        <trainingSessionResult id="0f2c6c6e-385f-4dc3-b413-0b5c67f12cba" EnergyValue="-6" SharpnessValue="3" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Three" Difficulty="Easy" Grade="C" />
+        <trainingSessionResult id="e241c7b4-2b6f-40bd-89ab-c4d35eb53060" EnergyValue="-6" SharpnessValue="2" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Three" Difficulty="Easy" Grade="D" />
+        <trainingSessionResult id="a2100a41-a8fb-48af-959d-89ed186df994" EnergyValue="-6" SharpnessValue="0" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Three" Difficulty="Easy" Grade="F" />
+        <trainingSessionResult id="df570215-cb18-41df-8cd7-8683429fdae9" EnergyValue="-8" SharpnessValue="8" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Three" Difficulty="Medium" Grade="A" />
+        <trainingSessionResult id="f8ef352e-ecc3-49ad-8439-3810135a1b1e" EnergyValue="-8" SharpnessValue="6" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Three" Difficulty="Medium" Grade="B" />
+        <trainingSessionResult id="ab2219ac-74dc-4bb2-a0f0-ad8dc7f3a08e" EnergyValue="-8" SharpnessValue="4" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Three" Difficulty="Medium" Grade="C" />
+        <trainingSessionResult id="fb423c42-f0aa-4d80-b46e-df0e7beb80d5" EnergyValue="-8" SharpnessValue="2" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Three" Difficulty="Medium" Grade="D" />
+        <trainingSessionResult id="0a55a5d3-49be-402d-b7f1-cccd0a1f2947" EnergyValue="-8" SharpnessValue="0" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Three" Difficulty="Medium" Grade="F" />
+        <trainingSessionResult id="f1ec8aa4-efe6-4552-ba9d-5ed139d696f8" EnergyValue="-10" SharpnessValue="10" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Three" Difficulty="Hard" Grade="A" />
+        <trainingSessionResult id="87100a55-3ecd-4290-890f-e13a5138e458" EnergyValue="-10" SharpnessValue="7" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Three" Difficulty="Hard" Grade="B" />
+        <trainingSessionResult id="af48bdc6-51ea-464f-91b0-a4ab7f2fbdfc" EnergyValue="-10" SharpnessValue="5" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Three" Difficulty="Hard" Grade="C" />
+        <trainingSessionResult id="6fd6862d-4c8f-405d-af96-f28f7a485bc9" EnergyValue="-10" SharpnessValue="2" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Three" Difficulty="Hard" Grade="D" />
+        <trainingSessionResult id="8acb04d9-028d-42e5-8326-2759e5e92fdc" EnergyValue="-10" SharpnessValue="0" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Three" Difficulty="Hard" Grade="F" />
+        <trainingSessionResult id="7419aa59-a82f-4203-89da-398e8f1335af" EnergyValue="-6" SharpnessValue="5" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Four" Difficulty="Easy" Grade="A" />
+        <trainingSessionResult id="7345ec5f-4d38-4463-a198-9e16407f88e3" EnergyValue="-6" SharpnessValue="4" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Four" Difficulty="Easy" Grade="B" />
+        <trainingSessionResult id="eb5611ee-e771-4e88-b04c-f89efee8d1cd" EnergyValue="-6" SharpnessValue="3" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Four" Difficulty="Easy" Grade="C" />
+        <trainingSessionResult id="2e9d708a-7731-4759-8e99-804dd99f6b53" EnergyValue="-6" SharpnessValue="2" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Four" Difficulty="Easy" Grade="D" />
+        <trainingSessionResult id="3edf6cc1-3628-458b-997d-ee6a3eb9adf4" EnergyValue="-6" SharpnessValue="1" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Four" Difficulty="Easy" Grade="F" />
+        <trainingSessionResult id="f5612a50-88c1-4104-a3c4-8d91d1b49eaa" EnergyValue="-8" SharpnessValue="7" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Four" Difficulty="Medium" Grade="A" />
+        <trainingSessionResult id="19b04091-96e9-4e15-b5aa-d69f6368e20a" EnergyValue="-8" SharpnessValue="5" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Four" Difficulty="Medium" Grade="B" />
+        <trainingSessionResult id="39f655d7-c6af-4367-8e44-0c13c28f798c" EnergyValue="-8" SharpnessValue="3" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Four" Difficulty="Medium" Grade="C" />
+        <trainingSessionResult id="bad22267-7c77-4558-8632-fdea3fa40b20" EnergyValue="-8" SharpnessValue="2" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Four" Difficulty="Medium" Grade="D" />
+        <trainingSessionResult id="c9b21f64-9c56-4fdd-b198-cdff8d16717b" EnergyValue="-8" SharpnessValue="0" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Four" Difficulty="Medium" Grade="F" />
+        <trainingSessionResult id="19dc2938-93ec-4f81-8d9e-787bc6c2e88a" EnergyValue="-10" SharpnessValue="8" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Four" Difficulty="Hard" Grade="A" />
+        <trainingSessionResult id="d49416ef-5731-46e9-89b6-31da44d5bc6f" EnergyValue="-10" SharpnessValue="6" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Four" Difficulty="Hard" Grade="B" />
+        <trainingSessionResult id="837b983c-ecea-43be-81f0-dba75b9d3dec" EnergyValue="-10" SharpnessValue="4" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Four" Difficulty="Hard" Grade="C" />
+        <trainingSessionResult id="32f6fddc-5ec1-49d5-b8fc-4d0578b2d1df" EnergyValue="-10" SharpnessValue="2" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Four" Difficulty="Hard" Grade="D" />
+        <trainingSessionResult id="5c91d6c2-9e5b-4d42-81be-b8b1b217e4d1" EnergyValue="-10" SharpnessValue="0" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Four" Difficulty="Hard" Grade="F" />
+        <trainingSessionResult id="b6bec6b5-7f80-4a83-9e3d-504507454293" EnergyValue="-6" SharpnessValue="4" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Five" Difficulty="Easy" Grade="A" />
+        <trainingSessionResult id="afabe39b-b9c2-4eee-b78c-9f7a67066255" EnergyValue="-6" SharpnessValue="3" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Five" Difficulty="Easy" Grade="B" />
+        <trainingSessionResult id="990f2056-b707-40ba-9552-6cb9a4df1f09" EnergyValue="-6" SharpnessValue="2" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Five" Difficulty="Easy" Grade="C" />
+        <trainingSessionResult id="133dd039-42a8-4b36-8aef-ea21bae6cf54" EnergyValue="-6" SharpnessValue="2" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Five" Difficulty="Easy" Grade="D" />
+        <trainingSessionResult id="0da226e3-74b2-482d-afb7-1298a5936c06" EnergyValue="-6" SharpnessValue="0" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Five" Difficulty="Easy" Grade="F" />
+        <trainingSessionResult id="464b5abd-5604-4f07-8562-a6600c5d1783" EnergyValue="-8" SharpnessValue="5" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Five" Difficulty="Medium" Grade="A" />
+        <trainingSessionResult id="35da4173-0541-417b-a759-352afd55aa7a" EnergyValue="-8" SharpnessValue="4" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Five" Difficulty="Medium" Grade="B" />
+        <trainingSessionResult id="b96f9103-2c08-4f22-8712-4f014c920545" EnergyValue="-8" SharpnessValue="3" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Five" Difficulty="Medium" Grade="C" />
+        <trainingSessionResult id="eaff3517-7d04-499d-809d-d481d139b561" EnergyValue="-8" SharpnessValue="2" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Five" Difficulty="Medium" Grade="D" />
+        <trainingSessionResult id="46bf462e-ae01-4fd7-94dc-0b4bb3f6baf6" EnergyValue="-8" SharpnessValue="0" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Five" Difficulty="Medium" Grade="F" />
+        <trainingSessionResult id="33378958-95f1-4530-addc-325381e32b12" EnergyValue="-10" SharpnessValue="6" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Five" Difficulty="Hard" Grade="A" />
+        <trainingSessionResult id="e61afcdd-981c-4c9b-8789-762014911676" EnergyValue="-10" SharpnessValue="5" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Five" Difficulty="Hard" Grade="B" />
+        <trainingSessionResult id="698a4cc3-bd5b-4933-bb8f-692e6006b304" EnergyValue="-10" SharpnessValue="3" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Five" Difficulty="Hard" Grade="C" />
+        <trainingSessionResult id="55019528-2a6e-41b4-b843-3e9e14ff3a7a" EnergyValue="-10" SharpnessValue="2" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Five" Difficulty="Hard" Grade="D" />
+        <trainingSessionResult id="14a63fd4-0891-4c6f-b928-08e40107b517" EnergyValue="-10" SharpnessValue="0" EnergyOperator="0" SharpnessOperator="0" NumberOfPlayers="Five" Difficulty="Hard" Grade="F" />
+      </trainingSessionResults>
+    </set-training-session-result-node>
+    <story-end-node id="aa8f63dc-7426-4fc9-8a9a-5c5d639dc11f" X="-4120" Y="-12320" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <save-data-node id="2d7c1f81-0c45-4eeb-983f-b3f31105a34f" X="-4520" Y="-12320" NodeType="SaveData" NodeName="SaveNode">
+      <saveItems id="25b25f53-f732-478d-81b6-8fa896e242de">
+        <saveItem id="4829363f-81c2-4ba7-b59d-1c33a1a88390" Key="ResultNumPlayers" Value="Model:UserTrainingCompleted.NumPlayers" ValueType="int" />
+        <saveItem id="27b261d6-e771-4a8b-868c-278fb639f185" Key="ResultDifficulty" Value="Model:UserTrainingCompleted.Difficulty" ValueType="int" />
+        <saveItem id="57c8dc7f-6e51-4cc7-a451-d0c4c1304b38" Key="ResultGrade" Value="Model:UserTrainingCompleted.Grade" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <foreach-node id="0be17164-b7b2-42f6-a734-dfc755f6b8f6" X="-4320" Y="-12360" NodeType="Foreach" NodeName="EachPlayer" ElementAlias="EachPlayer">
+      <alias-data-source id="6b4d974a-def7-40c5-82d4-bcecc40637db" DataSource="Model:UserTrainingCompleted.Players">
+        <conditions id="c7f41eb0-72bc-4548-a589-010b782aae8e" />
+      </alias-data-source>
+    </foreach-node>
+  </nodes>
+  <groups id="6b21bdde-8fdf-4e8d-bdf3-b2d6c161612f" />
+  <connections id="6e9d159a-4b83-4be8-a7e1-01279def1626">
+    <connection id="efff9d25-8292-4632-a957-29349cb1f381" SrcNodeID="c480af6e-649f-4021-b29f-0f794e162bbd" SrcPortName="advance" DstNodeID="2d7c1f81-0c45-4eeb-983f-b3f31105a34f" DstPortName="enter" ConnectionOrder="0">
+      <points id="8814211e-b731-4091-874e-bd4296c67775" />
+    </connection>
+    <connection id="e5bc626b-bfaf-49c0-a991-35ea9978ca9b" SrcNodeID="2d7c1f81-0c45-4eeb-983f-b3f31105a34f" SrcPortName="advance" DstNodeID="0be17164-b7b2-42f6-a734-dfc755f6b8f6" DstPortName="enter" ConnectionOrder="0">
+      <points id="b34cb227-f39d-435b-9a49-8ccf128fbbc0" />
+    </connection>
+    <connection id="e0d4bc23-f9e2-43e4-87e3-ed0d0d0a999d" SrcNodeID="0be17164-b7b2-42f6-a734-dfc755f6b8f6" SrcPortName="advance" DstNodeID="aa8f63dc-7426-4fc9-8a9a-5c5d639dc11f" DstPortName="enter" ConnectionOrder="0">
+      <points id="7c87091f-732e-4025-b85c-ecab829a92db" />
+    </connection>
+    <connection id="84bfbd07-0c11-4596-8267-d79a422a2672" SrcNodeID="06483e97-e586-4036-b05b-a3932ad120d7" SrcPortName="advance" DstNodeID="0be17164-b7b2-42f6-a734-dfc755f6b8f6" DstPortName="re-enter" ConnectionOrder="0">
+      <points id="c08ff1a6-9cb5-4503-a6c1-c2317a1cbc3a" />
+    </connection>
+    <connection id="064c2d56-60e3-42be-a7ca-1e8d8318d53c" SrcNodeID="0be17164-b7b2-42f6-a734-dfc755f6b8f6" SrcPortName="body" DstNodeID="06483e97-e586-4036-b05b-a3932ad120d7" DstPortName="enter" ConnectionOrder="0">
+      <points id="32afcf2a-e78f-46d9-917e-500c3778d420" />
+    </connection>
+  </connections>
+</StoryAsset>

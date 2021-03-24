@@ -1,0 +1,808 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="bb3d9123-ee8b-488a-96ad-2232267bfc66" name="High Flying Surprise" deleted="False" valid="True">
+  <nodes id="22f3da64-6dff-40bb-b4e0-8dc6bdda740d">
+    <story-start-node id="e8258294-2e2e-446e-ab57-6766e2d8ce8b" X="-3240" Y="1680" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="MultipleInstance" NodeEvent="UserMatchCompleted" StoryKey="Select:PlayerId" UseSelectData="True" RunInPlayerCareer="False" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="340bb7fc-f269-4a8c-9f8d-f211de2c18cf">
+        <condition id="0ceeda28-f36f-438c-bd08-07cf402714f7" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.CompType" Comparison="LTE" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+      <select-data id="ba397249-0023-4a7c-b79c-df7350cc0f72" SelectCount="1">
+        <alias-list id="d10e425e-64d3-41c7-aaf2-3d4b04866a25">
+          <string id="5a420764-1c90-43c1-8558-f20d6bcb2ff3" Value="SurprisingPlayer" />
+        </alias-list>
+        <order-by id="ebc3026a-241d-49e9-af53-1bcdad576e20" />
+        <alias-data-source id="de913b43-927c-4e27-9922-2b201749abe2" DataSource="Model:UserMatchCompleted.UserPlayers">
+          <conditions id="73e35364-9b81-4c9e-8c6e-692d6010a01c">
+            <condition id="54a32a0b-43ba-48b9-a521-8d5a26f4bdcc" VariableId="Select:Stats.Role" Comparison="GTE" Value="3" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="cacceb15-ca80-4628-9e11-68b3c1eea484" VariableId="Select:Stats.MatchRating" Comparison="GTE" Value="80" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="a2077ce5-06ca-429e-b62b-3dad4507c78b" VariableId="Select:Status.IsDismissed" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="6a90b6e7-a8d9-47f9-83cc-bde551bc511e" VariableId="Select:Status.IsInjured" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <select-data-node id="4b244c17-4f81-4b69-ab8f-a4ff7179dcdb" X="-2920" Y="1680" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="df3e71d3-34e0-4712-9933-9254bf0ed33e" SelectCount="1">
+        <alias-list id="96de5ec7-7cad-4798-8f60-0ba8d123fe29">
+          <string id="5a078209-a5df-4fa5-94fb-43eeaa73f14b" Value="LowAppearances" />
+        </alias-list>
+        <order-by id="f4e22bc9-3972-47c9-9f90-5d8d7b62c2f5" />
+        <alias-data-source id="ce7376a4-84f2-4939-8a28-c646207d2f7c" DataSource="Model:Global.Players">
+          <conditions id="5cd30653-1523-4a3c-a024-92187a3531fc">
+            <condition id="bafa3d89-cf71-45d0-9339-6d98b6d8d3f6" VariableId="Select:BasicData.ID" Comparison="EQ" Value="SurprisingPlayer:PlayerId" Operator="" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="0405d2a3-ba06-4025-b273-9395d9ff2f70" VariableId="Select:OverallStatistics.MatchRatings" Comparison="LTE" Value="70" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="215c0866-69ac-4436-a303-351e923eed2e" VariableId="Select:OverallStatistics.Appearances" Comparison="LTE" Value="5" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="b07c7a46-a7e1-4279-a9d3-308d053086c1" VariableId="Select:OverallStatistics.Appearances" Comparison="GTE" Value="2" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <save-data-node id="736ffed2-3a9e-4ecc-9d44-0057d89d974a" X="-2600" Y="1680" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="d3ff619e-3cf4-4ec0-9ed8-7c36a131c14b">
+        <saveItem id="55d4df36-258e-4332-abee-25b43bd533a1" Key="PlayerID" Value="SurprisingPlayer:PlayerId" ValueType="int" />
+        <saveItem id="5c9abd2f-3547-4368-8764-fb56f0827bc4" Key="Result" Value="Model:UserMatchCompleted.Results.ResultStatus" ValueType="UserResult" />
+      </saveItems>
+    </save-data-node>
+    <trigger-news-node id="7710def3-43e4-4195-b239-bbd1f70a8913" X="-1280" Y="1920" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="6" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="graph_u">
+      <stringWithArgsTitle id="ffb65148-d998-42be-97d7-7397dc28d87e" StringID="CM_News_HighFlyingSurprise_VictoryGoodPerformanceGK_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="176b138a-8fad-4513-a711-eb5c062d66c2">
+          <stringArgument id="9ed61c34-ab19-44f2-9e25-61b741ca1717" Value="SaveData:PlayerID" Format="7" />
+        </stringArguments>
+        <stringContent id="5ceb2526-d2ee-46d5-b34e-a6075b33e9bc">
+          <keyValuePair id="2844190f-dc2d-436e-ad80-98ce44295085" Key="M" Value="%1s Flies To Rescue" />
+          <keyValuePair id="91971f5b-4064-40e7-8069-319eeb00b2d0" Key="F" Value="" />
+          <keyValuePair id="805a5b28-a472-4f31-933d-3f25de7bdd13" Key="MM" Value="" />
+          <keyValuePair id="4ab7e954-92f0-40aa-a7b2-434c21c15b64" Key="MF" Value="" />
+          <keyValuePair id="9e4e3021-f1fc-440d-b3b1-27f806af102a" Key="FM" Value="" />
+          <keyValuePair id="9dda9d50-3c88-4b37-a074-3fdb59269405" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="f1787abd-ab66-4b14-8581-1cebeaadcfd6" StringID="CM_News_HighFlyingSurprise_VictoryGoodPerformanceGK_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="cdbcab23-f4f1-4d4d-ad2f-0fbdc9080493">
+          <stringArgument id="39d9a220-e4bd-45ad-b2c3-1a4dde1dd8e8" Value="SaveData:PlayerID" Format="6" />
+          <stringArgument id="162bb4c9-cf8b-4923-b3c0-f0e07b5be299" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="12" />
+          <stringArgument id="7eed4450-19bf-46cd-af9c-e9152dcf7d0e" Value="SurprisingPlayer:Stats.GkSaves" Format="0" />
+        </stringArguments>
+        <stringContent id="a3317c6d-4b0c-488d-8b8e-a4dbcda10864">
+          <keyValuePair id="aa358329-d695-4227-a2f3-c5e59b30aebb" Key="M" Value="%2s had %1s to thank for wrapping up the victory. He came up with big saves at key moments in the game, denying clear-cut chances for the opposition on at least %3s occasions. The keeper looks to have made himself the first name on the teamsheet from now on with this outstanding performance." />
+          <keyValuePair id="dced1018-cac1-49ef-9f63-d5c4436a4084" Key="F" Value="" />
+          <keyValuePair id="0e69d47a-3a84-4a01-82fe-9636999a4408" Key="MM" Value="" />
+          <keyValuePair id="d5aeab1c-7096-4d94-8803-bb7093e285ef" Key="MF" Value="" />
+          <keyValuePair id="2ce8ebf1-4bda-4001-8fa1-10403d7af80f" Key="FM" Value="" />
+          <keyValuePair id="faba9aaf-8a01-468b-b6eb-7e565183a870" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="a27c2b6f-60fd-48bb-b3f1-e8767ddaafd5">
+        <sceneParameter id="fc72b024-009c-43f8-8a9a-c70a85cd7df3" Parameter="PlayerId_1" Value="SaveData:PlayerID" />
+        <sceneParameter id="f0f4c3d3-c7e2-439d-932e-a7d1b59d3890" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="656c8d05-e033-4210-ad64-786e829a9eb2" X="-1720" Y="1920" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="dba80607-0f91-410c-945b-004e6a633d87">
+        <condition id="98d4cbb7-4663-452f-8183-4a2adfe0bd4e" VariableId="SurprisingPlayer:PositionInMatch" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="84291d79-7428-4c32-adab-2b0be96b466a" VariableId="SurprisingPlayer:Stats.GkSaves" Comparison="GTE" Value="3" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="23feb2b1-e45a-42eb-9b13-9def6586f2d0" VariableId="Model:UserMatchCompleted.Results.OponentGoals" Comparison="EQ" Value="0" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="a74ebb6f-7508-44e6-ab5c-272abb8c05ed" VariableId="SurprisingPlayer:Stats.GkSaves" Comparison="GTE" Value="6" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="fa09c280-242e-44bd-9ba9-8dfeef316d54" VariableId="Model:UserMatchCompleted.Results.OponentGoals" Comparison="LTE" Value="1" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="f8c868c2-30b6-4856-b8ff-102b2da4c801" VariableId="SurprisingPlayer:Stats.GkSaves" Comparison="GTE" Value="9" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="a5876837-320e-48fe-aaf5-c6e4091981af" VariableId="Model:UserMatchCompleted.Results.OponentGoals" Comparison="LTE" Value="2" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="9c3765a3-fb1f-45d6-ba10-ca9a3896a655" VariableId="SurprisingPlayer:Stats.GkSaves" Comparison="GTE" Value="12" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="4f6bd07e-0f79-41bd-ae0a-eccfb3287db8" VariableId="Model:UserMatchCompleted.Results.OponentGoals" Comparison="LTE" Value="3" Operator="AND" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="04df0510-ebc2-4645-8752-218c75661f45" X="-1960" Y="1680" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="72ea5e25-7fef-4dfd-99b0-242a7a1ee0a9">
+        <condition id="ae61a46e-2dea-4cf7-9530-556363ae53e9" VariableId="SurprisingPlayer:Stats.Goals" Comparison="GTE" Value="1" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="0877e459-4a84-4782-ad1a-5830ab0d07ed" VariableId="SurprisingPlayer:Stats.Assists" Comparison="GTE" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="5c70d653-fa42-4921-a878-aa43b518f3aa" X="-1280" Y="1680" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="6" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="graph_u">
+      <stringWithArgsTitle id="38e0b895-f53a-44db-836c-685ab5de2281" StringID="CM_News_HighFlyingSurprise_VictoryGoodPerformanceGoalsAssists_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="f88e7d73-a191-4899-b89c-9bf75fc7fc14">
+          <stringArgument id="87da9098-9ef5-4058-9dd2-fd8f7d72a73e" Value="SaveData:PlayerID" Format="7" />
+        </stringArguments>
+        <stringContent id="db75677c-b79b-45fe-9951-a60026c14371">
+          <keyValuePair id="afc28087-206a-4b5e-9c68-def7118d0325" Key="M" Value="%1s The Hero" />
+          <keyValuePair id="65e703c8-a8aa-4314-b024-fea1f70346da" Key="F" Value="" />
+          <keyValuePair id="c70c7128-da53-4747-9647-e3b87e115b1e" Key="MM" Value="" />
+          <keyValuePair id="63d5e340-d4dd-4785-81c3-ceab10913426" Key="MF" Value="" />
+          <keyValuePair id="5b37dbcf-e6ee-47c2-8e97-8dc06d76c813" Key="FM" Value="" />
+          <keyValuePair id="55c7f055-270d-4935-929d-6aa66b3039c0" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="9fa89743-521e-4df8-bfbb-64de08ecf1b9" StringID="CM_News_HighFlyingSurprise_VictoryGoodPerformanceGoalsAssists_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="05179895-2a33-4c90-98f3-350d154a576d">
+          <stringArgument id="066595d2-5fb4-4058-95ac-9e108d4dde99" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="11" />
+          <stringArgument id="40871e8d-2ac2-4307-8a63-2b3b7ab60274" Value="SaveData:PlayerID" Format="6" />
+          <stringArgument id="11d82c16-3614-4113-86b7-fd076f400990" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="a82c8b7e-3789-4504-8362-56883ba24dcb">
+          <keyValuePair id="e857f7c5-bb09-4a95-b884-2a1608caf60e" Key="M" Value="It seems %1s supporters have discovered a new hero. %2s was at the heart of everything good for his team as they secured victory in the game against %3s. He's a player who seems ready to step up and take responsibility as a leader now, and we're sure to see a lot more of him this season." />
+          <keyValuePair id="2ce239b1-318f-4822-a7e2-1c8c216b37f4" Key="F" Value="" />
+          <keyValuePair id="34ea9689-1a7b-4cd8-94f7-2c5cb91a2780" Key="MM" Value="" />
+          <keyValuePair id="42740106-e461-4ff9-a866-c11f1de52595" Key="MF" Value="" />
+          <keyValuePair id="8d48fbdb-f654-4923-a584-22f01e669468" Key="FM" Value="" />
+          <keyValuePair id="66cb2454-20df-4787-8a9c-795efd0fb3b3" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="5f9dcd70-95c9-4089-9415-0b06fa1862a9">
+        <sceneParameter id="049f2a96-9fd8-4348-8113-6c60a54b5a77" Parameter="PlayerId_1" Value="SaveData:PlayerID" />
+        <sceneParameter id="a8c93f34-7236-4eaa-b710-e1c65ecfc439" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="d0f1c60b-29ba-4353-a446-e853b97e51c7" X="-1280" Y="2160" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="6" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="graph_u">
+      <stringWithArgsTitle id="9663f107-eb55-467b-9b31-71ee93602f7a" StringID="CM_News_HighFlyingSurprise_VictoryGoodPerformance_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="ed05e2a8-9911-4e33-a6b4-bb2530d3d65d">
+          <stringArgument id="a77175fb-000e-4376-aaf2-c2095d18c873" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="f7609ba1-1f2e-4a33-b0a2-60bb72a722a3">
+          <keyValuePair id="76887a8c-d5fa-435f-8bb9-0d5561255639" Key="M" Value="%1s Outstanding In Victory" />
+          <keyValuePair id="188ad8a0-0a13-4b89-b368-9ac331c8b8ac" Key="F" Value="" />
+          <keyValuePair id="2eadbb2f-7e11-45c4-aab0-40d4bbf6623c" Key="MM" Value="" />
+          <keyValuePair id="28069362-c8eb-4bf0-ac0e-49af40f1f16c" Key="MF" Value="" />
+          <keyValuePair id="ce0ed84d-c7dd-4e87-b9e4-a0d172471cc6" Key="FM" Value="" />
+          <keyValuePair id="4629e94c-0ce2-4b9a-8aed-efc7ba313860" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="6bffb379-5b48-4db2-a690-8fefb3688532" StringID="CM_News_HighFlyingSurprise_VictoryGoodPerformance_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="148942e2-4adc-40c7-9a11-45bde3334761">
+          <stringArgument id="6d120e77-9b37-4f74-af21-37a46a424109" Value="SaveData:PlayerID" Format="6" />
+          <stringArgument id="8e757846-2d19-445f-9b4c-0ca3c1eebcb3" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="ed1470a3-268f-4309-b252-eff8aa641ed8">
+          <keyValuePair id="c013056a-6271-4498-98e7-93c5a770d52a" Key="M" Value="He probably wasn't on most pundits' minds as a potential matchwinner, but it was %1s's outstanding performance which inspired %2s's victory. He was the key player and we can expect great things from him in the future now." />
+          <keyValuePair id="bd809f83-0147-4411-92bb-0130ee1ab25d" Key="F" Value="" />
+          <keyValuePair id="8ab928f8-4104-465b-bfaa-71c27d04d159" Key="MM" Value="" />
+          <keyValuePair id="e03de6d9-5bd7-4c09-a8b2-f9b712f8dcd8" Key="MF" Value="" />
+          <keyValuePair id="bb30c9b1-3362-4d81-bdc9-63d4ec684e29" Key="FM" Value="" />
+          <keyValuePair id="d6fd4567-0594-4670-8091-464323e5b772" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="a436e8dd-74db-4d6b-a515-3beffbda8558">
+        <sceneParameter id="10c50c62-13cc-40cc-a05c-255fe5fb99fb" Parameter="PlayerId_1" Value="SaveData:PlayerID" />
+        <sceneParameter id="ae340c24-fd88-479e-9cfc-3d3966c6edb1" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <join-node id="0ab817ec-f68b-4e9d-81d3-e4a5c6ed0141" X="-760" Y="2160" NodeType="Join" NodeName="Set Name for New Node" />
+    <state-node id="5b7fc39c-857b-4512-bc65-e2c60681f2f3" X="960" Y="2640" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="c3489cca-2bd3-4e83-9892-0b6df4667aa5">
+        <string id="7ff381e1-6e41-47a1-baef-de3c7c7c5d41" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <join-node id="214f5153-e01d-4fb2-bd0b-442560994c0e" X="640" Y="2240" NodeType="Join" NodeName="Set Name for New Node" />
+    <modify-morale-node id="a23af1cf-3a3e-4f05-8b1f-ec19586b41cb" X="240" Y="2320" NodeType="ModifyMorale" NodeName="Set Name for New Node" PlayerId="SaveData:PlayerID" DecayPeriod="10" MoraleImpactType="Overall" MoraleTemplateType="CriticizeMedium">
+      <emotion-impact id="3642980a-7169-49b7-9a86-d4cff0960829">
+        <keyValuePair id="1bb42ff2-5cb4-4ff7-9fc0-629b9faf42c8" Key="VeryCalm" Value="-1" />
+        <keyValuePair id="d0583900-da76-4aaa-9dd6-e43399524150" Key="Calm" Value="-1" />
+        <keyValuePair id="2b6a9956-4d37-4bd8-a55d-caa46ff872b3" Key="Normal" Value="-2" />
+        <keyValuePair id="725824c8-6bdb-48cf-8fb6-3766d22caa0c" Key="HotTemper" Value="-2" />
+        <keyValuePair id="83dad303-8c03-4833-aa0b-ab8abb739f8d" Key="Volcano" Value="-2" />
+      </emotion-impact>
+      <personality-impact id="4ac81212-0d95-472d-a3a9-1832abb2c0d3">
+        <keyValuePair id="61350195-6fb7-406b-bd68-db9d49d5cec2" Key="Selfish" Value="-2" />
+        <keyValuePair id="e0b116e1-4acc-4e07-bfe6-3dff930f247a" Key="Individual" Value="-2" />
+        <keyValuePair id="c9d3367a-708e-4b12-b58c-b17f5d5e6a4e" Key="Normal" Value="-2" />
+        <keyValuePair id="ac62b51f-235c-4d8e-9adc-e8918c447b99" Key="TeamPlayer" Value="-1" />
+        <keyValuePair id="d583192e-d15f-4c51-9af9-bd3599b8f03a" Key="UltimateProfessional" Value="-1" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="b6b63c07-f938-4cbe-959d-5daf21220bc6" X="240" Y="2160" NodeType="ModifyMorale" NodeName="Set Name for New Node" PlayerId="SaveData:PlayerID" DecayPeriod="10" MoraleImpactType="Overall" MoraleTemplateType="MotivateHigh">
+      <emotion-impact id="a7738d7f-dd4f-4c9d-ad9e-d0bb45da6e3a">
+        <keyValuePair id="a2929ce1-a577-4a96-b84e-75c89bfd02d1" Key="VeryCalm" Value="1" />
+        <keyValuePair id="aeaa9cf1-f185-4ed2-aaa1-837e9bb79725" Key="Calm" Value="1" />
+        <keyValuePair id="66cb1319-f742-4fe5-8881-0ed60010c27f" Key="Normal" Value="1" />
+        <keyValuePair id="db58a89a-bd30-4bb4-9021-5edb56307adb" Key="HotTemper" Value="2" />
+        <keyValuePair id="f2323444-86ad-4012-b69a-be30629fc04f" Key="Volcano" Value="2" />
+      </emotion-impact>
+      <personality-impact id="75e3101f-80e1-4b8b-8afc-50da597a799a">
+        <keyValuePair id="1c37d4cf-9ba2-4233-8aa1-d4bd4b5e155d" Key="Selfish" Value="0" />
+        <keyValuePair id="f936edc9-73c4-4c65-8976-7ce8ebd32f2e" Key="Individual" Value="1" />
+        <keyValuePair id="8ab832dd-6a13-4b9e-8546-76293639b01e" Key="Normal" Value="2" />
+        <keyValuePair id="1bb8fff5-92cc-44fe-be95-096ede8d5a52" Key="TeamPlayer" Value="8" />
+        <keyValuePair id="b7088899-5ab8-49fe-9a10-9b75d9553411" Key="UltimateProfessional" Value="8" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="45bc6afb-3326-4f9c-8204-15544bd833ac" X="240" Y="2240" NodeType="ModifyMorale" NodeName="Set Name for New Node" PlayerId="SaveData:PlayerID" DecayPeriod="10" MoraleImpactType="Overall" MoraleTemplateType="PraiseHigh">
+      <emotion-impact id="25da7094-2c90-40bf-b0b0-b1b300e06018">
+        <keyValuePair id="ed5c796e-b278-4f35-a48c-17e8b44fa527" Key="VeryCalm" Value="1" />
+        <keyValuePair id="e19fc338-2a02-4671-ba5b-7192e8b14389" Key="Calm" Value="1" />
+        <keyValuePair id="a7514a6b-2e61-4a00-900d-04621d600555" Key="Normal" Value="2" />
+        <keyValuePair id="5a9534dc-ddfe-4c61-8e4c-4b08fa467573" Key="HotTemper" Value="2" />
+        <keyValuePair id="09e5928d-5dd4-4920-84e9-815636337b64" Key="Volcano" Value="8" />
+      </emotion-impact>
+      <personality-impact id="28455a43-d425-46df-ad0f-8ac8a3f6f654">
+        <keyValuePair id="1e8e485c-79a4-4caf-ab84-d6b99fa2e344" Key="Selfish" Value="8" />
+        <keyValuePair id="8ab627dd-3f27-4e65-b6ae-93058faf6194" Key="Individual" Value="2" />
+        <keyValuePair id="a517a909-369b-40f5-b7b9-ab57fbffcb0b" Key="Normal" Value="2" />
+        <keyValuePair id="dc9c9ee9-b15a-4e0c-b8b8-db881e3b6ee0" Key="TeamPlayer" Value="1" />
+        <keyValuePair id="44d78519-cbb9-4d2c-811a-86b4927c84ab" Key="UltimateProfessional" Value="1" />
+      </personality-impact>
+    </modify-morale-node>
+    <conversation-node id="581c5cb7-4b0d-430d-bd7c-15505c3be5bc" X="-200" Y="2160" NodeType="Conversation" NodeName="Set Name for New Node" Player="SaveData:PlayerID" Priority="10">
+      <stringWithArgsPlayerMessage id="1d1f85c4-b972-43e4-a873-cb3df13298c7" StringID="CM_Chat_HighFlyingSurprise_VictoryThankfulPlayer" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="cae5e656-6304-46c9-919a-9dcf4168d782" />
+        <stringContent id="2900068b-c67a-4610-9f9b-aaec497bb7a1">
+          <keyValuePair id="55107374-f5a4-4109-bd16-8faaa7776a40" Key="M" Value="Hey, Gaffer. Just wanted to say thanks for giving me the chance to show what I can do. I feel like I'm ready for regular games now. Hope you'll be thinking about me in the matches we've got coming up." />
+          <keyValuePair id="5561661c-b07d-4fe8-b61c-082d6d10bf61" Key="F" Value="Hey, Gaffer. Just wanted to say thanks for giving me the chance to show what I can do. I feel like I'm ready for regular games now. Hope you'll be thinking about me in the matches we've got coming up." />
+          <keyValuePair id="3a5d31af-af15-4b9e-9bf2-dbc971f23696" Key="MM" Value="" />
+          <keyValuePair id="0f7555ae-7a6e-4526-94fe-93591fbd1ad2" Key="MF" Value="" />
+          <keyValuePair id="2a61ec7f-0c1b-43c9-a473-e3f8f53840bd" Key="FM" Value="" />
+          <keyValuePair id="d6392c3d-4707-4f4f-879b-d6a76555c2ae" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsPlayerMessage>
+      <managerAnswerList id="00522be7-5f97-492a-b428-12a97e5e3649">
+        <managerAnswer id="ff0d41fc-859d-4e70-bc96-3a3388922585" AnswerType="0">
+          <stringWithArgsAnswerShort id="4f86765a-6025-438f-9546-1500c241854c" StringID="CM_Chat_HighFlyingSurprise_VictoryThankfulPlayer_Short_1" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="b578d0fe-4081-40f8-af9b-6553b177f6ce" />
+            <stringContent id="caefd5b9-1e76-4e90-83ec-c0e78099e07b">
+              <keyValuePair id="905e6826-306a-43ee-a29f-2cd7ece6826b" Key="M" Value="Keep working at your game and we'll see." />
+              <keyValuePair id="e1bb786a-7400-45e1-8614-f486a1bb50d0" Key="F" Value="" />
+              <keyValuePair id="fa295708-5c33-4f96-9599-db2fb2ea6840" Key="MM" Value="" />
+              <keyValuePair id="33e30a9e-3fc0-4646-a6b5-995f4ddfec06" Key="MF" Value="" />
+              <keyValuePair id="a64513e7-0c60-48fb-aac1-9c2e243cae27" Key="FM" Value="" />
+              <keyValuePair id="59e20f97-ec0a-411c-8a6a-b89441df7322" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="3a8aa504-7662-4105-b289-6b8da087e510" StringID="CM_Chat_HighFlyingSurprise_VictoryThankfulPlayer_Long_1" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="d1b40dfd-22ee-4089-afbc-2df7438bc830" />
+            <stringContent id="76be537a-665b-4bc3-b8f7-2cd9cfaa87ff">
+              <keyValuePair id="f4111438-9d7e-4826-9054-c7c36be4c567" Key="M" Value="You did really well. But this is only the start. You need to keep working hard to prove you've got what it takes to become a regular here." />
+              <keyValuePair id="8198796e-5df9-42b5-b0be-02d31b643d7c" Key="F" Value="" />
+              <keyValuePair id="b7d2a186-0879-46f6-9cba-343e3d16dab3" Key="MM" Value="" />
+              <keyValuePair id="9a97e25c-0446-4eb2-bf47-5e2debcf1258" Key="MF" Value="" />
+              <keyValuePair id="7c8b7cfe-84b3-4b99-8cac-7128759a7ba0" Key="FM" Value="" />
+              <keyValuePair id="10f1380b-d297-4582-825b-83e4cf0f2d08" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+        <managerAnswer id="6b49cb21-4d76-4379-80c8-3df1b5d5d1c2" AnswerType="3">
+          <stringWithArgsAnswerShort id="c9785137-dc48-4f43-9bd1-3945ce5781ae" StringID="CM_Chat_HighFlyingSurprise_VictoryThankfulPlayer_Short_2" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="da514203-836c-4db7-83d0-57ad64b98260" />
+            <stringContent id="a5d35263-7717-4213-a15b-69c5974a96cb">
+              <keyValuePair id="3a07c76e-82b7-4cea-b07d-c2e6d13bdc24" Key="M" Value="Outstanding, son!" />
+              <keyValuePair id="d658dc37-a88f-4b18-ae4c-00382ba47d7d" Key="F" Value="" />
+              <keyValuePair id="1c3744c3-8ae0-414f-a8e7-9642c124cf82" Key="MM" Value="" />
+              <keyValuePair id="d1fc57dd-8edc-472a-8419-5ea142828482" Key="MF" Value="" />
+              <keyValuePair id="4017af52-c85f-4992-814d-bc63ad24e0e5" Key="FM" Value="" />
+              <keyValuePair id="1f5ca4eb-01f3-4388-bd43-835a8817be52" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="c4f91d02-2ad5-4e1d-afc3-b1cc4928fb90" StringID="CM_Chat_HighFlyingSurprise_VictoryThankfulPlayer_Long_2" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="f256b291-1600-4fda-a862-8e0d10281166" />
+            <stringContent id="d9f1cd18-9ef9-4fa8-b7a1-b17055db9d6b">
+              <keyValuePair id="ffd4338f-632b-4085-96ea-438fb220f417" Key="M" Value="You were outstanding today, young man. Keep training and playing at that level and the fans will be seeing a lot more of you, I'm sure." />
+              <keyValuePair id="7d29ac30-c448-4eaa-960d-59a9c0a8aaa3" Key="F" Value="" />
+              <keyValuePair id="5030f19b-e806-4ac0-93bb-c2b80a06ee09" Key="MM" Value="" />
+              <keyValuePair id="aa083546-e7f3-463b-9d77-104b136b3e37" Key="MF" Value="" />
+              <keyValuePair id="0b6de352-b252-4f2f-9ead-289977330302" Key="FM" Value="" />
+              <keyValuePair id="bc0526a0-b8eb-4cf8-9a10-5d84c6d56ba2" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+        <managerAnswer id="412f863a-dddb-4f74-8e1a-54001e96bda1" AnswerType="1">
+          <stringWithArgsAnswerShort id="3fa414dc-956e-409e-b370-b13f529a368f" StringID="CM_Chat_HighFlyingSurprise_VictoryThankfulPlayer_Short_3" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="aadd1ba8-3386-4eba-8907-5b7315d9be60" />
+            <stringContent id="7cda22e4-3edb-41cc-9caf-8d12ac338ade">
+              <keyValuePair id="29548daf-06af-40b1-be53-db05c7374eb0" Key="M" Value="The win's what I'm happy about." />
+              <keyValuePair id="5f6322d2-958e-4f4c-b58c-e0c3779e4252" Key="F" Value="" />
+              <keyValuePair id="056f0ba7-2d8d-4680-8473-7ceca4f4b5cc" Key="MM" Value="" />
+              <keyValuePair id="62e96ab5-27b6-41b2-8332-d20957b8adc0" Key="MF" Value="" />
+              <keyValuePair id="a6a64940-5685-49c8-a872-9b5b7836f3e2" Key="FM" Value="" />
+              <keyValuePair id="d48582c5-5352-432c-8f58-6dff93e1b855" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="48a4bd69-a412-4082-b41b-58f8dddc32a5" StringID="CM_Chat_HighFlyingSurprise_VictoryThankfulPlayer_Long_3" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="ad960758-88c4-424c-9dc5-5e844d08b310" />
+            <stringContent id="047946ce-3079-4a30-a857-7c26bcfe6d6a">
+              <keyValuePair id="c9389889-79dc-4d4f-b177-1d46d8d7daf4" Key="M" Value="You did well but don't get carried away. It's not about you. It's about the team. Winning is all that matters." />
+              <keyValuePair id="79edd3bc-6b86-41c7-a9eb-daf4b0dd9712" Key="F" Value="" />
+              <keyValuePair id="5fee34eb-51e4-4493-b14f-f9500496c7c9" Key="MM" Value="" />
+              <keyValuePair id="732410fe-1fff-451a-8305-49c3226a8632" Key="MF" Value="" />
+              <keyValuePair id="3dcd584b-44da-4fc5-b702-ef6009406346" Key="FM" Value="" />
+              <keyValuePair id="f117fe16-cc1e-41ae-99cd-1b7ddde01903" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+      </managerAnswerList>
+      <supported-events id="3da7aec3-4b05-4342-baaf-3f6e3a6ae2a6">
+        <string id="b4ef8d5f-7134-4d2e-b3b7-3710f788637f" Value="UserMatchCompleted" />
+      </supported-events>
+    </conversation-node>
+    <select-data-node id="42f6c810-930c-45f4-b0cd-ee91887a3eb1" X="1320" Y="2640" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="93149471-a8b7-4cef-be5b-3b2647bbc193" SelectCount="1">
+        <alias-list id="81b444fd-17cd-484a-964c-16618bc4bbf0">
+          <string id="29067f58-8f9b-49bb-8c4f-f58ac53e80bd" Value="FollowedPlayer" />
+        </alias-list>
+        <order-by id="7d85fb99-a05a-454e-af86-910926b137f1" />
+        <alias-data-source id="15de2686-0e2f-4719-9f1c-b41e167aa9c1" DataSource="Model:Global.Players">
+          <conditions id="f2c6927a-6b0a-4169-8573-ebab3ffee970">
+            <condition id="2a3f2832-8da5-44db-bf6f-2f587456a593" VariableId="Select:BasicData.ID" Comparison="EQ" Value="SaveData:PlayerID" Operator="" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="89e1dc13-23f0-40bb-81f4-775ea6c827a8" VariableId="Select:OverallStatistics.Appearances" Comparison="GTE" Value="6" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <condition-node id="e715b7c7-a892-4bf4-bfb8-85cf0ed7689e" X="-2280" Y="1680" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="423bd650-eaad-407a-8f8b-1ac26c24517b">
+        <condition id="0e06885b-5158-4385-a2ff-30149d8f062b" VariableId="SaveData:Result" Comparison="EQ" Value="0" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="2b76556d-6b89-4814-9c91-08565dcd4822" VariableId="SaveData:Result" Comparison="EQ" Value="3" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <story-end-node id="8a07d14b-b62f-4e24-97c8-ba84ce063b3a" X="1680" Y="2640" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <join-node id="39ebdff2-b0eb-4ca1-9cc5-532048013796" X="640" Y="2920" NodeType="Join" NodeName="Set Name for New Node" />
+    <modify-morale-node id="1ba6e33d-7dfe-47e0-847c-659585474015" X="240" Y="2920" NodeType="ModifyMorale" NodeName="Set Name for New Node" PlayerId="SaveData:PlayerID" DecayPeriod="10" MoraleImpactType="Overall" MoraleTemplateType="SympathizeMedium">
+      <emotion-impact id="a096a12d-9fdc-4a7f-a075-30aa5743bf3c">
+        <keyValuePair id="50257ded-5b8f-4f01-b81f-741b958e51d4" Key="VeryCalm" Value="1" />
+        <keyValuePair id="0a0b4fc9-36fa-42ec-a108-13f1268713f6" Key="Calm" Value="1" />
+        <keyValuePair id="28be7ed1-2e69-49d9-92b6-2fcdbc92e148" Key="Normal" Value="1" />
+        <keyValuePair id="e7164180-1c5d-454c-b6fc-d9a440ac8d43" Key="HotTemper" Value="2" />
+        <keyValuePair id="b2701b02-e547-4a30-bae6-fb207782c034" Key="Volcano" Value="2" />
+      </emotion-impact>
+      <personality-impact id="418406b0-cedf-4c1b-a0e1-234e931f9e93">
+        <keyValuePair id="e032795e-1f2d-4eaa-ab65-06b0fe423da3" Key="Selfish" Value="2" />
+        <keyValuePair id="10bce3ca-ac01-4ebf-ae0e-4a6d1969f3a8" Key="Individual" Value="2" />
+        <keyValuePair id="d2d91e1b-fb94-42c5-a7cc-84c5245b5922" Key="Normal" Value="2" />
+        <keyValuePair id="68efe105-73d3-4602-a5c8-d07ce69932dc" Key="TeamPlayer" Value="1" />
+        <keyValuePair id="134725d9-a40c-4efa-a2a4-053a7cfd27e1" Key="UltimateProfessional" Value="1" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="66103cd9-75c8-4f67-b04c-eb6e78aecd2e" X="240" Y="3000" NodeType="ModifyMorale" NodeName="Set Name for New Node" PlayerId="SaveData:PlayerID" DecayPeriod="10" MoraleImpactType="Overall" MoraleTemplateType="CriticizeMedium">
+      <emotion-impact id="89a7a060-aade-478d-bd2d-4858d568d3e9">
+        <keyValuePair id="457a8031-29ab-4805-953f-abe3f5706d11" Key="VeryCalm" Value="-1" />
+        <keyValuePair id="0ba693c8-181c-4bf6-85ac-8b03b0057865" Key="Calm" Value="-1" />
+        <keyValuePair id="d5cecd30-ec2b-49be-b5ca-2c1fb4fa2726" Key="Normal" Value="-2" />
+        <keyValuePair id="f04d8006-a103-4920-b47b-e54a6396bd58" Key="HotTemper" Value="-2" />
+        <keyValuePair id="7bac8b40-8db3-4887-ae93-72fde2cdfe57" Key="Volcano" Value="-2" />
+      </emotion-impact>
+      <personality-impact id="e2a61f68-02e1-4073-add1-61cafef5d2e9">
+        <keyValuePair id="372ddd1b-b2b2-4a03-99a1-b5ed840f7cff" Key="Selfish" Value="-2" />
+        <keyValuePair id="4a24d292-1692-4b8f-a3f2-1c9c5530a38e" Key="Individual" Value="-2" />
+        <keyValuePair id="b451aedd-2d7a-4be0-a083-8b5f76d50956" Key="Normal" Value="-2" />
+        <keyValuePair id="7caa3e1c-aa7e-40a1-930b-85f85bfb6c2f" Key="TeamPlayer" Value="-1" />
+        <keyValuePair id="6e11b1cd-ad65-4666-9ac5-61fa31e046c0" Key="UltimateProfessional" Value="-1" />
+      </personality-impact>
+    </modify-morale-node>
+    <modify-morale-node id="c2033689-fbe1-48e8-bf90-f99b67b402e4" X="240" Y="2840" NodeType="ModifyMorale" NodeName="Set Name for New Node" PlayerId="SaveData:PlayerID" DecayPeriod="10" MoraleImpactType="Overall" MoraleTemplateType="MotivateMedium">
+      <emotion-impact id="a135f101-229e-420e-87dc-388ce5259a8b">
+        <keyValuePair id="d8fdb19d-5cee-4f68-b71d-fffba09682ae" Key="VeryCalm" Value="0" />
+        <keyValuePair id="4f11018f-8cc2-4d88-ae7a-d200d7592233" Key="Calm" Value="0" />
+        <keyValuePair id="989c7a9a-e6c6-4960-8fa4-71eef2734840" Key="Normal" Value="1" />
+        <keyValuePair id="f19dec76-ca5b-404b-9eb6-c266829e706d" Key="HotTemper" Value="1" />
+        <keyValuePair id="b7ca2dae-15ce-4863-a54a-78d645bb64d3" Key="Volcano" Value="1" />
+      </emotion-impact>
+      <personality-impact id="1019eab3-fae5-4c9e-a90c-e5ae8e4523ea">
+        <keyValuePair id="a710c643-f183-49b0-b528-053c3819bb6b" Key="Selfish" Value="0" />
+        <keyValuePair id="03b1022c-0b6c-4f36-92c2-c1c27c3be7a7" Key="Individual" Value="1" />
+        <keyValuePair id="f84d3328-4b8d-48ef-84fb-b496bb0bf21f" Key="Normal" Value="1" />
+        <keyValuePair id="fcc37704-0cab-4faa-a89c-ae1fac332139" Key="TeamPlayer" Value="2" />
+        <keyValuePair id="3297f94b-d8b1-4d50-bb36-4f0a0b04f413" Key="UltimateProfessional" Value="2" />
+      </personality-impact>
+    </modify-morale-node>
+    <conversation-node id="3ab52bbb-69d4-4d9d-83a9-3201a170a467" X="-200" Y="2840" NodeType="Conversation" NodeName="Set Name for New Node" Player="SaveData:PlayerID" Priority="10">
+      <stringWithArgsPlayerMessage id="6ba73f39-6a1f-4ee4-a651-0561d345e725" StringID="CM_Chat_HighFlyingSurprise_LoseThankfulPlayer" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="bcea5bd6-e225-41a4-a2c4-ade32ef5a073" />
+        <stringContent id="3c818318-6afa-4a1d-88a0-ec3ef4c80dfa">
+          <keyValuePair id="494fadd4-ff07-480d-b9ab-fac441df1c04" Key="M" Value="I'm really sorry we didn't get the win today but thanks for giving me the chance out there, Boss. Hope you'll think about giving me a run in the team now." />
+          <keyValuePair id="b7a0974c-4bc0-4040-9333-895a1aece132" Key="F" Value="I'm really sorry we didn't get the win today but thanks for giving me the chance out there, Boss. Hope you'll think about giving me a run in the team now." />
+          <keyValuePair id="c2aaae9d-dfa4-4f36-a971-95eafe66aa38" Key="MM" Value="" />
+          <keyValuePair id="674f5ad4-b84f-45d7-b8fc-8e94b269fce9" Key="MF" Value="" />
+          <keyValuePair id="68f50fd0-09ee-43c1-bf17-1a3ae824c190" Key="FM" Value="" />
+          <keyValuePair id="60157b18-b35f-44d5-90d6-ad06bf5ff104" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsPlayerMessage>
+      <managerAnswerList id="fa00953c-c5f0-494a-a1ab-32721630fdab">
+        <managerAnswer id="a7f4aa8b-2d24-48a8-a22e-db9f69fa1591" AnswerType="0">
+          <stringWithArgsAnswerShort id="e05ddf25-dafa-4d0b-b775-e9649d985105" StringID="CM_Chat_HighFlyingSurprise_LoseThankfulPlayer_Short_1" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="7faaea7e-7dc4-4bc5-809c-1e983c16188b" />
+            <stringContent id="edc72d75-e112-4061-9591-717b785a15c0">
+              <keyValuePair id="4f6636de-b4da-43e2-83e0-59c345d9fdbf" Key="M" Value="The wins will come." />
+              <keyValuePair id="737519f6-2e36-4c96-bd76-5b1d3d67a751" Key="F" Value="" />
+              <keyValuePair id="d1dcd097-d3a7-46c7-947f-a691d0503725" Key="MM" Value="" />
+              <keyValuePair id="123cbfa0-1a12-4c3d-910d-911e556bd58a" Key="MF" Value="" />
+              <keyValuePair id="5b031078-85d1-4a7b-b7ad-60d9a7e2cf0a" Key="FM" Value="" />
+              <keyValuePair id="2aced4d9-e5ce-4943-885b-6efb8cee3451" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="f59a22e3-ad1d-4a87-9700-887eed183454" StringID="CM_Chat_HighFlyingSurprise_LoseThankfulPlayer_Long_1" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="bd74dd46-05fe-4aba-94f2-0666a4dda776" />
+            <stringContent id="ee55af36-62c0-498d-a3f2-736f796105e8">
+              <keyValuePair id="1f348fe8-54b1-4e24-b46f-479146a8e420" Key="M" Value="Don't worry. You did well out there. But you can do better and that's what the team will need to get wins in the future." />
+              <keyValuePair id="0085f416-8849-4628-a435-e76c4d61bf13" Key="F" Value="" />
+              <keyValuePair id="b62cd560-7a0e-43d5-ad6f-b2a696e4207f" Key="MM" Value="" />
+              <keyValuePair id="22e3d35d-b8b6-4cae-a0bd-bac3976627a9" Key="MF" Value="" />
+              <keyValuePair id="6e0905db-df39-4e10-80d8-2f97b331bc50" Key="FM" Value="" />
+              <keyValuePair id="b3e591aa-ad27-4a33-b4c4-bd5a683645b0" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+        <managerAnswer id="eb72229e-8e88-43a7-9e85-d92108aff148" AnswerType="2">
+          <stringWithArgsAnswerShort id="f2443258-8d06-4513-ae2e-14e96e83fadc" StringID="CM_Chat_HighFlyingSurprise_LoseThankfulPlayer_Short_2" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="c36dfc95-d9f3-4ca5-b211-a8249d5a536b" />
+            <stringContent id="31236102-a147-4744-a7d6-2eeeaaf5a898">
+              <keyValuePair id="03d97764-624d-4405-bc2c-f422b7dbabac" Key="M" Value="Don't beat yourself up about not winning." />
+              <keyValuePair id="2411adf9-70fa-465e-a5b4-418c6f77a425" Key="F" Value="" />
+              <keyValuePair id="3bf9c315-f1ae-4112-a44c-03f3abf8ebba" Key="MM" Value="" />
+              <keyValuePair id="1f76b208-8096-44d7-9d6c-a13ccf73f103" Key="MF" Value="" />
+              <keyValuePair id="626cb128-f16b-4695-8d87-74fe7f5b3061" Key="FM" Value="" />
+              <keyValuePair id="fa9216cb-d607-4e83-9a44-437ceb8999b9" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="17499e6c-a6a3-44b9-a941-4cdc28e1ad21" StringID="CM_Chat_HighFlyingSurprise_LoseThankfulPlayer_Long_2" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="bc344187-fc0e-4e03-a069-6eeb3a7876f9" />
+            <stringContent id="a778d620-5691-4020-bba5-927117355e74">
+              <keyValuePair id="4cf11a45-f735-4458-86ef-caaece2a18e4" Key="M" Value="Look, we can't win every game. I was impressed with your contribution, though. You'll get more games in the future, for sure." />
+              <keyValuePair id="73503c7d-89a3-4bf5-b55b-8ea576edcba9" Key="F" Value="" />
+              <keyValuePair id="23267bb6-78d0-4903-9c30-7fbadbac9e8e" Key="MM" Value="" />
+              <keyValuePair id="fd793087-92d6-45fa-b2ac-567b7e9f9077" Key="MF" Value="" />
+              <keyValuePair id="5aef563b-223b-4fb7-ae28-6f7b77c2b0eb" Key="FM" Value="" />
+              <keyValuePair id="ac6c71d7-57c0-4941-8fe7-d8cd4811623b" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+        <managerAnswer id="23686965-a7b7-4181-8679-c1f6e31ca92f" AnswerType="1">
+          <stringWithArgsAnswerShort id="cbbc8157-63ef-420e-ad5c-3131a1e4fd33" StringID="CM_Chat_HighFlyingSurprise_LoseThankfulPlayer_Short_3" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="0d790bce-ac14-41eb-b825-8201137e4816" />
+            <stringContent id="8f722a7c-7333-4b38-976a-03e707b59f3a">
+              <keyValuePair id="fa5392a4-c547-4dc7-8ea3-63a530f2ec63" Key="M" Value="We need to win!" />
+              <keyValuePair id="9e879766-b0cc-41c2-8f81-21b42c3de39b" Key="F" Value="" />
+              <keyValuePair id="4261e78f-6880-47f9-9f12-afc9eb1540cc" Key="MM" Value="" />
+              <keyValuePair id="02726d9d-d866-446e-85a7-a7fe24ef99e3" Key="MF" Value="" />
+              <keyValuePair id="93b94965-05d7-47eb-87c8-36d24fb404a9" Key="FM" Value="" />
+              <keyValuePair id="3ed69947-c4b1-4883-b9b9-e10dd08260d3" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerShort>
+          <stringWithArgsAnswerLong id="9dad09c2-4706-420d-a215-0d18952ab0fc" StringID="CM_Chat_HighFlyingSurprise_LoseThankfulPlayer_Long_3" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+            <stringArguments id="322fc197-277d-4015-b704-912e74e9219e" />
+            <stringContent id="86c75637-b4cc-4900-8b2a-b58654b1ccb1">
+              <keyValuePair id="ca12f6d9-3009-4517-9fdf-e47b72774dd7" Key="M" Value="You did okay out there, but it's not just about you. Don't get carried away. Your own performance means nothing if we don't win the game." />
+              <keyValuePair id="da004b9a-7c48-4bd6-89b1-d9b59a269e01" Key="F" Value="" />
+              <keyValuePair id="f8317e01-dcf8-46fe-9d3c-3bf19fb0a220" Key="MM" Value="" />
+              <keyValuePair id="3121df78-f300-4eaf-bcef-3f8facb28951" Key="MF" Value="" />
+              <keyValuePair id="f4ba026e-edb2-4639-96c6-0f6a88b7c46a" Key="FM" Value="" />
+              <keyValuePair id="7439f48c-64fd-4ce8-bbed-967b3b5cfcd6" Key="FF" Value="" />
+            </stringContent>
+          </stringWithArgsAnswerLong>
+        </managerAnswer>
+      </managerAnswerList>
+      <supported-events id="5c2207a6-a2db-4de6-bd69-7e84155e0b15">
+        <string id="94c77102-6225-4aaa-863e-7a79c377768b" Value="UserMatchCompleted" />
+      </supported-events>
+    </conversation-node>
+    <join-node id="8151e088-b119-402b-b066-c158ce0e3a70" X="-760" Y="2840" NodeType="Join" NodeName="Set Name for New Node" />
+    <trigger-news-node id="a9bb766b-4221-45ea-a5c8-0d62d4b8474c" X="-1280" Y="3080" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="6" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="graph_d">
+      <stringWithArgsTitle id="b99de88e-5141-4bf6-ac17-ad3c671c6539" StringID="CM_News_HighFlyingSurprise_LoseGoodPerformance_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="eb2a7fe9-83c2-49aa-a73e-ba02a7005214">
+          <stringArgument id="5155d6dd-eb78-49e5-9bea-3759c782c57a" Value="SaveData:PlayerID" Format="7" />
+        </stringArguments>
+        <stringContent id="cdebc1d7-517d-4c71-87d6-f2b38ee051f8">
+          <keyValuePair id="faf3f059-2efa-48e9-a604-4f658230728c" Key="M" Value="%1s Frustration!" />
+          <keyValuePair id="6308b5a8-d045-42a3-a4b5-f918e432d036" Key="F" Value="" />
+          <keyValuePair id="3f6f59dc-c87c-45cd-a88c-45409edb98ac" Key="MM" Value="" />
+          <keyValuePair id="4ab89caf-2891-4f5b-b066-94dbe250f7fa" Key="MF" Value="" />
+          <keyValuePair id="4d1909db-de59-4db7-8645-46670749f18e" Key="FM" Value="" />
+          <keyValuePair id="85162cb3-1d49-4d5a-a98d-454cf2ee90f3" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="90dd6191-9155-463b-bbcc-4d493bca07c8" StringID="CM_News_HighFlyingSurprise_LoseGoodPerformance_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="4d553f13-0365-412b-8a22-a9b95464a069">
+          <stringArgument id="0752ba16-7019-4aec-b192-4e9f0deb301b" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="d1ae3812-67f1-4539-b402-1e4da51ed240" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="12" />
+          <stringArgument id="0bf45ecc-dac9-4238-a67d-35b39e9aeaf7" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="4658a247-f021-44a7-9dbd-a430557de6df">
+          <keyValuePair id="bb13ebf3-950c-4984-8fde-100db72818ba" Key="M" Value="%1s was arguably the best player on the pitch, but his performance wasn't enough to inspire %2s to victory in the game against %3s." />
+          <keyValuePair id="06618c5f-f6b5-470b-a4d2-f5571ba233ed" Key="F" Value="" />
+          <keyValuePair id="a7458c8e-2f7e-4b1a-b0b2-26ecfa2062f8" Key="MM" Value="" />
+          <keyValuePair id="92e19b97-8e1d-41a8-9bb3-a87cab6b849d" Key="MF" Value="" />
+          <keyValuePair id="0cd3259e-e029-44e1-9e50-e3b4fc2a9a28" Key="FM" Value="" />
+          <keyValuePair id="f3006fda-07e8-4620-b700-701004f89393" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="97e2d719-4799-4f17-a4f1-06f1562d4e23">
+        <sceneParameter id="e19d207a-a649-4036-9dd4-9c0158b58ae0" Parameter="PlayerId_1" Value="SaveData:PlayerID" />
+        <sceneParameter id="958fa996-73df-428e-a325-29d8fac31aae" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="d2f579bb-9bb5-4497-9c1f-ce4df598bec6" X="-1280" Y="2600" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="6" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="graph_u">
+      <stringWithArgsTitle id="59157b06-3238-4345-9eeb-8769c4a762d6" StringID="CM_News_HighFlyingSurprise_LoseGoodPerformanceGoalsAssists_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="85d6a1af-3423-40e7-a4f8-72f0135b2959">
+          <stringArgument id="6b6f0b1f-8826-4f2d-b8c8-aed94bac1b73" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="96781c5c-f02f-4e87-84bf-595f5b7af538">
+          <keyValuePair id="c8656a49-c79b-430b-adf3-ec69cd771504" Key="M" Value="%1s Disappointment!" />
+          <keyValuePair id="938cb3c4-3b91-4ce7-a12b-caf93fa67b84" Key="F" Value="" />
+          <keyValuePair id="9f42d250-986d-4ed0-9cca-5bbcb8654e13" Key="MM" Value="" />
+          <keyValuePair id="b68859d9-282c-40b4-a0c0-30bbe939f285" Key="MF" Value="" />
+          <keyValuePair id="4ad8d0a1-a03c-4bef-b382-71b197ab260e" Key="FM" Value="" />
+          <keyValuePair id="14d50599-86fd-4eab-9687-a605793be1ae" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="583b46b7-42ba-4594-9cac-535b13e001f3" StringID="CM_News_HighFlyingSurprise_LoseGoodPerformanceGoalsAssists_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="d64da414-ce69-4c2d-b1b2-3f00804e568a">
+          <stringArgument id="bef1858a-54c9-4189-a40d-c87b0f83f3e2" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+          <stringArgument id="7c9fc69f-5cc9-492a-bd21-951d577ea1f5" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="12" />
+          <stringArgument id="9a739d1b-2931-44d1-b01c-b7eda25ffde1" Value="SaveData:PlayerID" Format="7" />
+        </stringArguments>
+        <stringContent id="e67c1254-7229-452e-a386-26414fc15454">
+          <keyValuePair id="b81eb232-7e9a-4002-89a6-32d2f2152309" Key="M" Value="Supporters may have found a new hero in the club's ranks. %3s put in a really good shift for %2s. But his excellent performance wasn't enough to make the difference as they slipped to defeat against %1s." />
+          <keyValuePair id="c09a399b-7e31-4a08-ba7e-6af52a547aa1" Key="F" Value="" />
+          <keyValuePair id="6fb61e09-6acd-44f3-bd33-3f38b4140fb2" Key="MM" Value="" />
+          <keyValuePair id="f077580a-db20-4f53-ae26-7c4e8cafa32b" Key="MF" Value="" />
+          <keyValuePair id="27460a40-54db-4675-8cad-376967be8e37" Key="FM" Value="" />
+          <keyValuePair id="81793da0-029e-4273-a03b-5a8e4b1b8f97" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="ac14c547-cc1c-4a56-baed-bee67f52999f">
+        <sceneParameter id="e786e580-a88c-4a0a-b886-458abb890622" Parameter="PlayerId_1" Value="SaveData:PlayerID" />
+        <sceneParameter id="46d884f2-d96a-4012-b6cc-3784202c705a" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="41182f21-4e4c-4f4c-927e-06d6c9b0b95f" X="-1280" Y="2840" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="6" WipeId="1" WipeArgument="Model:Global.UserTeamID" BackupImage="graph_d">
+      <stringWithArgsTitle id="6b4485cf-7beb-4bb0-a00d-6f96363b8644" StringID="CM_News_HighFlyingSurprise_LoseGoodPerformanceGK_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="00bd4770-01d9-4bd3-afcc-9209f5b802d1" />
+        <stringContent id="5b93e669-c2ed-47e9-a0f1-09a72cec2936">
+          <keyValuePair id="e464cdb0-9834-4191-b07e-6868d10ceb92" Key="M" Value="Keeper Can't Save The Game!" />
+          <keyValuePair id="6b7b2b38-5b82-4c30-a8b1-be46d304b240" Key="F" Value="" />
+          <keyValuePair id="0327fec3-027b-4f45-aee6-e4c489effe33" Key="MM" Value="" />
+          <keyValuePair id="8ab31121-520a-44b8-a880-3389dcf71c33" Key="MF" Value="" />
+          <keyValuePair id="7a8fd103-fc07-420e-93dc-066348217696" Key="FM" Value="" />
+          <keyValuePair id="502a1534-9e4f-49ba-af9f-3b4cf140821a" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="71db219a-2675-417e-a05a-c9e459d92164" StringID="CM_News_HighFlyingSurprise_LoseGoodPerformanceGK_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="af5d4470-1ecc-45f8-9d11-8a68869f2afa">
+          <stringArgument id="c4fe3e4a-38d0-44e3-8e8e-5f79ff289a0f" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="e3610c40-f65c-4fa7-b1d1-d45c4e7c24d6" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="12" />
+          <stringArgument id="e82c8d25-b2dd-4f9e-b769-ded42b10d29e" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="e392c47b-ca47-4bf4-add5-ab3dcbf9a15d">
+          <keyValuePair id="a0e6ed9f-b45b-411f-8b90-99c21cfa0ddd" Key="M" Value="%1s put in a brave performance in goal for %2s with several eye-catching saves which had the crowd chanting his name. The keeper's heroics weren't enough, though, to stop %2s being beaten by %3s in a closely-fought game." />
+          <keyValuePair id="c41f5062-793d-4379-800b-0d34af1aee8e" Key="F" Value="" />
+          <keyValuePair id="6a0d4cc6-7ca7-4578-972d-e12fad2a68de" Key="MM" Value="" />
+          <keyValuePair id="64df987e-c63b-4b08-a9f1-6639d3a24ddb" Key="MF" Value="" />
+          <keyValuePair id="d2ec3819-682e-406b-9dd6-e01a58d04524" Key="FM" Value="" />
+          <keyValuePair id="c650af1b-6ed2-4ab4-a1d7-8b98b69aa78f" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="5cc62391-876e-4b32-8c22-ab5f59f3bc2a">
+        <sceneParameter id="3ef7bb2a-ed37-4320-8c1e-e145eed686ca" Parameter="PlayerId_1" Value="SaveData:PlayerID" />
+        <sceneParameter id="0fd3e626-4e69-4317-ad6f-79850f01cd4b" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="f48fabe8-5eb5-4bfb-bee8-f756c837addf" X="-1960" Y="2600" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="e90c8956-63e5-465d-bb1d-7e4298733e29">
+        <condition id="d2834d3d-3c12-4c66-8033-d48857311f1e" VariableId="SurprisingPlayer:Stats.Goals" Comparison="GTE" Value="1" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="406de85e-dcd9-4307-8823-c1a6f8b784fc" VariableId="SurprisingPlayer:Stats.Assists" Comparison="GTE" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="6445fbb4-ab83-452e-9d12-5f5f943b166b" X="-1720" Y="2840" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="904f2a16-7740-4e3a-a55a-c1fced2fa973">
+        <condition id="604ad31c-b2e9-4658-b5ab-b646b155e425" VariableId="SurprisingPlayer:PositionInMatch" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="d0500e3c-65d9-4d58-9887-3151c183d4f8" VariableId="SurprisingPlayer:Stats.GkSaves" Comparison="GTE" Value="3" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="791debd6-11c7-4b49-9bd7-fddae459a6d5" VariableId="Model:UserMatchCompleted.Results.OponentGoals" Comparison="EQ" Value="0" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="4bb09f74-7382-48df-a186-6108c1032439" VariableId="SurprisingPlayer:Stats.GkSaves" Comparison="GTE" Value="6" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="3075eabf-cd19-480d-ba97-1e1b74e78a15" VariableId="Model:UserMatchCompleted.Results.OponentGoals" Comparison="LTE" Value="1" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="cfd06901-8dd3-4305-b214-396aeb5a627b" VariableId="SurprisingPlayer:Stats.GkSaves" Comparison="GTE" Value="9" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="02cac968-1ce7-4842-b21f-526da75d4853" VariableId="Model:UserMatchCompleted.Results.OponentGoals" Comparison="LTE" Value="2" Operator="OR" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="c8ea8655-9ff1-4866-988b-715a9c6f643d" VariableId="SurprisingPlayer:Stats.GkSaves" Comparison="GTE" Value="12" Operator="" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+        <condition id="f3d51f2e-440b-41cd-8774-378981f4ec3c" VariableId="Model:UserMatchCompleted.Results.OponentGoals" Comparison="LTE" Value="3" Operator="AND" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+  </nodes>
+  <groups id="0e381ce6-a98b-407d-9a21-08a3851f1938">
+    <group id="456f4125-9538-4731-ba39-78fd22972037" name="Surprising player">
+      <node-list id="5d2d547b-a5a4-4958-82eb-48c66844edf2">
+        <string id="acd963cd-f2c5-4ee9-886a-ea81b73fbb41" Value="e8258294-2e2e-446e-ab57-6766e2d8ce8b" />
+      </node-list>
+    </group>
+    <group id="d748d723-3500-4139-8076-4f17b7bb9b2d" name="Matching Criteria">
+      <node-list id="853c4d65-1c46-472e-8a57-969d38ac74a9">
+        <string id="49a7e9dc-3aeb-4ecc-8391-0861f6893e98" Value="4b244c17-4f81-4b69-ab8f-a4ff7179dcdb" />
+      </node-list>
+    </group>
+    <group id="02698d2d-b202-4435-a399-10fb253a7557" name="Win/Lose">
+      <node-list id="36b7148e-b6b1-470a-a432-6697f998de8a">
+        <string id="2eaa6709-c43e-4167-8dbb-acafcaf6031b" Value="e715b7c7-a892-4bf4-bfb8-85cf0ed7689e" />
+      </node-list>
+    </group>
+    <group id="741cbdea-36c3-4361-bd42-33001eabca8e" name="Goals/Assists">
+      <node-list id="fb3eacb6-0608-4445-aa63-67f8c9100f25">
+        <string id="48a4c3f1-ec71-4ed1-b016-da588a48053b" Value="04df0510-ebc2-4645-8752-218c75661f45" />
+      </node-list>
+    </group>
+    <group id="336e92af-bf26-4e18-88f9-6a952f384709" name="Goals/Assists">
+      <node-list id="d9388514-e92b-491b-870f-a6edc7433e73">
+        <string id="b91ee981-5988-4e84-ab54-a4baa202b6de" Value="f48fabe8-5eb5-4bfb-bee8-f756c837addf" />
+      </node-list>
+    </group>
+    <group id="6e19b804-1ed8-47c3-a87c-f33644212ccf" name="GK position and saves">
+      <node-list id="de73a76b-9f61-41ff-b84f-0867372255f1">
+        <string id="36bd5760-2827-4e10-92bb-617d62c1d674" Value="656c8d05-e033-4210-ad64-786e829a9eb2" />
+      </node-list>
+    </group>
+    <group id="050c92ed-cbc1-4c21-a98a-e9384802c0eb" name="GK position and saves">
+      <node-list id="735a9200-14e0-49cb-8aaf-36b6c1cab6f5">
+        <string id="ce46e725-cb8d-498c-99de-7921a27d52e7" Value="6445fbb4-ab83-452e-9d12-5f5f943b166b" />
+      </node-list>
+    </group>
+    <group id="ffb948f0-fe76-4357-baa7-09d6274892d0" name="Win - Goals/Assists">
+      <node-list id="da0cfb30-f9ac-492e-b1eb-87046963541b">
+        <string id="d38945e8-1bb1-4876-8777-0a4db3ed52f5" Value="5c70d653-fa42-4921-a878-aa43b518f3aa" />
+      </node-list>
+    </group>
+    <group id="1a5a414d-9934-46d8-b3bf-10d1f104eebe" name="Lose - Goals/Assists">
+      <node-list id="59311ec0-6552-4070-befa-d3b662bca1d3">
+        <string id="2c33ac5a-1954-4c45-ad6e-343d5ae0fef6" Value="d2f579bb-9bb5-4497-9c1f-ce4df598bec6" />
+      </node-list>
+    </group>
+    <group id="65185e74-fc7a-4bbb-803c-2404261dd55d" name="Win - GK saves">
+      <node-list id="6dc0ca0e-d2c9-451b-acb1-f0402ab361ee">
+        <string id="2ca05e90-4e62-4ad2-84c1-99d2be2e5d65" Value="7710def3-43e4-4195-b239-bbd1f70a8913" />
+      </node-list>
+    </group>
+    <group id="49eff002-99f4-4791-849a-607e7e972b93" name="Win, despite performance">
+      <node-list id="3cdff0ab-ac85-4ea8-948f-59be7a54391b">
+        <string id="b9a24660-b4b8-4b2d-a00f-3bf78aa789f0" Value="d0f1c60b-29ba-4353-a446-e853b97e51c7" />
+      </node-list>
+    </group>
+    <group id="df06cb68-b8ed-47e8-beae-16a39ff00d20" name="Lose, despite performance">
+      <node-list id="042be834-434b-44d2-bb3c-18afc621109d">
+        <string id="b8020953-ad7e-4f39-bda5-9ade997dd9d5" Value="a9bb766b-4221-45ea-a5c8-0d62d4b8474c" />
+      </node-list>
+    </group>
+    <group id="a34a49a0-87c3-45fd-b528-bb8ba2985396" name="Lose - GK saves">
+      <node-list id="10aa744d-1a21-4aa9-a1f4-f6ff82693e1b">
+        <string id="03bdcaa1-a9a0-4e02-8bc6-2e16380d0dd1" Value="41182f21-4e4c-4f4c-927e-06d6c9b0b95f" />
+      </node-list>
+    </group>
+    <group id="f399c5a8-bab3-4821-8508-9227edf1f7a1" name="Player is thankful">
+      <node-list id="2bf8843b-fd39-4044-8c56-69280975d202">
+        <string id="5156d4b5-1982-4880-83f6-13ebdb22a6d3" Value="581c5cb7-4b0d-430d-bd7c-15505c3be5bc" />
+      </node-list>
+    </group>
+    <group id="e46dbdb2-36e7-4649-a6c5-921949f24c1f" name="Player is thankful, despite loss">
+      <node-list id="f4ce324d-e2eb-4e22-8d4c-3fdf76c61cc0">
+        <string id="eb2c9f3e-a723-4b5e-a381-d751c2946e1f" Value="3ab52bbb-69d4-4d9d-83a9-3201a170a467" />
+      </node-list>
+    </group>
+    <group id="281c2788-2112-4e77-9d88-cc347c25f958" name="Prevents loop instantiation">
+      <node-list id="7c5e8180-15cc-42b8-94c6-d97a6f465a1b">
+        <string id="4176c278-09e0-419e-ba20-c63e24e1c8f6" Value="42f6c810-930c-45f4-b0cd-ee91887a3eb1" />
+      </node-list>
+    </group>
+  </groups>
+  <connections id="da8430a4-fd9f-4906-89a8-b2f887846faf">
+    <connection id="673976a8-05e4-4a3a-b4fd-7c7604b14f16" SrcNodeID="e8258294-2e2e-446e-ab57-6766e2d8ce8b" SrcPortName="advance" DstNodeID="4b244c17-4f81-4b69-ab8f-a4ff7179dcdb" DstPortName="enter" ConnectionOrder="0">
+      <points id="80d7aef4-ba90-4d51-9259-3ecd55e0c252" />
+    </connection>
+    <connection id="53e236ea-93aa-45fc-bed1-9052aed7ebf3" SrcNodeID="04df0510-ebc2-4645-8752-218c75661f45" SrcPortName="false" DstNodeID="656c8d05-e033-4210-ad64-786e829a9eb2" DstPortName="enter" ConnectionOrder="0">
+      <points id="5dbb52cf-5c58-4b01-b880-46a9199f1103" />
+    </connection>
+    <connection id="97fc4921-7c22-4e75-bb47-cd5d2a471cdc" SrcNodeID="04df0510-ebc2-4645-8752-218c75661f45" SrcPortName="true" DstNodeID="5c70d653-fa42-4921-a878-aa43b518f3aa" DstPortName="enter" ConnectionOrder="0">
+      <points id="0e71dff0-7a97-4697-934e-25e7fa81af65" />
+    </connection>
+    <connection id="8eaa6cf2-f300-43c0-a1f9-350c1b0029ae" SrcNodeID="7710def3-43e4-4195-b239-bbd1f70a8913" SrcPortName="advance" DstNodeID="0ab817ec-f68b-4e9d-81d3-e4a5c6ed0141" DstPortName="enter" ConnectionOrder="0">
+      <points id="727ce9e4-1e09-4a4b-9863-b69c072cdcf8" />
+    </connection>
+    <connection id="cd1dc2dc-5fe4-4373-843c-b8badf3d63ed" SrcNodeID="5c70d653-fa42-4921-a878-aa43b518f3aa" SrcPortName="advance" DstNodeID="0ab817ec-f68b-4e9d-81d3-e4a5c6ed0141" DstPortName="enter" ConnectionOrder="0">
+      <points id="286d0106-e8e6-4388-9bca-850ad90d7361" />
+    </connection>
+    <connection id="28df99ed-11f0-41c1-a573-5626ebb5f4e0" SrcNodeID="d0f1c60b-29ba-4353-a446-e853b97e51c7" SrcPortName="advance" DstNodeID="0ab817ec-f68b-4e9d-81d3-e4a5c6ed0141" DstPortName="enter" ConnectionOrder="0">
+      <points id="e275375c-4558-4491-8009-5e760ffc7ec4" />
+    </connection>
+    <connection id="c1a5b3a9-6a83-44e0-9fb9-7882ca88ab4a" SrcNodeID="214f5153-e01d-4fb2-bd0b-442560994c0e" SrcPortName="advance" DstNodeID="5b7fc39c-857b-4512-bc65-e2c60681f2f3" DstPortName="enter" ConnectionOrder="0">
+      <points id="66f15f4b-f437-4a73-b7b9-a6ed25abbb1d">
+        <point id="24c8b9f6-f22a-46b3-b3bd-648ad3d41a27" X="921.105456866439" Y="2285.64982490283" />
+      </points>
+    </connection>
+    <connection id="64496c30-bffa-42a3-96b4-26deee20365a" SrcNodeID="a23af1cf-3a3e-4f05-8b1f-ec19586b41cb" SrcPortName="advance" DstNodeID="214f5153-e01d-4fb2-bd0b-442560994c0e" DstPortName="enter" ConnectionOrder="0">
+      <points id="a12fd235-fd3c-41b6-ad25-530bbf6eaf0b" />
+    </connection>
+    <connection id="d2680bca-6244-43dc-a764-7e69369b8445" SrcNodeID="b6b63c07-f938-4cbe-959d-5daf21220bc6" SrcPortName="advance" DstNodeID="214f5153-e01d-4fb2-bd0b-442560994c0e" DstPortName="enter" ConnectionOrder="0">
+      <points id="ad292705-c1ce-4b7d-bfef-ef95e34c5734" />
+    </connection>
+    <connection id="d4076623-6e81-42bb-b34b-a52914be1ed0" SrcNodeID="45bc6afb-3326-4f9c-8204-15544bd833ac" SrcPortName="advance" DstNodeID="214f5153-e01d-4fb2-bd0b-442560994c0e" DstPortName="enter" ConnectionOrder="0">
+      <points id="9366ceb3-bcf6-468b-9be7-0d92b615e9a6" />
+    </connection>
+    <connection id="9205f8f6-9444-49bd-865b-6897a2351db8" SrcNodeID="581c5cb7-4b0d-430d-bd7c-15505c3be5bc" SrcPortName="advance-1" DstNodeID="b6b63c07-f938-4cbe-959d-5daf21220bc6" DstPortName="enter" ConnectionOrder="0">
+      <points id="1e4c511e-265a-4af7-9823-fa7a78cb31dc" />
+    </connection>
+    <connection id="1468eea0-e3e1-4197-9449-c7f47245a652" SrcNodeID="581c5cb7-4b0d-430d-bd7c-15505c3be5bc" SrcPortName="advance-2" DstNodeID="45bc6afb-3326-4f9c-8204-15544bd833ac" DstPortName="enter" ConnectionOrder="0">
+      <points id="f55ffa33-4392-418d-bdd3-4d6cb93d5f3c" />
+    </connection>
+    <connection id="9b07a2e9-296c-4bd8-bc10-4ebdfc4cb873" SrcNodeID="581c5cb7-4b0d-430d-bd7c-15505c3be5bc" SrcPortName="advance-3" DstNodeID="a23af1cf-3a3e-4f05-8b1f-ec19586b41cb" DstPortName="enter" ConnectionOrder="0">
+      <points id="f9c5e653-f7d4-43d7-870c-6813b6a9d630" />
+    </connection>
+    <connection id="33e5e3eb-9b56-4987-872d-915b41830e01" SrcNodeID="0ab817ec-f68b-4e9d-81d3-e4a5c6ed0141" SrcPortName="advance" DstNodeID="581c5cb7-4b0d-430d-bd7c-15505c3be5bc" DstPortName="enter" ConnectionOrder="0">
+      <points id="6825b81b-8a5f-4c0f-8c03-b2dd969ffa0e" />
+    </connection>
+    <connection id="4c09c010-a75b-4561-b895-58601b8b2ed4" SrcNodeID="4b244c17-4f81-4b69-ab8f-a4ff7179dcdb" SrcPortName="true" DstNodeID="736ffed2-3a9e-4ecc-9d44-0057d89d974a" DstPortName="enter" ConnectionOrder="0">
+      <points id="f41026e8-b147-49c4-9c96-8859d01478c5" />
+    </connection>
+    <connection id="f8b3bfb8-3a04-4f89-8272-7d3dcf58feab" SrcNodeID="42f6c810-930c-45f4-b0cd-ee91887a3eb1" SrcPortName="false" DstNodeID="5b7fc39c-857b-4512-bc65-e2c60681f2f3" DstPortName="enter" ConnectionOrder="0">
+      <points id="f34ceb8f-71ab-4aa7-9d06-b6b1eb62b291">
+        <point id="49512acb-33f1-4c12-b744-ab55b6fc4a2f" X="1480" Y="2760" />
+        <point id="6878ea30-f7ef-4890-8631-0809942dd3e0" X="960" Y="2760" />
+      </points>
+    </connection>
+    <connection id="021a47f9-8d8f-4320-b70c-c383e81f86be" SrcNodeID="581c5cb7-4b0d-430d-bd7c-15505c3be5bc" SrcPortName="UserMatchCompleted" DstNodeID="5b7fc39c-857b-4512-bc65-e2c60681f2f3" DstPortName="enter" ConnectionOrder="0">
+      <points id="5fbfe810-cc9a-4ddc-945f-b99292e4f1b1">
+        <point id="d87d6a84-a89a-4bb7-9e24-2d2efb618b6d" X="236.08580885574" Y="2440.44842985253" />
+        <point id="4bb6ab47-8d5f-4770-ae6b-54cd4a449191" X="922.644275067629" Y="2441.92940820346" />
+      </points>
+    </connection>
+    <connection id="3aca5729-50c2-46bf-8420-56c0ae10f776" SrcNodeID="5b7fc39c-857b-4512-bc65-e2c60681f2f3" SrcPortName="UserMatchCompleted" DstNodeID="42f6c810-930c-45f4-b0cd-ee91887a3eb1" DstPortName="enter" ConnectionOrder="0">
+      <points id="4e19acb8-7a0d-4fd4-a98b-79cfecab370c" />
+    </connection>
+    <connection id="80709235-a1f3-4af3-938b-6504d5fb0c95" SrcNodeID="736ffed2-3a9e-4ecc-9d44-0057d89d974a" SrcPortName="advance" DstNodeID="e715b7c7-a892-4bf4-bfb8-85cf0ed7689e" DstPortName="enter" ConnectionOrder="0">
+      <points id="178f7fc1-f819-4a8e-9d9c-661636f6d7fc" />
+    </connection>
+    <connection id="1a5f3aec-69a6-41b7-875f-a6342e7941f7" SrcNodeID="e715b7c7-a892-4bf4-bfb8-85cf0ed7689e" SrcPortName="true" DstNodeID="04df0510-ebc2-4645-8752-218c75661f45" DstPortName="enter" ConnectionOrder="0">
+      <points id="d099558f-33ae-40e8-9ff6-534cad46677f" />
+    </connection>
+    <connection id="bd8ce359-abd6-4e34-8128-0141a05d3ff3" SrcNodeID="1ba6e33d-7dfe-47e0-847c-659585474015" SrcPortName="advance" DstNodeID="39ebdff2-b0eb-4ca1-9cc5-532048013796" DstPortName="enter" ConnectionOrder="0">
+      <points id="743abb8c-19b2-413d-9e27-74460755620f" />
+    </connection>
+    <connection id="ef566757-1c42-4982-b091-a0e3063522d2" SrcNodeID="66103cd9-75c8-4f67-b04c-eb6e78aecd2e" SrcPortName="advance" DstNodeID="39ebdff2-b0eb-4ca1-9cc5-532048013796" DstPortName="enter" ConnectionOrder="0">
+      <points id="f9e39842-04ae-4ca9-80bd-db5503b20c28" />
+    </connection>
+    <connection id="20c9c8b9-0188-4247-bde8-5a93c0a09299" SrcNodeID="c2033689-fbe1-48e8-bf90-f99b67b402e4" SrcPortName="advance" DstNodeID="39ebdff2-b0eb-4ca1-9cc5-532048013796" DstPortName="enter" ConnectionOrder="0">
+      <points id="1922f0f4-26bf-438b-919d-d7aefecf6020" />
+    </connection>
+    <connection id="94191143-9725-4ae4-a468-752188599e06" SrcNodeID="3ab52bbb-69d4-4d9d-83a9-3201a170a467" SrcPortName="advance-1" DstNodeID="c2033689-fbe1-48e8-bf90-f99b67b402e4" DstPortName="enter" ConnectionOrder="0">
+      <points id="6bd3a384-f227-4753-82aa-3eee489325e9" />
+    </connection>
+    <connection id="944268ed-06be-4112-bd71-1b631b89ee8e" SrcNodeID="3ab52bbb-69d4-4d9d-83a9-3201a170a467" SrcPortName="advance-2" DstNodeID="1ba6e33d-7dfe-47e0-847c-659585474015" DstPortName="enter" ConnectionOrder="0">
+      <points id="2c88f7d5-9c6b-4ad4-9248-59893cd6b761" />
+    </connection>
+    <connection id="ee1444ec-5076-4bf2-a957-58384c6e49da" SrcNodeID="3ab52bbb-69d4-4d9d-83a9-3201a170a467" SrcPortName="advance-3" DstNodeID="66103cd9-75c8-4f67-b04c-eb6e78aecd2e" DstPortName="enter" ConnectionOrder="0">
+      <points id="ece0acd2-105e-4e22-9a5a-987efaa21a92" />
+    </connection>
+    <connection id="2da25217-315e-492f-a2a1-2142f32302da" SrcNodeID="8151e088-b119-402b-b066-c158ce0e3a70" SrcPortName="advance" DstNodeID="3ab52bbb-69d4-4d9d-83a9-3201a170a467" DstPortName="enter" ConnectionOrder="0">
+      <points id="c2dba987-3fda-4487-9ba4-0629ed102138" />
+    </connection>
+    <connection id="202ca9de-a516-47b8-9468-0ef481f47dfe" SrcNodeID="a9bb766b-4221-45ea-a5c8-0d62d4b8474c" SrcPortName="advance" DstNodeID="8151e088-b119-402b-b066-c158ce0e3a70" DstPortName="enter" ConnectionOrder="0">
+      <points id="9f0cd1d7-0ec2-42d4-bece-e349af836f16" />
+    </connection>
+    <connection id="fceb66f9-fd12-4a6c-9d1f-1cebcb6c4f4c" SrcNodeID="d2f579bb-9bb5-4497-9c1f-ce4df598bec6" SrcPortName="advance" DstNodeID="8151e088-b119-402b-b066-c158ce0e3a70" DstPortName="enter" ConnectionOrder="0">
+      <points id="4c682d7b-c07a-4644-8857-294f4482070d" />
+    </connection>
+    <connection id="3943583e-65c5-48a6-97fb-e35c502a635e" SrcNodeID="41182f21-4e4c-4f4c-927e-06d6c9b0b95f" SrcPortName="advance" DstNodeID="8151e088-b119-402b-b066-c158ce0e3a70" DstPortName="enter" ConnectionOrder="0">
+      <points id="c2156b44-6049-4620-a4f3-0780ec3e3d76" />
+    </connection>
+    <connection id="f4f85ee6-008e-4e40-8fbc-58556b0b6c2c" SrcNodeID="f48fabe8-5eb5-4bfb-bee8-f756c837addf" SrcPortName="true" DstNodeID="d2f579bb-9bb5-4497-9c1f-ce4df598bec6" DstPortName="enter" ConnectionOrder="0">
+      <points id="d3cda0f1-2e98-41cc-a7ae-fc75c20500ae" />
+    </connection>
+    <connection id="f3bbe24a-bb07-4b17-9598-7a9abc0e2714" SrcNodeID="e715b7c7-a892-4bf4-bfb8-85cf0ed7689e" SrcPortName="false" DstNodeID="f48fabe8-5eb5-4bfb-bee8-f756c837addf" DstPortName="enter" ConnectionOrder="0">
+      <points id="6b9797ef-9822-4e89-b0fa-1dc9256d358c" />
+    </connection>
+    <connection id="777b86bd-38bf-4919-b742-4d064de5731a" SrcNodeID="656c8d05-e033-4210-ad64-786e829a9eb2" SrcPortName="false" DstNodeID="d0f1c60b-29ba-4353-a446-e853b97e51c7" DstPortName="enter" ConnectionOrder="0">
+      <points id="5dcd9ca2-40c0-42f9-b277-7ee7e270e5cf" />
+    </connection>
+    <connection id="b9256163-6aa6-4985-99bf-9254cb64713b" SrcNodeID="656c8d05-e033-4210-ad64-786e829a9eb2" SrcPortName="true" DstNodeID="7710def3-43e4-4195-b239-bbd1f70a8913" DstPortName="enter" ConnectionOrder="0">
+      <points id="8576ebbf-1911-43d2-bf6c-c0934fa19ddb" />
+    </connection>
+    <connection id="4eae80dd-caa1-4ee2-8b80-330b058ced46" SrcNodeID="f48fabe8-5eb5-4bfb-bee8-f756c837addf" SrcPortName="false" DstNodeID="6445fbb4-ab83-452e-9d12-5f5f943b166b" DstPortName="enter" ConnectionOrder="0">
+      <points id="b983fed7-8d3b-4628-b8fb-672eea320fa8" />
+    </connection>
+    <connection id="83eae514-d567-4b9c-9701-fe70ab888b75" SrcNodeID="6445fbb4-ab83-452e-9d12-5f5f943b166b" SrcPortName="false" DstNodeID="a9bb766b-4221-45ea-a5c8-0d62d4b8474c" DstPortName="enter" ConnectionOrder="0">
+      <points id="7354b6bb-27fa-4a3d-ba01-8153b07f6650" />
+    </connection>
+    <connection id="d5d4f80e-73e7-4a80-a948-ae8e97e7947f" SrcNodeID="6445fbb4-ab83-452e-9d12-5f5f943b166b" SrcPortName="true" DstNodeID="41182f21-4e4c-4f4c-927e-06d6c9b0b95f" DstPortName="enter" ConnectionOrder="0">
+      <points id="54ac24fc-65bd-4f3d-9125-2b39ad5bbef6" />
+    </connection>
+    <connection id="72d9aed6-c310-44eb-9d34-885356c34ffd" SrcNodeID="42f6c810-930c-45f4-b0cd-ee91887a3eb1" SrcPortName="true" DstNodeID="8a07d14b-b62f-4e24-97c8-ba84ce063b3a" DstPortName="enter" ConnectionOrder="0">
+      <points id="d6d11c0d-f1a1-4f01-baab-14cebe56a735" />
+    </connection>
+    <connection id="c49f9eee-9c32-4420-a90a-e17ba70a84c5" SrcNodeID="3ab52bbb-69d4-4d9d-83a9-3201a170a467" SrcPortName="UserMatchCompleted" DstNodeID="5b7fc39c-857b-4512-bc65-e2c60681f2f3" DstPortName="enter" ConnectionOrder="0">
+      <points id="ca17d04f-49ba-4209-b453-e379557c703b">
+        <point id="187ad039-9a95-41cf-8459-10f3e64e8fd9" X="237.68172549616" Y="3124.87360684688" />
+        <point id="dd5b58d3-a143-4753-96eb-1aec9f8dabd8" X="922.393878234306" Y="3122.23932376418" />
+      </points>
+    </connection>
+    <connection id="bf9c284f-93f9-4c05-9b13-fc2934c4bcb1" SrcNodeID="39ebdff2-b0eb-4ca1-9cc5-532048013796" SrcPortName="advance" DstNodeID="5b7fc39c-857b-4512-bc65-e2c60681f2f3" DstPortName="enter" ConnectionOrder="0">
+      <points id="1498ef27-6003-491b-a470-9c4f0e857692">
+        <point id="b3548d8a-2e64-43bc-ba96-f311b9f01f32" X="926.546344072754" Y="2958.40917638109" />
+      </points>
+    </connection>
+  </connections>
+</StoryAsset>

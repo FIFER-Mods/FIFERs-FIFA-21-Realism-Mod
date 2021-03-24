@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="c1ea1dcb-5788-4ebc-93c5-179a3ce49057" name="Screenshot" deleted="False" valid="True">
+  <nodes id="eebb0ac4-b38a-434e-b6d3-d930d9e611e0">
+    <story-start-node id="7b2d7550-9f31-47a2-9760-7b2dacf6eb57" X="360" Y="0" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="SingleInstance" NodeEvent="HighlightsReady" StoryKey="" UseSelectData="True" RunInPlayerCareer="False" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="79aa852d-db0d-496b-9ef7-6d4fd90ac2fe" />
+      <select-data id="f2c64dc4-3ba7-4444-b9d2-bc46b13e8c8f" SelectCount="0">
+        <alias-list id="25616764-dc67-4fb8-a523-6ca75b22c6c6" />
+        <order-by id="02c252e1-e024-4653-b065-4353a04cd61c" />
+        <alias-data-source id="66286539-ab19-49b5-8a99-73605841aed3" DataSource="">
+          <conditions id="0e3270b4-985f-4707-8eee-94a80c20a354" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <select-data-node id="3d8add27-ec5f-4a0d-a1b9-d2321504ca4d" X="640" Y="0" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="88e6b16a-dc52-46f0-b8c5-5a7da9333fca" SelectCount="1">
+        <alias-list id="e1781d97-dad7-493e-877c-64f592b60d64">
+          <string id="7bbfc07f-1899-42f5-ba22-eca747dfa7d6" Value="GoalHighlight" />
+        </alias-list>
+        <order-by id="f0ccc20c-3a0e-4131-b05e-7774bb448d55" />
+        <alias-data-source id="daca8869-2521-4cdf-b3d3-571e9a8e7f17" DataSource="Model:HighlightsReady.Highlights">
+          <conditions id="5a072caa-49b4-4e2b-96ff-1ef3e8454608">
+            <condition id="1bb90cd8-725d-4af9-a606-b533cca0a47c" VariableId="Select:Type" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <take-screenshot-node id="972bd48e-ac19-4404-a93b-e80c871018ee" X="840" Y="0" NodeType="TakeScreenshot" NodeName="Power Blue FTW" HighlightIndex="GoalHighlight:Index" HighlightPlayerID="GoalHighlight:PlayerID" />
+    <state-node id="c6f217c4-b4ba-4959-8aa4-23e7d7fc6a5b" X="1080" Y="0" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="29094320-39f8-4f8e-b495-89e7247da49b">
+        <string id="6eaf4817-be8f-4c43-b1d1-187bf584a982" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <trigger-news-node id="6f4b84a2-d188-440d-8ac2-6bd20ef3f478" X="1320" Y="0" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="-1" WipeId="" WipeArgument="">
+      <stringWithArgsTitle id="caceaa85-3c8a-49f4-9783-1ff7d51d0dd4" StringID="SCREENTHOT_TITLE_STRING_ID" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="16f1be86-834f-47ae-a6bd-a70220ab83e4" />
+        <stringContent id="cf9397c3-8f0d-4c1e-bb2a-a27ebaed1d95">
+          <keyValuePair id="d7cdd69c-187c-49cd-b825-606b43d800c9" Key="M" Value="SCREENTHOT_TITLE_CONTENT" />
+          <keyValuePair id="e46e09a3-c321-4d17-932d-e39ba0b2a3ad" Key="F" Value="" />
+          <keyValuePair id="d1236fae-282f-40f7-9b15-09b8a47c2484" Key="MM" Value="" />
+          <keyValuePair id="710cac9c-183d-48ff-a123-9d7ad8caf8d6" Key="MF" Value="" />
+          <keyValuePair id="8842828a-ac3d-4172-a087-0de2ae8574d5" Key="FM" Value="" />
+          <keyValuePair id="6ad7b43c-1918-495d-971e-e4cc931c41bd" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="acd702fa-d760-4288-b1d9-e96dd37d498c" StringID="SCREENTHOT_BODY_STRING_ID" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="bb6338b3-02d7-450c-a85a-bbafe0468597">
+          <stringArgument id="4bcbc6b5-e1dd-493e-b914-b1c37dee138c" Value="0" Format="0" />
+        </stringArguments>
+        <stringContent id="38e1c91a-9ef2-4ff5-81db-db7544df824d">
+          <keyValuePair id="b335f15f-9413-49e2-948d-fa0e8ea503a0" Key="M" Value="SCREENTHOT_BODY_CONTENT" />
+          <keyValuePair id="b3097ff7-44a2-4d40-8681-109f8359b949" Key="F" Value="" />
+          <keyValuePair id="90cb5fe1-9bb4-4ee5-bf2b-3a5a26708ac2" Key="MM" Value="" />
+          <keyValuePair id="acaa3324-8d50-4a8e-a3c8-1c601e27f700" Key="MF" Value="" />
+          <keyValuePair id="b83fa454-edf8-4e85-9b67-6b7311c10a82" Key="FM" Value="" />
+          <keyValuePair id="ddef1223-6377-4d87-a3d3-8316672d8b1f" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="0cef96ec-9da8-4140-ad2f-ef7f38d7aeeb" />
+    </trigger-news-node>
+    <story-end-node id="062be735-9f24-4a06-9900-bf8645f6ea82" X="1520" Y="0" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+  </nodes>
+  <groups id="d1b3759a-56fe-4698-9e91-3699611b93b0" />
+  <connections id="1243c249-2ed3-46d6-a5d2-da2f8f3d8dbb">
+    <connection id="2be1c019-05c6-4326-b04c-0ec6afda815d" SrcNodeID="7b2d7550-9f31-47a2-9760-7b2dacf6eb57" SrcPortName="advance" DstNodeID="3d8add27-ec5f-4a0d-a1b9-d2321504ca4d" DstPortName="enter" ConnectionOrder="0">
+      <points id="27cec30a-3748-45b8-aece-a280a824702b" />
+    </connection>
+    <connection id="40a6dd25-eb79-42f5-b34a-d8630e759be9" SrcNodeID="3d8add27-ec5f-4a0d-a1b9-d2321504ca4d" SrcPortName="true" DstNodeID="972bd48e-ac19-4404-a93b-e80c871018ee" DstPortName="enter" ConnectionOrder="0">
+      <points id="3ff1b81c-1933-4f8d-bb5e-28d464fcdeca" />
+    </connection>
+    <connection id="28a26a8d-b126-42bf-ae83-957949bd35dc" SrcNodeID="972bd48e-ac19-4404-a93b-e80c871018ee" SrcPortName="advance" DstNodeID="c6f217c4-b4ba-4959-8aa4-23e7d7fc6a5b" DstPortName="enter" ConnectionOrder="0">
+      <points id="baa82bf1-5972-4621-af7c-0d476a43c693" />
+    </connection>
+    <connection id="a69735ad-bb8e-4ea0-8a2a-9ea86acfb5e2" SrcNodeID="c6f217c4-b4ba-4959-8aa4-23e7d7fc6a5b" SrcPortName="UserMatchCompleted" DstNodeID="6f4b84a2-d188-440d-8ac2-6bd20ef3f478" DstPortName="enter" ConnectionOrder="0">
+      <points id="cea11a36-0f2c-4fd1-ba28-1bab96651ae8" />
+    </connection>
+    <connection id="ec2d8336-92b4-4f56-a016-ca4ef91f3c87" SrcNodeID="6f4b84a2-d188-440d-8ac2-6bd20ef3f478" SrcPortName="advance" DstNodeID="062be735-9f24-4a06-9900-bf8645f6ea82" DstPortName="enter" ConnectionOrder="0">
+      <points id="eaa1b8af-8117-495c-9ca9-760768dd9278" />
+    </connection>
+  </connections>
+</StoryAsset>

@@ -1,0 +1,1455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="a8bb2c48-17c3-462a-9657-540d75ac8703" name="League Streaks" deleted="False" valid="True">
+  <nodes id="">
+    <state-node id="1d6780ec-5983-49c7-97d9-cb7195d078bf" X="-1280" Y="-640" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="03fd6c45-91ee-4744-b700-cbce33cb7c7c">
+        <string id="040394dc-cf5f-4bf5-ae4d-11150b9c29e2" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <save-data-node id="24aa0502-0b5f-47d4-9170-59bd359ff255" X="-1640" Y="-640" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="480ed0da-f1f4-4d64-a8ea-dd6732b885ae">
+        <saveItem id="f1f6094a-f1fe-48f9-a5e7-1f336c142a40" Key="Win Streak" Value="0" ValueType="int" />
+        <saveItem id="26d81fa5-f4fe-4794-94a6-722851c21154" Key="Lossless Streak" Value="0" ValueType="int" />
+        <saveItem id="38a49ea0-fe25-4d9b-b7b1-eb7b6fc14293" Key="Winless Streak" Value="0" ValueType="int" />
+        <saveItem id="8d2204c1-7f78-4869-8262-1604b05fd733" Key="Losing Streak" Value="0" ValueType="int" />
+        <saveItem id="3b6d4e9c-de09-4349-bc0f-73890bb9843f" Key="Total Match Count" Value="Model:UpcomingUserMatch.NextMatchData.Competition.TotalMatchCount" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <condition-node id="06ab5eeb-7cf9-43bc-9603-6487b7d0b9d3" X="-840" Y="-640" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="f25fa6ab-483e-426a-b00c-ffd2e9a2a0d3">
+        <condition id="a491a809-18e0-424d-abe4-93f83108cda9" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-data-node id="65fa117a-2782-4b7c-a66e-9d5bc3c4e278" X="-440" Y="-1120" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="707d7670-b154-4384-9dd2-def062438e4d">
+        <keyValuePair id="80e78409-5aa4-44b1-b1e0-e43f11920a25" Key="SaveData:Win Streak" Value="1" Operator="Add" />
+        <keyValuePair id="877b9e94-5557-49d2-ab31-01a1cfbbc9d1" Key="SaveData:Lossless Streak" Value="1" Operator="Add" />
+        <keyValuePair id="4628d814-4dc0-48a1-bee2-51a7cf3b9e78" Key="SaveData:Winless Streak" Value="0" Operator="Set" />
+        <keyValuePair id="edbdd5e1-2644-455c-8f9f-817640e39739" Key="SaveData:Losing Streak" Value="0" Operator="Set" />
+      </keyValues>
+    </modify-data-node>
+    <condition-node id="34adb736-2823-4ca6-a4d1-7dae4e3961c4" X="40" Y="-1120" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="a990ab9a-3037-49e5-a4da-a29af7f3007a">
+        <condition id="154ba1f1-719b-4784-bc4c-493e0681801b" VariableId="SaveData:Win Streak" Comparison="GTE" Value="5" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="694b58b2-ce0b-4433-b3ab-d119ef1e2724" X="280" Y="-1600" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="3" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="graph_u">
+      <stringWithArgsTitle id="1c1b46d1-a2aa-4bab-b9a0-2bf80bbf0229" StringID="CM_News_LeagueWinStreak_Start_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="6d00b4ba-65ee-4f8f-941b-dc0d9094517d">
+          <stringArgument id="cd5ed441-2363-485f-bcc8-a9b8b553912f" Value="Model:Global.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="e0e0aae1-d6b2-43ff-a30c-c5422a363a0a">
+          <keyValuePair id="5be7dd0f-c8b1-4b09-8a73-cf1ca81eaf89" Key="M" Value="%1s's winning streak continues" />
+          <keyValuePair id="14147d2d-f7c4-4558-a39b-707bbbd7fefc" Key="F" Value="" />
+          <keyValuePair id="5978ae6f-6715-4169-93ed-ece6bd475e1d" Key="MM" Value="" />
+          <keyValuePair id="cb8c6470-a2d5-41fd-bd79-71d9a6c9fed7" Key="MF" Value="" />
+          <keyValuePair id="210d3d92-9085-4f2a-bf82-6ea39a010d5b" Key="FM" Value="" />
+          <keyValuePair id="9d8915e1-2abe-452c-8bcb-b32b5b710448" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="6fe9bc00-51ee-4115-a79a-5b5c142700af" StringID="CM_News_LeagueWinStreak_Start_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="447d60e6-658d-432d-9f2e-219beff7c438">
+          <stringArgument id="a81f6251-dba4-4573-816b-78e4f7275ce7" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="797bf68d-36a1-47a8-a078-8d6b711c63f7" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="553680fc-4a38-4286-8af0-72714e52c201" Value="Model:UserMatchCompleted.Results.UserGoals" Format="0" />
+          <stringArgument id="cb64b1fb-8ba1-47e6-99d3-6c13869b82c0" Value="Model:UserMatchCompleted.Results.OponentGoals" Format="0" />
+        </stringArguments>
+        <stringContent id="64b1b9b7-738f-4ebd-b68a-a08b1ec38a36">
+          <keyValuePair id="6b237df2-53a5-461f-8a1a-0d5ead8a1347" Key="M" Value="%1s fans will be happy to see their winning ways continue with a %3s-%4s victory against %2s." />
+          <keyValuePair id="5c43ad99-63df-4a24-9eaf-0f695eac622c" Key="F" Value="" />
+          <keyValuePair id="5fae7c79-585c-4e69-a9f2-9a04c95f607f" Key="MM" Value="" />
+          <keyValuePair id="fee8eaaf-4501-4120-a0d8-aa0ddaaae59c" Key="MF" Value="" />
+          <keyValuePair id="c0399ea7-dc4d-40f1-93d8-7f7af27c87cc" Key="FM" Value="" />
+          <keyValuePair id="392dad1f-57cf-4eb6-9b73-7d7a95031f27" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="4371c3eb-19a8-4cc6-892c-f8ddc4008a97">
+        <sceneParameter id="5503a417-09ff-4cdf-837b-c7e3580122e9" Parameter="PlayerId_1" Value="Model:Global.Team.CaptainID" />
+        <sceneParameter id="8cc91783-0af5-4a22-9cab-552bcc74f1cb" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="d6948ddc-1f3b-4ae1-8387-34d199a11772" X="-640" Y="-400" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="69c08b9b-f6b4-4f85-8dd7-d223234f61fc">
+        <condition id="139ddd92-f0ad-42d3-bdff-a907f0adc54f" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="2" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-data-node id="432ff2af-fedd-40b2-a8d0-03727c5236f0" X="-440" Y="-520" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="0f61dc5a-70b0-4283-a1a4-c5660733e08f">
+        <keyValuePair id="abcb687c-c37a-4686-b064-93579d20e190" Key="SaveData:Lossless Streak" Value="1" Operator="Add" />
+        <keyValuePair id="11af30f1-382d-4cc7-aa80-a40f6149d5fc" Key="SaveData:Winless Streak" Value="1" Operator="Add" />
+        <keyValuePair id="21ebb7cd-fe89-4736-b3a7-d7b63fcc14cf" Key="SaveData:Win Streak" Value="0" Operator="Set" />
+        <keyValuePair id="42164165-f2e2-40b2-a695-733b4672ca5a" Key="SaveData:Losing Streak" Value="0" Operator="Set" />
+      </keyValues>
+    </modify-data-node>
+    <modify-data-node id="2b1bb5b6-640b-44c8-92ac-75622e7a494e" X="-440" Y="-240" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="b6fb9fa4-fbfb-4bc5-acf6-8a785b495cb1">
+        <keyValuePair id="735d4e1f-e2d4-4013-8102-b30ccf1cf557" Key="SaveData:Losing Streak" Value="1" Operator="Add" />
+        <keyValuePair id="1e87dbfe-718d-499c-8678-a4f4222abf6f" Key="SaveData:Winless Streak" Value="1" Operator="Add" />
+        <keyValuePair id="75986157-f174-4732-8edf-873f910c7015" Key="SaveData:Win Streak" Value="0" Operator="Set" />
+        <keyValuePair id="28ac7576-e7fe-4e37-8b6c-88c04d0ceffa" Key="SaveData:Lossless Streak" Value="0" Operator="Set" />
+      </keyValues>
+    </modify-data-node>
+    <story-start-node id="51fa168a-c3b1-4519-b403-bee12830bf92" X="-1880" Y="-640" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="SingleInstance" NodeEvent="UpcomingUserMatch" StoryKey="" UseSelectData="True" RunInPlayerCareer="True" RunInManagerCareer="True" RunInTournamentMode="True">
+      <conditions id="e90c7a38-e1a4-4fad-a3e3-c8f38eb4a0de">
+        <condition id="e0972d53-4208-4016-8fac-7eb6e0581270" VariableId="Model:UpcomingUserMatch.NextMatchData.Competition.CompType" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+      <select-data id="f4814253-b04f-4d22-87b7-ea4864da15ec" SelectCount="0">
+        <alias-list id="0041f655-d5fb-4ed7-8ff6-06cfd2960b37" />
+        <order-by id="6583d9cc-dcac-477c-9e11-e9d2d623089f" />
+        <alias-data-source id="388226e4-aadd-4674-bfd8-a48469c3cd98" DataSource="">
+          <conditions id="5809d50b-9bfc-461d-8d6a-e4e2ae3297d5" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <condition-node id="4564038e-ddb9-48d5-9856-edcd55d70336" X="440" Y="-800" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="08d3fcce-81d0-4c5d-8f6e-edd59d011d1a">
+        <condition id="7138cee2-a815-4e53-923e-608cae6b0bdf" VariableId="SaveData:Lossless Streak" Comparison="GTE" Value="5" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <state-node id="46c13f2f-0396-448e-b8e4-08041eb03fa0" X="600" Y="-1600" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="014ffeb1-4db5-4abf-a369-5bde9beeb4aa">
+        <string id="751e02b6-52da-4416-8da1-64b534df820f" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <condition-node id="1e069b5e-ab0c-461d-9b01-612df2d11aa7" X="1080" Y="-1600" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="ce935993-7c18-468c-a782-fe18bcd5c23a">
+        <condition id="d6da3dcd-1d3a-49b9-98e7-882a62053554" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="7eba78b9-1c57-4c60-b65f-6b877dcbe109" X="880" Y="-1600" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="25de49c0-1e9f-4baf-ace1-698cabde5e24">
+        <condition id="66258ec0-9c32-4687-afc8-402e05628f0c" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.CompType" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="1cb3273d-f4a6-4be0-b417-90bcb5e607f3" X="2200" Y="-1400" NodeType="TriggerNews" NodeName="Lossless Streak" Category="0" Importance="0" SceneId="8" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="graph_u">
+      <stringWithArgsTitle id="59374cae-67ff-48f4-bf7c-5399d439d16c" StringID="CM_News_LeagueWinStreak_ToLosslessStreak_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="1202b42a-6910-419c-be2b-0142d81a4139">
+          <stringArgument id="ecd80434-05bb-446e-b154-fd76786e6824" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="ac06ed5a-0d04-4c5f-b21a-b7587374f063" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="9a0e5c70-7d42-44fd-8b46-b20ec88f911e">
+          <keyValuePair id="bcb0074b-4d58-4474-b498-b00d7b3a0f96" Key="M" Value="%1s set back but keep unbeaten run at %2s" />
+          <keyValuePair id="a3f14e00-7fe2-496c-bc24-5e4393653bdd" Key="F" Value="" />
+          <keyValuePair id="9fb5c2c1-0ecd-4e99-8c0f-dd5a040748d8" Key="MM" Value="" />
+          <keyValuePair id="63b63756-74d3-42b6-9756-bb732adf7c33" Key="MF" Value="" />
+          <keyValuePair id="ebcf3f5a-e3ff-4124-9b51-ae47a5333722" Key="FM" Value="" />
+          <keyValuePair id="93b28e5d-fa62-46da-9e8f-bc380798bf04" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="4f05013b-2d6b-411f-84d3-c4f551a80b29" StringID="CM_News_LeagueWinStreak_ToLosslessStreak_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="c54293c0-350e-49d1-8e18-20fd26947119">
+          <stringArgument id="53d6c7c2-b01a-485f-849a-1ea7753770a5" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="143c8199-15b4-4eff-b0a1-e2e5937a8b9c" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="38782f28-2fe6-426b-8432-33d76e50e2bc" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="8cef5446-49d8-43ea-bf44-7ef17e617135">
+          <keyValuePair id="a4109703-e54a-4f00-88ff-77fbc1e32971" Key="M" Value="%1s's %2s rescues a point against %3s to keep their unbeaten run alive. " />
+          <keyValuePair id="d3695334-29f9-4825-8a92-ca5dc864ae68" Key="F" Value="%1s's %2s rescues a point against %3s to keep their unbeaten run alive. " />
+          <keyValuePair id="1483e865-b2f1-48e0-b51a-56b80e45e847" Key="MM" Value="" />
+          <keyValuePair id="9376076c-2ad7-417e-a66b-66fe504c4c73" Key="MF" Value="" />
+          <keyValuePair id="9a11d42d-f849-4bc4-a313-9d3fc85b1c04" Key="FM" Value="" />
+          <keyValuePair id="845b43bb-a4d4-48d1-b50a-79975637c86a" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="37e870ce-2c0d-4205-870f-3bd0c67bbffd">
+        <sceneParameter id="277b1605-e4fe-4223-8bef-639c3b404b62" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <modify-data-node id="f3ed10bb-8c2b-42d6-93a4-50924fd4dc07" X="1320" Y="-1600" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="96569fd8-c083-4bfc-bfbc-f86028d04aba">
+        <keyValuePair id="702be5cc-adad-4cd0-a929-d1958511c908" Key="SaveData:Win Streak" Value="1" Operator="Add" />
+        <keyValuePair id="201eb19c-756a-4861-b1c1-6fba63038105" Key="SaveData:Lossless Streak" Value="1" Operator="Add" />
+      </keyValues>
+    </modify-data-node>
+    <story-end-node id="946203ed-dc5e-46f4-bdcc-ab214807bef1" X="5200" Y="-280" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <trigger-news-node id="02ff1730-7918-4dce-b659-6ea08f9b0277" X="1760" Y="-1560" NodeType="TriggerNews" NodeName="Win Streak Continues" Category="0" Importance="0" SceneId="8" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="stad_f">
+      <stringWithArgsTitle id="4616f563-a93d-4dd0-8541-585b5823f33b" StringID="CM_News_LeagueWinStreak_Continues_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="c418cadc-39b8-48bd-8396-ff5b30e4cf76">
+          <stringArgument id="4dd79a74-0a83-48a5-9f58-511a3348746c" Value="SaveData:Win Streak" Format="0" />
+          <stringArgument id="173b0969-475c-44f3-8adb-6a5938f7afc5" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="5b17ba5d-164a-4bbe-84b0-06841dc09d7d">
+          <keyValuePair id="0c784563-cd13-4647-907b-7b2160517d48" Key="M" Value="%2s increase their winning streak to %1s games" />
+          <keyValuePair id="df5f7801-ff69-40f9-8a42-c3cf021c24ae" Key="F" Value="" />
+          <keyValuePair id="c575d216-b5aa-47ad-ad22-650ae5176957" Key="MM" Value="" />
+          <keyValuePair id="2ba884a1-7537-460c-b249-d31d07ab1b09" Key="MF" Value="" />
+          <keyValuePair id="149bfffc-e2e1-4414-a6df-302934a294f5" Key="FM" Value="" />
+          <keyValuePair id="92e74187-c904-45d8-bf03-bd08a1cb1d26" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="8c5ad04c-198a-437d-97b1-f1fb0ef7b172" StringID="CM_News_LeagueWinStreak_Continues_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="5500d7cb-d4e0-4d08-b559-889de66ca37c">
+          <stringArgument id="f024c95c-8065-4815-a580-8f2e0adc24bd" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+          <stringArgument id="d27a53d6-bdde-4e88-9397-b5654233ec44" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="e7135efc-c263-4471-b2cd-867f0b480b6e" Value="SaveData:Win Streak" Format="0" />
+        </stringArguments>
+        <stringContent id="90b125d5-0016-4961-a792-bc638be1e604">
+          <keyValuePair id="8bbd62aa-dd1a-48c3-b8fc-7e0266fa3d16" Key="M" Value="With a win over %1s, %2s's side managed to keep their winning streak alive, grabbing %3s wins in a row." />
+          <keyValuePair id="1fd32056-f9fe-46e7-acec-352fe8a5195d" Key="F" Value="With a win over %1s, %2s's side managed to keep their winning streak alive, grabbing no more than %3s wins in a row." />
+          <keyValuePair id="fe62a921-e44f-4660-b67f-bdbf92468146" Key="MM" Value="" />
+          <keyValuePair id="47001a6a-51c1-4189-938c-6eef52e41200" Key="MF" Value="" />
+          <keyValuePair id="8f2a00b9-0280-4f42-843b-c312912446cb" Key="FM" Value="" />
+          <keyValuePair id="848d3ade-d80b-41d7-8886-ff9f9546f952" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="d2b65f83-9beb-4418-baa9-052ee69adefa">
+        <sceneParameter id="e5a5e362-5e32-4d00-9af6-2e85fc661b70" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="6311172b-c5ca-4c8c-9a63-f2f6d4a67065" X="2040" Y="-1920" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="ae721b0f-3ffd-48fe-9e2b-001a70815c40">
+        <condition id="37c5a696-d22c-4928-aa3e-b3874c72e61c" VariableId="SaveData:Win Streak" Comparison="EQ" Value="SaveData:Total Match Count" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="e788cf6c-4141-418a-b0ec-f14e050f6d10" X="2240" Y="-1840" NodeType="TriggerNews" NodeName="Win Streak League End" Category="0" Importance="0" SceneId="3" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="stad_f">
+      <stringWithArgsTitle id="3105239d-3718-442d-8e88-7ee472a02322" StringID="CM_News_LeagueWinStreak_LeagueEnd_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="4cde9a72-cf8c-44d6-a059-b107172c5d55">
+          <stringArgument id="2376aac6-46a3-4383-b56b-304050110169" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="c9497ec5-9e24-4299-995a-d4d1b8d5ca8b" Value="SaveData:Win Streak" Format="0" />
+        </stringArguments>
+        <stringContent id="df6b87fc-3e23-48ba-8cb2-f24b08beb27c">
+          <keyValuePair id="a4d2fc50-1b25-4072-bf5d-00e6ca603cc1" Key="M" Value="%1s end the season on a %2s winning run " />
+          <keyValuePair id="87dd32ac-17c4-4069-bffc-e10c336cf9e4" Key="F" Value="" />
+          <keyValuePair id="819cc13c-3961-42d1-9dfb-75813b6d7d7c" Key="MM" Value="" />
+          <keyValuePair id="57b1d9e3-5a4b-4392-9abb-9cc0346bf5ba" Key="MF" Value="" />
+          <keyValuePair id="1f9c4028-ef47-4af7-9f16-6589bee1a312" Key="FM" Value="" />
+          <keyValuePair id="38e378f7-b196-404e-9844-07dc9ef8aaf1" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="4a54382c-9420-4292-b3b5-dce36deed9f0" StringID="CM_News_LeagueWinStreak_LeagueEnd_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="77f230a5-d5e5-4ffd-9b0f-1381629ce9f8">
+          <stringArgument id="a8d667b7-7fb8-441b-9344-d057446cc2b9" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="3f4aab8f-57a1-44b3-9170-68d21a675e78" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+          <stringArgument id="c71bcab4-ec5e-4d9b-a590-41a1bc95aedb" Value="SaveData:Win Streak" Format="0" />
+          <stringArgument id="cb449178-22cf-49f6-bb01-ee63840ded52" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="6ed33aa1-952c-4d7d-96a0-6d18bf7cbcd1">
+          <keyValuePair id="eed23c48-130d-4a83-a5ba-a37a4a65d474" Key="M" Value="%1s was happy to see his team finish the season on a high note. The win against %2s concluded %4s's season on a %3s-game winning run" />
+          <keyValuePair id="5596f54a-0d60-4d30-886c-4aea817a544a" Key="F" Value="%1s was happy to see his team finish the season on a high note. The win against %2s concluded %4s's season on a %3s-game winning run" />
+          <keyValuePair id="1bec4100-6360-490b-b048-0d555b8f672f" Key="MM" Value="" />
+          <keyValuePair id="0897ccd8-0469-4e60-a18e-0c8a5e6009b9" Key="MF" Value="" />
+          <keyValuePair id="fbefdfda-bb44-4899-9389-4396fcdaddd6" Key="FM" Value="" />
+          <keyValuePair id="38999148-7943-42cd-b030-e0cfc343e511" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="15da00bb-6bab-4123-95f9-3132ef910ffd">
+        <sceneParameter id="689e13d6-0a4c-4cda-b084-b64bdd704a8a" Parameter="PlayerId_1" Value="Model:Global.Team.CaptainID" />
+        <sceneParameter id="7552d0ac-2d3d-45e2-a859-a15165046fca" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="554ef277-5a54-42cc-9afb-8eed8a3a1aa2" X="2240" Y="-1960" NodeType="TriggerNews" NodeName="Straight Wins" Category="0" Importance="0" SceneId="3" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="fans">
+      <stringWithArgsTitle id="1a4bcd22-61a3-403a-a373-3ed07aad4835" StringID="CM_News_LeagueWinStreak_Flawless_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="f6d25e75-5dbd-4c9f-8f84-eddb0381436a">
+          <stringArgument id="b1251b2c-99dc-4ef1-817d-cf9ad29da880" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="5a503088-6fa6-4813-9e28-e1cf4781f56a">
+          <keyValuePair id="452741f1-38c6-40e7-8f3e-6278382dfdcd" Key="M" Value="%1s's men achieve the unthinkable" />
+          <keyValuePair id="41e39a18-a0de-41ca-8a6b-3afd4cdcd7e2" Key="F" Value="" />
+          <keyValuePair id="886810ff-c86a-4d00-ba64-938bd234304c" Key="MM" Value="" />
+          <keyValuePair id="faa9c229-8755-4cee-90e1-8789ed6aa0f7" Key="MF" Value="" />
+          <keyValuePair id="263c7140-c79a-4cf5-9f7d-3269ba6dfcb8" Key="FM" Value="" />
+          <keyValuePair id="5c84d170-6b24-4f09-8b71-af8191a67a07" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="90fd1aa6-fe48-4e7b-a0c6-78566ea1788e" StringID="CM_News_LeagueWinStreak_Flawless_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="6e1b0729-ad58-4a60-8ee1-ef78c6eed508">
+          <stringArgument id="6c178a9d-41d6-4026-b30b-285450593df1" Value="Model:UserMatchCompleted.Results.UserGoals" Format="0" />
+          <stringArgument id="0de2f12f-e528-4c5e-9c87-e6cc805e98ab" Value="Model:UserMatchCompleted.Results.OponentGoals" Format="0" />
+          <stringArgument id="3ef65f72-9a23-4580-8823-21d8cc404ecc" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+          <stringArgument id="e555b5ac-0c1a-4cd1-b14c-11b64f01ad98" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="c0bb3584-3934-4f96-bdf7-228e2adc602b">
+          <keyValuePair id="1f1d4997-3cf7-4422-977a-1c82c6bc482b" Key="M" Value="The %1s-%2s win against %3s was a long wait for the fans of %4s who witnessed their team earn their place in the history books. While season long unbeaten runs have popped up around the world every once in a while, nobody thought a team could end a season with straight wins in a row. %4s proudly earned their &quot;Untouchables&quot; nickname after this amazing performance." />
+          <keyValuePair id="5208970a-70f5-49e2-8ac1-62ee9438f5a2" Key="F" Value="" />
+          <keyValuePair id="b42627e0-27d3-4355-a71f-73f9dace44db" Key="MM" Value="" />
+          <keyValuePair id="1a358f1c-30b0-4167-9fef-f19a26f65f98" Key="MF" Value="" />
+          <keyValuePair id="4b335e2b-98e2-436a-8d48-6f73c5174223" Key="FM" Value="" />
+          <keyValuePair id="13512f4c-5801-4d7b-a589-749a339c1507" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="198ca2d7-5ae8-4cf6-9c13-57207bf9a1e0">
+        <sceneParameter id="23a92752-5ecc-4ebb-9f5e-1e4f2ed9aca2" Parameter="PlayerId_1" Value="Model:Global.Team.CaptainID" />
+        <sceneParameter id="7546b509-d514-45a8-926c-3e548994689c" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="6a775804-3fd2-457e-afa6-f7e18ebc8dc8" X="1800" Y="-960" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="3" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="graph_u">
+      <stringWithArgsTitle id="97bdeb38-2aff-4796-bf46-5f3ba862737a" StringID="CM_News_LeagueLosslessStreak_Start_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="2bac78fe-b5cb-45d1-ac5f-57ed9615defc">
+          <stringArgument id="40f64900-e502-4c57-8512-1ebe032c6b6b" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="3f36f5b1-c1c0-49ea-93bb-3d4183cc6ff6" Value="Model:UserMatchCompleted.Results.UserGoals" Format="0" />
+          <stringArgument id="eae81a71-00f2-4d31-b25b-fc5d29730843" Value="Model:UserMatchCompleted.Results.OponentGoals" Format="0" />
+        </stringArguments>
+        <stringContent id="ecde0057-eca5-4d26-9e46-3befdede2378">
+          <keyValuePair id="2b5319b0-fca0-4622-94d2-183032425ae7" Key="M" Value="%1s continue unbeaten run with %2s-%3s win" />
+          <keyValuePair id="c05293d0-a0b6-4d22-a649-bb66d9eaae40" Key="F" Value="" />
+          <keyValuePair id="c1d64714-9040-40c7-89c0-0e067082bcf4" Key="MM" Value="" />
+          <keyValuePair id="de11297d-a974-4ae6-8f8c-9095be02d198" Key="MF" Value="" />
+          <keyValuePair id="7c8d3e51-f770-4c48-819b-5867e49f1529" Key="FM" Value="" />
+          <keyValuePair id="e517ce00-9c1e-498a-8a57-f7229c40a673" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="8ae0d11f-86af-4177-9e1d-4986b5556fc6" StringID="CM_News_LeagueLosslessStreak_Start_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="b3b44da0-4260-4cf4-9ced-ea1e01a6d032">
+          <stringArgument id="23c0bec5-c349-4940-afa2-3e6a95fc0c12" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+          <stringArgument id="57693bef-c86e-4d9d-8504-9a6f445ea333" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="4f6bfde6-b656-4756-b19c-74d76cb667b6">
+          <keyValuePair id="37b40bcb-42b2-4e61-b844-81583ad72d1d" Key="M" Value="A victory over %1s sees %2s's unbeaten run gain momentum, with fans undoubtedly wanting to see their team reaching record-breaking achievements." />
+          <keyValuePair id="cb0b0261-f583-4057-bbb0-c5ce250739c3" Key="F" Value="" />
+          <keyValuePair id="95ea31cf-b2e5-44ee-9647-f6a73608fb6b" Key="MM" Value="" />
+          <keyValuePair id="c13befa4-d9a6-4553-8121-649bb878370f" Key="MF" Value="" />
+          <keyValuePair id="e8cca2b5-a3db-4d95-9979-8d4c82aa43d3" Key="FM" Value="" />
+          <keyValuePair id="b22890fe-8d77-4f3b-bb28-31ded430cd7e" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="12a657a2-a0c9-4854-9646-8b6b9a99e4db">
+        <sceneParameter id="7b743e95-1ba2-4529-8843-c2feb364d9be" Parameter="PlayerId_1" Value="Model:Global.Team.CaptainID" />
+        <sceneParameter id="ab98a826-4c1c-4ba2-be59-e7a05d038ad1" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <modify-data-node id="87be69e6-e346-4826-a641-b3663550b015" X="1760" Y="-1400" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="c8225940-8db4-4397-b1d3-eea84a9f5cd2">
+        <keyValuePair id="11127d48-9d19-4ed2-999d-b9c77cfdbd9b" Key="SaveData:Lossless Streak" Value="1" Operator="Add" />
+        <keyValuePair id="b43793ac-7183-4420-9e5e-5b7bdad45530" Key="SaveData:Win Streak" Value="0" Operator="Set" />
+      </keyValues>
+    </modify-data-node>
+    <condition-node id="f0d359b5-2a4e-42f6-8718-14e66338fc7a" X="1320" Y="-1400" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="a9951250-859a-4548-a417-2a40105cd1cd">
+        <condition id="decb8220-b217-4466-89e9-4ae82a6c62e3" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="2" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="2fcf0d6d-b76e-48e3-84b0-0bcc2aeb3608" X="4240" Y="-1400" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="a47945f9-3055-48dd-b9d3-06534c5672d5">
+        <condition id="7a868d3a-d512-4a8a-b80e-1c20052e32ef" VariableId="SaveData:Lossless Streak" Comparison="EQ" Value="SaveData:Total Match Count" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="92b7e438-3df0-4b98-8a4f-97c05b4a5849" X="4480" Y="-1360" NodeType="TriggerNews" NodeName="Lossless Streak League End" Category="0" Importance="0" SceneId="3" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="fans">
+      <stringWithArgsTitle id="ef747064-ffae-4b68-a2c6-292967bd0ccb" StringID="CM_News_LeagueLosslessStreak_LeagueEnd_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="30265214-92f7-4a13-8f30-8d80bf75f0e3">
+          <stringArgument id="8b13c059-55fb-4b9e-9363-df4ad9c89660" Value="SaveData:Lossless Streak" Format="0" />
+          <stringArgument id="af0334db-240a-4615-9ffb-5b49ff61b4a4" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="bb4ad085-6029-471e-9fe1-47310b3dff5f">
+          <keyValuePair id="b701cfc8-994d-4cd7-8713-7a46449dbddc" Key="M" Value="%2s wrap up the season with a %1s-game unbeaten run" />
+          <keyValuePair id="eb1da4cd-77c7-479c-9353-3e71f833757c" Key="F" Value="" />
+          <keyValuePair id="74df372d-ab7b-48ef-af2b-a27a012cb180" Key="MM" Value="" />
+          <keyValuePair id="c62a1271-02f4-4e42-b8ee-157b9d9ef3b0" Key="MF" Value="" />
+          <keyValuePair id="a5ae6a7e-0d18-4f1c-82c3-bfb6129ed8e8" Key="FM" Value="" />
+          <keyValuePair id="084b5742-81aa-4bc7-96fa-02a8996a6cb3" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="f81e33eb-cb48-45e2-a88f-8dbc3309f53a" StringID="CM_News_LeagueLosslessStreak_LeagueEnd_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="2bf7134f-f11d-4e0e-969a-1f4662be4b27">
+          <stringArgument id="0e5cab8e-4ae9-424b-ba60-6e2d799f494e" Value="SaveData:Lossless Streak" Format="0" />
+          <stringArgument id="a6576b2c-7ef9-47b1-b00e-d4806f6f9308" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="29f92c5c-e032-4b9c-a262-105499f03304">
+          <keyValuePair id="9e33604b-a3be-4d08-903f-d2a6a42f2348" Key="M" Value="%2s was happy to see his team's season end on a %1s-game unbeaten run." />
+          <keyValuePair id="62f1c1fe-f598-4e29-9b41-05d863867b20" Key="F" Value="%2s was happy to see her team's season end on a %1s-game unbeaten run." />
+          <keyValuePair id="9a9f9093-657c-4eff-8c58-a31c30d6873f" Key="MM" Value="" />
+          <keyValuePair id="30efab20-d097-4900-a22c-4e6d37892b28" Key="MF" Value="" />
+          <keyValuePair id="51b70b9b-7999-4319-9fe6-d907fc2ec7c8" Key="FM" Value="" />
+          <keyValuePair id="77decabe-da83-4d14-9412-7fd4149d1890" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="a1b4c57f-7b4e-40f3-8e87-3f2d2ccc0fff">
+        <sceneParameter id="8779fd18-4a9a-4c06-8768-4bb0724a3fda" Parameter="PlayerId_1" Value="Model:Global.Team.CaptainID" />
+        <sceneParameter id="83f01d06-8006-4f95-af9a-6e08e9f253ed" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="2b1fddc0-6a9b-4392-976a-f5851913c634" X="4480" Y="-1480" NodeType="TriggerNews" NodeName="Never Lost" Category="0" Importance="0" SceneId="3" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="fans">
+      <stringWithArgsTitle id="cbb4b1cf-e214-439b-8a79-3370111ccadf" StringID="CM_News_LeagueLosslessStreak_Flawless_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="5fa98811-8419-49ed-9cbb-64899b5c01e7">
+          <stringArgument id="93838b79-9626-4ebe-bd9f-c76f899dc31f" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="88034fa8-3cb8-4d5a-bbee-58bf1785d655">
+          <keyValuePair id="ca0feb62-69c9-4d9e-96a7-7fc15e897b38" Key="M" Value="%1s achieve an invincible season" />
+          <keyValuePair id="d30479a2-1ee9-469f-9277-a9e70dcd197f" Key="F" Value="" />
+          <keyValuePair id="08b27aca-c3d0-4feb-95f2-1014a81a1f9d" Key="MM" Value="" />
+          <keyValuePair id="48697829-4527-465d-9cc1-ef875f13a229" Key="MF" Value="" />
+          <keyValuePair id="20904825-aa99-4137-8d26-fb76026f61db" Key="FM" Value="" />
+          <keyValuePair id="3d917368-a8db-4b5b-88dc-de06a8242fc5" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="d0d2b047-5f1e-47c9-a9ef-0628a8a66220" StringID="CM_News_LeagueLosslessStreak_Flawless_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="e1504b41-6c6e-455d-bc2b-84bba21bbbcc">
+          <stringArgument id="ada98774-fed8-48f7-a510-a872af04ff09" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="9e7b6279-0da7-40fc-abc1-51ec140e6525" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="6af2c7a5-68ca-4a31-ae58-f795d2d59993">
+          <keyValuePair id="9b414b6d-735e-459d-8040-725aa00ad038" Key="M" Value="%1s's men achieved a remarkable unbeaten campaign in the league which will surely go down as one of the greatest runs in history. Fans of %2s kicked off the celebrations after the final whistle in what will surely give them the bragging rights over their rivals in years to come." />
+          <keyValuePair id="79f3ca26-ffa1-428f-b5ad-405e85d829cc" Key="F" Value="%1s's men achieved a remarkable unbeaten campaign in the league which will surely go down as one of the greatest runs in history. Fans of %2s kicked off the celebrations after the final whistle in what will surely give them the bragging rights over their rivals in years to come." />
+          <keyValuePair id="40043049-5385-4925-b670-acf315bf14ed" Key="MM" Value="" />
+          <keyValuePair id="c6d73b49-cd35-4910-802f-42d14a08494a" Key="MF" Value="" />
+          <keyValuePair id="2b8b22dc-c670-452b-a3a4-fce07ae090b5" Key="FM" Value="" />
+          <keyValuePair id="489099f3-d764-441e-b170-995394344471" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="d3ac43e6-ba16-48b1-8756-4f0204dc3297">
+        <sceneParameter id="a2a4cbfa-fb46-4f7a-9d63-88e7f2f9192e" Parameter="PlayerId_1" Value="Model:Global.Team.CaptainID" />
+        <sceneParameter id="26209e30-56e5-4957-99f6-930a10c668ae" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <state-node id="801e588b-06d0-4865-bf02-b8fb1dc8c147" X="2640" Y="-1400" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="e1b3f62e-01a3-4bd7-abed-f89f8fee60c9">
+        <string id="99622804-febc-4022-a05c-1d279d294b76" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <condition-node id="081854bc-a1d5-4bbb-8351-50c6e16c9ae5" X="3120" Y="-1400" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="cf41c509-587b-447f-98a3-d43b9c3c81f7">
+        <condition id="cdbf77f5-45e5-48d6-a274-5346d4de8863" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="NEQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="4d0af69e-53c8-47a6-be8a-388a6de1e42f" X="2920" Y="-1400" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="5a601bc0-4082-46db-9794-14b7103bcd14">
+        <condition id="06ca2117-19bb-4efa-af9e-3d0bf3f38098" VariableId="Model:UserMatchCompleted.CanHavePostMatchPressConference" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="5e22cc08-1251-4d5e-8ae1-2f16c9d8a106" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.CompType" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="1d09912e-44d3-4e57-affa-37d0e430868a" X="3360" Y="-1040" NodeType="TriggerNews" NodeName="Lossless Streak Over" Category="0" Importance="0" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="boot">
+      <stringWithArgsTitle id="778240ba-e3a4-40ec-b97f-8d093eaca978" StringID="CM_News_LeagueLosslessStreak_Over_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="9d73a9b5-b1c1-40a3-939d-fb6c573a88a1">
+          <stringArgument id="bcee8023-301a-4d7a-a5b2-11e456312c32" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="641a038a-f806-4e72-a7c3-5266b36940b5" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+          <stringArgument id="ff742e16-eed5-4ba8-818a-7b1b0c6b6383" Value="Model:UserMatchCompleted.Results.OponentGoals" Format="0" />
+          <stringArgument id="832a6eb8-4a6a-411a-a0e0-d4533476d817" Value="Model:UserMatchCompleted.Results.UserGoals" Format="0" />
+        </stringArguments>
+        <stringContent id="1d7ab2c4-415f-4d77-bfa3-30f247017a74">
+          <keyValuePair id="0b440f47-3b1b-4e48-aa4a-f75c4ff7e0f1" Key="M" Value="%1s's unbeaten run ended after %2s's %3s-%4s win" />
+          <keyValuePair id="a912d734-1f7a-4f75-8e60-3221503ea454" Key="F" Value="" />
+          <keyValuePair id="84fefebc-8cc1-4b2e-89dd-9126cbef1e36" Key="MM" Value="" />
+          <keyValuePair id="750137c9-1def-49be-b07c-001418af972f" Key="MF" Value="" />
+          <keyValuePair id="1c7c2984-2767-4f13-9a30-da2c97a918d2" Key="FM" Value="" />
+          <keyValuePair id="4a0e7801-6d0a-408b-b112-5fd349bbcccc" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="fa525be4-eb29-4a8f-b645-1d0fcaf3c2be" StringID="CM_News_LeagueLosslessStreak_Over_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="1ab45bd0-6c47-458f-b273-49983783181a">
+          <stringArgument id="322ea3c9-f826-4368-bc15-4f2a9b8addc0" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+          <stringArgument id="d8e9bf96-03f8-4234-949e-c687445d6059" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="aadf9d2c-1b3a-4ff3-895d-54953f51ae9d">
+          <keyValuePair id="5b6bd330-f380-4126-befe-c3697b7232da" Key="M" Value="%1s's win in the match allowed them to end %2s's unbeaten run. Fans are concerned whether or not their form will suffer as a result, with %2s egos undoubtedly bruised now after that result " />
+          <keyValuePair id="2a299397-aaba-4b9b-b78a-97a0c868af42" Key="F" Value="" />
+          <keyValuePair id="d899615c-0672-452c-b942-5b8505dd5be1" Key="MM" Value="" />
+          <keyValuePair id="08ce3ec0-4bbe-4b1b-b3f2-3c21f953250a" Key="MF" Value="" />
+          <keyValuePair id="5ea80104-e713-4727-a157-e30b068ce8fc" Key="FM" Value="" />
+          <keyValuePair id="3856dcac-308a-4765-8a44-a41ee0e86bac" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="7a5ff5be-ed00-473f-ac77-cda0bcf1011f">
+        <sceneParameter id="05e94f31-69ff-4132-b6e2-5116c9327c65" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="4f1c47d3-3417-4c24-8c5b-02fb21dcb538" X="3800" Y="-1320" NodeType="TriggerNews" NodeName="Lossless Streak Continues" Category="0" Importance="0" SceneId="8" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="stad_f">
+      <stringWithArgsTitle id="b47172c7-400f-4a26-b803-26e46430ada1" StringID="CM_News_LeagueLosslessStreak_Continues_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="00f15aea-7936-43b0-9372-71b6e9ddc8ac">
+          <stringArgument id="e7f83960-251b-455a-ad12-f2ec3feab61f" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="2c5b5897-e922-40e3-bb30-b9f93cfe19a8">
+          <keyValuePair id="a4a0940f-a84b-4575-b7d1-4c1bfd7df6eb" Key="M" Value="%1s maintain their unbeaten run" />
+          <keyValuePair id="118ab14d-cce0-4900-98ce-7bbde753b6b5" Key="F" Value="" />
+          <keyValuePair id="f5e3660e-8fa3-4d0c-89f1-2606583ffac7" Key="MM" Value="" />
+          <keyValuePair id="9874ffc4-5815-48d8-91b3-b1563cf485b0" Key="MF" Value="" />
+          <keyValuePair id="e2698e4c-bd32-430e-ae14-7d296937d804" Key="FM" Value="" />
+          <keyValuePair id="a700579a-2e00-4099-b6ee-998350fbbe95" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="446a5273-381a-445d-87c7-f207a92242ca" StringID="CM_News_LeagueLosslessStreak_Continues_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="cd76d794-e470-42cf-8489-09e4a6e842fa">
+          <stringArgument id="e5cdd359-7736-427d-b020-70ef9f6a8a84" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="47ed9581-68e1-482b-ae9c-e4d7026d02a9" Value="SaveData:Lossless Streak" Format="0" />
+          <stringArgument id="dcb1e58a-dba8-4634-bfae-816c7b80d820" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="fecfee16-e6d6-42b6-8ef9-d5116c2a4da1">
+          <keyValuePair id="62c81640-e3a7-47da-8589-d765175c64b4" Key="M" Value="Facing an ambitious challenge from %3s, %1s's side deservingly extended their unbeaten run in the league to %2s matches." />
+          <keyValuePair id="7935c3fd-50a0-4da5-9179-640b6ea2578b" Key="F" Value="Facing an ambitious challenge from %3s, %1s's side deservingly extended their unbeaten run in the league to %2s matches." />
+          <keyValuePair id="3a6e57eb-3d6d-40eb-93ab-5309dae9ebf6" Key="MM" Value="" />
+          <keyValuePair id="5abc5a35-c343-4976-8653-6467733304ca" Key="MF" Value="" />
+          <keyValuePair id="aae2e515-e9a6-480f-8485-00efbd2c8880" Key="FM" Value="" />
+          <keyValuePair id="4e4a4293-bc2b-4b47-9324-6dd6f3133a0e" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="87f0a477-6391-452e-b5ff-f5b3d25691e5">
+        <sceneParameter id="ebf17c24-2cb8-480a-9a3d-d59d42530780" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="d5b4127d-4290-47f3-bc97-bd53f830518f" X="3600" Y="-1400" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="5728c714-54e5-447f-9cf2-a781a6536124">
+        <condition id="666b419d-8a65-4ba7-8357-9b2d194e32dd" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.MatchNumber" Comparison="EQ" Value="Model:UserMatchCompleted.LastMatchData.Competition.TotalMatchCount" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="52a2c31d-c655-4f56-b953-65e7d993c5c6" X="1800" Y="-1200" NodeType="TriggerNews" NodeName="Win Streak Over" Category="0" Importance="0" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="boot">
+      <stringWithArgsTitle id="b7dbd3d0-1bb1-43fd-af1b-6ca324f92c47" StringID="CM_News_LeagueWinStreak_Over_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="120e2c32-12d3-4285-a1d4-58958a706d5f">
+          <stringArgument id="682e0d99-11e3-47ad-838d-ac75b67a25d8" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+          <stringArgument id="2f7fd89c-fb91-4e71-b854-f8acc6b86a4c" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="f8b28977-8adc-49ad-9a67-a832dcdd93f0" Value="Model:UserMatchCompleted.Results.OponentGoals" Format="0" />
+          <stringArgument id="8d36708e-2d11-4be0-81a4-405d067d4ff6" Value="Model:UserMatchCompleted.Results.UserGoals" Format="0" />
+        </stringArguments>
+        <stringContent id="7cd1f0c8-ec57-4893-aba2-8df49146dcf4">
+          <keyValuePair id="4f2a65f7-f7f1-4157-b741-a5e15e5ac243" Key="M" Value="%1s end %2s's winning streak with %3s-%4s win" />
+          <keyValuePair id="8f72334d-507b-4c94-af41-1df0e7a671c3" Key="F" Value="" />
+          <keyValuePair id="93c98d97-2874-4ed4-af2b-161410c738e7" Key="MM" Value="" />
+          <keyValuePair id="1f885bf2-07e2-4df9-b81f-dde460567e24" Key="MF" Value="" />
+          <keyValuePair id="02095e64-8efa-4764-89cb-c922b6f5b561" Key="FM" Value="" />
+          <keyValuePair id="0a0f8f7a-262b-43dc-81ca-3e04d419c12a" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="fd491053-39f9-4272-9c1c-85d51176599f" StringID="CM_News_LeagueWinStreak_Over_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="7246a5e8-0208-4146-a414-559205911df3">
+          <stringArgument id="1b0bef2a-c77c-4eda-b23f-d8511360d486" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="1ad407d2-dc09-4010-8164-b090e288de80" Value="SaveData:Win Streak" Format="0" />
+          <stringArgument id="d9525e97-d5ea-424a-b0d6-669122bb491a" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="54cbfb15-ad65-4f0c-a079-947568399b1a">
+          <keyValuePair id="a248bdc2-edef-4ee5-bfdd-503eb65d8867" Key="M" Value="All good things must come to an end, and %1s's recent run of %2s wins has been stopped by %3s." />
+          <keyValuePair id="b2cf72ce-a5ed-4ab5-8570-4ff1cadfd38e" Key="F" Value="" />
+          <keyValuePair id="645d88b2-2c50-4ca2-9cbf-6412d5ff6502" Key="MM" Value="" />
+          <keyValuePair id="25cf99b2-133b-4fa0-ae34-72fb1cdd83b4" Key="MF" Value="" />
+          <keyValuePair id="ad935107-28bb-48af-947e-dfc4dfc0448e" Key="FM" Value="" />
+          <keyValuePair id="43333519-7e37-4f73-8c9d-ddcdf43ab235" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="875229ac-74ef-4c43-b0e9-011c6e14fb7d">
+        <sceneParameter id="232efa9f-61c7-4345-bcba-591298e05692" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="dfad2d6f-c415-4c9c-bfa4-72e35d2bfca4" X="760" Y="-240" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="6672735a-a3fe-4906-9d29-88cb86615b58">
+        <condition id="5b58a947-3bee-49f1-a5e2-1d48f366670e" VariableId="SaveData:Winless Streak" Comparison="GTE" Value="5" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="08247bec-f48e-4b24-bfd1-93c253556fc2" X="360" Y="-520" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="3b8a1909-8f7b-471a-b96f-f4d384d2d57c">
+        <condition id="e6f8ed61-c083-48b7-b3f4-d124eb7519c0" VariableId="SaveData:Lossless Streak" Comparison="GTE" Value="5" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="47bb741e-66e3-4b47-9e92-7fb36c1b9691" X="1800" Y="-520" NodeType="TriggerNews" NodeName="Set Name for New Node" Category="0" Importance="0" SceneId="3" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="graph_u">
+      <stringWithArgsTitle id="9b9a2140-448f-40c9-94e9-9f6b8b5f4491" StringID="CM_News_LeagueLosslessStreak_StartDraw_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="99a90acd-1a41-4c2b-a4aa-2ceb46e24957">
+          <stringArgument id="cedb11a8-20ea-4f87-b374-d51fc01131d4" Value="Model:UserMatchCompleted.Results.UserGoals" Format="0" />
+          <stringArgument id="2365bf4a-37d1-4d4e-b3b0-811f6d6d846a" Value="Model:UserMatchCompleted.Results.OponentGoals" Format="0" />
+          <stringArgument id="981fb41f-d62c-4b4a-9ba5-f9b2e4b89ce7" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="31c3b544-223f-4af5-883b-dc44b2e9dc81">
+          <keyValuePair id="c205c493-1ace-4d18-b677-cc1ac14186a3" Key="M" Value="%1s-%2s draw sees %3s stretch their unbeaten run" />
+          <keyValuePair id="7f838aa5-b113-4461-9fbd-c43127619a7a" Key="F" Value="" />
+          <keyValuePair id="2d685a84-4420-4384-aa5a-a3f920f70996" Key="MM" Value="" />
+          <keyValuePair id="fda0035f-0f91-4798-a275-8a6cbfa1fc1a" Key="MF" Value="" />
+          <keyValuePair id="aeee987b-4fc9-416d-85b7-4c7a3406dc66" Key="FM" Value="" />
+          <keyValuePair id="8eb54555-780c-47f2-9266-0a586f6e922e" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="a289b37d-bea4-48bf-81de-dde4d2059387" StringID="CM_News_LeagueLosslessStreak_StartDraw_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="9cb05989-118a-436a-a865-e122db6a1e13">
+          <stringArgument id="c53281da-0728-4a02-a123-e5a301f37287" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="662d21a9-afdf-44cb-a425-0276bb7c4678" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="9fe5d26d-8a9c-4a09-8660-9163f8016caa">
+          <keyValuePair id="c801ef2b-89d5-4621-b6e9-6516f33c2ecc" Key="M" Value="Another great moment for fans of %1s as the draw against %2s puts them on the way towards a record breaking unbeaten run." />
+          <keyValuePair id="952c896b-ae83-41e9-94d8-bc5569c68b9c" Key="F" Value="" />
+          <keyValuePair id="63084b5d-1ea2-4d41-9e1c-18ce2b24978c" Key="MM" Value="" />
+          <keyValuePair id="0efa906d-384d-489f-85ab-e396e6e7ef2f" Key="MF" Value="" />
+          <keyValuePair id="a0e10f98-64da-4159-b74a-9f3cc093ab12" Key="FM" Value="" />
+          <keyValuePair id="bbd67fac-e766-454a-9944-db9c26d912f7" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="74f203f7-bf16-4a85-bd13-1e72b92d937b">
+        <sceneParameter id="6a40d127-c822-431d-b169-6a56571acba4" Parameter="PlayerId_1" Value="Model:Global.Team.CaptainID" />
+        <sceneParameter id="fc7f5e90-bd0f-4137-aeac-60131169600c" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="a15dd100-6acd-4879-b94f-a99eb9c9784a" X="1160" Y="-240" NodeType="TriggerNews" NodeName="Winless Streak" Category="0" Importance="0" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="graph_d">
+      <stringWithArgsTitle id="8b2cb04a-dafc-47e8-ae44-f51b8296445a" StringID="CM_News_LeagueWinlessStreak_StartDraw_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="8113d7cd-cb87-408f-bdf8-72999d4d9103">
+          <stringArgument id="f6c249f1-dd45-4356-8faf-3e295a15b42d" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="f0939657-dfc1-4128-850c-fede035e93bf">
+          <keyValuePair id="2246e94a-829b-4070-8b5d-9ac14e1bbcfe" Key="M" Value="%1s's winless run continues" />
+          <keyValuePair id="65c13641-01f1-49c2-b75f-497195849bc6" Key="F" Value="" />
+          <keyValuePair id="797b7b4c-4b49-4a79-9ef4-c3bb8d260b00" Key="MM" Value="" />
+          <keyValuePair id="ace83ea3-d24c-4396-b3b1-7c53a6e8c61a" Key="MF" Value="" />
+          <keyValuePair id="0b226476-10a5-4e39-b02d-e4e2a3e1e08b" Key="FM" Value="" />
+          <keyValuePair id="c7cb1fce-aadd-4d58-8d01-0bb3c028031c" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="758dea48-401a-4b43-9a0b-bc37f718ea5c" StringID="CM_News_LeagueWinlessStreak_StartDraw_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="f35fe116-8400-4391-bb5e-91b0c9dba451">
+          <stringArgument id="131b0103-df73-4b63-904b-e85084e197e6" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+          <stringArgument id="33f8aac7-21ec-4fe9-aa85-2b9374b46d22" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="9e352526-fa15-405f-92b0-52f7a89a0301">
+          <keyValuePair id="109c31eb-6ac6-4c9b-a1cc-1826d0ee5a10" Key="M" Value="Despite managing to get a point against %1s, fans of %2s are certainly worried that their team aren't looking likely to break their winless run anytime soon." />
+          <keyValuePair id="75dd0029-47ae-46d1-bcc3-7757fef53547" Key="F" Value="" />
+          <keyValuePair id="cfa95e32-6e54-4b90-9c02-1a2d5e416be1" Key="MM" Value="" />
+          <keyValuePair id="7150b9cc-6e4b-4820-a153-a4e8dfc658b7" Key="MF" Value="" />
+          <keyValuePair id="0522de35-eac4-49d2-97ba-4375917471c0" Key="FM" Value="" />
+          <keyValuePair id="f6de4e28-eca5-4791-a67a-3aac9515c14c" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="49a506a1-712f-4b45-b046-f6f429a9ecb4">
+        <sceneParameter id="7b6bb6ca-69c6-41b8-b807-5c0ff240b54c" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <state-node id="a5382dfe-6eed-4ffe-bfa2-58fe35532b7a" X="2800" Y="40" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="50619d2e-2818-4309-b4d3-6d8cfc4c2028">
+        <string id="e7eb9c52-9c27-4ab6-910a-88595cf66c75" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <condition-node id="0f4d6ba5-dc89-48fb-8d17-e973852cbe10" X="3080" Y="40" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="bc2cfad5-4af8-4b3b-9927-741c9b998fd6">
+        <condition id="5042578a-a28b-4d6c-892a-063414890b72" VariableId="Model:UserMatchCompleted.CanHavePostMatchPressConference" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="cea6c6db-cb33-4988-8551-9f45255c251d" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.CompType" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="04f3f3f5-4e83-4917-a1a1-b9c5859fa080" X="3320" Y="40" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="952e148e-ee69-4dc0-a1aa-8d42ac82802c">
+        <condition id="347e5a81-0e7b-46c2-83fd-d54a20e5870f" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="NEQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="6c2410d1-9065-48bb-8f06-f23a204d40f9" X="4040" Y="120" NodeType="TriggerNews" NodeName="Winless Streak" Category="0" Importance="0" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="graph_d">
+      <stringWithArgsTitle id="c67355d2-20ca-4f83-bc73-ea384251b8d9" StringID="CM_News_LeagueWinlessStreak_Continues_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="85c6d07f-671d-4532-853d-2fda9711c8be">
+          <stringArgument id="ae130cdb-a81b-4f47-9ab4-f83a41f40074" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="fc3c1aec-f8e1-41d4-a1cb-dab43f3e5ddb">
+          <keyValuePair id="bf59d0c0-1092-4993-9a4c-d01b813b6c79" Key="M" Value="Struggling %1s extends winless run" />
+          <keyValuePair id="a04b7e8a-af25-46f9-a03c-387e38252dc9" Key="F" Value="" />
+          <keyValuePair id="ec5c9cb1-9164-4692-98fb-72b682376c28" Key="MM" Value="" />
+          <keyValuePair id="a37c98f8-1700-4895-b844-7d4b70e6d45e" Key="MF" Value="" />
+          <keyValuePair id="ffe12d10-adf6-4989-81c6-f605fd3a95c5" Key="FM" Value="" />
+          <keyValuePair id="ca17e81d-6909-4e95-900a-122fdc10bb46" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="386f4822-db0e-4820-8103-cf090cc40d73" StringID="CM_News_LeagueWinlessStreak_Continues_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="5777ef14-a42b-4301-8d37-7da502616566">
+          <stringArgument id="81cd485c-01f6-4144-aad3-a387f53222be" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="231c932b-ac94-4640-9473-7e25162004ed" Value="SaveData:Winless Streak" Format="0" />
+          <stringArgument id="64aff2ff-e7a0-4ebd-91c6-52e6d19f41a4" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="aeeb470c-2486-44ab-b3e8-d3c3ac6f7f41">
+          <keyValuePair id="cfd7f2ea-e7a0-46a2-80ba-8aa0667637b6" Key="M" Value="%1s is still searching for a win after %2s games. Problems on an off the pitch are starting to gain traction as %3s crisis continues " />
+          <keyValuePair id="8cca0454-c9e1-44ea-9eac-6d282f56c883" Key="F" Value="%1s is still searching for a win after %2s games. Problems on an off the pitch are starting to gain traction as %3s doesn't seem to be able to avert their crisis." />
+          <keyValuePair id="baa5899f-6ea1-4e7b-ad0a-647c7d349bbb" Key="MM" Value="" />
+          <keyValuePair id="591bbb84-cd76-441c-8f50-9d985c7b41e1" Key="MF" Value="" />
+          <keyValuePair id="4fefcdf6-d0b4-433c-a357-86642e4726ad" Key="FM" Value="" />
+          <keyValuePair id="b18df23f-a9e8-4f2b-8e7b-d9b1bf264806" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="5cfd390c-87a6-45a8-a6a9-d1f2494324b1">
+        <sceneParameter id="d424921c-3271-42f7-896d-3e35e5a7cf99" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="bc4c5343-4295-4595-8547-78665bb4933e" X="3840" Y="40" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="740a641c-2e89-466f-9249-70b7f04e5568">
+        <condition id="b968dd29-2f78-4025-b489-f5222f094070" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.MatchNumber" Comparison="EQ" Value="Model:UserMatchCompleted.LastMatchData.Competition.TotalMatchCount" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="454eb21b-ee04-4b31-96c9-ce0bcae43c1b" X="4600" Y="0" NodeType="TriggerNews" NodeName="Flawless" Category="0" Importance="0" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="stad_e">
+      <stringWithArgsTitle id="e08ccccd-1653-4853-a6e9-b577a9c34a65" StringID="CM_News_LeagueWinlessStreak_Flawless_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="396bb8ea-2723-4e03-89b6-06cf7e73860d">
+          <stringArgument id="bf67ccf7-f383-4c1d-8f9f-e0e82208b90b" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="55240c8f-8db6-4c1e-a827-b7a024410555">
+          <keyValuePair id="abc815a4-24f6-4e57-992e-5e8f56aa69dc" Key="M" Value="Disastrous performance for %1s" />
+          <keyValuePair id="037932b2-6517-45dd-87a5-7ee13f53a5bd" Key="F" Value="" />
+          <keyValuePair id="271eca3e-35a6-4535-9af8-ba5d06a650b1" Key="MM" Value="" />
+          <keyValuePair id="62853032-0604-4878-8382-8c15e01cef8b" Key="MF" Value="" />
+          <keyValuePair id="011af448-d3b4-4237-97f8-56c2fe0173ec" Key="FM" Value="" />
+          <keyValuePair id="8d0a3d84-952c-4477-a733-77f4323355ba" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="6efc6f14-59f4-4774-962c-8a6a51149171" StringID="CM_News_LeagueWinlessStreak_Flawless_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="2486e317-f4d8-4835-8e9f-628fa44a3239">
+          <stringArgument id="a9c24962-5c1c-4d8f-8116-8aa91ba76158" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="1f60fcce-3a81-42a2-bdd1-352378300170" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="2d74e5ce-fb37-4d23-bc32-d51c82c18c63" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="e0df64a7-8484-4d36-9c2a-16ac72b520df">
+          <keyValuePair id="3707820e-3b0a-4f6d-9179-4ef330ae7d73" Key="M" Value="%3s fans and pundits alike are questioning if %1s has any reason to be at the helm in the coming season. After a disastrous campaign which didn't see %2s win even once it's remarkable that the board didn't take any action up until now. " />
+          <keyValuePair id="04b0cdd5-5ba8-4aa0-8c05-76305a1fa47f" Key="F" Value="%3s fans and pundits alike are questioning if %1s has any reason to be at the helm in the coming season. After a disastrous campaign which didn't see %2s win even once it's remarkable that the board didn't take any action up until now. " />
+          <keyValuePair id="19ea0d91-519e-434d-b6a0-b8a80ee3c461" Key="MM" Value="" />
+          <keyValuePair id="24ab2ce8-aa5f-4c38-bc2e-13ba67768f2d" Key="MF" Value="" />
+          <keyValuePair id="034aa72c-a699-43bd-a2d1-af63f397935f" Key="FM" Value="" />
+          <keyValuePair id="e27be8f6-81ed-48f2-9a39-9d7652f9e4af" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="2e1f2f58-9a0e-46b2-94a8-78deeb931fff">
+        <sceneParameter id="6d9d6222-4fac-4c68-9231-9b54cf18bdc9" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="6c18d4b1-e41d-4d06-aa38-88e522be180c" X="4600" Y="120" NodeType="TriggerNews" NodeName="Winless Streak League End" Category="0" Importance="0" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="stad_e">
+      <stringWithArgsTitle id="a8a28caa-b442-4331-8bc7-d87e6f3108a8" StringID="CM_News_LeagueWinlessStreak_LeagueEnd_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="92bdb14d-0f54-4502-9b9a-19e166d58740">
+          <stringArgument id="a17239ca-543b-475b-aaa8-010b8fc20c3d" Value="SaveData:Winless Streak" Format="0" />
+          <stringArgument id="41e2a56e-95a3-4889-a033-a61d100327fd" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="c75dc33c-631e-473c-bb4a-d4af796f86f0">
+          <keyValuePair id="d84a72ee-170a-4886-9f15-9a531f3b7b17" Key="M" Value="%2s ends season with %1s-game winless run" />
+          <keyValuePair id="86bfe1da-17ca-4fa8-9926-f2a9350c1d40" Key="F" Value="" />
+          <keyValuePair id="03f1a08c-8fa7-4596-9617-aed1d57ca0da" Key="MM" Value="" />
+          <keyValuePair id="a1e02129-86fb-4dfd-a7d0-13904a13e06c" Key="MF" Value="" />
+          <keyValuePair id="886f4f56-baa5-45a9-97d8-8a1c53d458a2" Key="FM" Value="" />
+          <keyValuePair id="b5f158cf-5924-4ddb-ace2-a2f911772afc" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="38144917-accc-421e-8f28-e8f2a00d0bf7" StringID="CM_News_LeagueWinlessStreak_LeagueEnd_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="79d9d60d-c5d7-4f46-b2fb-66c9f15d432c">
+          <stringArgument id="abf48716-2361-4d5b-aa47-ee6eb30633b1" Value="SaveData:Winless Streak" Format="0" />
+          <stringArgument id="44a82afb-c4a9-465d-b396-75a3963b933e" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="0f11eff9-4ee0-400e-bb7f-29a9df62fb05">
+          <keyValuePair id="0e97a1a3-69f6-46c4-8d1c-d58a222f52ba" Key="M" Value="%2s didn't manage to end their season on a high note as they failed yet again to put a stop to their %1s-game winless streak." />
+          <keyValuePair id="2660b5c9-a1f4-47e7-a74b-d9c3d96a2196" Key="F" Value="" />
+          <keyValuePair id="f45172e2-0c65-42e9-86f2-5402b9c5b3f7" Key="MM" Value="" />
+          <keyValuePair id="241bcba6-aec6-4ddb-9b59-74960c6333fc" Key="MF" Value="" />
+          <keyValuePair id="054023d1-450e-40f7-9331-0af89f884983" Key="FM" Value="" />
+          <keyValuePair id="c36bdd63-2f14-474e-a518-ebc5d934c65b" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="9be36d81-813a-4665-95df-bdcc19ee6503">
+        <sceneParameter id="b0d0348d-92dc-449a-a18c-f266ccd79d45" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="e1c45d2f-a83a-48f3-a8e4-1ecd0a263530" X="4400" Y="40" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="3ffbdbe7-352a-4fe5-873b-fb0393084627">
+        <condition id="79ca0275-65df-4841-8c42-84ed62bd3309" VariableId="SaveData:Winless Streak" Comparison="EQ" Value="SaveData:Total Match Count" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="142d4197-53a9-453a-bcd2-320c6f2ea4b5" X="3520" Y="400" NodeType="TriggerNews" NodeName="Winless Streak Over" Category="0" Importance="0" SceneId="8" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="graph_u">
+      <stringWithArgsTitle id="e559a776-57e9-4aa2-809e-64c5c159512a" StringID="CM_News_LeagueWinlessStreak_Over_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="0b12f0e7-ba08-4b97-aabd-dcc01c2324b8">
+          <stringArgument id="d83a1287-c114-4ed8-a85d-5fc53b5405bd" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="74848d38-759c-42f6-83eb-d1db219ebf96" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="80e285a6-3109-43e1-8aab-c907cff18a84">
+          <keyValuePair id="4a2b2135-7db9-4dd3-b3a4-21fca6cd216c" Key="M" Value="%1s ends winless run with victory against %2s" />
+          <keyValuePair id="f45d1b2a-55e4-4352-b7b2-8aa60ff75b38" Key="F" Value="" />
+          <keyValuePair id="b08a3d59-a7ce-4aa9-8d3e-92045e286df4" Key="MM" Value="" />
+          <keyValuePair id="b656cebb-1606-4693-936a-e60fa8440b11" Key="MF" Value="" />
+          <keyValuePair id="91c53034-54a0-47fe-afd6-503ac48e09a9" Key="FM" Value="" />
+          <keyValuePair id="bf4ef5d2-ac3c-4c17-8326-3bc64a26bd9a" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="0520c59e-f3a9-4c26-9b3e-6f655d0fa350" StringID="CM_News_LeagueWinlessStreak_Over_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="015a4dec-4a9e-43af-a2c6-80c91bf6785d">
+          <stringArgument id="581aa7fd-6fc5-478a-a0a6-d949c779e293" Value="Model:UserMatchCompleted.Results.UserGoals" Format="0" />
+          <stringArgument id="f98ad466-8e44-45ed-8ee3-588e6c1ba81a" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+          <stringArgument id="e6c97462-2d6c-4731-9596-59fe5f8bdc0b" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="bae3cdbd-736d-4b5b-bf5a-b1ec94529f85" Value="SaveData:Winless Streak" Format="0" />
+        </stringArguments>
+        <stringContent id="927d203d-9325-4b01-89cb-3fee946669e3">
+          <keyValuePair id="e0ac59eb-d551-4feb-94a0-a9e970acb0f2" Key="M" Value="%1s goals against %2s give %3s their first win in %4s games." />
+          <keyValuePair id="1e385dd6-c83c-489c-af7c-41a228877cbe" Key="F" Value="" />
+          <keyValuePair id="a9844b53-aeda-4689-b8cd-b2708e12912b" Key="MM" Value="" />
+          <keyValuePair id="762a1ec2-d993-491d-8745-984c2297e61d" Key="MF" Value="" />
+          <keyValuePair id="dd2a48b3-86de-47ce-a872-7eccee9ac09d" Key="FM" Value="" />
+          <keyValuePair id="1f6e9586-f76a-4a96-ab8a-e0415955bfb0" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="202985d5-d7e3-4b14-a707-f87b5e4c675d">
+        <sceneParameter id="2931fc89-9755-4652-b18d-e5c6d5d6343f" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="4d63daa6-af57-431e-aa99-ea5f19ac7cc5" X="640" Y="560" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="f837c1d5-2a45-4b55-8478-c35364dcaecc">
+        <condition id="ef45a550-cbb9-4256-85d6-de6e1273cc3b" VariableId="SaveData:Winless Streak" Comparison="GTE" Value="5" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="35ac688f-c02d-4772-ad99-e55a831ff472" X="1120" Y="240" NodeType="TriggerNews" NodeName="Winless Streak" Category="0" Importance="0" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="graph_d">
+      <stringWithArgsTitle id="b716f582-d261-4aa7-b93a-ba0c9449015f" StringID="CM_News_LeagueLosingStreak_Start_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="2b832f58-2f84-42be-91d0-e9deb7f789bb">
+          <stringArgument id="a4544623-a657-4c07-aadd-4ba11bb10673" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="6f0a4f4b-6775-4cb4-8161-e03635ef13aa">
+          <keyValuePair id="fd80dc66-994c-4273-9930-ff62b19052f3" Key="M" Value="%1s's losing streak continues" />
+          <keyValuePair id="11d551ca-e592-4234-8f4c-3b065a442ffb" Key="F" Value="" />
+          <keyValuePair id="058d97b2-bfdf-4cc6-aae7-4310650144bb" Key="MM" Value="" />
+          <keyValuePair id="fcf47717-d433-42c2-b9c5-b038ed182b82" Key="MF" Value="" />
+          <keyValuePair id="7f18ed19-67e8-4d22-bd3c-c53b937a830f" Key="FM" Value="" />
+          <keyValuePair id="9019b08c-d2a5-4748-a1a6-76f345b2b69f" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="2d766f00-91a9-4823-9c61-c49016b68214" StringID="CM_News_LeagueLosingStreak_Start_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="cbcd8c83-17ae-48a9-9ca5-c7c1a1d0cabd">
+          <stringArgument id="f3e094ae-52d4-407c-ae12-f20bebba4f44" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="d6d9e040-ec64-464b-9fb2-64f04d7feaa6" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="ec544933-c81b-471f-9bbb-f6f7f91ebaf8">
+          <keyValuePair id="ba6074d9-27e3-4269-97db-32bed0ffe348" Key="M" Value="%1s troubles seem to worsen as %2s can't find a way out of their rough patch of form." />
+          <keyValuePair id="8cb654ad-42ae-4168-8ea5-be7f4ec80141" Key="F" Value="" />
+          <keyValuePair id="754e817f-5898-48ed-a132-342ce849139c" Key="MM" Value="" />
+          <keyValuePair id="2ee07e85-64b8-453b-aed4-9a1e934f2b89" Key="MF" Value="" />
+          <keyValuePair id="107127ec-a950-4d3a-8b0a-75ece17cf98d" Key="FM" Value="" />
+          <keyValuePair id="1c52ecc7-a8d5-43dd-917b-df3c98aca9db" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="912549cc-fdf2-412b-b4b5-7b90aa84077f">
+        <sceneParameter id="d855db31-47da-49aa-b6c6-633f5e3cfa62" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="7fe6cfc3-a90c-41b3-96a4-e3e54d3d92b0" X="1120" Y="560" NodeType="TriggerNews" NodeName="Winless Streak" Category="0" Importance="0" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="graph_d">
+      <stringWithArgsTitle id="d434b7f3-9d02-49a4-84e4-30bc2dfbd215" StringID="CM_News_LeagueWinlessStreak_Start_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="4ce2aac0-a20e-4542-ba31-2147860c8f7e">
+          <stringArgument id="98afe7ad-18fd-4a73-89d4-d53d7a8b8b2b" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="0c5dfc25-02ab-4ce6-959d-f08ae087026a">
+          <keyValuePair id="5e6840b4-f360-4f2c-8cb2-45fe617f677d" Key="M" Value="%1s's winless run continues" />
+          <keyValuePair id="449fadd6-9c96-450e-9000-2ecd41278f35" Key="F" Value="" />
+          <keyValuePair id="7463875e-b6d1-414e-b7fd-2673bf4cbb2a" Key="MM" Value="" />
+          <keyValuePair id="697d719f-fd33-4d3f-aced-aa779e78fb42" Key="MF" Value="" />
+          <keyValuePair id="bdb7ce2d-ea1a-47c2-aa98-2059cb692fa6" Key="FM" Value="" />
+          <keyValuePair id="c1922562-5ca3-4dae-9753-a39ccbf0e4a8" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="3cf5a3ac-ba0d-47d5-975d-4cd833ca6e85" StringID="CM_News_LeagueWinlessStreak_Start_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="8ca9db51-cb74-4062-8a2a-0615212ae87c">
+          <stringArgument id="b0134c8e-9123-4ca8-9869-b709456f4eb1" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+          <stringArgument id="89e202fc-083e-449d-82df-b42e3bc78707" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="67814bf7-0a35-43ba-92c2-a51b5b243fd2">
+          <keyValuePair id="c88a5de5-9bbc-4e2c-ab2b-f34e62747c56" Key="M" Value="The defeat against %1s certainly leaves fans worried that %2s are not looking likely to break their duck anytime soon." />
+          <keyValuePair id="c88ef92c-3b94-46e4-86e6-21b4e8383b58" Key="F" Value="" />
+          <keyValuePair id="cf728eca-1b52-459b-bea7-2935e3f5570c" Key="MM" Value="" />
+          <keyValuePair id="4ee782c3-78b4-474a-9bd7-923407a9d783" Key="MF" Value="" />
+          <keyValuePair id="ed0296c0-44ba-4eaf-bf3e-45ae9c1dba4b" Key="FM" Value="" />
+          <keyValuePair id="d482fc5a-9c66-443a-86c5-b32ceedb5b96" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="b168026b-a87e-4686-afdd-a3fb1abd306c">
+        <sceneParameter id="0a2848dd-b321-4df8-8381-5eac20f7c5ab" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="64fdce4b-a035-45b8-a0aa-b7686bf80bb4" X="160" Y="240" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="2a966945-9dc0-4d3d-8f35-68302a86b46f">
+        <condition id="ed3e97d7-9b5b-4db3-8f4b-23c11eaddef4" VariableId="SaveData:Losing Streak" Comparison="GTE" Value="5" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <state-node id="aa7f1aa9-a6e9-45d4-bf72-a6af1c55242f" X="2920" Y="720" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="24cc0b63-bf32-498d-9277-944e34ee2837">
+        <string id="7433e5f0-dd5c-431b-b8e3-eb08657ce679" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <condition-node id="f23ae37f-ab9b-4e6e-aa5e-db5c24f6f312" X="3200" Y="720" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="14e1993c-5a2f-48ca-884a-ee4aee52e074">
+        <condition id="555f3db9-d80c-429d-bf85-a52a0eaa709b" VariableId="Model:UserMatchCompleted.CanHavePostMatchPressConference" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="577d5202-3439-4989-b303-8666c9e6a655" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.CompType" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="63e42c37-040f-4161-9d90-31918c44929b" X="3440" Y="720" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="c1a0a974-d67a-45dc-bb0b-698486bb7655">
+        <condition id="be39b22e-5a06-482e-b837-2b6d29355fb7" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="22be6d62-46bc-4fc3-abbb-5066d09674e7" X="3920" Y="1160" NodeType="TriggerNews" NodeName="Losing Streak Over" Category="0" Importance="0" SceneId="8" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="graph_u">
+      <stringWithArgsTitle id="a4695199-a58b-4214-a830-dedd2f73c13e" StringID="CM_News_LeagueLosingStreak_Over_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="54ab8c90-cda7-4a02-9a96-af269840361a">
+          <stringArgument id="265ea5a1-053a-4d6f-b52b-2a7c01d78c81" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="cba69c61-8fed-4922-8dee-3d0359697944" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="b15f5380-ec7e-4c7f-aedc-2599b4a5e42e">
+          <keyValuePair id="58d718c4-289c-403d-b5f9-58d6520967c3" Key="M" Value="%1s ends losing streak with win against %2s" />
+          <keyValuePair id="087b115d-eedb-4630-a45f-c52407c9f559" Key="F" Value="" />
+          <keyValuePair id="27809f16-36fd-4449-a77b-dba4d93e7cd6" Key="MM" Value="" />
+          <keyValuePair id="3dd699d9-8c05-4e2d-9ae2-412e5c6f822f" Key="MF" Value="" />
+          <keyValuePair id="9e1342ea-6868-4b7a-8b4a-2829349aca70" Key="FM" Value="" />
+          <keyValuePair id="56e08d86-2706-4ec0-834b-812769b407b1" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="0e644012-f306-4dda-a739-f967c0ec905c" StringID="CM_News_LeagueLosingStreak_Over_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="421d3635-ccd0-4b3c-b3da-03f1f32d6017">
+          <stringArgument id="a0df9993-74f7-4d0a-9a0a-cf3008d0d137" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="84c69020-3646-4e82-a3b4-95e85370d1f9" Value="SaveData:Losing Streak" Format="0" />
+          <stringArgument id="aac86405-933a-4310-9fac-5e1be04eb985" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="ba2c6e28-0af8-4fde-8def-148997816f3a">
+          <keyValuePair id="6c45fef6-5139-4aa9-a810-ed8d3b33d21f" Key="M" Value="%1s stopped their %2s game losing streak with a much needed win today. %3s and the deprived %1s fans are starting to show signs of relief." />
+          <keyValuePair id="f833c886-43b1-4c35-8f72-119af913b03c" Key="F" Value="" />
+          <keyValuePair id="58001297-cd62-4874-b640-d8da8a957c73" Key="MM" Value="" />
+          <keyValuePair id="0e7b86c3-6ec4-4e5b-9246-5ac7a4e25ac4" Key="MF" Value="" />
+          <keyValuePair id="4bfb4163-2784-4fe0-93a2-aa64ec90e701" Key="FM" Value="" />
+          <keyValuePair id="890e67eb-abb1-48f1-8a13-c6664c117225" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="ad584af5-d2a4-47a1-84a8-be0e2aa9d105">
+        <sceneParameter id="c4583f05-4a79-4975-84bc-0e2d3a3bfbc6" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="f5a1639e-321e-4c45-bbcd-1524a861ec46" X="4160" Y="800" NodeType="TriggerNews" NodeName="Losing Streak" Category="0" Importance="0" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="boot">
+      <stringWithArgsTitle id="a9a6cea8-cc98-4428-b459-4ae8987ddc9d" StringID="CM_News_LeagueLosingStreak_Continues_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="6b75325f-f6d4-484d-a8c1-afec32d5336c">
+          <stringArgument id="8fcf029a-c553-4b47-b6a4-a993710b0bc8" Value="SaveData:Losing Streak" Format="0" />
+        </stringArguments>
+        <stringContent id="d474dc1f-2f07-4eac-aac3-66f0f54005ec">
+          <keyValuePair id="7f47b13c-f99f-4a3a-b030-5629ca3d86b5" Key="M" Value="Dismal season continues with %1s-game losing streak" />
+          <keyValuePair id="06cb8db7-0f3f-4f3f-8a18-dd3239cbb59c" Key="F" Value="" />
+          <keyValuePair id="91f769b1-7f37-4f4f-ae2e-5734ef4b3d0a" Key="MM" Value="" />
+          <keyValuePair id="b50c36e1-1ee3-4946-9371-9c76572f5098" Key="MF" Value="" />
+          <keyValuePair id="70d1dcff-d54c-4d4b-b9bf-e2968cf7675d" Key="FM" Value="" />
+          <keyValuePair id="85c923ff-2c12-4a8e-a538-554780e357f9" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="9f581170-8529-4544-a136-d964af226918" StringID="CM_News_LeagueLosingStreak_Continues_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="c220abdc-1fbb-439f-80f8-3fee4dd84b16">
+          <stringArgument id="5b676c04-d28d-4313-80ce-61b60bc0ef7f" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="f6d851ff-1188-4c17-ab63-dab0a001c333" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+          <stringArgument id="67dc7914-c7fe-45d8-9538-ce45e6ae9c73" Value="SaveData:Losing Streak" Format="0" />
+        </stringArguments>
+        <stringContent id="2e9e1ae9-e49e-455a-b35a-79f638a470eb">
+          <keyValuePair id="391faca1-9f9c-4325-a45f-84d0292010c6" Key="M" Value="%1s's dismal season hits a new low, with a defeat at the hands of %2s stretching their losing streak to %3s games." />
+          <keyValuePair id="0555c649-37c1-4e9c-bb56-7e995a37e855" Key="F" Value="" />
+          <keyValuePair id="4ab311cb-a1b0-458a-a9bb-fe8b8ebd8b83" Key="MM" Value="" />
+          <keyValuePair id="eaca8a4e-65dc-4bd3-8b4d-81c657ee7261" Key="MF" Value="" />
+          <keyValuePair id="8027e5a8-b61b-4d05-a21b-d7c80ebf69c8" Key="FM" Value="" />
+          <keyValuePair id="9e3e2263-fc00-4f6c-92ff-8bbc60cf9a95" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="3d150343-5156-4b6a-80ad-01bfe4ef1928">
+        <sceneParameter id="6bbf490e-e499-4c31-9676-b1ff0cc08688" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="51bf9f3c-6f24-449a-aefd-5c13b2cda003" X="3960" Y="720" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="89742e39-c27b-432a-b9f1-b558b365e15c">
+        <condition id="635469e7-3e68-4a47-a586-ac9bde278a16" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.MatchNumber" Comparison="EQ" Value="Model:UserMatchCompleted.LastMatchData.Competition.TotalMatchCount" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="20cee8bf-962b-4359-98f5-3df66692bb18" X="4360" Y="720" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="8f6a10d8-7e7a-46c0-9625-582ae5938773">
+        <condition id="744b951d-5a5b-465b-8888-60c7849c6a4b" VariableId="SaveData:Winless Streak" Comparison="EQ" Value="SaveData:Total Match Count" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="ef93c598-f683-4400-9422-9a5116b780ca" X="4560" Y="760" NodeType="TriggerNews" NodeName="Losing Streak League End" Category="0" Importance="0" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="stad_e">
+      <stringWithArgsTitle id="ecc408c2-18c1-45e5-82f7-f8414075694b" StringID="CM_News_LeagueLosingStreak_LeagueEnd_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="e52dbd70-eb4b-4a55-9650-f1839a6bc5da">
+          <stringArgument id="1c418ea5-10c5-4e20-b820-be551917aade" Value="SaveData:Losing Streak" Format="0" />
+          <stringArgument id="8a151fb3-ae29-4475-8237-bfc840079876" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="34535fc9-16d0-4740-ae75-95583505a93e">
+          <keyValuePair id="4b4128c5-6403-419f-bae8-236171a2294c" Key="M" Value="%2s ends season on %1s-game losing streak" />
+          <keyValuePair id="af664779-bf61-43e1-b1dd-584c6cf01be3" Key="F" Value="" />
+          <keyValuePair id="5a8602a4-2d5a-4e6b-9bdb-2e68a02ab7f9" Key="MM" Value="" />
+          <keyValuePair id="aefeae4e-7f5f-41cb-aff6-aa4118f76cd3" Key="MF" Value="" />
+          <keyValuePair id="1539bc5d-655d-4a05-8ace-475097e3d54f" Key="FM" Value="" />
+          <keyValuePair id="912ce621-d8d9-4b4e-a650-7962f1ea88ae" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="43943151-5fb6-4e3b-9dac-9357a3e82f91" StringID="CM_News_LeagueLosingStreak_LeagueEnd_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="28396ab8-412f-43eb-afc6-71dced6adb46">
+          <stringArgument id="f89fb055-ca47-4495-b05d-983e0f2fb1fe" Value="SaveData:Losing Streak" Format="0" />
+          <stringArgument id="7ef30344-9df3-4d25-ba3b-8af61c1cf9a1" Value="Model:Global.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="bc42eb7e-548f-4b6f-a6e4-348a05bc0861">
+          <keyValuePair id="e4ba0711-b3f4-4d1a-b4b5-9312080a2e2b" Key="M" Value="The season finally came to an end for %2s fans which haven't managed to see their team break their losing streak for the last %1s matches." />
+          <keyValuePair id="55673bce-e1b9-463c-9753-e2a8a4ec233d" Key="F" Value="" />
+          <keyValuePair id="09dc5189-2fd6-4bfa-936e-986e3f68cd92" Key="MM" Value="" />
+          <keyValuePair id="186f6dfd-559f-4d51-a87c-7c7eb4e23e07" Key="MF" Value="" />
+          <keyValuePair id="ffa37660-f9ad-46a0-ad0f-d8f3605d5064" Key="FM" Value="" />
+          <keyValuePair id="38ec7f1a-5e12-42b0-b9b1-0b7699ad7257" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="765541df-1602-45fe-819a-5449dc168b9b">
+        <sceneParameter id="c0570135-3e1d-462c-80da-767ade08dde8" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <trigger-news-node id="c15ab814-d93e-4e62-9c0a-86a60713e485" X="4560" Y="640" NodeType="TriggerNews" NodeName="Flawless" Category="0" Importance="0" SceneId="9" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="stad_e">
+      <stringWithArgsTitle id="118fcfb1-043e-40a5-87ae-5aca4b21a96a" StringID="CM_News_LeagueLosingStreak_Flawless_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="645bd67d-83ee-4119-aab5-f7ef5488bff9">
+          <stringArgument id="03402bf5-d7a0-42d1-b36f-f76f9be4faf4" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="c8a36286-7d7a-4de8-a693-415bcd60ced5">
+          <keyValuePair id="dad7a658-a879-4ce5-b36f-2985c8ec33c0" Key="M" Value="Dreadful performance by %1s" />
+          <keyValuePair id="be864f15-a3ab-45e0-bb36-d0a5beec06f5" Key="F" Value="" />
+          <keyValuePair id="05f8fca4-f47e-4bcb-a208-ae6005789372" Key="MM" Value="" />
+          <keyValuePair id="419a85cb-da9f-486b-8709-cfbaf67140a2" Key="MF" Value="" />
+          <keyValuePair id="2b145985-588e-46d6-b8cf-f5be99d2da45" Key="FM" Value="" />
+          <keyValuePair id="35a81125-ec79-49cf-91c3-d350f495d8aa" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="d0dbe71d-7844-4a6c-a4a5-4c6bad946cc9" StringID="CM_News_LeagueLosingStreak_Flawless_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="23ae36a4-94af-4245-b84b-8c09a436be18">
+          <stringArgument id="fe40a162-5361-47dc-a735-821eea93bff0" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="3ce1a0a4-acd6-435e-a83b-2d8204088294" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="dd888c14-2271-42c9-8040-5c8f73f28751" Value="Model:Global.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="73787c15-9838-4020-9c2e-d5a720d87562">
+          <keyValuePair id="23073484-75e8-4139-b2d7-55f7b62f16bd" Key="M" Value="%3s fans and pundits alike are questioning if %1s has any reason to be at the helm in the coming season. After a disastrous campaign which %2s could not stop their continuous losing streak it's remarkable that the board didn't take any action up until now." />
+          <keyValuePair id="434f7488-18bb-4753-a444-01f04d5c4a1a" Key="F" Value="%3s fans and pundits alike are questioning if %1s has any reason to be at the helm in the coming season. After a disastrous campaign which didn't see %2s interrupt their continuous losing streak it's remarkable that the board didn't take any action up until now. " />
+          <keyValuePair id="9b79b467-1e75-4f76-bc96-324fda623e9d" Key="MM" Value="" />
+          <keyValuePair id="c31a3ffa-f0b4-47a0-81c2-f4ba5d740e98" Key="MF" Value="" />
+          <keyValuePair id="c0885f25-5342-42c0-a7b7-07e9b9fd61f9" Key="FM" Value="" />
+          <keyValuePair id="f01b5b3d-6066-48f1-a745-2e7c84d7d271" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="a2404439-619f-4553-911b-bd38c742ec10">
+        <sceneParameter id="6ea5fd9d-0462-4310-89ef-db0ae34b818c" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <modify-data-node id="669ea6d9-f3c5-4883-a821-c56adbef7ffd" X="3320" Y="-1400" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="2800b16b-6b02-4526-b6cf-8cf7f28f339b">
+        <keyValuePair id="231d2a85-2c52-4f50-b559-fc546e91ccb0" Key="SaveData:Lossless Streak" Value="1" Operator="Add" />
+      </keyValues>
+    </modify-data-node>
+    <modify-data-node id="0f59e771-9061-4fc3-9fba-5b6782e72576" X="3560" Y="40" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="126aabe0-272f-440b-91f5-a49040364366">
+        <keyValuePair id="7044aacc-95d9-48fa-98cb-88b2a813d9db" Key="SaveData:Winless Streak" Value="1" Operator="Add" />
+      </keyValues>
+    </modify-data-node>
+    <modify-data-node id="6b49c259-0f1f-4404-aeba-42b8509424e3" X="3720" Y="720" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="7d44fcb4-94f3-4f0f-9810-9b55033ac80e">
+        <keyValuePair id="8fe934d9-8589-4ae7-89a5-e7f852222bf8" Key="SaveData:Losing Streak" Value="1" Operator="Add" />
+      </keyValues>
+    </modify-data-node>
+    <condition-node id="e2982dbb-0cba-453c-89d8-558e74ae0552" X="3720" Y="960" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="fd7f9a5d-3615-4002-b922-4b49ace20efb">
+        <condition id="3e4b606e-bbac-4f2b-bdaa-c2dbf6a9de57" VariableId="Model:UserMatchCompleted.Results.ResultStatus" Comparison="EQ" Value="2" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="8564e7bd-ca5b-4d9e-a6b8-e4a0c8635c12" X="4160" Y="960" NodeType="TriggerNews" NodeName="To Winless Streak" Category="0" Importance="0" SceneId="6" WipeId="2" WipeArgument="Model:Global.League.ID" BackupImage="boot">
+      <stringWithArgsTitle id="d822047d-adf5-47c1-afea-8024eb377494" StringID="CM_News_LeagueLosingStreak_ToWinlessStreak_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="af57e38f-28ff-45f3-a1ac-4af0a595a834">
+          <stringArgument id="d3913103-b11e-4c2d-9a0b-e01b5ee85618" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="487528e9-2927-4c58-8c10-cbbf4261bf6d">
+          <keyValuePair id="6a4debd4-51ed-4b98-b065-deed4ea2057c" Key="M" Value="Signs of improvement for %1s" />
+          <keyValuePair id="06bceb2c-ad07-43cd-84e4-1a916a733286" Key="F" Value="" />
+          <keyValuePair id="49de9f8f-bb13-4908-8915-8ffabbc596d9" Key="MM" Value="" />
+          <keyValuePair id="8a0317b9-c91f-4594-9d35-299ddfbb80d4" Key="MF" Value="" />
+          <keyValuePair id="2cffd5eb-30f6-4977-a8dd-81cc1677d8dc" Key="FM" Value="" />
+          <keyValuePair id="44431c80-42b0-40b5-a157-50558a9101d5" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="263bdb0a-2f5c-4f43-9c60-aab258e49c96" StringID="CM_News_LeagueLosingStreak_ToWinlessStreak_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="b66b4a26-c712-429e-9173-f628a297fa29">
+          <stringArgument id="1bc127c7-895c-4414-a8e0-6b1ca3909676" Value="Model:Global.UserTeamID" Format="12" />
+          <stringArgument id="475e3fac-8cde-49a0-a3a8-617ab1ae6345" Value="SaveData:Losing Streak" Format="0" />
+          <stringArgument id="427eaf85-67dd-4c16-a4c3-6b1b5540a1c8" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="e0d090a2-8192-4769-b4b3-ecb0d5d0922b">
+          <keyValuePair id="ea1e3406-f854-4693-be57-097ba7ef3dbb" Key="M" Value="%1s were finally able to pick up a point in yesterday's match pulling them out of a %2s game losing streak. %3s will certainly be looking for further improvement now that his losing run has ended." />
+          <keyValuePair id="0cf984f2-35ff-4e96-82d0-5210fda2b1d7" Key="F" Value="%1s were finally able to pick up a point in yesterday's match pulling them out of a %2s game losing streak. %3s will certainly be looking for further improvement now that her losing run has ended." />
+          <keyValuePair id="b46a1648-9099-45b5-9314-c4a7fb9e0539" Key="MM" Value="" />
+          <keyValuePair id="78b746cd-e8b0-4f71-903f-2e41e8f61105" Key="MF" Value="" />
+          <keyValuePair id="aab2414b-18ea-49b8-bd6f-b5081336b239" Key="FM" Value="" />
+          <keyValuePair id="77696693-6a8b-4587-a6f9-bdd9ae440e44" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="da7f3a4d-f50f-4b70-b5b5-1f62885958c3">
+        <sceneParameter id="07eaa728-3412-46be-95d5-fee7b4a225bb" Parameter="PlayerId_1" Value="Model:Global.Team.CaptainID" />
+        <sceneParameter id="ada2b4c2-4657-494a-9090-bbde8b0937ec" Parameter="TeamId_1" Value="Model:Global.UserTeamID" />
+      </sceneParameters>
+    </trigger-news-node>
+    <condition-node id="6f894530-8dd6-48e9-8474-fd9885d30acf" X="-1040" Y="-640" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="b4bc3f8c-0b77-4496-b11a-88aa1fc4071b">
+        <condition id="05ea8c0e-28f1-42b8-a52a-75b47d65a676" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.CompType" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-data-node id="c9eff91d-6cca-4a3f-afa2-4001c2f32b5f" X="3920" Y="-2360" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="ca24e008-9aef-4bef-80a8-3f7560df64d8">
+        <keyValuePair id="d6fcc7bd-440f-4f67-9527-ad488207a704" Key="SaveData:Losing Streak" Value="1" Operator="Add" />
+        <keyValuePair id="f5d85a81-352b-49bf-bc35-23cd1d55352f" Key="SaveData:Winless Streak" Value="1" Operator="Add" />
+        <keyValuePair id="983bfcb1-e437-4598-9fd4-90dd9d18d546" Key="SaveData:Lossless Streak" Value="0" Operator="Set" />
+        <keyValuePair id="901f7eff-9cd3-4980-bc4b-9b7c173b6cc1" Key="SaveData:Win Streak" Value="0" Operator="Set" />
+      </keyValues>
+    </modify-data-node>
+    <join-node id="399dde64-fb93-4acf-960c-4afceecd5e6e" X="3560" Y="-2360" NodeType="Join" NodeName="Set Name for New Node" />
+    <join-node id="f7dd888c-fd92-4674-87d5-cc6d65c6cdee" X="4080" Y="1640" NodeType="Join" NodeName="Set Name for New Node" />
+    <modify-data-node id="05d88201-6371-4c43-9bbf-c1e961956f34" X="4400" Y="1640" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="56f561e0-c306-4a16-8ed4-87385a2336ee">
+        <keyValuePair id="ff432d05-e778-4ad3-99a2-0b6a9aabe807" Key="SaveData:Win Streak" Value="1" Operator="Add" />
+        <keyValuePair id="19f631a7-bbe8-4d1f-84ce-980ef59c4cd5" Key="SaveData:Lossless Streak" Value="1" Operator="Add" />
+        <keyValuePair id="5dcc89b0-8800-4555-b79f-543f814cb7bf" Key="SaveData:Losing Streak" Value="0" Operator="Set" />
+        <keyValuePair id="4ad07add-4108-4a5a-8099-cf2ec06c124a" Key="SaveData:Winless Streak" Value="0" Operator="Set" />
+      </keyValues>
+    </modify-data-node>
+    <condition-node id="fa70de6d-d727-4931-8b60-37815a6ae7db" X="1560" Y="-1600" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="31f4f226-35b2-49be-910f-81bfa23e4838">
+        <condition id="bc4e3b69-2a0e-4669-a90f-bfa049073bcf" VariableId="Model:UserMatchCompleted.LastMatchData.Competition.MatchNumber" Comparison="EQ" Value="Model:UserMatchCompleted.LastMatchData.Competition.TotalMatchCount" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <modify-data-node id="cbf02feb-1efc-4f23-bf03-07b65d56f8f0" X="4400" Y="960" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="48f990ae-0b40-4414-966f-5735613be718">
+        <keyValuePair id="6f20ff8d-9ac2-4cb1-a1fb-cdc24deff5bb" Key="SaveData:Winless Streak" Value="1" Operator="Add" />
+        <keyValuePair id="2ccdf500-141e-4e3b-8ee0-6e97ae8484b5" Key="SaveData:Losing Streak" Value="0" Operator="Set" />
+      </keyValues>
+    </modify-data-node>
+  </nodes>
+  <groups id="03610b67-fa5a-4b61-9cfd-f1addaff1754" />
+  <connections id="eb419c4c-20a6-41db-b4de-c53024503a0c">
+    <connection id="e11fe3e4-05dd-40be-9fa9-7c36af65ce54" SrcNodeID="24aa0502-0b5f-47d4-9170-59bd359ff255" SrcPortName="advance" DstNodeID="1d6780ec-5983-49c7-97d9-cb7195d078bf" DstPortName="enter" ConnectionOrder="0">
+      <points id="ec3ba125-273c-4d78-81b7-441ceb1bf86c" />
+    </connection>
+    <connection id="306abb4b-8978-41c7-887a-4faf6ee6738a" SrcNodeID="06ab5eeb-7cf9-43bc-9603-6487b7d0b9d3" SrcPortName="true" DstNodeID="65fa117a-2782-4b7c-a66e-9d5bc3c4e278" DstPortName="enter" ConnectionOrder="0">
+      <points id="b97562fd-2128-498e-af1a-0201a3ab8f30" />
+    </connection>
+    <connection id="2bf1b5cd-3dd0-4f5a-8707-69d046d09ef4" SrcNodeID="34adb736-2823-4ca6-a4d1-7dae4e3961c4" SrcPortName="true" DstNodeID="694b58b2-ce0b-4433-b3ab-d119ef1e2724" DstPortName="enter" ConnectionOrder="0">
+      <points id="824975e6-1387-4913-b2a2-81ae48e36028" />
+    </connection>
+    <connection id="e82fcc10-94f7-4591-9e3a-2f126d7e4717" SrcNodeID="06ab5eeb-7cf9-43bc-9603-6487b7d0b9d3" SrcPortName="false" DstNodeID="d6948ddc-1f3b-4ae1-8387-34d199a11772" DstPortName="enter" ConnectionOrder="0">
+      <points id="a407c146-55e2-48a9-8a76-6073a8f8cc13" />
+    </connection>
+    <connection id="c5ee67bf-c0e2-48cf-b6b2-80973f0dc866" SrcNodeID="d6948ddc-1f3b-4ae1-8387-34d199a11772" SrcPortName="true" DstNodeID="432ff2af-fedd-40b2-a8d0-03727c5236f0" DstPortName="enter" ConnectionOrder="0">
+      <points id="90f4c735-e5fd-427b-92c6-d3309b7baf6b" />
+    </connection>
+    <connection id="145ab028-d119-4a31-b75a-987dabac877d" SrcNodeID="d6948ddc-1f3b-4ae1-8387-34d199a11772" SrcPortName="false" DstNodeID="2b1bb5b6-640b-44c8-92ac-75622e7a494e" DstPortName="enter" ConnectionOrder="0">
+      <points id="942d3b3b-7cc4-46c4-8992-b726c6d60e02" />
+    </connection>
+    <connection id="3478f51d-4d4e-4437-8bba-d9a857f1a006" SrcNodeID="51fa168a-c3b1-4519-b403-bee12830bf92" SrcPortName="advance" DstNodeID="24aa0502-0b5f-47d4-9170-59bd359ff255" DstPortName="enter" ConnectionOrder="0">
+      <points id="e3744aba-8479-420e-9b64-56510189d9a6" />
+    </connection>
+    <connection id="b8090c7c-d958-4a3f-b83f-f0ad9cfd67f1" SrcNodeID="46c13f2f-0396-448e-b8e4-08041eb03fa0" SrcPortName="UserMatchCompleted" DstNodeID="7eba78b9-1c57-4c60-b65f-6b877dcbe109" DstPortName="enter" ConnectionOrder="0">
+      <points id="7558cdb1-cad1-40c0-b6be-33459d12506f" />
+    </connection>
+    <connection id="83131a20-70f7-4c78-8b21-60fe07203ead" SrcNodeID="7eba78b9-1c57-4c60-b65f-6b877dcbe109" SrcPortName="false" DstNodeID="46c13f2f-0396-448e-b8e4-08041eb03fa0" DstPortName="enter" ConnectionOrder="0">
+      <points id="5818091b-5ef1-48ba-bd7c-499320631977">
+        <point id="6a526167-26ee-49dd-a7ee-1e7bd18d1d58" X="1040" Y="-1480" />
+        <point id="0afa1e99-c3e6-4e9e-ba57-5705665c6797" X="600" Y="-1480" />
+      </points>
+    </connection>
+    <connection id="6fba4b89-35a0-4692-ab2b-4ef618163518" SrcNodeID="7eba78b9-1c57-4c60-b65f-6b877dcbe109" SrcPortName="true" DstNodeID="1e069b5e-ab0c-461d-9b01-612df2d11aa7" DstPortName="enter" ConnectionOrder="0">
+      <points id="cb1a20a4-6bb6-466a-94cc-4f320e167162" />
+    </connection>
+    <connection id="ba4fce72-1a08-425d-aaa7-ecbd87dfb8a1" SrcNodeID="1e069b5e-ab0c-461d-9b01-612df2d11aa7" SrcPortName="true" DstNodeID="f3ed10bb-8c2b-42d6-93a4-50924fd4dc07" DstPortName="enter" ConnectionOrder="0">
+      <points id="05e720b3-1a39-4ed9-9f31-b0c0fdd5fc17" />
+    </connection>
+    <connection id="8cfffd21-a7f6-4604-8fd9-41523ed0d8e8" SrcNodeID="6311172b-c5ca-4c8c-9a63-f2f6d4a67065" SrcPortName="false" DstNodeID="e788cf6c-4141-418a-b0ec-f14e050f6d10" DstPortName="enter" ConnectionOrder="0">
+      <points id="8fd87377-77ed-4029-b7a5-de27497469f5" />
+    </connection>
+    <connection id="951a9deb-828f-4fca-80a0-1b8119a23da3" SrcNodeID="6311172b-c5ca-4c8c-9a63-f2f6d4a67065" SrcPortName="true" DstNodeID="554ef277-5a54-42cc-9afb-8eed8a3a1aa2" DstPortName="enter" ConnectionOrder="0">
+      <points id="418ad1cd-aa41-4966-a910-376f4820a06b" />
+    </connection>
+    <connection id="3976fbd3-356a-4d43-a9be-e5761f523045" SrcNodeID="e788cf6c-4141-418a-b0ec-f14e050f6d10" SrcPortName="advance" DstNodeID="946203ed-dc5e-46f4-bdcc-ab214807bef1" DstPortName="enter" ConnectionOrder="0">
+      <points id="be6198bf-f7ce-419c-b80b-db0f525acf2f">
+        <point id="77778cf1-103a-4de1-a843-5982b6bd4125" X="5000" Y="-1800" />
+      </points>
+    </connection>
+    <connection id="ce5da674-2395-4645-9def-70aec70f326f" SrcNodeID="554ef277-5a54-42cc-9afb-8eed8a3a1aa2" SrcPortName="advance" DstNodeID="946203ed-dc5e-46f4-bdcc-ab214807bef1" DstPortName="enter" ConnectionOrder="0">
+      <points id="a8d17a29-494f-4300-aad8-682107c0c328">
+        <point id="2c86933a-7bca-4d78-9aab-d90d5a1c0917" X="5000" Y="-1920" />
+      </points>
+    </connection>
+    <connection id="f52e545d-0cca-4ce7-9a05-0055299c7a7d" SrcNodeID="4564038e-ddb9-48d5-9856-edcd55d70336" SrcPortName="true" DstNodeID="6a775804-3fd2-457e-afa6-f7e18ebc8dc8" DstPortName="enter" ConnectionOrder="0">
+      <points id="79dda26f-b07d-4da6-a115-e451a8f2b7e0">
+        <point id="e444f2da-054f-47df-becb-8a60aad930ec" X="671.780669401585" Y="-915.823222599186" />
+      </points>
+    </connection>
+    <connection id="6dd6a528-195d-41cc-8b74-f3c80af0e46f" SrcNodeID="f0d359b5-2a4e-42f6-8718-14e66338fc7a" SrcPortName="true" DstNodeID="87be69e6-e346-4826-a641-b3663550b015" DstPortName="enter" ConnectionOrder="0">
+      <points id="cfd9a0fa-50c7-464b-84ca-ab27013de8d9" />
+    </connection>
+    <connection id="2498dc56-3e16-4c34-bfa1-3f5cfb80c96a" SrcNodeID="1e069b5e-ab0c-461d-9b01-612df2d11aa7" SrcPortName="false" DstNodeID="f0d359b5-2a4e-42f6-8718-14e66338fc7a" DstPortName="enter" ConnectionOrder="0">
+      <points id="a4cbb61d-a00b-4809-8729-228ca99d105b" />
+    </connection>
+    <connection id="4e1d9685-498f-42f7-b1db-9ce226957276" SrcNodeID="87be69e6-e346-4826-a641-b3663550b015" SrcPortName="advance" DstNodeID="1cb3273d-f4a6-4be0-b417-90bcb5e607f3" DstPortName="enter" ConnectionOrder="0">
+      <points id="5d4cf161-32de-4169-b754-71da1833b3b3" />
+    </connection>
+    <connection id="99587584-2d1c-4d38-901f-e4e005691591" SrcNodeID="2fcf0d6d-b76e-48e3-84b0-0bcc2aeb3608" SrcPortName="false" DstNodeID="92b7e438-3df0-4b98-8a4f-97c05b4a5849" DstPortName="enter" ConnectionOrder="0">
+      <points id="d4b6a737-7b8f-4222-b7bd-3d34b8a4e7b2" />
+    </connection>
+    <connection id="73157e55-12bc-42e5-ac82-6f96f56816c4" SrcNodeID="2fcf0d6d-b76e-48e3-84b0-0bcc2aeb3608" SrcPortName="true" DstNodeID="2b1fddc0-6a9b-4392-976a-f5851913c634" DstPortName="enter" ConnectionOrder="0">
+      <points id="4f27b100-4b01-46c9-85e8-06bbd27520de" />
+    </connection>
+    <connection id="24f9a268-1588-4c2d-98ec-cf66ff2c3eab" SrcNodeID="92b7e438-3df0-4b98-8a4f-97c05b4a5849" SrcPortName="advance" DstNodeID="946203ed-dc5e-46f4-bdcc-ab214807bef1" DstPortName="enter" ConnectionOrder="0">
+      <points id="2e619866-7786-49ec-a9d7-417228ded566">
+        <point id="df516501-50be-4194-9c08-a2dc3abd7611" X="4960" Y="-1320" />
+      </points>
+    </connection>
+    <connection id="c764835b-25d3-4c40-a429-61ff8769afd9" SrcNodeID="2b1fddc0-6a9b-4392-976a-f5851913c634" SrcPortName="advance" DstNodeID="946203ed-dc5e-46f4-bdcc-ab214807bef1" DstPortName="enter" ConnectionOrder="0">
+      <points id="569265b1-c2ff-42f9-8d76-1165f2fded51">
+        <point id="7f0f0973-c06c-499e-88e4-865f8ff4f647" X="4960" Y="-1440" />
+      </points>
+    </connection>
+    <connection id="7f24210a-25dd-4eca-af1d-272a5c72be11" SrcNodeID="4d0af69e-53c8-47a6-be8a-388a6de1e42f" SrcPortName="true" DstNodeID="081854bc-a1d5-4bbb-8351-50c6e16c9ae5" DstPortName="enter" ConnectionOrder="0">
+      <points id="2ee2a694-d46e-4b34-bf65-784441db4999" />
+    </connection>
+    <connection id="129b3a35-a91c-4eda-a547-d4eca92ca98a" SrcNodeID="801e588b-06d0-4865-bf02-b8fb1dc8c147" SrcPortName="UserMatchCompleted" DstNodeID="4d0af69e-53c8-47a6-be8a-388a6de1e42f" DstPortName="enter" ConnectionOrder="0">
+      <points id="33c95eec-0354-410d-99cf-19202b5e15f5" />
+    </connection>
+    <connection id="b01ee0e8-4916-433d-a258-f0d0771d9e31" SrcNodeID="4d0af69e-53c8-47a6-be8a-388a6de1e42f" SrcPortName="false" DstNodeID="801e588b-06d0-4865-bf02-b8fb1dc8c147" DstPortName="enter" ConnectionOrder="0">
+      <points id="4e16ac7d-3b4c-4276-bd51-3c1deb4514a7">
+        <point id="54963621-ac15-4a9f-a50d-4f6bce5a2a8b" X="3080" Y="-1240" />
+        <point id="f18ee4b5-2b55-4530-a0e0-42894df9cb9d" X="2640" Y="-1240" />
+      </points>
+    </connection>
+    <connection id="c82ba30c-cc2e-48b3-966a-dfee6a34279c" SrcNodeID="081854bc-a1d5-4bbb-8351-50c6e16c9ae5" SrcPortName="false" DstNodeID="1d09912e-44d3-4e57-affa-37d0e430868a" DstPortName="enter" ConnectionOrder="0">
+      <points id="55a7ea5e-141e-45e7-bbc6-5a5cbb44662f" />
+    </connection>
+    <connection id="23a69604-b7b7-497d-9dea-dc4e735cfad9" SrcNodeID="65fa117a-2782-4b7c-a66e-9d5bc3c4e278" SrcPortName="advance" DstNodeID="34adb736-2823-4ca6-a4d1-7dae4e3961c4" DstPortName="enter" ConnectionOrder="0">
+      <points id="f02b2797-9277-4901-9472-c9bce72cece2" />
+    </connection>
+    <connection id="026663af-44de-4c1d-8b29-cf47edac5b58" SrcNodeID="694b58b2-ce0b-4433-b3ab-d119ef1e2724" SrcPortName="advance" DstNodeID="46c13f2f-0396-448e-b8e4-08041eb03fa0" DstPortName="enter" ConnectionOrder="0">
+      <points id="033cbf18-8c11-4376-bb81-39b92e8e2dc4" />
+    </connection>
+    <connection id="9f524bf9-4928-475d-b0fc-89705ab625ad" SrcNodeID="f0d359b5-2a4e-42f6-8718-14e66338fc7a" SrcPortName="false" DstNodeID="52a2c31d-c655-4f56-b953-65e7d993c5c6" DstPortName="enter" ConnectionOrder="0">
+      <points id="d8023550-eeae-476f-a519-8df8505437c4" />
+    </connection>
+    <connection id="e3848f0e-f057-4e71-9683-77fe4da2e564" SrcNodeID="1cb3273d-f4a6-4be0-b417-90bcb5e607f3" SrcPortName="advance" DstNodeID="801e588b-06d0-4865-bf02-b8fb1dc8c147" DstPortName="enter" ConnectionOrder="0">
+      <points id="e83fd9df-e8ca-48e9-a73c-571a759be917" />
+    </connection>
+    <connection id="6d720314-7a81-4f6c-81a4-504448012826" SrcNodeID="6a775804-3fd2-457e-afa6-f7e18ebc8dc8" SrcPortName="advance" DstNodeID="801e588b-06d0-4865-bf02-b8fb1dc8c147" DstPortName="enter" ConnectionOrder="0">
+      <points id="1f93e310-5a5e-4db6-bbdc-89dfb9c462ff">
+        <point id="afa82a63-c939-4511-ab4c-ed76fe156d4a" X="2624.18176199719" Y="-930.637714563103" />
+      </points>
+    </connection>
+    <connection id="bf8a5689-eeab-4573-8f91-68c95b2a9b03" SrcNodeID="432ff2af-fedd-40b2-a8d0-03727c5236f0" SrcPortName="advance" DstNodeID="08247bec-f48e-4b24-bfd1-93c253556fc2" DstPortName="enter" ConnectionOrder="0">
+      <points id="b16f0ffc-749d-43e3-8bd8-ab643c9632b4" />
+    </connection>
+    <connection id="b7d8aa68-de7b-4bc1-9650-01e048db8d6f" SrcNodeID="dfad2d6f-c415-4c9c-bfa4-72e35d2bfca4" SrcPortName="true" DstNodeID="a15dd100-6acd-4879-b94f-a99eb9c9784a" DstPortName="enter" ConnectionOrder="0">
+      <points id="65a95229-cece-4656-8335-9bb95e0b3795" />
+    </connection>
+    <connection id="f873e3bd-5f88-4df3-ac4c-97d2c2e5bbad" SrcNodeID="08247bec-f48e-4b24-bfd1-93c253556fc2" SrcPortName="true" DstNodeID="47bb741e-66e3-4b47-9e92-7fb36c1b9691" DstPortName="enter" ConnectionOrder="0">
+      <points id="0d1ca871-5029-4bfc-8437-8463118f4049" />
+    </connection>
+    <connection id="c2a48eae-c6e5-456e-9f6b-64551d46e146" SrcNodeID="a5382dfe-6eed-4ffe-bfa2-58fe35532b7a" SrcPortName="UserMatchCompleted" DstNodeID="0f4d6ba5-dc89-48fb-8d17-e973852cbe10" DstPortName="enter" ConnectionOrder="0">
+      <points id="86e94b3b-734d-47bf-a378-e6d671649b51" />
+    </connection>
+    <connection id="65763c6e-6178-42b8-9175-1739a052b7ce" SrcNodeID="0f4d6ba5-dc89-48fb-8d17-e973852cbe10" SrcPortName="true" DstNodeID="04f3f3f5-4e83-4917-a1a1-b9c5859fa080" DstPortName="enter" ConnectionOrder="0">
+      <points id="e0d8cd7d-8953-41b4-9782-410f64803d2b" />
+    </connection>
+    <connection id="fde35a29-4253-40b2-89b5-50454fd84d7f" SrcNodeID="0f4d6ba5-dc89-48fb-8d17-e973852cbe10" SrcPortName="false" DstNodeID="a5382dfe-6eed-4ffe-bfa2-58fe35532b7a" DstPortName="enter" ConnectionOrder="0">
+      <points id="b81f6b7a-fc2d-48db-9244-051ef25727bf">
+        <point id="b6604dd3-d2b7-44f4-a6dd-457ba9dc7748" X="3240" Y="160" />
+        <point id="13d77c90-86e1-4b3d-87a5-7a7af4958bf5" X="2800" Y="160" />
+      </points>
+    </connection>
+    <connection id="e5df049f-5719-48e7-a4ae-225d6039adce" SrcNodeID="04f3f3f5-4e83-4917-a1a1-b9c5859fa080" SrcPortName="false" DstNodeID="142d4197-53a9-453a-bcd2-320c6f2ea4b5" DstPortName="enter" ConnectionOrder="0">
+      <points id="450299f6-17d3-410e-853a-125ab5ca7c70" />
+    </connection>
+    <connection id="a3e37bf3-9a79-477e-8c2a-65129fefd650" SrcNodeID="bc4c5343-4295-4595-8547-78665bb4933e" SrcPortName="true" DstNodeID="e1c45d2f-a83a-48f3-a8e4-1ecd0a263530" DstPortName="enter" ConnectionOrder="0">
+      <points id="2bc9980c-16b7-424e-95e4-ddeb5f10a286" />
+    </connection>
+    <connection id="18b6297b-191b-4224-892e-9ae4b7d8f9de" SrcNodeID="e1c45d2f-a83a-48f3-a8e4-1ecd0a263530" SrcPortName="false" DstNodeID="6c18d4b1-e41d-4d06-aa38-88e522be180c" DstPortName="enter" ConnectionOrder="0">
+      <points id="e1e74025-e4c1-4edf-b583-ea6741234cc9" />
+    </connection>
+    <connection id="653be5fe-9fb4-4325-81fe-49430c3b9bda" SrcNodeID="e1c45d2f-a83a-48f3-a8e4-1ecd0a263530" SrcPortName="true" DstNodeID="454eb21b-ee04-4b31-96c9-ce0bcae43c1b" DstPortName="enter" ConnectionOrder="0">
+      <points id="de3bd1a4-b9c1-497a-a74d-27326025aa38" />
+    </connection>
+    <connection id="64abfe2c-7dd2-45e4-ba2c-193d5542b685" SrcNodeID="a15dd100-6acd-4879-b94f-a99eb9c9784a" SrcPortName="advance" DstNodeID="a5382dfe-6eed-4ffe-bfa2-58fe35532b7a" DstPortName="enter" ConnectionOrder="0">
+      <points id="1965d4b3-58d4-478e-a32f-afdc911fd290">
+        <point id="1ac6e301-28da-4a07-a053-2059101494ee" X="2777.76476229686" Y="-212.835972190571" />
+      </points>
+    </connection>
+    <connection id="8188896f-e793-4524-a31d-54a540fd41f4" SrcNodeID="454eb21b-ee04-4b31-96c9-ce0bcae43c1b" SrcPortName="advance" DstNodeID="946203ed-dc5e-46f4-bdcc-ab214807bef1" DstPortName="enter" ConnectionOrder="0">
+      <points id="cb77026c-6398-4637-a5d1-678efffe9321">
+        <point id="9e1c0179-727e-4420-8306-53bfc719b790" X="4960" Y="40" />
+      </points>
+    </connection>
+    <connection id="854e6bd5-d1eb-40db-a814-67372d83a197" SrcNodeID="6c18d4b1-e41d-4d06-aa38-88e522be180c" SrcPortName="advance" DstNodeID="946203ed-dc5e-46f4-bdcc-ab214807bef1" DstPortName="enter" ConnectionOrder="0">
+      <points id="ccab9552-dedc-4f3a-a7bc-c69e11f131a6">
+        <point id="bbdefa73-5cf4-4aa5-ba6e-24a022ea955a" X="4960" Y="160" />
+      </points>
+    </connection>
+    <connection id="9a788b1b-b66d-42e5-a412-bc90e2d52371" SrcNodeID="4d63daa6-af57-431e-aa99-ea5f19ac7cc5" SrcPortName="true" DstNodeID="7fe6cfc3-a90c-41b3-96a4-e3e54d3d92b0" DstPortName="enter" ConnectionOrder="0">
+      <points id="8e05d76b-32f1-42ee-9509-8278928d206a" />
+    </connection>
+    <connection id="f3e8ae94-ea1c-47a4-bf62-a9c18ccbb2cf" SrcNodeID="35ac688f-c02d-4772-ad99-e55a831ff472" SrcPortName="advance" DstNodeID="aa7f1aa9-a6e9-45d4-bf72-a6af1c55242f" DstPortName="enter" ConnectionOrder="0">
+      <points id="2285d983-be03-4cd6-b577-ab515645e8fd">
+        <point id="22ca67c9-8eb7-45d5-8771-d82d746c966d" X="2784.78563474388" Y="285.613791474064" />
+        <point id="7cbc9c75-866f-4cd6-9b7e-b003d2eb5f61" X="2783.95230141055" Y="757.152253012527" />
+      </points>
+    </connection>
+    <connection id="64dad329-ae12-46cb-aecb-90261e403571" SrcNodeID="64fdce4b-a035-45b8-a0aa-b7686bf80bb4" SrcPortName="true" DstNodeID="35ac688f-c02d-4772-ad99-e55a831ff472" DstPortName="enter" ConnectionOrder="0">
+      <points id="7b215445-a947-40ff-af17-bd9e4bd1c1ff" />
+    </connection>
+    <connection id="038e83e1-de75-47e6-982a-3fbfe90d5650" SrcNodeID="aa7f1aa9-a6e9-45d4-bf72-a6af1c55242f" SrcPortName="UserMatchCompleted" DstNodeID="f23ae37f-ab9b-4e6e-aa5e-db5c24f6f312" DstPortName="enter" ConnectionOrder="0">
+      <points id="60cebd54-ff21-4be2-8316-3adc0c289599" />
+    </connection>
+    <connection id="4d48fa4d-946e-4f55-8d25-855f00922fc2" SrcNodeID="f23ae37f-ab9b-4e6e-aa5e-db5c24f6f312" SrcPortName="true" DstNodeID="63e42c37-040f-4161-9d90-31918c44929b" DstPortName="enter" ConnectionOrder="0">
+      <points id="47d1bf07-daa9-458b-9ac3-636621c20f30" />
+    </connection>
+    <connection id="de3bcb20-314f-4fa8-9fa4-3327623a6b2e" SrcNodeID="f23ae37f-ab9b-4e6e-aa5e-db5c24f6f312" SrcPortName="false" DstNodeID="aa7f1aa9-a6e9-45d4-bf72-a6af1c55242f" DstPortName="enter" ConnectionOrder="0">
+      <points id="f0e68bfe-f7a7-4c4a-aefa-3e88130ff022">
+        <point id="48c0897d-d05d-4fe4-be2f-d8d67c84d6e9" X="3360" Y="840" />
+        <point id="646bc61a-a0b0-4037-8993-6c6829325da6" X="2920" Y="840" />
+      </points>
+    </connection>
+    <connection id="29d94240-119a-4cab-b318-9a30323bd2dc" SrcNodeID="51bf9f3c-6f24-449a-aefd-5c13b2cda003" SrcPortName="true" DstNodeID="20cee8bf-962b-4359-98f5-3df66692bb18" DstPortName="enter" ConnectionOrder="0">
+      <points id="96d4ae96-cf1f-45e7-a45c-9d5b9b77beec" />
+    </connection>
+    <connection id="ea9cb372-3def-49bb-89f3-04c8dbfe2d35" SrcNodeID="20cee8bf-962b-4359-98f5-3df66692bb18" SrcPortName="false" DstNodeID="ef93c598-f683-4400-9422-9a5116b780ca" DstPortName="enter" ConnectionOrder="0">
+      <points id="9bfa2a6d-cff7-41b1-b7b2-c48649974b93" />
+    </connection>
+    <connection id="fbd6a4e8-9f09-4f96-9d30-78ce8d8ceab7" SrcNodeID="20cee8bf-962b-4359-98f5-3df66692bb18" SrcPortName="true" DstNodeID="c15ab814-d93e-4e62-9c0a-86a60713e485" DstPortName="enter" ConnectionOrder="0">
+      <points id="a3ff230c-93c5-4bbe-a2ad-dc949b4c655f" />
+    </connection>
+    <connection id="ed99ea4f-6089-4985-b4f6-7c801de9fa47" SrcNodeID="7fe6cfc3-a90c-41b3-96a4-e3e54d3d92b0" SrcPortName="advance" DstNodeID="a5382dfe-6eed-4ffe-bfa2-58fe35532b7a" DstPortName="enter" ConnectionOrder="0">
+      <points id="275a10a4-5308-4544-a3da-e6692261ce34">
+        <point id="1cb2b5fd-55fa-4931-9a2d-2d9b2062b9fa" X="2779.95429645829" Y="599.488265730091" />
+      </points>
+    </connection>
+    <connection id="d0ac033b-8a7e-4a5a-a97b-3cde5dbd89c1" SrcNodeID="47bb741e-66e3-4b47-9e92-7fb36c1b9691" SrcPortName="advance" DstNodeID="801e588b-06d0-4865-bf02-b8fb1dc8c147" DstPortName="enter" ConnectionOrder="0">
+      <points id="4b456928-71f1-45a8-8ccc-c8ca07106111">
+        <point id="0f88f01d-6479-4753-8e95-fa81b0ecd48b" X="2628.95198454332" Y="-479.746688028796" />
+      </points>
+    </connection>
+    <connection id="05e597d6-9419-4dce-a0a4-fdc74acf814d" SrcNodeID="d5b4127d-4290-47f3-bc97-bd53f830518f" SrcPortName="true" DstNodeID="2fcf0d6d-b76e-48e3-84b0-0bcc2aeb3608" DstPortName="enter" ConnectionOrder="0">
+      <points id="2f935350-ee67-43ab-989a-43584356a295" />
+    </connection>
+    <connection id="aa401bc6-a954-4ac8-bc77-9323121c215c" SrcNodeID="c15ab814-d93e-4e62-9c0a-86a60713e485" SrcPortName="advance" DstNodeID="946203ed-dc5e-46f4-bdcc-ab214807bef1" DstPortName="enter" ConnectionOrder="0">
+      <points id="71d451c9-6fea-4ceb-a783-a07d979f19ae">
+        <point id="092661c3-9dbf-4478-82b4-a1b0b93f2a77" X="4960" Y="680" />
+      </points>
+    </connection>
+    <connection id="7478b84d-889a-44ba-934f-f51a0a041712" SrcNodeID="ef93c598-f683-4400-9422-9a5116b780ca" SrcPortName="advance" DstNodeID="946203ed-dc5e-46f4-bdcc-ab214807bef1" DstPortName="enter" ConnectionOrder="0">
+      <points id="9a5cb68f-e2a2-42d9-a29c-669237a0610e">
+        <point id="d2c36c3a-e9e9-49ee-a317-09f5dc42a311" X="4960" Y="800" />
+      </points>
+    </connection>
+    <connection id="2793fc1d-cbab-4be2-a7ea-0b4c67407658" SrcNodeID="63e42c37-040f-4161-9d90-31918c44929b" SrcPortName="false" DstNodeID="e2982dbb-0cba-453c-89d8-558e74ae0552" DstPortName="enter" ConnectionOrder="0">
+      <points id="cec0edf5-7969-49c5-ac11-daf8cb3752df" />
+    </connection>
+    <connection id="27964c36-99e0-49c3-ad81-a7dee0ae1ee5" SrcNodeID="e2982dbb-0cba-453c-89d8-558e74ae0552" SrcPortName="false" DstNodeID="22be6d62-46bc-4fc3-abbb-5066d09674e7" DstPortName="enter" ConnectionOrder="0">
+      <points id="94d5505d-b762-472b-b6f9-e24a8b4e8548" />
+    </connection>
+    <connection id="019e66db-ad54-40c5-9a19-ee861509bb66" SrcNodeID="081854bc-a1d5-4bbb-8351-50c6e16c9ae5" SrcPortName="true" DstNodeID="669ea6d9-f3c5-4883-a821-c56adbef7ffd" DstPortName="enter" ConnectionOrder="0">
+      <points id="1bc493e4-06ce-403b-a013-f726235c4c66" />
+    </connection>
+    <connection id="6e244667-6480-4c75-a5f6-21e8bb3efc30" SrcNodeID="04f3f3f5-4e83-4917-a1a1-b9c5859fa080" SrcPortName="true" DstNodeID="0f59e771-9061-4fc3-9fba-5b6782e72576" DstPortName="enter" ConnectionOrder="0">
+      <points id="de7527b6-d7aa-4b2c-bc3c-40454439b572" />
+    </connection>
+    <connection id="247d5688-10e2-4173-aa24-d7906aac2d95" SrcNodeID="63e42c37-040f-4161-9d90-31918c44929b" SrcPortName="true" DstNodeID="6b49c259-0f1f-4404-aeba-42b8509424e3" DstPortName="enter" ConnectionOrder="0">
+      <points id="c4aed7bf-c657-49b2-a2f2-65e69cbb9af2" />
+    </connection>
+    <connection id="7e1599e5-ec90-44ec-a19f-b9980b036102" SrcNodeID="2b1bb5b6-640b-44c8-92ac-75622e7a494e" SrcPortName="advance" DstNodeID="64fdce4b-a035-45b8-a0aa-b7686bf80bb4" DstPortName="enter" ConnectionOrder="0">
+      <points id="462805af-271a-48a4-84aa-c4043858774c">
+        <point id="54d9e7ba-e501-45da-aabf-ce96e9472272" X="-278.091992593175" Y="282.070669258653" />
+      </points>
+    </connection>
+    <connection id="2e3f4a9c-8267-4616-ab9e-bfc926ce48bd" SrcNodeID="1d6780ec-5983-49c7-97d9-cb7195d078bf" SrcPortName="UserMatchCompleted" DstNodeID="6f894530-8dd6-48e9-8474-fd9885d30acf" DstPortName="enter" ConnectionOrder="0">
+      <points id="696b07b6-0fc6-4a3e-9dcb-24c43ddedb05" />
+    </connection>
+    <connection id="f2c72069-27a2-4af6-9ff0-d6aa8bb8516b" SrcNodeID="6f894530-8dd6-48e9-8474-fd9885d30acf" SrcPortName="true" DstNodeID="06ab5eeb-7cf9-43bc-9603-6487b7d0b9d3" DstPortName="enter" ConnectionOrder="0">
+      <points id="ce8874bc-3705-409f-b7fd-87421ada5baf" />
+    </connection>
+    <connection id="14c8ba3d-6f99-410f-9e32-37652e0f5842" SrcNodeID="6f894530-8dd6-48e9-8474-fd9885d30acf" SrcPortName="false" DstNodeID="1d6780ec-5983-49c7-97d9-cb7195d078bf" DstPortName="enter" ConnectionOrder="0">
+      <points id="2a88f8d9-e1c4-4273-9c88-5819a26dbb17">
+        <point id="b2b53dc1-900f-406b-9b4b-f6c9a7e6043d" X="-895.460045648786" Y="-516.972962206336" />
+        <point id="5ab6d7af-fc35-45bd-8b7f-9d7f09d94e72" X="-1276.46004564879" Y="-516.472962206336" />
+      </points>
+    </connection>
+    <connection id="dc710103-ee94-4bd2-a4b7-bba3af4fe060" SrcNodeID="52a2c31d-c655-4f56-b953-65e7d993c5c6" SrcPortName="advance" DstNodeID="399dde64-fb93-4acf-960c-4afceecd5e6e" DstPortName="enter" ConnectionOrder="0">
+      <points id="06dd2741-7350-42a3-a2ab-17fe817e21aa">
+        <point id="2171bf0e-07fb-47e2-a8ab-9c08d28c9746" X="1960.58130054007" Y="-2234.31745487934" />
+        <point id="dffe6d2c-e436-4541-bca2-2c5051b6139e" X="3404.59473551129" Y="-2240.97143692421" />
+      </points>
+    </connection>
+    <connection id="f9b76cbe-3139-49ea-a5d6-6928f0c7faab" SrcNodeID="1d09912e-44d3-4e57-affa-37d0e430868a" SrcPortName="advance" DstNodeID="399dde64-fb93-4acf-960c-4afceecd5e6e" DstPortName="enter" ConnectionOrder="0">
+      <points id="2fb23b51-61fc-454c-9c7f-e39aa0cee421" />
+    </connection>
+    <connection id="47865700-dda5-4cb1-8314-4ae84da8683a" SrcNodeID="399dde64-fb93-4acf-960c-4afceecd5e6e" SrcPortName="advance" DstNodeID="c9eff91d-6cca-4a3f-afa2-4001c2f32b5f" DstPortName="enter" ConnectionOrder="0">
+      <points id="9374e19d-eae7-41f8-a8ac-97d58b130797" />
+    </connection>
+    <connection id="0482c841-6462-485c-91cd-0f64028ae1b4" SrcNodeID="c9eff91d-6cca-4a3f-afa2-4001c2f32b5f" SrcPortName="advance" DstNodeID="1d6780ec-5983-49c7-97d9-cb7195d078bf" DstPortName="enter" ConnectionOrder="0">
+      <points id="cc08e1b3-058f-487c-b7e4-101a37ca3630">
+        <point id="84f0dfdd-29c9-450d-b599-9b875997bd0f" X="4078.51140217795" Y="-2238.88810359088" />
+        <point id="1a486df7-7480-4d64-8b06-9c2520dafed1" X="-1204.41869945993" Y="-2224.31745487934" />
+      </points>
+    </connection>
+    <connection id="fc470c48-1b86-4e25-a78d-36c972fa19e6" SrcNodeID="142d4197-53a9-453a-bcd2-320c6f2ea4b5" SrcPortName="advance" DstNodeID="f7dd888c-fd92-4674-87d5-cc6d65c6cdee" DstPortName="enter" ConnectionOrder="0">
+      <points id="76c8f7b1-3e22-42bd-bb5d-9b8ffdcf3387">
+        <point id="77c684b9-77b1-4a39-9eeb-1cc065307de1" X="3682.56914303968" Y="1675.97792191138" />
+      </points>
+    </connection>
+    <connection id="690a2a30-1322-4a1b-94ca-680f625eb64e" SrcNodeID="22be6d62-46bc-4fc3-abbb-5066d09674e7" SrcPortName="advance" DstNodeID="f7dd888c-fd92-4674-87d5-cc6d65c6cdee" DstPortName="enter" ConnectionOrder="0">
+      <points id="50211738-560b-47c1-adb7-a2bd425cdf75" />
+    </connection>
+    <connection id="87d22b69-f9ef-4b27-bb42-1c9cd5b996aa" SrcNodeID="f7dd888c-fd92-4674-87d5-cc6d65c6cdee" SrcPortName="advance" DstNodeID="05d88201-6371-4c43-9bbf-c1e961956f34" DstPortName="enter" ConnectionOrder="0">
+      <points id="bc23fcc5-6775-4459-aabd-e20f9c5e90ba" />
+    </connection>
+    <connection id="5f5f6a5c-4ed8-4ee0-8de4-4dd15e158ab6" SrcNodeID="05d88201-6371-4c43-9bbf-c1e961956f34" SrcPortName="advance" DstNodeID="1d6780ec-5983-49c7-97d9-cb7195d078bf" DstPortName="enter" ConnectionOrder="0">
+      <points id="5f2b0d77-d01e-4c13-88a6-458d7a4de8b5">
+        <point id="1794016b-6ddd-426a-b5ca-943a7ca6e420" X="4561.52572048186" Y="1838.43467364274" />
+        <point id="2be1cee7-a52d-4feb-91e1-8694c9ff3fc5" X="-1195.97427951814" Y="1838.43467364273" />
+      </points>
+    </connection>
+    <connection id="9965cc9d-d4e7-4f68-8d8c-645677c5bb81" SrcNodeID="34adb736-2823-4ca6-a4d1-7dae4e3961c4" SrcPortName="false" DstNodeID="4564038e-ddb9-48d5-9856-edcd55d70336" DstPortName="enter" ConnectionOrder="0">
+      <points id="15288a31-0ee5-4218-80ba-95251ac871b9" />
+    </connection>
+    <connection id="3fa17c37-1171-49ad-bd88-6634bfd2f71b" SrcNodeID="08247bec-f48e-4b24-bfd1-93c253556fc2" SrcPortName="false" DstNodeID="dfad2d6f-c415-4c9c-bfa4-72e35d2bfca4" DstPortName="enter" ConnectionOrder="0">
+      <points id="a7458a18-334e-4428-a22e-1e86eca1089f" />
+    </connection>
+    <connection id="389fa74a-a8ec-44ce-9d93-34dceb12f44b" SrcNodeID="64fdce4b-a035-45b8-a0aa-b7686bf80bb4" SrcPortName="false" DstNodeID="4d63daa6-af57-431e-aa99-ea5f19ac7cc5" DstPortName="enter" ConnectionOrder="0">
+      <points id="ba2e407c-8bc8-482e-9107-e50c20d7e77f" />
+    </connection>
+    <connection id="e3654636-451d-4147-8b53-173b909b9677" SrcNodeID="4d63daa6-af57-431e-aa99-ea5f19ac7cc5" SrcPortName="false" DstNodeID="1d6780ec-5983-49c7-97d9-cb7195d078bf" DstPortName="enter" ConnectionOrder="0">
+      <points id="64d6a639-78ed-4723-96f7-958fee2361ad">
+        <point id="3559744b-71cf-458f-b91e-b197755ad256" X="801.085953827582" Y="714.454486063803" />
+        <point id="99dd91b1-30d6-4f49-b159-a6d7906f7a4c" X="-1252.24737950575" Y="724.454486063803" />
+      </points>
+    </connection>
+    <connection id="41d8c46b-96b4-4f01-afa4-3dd46200af46" SrcNodeID="dfad2d6f-c415-4c9c-bfa4-72e35d2bfca4" SrcPortName="false" DstNodeID="1d6780ec-5983-49c7-97d9-cb7195d078bf" DstPortName="enter" ConnectionOrder="0">
+      <points id="8994d683-6e06-485a-95aa-171d9713054e">
+        <point id="bcb48878-1f09-4eb0-8bb5-eccec284144e" X="924.419287160915" Y="-42.212180602864" />
+        <point id="7031612f-ea9f-4e69-9103-6f5eab7b005e" X="-1278.08071283908" Y="-34.712180602864" />
+      </points>
+    </connection>
+    <connection id="2e8a86a1-79e1-4167-b732-336e69ba46f2" SrcNodeID="4564038e-ddb9-48d5-9856-edcd55d70336" SrcPortName="false" DstNodeID="1d6780ec-5983-49c7-97d9-cb7195d078bf" DstPortName="enter" ConnectionOrder="0">
+      <points id="45d72c9e-b5bc-43bf-b9af-8a692519f541">
+        <point id="7e93c325-5f4d-4acf-beaf-8189416ae0f7" X="613.085953827582" Y="-39.521475474658" />
+        <point id="d8120a63-ce47-4fee-9cfe-fac9a195b967" X="-1275.24737950575" Y="-34.9921485515824" />
+      </points>
+    </connection>
+    <connection id="b67df9c9-35a5-422b-9388-51b58c8c6443" SrcNodeID="f3ed10bb-8c2b-42d6-93a4-50924fd4dc07" SrcPortName="advance" DstNodeID="fa70de6d-d727-4931-8b60-37815a6ae7db" DstPortName="enter" ConnectionOrder="0">
+      <points id="e206e6ae-791e-4fc8-9202-e64003dbfb61" />
+    </connection>
+    <connection id="fe3a3246-2cb8-448a-a932-5bdbe49aebd5" SrcNodeID="fa70de6d-d727-4931-8b60-37815a6ae7db" SrcPortName="true" DstNodeID="6311172b-c5ca-4c8c-9a63-f2f6d4a67065" DstPortName="enter" ConnectionOrder="0">
+      <points id="107686aa-48af-4b00-867c-6da6c628b66a" />
+    </connection>
+    <connection id="11698c82-691b-40ce-97c4-94133537002b" SrcNodeID="fa70de6d-d727-4931-8b60-37815a6ae7db" SrcPortName="false" DstNodeID="02ff1730-7918-4dce-b659-6ea08f9b0277" DstPortName="enter" ConnectionOrder="0">
+      <points id="934e7d3f-9e04-4812-91d1-2a5dd07e598c" />
+    </connection>
+    <connection id="b4bc11c3-474a-4ad9-b79a-16340769b1d5" SrcNodeID="02ff1730-7918-4dce-b659-6ea08f9b0277" SrcPortName="advance" DstNodeID="46c13f2f-0396-448e-b8e4-08041eb03fa0" DstPortName="enter" ConnectionOrder="0">
+      <points id="3e1de340-f344-4185-b863-948febd66c73">
+        <point id="47dc3d0b-11d3-4071-8683-c7ac9368975a" X="1895.88415509563" Y="-1452.12816523106" />
+        <point id="921a37ac-4b79-4d5b-8987-072c59cc44da" X="605.884155095627" Y="-1432.12816523106" />
+      </points>
+    </connection>
+    <connection id="4c2d0226-838a-4648-b4f1-c0442aa4ebe7" SrcNodeID="669ea6d9-f3c5-4883-a821-c56adbef7ffd" SrcPortName="advance" DstNodeID="d5b4127d-4290-47f3-bc97-bd53f830518f" DstPortName="enter" ConnectionOrder="0">
+      <points id="938dd271-869b-43fb-a2af-94a7ef33ed12" />
+    </connection>
+    <connection id="3cac0491-7eac-4c8e-9227-9913a490cdca" SrcNodeID="d5b4127d-4290-47f3-bc97-bd53f830518f" SrcPortName="false" DstNodeID="4f1c47d3-3417-4c24-8c5b-02fb21dcb538" DstPortName="enter" ConnectionOrder="0">
+      <points id="c577218b-b997-4732-8af8-9fa6dacf9d27" />
+    </connection>
+    <connection id="acf67767-5395-4af6-8977-7700198ec1e9" SrcNodeID="4f1c47d3-3417-4c24-8c5b-02fb21dcb538" SrcPortName="advance" DstNodeID="801e588b-06d0-4865-bf02-b8fb1dc8c147" DstPortName="enter" ConnectionOrder="0">
+      <points id="7d044c57-3b05-429b-8c3b-d2bd70c2129a">
+        <point id="e8dec2ec-7601-4184-b9d9-2bf3083cfb59" X="3959.5508217623" Y="-1168.39290485395" />
+        <point id="7fc5aa38-f025-4b4d-9090-4ebd372c6db2" X="2641.21748842897" Y="-1166.72623818729" />
+      </points>
+    </connection>
+    <connection id="cdb77cb7-8f0e-4311-9922-160f21376fe9" SrcNodeID="0f59e771-9061-4fc3-9fba-5b6782e72576" SrcPortName="advance" DstNodeID="bc4c5343-4295-4595-8547-78665bb4933e" DstPortName="enter" ConnectionOrder="0">
+      <points id="79583086-c166-4711-82f0-0647e340f340" />
+    </connection>
+    <connection id="196c7e70-356b-41db-8661-7c16e6a2c6d2" SrcNodeID="bc4c5343-4295-4595-8547-78665bb4933e" SrcPortName="false" DstNodeID="6c2410d1-9065-48bb-8f06-f23a204d40f9" DstPortName="enter" ConnectionOrder="0">
+      <points id="9d3b5afe-e5b3-4379-a051-cbe9a7220898" />
+    </connection>
+    <connection id="017b27a4-510e-4d58-b074-b81d1cb897bc" SrcNodeID="6c2410d1-9065-48bb-8f06-f23a204d40f9" SrcPortName="advance" DstNodeID="a5382dfe-6eed-4ffe-bfa2-58fe35532b7a" DstPortName="enter" ConnectionOrder="0">
+      <points id="53f80d2c-37e5-4efc-b56d-6f0becee7d28">
+        <point id="6a260ad7-b799-49d0-b7ea-d1b0c3251797" X="4183.0508217623" Y="235.116878910669" />
+        <point id="011b08cd-f20d-4c0a-9381-3f86f3f8aaa8" X="2797.0508217623" Y="237.116878910669" />
+      </points>
+    </connection>
+    <connection id="8bc388db-888a-4c94-bc76-ad7d81e4d331" SrcNodeID="6b49c259-0f1f-4404-aeba-42b8509424e3" SrcPortName="advance" DstNodeID="51bf9f3c-6f24-449a-aefd-5c13b2cda003" DstPortName="enter" ConnectionOrder="0">
+      <points id="7ed3259e-ed43-4ff0-9b08-2aa503cf5643" />
+    </connection>
+    <connection id="61aa96e2-f44c-40d7-a301-59ee0252c395" SrcNodeID="51bf9f3c-6f24-449a-aefd-5c13b2cda003" SrcPortName="false" DstNodeID="f5a1639e-321e-4c45-bbcd-1524a861ec46" DstPortName="enter" ConnectionOrder="0">
+      <points id="16eac893-4680-49a2-888b-9f1ed86aabc7" />
+    </connection>
+    <connection id="72fdd59a-9062-4750-b674-78b0f6c57458" SrcNodeID="f5a1639e-321e-4c45-bbcd-1524a861ec46" SrcPortName="advance" DstNodeID="aa7f1aa9-a6e9-45d4-bf72-a6af1c55242f" DstPortName="enter" ConnectionOrder="0">
+      <points id="3a1d76b7-256f-4439-889e-ffc59fc32c7c">
+        <point id="11d35abd-d4d2-4e20-9793-38365f77451a" X="4306.5508217623" Y="918.678830937138" />
+        <point id="25e277e6-2272-4928-8760-d8fff66cb63b" X="2922.5508217623" Y="914.678830937138" />
+      </points>
+    </connection>
+    <connection id="9a02222c-95ee-45e8-9fd3-93d21a0ec05d" SrcNodeID="8564e7bd-ca5b-4d9e-a6b8-e4a0c8635c12" SrcPortName="advance" DstNodeID="cbf02feb-1efc-4f23-bf03-07b65d56f8f0" DstPortName="enter" ConnectionOrder="0">
+      <points id="1cf568b2-c136-4eb7-854a-bb7165e9a860" />
+    </connection>
+    <connection id="8cf1575f-7687-4035-b6a1-71aba2d60b57" SrcNodeID="cbf02feb-1efc-4f23-bf03-07b65d56f8f0" SrcPortName="advance" DstNodeID="a5382dfe-6eed-4ffe-bfa2-58fe35532b7a" DstPortName="enter" ConnectionOrder="0">
+      <points id="6165eee0-358e-42aa-a2a1-2f97ab24f91e">
+        <point id="3baa4b2f-499f-4883-94c8-32ae36079147" X="4563.97906127038" Y="1313.00266160764" />
+        <point id="0a9fa90c-18c8-4998-9b8f-da055cee4fdd" X="2797.31239460371" Y="1316.33599494098" />
+      </points>
+    </connection>
+    <connection id="6c5c92b2-a48b-463d-a251-e104ffb6c20e" SrcNodeID="e2982dbb-0cba-453c-89d8-558e74ae0552" SrcPortName="true" DstNodeID="8564e7bd-ca5b-4d9e-a6b8-e4a0c8635c12" DstPortName="enter" ConnectionOrder="0">
+      <points id="d5b83171-e0df-41d5-b856-29c69290c35b" />
+    </connection>
+  </connections>
+</StoryAsset>

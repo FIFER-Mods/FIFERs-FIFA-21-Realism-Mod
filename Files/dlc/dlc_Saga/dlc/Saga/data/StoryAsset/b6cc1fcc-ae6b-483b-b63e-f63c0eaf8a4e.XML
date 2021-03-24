@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="b6cc1fcc-ae6b-483b-b63e-f63c0eaf8a4e" name="PK Winner" deleted="False" valid="True">
+  <nodes id="8e3f6aaa-3f1a-43f1-8e46-55a0d431034c">
+    <story-start-node id="18d6b265-3dc1-4c21-8bf9-59171152fa41" X="4480" Y="-1880" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="SingleInstance" NodeEvent="HighlightsReady" StoryKey="Select:TeamID" UseSelectData="True" RunInPlayerCareer="True" RunInManagerCareer="True" RunInTournamentMode="True">
+      <conditions id="43f0cb3c-4620-4bf1-a2a0-ddac19e8b95f">
+        <condition id="de7d8bd8-9e2f-4fea-aa59-0441808cddb5" VariableId="Model:HighlightsReady.GameplayData.Results.ResultStatus" Comparison="EQ" Value="3" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="97bc2160-f3df-4b9e-a11e-1e45138aeb06" VariableId="Model:HighlightsReady.GameplayData.Results.ResultStatus" Comparison="EQ" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+      <select-data id="a0fd7ed7-8f18-45d3-8505-7a27ce709050" SelectCount="1">
+        <alias-list id="04e1fd97-abaa-4b8f-87db-edd28c3f6c01">
+          <string id="4275fa2a-bc90-40eb-98b3-2f9b6de74ada" Value="PK-Winner-1" />
+        </alias-list>
+        <order-by id="6403e17f-ff7f-41f3-881a-d060831ba5c5" />
+        <alias-data-source id="adeb740a-f4e1-4b36-8f97-3360c1312afb" DataSource="Model:HighlightsReady.Highlights">
+          <conditions id="cf1f289b-320c-4d37-9281-e62c2dbae7f6">
+            <condition id="e68e34c1-9f63-49fa-b3b0-e53e47675c0b" VariableId="Select:Type" Comparison="EQ" Value="23" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <condition-node id="babdbb17-d1e8-45b4-8002-7c331d0aa697" X="4840" Y="-1880" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="53522df7-212c-4012-90a2-1785edf2cd20">
+        <condition id="aa39a1ac-d1c8-4d97-afaa-6996c495bcdf" VariableId="Model:HighlightsReady.GameplayData.Results.ResultStatus" Comparison="EQ" Value="3" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <take-screenshot-node id="13162370-6dee-4b98-821c-5cfbe0892bfd" X="5440" Y="-2000" NodeType="TakeScreenshot" NodeName="Set Name for New Node" HighlightIndex="PK-Winner:Index" HighlightPlayerID="PK-Winner:PlayerID" HighlightPriority="10" />
+    <take-screenshot-node id="9e7c2d0b-b151-4e14-a2e7-93cad048cd3c" X="5440" Y="-1760" NodeType="TakeScreenshot" NodeName="Set Name for New Node" HighlightIndex="PK-Winner:Index" HighlightPlayerID="PK-Winner:PlayerID" HighlightPriority="10" />
+    <state-node id="a8116acc-02be-4307-a2f5-cd80c58c3ef0" X="5920" Y="-2000" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="4584a4d9-32e8-4501-91d6-b1257da6e833">
+        <string id="5889f676-7fc4-4189-ad9a-6c0b0cd90087" Value="MatchRestarted" />
+        <string id="6b95b893-0c04-4e68-afeb-d1424c948670" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <state-node id="1d05083e-16b5-49c1-bce3-783974f00947" X="5920" Y="-1760" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="2e707164-078f-4f65-8817-219af4e0db3f">
+        <string id="a5cac7c1-8327-4a28-b6e7-500ac0538be4" Value="MatchRestarted" />
+        <string id="75e9b85e-d5ea-428f-ba8d-a93ebc7f26d9" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <trigger-news-node id="e8dcb5ed-7832-4f9d-a3a5-4febdd5d3a43" X="6200" Y="-2040" NodeType="TriggerNews" NodeName="PK Winner" Category="0" Importance="0" SceneId="-1" WipeId="2" WipeArgument="Model:UserMatchCompleted.LastMatchData.Competition.AssetID" BackupImage="default">
+      <stringWithArgsTitle id="fab6ff6e-a809-4833-b40c-c0fabad1ad68" StringID="CM_News_SS_PenaltyWinnerUser_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="b0e13cb5-e7d4-47bd-9700-59d93809835e">
+          <stringArgument id="aa2cad0d-592c-4b80-9b14-57f4d0716130" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="1ce18c6c-0308-49d9-876a-ff1103cf8bb3">
+          <keyValuePair id="87c6438e-9718-4191-af8f-6870cc24c297" Key="M" Value="%1s Win On Penalties After Astonishing Drama" />
+          <keyValuePair id="37f48a68-4f94-4e53-a10c-90f6df68591c" Key="F" Value="" />
+          <keyValuePair id="50492c44-4c25-43ab-9c04-8ed03aeefca9" Key="MM" Value="" />
+          <keyValuePair id="8d41e739-18f0-44ad-8fae-27f6d374c1e3" Key="MF" Value="" />
+          <keyValuePair id="d1ed3398-881d-466a-97d6-5532cb05a352" Key="FM" Value="" />
+          <keyValuePair id="a416528c-3991-45e2-a3e4-8d71467b4a62" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="69de79bf-23b9-44af-9485-61ba033f16fa" StringID="CM_News_SS_PenaltyWinnerUser_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="3e40a4e3-dffd-4c37-a3c6-ef9c9871e988">
+          <stringArgument id="bde12da6-5832-4ab5-acb5-6aa3d6d6b975" Value="Model:UserMatchCompleted.LastMatchData.HomeTeamId" Format="11" />
+          <stringArgument id="6098789e-8a65-40d4-a540-a7bcabaa3b1f" Value="Model:UserMatchCompleted.LastMatchData.AwayTeamId" Format="11" />
+          <stringArgument id="2ff2c1fa-0fef-4571-ac27-cc21aea21a72" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="8ce30063-a1af-44e8-8d27-12e2311ea148" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="f8560141-a48a-4c7e-b115-65dc92d212e9" Value="Model:UserMatchCompleted.Results.PenaltyScore.UserGoals" Format="0" />
+          <stringArgument id="5cad7026-082f-4b70-8f66-abca1c58b770" Value="Model:UserMatchCompleted.Results.PenaltyScore.OpponentGoals" Format="0" />
+        </stringArguments>
+        <stringContent id="24743b79-40bd-42f4-87be-29ae197ee157">
+          <keyValuePair id="51eb92e1-2aee-495f-9a49-fa13c0c35162" Key="M" Value="The tie between %1s and %2s ended in a penalty shootout. %3s players showed more composure in the final moments of the game, managing to beat %4s %5s-%6s in a thrilling shootout." />
+          <keyValuePair id="ff45e494-34d0-4348-854e-102d95d1d6a2" Key="F" Value="" />
+          <keyValuePair id="d1d0b228-5bdf-4716-af2d-60479a77ba07" Key="MM" Value="" />
+          <keyValuePair id="39ba79c1-ae28-4941-a2fb-1ca6f58b42d5" Key="MF" Value="" />
+          <keyValuePair id="2cb14af0-1f5d-492e-8670-2982ea010844" Key="FM" Value="" />
+          <keyValuePair id="f4961032-1b5a-4588-9002-b37dd14f4549" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="94133868-183d-4600-b9ad-b76ed12fa1b3" />
+    </trigger-news-node>
+    <trigger-news-node id="cbf346af-dd2e-4747-aa67-fd2a3c965f06" X="6200" Y="-1720" NodeType="TriggerNews" NodeName="PK Winner" Category="0" Importance="0" SceneId="-1" WipeId="1" WipeArgument="Model:UserMatchCompleted.LastMatchData.Competition.AssetID" BackupImage="default">
+      <stringWithArgsTitle id="f46a8176-c6ff-4ad7-9714-a2b2c5a22dc0" StringID="CM_News_SS_PenaltyWinnerOpponent_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="1cbca5cf-116f-4854-8ab2-1fc1da950e19">
+          <stringArgument id="d2163a10-8ac6-41ce-b2e3-1c0dbc3efb9b" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+          <stringArgument id="69f55c50-c8fa-49c3-a310-dabce6fd4cfd" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="5baa4ce4-7389-4906-9e62-325fd25500b0">
+          <keyValuePair id="959271ab-34c8-48eb-9be8-d2e2f1802aad" Key="M" Value="%1s Edge %2s In Penalty Drama" />
+          <keyValuePair id="43aeb02a-4f41-42cd-b2c4-4e47e26c8c67" Key="F" Value="" />
+          <keyValuePair id="d15cc772-8f03-47a3-a71b-fd1f7e2a960a" Key="MM" Value="" />
+          <keyValuePair id="328d8c46-1fe7-44a7-9e26-bcd000e8a0d8" Key="MF" Value="" />
+          <keyValuePair id="49ba8704-cb8f-41ea-a6fe-65d74435a853" Key="FM" Value="" />
+          <keyValuePair id="f9ab59a8-5149-48d7-a3bd-ae88a8313361" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="0569e530-1e2b-493f-8e01-e43b198d246c" StringID="CM_News_SS_PenaltyWinnerOpponent_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="d7cd25ba-79b9-43d9-aca0-a75ca1e3a0fd">
+          <stringArgument id="c6b837f1-4c55-4fd1-85c0-3e931b05fe4e" Value="Model:Global.UserTeamID" Format="11" />
+          <stringArgument id="8dd58054-84c8-44d6-9b5c-419e89fb694e" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="8d37ff50-935f-463e-9add-68d82918b031" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="bc2a9409-72d2-44f6-b1fa-de5c9d5d2ef2">
+          <keyValuePair id="40d910fc-10fc-4234-9dc3-809f6c5065ae" Key="M" Value="%1s's shootout defeat to %2s will be a painful memory for %3s's team who need to regain their confidence." />
+          <keyValuePair id="3d782b83-ae55-4f2d-bd9b-e5f959ede0d9" Key="F" Value="%1s's shootout defeat to %2s will be a painful memory for %3s's team who need to regain their confidence." />
+          <keyValuePair id="f81ac87f-dfdd-4b4c-8e7c-ff531cd123e6" Key="MM" Value="" />
+          <keyValuePair id="5b51eb8e-88aa-4e31-9379-474372c90a95" Key="MF" Value="" />
+          <keyValuePair id="f03ad767-7b3a-459a-8348-9b12c243a019" Key="FM" Value="" />
+          <keyValuePair id="169871ae-a08e-4082-954a-b14b0d60e97b" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="8cb2b68a-166f-46c0-a8c4-4d44ce3c4bc5" />
+    </trigger-news-node>
+    <story-end-node id="5ed79b6d-b010-469e-8142-189edcea485e" X="6480" Y="-1880" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <select-data-node id="b5feb721-f6fd-4d7f-a5b2-eacf7b450dbf" X="5120" Y="-2000" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="ec71cd84-5117-4873-9f09-48cb8c89addd" SelectCount="1">
+        <alias-list id="0be84432-c972-44f3-a1da-fb38a96aae85">
+          <string id="6af39f58-5f60-45f0-b8ad-bf9b8a7cd9ca" Value="PK-Winner" />
+        </alias-list>
+        <order-by id="1514f48e-78a5-489e-ad1c-b31fa6e37b20" />
+        <alias-data-source id="110ecb19-368a-466c-b84e-10c3719e42d6" DataSource="Model:HighlightsReady.Highlights">
+          <conditions id="adfd5ba7-ca38-4478-84f9-79def948afe2">
+            <condition id="8a99b0db-da7b-4637-a316-b4b8950ce4bc" VariableId="Select:Type" Comparison="EQ" Value="23" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <select-data-node id="89514e0d-569d-41d1-b288-441cf352caa6" X="5120" Y="-1760" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="baa3a813-8f72-4dd0-9799-022eaee37bd9" SelectCount="1">
+        <alias-list id="ce0455c7-9811-47a9-a9a3-c43a1b2d43fd">
+          <string id="04565fe4-587b-4e02-a913-7a04a7968601" Value="PK-Winner" />
+        </alias-list>
+        <order-by id="a648a444-6ab5-4637-a342-70763d851d79" />
+        <alias-data-source id="d03fc9a6-eb8d-4b5d-b8f1-f73b418e1726" DataSource="Model:HighlightsReady.Highlights">
+          <conditions id="13013fe1-e78e-4fd0-9671-bb54680268d1">
+            <condition id="d60305c4-b5b7-4cfe-b5b8-2eb513b0ad0c" VariableId="Select:Type" Comparison="EQ" Value="23" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+  </nodes>
+  <groups id="caa6268e-a31a-4475-a7b7-f081516d7712" />
+  <connections id="97c5bd16-ee43-44ae-91d5-c613ec89f535">
+    <connection id="22bf60cc-f839-4efb-8bbe-b88747ba8ff9" SrcNodeID="9e7c2d0b-b151-4e14-a2e7-93cad048cd3c" SrcPortName="advance" DstNodeID="1d05083e-16b5-49c1-bce3-783974f00947" DstPortName="enter" ConnectionOrder="0">
+      <points id="d554aa4f-8966-4867-a0b0-3aace24ef3d8" />
+    </connection>
+    <connection id="9f960e32-510b-4b9d-a6ec-b8f930ae4c02" SrcNodeID="a8116acc-02be-4307-a2f5-cd80c58c3ef0" SrcPortName="UserMatchCompleted" DstNodeID="e8dcb5ed-7832-4f9d-a3a5-4febdd5d3a43" DstPortName="enter" ConnectionOrder="0">
+      <points id="72fe33e2-93c0-4d67-b26b-a8b06f8a38e2" />
+    </connection>
+    <connection id="5af2432a-b74f-4d0f-93e1-d6f46147411b" SrcNodeID="1d05083e-16b5-49c1-bce3-783974f00947" SrcPortName="UserMatchCompleted" DstNodeID="cbf346af-dd2e-4747-aa67-fd2a3c965f06" DstPortName="enter" ConnectionOrder="0">
+      <points id="bce5a6b4-d7fd-47df-be3a-b200071ae2b6" />
+    </connection>
+    <connection id="883c3933-43a1-4be3-a2fb-768b96d353bd" SrcNodeID="e8dcb5ed-7832-4f9d-a3a5-4febdd5d3a43" SrcPortName="advance" DstNodeID="5ed79b6d-b010-469e-8142-189edcea485e" DstPortName="enter" ConnectionOrder="0">
+      <points id="50d7cbc4-d80d-4e5f-b392-66de6a68bd5c" />
+    </connection>
+    <connection id="984f9cf5-3336-4aa9-b799-b609d5eeafc0" SrcNodeID="cbf346af-dd2e-4747-aa67-fd2a3c965f06" SrcPortName="advance" DstNodeID="5ed79b6d-b010-469e-8142-189edcea485e" DstPortName="enter" ConnectionOrder="0">
+      <points id="fb986955-62ab-4d59-9999-0ba6c668deac" />
+    </connection>
+    <connection id="5770ed87-36c7-46ae-a199-e5d1edbb01b0" SrcNodeID="babdbb17-d1e8-45b4-8002-7c331d0aa697" SrcPortName="true" DstNodeID="b5feb721-f6fd-4d7f-a5b2-eacf7b450dbf" DstPortName="enter" ConnectionOrder="0">
+      <points id="ec6c57e0-e268-4d9c-b19f-b343cade1b01" />
+    </connection>
+    <connection id="9c60cd51-e288-4201-9891-85aad477f6a0" SrcNodeID="18d6b265-3dc1-4c21-8bf9-59171152fa41" SrcPortName="advance" DstNodeID="babdbb17-d1e8-45b4-8002-7c331d0aa697" DstPortName="enter" ConnectionOrder="0">
+      <points id="2bd7132e-8d8c-436b-877b-d55c07b7ce54" />
+    </connection>
+    <connection id="9ce9f709-1725-49ba-9b3c-940742a74f37" SrcNodeID="babdbb17-d1e8-45b4-8002-7c331d0aa697" SrcPortName="false" DstNodeID="89514e0d-569d-41d1-b288-441cf352caa6" DstPortName="enter" ConnectionOrder="0">
+      <points id="dc44d775-590d-4e97-a452-63181a281e6c" />
+    </connection>
+    <connection id="cb3b9517-c326-44e9-b320-d24d7bf629b5" SrcNodeID="89514e0d-569d-41d1-b288-441cf352caa6" SrcPortName="true" DstNodeID="9e7c2d0b-b151-4e14-a2e7-93cad048cd3c" DstPortName="enter" ConnectionOrder="0">
+      <points id="c3620f4a-a498-4535-b3d4-432035eef05d" />
+    </connection>
+    <connection id="bdf4d793-50c1-4884-a522-e58be1e3362a" SrcNodeID="13162370-6dee-4b98-821c-5cfbe0892bfd" SrcPortName="advance" DstNodeID="a8116acc-02be-4307-a2f5-cd80c58c3ef0" DstPortName="enter" ConnectionOrder="0">
+      <points id="ce0d5940-8ea7-40da-84ad-83a112de9a52" />
+    </connection>
+    <connection id="295e4a4c-b4bb-4476-8dec-7d18a104511c" SrcNodeID="b5feb721-f6fd-4d7f-a5b2-eacf7b450dbf" SrcPortName="true" DstNodeID="13162370-6dee-4b98-821c-5cfbe0892bfd" DstPortName="enter" ConnectionOrder="0">
+      <points id="c1b75d06-9730-4067-95db-776a743db3e8" />
+    </connection>
+    <connection id="6c7c25be-aa88-4b0e-82e1-5872d45669aa" SrcNodeID="a8116acc-02be-4307-a2f5-cd80c58c3ef0" SrcPortName="MatchRestarted" DstNodeID="5ed79b6d-b010-469e-8142-189edcea485e" DstPortName="enter" ConnectionOrder="0">
+      <points id="0a496e86-88fc-4db5-bf36-4e918b80c9eb" />
+    </connection>
+    <connection id="160be8ba-0233-4272-b5d4-d0fc2dacfe47" SrcNodeID="1d05083e-16b5-49c1-bce3-783974f00947" SrcPortName="MatchRestarted" DstNodeID="5ed79b6d-b010-469e-8142-189edcea485e" DstPortName="enter" ConnectionOrder="0">
+      <points id="a7ced4b3-337b-417d-b812-ab2450da6cf4" />
+    </connection>
+  </connections>
+</StoryAsset>

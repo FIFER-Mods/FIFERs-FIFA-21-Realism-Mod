@@ -1,0 +1,758 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="695f5d5d-c4e3-4e09-88ef-776b1c10eac3" name="Match Lost Late Event" deleted="False" valid="True">
+  <nodes id="c1d9ff2a-05f5-4ff2-b472-f38c7c875e84">
+    <trigger-news-node id="b5e2e7f8-fc23-469f-9f51-bc08fe0440f9" X="-2720" Y="-5760" NodeType="TriggerNews" NodeName="Rival Stalemate Home" Category="0" Importance="0" SceneId="-1" WipeId="2" WipeArgument="SaveData:CompetitionID" BackupImage="default">
+      <stringWithArgsTitle id="d4e7be9e-4f4a-489d-a752-cbe410db4231" StringID="CM_News_SS_Lost_OpponentPost_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="c8fc0c8a-e263-4c86-a265-4e3eec305625">
+          <stringArgument id="6bcb0675-443b-47ec-bc3e-01a24bdd046a" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="037f0bd4-2aa3-4e56-adc4-9c11c58f0555" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="1403cfae-8488-454a-9db1-3e4badabc4b5">
+          <keyValuePair id="ec5ceef8-34f6-4b63-87b5-3b5a3a63e114" Key="M" Value="%1s Hits The Post In Effort Against %2s" />
+          <keyValuePair id="d86b0daf-48cf-4607-b9f9-9db15c9ff407" Key="F" Value="" />
+          <keyValuePair id="c87fa51e-e160-471c-9aef-750b42a53eb0" Key="MM" Value="" />
+          <keyValuePair id="31aed1af-e9aa-4b80-9769-5145f29158c9" Key="MF" Value="" />
+          <keyValuePair id="908c863f-05a2-47d8-a4c6-4e406e13067a" Key="FM" Value="" />
+          <keyValuePair id="ea57f282-f00a-486d-b22d-1c1f99282d7d" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="576b89c4-d5b2-4038-89da-ee3b5df03df8" StringID="CM_News_SS_Lost_OpponentPost_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="53b8f525-48b7-498f-87e0-ca9ac6568720">
+          <stringArgument id="daf1b6b2-aba3-4ef7-ad5f-60c3c39c032a" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="0527158b-7e0f-42b8-9e5d-680c9f93448d" Value="SaveData:Opponent Team ID" Format="11" />
+          <stringArgument id="80998c79-5425-49bf-ae61-f58d3d4fc53b" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="11" />
+          <stringArgument id="cf965e87-d234-4d94-b7c6-bc0d082f7a43" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="31d65aa2-a038-4e31-9018-a058a8b1762f">
+          <keyValuePair id="4f415ec6-ee71-4563-9e0f-38a9abc69618" Key="M" Value="%1s's unlucky shot on goal prevented %2s from edging past %3s earlier in the game. %4s's team couldn't stop %3s's attempts on goal as they ended up on the losing side." />
+          <keyValuePair id="51da7909-fcb4-4b5e-8eec-117da2040df3" Key="F" Value="%1s's unlucky shot on goal prevented %2s from edging past %3s earlier in the game. %4s's team couldn't stop %3s's attempts on goal as they ended up on the losing side." />
+          <keyValuePair id="3f9df885-5851-434f-88be-d24826df0cd9" Key="MM" Value="" />
+          <keyValuePair id="ee2e9fd3-1109-4811-a238-bb902bde7836" Key="MF" Value="" />
+          <keyValuePair id="9123318d-e274-4764-bec9-2ddd379f34b8" Key="FM" Value="" />
+          <keyValuePair id="a7ecb62d-e55f-4151-aed8-a294b9e83ace" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="1892df6f-4491-4b9e-a9b7-34bbde238991" />
+    </trigger-news-node>
+    <state-node id="5a1cb0c7-3717-46c4-b1ad-ec8571ba04e1" X="-3120" Y="-5800" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="d1ca74a5-fa4b-41a4-833b-bccbba9e06b6">
+        <string id="cd5eda49-9b8e-4cef-9a12-d5eb7a4c4490" Value="MatchRestarted" />
+        <string id="8d3f636d-9f0a-4d52-81ec-3e8a8b4e01ae" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <save-data-node id="2658371f-4e27-40b0-9369-ba684e491b7b" X="-5960" Y="-5800" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="1768f37d-74f3-4147-89b6-315ded1f31c4">
+        <saveItem id="d45cc91a-a5b5-49af-ad74-bd9a8a7baba5" Key="Opponent Team ID" Value="Model:HighlightsReady.GameplayData.MatchData.OpponentTeamID" ValueType="int" />
+        <saveItem id="f361c2a3-cc5f-412f-b61d-326787662bfb" Key="UserGoals" Value="Model:HighlightsReady.GameplayData.Results.UserGoals" ValueType="int" />
+        <saveItem id="3c5d31f0-4dc6-434f-a03d-fff146d0c6b6" Key="OpponentGoals" Value="Model:HighlightsReady.GameplayData.Results.OponentGoals" ValueType="int" />
+        <saveItem id="a0b7c166-832c-4ea6-b10a-78bc5f9b8b5c" Key="CompetitionID" Value="Model:HighlightsReady.GameplayData.MatchData.Competition.AssetID" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <trigger-news-node id="a514f784-ede2-4ad6-97e3-c1f72d003976" X="-2720" Y="-5880" NodeType="TriggerNews" NodeName="Rival Stalemate Home" Category="0" Importance="0" SceneId="-1" WipeId="2" WipeArgument="SaveData:CompetitionID" BackupImage="default">
+      <stringWithArgsTitle id="29694037-a89a-4413-b86e-9ca8b51e2fd6" StringID="CM_News_SS_Lost_UserPost_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="d6b7e69b-3689-4572-9168-c714b911ae79">
+          <stringArgument id="44c39157-4f31-4715-8983-dc09439b8377" Value="SaveData:PlayerID" Format="7" />
+        </stringArguments>
+        <stringContent id="f3c69a68-3d25-4337-a80f-a57f07e4c8cf">
+          <keyValuePair id="bc6a2ab8-d33e-4b44-8618-f3eb044bd2a9" Key="M" Value="%1s's Unlucky Shot Hits the Post" />
+          <keyValuePair id="20fe1ebc-5444-48d2-b985-e8d48f4de2d5" Key="F" Value="" />
+          <keyValuePair id="6e17b6c7-5c91-4bab-8d46-6610b1a893d0" Key="MM" Value="" />
+          <keyValuePair id="24f5338a-1488-435b-b65f-3e5d7375ee87" Key="MF" Value="" />
+          <keyValuePair id="a21b3cb0-749e-4c38-a6be-5ec52719891e" Key="FM" Value="" />
+          <keyValuePair id="9b4b66e4-ead6-4557-9c73-d1b38be7953b" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="e20f50bd-6204-420d-8399-257c4a72953b" StringID="CM_News_SS_Lost_UserPost_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="09e00bb8-2184-4ffa-85ac-918c74b90779">
+          <stringArgument id="bbbc086b-af01-4d51-a8a3-80206da9713e" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="11" />
+          <stringArgument id="2636d97a-2f1b-4b3b-8f5e-cb1f590a697f" Value="SaveData:Opponent Team ID" Format="11" />
+          <stringArgument id="ee51c9ca-f75c-4f9b-bbe8-b0a5a8ca68c0" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="c5f5017d-0331-44d7-be66-89df07b82647" Value="SaveData:OpponentGoals" Format="0" />
+          <stringArgument id="10e63392-f9ee-4adc-8d01-ea330967d30b" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="edc76184-5cba-4f58-862c-314aff9d477b" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="554dd33a-68c1-4b57-a675-2069d3d9e906">
+          <keyValuePair id="11ee77ff-5f96-464d-bda8-31db9a20d8b5" Key="M" Value="The outcome of %1s's match against %2s could have been completely different if %3s's efforts had found the net.. %2s have the post to thank for their ability to edge a %4s-%5s win against %6s's men." />
+          <keyValuePair id="6d6ae49d-5bb2-474a-b276-1ed4225fc297" Key="F" Value="The outcome of %1s's match against %2s could have been completely different if %3s's efforts had found the net.. %2s have the post to thank for their ability to edge a %4s-%5s win against %6s's men." />
+          <keyValuePair id="67dceec2-c94a-4f81-bd61-907dfb4f4e59" Key="MM" Value="" />
+          <keyValuePair id="bea06895-b55d-4020-bc2f-d14524e98bb1" Key="MF" Value="" />
+          <keyValuePair id="d05babc0-bbf2-4bf4-b40d-8ff8dd55fdeb" Key="FM" Value="" />
+          <keyValuePair id="c242c255-e7fc-4873-b431-800259704c65" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="c9d46849-e1d5-4bee-93ac-84dbbd7fa672" />
+    </trigger-news-node>
+    <save-data-node id="bec22a76-bc62-4c3b-8775-169f3d316586" X="-3800" Y="-5680" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="a0363c0f-7edf-4abc-ad0b-2f4247f7a2c1">
+        <saveItem id="2cdb3c00-2c31-4b24-9860-57bc8589fd4b" Key="PlayerID" Value="Winning Goal:PlayerID" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <select-data-node id="35a3b691-2ba1-4348-8295-438ee67ff321" X="-5160" Y="-5800" NodeType="SelectData" NodeName="Missed PK">
+      <select-data id="bde49213-5163-467f-8849-561adaa3df91" SelectCount="1">
+        <alias-list id="ef679f45-d01e-453f-a1dd-8021932a20de">
+          <string id="44d326e1-4aee-4c4c-80b2-002ae7fadaff" Value="Missed Opportunity" />
+        </alias-list>
+        <order-by id="c1a3ee94-730d-465b-add6-ad5f67c16879">
+          <keyValuePair id="4453de87-677b-46bb-a348-a99f8e941878" Key="Select:Minute" Value="Desc" />
+        </order-by>
+        <alias-data-source id="39cab6ab-5525-4c27-8010-c54830f18fb0" DataSource="Model:HighlightsReady.Highlights">
+          <conditions id="7b165974-9842-4a96-81e6-5c04cf16b220">
+            <condition id="eb8adc4a-69cf-4945-a300-23de1f545e6c" VariableId="Select:Type" Comparison="EQ" Value="2" Operator="OR" Parenthesis="1" ParenthesisCount="1" IsSelectCondition="False" />
+            <condition id="7bf7a95d-9815-4d81-8375-6aadaba9c2b3" VariableId="Select:Type" Comparison="EQ" Value="3" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="272f6b47-0dbd-4e07-8c80-d49d30ada686" VariableId="Select:Type" Comparison="EQ" Value="4" Operator="" Parenthesis="2" ParenthesisCount="1" IsSelectCondition="False" />
+            <condition id="b8d3c5e7-105b-407a-92f1-9367afedc791" VariableId="Select:Minute" Comparison="GT" Value="Last Goal:Minute" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <condition-node id="b9e6ee7e-9044-44c8-a770-aa4afa2e4c11" X="-4960" Y="-5680" NodeType="Condition" NodeName="Late Winning Goal">
+      <conditions id="791c1074-523f-4713-94e4-a203ce0f2c1f">
+        <condition id="ecba2a2f-dd93-4141-a730-cc886df1ce94" VariableId="Last Goal:Minute" Comparison="GTE" Value="85" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="5e176afe-0b92-4b3e-9968-b0f42b77d563" VariableId="Last Goal:IsUserTeam" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <take-screenshot-node id="4c0d7ba2-f7b6-4143-90a9-d1af2c3b60dd" X="-3560" Y="-5880" NodeType="TakeScreenshot" NodeName="Set Name for New Node" HighlightIndex="Missed Opportunity:Index" HighlightPlayerID="Missed Opportunity:PlayerID" HighlightPriority="5" />
+    <take-screenshot-node id="58f08b43-134a-44c9-8fa7-d4d6be98dda6" X="-3560" Y="-5800" NodeType="TakeScreenshot" NodeName="Set Name for New Node" HighlightIndex="Missed Opportunity:Index" HighlightPlayerID="Missed Opportunity:PlayerID" HighlightPriority="5" />
+    <state-node id="14fe0a49-8d8c-4acf-8384-145e88424df1" X="-3120" Y="-5880" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="f834c6f4-c999-40a2-a03d-35835249f86b">
+        <string id="28e176ea-d726-4663-a2b9-8924663d2b6b" Value="MatchRestarted" />
+        <string id="9c3d0661-8d25-4f1d-91fd-ec4a7289fce2" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <state-node id="bb565d88-660c-4121-9daf-f8870ae4c0f4" X="-3120" Y="-5680" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="27a89ae9-ce98-4ba2-90e9-973d83bf603e">
+        <string id="921558cf-d356-4e83-ba49-20467b47b154" Value="MatchRestarted" />
+        <string id="87959e15-55d1-4b11-b0ee-3ef5dc784558" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <take-screenshot-node id="7e9a800c-b2a6-4462-ae06-e2d8d181145f" X="-3560" Y="-5680" NodeType="TakeScreenshot" NodeName="Set Name for New Node" HighlightIndex="Winning Goal:Index" HighlightPlayerID="Winning Goal:PlayerID" HighlightPriority="10" />
+    <join-node id="c71816cf-cf79-4b38-b7f9-8e06a59f258c" X="-2400" Y="-5760" NodeType="Join" NodeName="Set Name for New Node" />
+    <select-data-node id="4712630e-e4cf-45f3-b9d8-cbfca2edbf2e" X="-4480" Y="-5680" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="53129757-c662-4994-9fe4-6a17c326acf6" SelectCount="1">
+        <alias-list id="94cf010c-bb99-4f64-96e8-c9c7e0b86966">
+          <string id="d8afa19a-ba00-405d-9f3c-0ec6d31d4ca3" Value="Winning Goal" />
+        </alias-list>
+        <order-by id="70f2563b-5af1-48a2-94cf-21fa597e5ed2" />
+        <alias-data-source id="df575b81-a344-4fda-b119-362d161f4aef" DataSource="Model:HighlightsReady.Highlights">
+          <conditions id="e3942537-4946-4df4-86de-bb7a41557a39">
+            <condition id="822810d6-b115-4ce0-95d8-57df73e65b80" VariableId="Select:Type" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="d80d6a85-2b33-4834-ae07-a206fd8e2302" VariableId="Select:PlayerID" Comparison="EQ" Value="Winning Goal:PlayerID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <condition-node id="f94fe843-9937-4f82-ae47-9bee1f4e79ad" X="-3800" Y="-5880" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="35762d66-5df0-4158-baf5-77affe4a5e33">
+        <condition id="cf200a7e-4e84-489f-81d6-870a32342ab0" VariableId="Missed Opportunity:TeamID" Comparison="EQ" Value="Model:Global.UserTeamID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="7c6cf4eb-b1cc-4f4e-8e56-61b91b90b2f0" X="-2720" Y="-5640" NodeType="TriggerNews" NodeName="Rival Stalemate Home" Category="0" Importance="0" SceneId="-1" WipeId="2" WipeArgument="SaveData:CompetitionID" BackupImage="default">
+      <stringWithArgsTitle id="194e340f-15de-4eed-bb94-77b672bff222" StringID="CM_News_SS_Lost_LateWinner_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="44c2bee4-cbc2-4308-898f-002b2342dcd2">
+          <stringArgument id="5ff7c5ca-b1c6-44f8-92b1-6b404bd4567c" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="63bcba4c-7370-4c00-9298-c38f42af71ac" Value="SaveData:Opponent Team ID" Format="12" />
+        </stringArguments>
+        <stringContent id="e5fd3814-7626-4acd-b395-d128f25ac168">
+          <keyValuePair id="15b4b63a-04e7-4340-803d-45211dd3f1a2" Key="M" Value="Late Drama From %1s Steals %2s Win!" />
+          <keyValuePair id="6151f7aa-4479-45bf-9d04-f2aade12bfec" Key="F" Value="" />
+          <keyValuePair id="b5b36e5f-d0f5-4796-86b5-e44c57d07e47" Key="MM" Value="" />
+          <keyValuePair id="2bab50e1-4359-4aec-ae53-1be1e859dc6e" Key="MF" Value="" />
+          <keyValuePair id="774f3502-4087-4c9c-8a89-8bd714e8d5a9" Key="FM" Value="" />
+          <keyValuePair id="f97b5917-6876-430b-ac00-2c66540edd4f" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="14499278-d56a-445c-8064-34952db37118" StringID="CM_News_SS_Lost_LateWinner_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="f29c679d-a084-4c81-b6ba-1e8a2ef42eba">
+          <stringArgument id="9769e659-5426-41dd-b740-883fbae72852" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="a5e4d426-d0df-43bf-920a-9181053c9fc3" Value="SaveData:Opponent Team ID" Format="12" />
+          <stringArgument id="02be43fc-ba5d-4584-8781-b2ce87d12ca0" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="12" />
+          <stringArgument id="eb08081e-9891-4c10-83fc-813dcc84bb7f" Value="SaveData:OpponentGoals" Format="0" />
+          <stringArgument id="10fd51fa-fd14-4c8e-b42c-db5481495c87" Value="SaveData:UserGoals" Format="0" />
+        </stringArguments>
+        <stringContent id="763e5528-6f9f-480a-ba25-266192d060b9">
+          <keyValuePair id="22d93f5c-b2f6-48f2-bcbb-0a05cbe432cd" Key="M" Value="%1s snatched a win against %3s after his dramatic late goal put %2s %4s-%5s up." />
+          <keyValuePair id="62566714-5959-43ac-afdd-f4bd8956b94e" Key="F" Value="" />
+          <keyValuePair id="4d38f390-1af2-4884-9e20-e179518d9288" Key="MM" Value="" />
+          <keyValuePair id="7cb113b3-f2f3-4f24-a49a-32f40795bcf1" Key="MF" Value="" />
+          <keyValuePair id="c5141158-438b-4af8-b21a-363f4d7c5136" Key="FM" Value="" />
+          <keyValuePair id="ec62263a-6940-4c1d-adfe-0392f0df200b" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="593cd6ea-6bb9-4edf-b141-8c2d483bbf7f" />
+    </trigger-news-node>
+    <select-data-node id="18d58522-cdbc-4eb9-9522-84e5c9170127" X="-5480" Y="-5800" NodeType="SelectData" NodeName="Last Goal">
+      <select-data id="ff4241bb-b64e-4837-9010-d85456b006e8" SelectCount="1">
+        <alias-list id="ded72191-d128-487a-af2d-9131879579a9">
+          <string id="5eaa3516-37fd-459f-ab2e-985b8468c0f3" Value="Last Goal" />
+        </alias-list>
+        <order-by id="3b9223c7-2f5c-472d-b1e3-953daa5b7818">
+          <keyValuePair id="ea1db926-6151-4197-a69e-af9a848821bf" Key="Select:Minute" Value="Desc" />
+        </order-by>
+        <alias-data-source id="fe9e46c4-bd88-430e-af83-5481678fa418" DataSource="Model:HighlightsReady.GameplayData.Incidents.Goals">
+          <conditions id="2451fc34-7aeb-434e-a924-62eaf4b4e499" />
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <select-data-node id="5d1524fc-4d5f-47e2-82ee-7d289a90421e" X="-6160" Y="-5800" NodeType="SelectData" NodeName="Winning Goal">
+      <select-data id="3119828c-970a-4968-9a3a-cde7e21e21d6" SelectCount="1">
+        <alias-list id="4926fccd-e86e-4539-a7a8-8a9015312904">
+          <string id="5bd677bb-e967-4507-a57e-4173d4dd8715" Value="Winning Goal" />
+        </alias-list>
+        <order-by id="c0d31f16-3b67-4c72-b2da-b31a64f17b4f">
+          <keyValuePair id="21da4fd8-4d29-4705-8b48-4d58bcb3211f" Key="Select:Minute" Value="Desc" />
+        </order-by>
+        <alias-data-source id="c7a06db6-d82e-4d60-a00d-1ec24e3481a7" DataSource="Model:HighlightsReady.GameplayData.Incidents.Goals">
+          <conditions id="cd6cb99d-e996-41ab-93b3-19fe48bdaffa">
+            <condition id="0bea78d7-43ff-4be7-bd6a-f3a39c61b8ab" VariableId="Select:IsUserTeam" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <story-start-node id="bf3e6906-3a10-4de8-b5c2-31bcabc18d65" X="-6480" Y="-5800" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="SingleInstance" NodeEvent="HighlightsReady" StoryKey="" UseSelectData="True" RunInPlayerCareer="True" RunInManagerCareer="True" RunInTournamentMode="True">
+      <conditions id="df6328e8-af3d-42b9-8146-3b063906dc26">
+        <condition id="145ad6b6-7094-4515-8f44-adedfc98312e" VariableId="Model:HighlightsReady.GameplayData.Results.ResultStatus" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="08197cd2-d88e-4188-a5bd-455aee76a25f" VariableId="Model:HighlightsReady.GameplayData.Results.GoalMargin" Comparison="EQ" Value="1" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+      <select-data id="8e6b329a-05f4-44d8-a89c-830faa7d1b6b" SelectCount="0">
+        <alias-list id="b5edcb2c-b5c6-4efc-9532-c1d6401b64e3" />
+        <order-by id="5df709b0-cae3-4247-b8f9-4c4bb2a55904" />
+        <alias-data-source id="dcdb44e8-1a5e-4c48-b3d0-321d82546a2e" DataSource="">
+          <conditions id="93fa5af6-0880-42bb-87b2-7c532f9ac248" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <trigger-news-node id="2dc04f63-fb61-46a1-aea2-fe1652d6145c" X="-2720" Y="-6040" NodeType="TriggerNews" NodeName="Rival Stalemate Home" Category="0" Importance="0" SceneId="-1" WipeId="2" WipeArgument="SaveData:CompetitionID" BackupImage="default">
+      <stringWithArgsTitle id="12b4c369-0664-46b3-9353-0bae0da5b4cf" StringID="CM_News_SS_Lost_OpponentSave_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="8e0c27fc-e8b5-46a5-b678-89512469906d">
+          <stringArgument id="52c6aed4-a498-4d37-86ac-91cb65a35412" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="12" />
+          <stringArgument id="c0b6c190-8fec-487b-87cd-155b233f2d54" Value="SaveData:PlayerID" Format="7" />
+        </stringArguments>
+        <stringContent id="3b6c2779-a5d3-4a2c-b10e-51bab7a64807">
+          <keyValuePair id="557e4d17-d09f-4e74-b8a9-6c776be5df87" Key="M" Value="%2s's Save Denies %1s Equaliser" />
+          <keyValuePair id="77af2cfb-39e7-4a1d-bc6d-c41e63ab1942" Key="F" Value="" />
+          <keyValuePair id="634dbd5c-adb3-425b-9e8d-2431ccec50fc" Key="MM" Value="" />
+          <keyValuePair id="18a56fae-c0c9-4f80-a664-6a7517c341c0" Key="MF" Value="" />
+          <keyValuePair id="adfcfc83-f239-4797-a0f8-9082de9f9669" Key="FM" Value="" />
+          <keyValuePair id="93a33915-7c7e-4a9b-9f24-34fa9aac3177" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="ea63c0b0-afd5-4000-a61d-fb7e9e556ef1" StringID="CM_News_SS_Lost_OpponentSave_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="b77caba7-5f64-449e-b320-5ff66e897be3">
+          <stringArgument id="8f93a63c-6573-4228-8597-3e3b32a1b2f3" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="11" />
+          <stringArgument id="ee310a48-db68-4ccb-b51b-c3c724f6f7da" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="681a389f-d83d-4247-a0d5-3bda6205b863" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="bca1191e-071f-4719-8287-10e5a76e693f" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="875d9911-fb2e-447b-8430-e2de122efa8a">
+          <keyValuePair id="8263b760-2534-45fb-88cf-04b828b53d32" Key="M" Value="%1s were close to scoring an equalizer against %2s, but %3s's heroics in goal prevented %4s's side from equalising." />
+          <keyValuePair id="acc7b68b-7dd9-4c1c-a9e5-81bcbd53e19b" Key="F" Value="%1s were close to scoring an equalizer against %2s, but %3s's heroics in goal prevented %4s's side from equalising." />
+          <keyValuePair id="386807c2-5643-478f-a7dd-2dfc2c31c34c" Key="MM" Value="" />
+          <keyValuePair id="19ed27d3-f2b2-484a-a4b0-fc78411ebfe6" Key="MF" Value="" />
+          <keyValuePair id="a8425837-dcc8-4c0f-89cc-e1fba26499c4" Key="FM" Value="" />
+          <keyValuePair id="611946a9-99b2-440b-9951-d339273eb01d" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="94c1f71c-dec1-4026-9ed0-32ee9bf95a84" />
+    </trigger-news-node>
+    <take-screenshot-node id="31508615-9be2-40aa-b9b6-e3b68a6484f5" X="-3560" Y="-6040" NodeType="TakeScreenshot" NodeName="Set Name for New Node" HighlightIndex="Missed Opportunity:Index" HighlightPlayerID="Missed Opportunity:PlayerID" HighlightPriority="5" />
+    <state-node id="c0bc07b7-16d9-4dab-80ec-6bf1f2e23085" X="-3120" Y="-6040" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="865d1f7f-ba29-495b-b004-2b4e078873cf">
+        <string id="4f4302f8-79ed-449f-911d-f9551145f514" Value="MatchRestarted" />
+        <string id="c3785b26-5f7c-4545-bf0a-83c0debaff47" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <condition-node id="a3ec3c75-f5ff-4062-8204-245c3f60256c" X="-3800" Y="-6160" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="e3789dbf-bccd-44fc-b020-b4c6c05b4192">
+        <condition id="4384da53-ab41-4ada-80ea-8d8ee36334ee" VariableId="Missed Opportunity:TeamID" Comparison="EQ" Value="Model:Global.UserTeamID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <trigger-news-node id="b819e4fc-6887-4b5c-a960-a9975fbf2ae4" X="-2720" Y="-6160" NodeType="TriggerNews" NodeName="Rival Stalemate Home" Category="0" Importance="0" SceneId="-1" WipeId="2" WipeArgument="SaveData:CompetitionID" BackupImage="default">
+      <stringWithArgsTitle id="feffd62c-76e7-4b02-a51d-cc77ccd7340b" StringID="CM_News_SS_Lost_UserSave_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="adda1685-c902-41c0-8a84-a5dfb9ba5e69">
+          <stringArgument id="625443af-edb0-4029-b91c-8697df0a2be9" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="7e666f27-958d-481d-82b8-afcc98c6d842" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="5afc3a4c-3f11-42bf-8306-c8c44319e180">
+          <keyValuePair id="9459a481-ff71-46a2-8769-a64553fba983" Key="M" Value="%1s Decisive Save Against %2s" />
+          <keyValuePair id="f5bcee80-cdf6-4807-a91a-48a2e9849757" Key="F" Value="" />
+          <keyValuePair id="0c5613aa-4172-4ee3-8678-ab7cdfb735aa" Key="MM" Value="" />
+          <keyValuePair id="daaa82bc-0c99-4baa-be98-1b35f5e7da59" Key="MF" Value="" />
+          <keyValuePair id="27eabab0-20af-44b6-bc62-18f87b754a06" Key="FM" Value="" />
+          <keyValuePair id="99d63b5f-bc31-4ae8-aae3-a3399d6d039c" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="aac07479-6fdf-48fd-b0b2-0a4fcfb0d893" StringID="CM_News_SS_Lost_UserSave_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="3e82d101-2b42-4aaf-aee2-ac9036801c87">
+          <stringArgument id="8f967375-0e80-4d85-897b-0db6e966e88c" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="11" />
+          <stringArgument id="1f093509-af76-4068-8870-b04f51baa9bd" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="1bc962d4-bf0b-4ee3-ac95-c0561c95dd7d" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="f4192aa3-3c66-45ea-b6ea-267528e62848" Value="Model:UserMatchCompleted.Results.OponentGoals" Format="0" />
+          <stringArgument id="94538686-0ca7-4db4-80bf-8df4119d4bd1" Value="Model:UserMatchCompleted.Results.UserGoals" Format="0" />
+          <stringArgument id="19cbaff2-b1a6-42bb-9aa3-048146ab2d29" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="9574e404-7834-41b9-99fa-58426987a5e6">
+          <keyValuePair id="6fdbaa2f-9a06-4934-8bbc-7ee4b01d4918" Key="M" Value="%3s's efforts on goal weren't enough to avoid %1s's defeat at the hands of %2s. %6s has him to thank for the score ending up only %4s-%5s for %2s." />
+          <keyValuePair id="345ab5c1-e1ce-4372-b1bf-f29b0d9a55c7" Key="F" Value="%3s's efforts on goal weren't enough to avoid %1s's defeat at the hands of %2s. %6s has him to thank for the score ending up only %4s-%5s for %2s." />
+          <keyValuePair id="be96c765-cd0a-4c1d-a5cf-7ec91118f5ea" Key="MM" Value="" />
+          <keyValuePair id="8a1f70c8-862e-40ad-98d0-c5d4ff8052fc" Key="MF" Value="" />
+          <keyValuePair id="b2cedc78-d99c-481a-956d-a9bd9c08b292" Key="FM" Value="" />
+          <keyValuePair id="98b6f0ad-e553-43dc-9084-61186da75713" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="11ba3cd3-e51b-4bf1-96d0-b7c1061b6384" />
+    </trigger-news-node>
+    <take-screenshot-node id="bb532704-9684-4200-a03c-abd505679757" X="-3560" Y="-6160" NodeType="TakeScreenshot" NodeName="Set Name for New Node" HighlightIndex="Missed Opportunity:Index" HighlightPlayerID="Missed Opportunity:PlayerID" HighlightPriority="5" />
+    <state-node id="0c1c2331-9350-4620-bef5-a3316ff58313" X="-3120" Y="-6160" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="3bb0a183-7170-4a8c-82dd-0caf9cf5eb7d">
+        <string id="b4e71e02-14c7-431f-b6b2-209ee3d3807a" Value="MatchRestarted" />
+        <string id="5b38ebac-d089-4298-bb19-2644318d5340" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <join-node id="a65ead01-fa74-44b7-bd17-581c843d067e" X="-2360" Y="-6240" NodeType="Join" NodeName="Set Name for New Node" />
+    <take-screenshot-node id="d344786f-c506-41a4-9bb5-c948805c8036" X="-3560" Y="-6320" NodeType="TakeScreenshot" NodeName="Set Name for New Node" HighlightIndex="Missed Opportunity:Index" HighlightPlayerID="Missed Opportunity:PlayerID" HighlightPriority="0" />
+    <trigger-news-node id="cf67f15d-b71f-4b91-90fd-0a908b0f15cc" X="-2720" Y="-6320" NodeType="TriggerNews" NodeName="Rival Stalemate Home" Category="0" Importance="0" SceneId="-1" WipeId="2" WipeArgument="SaveData:CompetitionID" BackupImage="default">
+      <stringWithArgsTitle id="59cf0ad3-04c9-4302-85fa-e42c3bb3e131" StringID="CM_News_SS_Lost_OpponentMissChance_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="8e658c46-736c-4ffe-a4f4-ef09ab8077df">
+          <stringArgument id="42cc0d21-3cd2-4693-bb2c-ca5ddbaf75bc" Value="SaveData:Opponent Team ID" Format="12" />
+          <stringArgument id="db31447d-49c2-4fa7-b993-437aad6a64e7" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="a39daac5-8b6a-43ff-9000-6876c4f9b19c">
+          <keyValuePair id="0492b655-cbac-4558-a0db-d9500d5825a9" Key="M" Value="%1s Miss Chance to Double Their Advantage Against %2s" />
+          <keyValuePair id="9babc20b-a483-4efa-ba06-9ab028862b90" Key="F" Value="" />
+          <keyValuePair id="e8142117-3b0d-4656-a30e-5191eabb4d4b" Key="MM" Value="" />
+          <keyValuePair id="b2f9b97c-1cd6-4f24-94ca-6510d574a836" Key="MF" Value="" />
+          <keyValuePair id="46efd494-a119-4d42-9632-8d2e4dce18d5" Key="FM" Value="" />
+          <keyValuePair id="29053db0-ee0f-4b6c-879a-fae7413c92f5" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="9f0ca212-803c-4c2f-a38d-898737f0ba13" StringID="CM_News_SS_Lost_OpponentMissChance_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="74d27971-9197-4e0b-a307-5cfd098510d3">
+          <stringArgument id="dae120f2-bc6f-44d7-989f-c897e94402db" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="4418347f-36ff-4347-8c93-1f8b4ab4eb41" Value="Model:UserMatchCompleted.LastMatchData.OpponentTeamID" Format="11" />
+          <stringArgument id="003cefc2-fa9e-4c35-9d79-3b75dd8b15f0" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="11" />
+        </stringArguments>
+        <stringContent id="5b68fc72-2b44-4bf8-8df0-e0744cc10a9c">
+          <keyValuePair id="9785c1a6-7176-49ea-a767-07de9f424642" Key="M" Value="%1s's failed attempt on goal prevented %2s from doubling their advantage against %3s. " />
+          <keyValuePair id="088889b5-0659-4b8f-9370-e1e7f9ea5fef" Key="F" Value="" />
+          <keyValuePair id="25fb0506-d7fb-497d-822a-11771952a4cd" Key="MM" Value="" />
+          <keyValuePair id="4680ace9-c280-48fa-a0a4-0ac8367e35c8" Key="MF" Value="" />
+          <keyValuePair id="da182192-10c1-4b87-8c3b-67ba5fd5c808" Key="FM" Value="" />
+          <keyValuePair id="6cc5447e-701e-4a35-82e2-92dddc79be0e" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="85a3e0f1-2a2b-497e-9928-0ddcaab249aa" />
+    </trigger-news-node>
+    <state-node id="7183877f-ab0d-4c3a-a5ed-2ab08057bd01" X="-3120" Y="-6320" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="c6646fd9-a914-4e63-afe0-e9dd1069bc32">
+        <string id="a21aed85-e4f6-4902-918e-d635445a8720" Value="MatchRestarted" />
+        <string id="d08d3671-5643-4f15-9db8-74c1b2347593" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <condition-node id="181d728b-0b28-404b-8810-5099baca59a4" X="-3800" Y="-6440" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="728a4f2c-7ef4-4f24-b526-ed84d14b041d">
+        <condition id="41c1294c-f038-41f7-841c-6d7b515b78d2" VariableId="Missed Opportunity:TeamID" Comparison="EQ" Value="Model:Global.UserTeamID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="a96c00ac-1912-4c04-be8c-884c4b272968" X="-4200" Y="-6440" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="583d781c-e0be-47b2-bbe3-bd6eb28c079e">
+        <condition id="edffd4f0-511a-4409-8c2e-1f8006f0805a" VariableId="Missed Opportunity:Type" Comparison="EQ" Value="3" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <save-data-node id="d56d3cc3-7f9d-4874-9874-b814f4fac25f" X="-4440" Y="-6440" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="c68219d6-21b0-4f60-b6f4-3365af013041">
+        <saveItem id="418c2515-4eb0-435c-9f35-9efb6902479a" Key="PlayerID" Value="Missed Opportunity:PlayerID" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <take-screenshot-node id="4fbc89c8-fbec-4764-b75d-db1f1a1a4d95" X="-3560" Y="-6440" NodeType="TakeScreenshot" NodeName="Set Name for New Node" HighlightIndex="Missed Opportunity:Index" HighlightPlayerID="Missed Opportunity:PlayerID" HighlightPriority="5" />
+    <trigger-news-node id="d62da390-5c9b-4714-b31e-581321ad35ba" X="-2720" Y="-6440" NodeType="TriggerNews" NodeName="Rival Stalemate Home" Category="0" Importance="0" SceneId="-1" WipeId="2" WipeArgument="SaveData:CompetitionID" BackupImage="default">
+      <stringWithArgsTitle id="ea390f65-6af4-4d8a-a14d-e2b3e11c7313" StringID="CM_News_SS_Lost_UserMissChance_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="29656b9d-4234-434c-8a0d-9d8e3fc6bd8a">
+          <stringArgument id="d04dcbec-6924-4545-a7d7-886a818a7a95" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="12" />
+          <stringArgument id="bc32da8d-3136-47d3-a5ca-d6634add6aa8" Value="SaveData:Opponent Team ID" Format="12" />
+        </stringArguments>
+        <stringContent id="280abbff-b87c-4519-bb12-0f9a0461d654">
+          <keyValuePair id="3f5196d7-afef-42f9-9e80-f6443b5d0d64" Key="M" Value="%1s Miss Chance to Equalize Against %2s" />
+          <keyValuePair id="51c9bf70-97de-4116-b0df-5543c900f4e7" Key="F" Value="" />
+          <keyValuePair id="028fecb7-9f9f-4952-8b6d-d0c32724403d" Key="MM" Value="" />
+          <keyValuePair id="80cdfb3f-1518-4170-aade-90f8549cce36" Key="MF" Value="" />
+          <keyValuePair id="ce373d4a-2a48-4a2e-b126-e76cb6e81221" Key="FM" Value="" />
+          <keyValuePair id="1c0eb437-d353-450e-91c8-8f737e8fd763" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="78cf2cc3-af3d-4d35-8d0f-1413e305d4ea" StringID="CM_News_SS_Lost_UserMissChance_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="95d32410-c7d2-404a-b7e9-a99d3b1f75e2">
+          <stringArgument id="8a323ff9-ae51-4b75-9924-5c81c52b652d" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="11" />
+          <stringArgument id="1a074a61-0095-4628-b9c8-d1b2b9aaabc7" Value="SaveData:Opponent Team ID" Format="11" />
+          <stringArgument id="196d4671-df32-4f34-b4af-c0193e7ee356" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="826ad05d-47d8-4e95-9046-0b60ebb7c14c" Value="SaveData:OpponentGoals" Format="0" />
+          <stringArgument id="06576632-2572-4909-93ed-c961e00001ad" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="73ad00b8-a376-4213-9c95-3f0476175127" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="a1169e8a-9db7-48c5-905d-3b223f549a5a">
+          <keyValuePair id="39fcd180-b689-4b18-9cb1-520be086f4b5" Key="M" Value="%1s were close to scoring an equaliser against %2s, but despite %3s attempts on goal they failed to draw level. The match ended in a bitter %4s-%5s loss for %6s's men." />
+          <keyValuePair id="433231a1-5437-4d59-b3b0-fa9e32194cb0" Key="F" Value="%1s were close to scoring an equaliser against %2s, but despite %3s attempts on goal they failed to draw level. The match ended in a bitter %4s-%5s loss for %6s's men." />
+          <keyValuePair id="57ed25e8-a956-40a7-a579-3201010dc2b9" Key="MM" Value="" />
+          <keyValuePair id="86e83e5a-f41b-4499-b697-f3aad551fbc7" Key="MF" Value="" />
+          <keyValuePair id="6846619f-a9cf-415f-a811-e7aa4fd2185d" Key="FM" Value="" />
+          <keyValuePair id="16908cb6-eb54-4291-bf45-c5c3ddcb49ab" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="3e909d9e-903c-432a-81ab-2059081fe0e8" />
+    </trigger-news-node>
+    <state-node id="90ffd7b9-46ba-4b0d-9577-f450a843b30a" X="-3120" Y="-6440" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="548fd419-31ef-4b0e-ad0d-83a1fb1de91e">
+        <string id="19d099d2-4cb6-4bdd-aa3b-469507ee0f67" Value="MatchRestarted" />
+        <string id="591bbf53-3458-4569-8831-b1d45192b01a" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <story-end-node id="827f4e70-8b36-4660-8200-659b3f14615e" X="-2040" Y="-5760" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <condition-node id="a81b638e-0800-4aaf-8a62-0cfce0214615" X="-4960" Y="-6440" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="602c2980-1749-4787-8885-af5bc8b11fcb">
+        <condition id="a4317b19-678f-4462-9e45-cb561bd3acf8" VariableId="Missed Opportunity:Minute" Comparison="GTE" Value="85" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="c99f114d-bbb3-4185-a455-3e67fd84fbc2" X="-4000" Y="-6160" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="2e88f06e-fdb9-44da-a32f-5d30e8bf691d">
+        <condition id="d97a596e-6f3e-4455-9515-1d0cb24f3051" VariableId="Missed Opportunity:Type" Comparison="EQ" Value="2" Operator="OR" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <select-data-node id="afb6bd7b-4712-4339-8349-57760ecf89b0" X="-4480" Y="-5520" NodeType="SelectData" NodeName="POST">
+      <select-data id="561d40bc-136f-4c9e-8ab5-c72d1c2ff923" SelectCount="1">
+        <alias-list id="c86baa0c-33f7-44f5-b824-fb5c916f93b5">
+          <string id="e6ed798b-cbbc-4121-b901-1b90a3f8ad77" Value="POST" />
+        </alias-list>
+        <order-by id="09f95b34-543a-48cf-8d06-b3ce3321d0cc" />
+        <alias-data-source id="8878865f-3aef-47ca-809c-d02766a6986f" DataSource="Model:HighlightsReady.Highlights">
+          <conditions id="c495507d-e667-48bf-9b37-3090a500c883">
+            <condition id="b6e8a6f1-b4be-4a38-98f3-9592371dea85" VariableId="Select:Type" Comparison="EQ" Value="4" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <save-data-node id="38e8e3c6-6688-4e63-821f-aa3f2e6846e5" X="-4280" Y="-5520" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="61ea0e70-1c2f-43ee-874e-e08605974837">
+        <saveItem id="d4990613-66d4-4030-a832-8d6fdaefcfa3" Key="PlayerID" Value="POST:PlayerID" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <condition-node id="8c9c2055-16c6-4260-b938-b30a1cf7423a" X="-4080" Y="-5520" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="a021262b-f308-470c-9ee2-fe66cc1cdba0">
+        <condition id="0e7afee4-1403-4b16-b285-6cceef3316d6" VariableId="Last Goal:Minute" Comparison="LTE" Value="POST:Minute" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="c77facbd-8b28-4729-8d2b-8c85ed645a98" X="-3800" Y="-5520" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="af07795c-363b-4bc6-89e0-34b0bd774b46">
+        <condition id="ea8a3e72-e887-4fa2-9dc6-b00357dd4379" VariableId="POST:TeamID" Comparison="EQ" Value="Model:Global.UserTeamID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <take-screenshot-node id="8d65daec-3b67-4145-9a1e-d004c1eae493" X="-3560" Y="-5520" NodeType="TakeScreenshot" NodeName="Set Name for New Node" HighlightIndex="POST:Index" HighlightPlayerID="POST:PlayerID" HighlightPriority="5" />
+    <take-screenshot-node id="41ceda9a-78c2-43d9-a417-c5b24ef47089" X="-3560" Y="-5440" NodeType="TakeScreenshot" NodeName="Set Name for New Node" HighlightIndex="POST:Index" HighlightPlayerID="POST:PlayerID" HighlightPriority="5" />
+    <state-node id="14b969ba-2347-41d6-a06f-766bd9432f71" X="-3120" Y="-5520" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="ab7f9c84-50c8-4dd2-9032-4844ea9ac9fb">
+        <string id="2236d8a8-ae46-46d2-a803-1f1da2564ce3" Value="MatchRestarted" />
+        <string id="9f681f98-4d8a-455a-890b-ec1268b5f766" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <state-node id="7c4941a6-65ce-4d51-b77a-c293bd95f004" X="-3120" Y="-5440" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="fc74ac20-3364-4bcf-9c63-f24635a6314b">
+        <string id="c485d784-7d3f-4fdc-bf22-62f750565823" Value="MatchRestarted" />
+        <string id="d2bb1fb3-5662-4f14-826c-fb462d20e0d4" Value="UserMatchCompleted" />
+      </supported-events>
+    </state-node>
+    <trigger-news-node id="8db0d558-a9c7-47f4-93af-86b4b4ee158a" X="-2720" Y="-5520" NodeType="TriggerNews" NodeName="Rival Stalemate Home" Category="0" Importance="0" SceneId="-1" WipeId="2" WipeArgument="SaveData:CompetitionID" BackupImage="default">
+      <stringWithArgsTitle id="93a177de-0f3a-4361-a5a4-7c92e3cce493" StringID="CM_News_SS_Lost_UserPost_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="cd023496-f341-40fe-adde-eefd4e7324cb">
+          <stringArgument id="7dc02bdc-ae01-4727-a113-5f9910f0a95b" Value="SaveData:PlayerID" Format="7" />
+        </stringArguments>
+        <stringContent id="42bde594-4e1c-41b7-8781-7bf085128841">
+          <keyValuePair id="331bdf1c-0178-4934-9718-a1b62089a5b5" Key="M" Value="%1s's Unlucky Shot Hits the Post" />
+          <keyValuePair id="1fbb4f64-f21f-42e3-aa6c-3d6d20a473ff" Key="F" Value="" />
+          <keyValuePair id="a701126c-37ed-41bf-9611-2fa3653d3901" Key="MM" Value="" />
+          <keyValuePair id="0b1965ab-f508-464a-b65f-e10f5142108e" Key="MF" Value="" />
+          <keyValuePair id="283e005e-5054-4625-a839-bb5ee20a1a74" Key="FM" Value="" />
+          <keyValuePair id="2c3c2a5c-159e-472b-86ed-1a0b62564e63" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="cd20b0be-ed61-4425-abe3-17fc11b71fa9" StringID="CM_News_SS_Lost_UserPost_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="e32b395f-6880-45cc-8a7d-591fc8c90185">
+          <stringArgument id="7df40fc6-443e-4de1-9302-555cf2fa3223" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="11" />
+          <stringArgument id="0dddb943-52c6-4f6e-a260-e448c50beb7c" Value="SaveData:Opponent Team ID" Format="11" />
+          <stringArgument id="9be952dc-ec33-4c9c-b59d-518d2fffa3b5" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="20d62574-2a87-49d9-b1d5-078f5e0e501b" Value="SaveData:OpponentGoals" Format="0" />
+          <stringArgument id="dbca3b30-4feb-4476-8ff0-1b1c798ed6af" Value="SaveData:UserGoals" Format="0" />
+          <stringArgument id="1c937bff-b720-41ce-a2a2-1c3aba56eaa1" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="fde908bc-25b4-48fa-9840-d725ac562477">
+          <keyValuePair id="4aa2612a-2e01-476c-b437-db410c182844" Key="M" Value="The outcome of %1s's match against %2s could have been completely different if %3s's efforts had found the net.. %2s have the post to thank for their ability to edge a %4s-%5s win against %6s's men." />
+          <keyValuePair id="bdcbaa00-a5ad-4f76-9218-f0950850505c" Key="F" Value="The outcome of %1s's match against %2s could have been completely different if %3s's efforts had found the net.. %2s have the post to thank for their ability to edge a %4s-%5s win against %6s's men." />
+          <keyValuePair id="0c9a8c6e-84f1-4d99-99c9-5468ae9c1245" Key="MM" Value="" />
+          <keyValuePair id="cfcc09c3-a5b5-4eac-83d8-fe18749bdea6" Key="MF" Value="" />
+          <keyValuePair id="dbe7338f-44f0-430d-821d-58ad286213ff" Key="FM" Value="" />
+          <keyValuePair id="e8d8fe0b-f39a-4a7c-96f5-5041373bd84e" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="285a5662-5388-48a3-8a45-3a8816c34a45" />
+    </trigger-news-node>
+    <trigger-news-node id="070d89df-7845-41c3-aa00-2f15d4f24d56" X="-2720" Y="-5400" NodeType="TriggerNews" NodeName="Rival Stalemate Home" Category="0" Importance="0" SceneId="-1" WipeId="2" WipeArgument="SaveData:CompetitionID" BackupImage="default">
+      <stringWithArgsTitle id="b2fd9153-b1d5-4337-9f6d-72235aba4033" StringID="CM_News_SS_Lost_OpponentPost_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="f5a92312-0c50-4276-9160-7d9c3dd3271e">
+          <stringArgument id="3f77e433-8d9f-40e6-9ccf-c0b10fbde811" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="66e46b11-f54a-4797-aade-af58cca65e81" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="90491bc1-69e5-40c3-a28c-069a4c77323a">
+          <keyValuePair id="6ac2dcac-df73-4b05-bafa-55229d0935d8" Key="M" Value="%1s Hits The Post In Effort Against %2s" />
+          <keyValuePair id="b7c1b579-c5c6-413e-979b-136512a3133b" Key="F" Value="" />
+          <keyValuePair id="a9a80e79-73da-455b-b42c-a7a6c73b9b98" Key="MM" Value="" />
+          <keyValuePair id="12030521-c3f0-41c3-8390-2bfb1ca9f653" Key="MF" Value="" />
+          <keyValuePair id="cd07d5b3-a1a5-4c50-8d41-bb9a57f3522d" Key="FM" Value="" />
+          <keyValuePair id="521b3f88-7fd4-4e94-86e4-f0d33e5dc1a1" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="92500699-67d7-4f21-9d00-f035a4eb7385" StringID="CM_News_SS_Lost_OpponentPost_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="fe61e539-756f-499f-864b-6ae0a34fe6ee">
+          <stringArgument id="347b3219-523b-41dc-a40f-a2763e270d07" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="250a551d-5cf4-4ff0-819b-53633ac1ed93" Value="SaveData:Opponent Team ID" Format="11" />
+          <stringArgument id="c466cfb3-5cc1-4b65-93fa-389f3019d7ba" Value="Model:UserMatchCompleted.LastMatchData.UserTeamID" Format="11" />
+          <stringArgument id="ff4bc095-8eb1-4242-90ab-a001d51d0d99" Value="Model:Global.UserTeamID" Format="14" />
+        </stringArguments>
+        <stringContent id="e8a538b9-44dd-4d3c-9b99-a96b29d4e0fd">
+          <keyValuePair id="6de4116a-ec5a-476c-a503-c6aca19d713b" Key="M" Value="%1s's unlucky shot on goal prevented %2s from edging past %3s earlier in the game. %4s's team couldn't stop %3s's attempts on goal as they ended up on the losing side." />
+          <keyValuePair id="de3784b8-99f7-47ce-9c77-85bf11d5a2c7" Key="F" Value="%1s's unlucky shot on goal prevented %2s from edging past %3s earlier in the game. %4s's team couldn't stop %3s's attempts on goal as they ended up on the losing side." />
+          <keyValuePair id="ed34b166-271e-4f8a-b8fd-c9e0b1dff117" Key="MM" Value="" />
+          <keyValuePair id="23ba9d60-7c73-41e7-92f7-942d3a0f8e3a" Key="MF" Value="" />
+          <keyValuePair id="b81d2f45-89b5-4394-bae1-e298d87d04eb" Key="FM" Value="" />
+          <keyValuePair id="bfcc67ae-d817-4281-b069-4fe15ad09b3f" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="435036a0-70c9-41b2-808f-101170db3109" />
+    </trigger-news-node>
+    <join-node id="6debdbc4-7b86-4a67-b422-9e28925e801b" X="-2400" Y="-5400" NodeType="Join" NodeName="Set Name for New Node" />
+  </nodes>
+  <groups id="65ae5ada-7be7-435b-a408-1576da19c82f" />
+  <connections id="38439c8f-2aee-4610-a3cd-d0c152e0d19f">
+    <connection id="a37b5b47-f4ae-486a-a2b4-9dac103bc5de" SrcNodeID="b5e2e7f8-fc23-469f-9f51-bc08fe0440f9" SrcPortName="advance" DstNodeID="c71816cf-cf79-4b38-b7f9-8e06a59f258c" DstPortName="enter" ConnectionOrder="0">
+      <points id="81ca603a-2cdf-4275-be41-6dfd3ddb7908" />
+    </connection>
+    <connection id="e3d44637-734f-48bc-b37a-d56b2690ccb9" SrcNodeID="5a1cb0c7-3717-46c4-b1ad-ec8571ba04e1" SrcPortName="UserMatchCompleted" DstNodeID="b5e2e7f8-fc23-469f-9f51-bc08fe0440f9" DstPortName="enter" ConnectionOrder="0">
+      <points id="4f237209-54a3-4b31-b2ed-1495ef31334f" />
+    </connection>
+    <connection id="663d5678-91f7-4f3e-bcf6-272a8413df03" SrcNodeID="a514f784-ede2-4ad6-97e3-c1f72d003976" SrcPortName="advance" DstNodeID="c71816cf-cf79-4b38-b7f9-8e06a59f258c" DstPortName="enter" ConnectionOrder="0">
+      <points id="fd519251-cf92-409d-9870-41e63ef0b2b1" />
+    </connection>
+    <connection id="9c8208ee-7536-4437-8305-62d7d2b566ea" SrcNodeID="bec22a76-bc62-4c3b-8775-169f3d316586" SrcPortName="advance" DstNodeID="7e9a800c-b2a6-4462-ae06-e2d8d181145f" DstPortName="enter" ConnectionOrder="0">
+      <points id="bc9cfde7-1d9a-4c2f-bf30-5b07531ce504" />
+    </connection>
+    <connection id="8bf28ead-038c-4f2b-80e8-fecc81246738" SrcNodeID="35a3b691-2ba1-4348-8295-438ee67ff321" SrcPortName="false" DstNodeID="b9e6ee7e-9044-44c8-a770-aa4afa2e4c11" DstPortName="enter" ConnectionOrder="0">
+      <points id="7e7b1bcf-2fc3-4fd2-accc-bd6ed72f2a2c" />
+    </connection>
+    <connection id="415fdcde-f528-46d8-bbee-224257c0728e" SrcNodeID="b9e6ee7e-9044-44c8-a770-aa4afa2e4c11" SrcPortName="true" DstNodeID="4712630e-e4cf-45f3-b9d8-cbfca2edbf2e" DstPortName="enter" ConnectionOrder="0">
+      <points id="d84c868a-ed2f-49b4-8c13-95da34aa3ac0" />
+    </connection>
+    <connection id="84ac47f8-f098-45d5-8850-d066232e548b" SrcNodeID="4c0d7ba2-f7b6-4143-90a9-d1af2c3b60dd" SrcPortName="advance" DstNodeID="14fe0a49-8d8c-4acf-8384-145e88424df1" DstPortName="enter" ConnectionOrder="0">
+      <points id="2e0ea886-c317-42b2-a0dc-e89692dfb769" />
+    </connection>
+    <connection id="a4766f50-38b2-43b1-9d70-cbc1f87b2840" SrcNodeID="58f08b43-134a-44c9-8fa7-d4d6be98dda6" SrcPortName="advance" DstNodeID="5a1cb0c7-3717-46c4-b1ad-ec8571ba04e1" DstPortName="enter" ConnectionOrder="0">
+      <points id="3ab37e93-f2e7-499a-873d-d229295c4522" />
+    </connection>
+    <connection id="df289a02-f127-495a-8c58-9875bb1e6ff2" SrcNodeID="14fe0a49-8d8c-4acf-8384-145e88424df1" SrcPortName="UserMatchCompleted" DstNodeID="a514f784-ede2-4ad6-97e3-c1f72d003976" DstPortName="enter" ConnectionOrder="0">
+      <points id="4dbd5a63-19d4-468e-b0d9-9c8ff9471d0e" />
+    </connection>
+    <connection id="624c3016-83d5-4741-8e21-adae450b93e6" SrcNodeID="bb565d88-660c-4121-9daf-f8870ae4c0f4" SrcPortName="UserMatchCompleted" DstNodeID="7c6cf4eb-b1cc-4f4e-8e56-61b91b90b2f0" DstPortName="enter" ConnectionOrder="0">
+      <points id="0f1bb56b-7a7a-42f3-9d5d-b79ba63ff3da" />
+    </connection>
+    <connection id="cce4bd32-d4ac-4dec-92dc-5c9b507bbe9c" SrcNodeID="7e9a800c-b2a6-4462-ae06-e2d8d181145f" SrcPortName="advance" DstNodeID="bb565d88-660c-4121-9daf-f8870ae4c0f4" DstPortName="enter" ConnectionOrder="0">
+      <points id="0c3bd448-3053-43bf-8060-153796d83a31" />
+    </connection>
+    <connection id="df90dc6e-c8a6-4ebd-b4a1-1b13558bbba6" SrcNodeID="4712630e-e4cf-45f3-b9d8-cbfca2edbf2e" SrcPortName="true" DstNodeID="bec22a76-bc62-4c3b-8775-169f3d316586" DstPortName="enter" ConnectionOrder="0">
+      <points id="7a2a6996-3489-441c-a1e9-6defc6ca4f3a" />
+    </connection>
+    <connection id="f76b2f4f-2711-4cbe-a352-980fa6d7b2b4" SrcNodeID="f94fe843-9937-4f82-ae47-9bee1f4e79ad" SrcPortName="true" DstNodeID="4c0d7ba2-f7b6-4143-90a9-d1af2c3b60dd" DstPortName="enter" ConnectionOrder="0">
+      <points id="4dbb4662-feef-4fc4-a884-e09ce81094c8" />
+    </connection>
+    <connection id="062fd11b-aaf2-40bc-8d29-8bdd73951365" SrcNodeID="f94fe843-9937-4f82-ae47-9bee1f4e79ad" SrcPortName="false" DstNodeID="58f08b43-134a-44c9-8fa7-d4d6be98dda6" DstPortName="enter" ConnectionOrder="0">
+      <points id="2ae4fc31-baf9-4b6d-9032-6baa01a570bf" />
+    </connection>
+    <connection id="2e9245bb-a54c-4950-985a-279858782028" SrcNodeID="7c6cf4eb-b1cc-4f4e-8e56-61b91b90b2f0" SrcPortName="advance" DstNodeID="c71816cf-cf79-4b38-b7f9-8e06a59f258c" DstPortName="enter" ConnectionOrder="0">
+      <points id="b4a72ca7-1d0d-4272-943f-9e2c2e725bc2" />
+    </connection>
+    <connection id="082df1d2-b943-42bc-adc4-c0536f17dd39" SrcNodeID="18d58522-cdbc-4eb9-9522-84e5c9170127" SrcPortName="true" DstNodeID="35a3b691-2ba1-4348-8295-438ee67ff321" DstPortName="enter" ConnectionOrder="0">
+      <points id="86a32742-48d6-4006-a7f4-e635b14ef5a5" />
+    </connection>
+    <connection id="68cfcbd1-ea27-4c8f-9a72-8a3a944be71d" SrcNodeID="5d1524fc-4d5f-47e2-82ee-7d289a90421e" SrcPortName="true" DstNodeID="2658371f-4e27-40b0-9369-ba684e491b7b" DstPortName="enter" ConnectionOrder="0">
+      <points id="7df6f06a-c90e-44e8-896c-9d4fe42c38b6" />
+    </connection>
+    <connection id="3581559d-9f52-4ec8-81dd-7841af05051a" SrcNodeID="bf3e6906-3a10-4de8-b5c2-31bcabc18d65" SrcPortName="advance" DstNodeID="5d1524fc-4d5f-47e2-82ee-7d289a90421e" DstPortName="enter" ConnectionOrder="0">
+      <points id="e2379d8f-e6e3-4473-a0d2-4756f73bcd5c" />
+    </connection>
+    <connection id="af1652dc-e669-46f0-a731-4cdfdbd13017" SrcNodeID="2dc04f63-fb61-46a1-aea2-fe1652d6145c" SrcPortName="advance" DstNodeID="a65ead01-fa74-44b7-bd17-581c843d067e" DstPortName="enter" ConnectionOrder="0">
+      <points id="545d95a5-6554-4d47-bb9e-161428b2fba3" />
+    </connection>
+    <connection id="22f0dfd9-4f2b-4998-bc55-02502846ae67" SrcNodeID="31508615-9be2-40aa-b9b6-e3b68a6484f5" SrcPortName="advance" DstNodeID="c0bc07b7-16d9-4dab-80ec-6bf1f2e23085" DstPortName="enter" ConnectionOrder="0">
+      <points id="8c21cb47-ed93-477c-86e7-264f6ab6d6ab" />
+    </connection>
+    <connection id="53bc8961-ff44-43ca-b372-11f1f2723546" SrcNodeID="c0bc07b7-16d9-4dab-80ec-6bf1f2e23085" SrcPortName="UserMatchCompleted" DstNodeID="2dc04f63-fb61-46a1-aea2-fe1652d6145c" DstPortName="enter" ConnectionOrder="0">
+      <points id="7335d0d2-f92a-4b8d-a13b-3908d268f226" />
+    </connection>
+    <connection id="8cf3dfdc-4a29-42a5-b98a-cb79f086253e" SrcNodeID="a3ec3c75-f5ff-4062-8204-245c3f60256c" SrcPortName="true" DstNodeID="bb532704-9684-4200-a03c-abd505679757" DstPortName="enter" ConnectionOrder="0">
+      <points id="d75c0396-96e2-4da7-a3f8-eaf76f995805" />
+    </connection>
+    <connection id="a50dd7b4-449f-4de9-a006-24792f0922fd" SrcNodeID="a3ec3c75-f5ff-4062-8204-245c3f60256c" SrcPortName="false" DstNodeID="31508615-9be2-40aa-b9b6-e3b68a6484f5" DstPortName="enter" ConnectionOrder="0">
+      <points id="034540d0-7c3b-4fce-a257-b828da8bf5e2" />
+    </connection>
+    <connection id="557b0a85-352b-473e-b28d-e3f08e652a7c" SrcNodeID="b819e4fc-6887-4b5c-a960-a9975fbf2ae4" SrcPortName="advance" DstNodeID="a65ead01-fa74-44b7-bd17-581c843d067e" DstPortName="enter" ConnectionOrder="0">
+      <points id="9e59c190-f4b7-4632-bf0e-11bf0f0dd62a" />
+    </connection>
+    <connection id="61d5f640-294e-489d-a19b-e5e93083fc2f" SrcNodeID="bb532704-9684-4200-a03c-abd505679757" SrcPortName="advance" DstNodeID="0c1c2331-9350-4620-bef5-a3316ff58313" DstPortName="enter" ConnectionOrder="0">
+      <points id="a35cc82d-1027-4c04-b893-76efc13e7e78" />
+    </connection>
+    <connection id="c27c443a-d17a-46f3-84c4-94f2ebb1e059" SrcNodeID="0c1c2331-9350-4620-bef5-a3316ff58313" SrcPortName="UserMatchCompleted" DstNodeID="b819e4fc-6887-4b5c-a960-a9975fbf2ae4" DstPortName="enter" ConnectionOrder="0">
+      <points id="72135b17-7972-4bb0-bb5c-abd74b49df91" />
+    </connection>
+    <connection id="d743d892-fe1a-4cd0-b472-2e122ab91a70" SrcNodeID="d344786f-c506-41a4-9bb5-c948805c8036" SrcPortName="advance" DstNodeID="7183877f-ab0d-4c3a-a5ed-2ab08057bd01" DstPortName="enter" ConnectionOrder="0">
+      <points id="87d19632-9782-42e8-aa09-e8eba85c37ad" />
+    </connection>
+    <connection id="a058e87c-e984-4661-b951-81e284c114ec" SrcNodeID="cf67f15d-b71f-4b91-90fd-0a908b0f15cc" SrcPortName="advance" DstNodeID="a65ead01-fa74-44b7-bd17-581c843d067e" DstPortName="enter" ConnectionOrder="0">
+      <points id="5a2e324e-da93-4dc7-a6b3-c7097b4cce95" />
+    </connection>
+    <connection id="ddb993d4-b37f-4d9c-adc8-d249a08df7b3" SrcNodeID="7183877f-ab0d-4c3a-a5ed-2ab08057bd01" SrcPortName="UserMatchCompleted" DstNodeID="cf67f15d-b71f-4b91-90fd-0a908b0f15cc" DstPortName="enter" ConnectionOrder="0">
+      <points id="b92200a0-869c-44ae-a94a-d905ce2d4d11" />
+    </connection>
+    <connection id="140aedd5-1f93-432a-9524-162a9615e2af" SrcNodeID="181d728b-0b28-404b-8810-5099baca59a4" SrcPortName="true" DstNodeID="4fbc89c8-fbec-4764-b75d-db1f1a1a4d95" DstPortName="enter" ConnectionOrder="0">
+      <points id="e76abb6f-7656-4173-bcb9-b0e56ca58037" />
+    </connection>
+    <connection id="600fadb2-8d34-4831-9f1e-8af630f760a4" SrcNodeID="181d728b-0b28-404b-8810-5099baca59a4" SrcPortName="false" DstNodeID="d344786f-c506-41a4-9bb5-c948805c8036" DstPortName="enter" ConnectionOrder="0">
+      <points id="39d3490f-3483-4d95-9e78-4055f92f992e" />
+    </connection>
+    <connection id="6896cba1-c6f3-4d6e-afcf-2d2ed42eeffd" SrcNodeID="a96c00ac-1912-4c04-be8c-884c4b272968" SrcPortName="true" DstNodeID="181d728b-0b28-404b-8810-5099baca59a4" DstPortName="enter" ConnectionOrder="0">
+      <points id="24f16587-d24c-481d-9e23-0d12d03ad0c5" />
+    </connection>
+    <connection id="127a3669-2c7a-40ef-b6ad-67dda62e6f24" SrcNodeID="d56d3cc3-7f9d-4874-9874-b814f4fac25f" SrcPortName="advance" DstNodeID="a96c00ac-1912-4c04-be8c-884c4b272968" DstPortName="enter" ConnectionOrder="0">
+      <points id="77fa2621-efd7-4b86-b8f6-b02567c41956" />
+    </connection>
+    <connection id="fe7ce371-900b-463e-ae9b-a2f594713d80" SrcNodeID="4fbc89c8-fbec-4764-b75d-db1f1a1a4d95" SrcPortName="advance" DstNodeID="90ffd7b9-46ba-4b0d-9577-f450a843b30a" DstPortName="enter" ConnectionOrder="0">
+      <points id="9dbb3a6a-169e-475c-89c0-500ceb21094a" />
+    </connection>
+    <connection id="e6033419-33bb-4a90-af28-a5d4b670e9e3" SrcNodeID="d62da390-5c9b-4714-b31e-581321ad35ba" SrcPortName="advance" DstNodeID="a65ead01-fa74-44b7-bd17-581c843d067e" DstPortName="enter" ConnectionOrder="0">
+      <points id="2f68e8af-ae2a-42b3-90a8-e695e6d6fa8a" />
+    </connection>
+    <connection id="a4def8e6-4860-4893-84a7-1547e9d54cc1" SrcNodeID="90ffd7b9-46ba-4b0d-9577-f450a843b30a" SrcPortName="UserMatchCompleted" DstNodeID="d62da390-5c9b-4714-b31e-581321ad35ba" DstPortName="enter" ConnectionOrder="0">
+      <points id="3d6a639f-2d9c-4fc7-8150-5d2eef642f05" />
+    </connection>
+    <connection id="2a6ee3ff-307e-4055-92ba-3f7fd81121b5" SrcNodeID="2658371f-4e27-40b0-9369-ba684e491b7b" SrcPortName="advance" DstNodeID="18d58522-cdbc-4eb9-9522-84e5c9170127" DstPortName="enter" ConnectionOrder="0">
+      <points id="0fb3784f-ff1e-457d-b617-07f3db7977ab" />
+    </connection>
+    <connection id="7cd963a1-7e85-41d8-a3bd-d97131f2b89d" SrcNodeID="c71816cf-cf79-4b38-b7f9-8e06a59f258c" SrcPortName="advance" DstNodeID="827f4e70-8b36-4660-8200-659b3f14615e" DstPortName="enter" ConnectionOrder="0">
+      <points id="370c5f46-0eb3-4084-9703-eda4c68d9de7" />
+    </connection>
+    <connection id="5a1dc9ef-0254-4b66-bac8-3e471da277ea" SrcNodeID="a65ead01-fa74-44b7-bd17-581c843d067e" SrcPortName="advance" DstNodeID="827f4e70-8b36-4660-8200-659b3f14615e" DstPortName="enter" ConnectionOrder="0">
+      <points id="7ee51d98-d3ee-45a4-b7ea-6aac5ffc1de1" />
+    </connection>
+    <connection id="30460fdc-46c3-49b0-b7cf-f45d76b76894" SrcNodeID="90ffd7b9-46ba-4b0d-9577-f450a843b30a" SrcPortName="MatchRestarted" DstNodeID="a65ead01-fa74-44b7-bd17-581c843d067e" DstPortName="enter" ConnectionOrder="0">
+      <points id="bf08b2b5-105e-49bb-84d8-92235ab9da38">
+        <point id="22d072a4-a8f1-49ba-bc49-1479bb29f62a" X="-2840" Y="-6480" />
+        <point id="548189cb-66ee-4977-8a58-ccc9b4f69faf" X="-2560" Y="-6480" />
+      </points>
+    </connection>
+    <connection id="f8a96d72-ec8d-4a77-82ae-f50454227520" SrcNodeID="7183877f-ab0d-4c3a-a5ed-2ab08057bd01" SrcPortName="MatchRestarted" DstNodeID="a65ead01-fa74-44b7-bd17-581c843d067e" DstPortName="enter" ConnectionOrder="0">
+      <points id="a0f8a691-b99c-4dd9-8e47-82d665e58384">
+        <point id="ed10102f-c63c-41ad-a6f9-b0c20ff21d7f" X="-2840" Y="-6360" />
+        <point id="a8e779f8-b071-44c7-808a-d8b44df95b19" X="-2560" Y="-6360" />
+      </points>
+    </connection>
+    <connection id="ed5f1f94-9f01-46a5-889e-6f5e564ac7ea" SrcNodeID="0c1c2331-9350-4620-bef5-a3316ff58313" SrcPortName="MatchRestarted" DstNodeID="a65ead01-fa74-44b7-bd17-581c843d067e" DstPortName="enter" ConnectionOrder="0">
+      <points id="6288032c-8a72-4648-8c35-3d318fb0891d">
+        <point id="2232694b-79cb-4aa1-94e8-23f3e26f38fe" X="-2840" Y="-6200" />
+        <point id="c2479d79-8ebd-4fb1-87a6-06c76c6f6543" X="-2560" Y="-6200" />
+      </points>
+    </connection>
+    <connection id="69a27741-5e47-44de-932b-078434f51a6a" SrcNodeID="c0bc07b7-16d9-4dab-80ec-6bf1f2e23085" SrcPortName="MatchRestarted" DstNodeID="a65ead01-fa74-44b7-bd17-581c843d067e" DstPortName="enter" ConnectionOrder="0">
+      <points id="626d32b2-19a8-4e3d-8f67-248a7e4f752a">
+        <point id="fb073cdc-24cc-4d4e-970e-b10eca300b5c" X="-2840" Y="-6080" />
+        <point id="c9e639da-7b0c-4393-a31e-ea9ec8c791d3" X="-2560" Y="-6080" />
+      </points>
+    </connection>
+    <connection id="b99cc811-9bb3-4650-b859-2bbcc2e83f21" SrcNodeID="bb565d88-660c-4121-9daf-f8870ae4c0f4" SrcPortName="MatchRestarted" DstNodeID="c71816cf-cf79-4b38-b7f9-8e06a59f258c" DstPortName="enter" ConnectionOrder="0">
+      <points id="b11186f6-3055-43dd-8ad1-8c9f87ac5750">
+        <point id="5c2d5d97-191f-4ea8-91ad-f427e2fe4e85" X="-2840" Y="-5680" />
+        <point id="163f9653-2fe8-42a6-9af4-ed9c7d141bab" X="-2560" Y="-5680" />
+      </points>
+    </connection>
+    <connection id="762b5c8c-6fa2-4264-9720-69fb7f270f77" SrcNodeID="14fe0a49-8d8c-4acf-8384-145e88424df1" SrcPortName="MatchRestarted" DstNodeID="c71816cf-cf79-4b38-b7f9-8e06a59f258c" DstPortName="enter" ConnectionOrder="0">
+      <points id="19ee864d-c028-471c-8bc3-31530b0b042b">
+        <point id="aae3ff77-95dc-4433-b746-9a9a53244abf" X="-2840" Y="-5920" />
+        <point id="212751f4-b29e-4ba9-8713-80f227c995fd" X="-2560" Y="-5920" />
+      </points>
+    </connection>
+    <connection id="1e3f0a5f-f0e3-4cc7-8c62-6023f8cae042" SrcNodeID="5a1cb0c7-3717-46c4-b1ad-ec8571ba04e1" SrcPortName="MatchRestarted" DstNodeID="c71816cf-cf79-4b38-b7f9-8e06a59f258c" DstPortName="enter" ConnectionOrder="0">
+      <points id="fb004a95-ffb2-4893-b762-5b845af90102">
+        <point id="cc07b364-ca68-468f-9046-ec642275aada" X="-2840" Y="-5800" />
+        <point id="63b6e3ef-7f3e-4b39-8971-360d04025fbd" X="-2560" Y="-5800" />
+      </points>
+    </connection>
+    <connection id="b33fc9ad-81e0-4e26-bd37-ea11556c894f" SrcNodeID="35a3b691-2ba1-4348-8295-438ee67ff321" SrcPortName="true" DstNodeID="a81b638e-0800-4aaf-8a62-0cfce0214615" DstPortName="enter" ConnectionOrder="0">
+      <points id="ed727ade-bc85-43f6-b464-1813b612ab20" />
+    </connection>
+    <connection id="ced90653-2f8b-4211-8977-6e3fe16e2d2f" SrcNodeID="a81b638e-0800-4aaf-8a62-0cfce0214615" SrcPortName="true" DstNodeID="d56d3cc3-7f9d-4874-9874-b814f4fac25f" DstPortName="enter" ConnectionOrder="0">
+      <points id="2b61679e-3fe2-41bc-8b3d-959a8913ec31" />
+    </connection>
+    <connection id="ef6f990b-d8e4-4e2c-87bb-0f89651698c6" SrcNodeID="a96c00ac-1912-4c04-be8c-884c4b272968" SrcPortName="false" DstNodeID="c99f114d-bbb3-4185-a455-3e67fd84fbc2" DstPortName="enter" ConnectionOrder="0">
+      <points id="9e0a9e96-cdce-43f2-81df-0df6b587a7c4" />
+    </connection>
+    <connection id="f53543ef-3f85-46f3-83fd-f2e7b88ec10d" SrcNodeID="c99f114d-bbb3-4185-a455-3e67fd84fbc2" SrcPortName="true" DstNodeID="a3ec3c75-f5ff-4062-8204-245c3f60256c" DstPortName="enter" ConnectionOrder="0">
+      <points id="f8315b07-2b8e-4ddc-95c6-b9ad0ff72b1f" />
+    </connection>
+    <connection id="e0721ac6-8cb2-4a43-9a42-f403935c7ac6" SrcNodeID="c99f114d-bbb3-4185-a455-3e67fd84fbc2" SrcPortName="false" DstNodeID="f94fe843-9937-4f82-ae47-9bee1f4e79ad" DstPortName="enter" ConnectionOrder="0">
+      <points id="42045fbf-5d85-47dc-bb41-479cf6fe2d65" />
+    </connection>
+    <connection id="a357c427-1023-40ed-9a71-b6030c3f66bf" SrcNodeID="afb6bd7b-4712-4339-8349-57760ecf89b0" SrcPortName="true" DstNodeID="38e8e3c6-6688-4e63-821f-aa3f2e6846e5" DstPortName="enter" ConnectionOrder="0">
+      <points id="3a4aebe3-c743-48b7-9b94-b9467e48ec3f" />
+    </connection>
+    <connection id="26b482d5-3687-41a1-b349-652873e3e623" SrcNodeID="38e8e3c6-6688-4e63-821f-aa3f2e6846e5" SrcPortName="advance" DstNodeID="8c9c2055-16c6-4260-b938-b30a1cf7423a" DstPortName="enter" ConnectionOrder="0">
+      <points id="e25a0bf7-1937-49a0-8b82-d69aecf8456a" />
+    </connection>
+    <connection id="675a153e-1466-4d2e-92fa-537c67997da7" SrcNodeID="8c9c2055-16c6-4260-b938-b30a1cf7423a" SrcPortName="true" DstNodeID="c77facbd-8b28-4729-8d2b-8c85ed645a98" DstPortName="enter" ConnectionOrder="0">
+      <points id="c0ce41e3-648e-4889-863f-1401e463eb1a" />
+    </connection>
+    <connection id="28357fe8-9453-434b-b960-22f342b6ad96" SrcNodeID="b9e6ee7e-9044-44c8-a770-aa4afa2e4c11" SrcPortName="false" DstNodeID="afb6bd7b-4712-4339-8349-57760ecf89b0" DstPortName="enter" ConnectionOrder="0">
+      <points id="7f731d27-25fd-4568-b8f4-818f99046701" />
+    </connection>
+    <connection id="b6e60e55-4d6d-4426-9bfa-4f6b07e1ed72" SrcNodeID="8d65daec-3b67-4145-9a1e-d004c1eae493" SrcPortName="advance" DstNodeID="14b969ba-2347-41d6-a06f-766bd9432f71" DstPortName="enter" ConnectionOrder="0">
+      <points id="9394ae6d-cdae-4274-aa74-512ee37dec60" />
+    </connection>
+    <connection id="8ea7f780-3ee9-4793-86b3-bac9be336034" SrcNodeID="41ceda9a-78c2-43d9-a417-c5b24ef47089" SrcPortName="advance" DstNodeID="7c4941a6-65ce-4d51-b77a-c293bd95f004" DstPortName="enter" ConnectionOrder="0">
+      <points id="0c225541-fdb6-42a4-bceb-f6614ba6a92d" />
+    </connection>
+    <connection id="ea779a3c-a909-4390-973d-39c5223a421a" SrcNodeID="14b969ba-2347-41d6-a06f-766bd9432f71" SrcPortName="UserMatchCompleted" DstNodeID="8db0d558-a9c7-47f4-93af-86b4b4ee158a" DstPortName="enter" ConnectionOrder="0">
+      <points id="d4a5ebe0-91ff-4fa6-9879-db1b6a77a5aa" />
+    </connection>
+    <connection id="a927b904-a331-4e51-bffe-9a31bef859e0" SrcNodeID="14b969ba-2347-41d6-a06f-766bd9432f71" SrcPortName="MatchRestarted" DstNodeID="6debdbc4-7b86-4a67-b422-9e28925e801b" DstPortName="enter" ConnectionOrder="0">
+      <points id="ea4eeb70-a279-4d5f-bdc7-913efe23cba3">
+        <point id="9563c3c8-0afa-4834-a923-6318d54a3c2f" X="-2840" Y="-5560" />
+        <point id="408f3316-8b27-47b9-8563-b99299e5a3de" X="-2560" Y="-5560" />
+      </points>
+    </connection>
+    <connection id="29b0ee5e-bfad-4557-b0c1-ff0347774665" SrcNodeID="7c4941a6-65ce-4d51-b77a-c293bd95f004" SrcPortName="UserMatchCompleted" DstNodeID="070d89df-7845-41c3-aa00-2f15d4f24d56" DstPortName="enter" ConnectionOrder="0">
+      <points id="5a262116-56cf-48b1-973a-e2bd1c14c7c9" />
+    </connection>
+    <connection id="151fc303-9c92-40bd-84b3-10220732e15c" SrcNodeID="7c4941a6-65ce-4d51-b77a-c293bd95f004" SrcPortName="MatchRestarted" DstNodeID="6debdbc4-7b86-4a67-b422-9e28925e801b" DstPortName="enter" ConnectionOrder="0">
+      <points id="0e104209-9c40-4b96-8b60-6ef45004c113">
+        <point id="a40af1ab-6c53-43f9-99c0-6c0691f0596e" X="-2840" Y="-5440" />
+        <point id="b0f59ff0-5de6-4b14-974a-7458b8fdf7df" X="-2560" Y="-5440" />
+      </points>
+    </connection>
+    <connection id="d348b365-90de-42c2-be5d-eb32976a5fec" SrcNodeID="8db0d558-a9c7-47f4-93af-86b4b4ee158a" SrcPortName="advance" DstNodeID="6debdbc4-7b86-4a67-b422-9e28925e801b" DstPortName="enter" ConnectionOrder="0">
+      <points id="d4b94a2f-8e0e-429f-936f-c8dd2c04bb8a" />
+    </connection>
+    <connection id="0d96cfe7-5a98-4a20-83fc-5e02797ece0b" SrcNodeID="070d89df-7845-41c3-aa00-2f15d4f24d56" SrcPortName="advance" DstNodeID="6debdbc4-7b86-4a67-b422-9e28925e801b" DstPortName="enter" ConnectionOrder="0">
+      <points id="275e668f-e42f-41aa-81ce-e42e7d12ce90" />
+    </connection>
+    <connection id="d103d133-448c-46ee-9334-8418c1949fde" SrcNodeID="c77facbd-8b28-4729-8d2b-8c85ed645a98" SrcPortName="true" DstNodeID="8d65daec-3b67-4145-9a1e-d004c1eae493" DstPortName="enter" ConnectionOrder="0">
+      <points id="6e253b49-a5ff-4eda-aed5-c458e1c7e52c" />
+    </connection>
+    <connection id="69706f7a-69ba-42b7-840f-1123bb879f5e" SrcNodeID="c77facbd-8b28-4729-8d2b-8c85ed645a98" SrcPortName="false" DstNodeID="41ceda9a-78c2-43d9-a417-c5b24ef47089" DstPortName="enter" ConnectionOrder="0">
+      <points id="56893adb-c9b5-4f4b-9691-3a638cae1fe6" />
+    </connection>
+    <connection id="71173652-5563-4cb4-8ec8-8fab454ba895" SrcNodeID="6debdbc4-7b86-4a67-b422-9e28925e801b" SrcPortName="advance" DstNodeID="827f4e70-8b36-4660-8200-659b3f14615e" DstPortName="enter" ConnectionOrder="0">
+      <points id="333da77d-4860-476c-b457-bc7d9f6ad2fa" />
+    </connection>
+  </connections>
+</StoryAsset>

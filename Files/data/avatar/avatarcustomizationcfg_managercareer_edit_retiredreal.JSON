@@ -1,0 +1,176 @@
+{
+    "attributeCategories":
+    [
+		{
+		  "name":"INFO",
+          "filters": {
+            "areFiltersAttributes":false,
+            "data":
+          [
+			{
+				"name": "ABOUT_ME",
+				"filters": {
+          "areFiltersAttributes":true,
+          "data":
+				[
+				  {
+					"name": "FIRST_NAME",
+					"isMandatory": true,
+					"isEditable":true,
+					"componentType": "INPUT_TEXT"
+				  },
+				  {
+					"name": "SURNAME",
+					"isMandatory": true,
+					"isEditable":true,
+					"componentType": "INPUT_TEXT"
+				  },
+				  {
+					"name": "NATIONALITY",
+					"isMandatory": true,
+					"isEditable":true,
+					"componentType": "LIST"
+				  },
+				  {
+					"name": "GENDER",
+					"isVisible": true,
+					"isMandatory": true,
+					"isEditable":true,
+					"componentType": "TOGGLE"
+				  }
+				]
+      }
+    }
+		  ]
+    }
+  }
+		,{
+			"name": "OUTFITS",
+			"filters": {
+        "areFiltersAttributes":true,
+        "data":
+			[
+						{
+							"name":"OUTFITTOPLAYER1"
+						},
+						{
+							"name":"OUTFITTOPLAYER2"
+						},
+						{
+							"name":"OUTFITBOTTOMLAYER2"
+						},
+						{
+							"name":"OUTFITACCESSORY1"
+						},
+						{
+							"name":"OUTFITSOCK"
+						},
+						{
+							"name":"OUTFITSHOE"
+						}
+					]
+				}
+		 },
+     {
+			"name": "HEAD_AND_FACE",
+			"filters": {
+				"areFiltersAttributes": true,
+				"data": [
+					{
+						"name": "HEAD"
+					},
+          {
+            "name": "TONE_AND_COMPLEXION"
+          },
+          {
+						"name": "EYE",
+						"numPresets": 23,
+						"numTweaks": 4,
+						"colourPickerAttribute": "EYE_COLOUR"
+					},
+					{
+						"name": "BROW",
+						"numPresets": 0,
+						"numTweaks": 4,
+						"colourPickerAttribute": "FACIAL_HAIR_COLOUR"
+					},
+          {
+            "name": "NOSE",
+            "numPresets": 28,
+            "numTweaks": 4
+          },
+          {
+						"name": "MOUTH",
+						"numPresets": 22,
+						"numTweaks": 4
+					},
+					{
+						"name": "CHEEK_JAW",
+						"numPresets": 13,
+						"numTweaks": 5
+					},
+          {
+            "name": "CHIN",
+            "numPresets": 9,
+            "numTweaks": 5
+          },
+          {
+						"name": "EAR",
+						"numPresets": 14,
+						"numTweaks": 5
+					},
+					{
+						"name": "HAIR",
+						"colourPickerAttribute": "HAIR_COLOUR"
+					},
+					{
+						"name": "FACIAL_HAIR",
+						"colourPickerAttribute": "FACIAL_HAIR_COLOUR"
+					}
+				]
+			}
+		}
+	],
+  "attributeDependencyTree": [
+    {
+      "parents": [
+        "FACE"
+      ],
+      "children": [
+        "HEAD"
+      ]
+    },
+    {
+      "parents": [
+        "HEAD"
+      ],
+      "children": [
+        "CHIN",
+        "EAR",
+        "EYE",
+        "CHEEK_JAW",
+        "MOUTH",
+        "NOSE",
+        "BROW"
+      ]
+	},
+	{
+		"parents":[
+		  "GENDER"
+		],
+		"children":[
+		  "FACIAL_HAIR",
+		  "TONE_AND_COMPLEXION"
+		]
+	},
+    {
+      "parents":[
+        "OUTFITTOPLAYER1",
+        "OUTFITTOPLAYER2"
+      ],
+      "children":[
+        "OUTFITACCESSORY1"
+      ]
+    }
+  ]
+}

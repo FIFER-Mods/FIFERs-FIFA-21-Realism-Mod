@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="0240fda5-0ff9-4c57-bdb0-5139f8e0c2af" name="Board Unhappy Low Release Clause" deleted="False" valid="True">
+  <nodes id="e057dae2-34b4-41ce-9cb7-0579f29fef33">
+    <story-start-node id="b74fdbac-b9c6-41cb-b9fc-71a317f437c9" X="520" Y="-1680" NodeType="StoryStart" NodeName="Set Name for New Node" StoryType="SingleInstance" NodeEvent="SeasonStart" StoryKey="" UseSelectData="True" RunInPlayerCareer="False" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="f9f29a66-2946-4794-8a48-985abd3f9230" />
+      <select-data id="3542d5f3-cdd7-4f2c-a52c-4b5d39489afa" SelectCount="0">
+        <alias-list id="1a142173-7dbf-43d9-b50e-695cef710c00" />
+        <order-by id="6a8775a3-6e52-4144-bd21-0dce3959f0d8" />
+        <alias-data-source id="308e38a4-3047-441c-b520-3b6d721fa4bc" DataSource="Model:Global.LoanedPlayers">
+          <conditions id="97ee344f-c74a-4520-997d-3f4871ca8a17" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <state-node id="2d6dcc8a-89b7-4aed-bdd1-c847d47290b2" X="920" Y="-1680" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="16ea5987-3236-432e-9021-573d4cbacc00">
+        <string id="72fac726-d497-4a6f-a181-17c28b47eca5" Value="UserContractRenewal" />
+        <string id="9f9a1e08-f8c6-44ea-b71e-8354bf4800cb" Value="UserTransferPlayerStageFinished" />
+      </supported-events>
+    </state-node>
+    <select-data-node id="654eadb5-bea2-4ce2-835a-ac0522d1372f" X="1520" Y="-1760" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="4bd33fab-39cd-4e62-afd6-d902a0239893" SelectCount="1">
+        <alias-list id="748994c7-492c-4002-9506-34be3ee19ffb">
+          <string id="3d9a6a2a-b351-42e8-a183-d64c46596a4d" Value="Renew Player" />
+        </alias-list>
+        <order-by id="d80e3f49-5391-487d-b1d9-6ee5befc747c" />
+        <alias-data-source id="f3bff266-e009-460d-9c64-4c164e41d924" DataSource="Model:Global.Players">
+          <conditions id="6037abbd-9142-48a5-91ce-945cd10db7b4">
+            <condition id="8789adf3-acc5-49fc-8731-1ca97ff6edd2" VariableId="Select:BasicData.ID" Comparison="EQ" Value="Model:UserContractRenewal.PlayerId" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="cf44bc5a-347d-49a2-9b1d-5d72f46e294a" VariableId="Select:Contract.ReleaseClauseValue" Comparison="GT" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <condition-node id="1961faa5-1a71-4142-8266-d23f3c935abd" X="1200" Y="-1760" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="6b3b0113-4e70-41ff-b67f-179fb6dce80a">
+        <condition id="d864dce0-858d-48db-8d70-4d60ef30b992" VariableId="Model:UserContractRenewal.FinishedByAny" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="fb327f09-3200-450d-b538-f9f183272c62" X="1200" Y="-1480" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="c2893ce5-9676-44d4-ad1e-09a801b14117">
+        <condition id="d76fb6bb-6eb6-4ff0-b244-579b540cebd3" VariableId="Model:UserTransferPlayerStageFinished.FinishedByAny" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="85229f6e-8f60-47fe-bed3-a23316252890" VariableId="Model:UserTransferPlayerStageFinished.BuyingTeamId" Comparison="EQ" Value="Model:Global.UserTeamID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <select-data-node id="9ba154af-8d13-4ba3-8003-4afc23b83bc7" X="1520" Y="-1480" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="e4c17ac9-958d-45e8-bcc0-110b6e6a7c7d" SelectCount="1">
+        <alias-list id="0a8cc001-326e-46eb-8c74-276dda1222f5">
+          <string id="89b19a56-1a1a-4323-844e-0be259c7be01" Value="New Player" />
+        </alias-list>
+        <order-by id="29b70ca0-74dd-463b-bdbc-81a2028b832f" />
+        <alias-data-source id="d8a2cfe7-32fc-4698-91ff-3a450e3ee6d4" DataSource="Model:Global.Players">
+          <conditions id="8ee56117-e9bf-4969-aa37-42e539675758">
+            <condition id="e59a3295-389e-4aef-9b1e-00efded7b4d2" VariableId="Select:BasicData.ID" Comparison="EQ" Value="Model:UserTransferPlayerStageFinished.PlayerId" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="f91136eb-f150-4c00-ba3b-a531dbd7a8d6" VariableId="Select:Contract.ReleaseClauseValue" Comparison="GT" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <save-data-node id="92987945-b9b6-4991-888e-7dede02f6b3e" X="1800" Y="-1760" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="03dbbc8a-81ee-4d4e-bc0d-38942ada68b6">
+        <saveItem id="b5675712-5ddc-4d4c-b6eb-ccbc45f6b6b0" Key="Ratio" Value="Renew Player:Contract.ReleaseClauseValue" ValueType="int" />
+        <saveItem id="efb1c668-f66e-4352-a14c-2e8880f3cc02" Key="PlayerID" Value="Renew Player:BasicData.ID" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <condition-node id="a4f048dc-baab-46b7-b023-51bceb8b2edd" X="2440" Y="-1480" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="01d09452-72d0-458b-9c26-d198ada9c343">
+        <condition id="a78acf89-45f6-4c30-8697-de1682e345e2" VariableId="SaveData:Ratio" Comparison="LT" Value="70" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="02f7ddac-f0ba-47a6-8a0d-782761f16565" X="2760" Y="-1640" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="523faf63-244b-484a-9904-ccfbd4b84a4c">
+        <condition id="fb02e9cb-5c54-4199-9f2d-680ac97e79cc" VariableId="SaveData:Ratio" Comparison="LT" Value="40" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <state-node id="4eae2130-8fc2-4e00-b6b6-7ddaed7450b1" X="3080" Y="-1760" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="df1c1445-8820-4a1a-a260-b24e5e7deb41">
+        <string id="5f6a0272-ce3d-47c8-be42-dcfcbcaaa702" Value="DayPassed" />
+      </supported-events>
+    </state-node>
+    <fire-manager-node id="635bfd0e-9f47-4229-b1c8-3b60a25f6eaf" X="3080" Y="-2040" NodeType="FireManager" NodeName="Set Name for New Node">
+      <stringWithArgsSubject id="63c36b40-37db-4933-a9d1-0197213b59f3" StringID="CM_Mail_LowReleaseClauseFired_Subject" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="e5235a5a-7fc8-4199-a123-4b286591e3aa" />
+        <stringContent id="a03f00f3-7a19-4909-869c-16184a1b6863">
+          <keyValuePair id="77a9d0ae-a2a6-4472-aa2b-ee57a131340b" Key="M" Value="[Decision] Terminated" />
+          <keyValuePair id="39d398b7-5afc-4a76-94f7-c7feb17986aa" Key="F" Value="" />
+          <keyValuePair id="434c1b19-9d48-4dd4-a387-866c7d9db26e" Key="MM" Value="" />
+          <keyValuePair id="4c4bbad1-c2e6-40a4-83eb-c416b58aa5fa" Key="MF" Value="" />
+          <keyValuePair id="d78c7c6d-de10-46c7-a698-a8d4ea9030e1" Key="FM" Value="" />
+          <keyValuePair id="773ecd7a-4578-4196-b24c-413fdd009a47" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsSubject>
+      <stringWithArgsBody id="5ddd67d9-3a80-43ce-a6d4-8d07ff25b1d7" StringID="CM_Mail_LowReleaseClauseFired_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="31cede3f-bb9b-4f55-8056-80529cb1060a">
+          <stringArgument id="ea83f7d4-5b1a-473d-aee1-fdecebbf3477" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="4154ccc9-ddd7-46b0-8c65-9c3dcce9b6da" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="e459c94a-b714-4e9a-96ad-7d055fea85eb" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="d0ba12bf-354c-46d2-af51-0744a65dc2d1">
+          <keyValuePair id="5002507e-d1d5-4c64-a1e2-0800b3b158a6" Key="M" Value="Greetings %1s,\n\nWhile you have complete freedom over agreeing contract terms with players, we've noticed that the value of %2s's release clause is set to a fraction of his value. While these agreements will be accepted by players, they go against our interests.\nWe regret to inform you that the board has decided to remove you from your position as a manager of the club.\nWe wish you the best of luck for the future of your career.\n\nYours sincerely,\nThe %3s Board of Directors" />
+          <keyValuePair id="d4d20211-6cc2-4fe7-b3d7-bb1ba9b9a942" Key="F" Value="Greetings %1s,\n\nWhile you have complete freedom over agreeing contract terms with players, we've noticed that the value of %2s's release clause is set to a fraction of his value. While these agreements will be accepted by players, they go against our interests.\nWe regret to inform you that the board has decided to remove you from your position as a manager of the club.\nWe wish you the best of luck for the future of your career.\n\nYours sincerely,\nThe %3s Board of Directors" />
+          <keyValuePair id="2e39282c-28a4-4628-a436-2304a238e534" Key="MM" Value="" />
+          <keyValuePair id="8b68567c-d3ec-4153-8b66-35dc854c7d25" Key="MF" Value="" />
+          <keyValuePair id="b6af33b2-1934-4df6-827f-53d612ca2df3" Key="FM" Value="" />
+          <keyValuePair id="2a2fd173-710d-4042-9b78-9c3eeefee896" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+    </fire-manager-node>
+    <fire-manager-node id="70688475-00cb-4943-946e-2501944aad66" X="3080" Y="-1520" NodeType="FireManager" NodeName="Set Name for New Node">
+      <stringWithArgsSubject id="c1f1792d-2358-4d79-a376-7488d4ed6c12" StringID="CM_Mail_LowReleaseClauseFired_Subject" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="5492bb46-3363-4db9-b27e-4a0ddc7073c7" />
+        <stringContent id="4dcf4772-9ff2-46f7-a26b-f0adb259e75d">
+          <keyValuePair id="b1a86857-4aa0-41fa-9159-875bc64eadf4" Key="M" Value="[Decision] Terminated" />
+          <keyValuePair id="b8c77509-9a38-48d5-a6e7-cd728bbc89c9" Key="F" Value="" />
+          <keyValuePair id="9faf3d21-7fc1-4859-9bbb-615e75b13361" Key="MM" Value="" />
+          <keyValuePair id="fa6c3f3d-b357-43f1-b3c4-45a7f86421b2" Key="MF" Value="" />
+          <keyValuePair id="47f879d0-845b-4b32-8561-233321498b54" Key="FM" Value="" />
+          <keyValuePair id="35657663-888f-4374-8f48-764dbc89f118" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsSubject>
+      <stringWithArgsBody id="ea77f949-3d70-4352-bf11-7caaf9bed378" StringID="CM_Mail_LowReleaseClauseFired_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="4683a004-e4f4-4699-a263-66c94abba812">
+          <stringArgument id="4f9ed40f-8a2c-4d4e-88fb-b0e982a6dda2" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="1fe038a2-2aee-49b0-98e5-a183e2cfa4f7" Value="SaveData:PlayerID" Format="7" />
+          <stringArgument id="fd5b940f-e82b-4519-a29f-52ecf16c7b6a" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="bada2f33-b42e-45a4-952e-e90d818b1305">
+          <keyValuePair id="cc001391-786b-428a-b518-ac887084c206" Key="M" Value="Greetings %1s,\n\nWhile you have complete freedom over agreeing contract terms with players, we've noticed that the value of %2s's release clause is set to a fraction of his value. While these agreements will be accepted by players, they go against our interests.\nWe regret to inform you that the board has decided to remove you from your position as a manager of the club.\nWe wish you the best of luck for the future of your career.\n\nYours sincerely,\nThe %3s Board of Directors" />
+          <keyValuePair id="db5c7d55-6785-4c28-b405-d30351327b3d" Key="F" Value="Greetings %1s,\n\nWhile you have complete freedom over agreeing contract terms with players, we've noticed that the value of %2s's release clause is set to a fraction of his value. While these agreements will be accepted by players, they go against our interests.\nWe regret to inform you that the board has decided to remove you from your position as a manager of the club.\nWe wish you the best of luck for the future of your career.\n\nYours sincerely,\nThe %3s Board of Directors" />
+          <keyValuePair id="7cfcbbae-0497-416d-a1e0-7a2f4a7bda74" Key="MM" Value="" />
+          <keyValuePair id="b158fa78-93c0-4206-8721-dc1634379221" Key="MF" Value="" />
+          <keyValuePair id="de5e235b-2901-453a-98d3-acf80b959210" Key="FM" Value="" />
+          <keyValuePair id="1b7407e2-4d03-4760-83a8-8a871e6c9c62" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+    </fire-manager-node>
+    <trigger-email-node id="5284ed33-93ff-4596-97be-99b8b7f206b4" X="3440" Y="-1760" NodeType="TriggerEmail" NodeName="Set Name for New Node" From="1" FromArg="Model:Global.UserTeamID" To="1" CC="5" Subject="" SubjectSource="" Body="" BodySource="" Transition="0" PlayerId="-1" TeamId="-1">
+      <stringWithArgsSubject id="b00aff40-b541-4d7c-b4a6-451b4048b5a7" StringID="CM_Mail_LowReleaseClauseWarning_Subject" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="f54d8934-3345-4b5d-a6ae-33e59071a409">
+          <stringArgument id="207d1be8-2027-48fe-a8fa-14466bd2491c" Value="SaveData:PlayerID" Format="7" />
+        </stringArguments>
+        <stringContent id="24129c92-5fe4-4498-86ab-f1f020627d39">
+          <keyValuePair id="b24bd107-751b-4f6f-bd13-5d7566b02c52" Key="M" Value="%1s's Release Clause" />
+          <keyValuePair id="1af09f7e-77a7-4893-9f87-175d1a03a7af" Key="F" Value="" />
+          <keyValuePair id="b8dc4daf-9b28-4d4e-be9d-6f38f72487d4" Key="MM" Value="" />
+          <keyValuePair id="5ea2cb59-c400-4564-b085-3106f71723a1" Key="MF" Value="" />
+          <keyValuePair id="1256fc93-eefb-415b-914b-2ee97b4bddf6" Key="FM" Value="" />
+          <keyValuePair id="672c47c1-f566-40a4-a6c8-2505ca87aee6" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsSubject>
+      <stringWithArgsBody id="a0412124-7b36-40a2-a20e-7953d932f8ed" StringID="CM_Mail_LowReleaseClauseWarning_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="5336c6a8-384d-416a-a45b-1e2d33584927">
+          <stringArgument id="4a7d02db-15f0-4659-9acd-ae81880f6ccb" Value="SaveData:PlayerID" Format="6" />
+        </stringArguments>
+        <stringContent id="cf01bc9d-1fec-49d9-a6bd-82de467bb1d4">
+          <keyValuePair id="7252f25b-0e21-4de4-b095-39116ebe0f34" Key="M" Value="Greetings,\n\nWhile you have complete freedom over agreeing contract terms with players, we've noticed that the value of %1s's release clause is set to a fraction of his value. Be mindful that while these agreements will be accepted by players, they go against the interest of the club. We aren't protecting our investments properly if players will be sold for less than what they are worth and we will take action against you if this continues to happen.\n\nBoard of Directors" />
+          <keyValuePair id="a4d1a4f1-deda-4f93-9be0-73e81892b232" Key="F" Value="" />
+          <keyValuePair id="dfa1af12-6385-4ca8-ad5b-fc33ae320b32" Key="MM" Value="" />
+          <keyValuePair id="1135263b-7116-4571-a303-772cd6765b05" Key="MF" Value="" />
+          <keyValuePair id="40515cf7-4334-435a-8dbf-2aee6d0d5a52" Key="FM" Value="" />
+          <keyValuePair id="532985c6-b76f-49e8-9a93-a73aae5a38e2" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+    </trigger-email-node>
+    <modify-data-node id="ae318cc1-2556-4aa5-a7c8-a9c6d61bca3c" X="3680" Y="-1760" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="b89c4fc3-cc13-4a64-a1a4-43ed467ae9ae">
+        <keyValuePair id="e45835b6-6a63-4428-aee3-73d687b61dcd" Key="Model:Global.ManagerRating.Score" Value="10" Operator="Substract" />
+      </keyValues>
+    </modify-data-node>
+    <story-end-node id="ee5a0f85-bc88-4b56-97c4-98263209de5d" X="6480" Y="-1520" NodeType="StoryEnd" NodeName="Set Name for New Node" NodeEvent="" />
+    <modify-data-node id="d05fc334-b7c6-49e8-9727-989b81546d60" X="2120" Y="-1480" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="ba429c11-ea01-4821-95c0-aad968203949">
+        <keyValuePair id="f76f1f93-6aa4-4eb4-bedb-44ee412f1866" Key="SaveData:Ratio" Value="Model:UserTransferPlayerStageFinished.PlayerAdjustedValue" Operator="PercentRatio" />
+      </keyValues>
+    </modify-data-node>
+    <save-data-node id="5a5464de-021f-44bb-94b7-b4288735af86" X="1800" Y="-1480" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="5673f72b-d392-495d-9ac2-432308cf2a2f">
+        <saveItem id="f9f54baa-dcb2-49f9-be8d-0357e396fd8c" Key="Ratio" Value="Model:UserTransferPlayerStageFinished.ReleaseClause" ValueType="int" />
+        <saveItem id="f01af82c-44bf-48ff-b676-e68f03454ac4" Key="PlayerID" Value="New Player:BasicData.ID" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <modify-data-node id="5f05f7dd-611e-4144-bc5d-fa5f33fe1f26" X="2120" Y="-1760" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="9076a6e9-cf4a-4161-9c35-049a85e6f18b">
+        <keyValuePair id="f3f2871c-10ac-4d93-93ad-33e51f546075" Key="SaveData:Ratio" Value="Model:UserContractRenewal.PlayerAdjustedValue" Operator="PercentRatio" />
+      </keyValues>
+    </modify-data-node>
+    <condition-node id="ac37e378-139c-46a3-afe5-f22810da46a0" X="2440" Y="-1760" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="a04f18b6-eed5-406d-a363-d29e60c9e136">
+        <condition id="d8ca2ff3-6313-467b-b94b-f30a99257551" VariableId="SaveData:Ratio" Comparison="LT" Value="70" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="ffa9fa2e-49cb-4caf-aeaa-be603a2390b5" X="2760" Y="-1920" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="a68796da-5d3f-450f-91bc-cb30fe74d4bc">
+        <condition id="ad537295-aa04-4d45-bbd3-495085298a3e" VariableId="SaveData:Ratio" Comparison="LT" Value="40" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <state-node id="c623bc97-4719-4ced-a87e-200ed555170a" X="4400" Y="-2240" NodeType="State" NodeName="Set Name for New Node">
+      <supported-events id="77d2720b-c2dc-47b2-ad22-e32bf8136966">
+        <string id="99410676-00f7-4c7c-87cb-90566fca4a3f" Value="UserContractRenewal" />
+        <string id="2bbcae97-32bc-4786-9aaa-6b39b4319ac2" Value="UserTransferPlayerStageFinished" />
+      </supported-events>
+    </state-node>
+    <condition-node id="a753bd98-1be1-4d8d-884c-15ae4c8cf79c" X="4680" Y="-2320" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="b6dd0fa5-7544-4669-a662-21a95e8193a0">
+        <condition id="dbe34cd0-1399-43d9-bab9-1ab6465f65dd" VariableId="Model:UserContractRenewal.FinishedByAny" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="c4368701-ee74-4cf3-a5a1-7bf4b27f679e" X="4680" Y="-2040" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="c11c4cfc-5731-4a8b-9716-3cbf27256fab">
+        <condition id="2c948056-7d58-41c9-a791-477bec6c0453" VariableId="Model:UserTransferPlayerStageFinished.FinishedByAny" Comparison="EQ" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="28f2326c-dafc-4134-92d3-077c6d7efd9e" VariableId="Model:UserTransferPlayerStageFinished.BuyingTeamId" Comparison="EQ" Value="Model:Global.UserTeamID" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <select-data-node id="c74a1dd2-158a-433e-95fb-06799a37a9b3" X="4920" Y="-2320" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="1053aa35-890a-4114-8076-483c63b650f7" SelectCount="1">
+        <alias-list id="0843889e-d8f3-492a-8b35-65317283a6bb">
+          <string id="d6a8554f-9ae9-48f4-94c1-ad3b0359a02c" Value="Renew Player 2" />
+        </alias-list>
+        <order-by id="1d5cef65-9068-40ad-a83c-b78143b36f93" />
+        <alias-data-source id="00636326-4e17-4777-ac72-3e8cd1c9e5a6" DataSource="Model:Global.Players">
+          <conditions id="47793096-2c8f-465b-a3e2-e13104ef2c7f">
+            <condition id="bcb73215-61cd-4f89-8422-c73ad231dab1" VariableId="Select:BasicData.ID" Comparison="EQ" Value="Model:UserContractRenewal.PlayerId" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="b216ace7-0a6a-48bb-921a-f614292c4ac9" VariableId="Select:Contract.ReleaseClauseValue" Comparison="GT" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <select-data-node id="a59c4614-0b3b-4ac3-bdb2-a70151909370" X="4920" Y="-2040" NodeType="SelectData" NodeName="Set Name for New Node">
+      <select-data id="e6603ac3-b007-42f5-a52e-31d5563636c9" SelectCount="1">
+        <alias-list id="99535f49-ae78-465e-aebe-8045c73c0987">
+          <string id="4327b739-b45a-4e90-a04a-2d86caeb97d6" Value="New Player 2" />
+        </alias-list>
+        <order-by id="25d73e2f-63aa-4294-adfb-0c33f6d1807a" />
+        <alias-data-source id="5ea0f34e-7de6-48c0-90ab-d05c2507f44e" DataSource="Model:Global.Players">
+          <conditions id="8da65b57-d8e1-4857-83b7-9ba79e17a955">
+            <condition id="8896226a-cf1f-490a-a843-37bba0b630f4" VariableId="Select:BasicData.ID" Comparison="EQ" Value="Model:UserTransferPlayerStageFinished.PlayerId" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+            <condition id="90c04d3f-c4d8-425f-bb86-4d749a4ccd9a" VariableId="Select:Contract.ReleaseClauseValue" Comparison="GT" Value="0" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+          </conditions>
+        </alias-data-source>
+      </select-data>
+    </select-data-node>
+    <save-data-node id="e6a47ea6-9a8e-4854-8314-2376e55e968a" X="5120" Y="-2040" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="71ae41ba-1a75-4899-ab59-c81e2287cc8a">
+        <saveItem id="ca9a003e-30cd-4704-8d3c-55e78db827cf" Key="Ratio" Value="New Player 2:Contract.ReleaseClauseValue" ValueType="int" />
+        <saveItem id="d8733eb8-eb96-4133-881f-916237bbc9d9" Key="PlayerID2" Value="New Player 2:BasicData.ID" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <save-data-node id="cfdc6265-b1c9-4d1a-a67e-462137908293" X="5120" Y="-2320" NodeType="SaveData" NodeName="Set Name for New Node">
+      <saveItems id="a1f368c1-8eb5-4faa-99b3-09c7efba8cfb">
+        <saveItem id="6aa8da5e-6b0f-450c-9184-cc90ca1cfef3" Key="Ratio" Value="Renew Player 2:Contract.ReleaseClauseValue" ValueType="int" />
+        <saveItem id="49b8550b-b83f-4814-80ec-ef793e2a89b4" Key="PlayerID2" Value="Renew Player 2:BasicData.ID" ValueType="int" />
+      </saveItems>
+    </save-data-node>
+    <modify-data-node id="2785a0d1-b82f-43b0-bf8f-08aea4cc5252" X="5360" Y="-2320" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="3f171657-5809-400d-b7df-cebbf2aa20a5">
+        <keyValuePair id="22a7933c-d7c4-4f15-bbe1-9ba56de50f45" Key="SaveData:Ratio" Value="Model:UserContractRenewal.PlayerAdjustedValue" Operator="PercentRatio" />
+      </keyValues>
+    </modify-data-node>
+    <modify-data-node id="ab285a6a-9fe3-40ed-8a38-ce8a32a8dfdb" X="5360" Y="-2040" NodeType="ModifyData" NodeName="Set Name for New Node">
+      <keyValues id="c0eff1e9-0e43-44d2-8252-2a320b006f43">
+        <keyValuePair id="a73dca77-39c2-4c56-b456-9671fb347e39" Key="SaveData:Ratio" Value="Model:UserTransferPlayerStageFinished.PlayerAdjustedValue" Operator="PercentRatio" />
+      </keyValues>
+    </modify-data-node>
+    <condition-node id="6262ed4e-d6e3-46cc-9902-fca7aa4bb97c" X="5760" Y="-2040" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="28d2388f-da6a-420d-a5c3-8f7b34514e6b">
+        <condition id="3fddae60-32f1-4e5a-9289-73a4b6e3d28b" VariableId="SaveData:Ratio" Comparison="LT" Value="70" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <condition-node id="a063d915-2748-4691-ac1c-d14829672ba1" X="5760" Y="-2320" NodeType="Condition" NodeName="Set Name for New Node">
+      <conditions id="e94c5960-a94a-4267-a1f8-51fc607df7c4">
+        <condition id="ffb75089-3726-4c4e-a18f-4ccfc2341bea" VariableId="SaveData:Ratio" Comparison="LT" Value="70" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+    </condition-node>
+    <fire-manager-node id="3365bb4b-5f14-4435-a2f8-0536bd7bde7e" X="6200" Y="-2040" NodeType="FireManager" NodeName="Set Name for New Node">
+      <stringWithArgsSubject id="3e884ef0-a339-468c-bea8-a24da26561e0" StringID="CM_Mail_LowReleaseClauseFired_Subject" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="49c990cf-7fb8-4497-8537-3926b9016f66" />
+        <stringContent id="1e895546-cf58-404f-97bc-bec205554a29">
+          <keyValuePair id="683f7f39-256f-4cd7-9ddd-f2008661330d" Key="M" Value="[Decision] Terminated" />
+          <keyValuePair id="01c32407-8d9e-4d34-b4a1-baeeb90f3fa1" Key="F" Value="" />
+          <keyValuePair id="e50dd9f6-0136-4ad3-b86f-60ec545acbef" Key="MM" Value="" />
+          <keyValuePair id="eadbcab6-d8cc-43ed-a1c2-72511def85a8" Key="MF" Value="" />
+          <keyValuePair id="25a516b7-f803-49b1-9271-8bbb3aba5459" Key="FM" Value="" />
+          <keyValuePair id="81eef2d6-08df-4726-b54b-cd5e6d5dd5b5" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsSubject>
+      <stringWithArgsBody id="e1c49e51-d3b7-4378-ad46-b8253743b964" StringID="CM_Mail_LowReleaseClauseFired_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="6c9ed255-c985-446f-9a02-86822f9de8b5">
+          <stringArgument id="dd1f71aa-4b02-4507-88c6-8eae39a267e4" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="16b81965-9be7-47b4-a427-17801c5ea8d6" Value="SaveData:PlayerID2" Format="7" />
+          <stringArgument id="5df01cfd-736d-4176-85aa-8e3f5f8788f6" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="90b22883-6967-4dd1-8267-fb6eea71a0e8">
+          <keyValuePair id="35b5c6bd-7780-43d6-9d66-f343b0356b3d" Key="M" Value="Greetings %1s,\n\nWhile you have complete freedom over agreeing contract terms with players, we've noticed that the value of %2s's release clause is set to a fraction of his value. While these agreements will be accepted by players, they go against our interests.\nWe regret to inform you that the board has decided to remove you from your position as a manager of the club.\nWe wish you the best of luck for the future of your career.\n\nYours sincerely,\nThe %3s Board of Directors" />
+          <keyValuePair id="9bf7b4e4-bac7-4077-a23e-c8c5a9e08978" Key="F" Value="Greetings %1s,\n\nWhile you have complete freedom over agreeing contract terms with players, we've noticed that the value of %2s's release clause is set to a fraction of his value. While these agreements will be accepted by players, they go against our interests.\nWe regret to inform you that the board has decided to remove you from your position as a manager of the club.\nWe wish you the best of luck for the future of your career.\n\nYours sincerely,\nThe %3s Board of Directors" />
+          <keyValuePair id="a70a6889-a775-4cec-b307-205fdc6d6b7a" Key="MM" Value="" />
+          <keyValuePair id="4d028f89-2bcd-4ae2-b6f2-17c4cd242a1b" Key="MF" Value="" />
+          <keyValuePair id="9ff378f4-ab8d-41dd-8a8e-3d9dc509b5c3" Key="FM" Value="" />
+          <keyValuePair id="c92d8677-e8ee-46a4-842c-ed84f21a19ce" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+    </fire-manager-node>
+    <fire-manager-node id="5844dcb5-563c-4ba3-828b-4aed75a28885" X="6200" Y="-2320" NodeType="FireManager" NodeName="Set Name for New Node">
+      <stringWithArgsSubject id="5373a639-e668-4326-a180-266995269ac3" StringID="CM_Mail_LowReleaseClauseFired_Subject" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="a523f03f-56cd-4f9c-a69d-3e88e7426fcd" />
+        <stringContent id="75270e13-8e6f-483c-8483-39797734dd5a">
+          <keyValuePair id="ee0f74ac-5e88-4748-9546-fcdf9c1fc53b" Key="M" Value="[Decision] Terminated" />
+          <keyValuePair id="5eefe116-b918-4419-bb6c-c1b9c6af8fbd" Key="F" Value="" />
+          <keyValuePair id="bebf8bf4-35d5-4380-95a4-bc1483a28415" Key="MM" Value="" />
+          <keyValuePair id="271cc356-41cb-4cbb-9804-3199a39fb4a5" Key="MF" Value="" />
+          <keyValuePair id="084045d1-060a-49c8-a08c-ae192f81198b" Key="FM" Value="" />
+          <keyValuePair id="18539c25-bd41-405d-9dd5-6bc74d20b0e7" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsSubject>
+      <stringWithArgsBody id="f19d2e74-7e89-4702-8a8a-f34fce45aa25" StringID="CM_Mail_LowReleaseClauseFired_Body" GenderSupport="1" GenderSupportTeamId1="Model:Global.UserTeamID" GenderSupportTeamId2="">
+        <stringArguments id="d0dabca8-c137-4f61-b8ce-ca4a6752a30e">
+          <stringArgument id="acbe6af0-45f6-4625-a184-948a05c82921" Value="Model:Global.UserTeamID" Format="14" />
+          <stringArgument id="6ea6bc82-ca26-4e93-82f4-e679d372daea" Value="SaveData:PlayerID2" Format="7" />
+          <stringArgument id="de7f1c00-71a5-4b01-a860-569fee81184e" Value="Model:Global.UserTeamID" Format="12" />
+        </stringArguments>
+        <stringContent id="37f943f0-0c70-4dd8-8c85-78aad09749ae">
+          <keyValuePair id="90fc65cd-9dce-42d0-b3a2-bf05518901b2" Key="M" Value="Greetings %1s,\n\nWhile you have complete freedom over agreeing contract terms with players, we've noticed that the value of %2s's release clause is set to a fraction of his value. While these agreements will be accepted by players, they go against our interests.\nWe regret to inform you that the board has decided to remove you from your position as a manager of the club.\nWe wish you the best of luck for the future of your career.\n\nYours sincerely,\nThe %3s Board of Directors" />
+          <keyValuePair id="937c733e-68cd-4a19-88c2-43b9ca9d17b4" Key="F" Value="Greetings %1s,\n\nWhile you have complete freedom over agreeing contract terms with players, we've noticed that the value of %2s's release clause is set to a fraction of his value. While these agreements will be accepted by players, they go against our interests.\nWe regret to inform you that the board has decided to remove you from your position as a manager of the club.\nWe wish you the best of luck for the future of your career.\n\nYours sincerely,\nThe %3s Board of Directors" />
+          <keyValuePair id="08f90fcd-172b-4ff7-8071-9734da3c76f7" Key="MM" Value="" />
+          <keyValuePair id="8b8f0bfc-4f81-4829-8c3a-43920c4f2f24" Key="MF" Value="" />
+          <keyValuePair id="c0f84798-7a77-48dc-b723-caf33a365f66" Key="FM" Value="" />
+          <keyValuePair id="adbe47cd-3e71-4f8d-ac64-d2d9fc2f0153" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+    </fire-manager-node>
+  </nodes>
+  <groups id="6e8a409c-21f7-4550-989e-6127a72e0175" />
+  <connections id="46d319bf-d93b-407e-b107-83af3d3ad42e">
+    <connection id="901f4e29-e65a-4e67-9869-9de640a4d864" SrcNodeID="b74fdbac-b9c6-41cb-b9fc-71a317f437c9" SrcPortName="advance" DstNodeID="2d6dcc8a-89b7-4aed-bdd1-c847d47290b2" DstPortName="enter" ConnectionOrder="0">
+      <points id="2ce5cc3a-ac78-4776-bd08-82ea150d5d17" />
+    </connection>
+    <connection id="6e6e2fac-e718-4300-ae76-2294db13c72f" SrcNodeID="2d6dcc8a-89b7-4aed-bdd1-c847d47290b2" SrcPortName="UserContractRenewal" DstNodeID="1961faa5-1a71-4142-8266-d23f3c935abd" DstPortName="enter" ConnectionOrder="0">
+      <points id="e8f903d1-8540-48a1-bf7f-79bd374c60b5" />
+    </connection>
+    <connection id="59f073da-cf0a-47e2-a1d0-c0c09e6787ee" SrcNodeID="2d6dcc8a-89b7-4aed-bdd1-c847d47290b2" SrcPortName="UserTransferPlayerStageFinished" DstNodeID="fb327f09-3200-450d-b538-f9f183272c62" DstPortName="enter" ConnectionOrder="0">
+      <points id="c8e07d74-41c3-4cb7-aec8-e05e5e1a383a" />
+    </connection>
+    <connection id="3d526b22-15a5-4aee-a9a8-d20aee98118b" SrcNodeID="654eadb5-bea2-4ce2-835a-ac0522d1372f" SrcPortName="true" DstNodeID="92987945-b9b6-4991-888e-7dede02f6b3e" DstPortName="enter" ConnectionOrder="0">
+      <points id="fd39eac5-7d44-4dee-afc7-58c3f6dfd8af" />
+    </connection>
+    <connection id="4af70836-48bf-4a8b-bafa-e5bf2b5cde9b" SrcNodeID="1961faa5-1a71-4142-8266-d23f3c935abd" SrcPortName="true" DstNodeID="654eadb5-bea2-4ce2-835a-ac0522d1372f" DstPortName="enter" ConnectionOrder="0">
+      <points id="adc87d61-677b-4110-a2a7-fab2e7829793" />
+    </connection>
+    <connection id="62781e3f-c7a0-42fe-875f-df87a4c65e08" SrcNodeID="1961faa5-1a71-4142-8266-d23f3c935abd" SrcPortName="false" DstNodeID="2d6dcc8a-89b7-4aed-bdd1-c847d47290b2" DstPortName="enter" ConnectionOrder="0">
+      <points id="72c32436-82bc-40e3-9a05-0ade2932ee36">
+        <point id="be7f2de7-2d46-4634-bc66-33af266bcdde" X="1360" Y="-1560" />
+        <point id="fc593085-82cf-46fe-8c6f-7748ca09f662" X="920" Y="-1560" />
+      </points>
+    </connection>
+    <connection id="3b72f26a-4cfb-4370-8734-6b268e169d9f" SrcNodeID="fb327f09-3200-450d-b538-f9f183272c62" SrcPortName="false" DstNodeID="2d6dcc8a-89b7-4aed-bdd1-c847d47290b2" DstPortName="enter" ConnectionOrder="0">
+      <points id="7d42a5a5-4672-499b-b4f7-3fc5407660a1">
+        <point id="8cd924ba-819b-4425-9270-3f9c523f1764" X="1360" Y="-1360" />
+        <point id="4b1bba9e-9fbc-481c-8f9f-2542497c6b29" X="920" Y="-1360" />
+      </points>
+    </connection>
+    <connection id="54181b02-7766-4d53-b629-e1908364bfb9" SrcNodeID="fb327f09-3200-450d-b538-f9f183272c62" SrcPortName="true" DstNodeID="9ba154af-8d13-4ba3-8003-4afc23b83bc7" DstPortName="enter" ConnectionOrder="0">
+      <points id="467118e2-0b59-4f95-89bc-8bc1a2dd2bfd" />
+    </connection>
+    <connection id="06217b39-fc05-4331-8553-c3e028f0025d" SrcNodeID="a4f048dc-baab-46b7-b023-51bceb8b2edd" SrcPortName="true" DstNodeID="02f7ddac-f0ba-47a6-8a0d-782761f16565" DstPortName="enter" ConnectionOrder="0">
+      <points id="c1f4aecc-85a6-46de-841a-532d6a9d994a" />
+    </connection>
+    <connection id="5cf47320-c27c-4226-ba51-a77e422ac6b3" SrcNodeID="02f7ddac-f0ba-47a6-8a0d-782761f16565" SrcPortName="false" DstNodeID="4eae2130-8fc2-4e00-b6b6-7ddaed7450b1" DstPortName="enter" ConnectionOrder="0">
+      <points id="af16f1ed-7c55-4357-9956-766a266b87dc" />
+    </connection>
+    <connection id="499608d9-78e2-4778-acf6-fe84678e03be" SrcNodeID="02f7ddac-f0ba-47a6-8a0d-782761f16565" SrcPortName="true" DstNodeID="70688475-00cb-4943-946e-2501944aad66" DstPortName="enter" ConnectionOrder="0">
+      <points id="df8d8b2a-9983-4de8-be4b-97bbff85380d" />
+    </connection>
+    <connection id="841e64f0-c8ca-4e8e-8d9f-350944aa4fb8" SrcNodeID="4eae2130-8fc2-4e00-b6b6-7ddaed7450b1" SrcPortName="DayPassed" DstNodeID="5284ed33-93ff-4596-97be-99b8b7f206b4" DstPortName="enter" ConnectionOrder="0">
+      <points id="4e2ae7a2-e391-4fdf-9bb1-e9deef19ba60" />
+    </connection>
+    <connection id="e030a4b9-9b70-46d5-958a-b62cdf6b4cc2" SrcNodeID="635bfd0e-9f47-4229-b1c8-3b60a25f6eaf" SrcPortName="advance" DstNodeID="ee5a0f85-bc88-4b56-97c4-98263209de5d" DstPortName="enter" ConnectionOrder="0">
+      <points id="b4c56d30-ea4c-43f5-a747-324f6ab0d533">
+        <point id="4f1da1a7-7272-452f-89c1-aac687975dd5" X="3404.55932617188" Y="-1476.03894042969" />
+      </points>
+    </connection>
+    <connection id="f67c201f-d056-430a-a2f7-411678edfcc2" SrcNodeID="70688475-00cb-4943-946e-2501944aad66" SrcPortName="advance" DstNodeID="ee5a0f85-bc88-4b56-97c4-98263209de5d" DstPortName="enter" ConnectionOrder="0">
+      <points id="dc1b5a25-b7cb-4238-a416-a8affba8495c" />
+    </connection>
+    <connection id="bb98fc4c-2fc1-4c8f-9ada-e46fbc895a5f" SrcNodeID="5284ed33-93ff-4596-97be-99b8b7f206b4" SrcPortName="advance" DstNodeID="ae318cc1-2556-4aa5-a7c8-a9c6d61bca3c" DstPortName="enter" ConnectionOrder="0">
+      <points id="b88ce91f-a112-4376-8ae6-76c9cce01c48" />
+    </connection>
+    <connection id="886b1e33-7e42-444b-bf99-b209c6d13b99" SrcNodeID="9ba154af-8d13-4ba3-8003-4afc23b83bc7" SrcPortName="true" DstNodeID="5a5464de-021f-44bb-94b7-b4288735af86" DstPortName="enter" ConnectionOrder="0">
+      <points id="81b5d3b5-1829-4ee5-96e2-597b590ea677" />
+    </connection>
+    <connection id="28b09e31-5795-408c-90a0-ec127e4e0e7b" SrcNodeID="5a5464de-021f-44bb-94b7-b4288735af86" SrcPortName="advance" DstNodeID="d05fc334-b7c6-49e8-9727-989b81546d60" DstPortName="enter" ConnectionOrder="0">
+      <points id="6964ec74-f17a-4f91-8440-b637d8e6fce8" />
+    </connection>
+    <connection id="fc9f1f7a-34b1-4d01-b8b4-2955521fe5a8" SrcNodeID="d05fc334-b7c6-49e8-9727-989b81546d60" SrcPortName="advance" DstNodeID="a4f048dc-baab-46b7-b023-51bceb8b2edd" DstPortName="enter" ConnectionOrder="0">
+      <points id="aa32a686-2eaa-43cc-8681-fd4a61f138cf" />
+    </connection>
+    <connection id="1e51c3bf-c547-4008-8a74-2491f93249ec" SrcNodeID="5f05f7dd-611e-4144-bc5d-fa5f33fe1f26" SrcPortName="advance" DstNodeID="ac37e378-139c-46a3-afe5-f22810da46a0" DstPortName="enter" ConnectionOrder="0">
+      <points id="68620614-0aa1-4519-a563-4d70e8e2191c" />
+    </connection>
+    <connection id="6b2123f1-7c7f-42c9-83a5-4befcca95477" SrcNodeID="ac37e378-139c-46a3-afe5-f22810da46a0" SrcPortName="true" DstNodeID="ffa9fa2e-49cb-4caf-aeaa-be603a2390b5" DstPortName="enter" ConnectionOrder="0">
+      <points id="a833eb39-c027-4545-b0a9-4b6122c7726e" />
+    </connection>
+    <connection id="dc9ce777-aaf3-44d1-a7bd-73c4b13cd4a5" SrcNodeID="92987945-b9b6-4991-888e-7dede02f6b3e" SrcPortName="advance" DstNodeID="5f05f7dd-611e-4144-bc5d-fa5f33fe1f26" DstPortName="enter" ConnectionOrder="0">
+      <points id="c181a703-62e8-41fe-ba8c-4d20cf88906d" />
+    </connection>
+    <connection id="b58621a5-11c4-43b1-b99f-cb817716d3a1" SrcNodeID="ffa9fa2e-49cb-4caf-aeaa-be603a2390b5" SrcPortName="true" DstNodeID="635bfd0e-9f47-4229-b1c8-3b60a25f6eaf" DstPortName="enter" ConnectionOrder="0">
+      <points id="9d07bc0a-5b36-4791-a559-2f17ca2c3539" />
+    </connection>
+    <connection id="b2ad9425-7468-4b31-a8f7-5e3d9e827355" SrcNodeID="ffa9fa2e-49cb-4caf-aeaa-be603a2390b5" SrcPortName="false" DstNodeID="4eae2130-8fc2-4e00-b6b6-7ddaed7450b1" DstPortName="enter" ConnectionOrder="0">
+      <points id="806de5ee-7fe7-43ff-9047-ac9464462b61" />
+    </connection>
+    <connection id="98be6fef-19cf-464b-9ab5-f7c717a470f3" SrcNodeID="c623bc97-4719-4ced-a87e-200ed555170a" SrcPortName="UserContractRenewal" DstNodeID="a753bd98-1be1-4d8d-884c-15ae4c8cf79c" DstPortName="enter" ConnectionOrder="0">
+      <points id="5046bc46-3eed-480c-b7f9-dfddc18871e8" />
+    </connection>
+    <connection id="a107ef25-2e76-4e4a-bf42-0ab95384675c" SrcNodeID="c623bc97-4719-4ced-a87e-200ed555170a" SrcPortName="UserTransferPlayerStageFinished" DstNodeID="c4368701-ee74-4cf3-a5a1-7bf4b27f679e" DstPortName="enter" ConnectionOrder="0">
+      <points id="ee16421a-b8c3-458c-80ae-702ccd8a2520" />
+    </connection>
+    <connection id="b5f3a386-1f16-4160-845f-c799c06b0a7f" SrcNodeID="a753bd98-1be1-4d8d-884c-15ae4c8cf79c" SrcPortName="true" DstNodeID="c74a1dd2-158a-433e-95fb-06799a37a9b3" DstPortName="enter" ConnectionOrder="0">
+      <points id="13a80f70-7382-4ac3-8e47-4f9c5299552b" />
+    </connection>
+    <connection id="2288d18e-5ded-4b52-8379-9d111eb6d037" SrcNodeID="a753bd98-1be1-4d8d-884c-15ae4c8cf79c" SrcPortName="false" DstNodeID="c623bc97-4719-4ced-a87e-200ed555170a" DstPortName="enter" ConnectionOrder="0">
+      <points id="96135813-2d35-4a58-b82b-1572e0cd919b">
+        <point id="565a3b37-0cb4-45fa-82c9-b32381974766" X="4840" Y="-2120" />
+        <point id="89d7d4b7-ccd6-4247-bf8d-a64d2bb94d2f" X="4400" Y="-2120" />
+      </points>
+    </connection>
+    <connection id="b944de07-6a2a-4f6e-92c3-eae0f97cb54a" SrcNodeID="c4368701-ee74-4cf3-a5a1-7bf4b27f679e" SrcPortName="false" DstNodeID="c623bc97-4719-4ced-a87e-200ed555170a" DstPortName="enter" ConnectionOrder="0">
+      <points id="f324bbd4-0c7d-4029-a2e5-9e929468dea2">
+        <point id="d006b0c3-0af4-42de-8385-19d05dc7e812" X="4840" Y="-1920" />
+        <point id="e8eaf468-613a-43bf-97b1-3b523488c5c1" X="4400" Y="-1920" />
+      </points>
+    </connection>
+    <connection id="4b2eef0b-242f-4db5-9344-4037e1429b89" SrcNodeID="c4368701-ee74-4cf3-a5a1-7bf4b27f679e" SrcPortName="true" DstNodeID="a59c4614-0b3b-4ac3-bdb2-a70151909370" DstPortName="enter" ConnectionOrder="0">
+      <points id="4ae2641d-765b-4519-9b8a-244f66a877b2" />
+    </connection>
+    <connection id="e68d2ffd-4073-4b09-8308-6d2181b65a8e" SrcNodeID="c74a1dd2-158a-433e-95fb-06799a37a9b3" SrcPortName="true" DstNodeID="cfdc6265-b1c9-4d1a-a67e-462137908293" DstPortName="enter" ConnectionOrder="0">
+      <points id="476c0c5d-f68a-4dae-8856-db2e28276740" />
+    </connection>
+    <connection id="acbe872a-8370-41de-a8b3-e6f1465f2eae" SrcNodeID="a59c4614-0b3b-4ac3-bdb2-a70151909370" SrcPortName="true" DstNodeID="e6a47ea6-9a8e-4854-8314-2376e55e968a" DstPortName="enter" ConnectionOrder="0">
+      <points id="b37d8003-5dbd-4058-b86f-6e2ad968941f" />
+    </connection>
+    <connection id="bdfaf6c5-1095-466a-a20b-806b073d3dea" SrcNodeID="e6a47ea6-9a8e-4854-8314-2376e55e968a" SrcPortName="advance" DstNodeID="ab285a6a-9fe3-40ed-8a38-ce8a32a8dfdb" DstPortName="enter" ConnectionOrder="0">
+      <points id="1277376b-a6f2-40a7-b953-207c34d68ac7" />
+    </connection>
+    <connection id="2c469b57-1d5f-4c61-9733-3f0f51cd40c1" SrcNodeID="cfdc6265-b1c9-4d1a-a67e-462137908293" SrcPortName="advance" DstNodeID="2785a0d1-b82f-43b0-bf8f-08aea4cc5252" DstPortName="enter" ConnectionOrder="0">
+      <points id="40c5f53c-3117-4366-bd6b-0e36dbb9dbee" />
+    </connection>
+    <connection id="68087326-90ec-4a15-a19c-e28984e1fac6" SrcNodeID="2785a0d1-b82f-43b0-bf8f-08aea4cc5252" SrcPortName="advance" DstNodeID="a063d915-2748-4691-ac1c-d14829672ba1" DstPortName="enter" ConnectionOrder="0">
+      <points id="128a97e3-0046-4a64-bcbe-fdab42fde268" />
+    </connection>
+    <connection id="8d0db35b-5762-42da-a0af-cf5211da3f9b" SrcNodeID="ab285a6a-9fe3-40ed-8a38-ce8a32a8dfdb" SrcPortName="advance" DstNodeID="6262ed4e-d6e3-46cc-9902-fca7aa4bb97c" DstPortName="enter" ConnectionOrder="0">
+      <points id="a02c791b-d37a-4b24-bf7f-e1684ee6bbe6" />
+    </connection>
+    <connection id="0c420cb8-74ce-4589-9bd4-0779ec2c6cfe" SrcNodeID="ae318cc1-2556-4aa5-a7c8-a9c6d61bca3c" SrcPortName="advance" DstNodeID="c623bc97-4719-4ced-a87e-200ed555170a" DstPortName="enter" ConnectionOrder="0">
+      <points id="51b569b6-b86b-45af-8f9c-8f37b4aa72e2" />
+    </connection>
+    <connection id="b0f5af6e-b209-423b-a39f-31590ead847a" SrcNodeID="ac37e378-139c-46a3-afe5-f22810da46a0" SrcPortName="false" DstNodeID="2d6dcc8a-89b7-4aed-bdd1-c847d47290b2" DstPortName="enter" ConnectionOrder="0">
+      <points id="f73f6d92-c880-4bbf-aaf1-eb9bffef2a94">
+        <point id="47c7a7b4-1888-4eb2-b9d2-91b058eb2d71" X="2593.30400890869" Y="-1561.66954342985" />
+        <point id="7e8faa23-5793-47ac-ab58-a01a713d35c1" X="926.637342242019" Y="-1558.33621009651" />
+      </points>
+    </connection>
+    <connection id="57cfe47e-e31a-4ce3-9840-974ae03b3eaf" SrcNodeID="a4f048dc-baab-46b7-b023-51bceb8b2edd" SrcPortName="false" DstNodeID="2d6dcc8a-89b7-4aed-bdd1-c847d47290b2" DstPortName="enter" ConnectionOrder="0">
+      <points id="42c7af96-62aa-4c72-9785-eb6a3e1a3ba8">
+        <point id="48a751b5-93e2-4755-b509-6a891a5077f4" X="2596.63734224202" Y="-1275.00287676318" />
+        <point id="1c1737aa-4bdb-4afb-bed1-2182bfc10316" X="919.970675575353" Y="-1275.00287676318" />
+      </points>
+    </connection>
+    <connection id="57a03daf-b2be-4ed2-a967-c544b91f109d" SrcNodeID="a063d915-2748-4691-ac1c-d14829672ba1" SrcPortName="false" DstNodeID="c623bc97-4719-4ced-a87e-200ed555170a" DstPortName="enter" ConnectionOrder="0">
+      <points id="26fb4b72-4507-427c-b126-c75e8815032e">
+        <point id="32b14626-f5bb-4200-9a05-41c27e0deb55" X="5906.63734224202" Y="-2085.00287676318" />
+        <point id="4080ce08-eac6-42c0-b1c5-b6b1ef9f0bd5" X="4396.63734224202" Y="-2071.66954342985" />
+      </points>
+    </connection>
+    <connection id="afb83606-e555-4ed9-b15a-2e6def5626f9" SrcNodeID="6262ed4e-d6e3-46cc-9902-fca7aa4bb97c" SrcPortName="false" DstNodeID="c623bc97-4719-4ced-a87e-200ed555170a" DstPortName="enter" ConnectionOrder="0">
+      <points id="42310b5a-8bb9-4da4-99a7-0a33a698484e">
+        <point id="01e94ad9-2e24-47fb-a661-ce5073266ccf" X="5913.30400890869" Y="-1798.33621009651" />
+        <point id="2067305e-70b3-4a6f-b636-efd44d1d2f1e" X="4406.63734224202" Y="-1798.33621009651" />
+      </points>
+    </connection>
+    <connection id="3090fedb-c11b-4e20-baca-c16c257f1b03" SrcNodeID="6262ed4e-d6e3-46cc-9902-fca7aa4bb97c" SrcPortName="true" DstNodeID="3365bb4b-5f14-4435-a2f8-0536bd7bde7e" DstPortName="enter" ConnectionOrder="0">
+      <points id="30119a50-cca9-4210-abd2-7e5b604df1ad" />
+    </connection>
+    <connection id="a0a5ebe4-8862-43f3-89b3-ed998b3d12f8" SrcNodeID="a063d915-2748-4691-ac1c-d14829672ba1" SrcPortName="true" DstNodeID="5844dcb5-563c-4ba3-828b-4aed75a28885" DstPortName="enter" ConnectionOrder="0">
+      <points id="1ebf550f-59cd-4003-bc56-e5178fd32e68" />
+    </connection>
+    <connection id="bbbb5dae-a189-4652-8897-d73bf7eda87c" SrcNodeID="3365bb4b-5f14-4435-a2f8-0536bd7bde7e" SrcPortName="advance" DstNodeID="ee5a0f85-bc88-4b56-97c4-98263209de5d" DstPortName="enter" ConnectionOrder="0">
+      <points id="db8ec4c0-cb35-4072-b20e-3792c7b2d33e" />
+    </connection>
+    <connection id="9cbafa54-6cfe-4923-894f-2c3830c7f7d1" SrcNodeID="5844dcb5-563c-4ba3-828b-4aed75a28885" SrcPortName="advance" DstNodeID="ee5a0f85-bc88-4b56-97c4-98263209de5d" DstPortName="enter" ConnectionOrder="0">
+      <points id="12ad4c33-4b01-4b75-9724-75e4b696d95d" />
+    </connection>
+    <connection id="7ed10623-61fe-41e8-bc2f-d53fc6e62ac5" SrcNodeID="654eadb5-bea2-4ce2-835a-ac0522d1372f" SrcPortName="false" DstNodeID="2d6dcc8a-89b7-4aed-bdd1-c847d47290b2" DstPortName="enter" ConnectionOrder="0">
+      <points id="74fbf280-9f3a-4864-9f08-1cb9e27c6bc4">
+        <point id="62e1e651-aa88-4146-b283-c51b763dce6f" X="1673.86394191987" Y="-1838.95479738679" />
+        <point id="0a6c6d39-9a5f-4a65-89d7-769c463e9b92" X="924.86394191987" Y="-1842.95479738679" />
+      </points>
+    </connection>
+    <connection id="047953b7-d0f2-47f4-9095-c30e4dcb683d" SrcNodeID="9ba154af-8d13-4ba3-8003-4afc23b83bc7" SrcPortName="false" DstNodeID="2d6dcc8a-89b7-4aed-bdd1-c847d47290b2" DstPortName="enter" ConnectionOrder="0">
+      <points id="23f7262a-3ed7-41b2-b20b-90e2e9c06fed">
+        <point id="d714e071-fe06-4f2f-87fc-8c31e060e580" X="1684.86394191987" Y="-1326.95479738679" />
+        <point id="c8ab5ea1-5573-4b0f-abe1-1cfa5a17b927" X="922.86394191987" Y="-1314.9547973868" />
+      </points>
+    </connection>
+    <connection id="fb669db1-46ca-4089-8662-3d856894a52a" SrcNodeID="c74a1dd2-158a-433e-95fb-06799a37a9b3" SrcPortName="false" DstNodeID="c623bc97-4719-4ced-a87e-200ed555170a" DstPortName="enter" ConnectionOrder="0">
+      <points id="8f2809d6-65e0-4caf-9d92-90a3d5a1d196">
+        <point id="aa9eb1e5-2128-4398-87df-ed0fedd34d3b" X="5077.61394191987" Y="-2399.1097997918" />
+        <point id="1b0fe8c1-03b2-4afe-8bbf-7a0be489c776" X="4395.61394191987" Y="-2401.1097997918" />
+      </points>
+    </connection>
+    <connection id="f456c21d-b0b7-49a5-aba1-aa8b41f34be0" SrcNodeID="a59c4614-0b3b-4ac3-bdb2-a70151909370" SrcPortName="false" DstNodeID="c623bc97-4719-4ced-a87e-200ed555170a" DstPortName="enter" ConnectionOrder="0">
+      <points id="3f4027a5-d073-4cea-aaba-8b52603a0a35">
+        <point id="17f0df38-744a-413c-9ab5-d33497ef7ab0" X="5077.61394191987" Y="-1880.1097997918" />
+        <point id="63ed3804-f80c-45a8-9c44-56d5681cfb9a" X="4404.61394191987" Y="-1874.1097997918" />
+      </points>
+    </connection>
+  </connections>
+</StoryAsset>

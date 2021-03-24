@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StoryAsset id="5d99eef4-d1a9-4c65-be44-aa2fe1dc0e97" name="Fifa Launch Story" deleted="True" valid="True">
+  <nodes id="">
+    <story-start-node id="b57c385b-e335-4a39-a545-7ccad6dd68bb" X="240" Y="320" NodeType="StoryStart" NodeName="Start Story Node" StoryType="SingleInstance" NodeEvent="DayPassed" StoryKey="" UseSelectData="True" RunInPlayerCareer="True" RunInManagerCareer="True" RunInTournamentMode="False">
+      <conditions id="93a3093b-b20c-47f6-bca9-0dUser_OVR_Higher_12664d4a0">
+        <condition id="1c343ddc-89f1-4c9a-8481-e6fe402f7337" VariableId="Model:DayPassed.Day" Comparison="EQ" Value="27" Operator="" Parenthesis="0" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="e4bd9462-d42c-472b-b7eb-a9aea173f48f" VariableId="Model:DayPassed.Month" Comparison="EQ" Value="9" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+        <condition id="ad895cfd-7047-4389-94e9-2a6334715902" VariableId="Model:DayPassed.Year" Comparison="EQ" Value="2019" Operator="" Parenthesis="" ParenthesisCount="0" IsSelectCondition="False" />
+      </conditions>
+      <select-data id="e6801f88-f08a-46fe-adf3-725ee261daaa" SelectCount="0">
+        <alias-list id="d0562840-fc24-4176-aa09-b6d60f38f652" />
+        <order-by id="be920aa6-482b-467a-bd4b-1df5794c444e" />
+        <alias-data-source id="28f29744-c994-475b-abff-1af945b88679" DataSource="">
+          <conditions id="0644c12d-30f5-4b3e-b89d-ed9221df6e0b" />
+        </alias-data-source>
+      </select-data>
+    </story-start-node>
+    <trigger-news-node id="c28b7b10-af4f-4cdb-8c60-0179c6df3a75" X="520" Y="320" NodeType="TriggerNews" NodeName="Fifa Launch News" Category="0" Importance="0" SceneId="16" WipeId="0" WipeArgument="0" BackupImage="fans">
+      <stringWithArgsTitle id="8acd8564-fa98-4427-8fef-82206c7b5e99" StringID="CM_News_Saga_FIFA_Launched_Title" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="2b7fe11f-b57e-4c54-b53c-a76e40f1028b" />
+        <stringContent id="339af503-bb92-41e0-bf0c-103c3989e4b1">
+          <keyValuePair id="751b5052-d652-4ef2-a552-461c1076ac6b" Key="M" Value=" The wait is over - FIFA 20 is available today" />
+          <keyValuePair id="0ff109dd-1782-433a-9d5c-9c08e59a23eb" Key="F" Value="" />
+          <keyValuePair id="848052c9-70d0-461c-92b9-48e564061594" Key="MM" Value="" />
+          <keyValuePair id="efdeafad-640d-4ef0-b34b-1ec14f518343" Key="MF" Value="" />
+          <keyValuePair id="e665541c-7666-47e5-8606-376819b4ac6d" Key="FM" Value="" />
+          <keyValuePair id="11a60303-07c2-439b-93c0-c0c562448fce" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsTitle>
+      <stringWithArgsBody id="99e698ee-bc8b-405e-bb07-94fe9c7e67d9" StringID="CM_News_Saga_FIFA_Launched_Body" GenderSupport="0" GenderSupportTeamId1="" GenderSupportTeamId2="">
+        <stringArguments id="d5d17b73-7fc9-48a0-804d-2936c4da6be5" />
+        <stringContent id="5cc5a280-ee00-4dae-936f-fe9265cae487">
+          <keyValuePair id="25cf9c66-d94e-4824-a156-18f293696097" Key="M" Value=" The newest footballing outing has been highly anticipated by Career Mode fans. For the first time in the series players will be able to fully customize their manager personas from full face editing to clothing options.\nWith features such as Press Conferences and Player Chat they will be able to manage the morale of the players in their squad, introducing the challenge to keep the team happy on the road to glory." />
+          <keyValuePair id="6c4feb85-c985-490c-b81e-d38811a28296" Key="F" Value="" />
+          <keyValuePair id="af04d62d-028a-4ee0-a8ab-f9763256ead6" Key="MM" Value="" />
+          <keyValuePair id="feb2aabf-09f6-49ed-bcbb-0d6b1a7ad8ca" Key="MF" Value="" />
+          <keyValuePair id="b5170347-cb58-4583-b111-8579f3ad6220" Key="FM" Value="" />
+          <keyValuePair id="3142b4c3-1818-4d9f-8241-fb017b8b72e2" Key="FF" Value="" />
+        </stringContent>
+      </stringWithArgsBody>
+      <sceneParameters id="fa30b788-5ba6-42e6-bbc8-04f0d0e258e6">
+        <sceneParameter id="8a0fdf4c-4e3a-4bf3-9a06-5f94dcf31baf" Parameter="PlayerId_1" Value="183277" />
+        <sceneParameter id="3202c837-d91d-4f83-8870-f4b6fc961bc3" Parameter="TeamId_1" Value="243" />
+        <sceneParameter id="3525d40a-da56-4527-9342-09427f668b1d" Parameter="PlayerId_2" Value="203376" />
+        <sceneParameter id="044fcec8-71d4-42d8-96db-9120a0eb8c96" Parameter="TeamId_2" Value="9" />
+        <sceneParameter id="3fb96194-35c8-4f4b-8505-63005d8551f7" Parameter="PlayerId_3" Value="238794" />
+        <sceneParameter id="697fecd2-a8a7-4daa-9b52-de0a1b5bb062" Parameter="TeamId_3" Value="243" />
+        <sceneParameter id="afe5a2b7-7add-40bf-91c4-ae1abd0b6ab4" Parameter="PlayerId_4" Value="233049" />
+        <sceneParameter id="de3c8d64-714a-440a-8689-ad94c239a3d1" Parameter="TeamId_4" Value="22" />
+      </sceneParameters>
+    </trigger-news-node>
+    <story-end-node id="c5f54856-3b29-489e-adb4-60d27b7e1e29" X="840" Y="320" NodeType="StoryEnd" NodeName="End Story Node" NodeEvent="" />
+  </nodes>
+  <groups id="2ac8d7b6-0747-40ab-afcd-800641371f86">
+    <group id="1695eae7-2530-484e-8a05-f1b2994e211e" name="">
+      <node-list id="6c4d3d06-b7a6-4f2f-bce9-29d7bdaUser_OVR_Higher_8a7" />
+    </group>
+    <group id="c6561f17-ef9c-4fa2-8a5c-dabbbeb054ab" name="">
+      <node-list id="411e1052-3667-4d45-bf52-b3748dc81727" />
+    </group>
+  </groups>
+  <connections id="dda7a071-cd19-4ecf-b1bd-37b284ab8cc7">
+    <connection id="c98308ba-a6dc-4ce4-b63e-e47b9ca1ecf7" SrcNodeID="b57c385b-e335-4a39-a545-7ccad6dd68bb" SrcPortName="advance" DstNodeID="c28b7b10-af4f-4cdb-8c60-0179c6df3a75" DstPortName="enter" ConnectionOrder="0">
+      <points id="c7530671-8efe-49dc-8951-d0530009977b" />
+    </connection>
+    <connection id="4ab599eb-0d62-4ca0-8746-68d900cf96f1" SrcNodeID="c28b7b10-af4f-4cdb-8c60-0179c6df3a75" SrcPortName="advance" DstNodeID="c5f54856-3b29-489e-adb4-60d27b7e1e29" DstPortName="enter" ConnectionOrder="0">
+      <points id="0d5bc402-a123-4af3-b1cb-2c69fe7df6dc" />
+    </connection>
+  </connections>
+</StoryAsset>
